@@ -1,0 +1,86 @@
+{
+	"en-us": {
+		"sidenav": {
+			"links": {
+				"home": "home",
+				"portfolio": "portfolio",
+				"about": "about",
+				"contact": "contact"
+			},
+			"footer": {
+				"privacy": "Privacy Policy",
+				"rights": "Daniel Freire ® All Rights Reserved",
+				"blurb": "Made with 🔋 by"
+			}
+		},
+		"cta": {
+			"title": "get in touch",
+			"text": "Let's talk about your business",
+			"button": "say hello!"
+		},
+		"home": {
+			"carousel1": "use intuitive design to give your business new superpowers",
+			"carousel2": "i ❤️ creating modern websites",
+			"carousel3": "dood design empowers business!",
+			"techstack": "Teck Stack",
+			"trending": "Portfolio"
+		},
+		"portfolio": {
+			"victo": {
+				"title": "victó's art gallery",
+				"summary": "website built to showcase the works of the famous Portuguese artist Victó."
+			},
+			"insurbia": {
+				"title": "insurbia",
+				"summary": "website developed to be be contact point for the arquitecture collective Insurbia."
+			},
+			"oldPortfolio": {
+				"title": "old portfolio",
+				"summary": "daniel's old portfolio"
+			},
+			"drumkit": {
+				"title": "drum kit app",
+				"summary": "Fun project to reproduce a Drum Kit in your PC."
+			},
+			"tenzi": {
+				"title": "tenzi",
+				"summary": "the world's most popular dice game, now in your browser."
+			},
+			"quizzical": {
+				"title": "quizzical",
+				"summary": "trivia game with 4.000+ questions."
+			},
+			"pollyglot": {
+				"title": "pollyglot",
+				"summary": "Translation app with AI."
+			},
+
+			"cta": "check it out"
+		},
+		"about": {
+			"title1": "Daniel Freire's Tech Transformation: From Marketing Maverick to Code Conductor",
+			"title2": "The Marketing Roots - Where Creativity Meets Technology",
+			"paragraph1": "Daniel Freire's journey began in the vibrant world of marketing, but not in the way you might expect. While many marketing professionals dive into design and creative storytelling, Daniel found himself increasingly drawn to the technological underpinnings of digital strategies. Moreover, his unique perspective allowed him to see marketing not just as a creative endeavor, but as a complex ecosystem driven by data, analytics, and technological innovation.",
+			"paragraph2": "From the very beginning, Daniel was different. Instead of focusing solely on crafting eye-catching campaigns, he became fascinated by the technical mechanisms that powered digital marketing efforts. He understood early on that modern marketing isn't just about beautiful visuals, but about understanding complex digital landscapes and leveraging technology to drive meaningful engagement.",
+			"title3": "The Technological Awakening",
+			"paragraph3": "As a web developer with a marketing background, Daniel discovered his true passion lay in the intricate world of code and system architecture. Gradually, he transitioned from traditional marketing roles to more technically focused positions, where his unique blend of marketing insight and technological skill set him apart from his peers.",
+			"paragraph4": "His professional journey became a testament to the power of interdisciplinary skills. Daniel realized that his marketing experience wasn't a hindrance but a significant advantage in his technological pursuits. He could comprehend user experience, understand client needs, and translate complex technical concepts into accessible language - a skill set that many pure technologists struggle to develop.",
+			"title4": "Bridging Worlds - A New Professional Identity",
+			"paragraph5": "The transition wasn't just about changing job titles; it was a profound personal and professional transformation. Daniel embraced the challenge of becoming a full-fledged web developer, continuously learning and expanding his technological toolkit. His marketing background provided him with strategic thinking skills that complemented his technical expertise.",
+			"paragraph6": "What truly set Daniel apart was his holistic approach to technology. He didn't just see code as lines on a screen but as a powerful tool for solving real-world problems. His ability to combine marketing insights with robust technical solutions made him a uniquely valuable professional in an increasingly complex digital landscape.",
+			"title5": "A Journey of Continuous Growth",
+			"paragraph7": "Daniel Freire's story is more than a career transition - it's a narrative of personal evolution, demonstrating that professional growth often comes from embracing unexpected paths and leveraging diverse skill sets."
+		},
+		"contact": {
+			"title": "get in touch",
+			"name": "name",
+			"email": "email",
+			"phone": "phone number",
+			"message": "message",
+			"label": "I have read and agree with ",
+			"privacy": "Privacy Policy",
+			"btn": "send message"
+		}
+	},
+	"pt-pt": ""
+}
