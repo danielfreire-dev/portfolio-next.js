@@ -5,12 +5,9 @@ import json from "../text.json";
 import { kolker } from "../fonts";
 import { montserrat } from "../fonts";
 
-import github from "@/app/ui/images/icons/github-square.svg";
-import linkedin from "@/app/ui/images/icons/linkedin.svg";
-
 export const Sidenav = () => {
 	return (
-		<nav>
+		<nav className="flex-initial flex-col flex-nowrap h-full z-10 p-4">
 			<Link href="/">
 				<h1 className={`${kolker.className}`}>Daniel Freire</h1>
 			</Link>
@@ -36,14 +33,24 @@ export const Sidenav = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Image src={github} alt="GitHub" width={20} />
+					<Image
+						src={"/images/icons/github-square.svg"}
+						alt="GitHub"
+						width={20}
+						height={20}
+					/>
 				</a>
 				<a
 					href="https://www.linkedin.com/in/danielfreire-swe/"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Image src={linkedin} alt="LinkedIn" width={20} />
+					<Image
+						src={"/images/icons/linkedin.svg"}
+						alt="LinkedIn"
+						width={20}
+						height={20}
+					/>
 				</a>
 			</div>
 

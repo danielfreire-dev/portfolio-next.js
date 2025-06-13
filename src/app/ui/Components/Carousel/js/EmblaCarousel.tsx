@@ -1,62 +1,109 @@
-import React, { useCallback } from 'react'
-import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
-import { DotButton, useDotButton } from './EmblaCarouselDotButton'
-import Autoplay from 'embla-carousel-autoplay'
-import useEmblaCarousel from 'embla-carousel-react'
+"use client";
+import React from "react";
+import Image from "next/image";
+import { EmblaOptionsType } from "embla-carousel";
+import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import {
+	PrevButton,
+	NextButton,
+	usePrevNextButtons,
+} from "./EmblaCarouselArrowButtons";
+import useEmblaCarousel from "embla-carousel-react";
+// import "../css/slides.css";
 
 type PropType = {
-  slides: number[]
-  options?: EmblaOptionsType
-}
+	slides: number[];
+	options?: EmblaOptionsType;
+};
+
+const switchIndex = (index: number): React.ReactNode => {
+	switch (index + 1) {
+		case 1:
+			return (
+				<Image
+					src={"/images/building-orange.webp"}
+					alt="orange building"
+					width={1000}
+					height={1000}
+				/>
+			);
+
+			break;
+		case 2:
+			return (
+				<Image
+					src="/images/building-yellow.webp"
+					alt="yellow building"
+					width={1000}
+					height={1000}
+				/>
+			);
+
+			break;
+		case 3:
+			return (
+				<Image
+					src="/images/pencils.webp"
+					alt="pencils"
+					width={1000}
+					height={1000}
+				/>
+			);
+
+		default:
+			return <p>Hey</p>;
+			break;
+	}
+};
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+	const { slides, options } = props;
+	const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
-  const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
-    const autoplay = emblaApi?.plugins()?.autoplay
-    if (!autoplay) return
+	const { selectedIndex, scrollSnaps, onDotButtonClick } =
+		useDotButton(emblaApi);
 
-    const resetOrStop =
-      autoplay.options.stopOnInteraction === false
-        ? autoplay.reset
-        : autoplay.stop
+	const {
+		prevBtnDisabled,
+		nextBtnDisabled,
+		onPrevButtonClick,
+		onNextButtonClick,
+	} = usePrevNextButtons(emblaApi);
 
-    resetOrStop()
-  }, [])
+	return (
+		<section className="embla z-0">
+			<div className="embla__viewport" ref={emblaRef}>
+				<div className="embla__container">
+					{slides.map((index) => (
+						<div className="embla__slide" key={index}>
+							<div className={`embla__slide__number slide${index + 1} w-96`}>
+								{switchIndex(index)}
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
-    emblaApi,
-    onNavButtonClick
-  )
+			<div className="embla__controls">
+				<div className="embla__buttons">
+					<PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+					<NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+				</div>
 
-  return (
-    <section className="embla" dir="rtl">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+				<div className="embla__dots">
+					{scrollSnaps.map((_, index) => (
+						<DotButton
+							key={index}
+							onClick={() => onDotButtonClick(index)}
+							className={"embla__dot".concat(
+								index === selectedIndex ? " embla__dot--selected" : "",
+							)}
+						/>
+					))}
+				</div>
+			</div>
+		</section>
+	);
+};
 
-      <div className="embla__controls">
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-export default EmblaCarousel
+export default EmblaCarousel;
