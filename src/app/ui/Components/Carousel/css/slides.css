@@ -1,0 +1,11 @@
+.slide1 {
+	background-image: url("@/app/ui/images/building-orange.webp");
+	background-position: center;
+	background-size: auto auto;
+}
+.slide2 {
+	background-image: url("@/app/ui/images/building-yellow.webp");
+}
+.slide3 {
+	background-image: url("@/app/ui/images/pencils.webp");
+}
