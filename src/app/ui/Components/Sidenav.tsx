@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import json from "../text.json";
+import json from "../JSONs/text.json";
 
 import { kolker } from "../fonts";
 import { montserrat } from "../fonts";
@@ -9,7 +9,7 @@ export const Sidenav = () => {
 	return (
 		<nav className="flex-initial flex-col flex-nowrap h-full z-10 p-4">
 			<Link href="/">
-				<h1 className={`${kolker.className}`}>Daniel Freire</h1>
+				<h1 className={`${kolker.className} text-6xl`}>Daniel Freire</h1>
 			</Link>
 
 			<ul className={`capitalize ${montserrat.className}`}>
@@ -59,6 +59,7 @@ export const Sidenav = () => {
 					name="language"
 					id="language"
 					className={`${montserrat.className}`}
+					defaultValue={"en-US"}
 				>
 					<option value="pt-PT">🇵🇹 Português</option>
 					<option value="en-US">🇺🇸 English</option>

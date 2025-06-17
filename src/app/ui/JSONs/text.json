@@ -15,47 +15,72 @@
 		},
 		"cta": {
 			"title": "get in touch",
-			"text": "Let's talk about your business",
-			"button": "say hello!"
+			"button": [
+				"Let's talk about your business",
+				"Got a Project in Mind? Let’s Chat.",
+				"Looking for a Front-End Developer? You Found One!",
+				"Say Hello — I Don’t Byte 👋",
+				"Let’s Make Your Website Unforgettable →",
+				"Need a Developer Who Delivers? Let's Talk.",
+				"Let’s Build Something Great Together →"
+			]
 		},
 		"home": {
 			"carousel1": "use intuitive design to give your business new superpowers",
 			"carousel2": "i ❤️ creating modern websites",
 			"carousel3": "dood design empowers business!",
-			"techstack": "Teck Stack",
+			"techstack": "Tech Stack",
 			"trending": "Portfolio"
 		},
 		"portfolio": {
-			"victo": {
-				"title": "victó's art gallery",
-				"summary": "website built to showcase the works of the famous Portuguese artist Victó."
-			},
-			"insurbia": {
-				"title": "insurbia",
-				"summary": "website developed to be be contact point for the arquitecture collective Insurbia."
-			},
-			"oldPortfolio": {
-				"title": "old portfolio",
-				"summary": "daniel's old portfolio"
-			},
-			"drumkit": {
-				"title": "drum kit app",
-				"summary": "Fun project to reproduce a Drum Kit in your PC."
-			},
-			"tenzi": {
-				"title": "tenzi",
-				"summary": "the world's most popular dice game, now in your browser."
-			},
-			"quizzical": {
-				"title": "quizzical",
-				"summary": "trivia game with 4.000+ questions."
-			},
-			"pollyglot": {
-				"title": "pollyglot",
-				"summary": "Translation app with AI."
-			},
+			"websites": [
+				{
+					"title": "victó's art gallery",
+					"summary": "website built to showcase the works of the famous Portuguese artist Victó.",
+					"link": "https://victo.pages.dev",
+					"src": "/images/screenshots/victo.webp"
+				},
+				{
+					"title": "insurbia",
+					"summary": "website developed to be be contact point for the arquitecture collective Insurbia.",
+					"link": "https://insurbia.com",
+					"src": "/images/screenshots/insurbia.webp"
+				}
+			],
+			"projects": [
+				{
+					"title": "quizzical",
+					"summary": "trivia game with 4.000+ questions.",
+					"link": "https://quizzicall-bydainelli.netlify.app/",
+					"src": "/images/screenshots/quizzical.gif"
+				},
+				{
+					"title": "pollyglot",
+					"summary": "Translation app with AI.",
+					"link": "https://pollyglot-bydainelli.netlify.app/",
+					"src": "/images/screenshots/pollyglot.gif"
+				},
+				{
+					"title": "old portfolio",
+					"summary": "daniel's old portfolio",
+					"link": "https://danielfreire.pages.dev",
+					"src": "/images/screenshots/BnB_Screenshot.webp"
+				},
+				{
+					"title": "drum kit app",
+					"summary": "Fun project to reproduce a Drum Kit in your PC.",
+					"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
+					"src": "/images/screenshots/drumsVeryBig.webp"
+				},
+				{
+					"title": "tenzi",
+					"summary": "the world's most popular dice game, now in your browser.",
+					"link": "https://tenzi-bydaniel.netlify.app/",
+					"src": "/images/screenshots/Tenzi_Screenshot.webp"
+				}
+			],
 
-			"cta": "check it out"
+			"cta": ["check it out", "View the Live Project →"]
 		},
 		"about": {
 			"title1": "Daniel Freire's Tech Transformation: From Marketing Maverick to Code Conductor",

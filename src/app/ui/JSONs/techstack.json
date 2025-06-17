@@ -1,0 +1,26 @@
+{
+	"tech": [
+		{ "tech": "Next.js", "logo": "/images/icons/nextjs-13.svg" },
+		{ "tech": "React.js", "logo": "/images/icons/react2.svg" },
+		{ "tech": "TypeScript", "logo": "/images/icons/Typescript.svg" },
+		{
+			"tech": "JavaScript",
+			"logo": "/images/icons/javascript-original.svg"
+		},
+		{
+			"tech": "HTML5",
+			"logo": "/images/icons/html5-original-wordmark.svg"
+		},
+		{ "tech": "CSS3", "logo": "/images/icons/Official_CSS_Logo.svg" },
+		{ "tech": "Webpack", "logo": "/images/icons/webpack.svg" },
+		{ "tech": "Vite.js", "logo": "/images/icons/vitejs.svg" },
+		{ "tech": "Git", "logo": "/images/icons/git-scm-icon.svg" },
+		{ "tech": "GitHub", "logo": "/images/icons/github.svg" },
+		{ "tech": "Jest", "logo": "/images/icons/jestjsio-icon.svg" },
+		{ "tech": "Selenium", "logo": "/images/icons/selenium.svg" },
+		{ "tech": "Python", "logo": "/images/icons/python-original.svg" },
+		{ "tech": "Linux", "logo": "/images/icons/linux-original.svg" },
+		{ "tech": "Bash", "logo": "/images/icons/bash-icon-svgrepo-com.svg" },
+		{ "tech": "Zsh", "logo": "/images/icons/color_zsh.svg" }
+	]
+}
