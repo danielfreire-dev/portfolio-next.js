@@ -14,7 +14,6 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 export const Home = () => {
 	return (
 		<>
-			<h2>THIS IS HOME!</h2>
 			<EmblaCarousel slides={SLIDES} options={OPTIONS} />
 			<Techstack />
 			<Cta />

@@ -4,7 +4,7 @@ import WebsiteCards from "../ui/Components/PortfolioItems/WebsiteCards";
 export const Portfolio = () => {
 	return (
 		<>
-			<h2>THIS IS PORTFOLIO!</h2>
+			<h2>PORTFOLIO!</h2>
 			<WebsiteCards />
 			<Cta />
 		</>
