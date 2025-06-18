@@ -36,7 +36,7 @@
 			"websites": [
 				{
 					"title": "victó's art gallery",
-					"summary": "website built to showcase the works of the famous Portuguese artist Victó.",
+					"summary": "website built to showcase the works of the famous Portuguese artist Victó. it is the coolest site ever and you should visit before he sells everything",
 					"link": "https://victo.pages.dev",
 					"src": "/images/screenshots/victo.webp"
 				},
@@ -83,6 +83,7 @@
 			"cta": ["check it out", "View the Live Project →"]
 		},
 		"about": {
+			"image": "/images/Lensa/Lensa2.jpg",
 			"title1": "Daniel Freire's Tech Transformation: From Marketing Maverick to Code Conductor",
 			"title2": "The Marketing Roots - Where Creativity Meets Technology",
 			"paragraph1": "Daniel Freire's journey began in the vibrant world of marketing, but not in the way you might expect. While many marketing professionals dive into design and creative storytelling, Daniel found himself increasingly drawn to the technological underpinnings of digital strategies. Moreover, his unique perspective allowed him to see marketing not just as a creative endeavor, but as a complex ecosystem driven by data, analytics, and technological innovation.",

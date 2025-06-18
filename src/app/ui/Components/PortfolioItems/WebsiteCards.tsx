@@ -3,32 +3,49 @@ import { nanoid } from "nanoid";
 import Image from "next/image";
 
 const WebsiteCards = () => {
-	const websiteMap = data["en-us"].portfolio.websites.map((item) => {
-		return (
-			<div className="" key={nanoid()}>
-				<Image src={item.src} alt={item.title} width={400} height={400} />
-				<h3>{item.title}</h3>
-				<small>{item.summary}</small>
+	const collectionMap = (collection: "websites" | "projects") => {
+		return data["en-us"].portfolio[collection].map((item) => (
+			<div className="max-w-lg  mr-10 last:mr-0  mb-6" key={nanoid()}>
+				<div className="overflow-hidden rounded-lg shadow-md">
+					<a href={item.link} target="_blank" rel="noopener noreferrer">
+						<Image
+							src={item.src}
+							alt={item.title || "Project image"}
+							width={1000}
+							height={1000}
+							className=" hover:cursor-pointer transition-transform duration-500 hover:scale-110"
+						/>
+					</a>
+				</div>
+				<div className="mt-4 box-border">
+					<a
+						href={item.link}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="mb-1 flex-1 size-auto"
+					>
+						<h3 className="capitalize text-xl hover:underline font-semibold size-fit">
+							{item.title}
+						</h3>
+					</a>
+					<small className="text-gray-600 text-sm break-words">
+						{item.summary}
+					</small>
+				</div>
 			</div>
-		);
-	});
-
-	const projectsMap = data["en-us"].portfolio.projects.map((item) => {
-		return (
-			<div className="" key={nanoid()}>
-				<Image src={item.src} alt={item.title} width={400} height={400} />
-				<h3>{item.title}</h3>
-				<small>{item.summary}</small>
-			</div>
-		);
-	});
+		));
+	};
 
 	return (
 		<>
 			<h2>Websites</h2>
-			{websiteMap}
+			<section className="flex flex-row flex-wrap">
+				{collectionMap("websites")}
+			</section>
 			<h2>Projects</h2>
-			{projectsMap}
+			<section className="flex flex-row flex-wrap">
+				{collectionMap("projects")}
+			</section>
 		</>
 	);
 };
