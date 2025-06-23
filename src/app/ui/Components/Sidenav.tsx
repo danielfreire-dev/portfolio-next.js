@@ -1,31 +1,44 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import json from "../JSONs/text.json";
+import { usePathname } from "next/navigation";
 
+import data from "@/app/ui/JSONs/text.json";
+import "../styles/styles.css";
 import { kolker } from "../fonts";
 import { montserrat } from "../fonts";
+import { nanoid } from "nanoid";
 
 export const Sidenav = () => {
+	const pathname = usePathname();
+	/* isActive = pathname.startsWith(link.href) ? "active" : ""; */
+
+	const nav = data["en-us"].sidenav.links.map((data) => {
+		const isActive =
+			pathname === data.link ||
+			(pathname.startsWith(data.link) && data.link !== "/")
+				? " active"
+				: "";
+
+		return (
+			<li className={`navLinks${isActive}`} key={nanoid()}>
+				<Link href={data.link}>{data.name}</Link>
+			</li>
+		);
+	});
 	return (
-		<nav className="flex-initial flex-col flex-nowrap h-full z-10 p-4">
+		<nav className="fixed top-0 left-0 h-screen w-64 z-50 p-4 bg-black shadow-lg flex flex-col justify-between">
 			<Link href="/">
-				<h1 className={`${kolker.className} text-6xl`}>Daniel Freire</h1>
+				<h1
+					className={`${kolker.className} text-6xl capitalize transition delay-150 duration-900 ease-in-out hover:text-orange-400`}
+				>
+					daniel freire
+				</h1>
 			</Link>
 
-			<ul className={`capitalize ${montserrat.className}`}>
-				<li className="navLinks ">
-					<Link href="/">{json["en-us"].sidenav.links.home}</Link>
-				</li>
-				<li className="navLinks ">
-					<Link href="/portfolio">{json["en-us"].sidenav.links.portfolio}</Link>
-				</li>
-				<li className="navLinks ">
-					<Link href="/about">{json["en-us"].sidenav.links.about}</Link>
-				</li>
-				<li className="navLinks ">
-					<Link href="/contact">{json["en-us"].sidenav.links.contact}</Link>
-				</li>
-			</ul>
+			<ul className={`capitalize ${montserrat.className}`}>{nav}</ul>
 
 			<div className="flex gap-2">
 				<a
@@ -58,7 +71,7 @@ export const Sidenav = () => {
 				<select
 					name="language"
 					id="language"
-					className={`${montserrat.className}`}
+					className={`${montserrat.className} hover:cursor-pointer`}
 					defaultValue={"en-US"}
 				>
 					<option value="pt-PT">🇵🇹 Português</option>

@@ -13,7 +13,7 @@ const WebsiteCards = () => {
 							alt={item.title || "Project image"}
 							width={1000}
 							height={1000}
-							className=" hover:cursor-pointer transition-transform duration-500 hover:scale-110"
+							className=" hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110"
 						/>
 					</a>
 				</div>
@@ -22,13 +22,13 @@ const WebsiteCards = () => {
 						href={item.link}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mb-1 flex-1 size-auto"
+						className="inline-block"
 					>
 						<h3 className="capitalize text-xl hover:underline font-semibold size-fit">
 							{item.title}
 						</h3>
 					</a>
-					<small className="text-gray-600 text-sm break-words">
+					<small className="block text-gray-600 text-sm break-words mt-1">
 						{item.summary}
 					</small>
 				</div>

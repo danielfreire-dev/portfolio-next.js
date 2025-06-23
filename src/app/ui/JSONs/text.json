@@ -1,15 +1,15 @@
 {
 	"en-us": {
 		"sidenav": {
-			"links": {
-				"home": "home",
-				"portfolio": "portfolio",
-				"about": "about",
-				"contact": "contact"
-			},
+			"links": [
+				{ "name": "home", "link": "/" },
+				{ "name": "portfolio", "link": "/portfolio" },
+				{ "name": "about", "link": "/about" },
+				{ "name": "contact", "link": "/contact" }
+			],
 			"footer": {
-				"privacy": "Privacy Policy",
-				"rights": "Daniel Freire ® All Rights Reserved",
+				"privacy": "privacy policy",
+				"rights": "Daniel Freire ® all rights reserved",
 				"blurb": "Made with 🔋 by"
 			}
 		},
@@ -36,13 +36,13 @@
 			"websites": [
 				{
 					"title": "victó's art gallery",
-					"summary": "website built to showcase the works of the famous Portuguese artist Victó. it is the coolest site ever and you should visit before he sells everything",
+					"summary": "Website built to showcase the works of the famous Portuguese artist Victó.",
 					"link": "https://victo.pages.dev",
 					"src": "/images/screenshots/victo.webp"
 				},
 				{
 					"title": "insurbia",
-					"summary": "website developed to be be contact point for the arquitecture collective Insurbia.",
+					"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
 					"link": "https://insurbia.com",
 					"src": "/images/screenshots/insurbia.webp"
 				}
@@ -50,7 +50,7 @@
 			"projects": [
 				{
 					"title": "quizzical",
-					"summary": "trivia game with 4.000+ questions.",
+					"summary": "Trivia game with 4.000+ questions.",
 					"link": "https://quizzicall-bydainelli.netlify.app/",
 					"src": "/images/screenshots/quizzical.gif"
 				},
@@ -62,7 +62,7 @@
 				},
 				{
 					"title": "old portfolio",
-					"summary": "daniel's old portfolio",
+					"summary": "Daniel's old portfolio.",
 					"link": "https://danielfreire.pages.dev",
 					"src": "/images/screenshots/BnB_Screenshot.webp"
 				},
@@ -74,13 +74,13 @@
 				},
 				{
 					"title": "tenzi",
-					"summary": "the world's most popular dice game, now in your browser.",
+					"summary": "The world's most popular dice game, now in your browser.",
 					"link": "https://tenzi-bydaniel.netlify.app/",
 					"src": "/images/screenshots/Tenzi_Screenshot.webp"
 				}
 			],
 
-			"cta": ["check it out", "View the Live Project →"]
+			"cta": ["check it out", "view the live project →"]
 		},
 		"about": {
 			"image": "/images/Lensa/Lensa2.jpg",
@@ -104,7 +104,7 @@
 			"phone": "phone number",
 			"message": "message",
 			"label": "I have read and agree with ",
-			"privacy": "Privacy Policy",
+			"privacy": "privacy policy",
 			"btn": "send message"
 		}
 	},

@@ -1,3 +1,3 @@
 export interface TechCardProps {
-	techstackMap: JSX.Element[];
+	techstackMap: JSX.Element;
 }
