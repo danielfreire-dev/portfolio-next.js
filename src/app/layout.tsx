@@ -27,7 +27,7 @@ export default function RootLayout({
 				className={`${montserrat.className} ${lusitana.className} ${kolker.className} antialiased flex  items-center  min-h-screen `}
 			>
 				<Sidenav />
-				<main className="flex flex-col gap-[32px] items-center sm:items-start">
+				<main className="flex-1 ml-64 p-6 flex-col gap-[32px] items-center sm:items-start">
 					{children}
 				</main>
 			</body>

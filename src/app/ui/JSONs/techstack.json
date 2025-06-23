@@ -1,26 +1,84 @@
 {
 	"tech": [
-		{ "tech": "Next.js", "logo": "/images/icons/nextjs-13.svg" },
-		{ "tech": "React.js", "logo": "/images/icons/react2.svg" },
-		{ "tech": "TypeScript", "logo": "/images/icons/Typescript.svg" },
+		{
+			"tech": "Next.js",
+			"logo": "/images/icons/nextjs-13.svg",
+			"link": "https://nextjs.org"
+		},
+		{
+			"tech": "React.js",
+			"logo": "/images/icons/react2.svg",
+			"link": "https://react.dev"
+		},
+		{
+			"tech": "TypeScript",
+			"logo": "/images/icons/Typescript.svg",
+			"link": "https://www.typescriptlang.org"
+		},
 		{
 			"tech": "JavaScript",
-			"logo": "/images/icons/javascript-original.svg"
+			"logo": "/images/icons/javascript-original.svg",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 		},
 		{
 			"tech": "HTML5",
-			"logo": "/images/icons/html5-original-wordmark.svg"
+			"logo": "/images/icons/html5-original-wordmark.svg",
+			"link": "https://www.w3.org/html/"
 		},
-		{ "tech": "CSS3", "logo": "/images/icons/Official_CSS_Logo.svg" },
-		{ "tech": "Webpack", "logo": "/images/icons/webpack.svg" },
-		{ "tech": "Vite.js", "logo": "/images/icons/vitejs.svg" },
-		{ "tech": "Git", "logo": "/images/icons/git-scm-icon.svg" },
-		{ "tech": "GitHub", "logo": "/images/icons/github.svg" },
-		{ "tech": "Jest", "logo": "/images/icons/jestjsio-icon.svg" },
-		{ "tech": "Selenium", "logo": "/images/icons/selenium.svg" },
-		{ "tech": "Python", "logo": "/images/icons/python-original.svg" },
-		{ "tech": "Linux", "logo": "/images/icons/linux-original.svg" },
-		{ "tech": "Bash", "logo": "/images/icons/bash-icon-svgrepo-com.svg" },
-		{ "tech": "Zsh", "logo": "/images/icons/color_zsh.svg" }
+		{
+			"tech": "CSS3",
+			"logo": "/images/icons/Official_CSS_Logo.svg",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+		},
+		{
+			"tech": "Webpack",
+			"logo": "/images/icons/webpack.svg",
+			"link": "https://webpack.js.org/"
+		},
+		{
+			"tech": "Vite.js",
+			"logo": "/images/icons/vitejs.svg",
+			"link": "https://vite.dev"
+		},
+		{
+			"tech": "Git",
+			"logo": "/images/icons/git-scm-icon.svg",
+			"link": "https://git-scm.com/"
+		},
+		{
+			"tech": "GitHub",
+			"logo": "/images/icons/github.svg",
+			"link": "https://github.com/"
+		},
+		{
+			"tech": "Jest",
+			"logo": "/images/icons/jestjsio-icon.svg",
+			"link": "https://jestjs.io/"
+		},
+		{
+			"tech": "Selenium",
+			"logo": "/images/icons/selenium.svg",
+			"link": "https://selenium-python.readthedocs.io/"
+		},
+		{
+			"tech": "Python",
+			"logo": "/images/icons/python-original.svg",
+			"link": "https://www.python.org/"
+		},
+		{
+			"tech": "Linux",
+			"logo": "/images/icons/linux-original.svg",
+			"link": "https://www.linux.org/"
+		},
+		{
+			"tech": "Bash",
+			"logo": "/images/icons/bash-icon-svgrepo-com.svg",
+			"link": "https://www.gnu.org/software/bash/"
+		},
+		{
+			"tech": "Zsh",
+			"logo": "/images/icons/color_zsh.svg",
+			"link": "https://www.zsh.org/"
+		}
 	]
 }
