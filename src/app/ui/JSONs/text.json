@@ -1,5 +1,5 @@
 {
-	"en-us": {
+	"en-US": {
 		"sidenav": {
 			"links": [
 				{ "name": "home", "link": "/" },
@@ -108,5 +108,111 @@
 			"btn": "send message"
 		}
 	},
-	"pt-pt": ""
+	"pt-PT": {
+		"sidenav": {
+			"links": [
+				{ "name": "início", "link": "/" },
+				{ "name": "portfólio", "link": "/portfolio" },
+				{ "name": "sobre", "link": "/about" },
+				{ "name": "contacto", "link": "/contact" }
+			],
+			"footer": {
+				"privacy": "política de privacidade",
+				"rights": "Daniel Freire ® todos os direitos reservados",
+				"blurb": "Feito com 🔋 por"
+			}
+		},
+		"cta": {
+			"title": "contactar",
+			"button": [
+				"Vamos falar sobre o seu negócio",
+				"Tem um projeto em mente? Vamos conversar.",
+				"À procura de um Front-End Developer? Encontrou um!",
+				"Vamos tornar o seu website inesquecível →",
+				"Precisa de um Developer que entrega? Vamos conversar.",
+				"Vamos construir algo incrível juntos →"
+			]
+		},
+		"home": {
+			"carousel1": "utilize design intuitivo para dar superpoderes ao teu negócio",
+			"carousel2": "eu ❤️ criar websites modernos",
+			"carousel3": "bom design fortalece o negócio!",
+			"techstack": "Tecnologias",
+			"trending": "Portfólio"
+		},
+		"portfolio": {
+			"websites": [
+				{
+					"title": "galeria de arte do victó",
+					"summary": "Website construído para mostrar as obras do famoso artista português Victó.",
+					"link": "https://victo.pages.dev",
+					"src": "/images/screenshots/victo.webp"
+				},
+				{
+					"title": "insurbia",
+					"summary": "Website desenvolvido para ser ponto de contacto para o colectivo de arquitetura Insurbia.",
+					"link": "https://insurbia.com",
+					"src": "/images/screenshots/insurbia.webp"
+				}
+			],
+			"projects": [
+				{
+					"title": "quizzical",
+					"summary": "Jogo de trivia com mais de 4.000 perguntas.",
+					"link": "https://quizzicall-bydainelli.netlify.app/",
+					"src": "/images/screenshots/quizzical.gif"
+				},
+				{
+					"title": "pollyglot",
+					"summary": "Aplicação de tradução com IA.",
+					"link": "https://pollyglot-bydainelli.netlify.app/",
+					"src": "/images/screenshots/pollyglot.gif"
+				},
+				{
+					"title": "portfólio antigo",
+					"summary": "Portfólio antigo do Daniel.",
+					"link": "https://danielfreire.pages.dev",
+					"src": "/images/screenshots/BnB_Screenshot.webp"
+				},
+				{
+					"title": "aplicação de bateria",
+					"summary": "Projeto divertido para reproduzir uma bateria no teu PC.",
+					"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
+					"src": "/images/screenshots/drumsVeryBig.webp"
+				},
+				{
+					"title": "tenzi",
+					"summary": "O jogo de dados mais popular do mundo, agora no teu navegador.",
+					"link": "https://tenzi-bydaniel.netlify.app/",
+					"src": "/images/screenshots/Tenzi_Screenshot.webp"
+				}
+			],
+			"cta": ["ver", "ver o projeto ao vivo →"]
+		},
+		"about": {
+			"image": "/images/Lensa/Lensa2.jpg",
+			"title1": "Transformação Tecnológica de Daniel Freire: De Mestre em Marketing a Condutor de Código",
+			"title2": "As Raízes no Marketing - Onde a Criatividade Encontra a Tecnologia",
+			"paragraph1": "A jornada de Daniel Freire começou no mundo vibrante do marketing, mas não da forma que se possa pensar. Enquanto muitos profissionais de marketing se dedicam ao design e às narrativas criativas, Daniel descobriu-se cada vez mais atraído pelas bases tecnológicas das estratégias digitais. Além disso, a sua perspectiva única permitiu-lhe ver o marketing não apenas como um esforço criativo, mas como um ecossistema complexo impulsionado por dados, análises e inovação tecnológica.",
+			"paragraph2": "Desde o início, Daniel foi diferente. Em vez de se concentrar apenas na criação de campanhas apelativas, ficou fascinado pelos mecanismos técnicos que impulsionavam os esforços de marketing digital. Percebeu desde cedo que o marketing moderno não é apenas sobre visuais bonitos, mas sobre compreender paisagens digitais complexas e alavancar a tecnologia para promover um envolvimento significativo.",
+			"title3": "O Despertar Tecnológico",
+			"paragraph3": "Como desenvolvedor web com formação em marketing, Daniel descobriu que a sua verdadeira paixão residia no intrincado mundo do código e da arquitetura de sistemas. Gradualmente, transitou de funções tradicionais de marketing para posições mais técnicas, onde a sua combinação única de conhecimento de marketing e competência tecnológica o destacou dos seus pares.",
+			"paragraph4": "A sua jornada profissional tornou-se um testemunho do poder das competências interdisciplinares. Daniel percebeu que a sua experiência em marketing não era um obstáculo, mas uma vantagem significativa nas suas buscas tecnológicas. Ele conseguia compreender a experiência do utilizador, entender as necessidades do cliente e traduzir conceitos técnicos complexos para uma linguagem acessível - um conjunto de competências que muitos tecnólogos puros têm dificuldade em desenvolver.",
+			"title4": "Ligando Mundos - Uma Nova Identidade Profissional",
+			"paragraph5": "A transição não foi apenas sobre mudar títulos de trabalho; foi uma transformação pessoal e profunda. Daniel abraçou o desafio de se tornar um desenvolvedor web completo, aprendendo continuamente e expandindo o seu conjunto de ferramentas tecnológicas. A sua formação em marketing forneceu-lhe competências de pensamento estratégico que complementavam a sua experiência técnica.",
+			"paragraph6": "O que verdadeiramente destacou Daniel foi a sua abordagem holística à tecnologia. Ele não via o código apenas como linhas num ecrã, mas como uma ferramenta poderosa para resolver problemas do mundo real. A sua capacidade de combinar insights de marketing com soluções técnicas robustas tornou-o um profissional de valor único numa paisagem digital cada vez mais complexa.",
+			"title5": "Uma Jornada de Crescimento Contínuo",
+			"paragraph7": "A história de Daniel Freire é mais do que uma transição de carreira - é uma narrativa de evolução pessoal, demonstrando que o crescimento profissional muitas vezes vem de abraçar caminhos inesperados e alavancar conjuntos de competências diversos."
+		},
+		"contact": {
+			"title": "contactar",
+			"name": "nome",
+			"email": "email",
+			"phone": "número de telefone",
+			"message": "mensagem",
+			"label": "Li e concordo com a ",
+			"privacy": "política de privacidade",
+			"btn": "enviar mensagem"
+		}
+	}
 }
