@@ -1,9 +1,15 @@
 import data from "@/app/ui/JSONs/text.json";
 import Image from "next/image";
 import Cta from "../ui/Components/CTA/Cta";
+import { Metadata } from "next";
+import { UserLanguageType, SidenavProps } from "../ui/types";
 
-export const About = () => {
-	const about = data["en-us"].about;
+export const metadata: Metadata = {
+	title: "About",
+};
+
+export const About = ({ userLanguage, onLanguageChange }: SidenavProps) => {
+	const about = data["en-US"].about;
 
 	return (
 		<>

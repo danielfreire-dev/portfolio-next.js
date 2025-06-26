@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const WebsiteCards = () => {
 	const collectionMap = (collection: "websites" | "projects") => {
-		return data["en-us"].portfolio[collection].map((item) => (
+		return data["en-US"].portfolio[collection].map((item) => (
 			<div className="max-w-lg  mr-10 last:mr-0  mb-6" key={nanoid()}>
 				<div className="overflow-hidden rounded-lg shadow-md">
 					<a href={item.link} target="_blank" rel="noopener noreferrer">

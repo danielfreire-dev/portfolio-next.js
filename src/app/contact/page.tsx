@@ -1,7 +1,12 @@
 import data from "@/app/ui/JSONs/text.json";
+import { Metadata } from "next";
+import { SidenavProps } from "../ui/types";
+export const metadata: Metadata = {
+	title: "Contact",
+};
 
-export const Contact = () => {
-	const contact = data["en-us"].contact;
+export const Contact = ({ userLanguage, onLanguageChange }: SidenavProps) => {
+	const contact = data["en-US"].contact;
 
 	return (
 		<>

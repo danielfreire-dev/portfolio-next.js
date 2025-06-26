@@ -5,7 +5,6 @@ import { TechCardProps } from "@/app/ui/types";
 
 const TechCard: React.FC<TechCardProps> = () => {
 	const techstackMap = techstackData.tech.map((data) => {
-		console.log("", data);
 		return (
 			<div
 				className="flex flex-col flex-nowrap justify-items-center justify-center items-center m-4 hover:scale-140 delay-150 ease-in duration-400"
