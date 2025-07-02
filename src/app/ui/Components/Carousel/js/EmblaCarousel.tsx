@@ -1,23 +1,18 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { EmblaOptionsType } from "embla-carousel";
-import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 import {
-	PrevButton,
 	NextButton,
+	PrevButton,
 	usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
-import useEmblaCarousel from "embla-carousel-react";
-// import "../css/slides.css";
-
-type PropType = {
-	slides: number[];
-	options?: EmblaOptionsType;
-};
+import { PropType } from "@/app/ui/types";
+import Image from "next/image";
 
 const switchIndex = (index: number, currentSlide: number): React.ReactNode => {
-	const commonClasses = "permanent-transitions ease-in-out duration-500";
+	const commonClasses =
+		"carousel-img permanent-transitions ease-in-out duration-500";
 	const activeClasses = "active-carousel";
 	const inactiveClasses = "blur-xs grayscale-69";
 
@@ -71,11 +66,11 @@ const switchIndex = (index: number, currentSlide: number): React.ReactNode => {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
 	const { slides, options } = props;
-	const [emblaRef, emblaApi] = useEmblaCarousel(options);
+	const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+		AutoScroll({ playOnInit: false }),
+	]);
+	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentSlide, setCurrentSlide] = useState(0);
-
-	const { selectedIndex, scrollSnaps, onDotButtonClick } =
-		useDotButton(emblaApi);
 
 	const {
 		prevBtnDisabled,
@@ -84,23 +79,45 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 		onNextButtonClick,
 	} = usePrevNextButtons(emblaApi);
 
+	const onButtonAutoplayClick = useCallback(
+		(callback: () => void) => {
+			const autoScroll = emblaApi?.plugins()?.autoScroll;
+			if (!autoScroll) return;
+
+			const resetOrStop =
+				autoScroll.options.stopOnInteraction === false
+					? autoScroll.reset
+					: autoScroll.stop;
+
+			resetOrStop();
+			callback();
+		},
+		[emblaApi],
+	);
+
+	const toggleAutoplay = useCallback(() => {
+		const autoScroll = emblaApi?.plugins()?.autoScroll;
+		if (!autoScroll) return;
+
+		const playOrStop = autoScroll.isPlaying()
+			? autoScroll.stop
+			: autoScroll.play;
+		playOrStop();
+	}, [emblaApi]);
+
 	useEffect(() => {
-		if (!emblaApi) return;
+		const autoScroll = emblaApi?.plugins()?.autoScroll;
+		if (!autoScroll) return;
 
-		const onSelect = () => {
-			setCurrentSlide(emblaApi.selectedScrollSnap());
-		};
-
-		emblaApi.on("select", onSelect);
-
-		// Cleanup
-		return () => {
-			emblaApi.off("select", onSelect);
-		};
+		setIsPlaying(autoScroll.isPlaying());
+		emblaApi
+			.on("autoScroll:play", () => setIsPlaying(true))
+			.on("autoScroll:stop", () => setIsPlaying(false))
+			.on("reInit", () => setIsPlaying(autoScroll.isPlaying()));
 	}, [emblaApi]);
 
 	return (
-		<section className="embla z-0">
+		<div className="embla">
 			<div className="embla__viewport" ref={emblaRef}>
 				<div className="embla__container">
 					{slides.map((index) => (
@@ -115,23 +132,21 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
 			<div className="embla__controls">
 				<div className="embla__buttons">
-					<PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-					<NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+					<PrevButton
+						onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
+						disabled={prevBtnDisabled}
+					/>
+					<NextButton
+						onClick={() => onButtonAutoplayClick(onNextButtonClick)}
+						disabled={nextBtnDisabled}
+					/>
 				</div>
 
-				<div className="embla__dots">
-					{scrollSnaps.map((_, index) => (
-						<DotButton
-							key={index}
-							onClick={() => onDotButtonClick(index)}
-							className={"embla__dot".concat(
-								index === selectedIndex ? " embla__dot--selected" : "",
-							)}
-						/>
-					))}
-				</div>
+				<button className="embla__play" onClick={toggleAutoplay} type="button">
+					{isPlaying ? "Stop" : "Start"}
+				</button>
 			</div>
-		</section>
+		</div>
 	);
 };
 

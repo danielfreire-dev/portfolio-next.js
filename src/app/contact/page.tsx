@@ -1,62 +1,18 @@
-import data from "@/app/ui/JSONs/text.json";
 import { Metadata } from "next";
-import { SidenavProps } from "../ui/types";
+import ContactForm from "./ContactForm";
+import { Suspense } from "react";
+
 export const metadata: Metadata = {
 	title: "Contact",
 };
 
-export const Contact = ({ userLanguage, onLanguageChange }: SidenavProps) => {
-	const contact = data["en-US"].contact;
-
+const Contact = () => {
 	return (
 		<>
-			<h2>Contact Form</h2>
-			<form action="" method="post">
-				<div className="name-div">
-					<label htmlFor="name" className="capitalize">
-						{contact.name}
-					</label>
-					<input
-						type="text"
-						name="name"
-						id="name"
-						className="bg-gray-700 ml-2 my-1"
-					/>
-				</div>
-				<div className="email-div">
-					<label htmlFor="email" className="capitalize">
-						{contact.email}
-					</label>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						className="bg-gray-700 ml-2 my-1"
-					/>
-				</div>
-				<div className="tel-div">
-					<label htmlFor="telephone" className="capitalize">
-						{contact.phone}
-					</label>
-					<input
-						type="tel"
-						name="telephone"
-						id="telephone"
-						className="bg-gray-700 ml-2 my-1"
-					/>
-				</div>
-				<div className="message-div flex">
-					<label htmlFor="message" className="capitalize">
-						{contact.message}
-					</label>
-					<textarea
-						name="message"
-						id="message"
-						rows={2}
-						className="bg-gray-700 ml-2 my-1"
-					></textarea>
-				</div>
-			</form>
+			<h2>Contact</h2>{" "}
+			<Suspense fallback={<div>Loading...</div>}>
+				<ContactForm />
+			</Suspense>
 		</>
 	);
 };

@@ -1,10 +1,14 @@
+"use client";
 import data from "@/app/ui/JSONs/text.json";
 import { nanoid } from "nanoid";
 import Image from "next/image";
+import { useAppContext } from "../AppContext";
 
 const WebsiteCards = () => {
+	const { userLanguage } = useAppContext();
+
 	const collectionMap = (collection: "websites" | "projects") => {
-		return data["en-US"].portfolio[collection].map((item) => (
+		return data[userLanguage].portfolio[collection].map((item) => (
 			<div className="max-w-lg  mr-10 last:mr-0  mb-6" key={nanoid()}>
 				<div className="overflow-hidden rounded-lg shadow-md">
 					<a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -38,11 +42,11 @@ const WebsiteCards = () => {
 
 	return (
 		<>
-			<h2>Websites</h2>
+			<h2>{data[userLanguage].portfolio["websites-title"]}</h2>
 			<section className="flex flex-row flex-wrap">
 				{collectionMap("websites")}
 			</section>
-			<h2>Projects</h2>
+			<h2>{data[userLanguage].portfolio["projects-title"]}</h2>
 			<section className="flex flex-row flex-wrap">
 				{collectionMap("projects")}
 			</section>
