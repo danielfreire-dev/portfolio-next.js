@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { kolker, montserrat, lusitana } from "@/app/ui/fonts";
 import "./globals.css";
 import SidenavContainer from "./ui/Components/Sidenav/SidenavContainer";
-import { UserLanguageType, SidenavProps } from "./ui/types";
+
+import { AppProvider } from "./ui/Components/AppContext";
 
 export const metadata: Metadata = {
 	title: {
@@ -21,12 +22,16 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${montserrat.className} ${lusitana.className} ${kolker.className} antialiased flex  items-center  min-h-screen `}
+				className={`${montserrat.className} ${lusitana.className} ${kolker.className} antialiased flex min-h-screen`}
 			>
-				<SidenavContainer />
-				<main className="flex-1 ml-64 p-6 flex-col gap-[32px] items-center sm:items-start">
-					{children}
-				</main>
+				<AppProvider>
+					<header className="flex">
+						<SidenavContainer />
+					</header>
+					<main className="flex w-max flex-col overflow-hidden">
+						{children}
+					</main>
+				</AppProvider>
 			</body>
 		</html>
 	);

@@ -11,12 +11,10 @@ const SidenavContainer: React.FC = () => {
 	};
 
 	return (
-		<header>
-			<Sidenav
-				userLanguage={userLanguage}
-				onLanguageChange={handleLanguageChange}
-			/>
-		</header>
+		<Sidenav
+			userLanguage={userLanguage}
+			onLanguageChange={handleLanguageChange}
+		/>
 	);
 };
 

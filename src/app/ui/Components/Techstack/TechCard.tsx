@@ -20,7 +20,7 @@ const TechCard: React.FC<TechCardProps> = () => {
 						src={data.logo}
 						alt={data.tech}
 						width={100}
-						height={5}
+						height={50}
 						className="mb-2 "
 					/>
 					<p>{data.tech}</p>

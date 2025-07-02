@@ -26,13 +26,30 @@
 			]
 		},
 		"home": {
-			"carousel1": "use intuitive design to give your business new superpowers",
-			"carousel2": "i ❤️ creating modern websites",
-			"carousel3": "dood design empowers business!",
 			"techstack": "Tech Stack",
 			"trending": "Portfolio"
 		},
+		"carousel": [
+			{
+				"carouselTxt": "use intuitive design to give your business new superpowers",
+				"carouselImg": "/images/building-orange.webp",
+				"carouselAlt": "orange building"
+			},
+			{
+				"carouselTxt": "i ❤️ creating modern websites",
+				"carouselImg": "/images/building-yellow.webp",
+				"carouselAlt": "yellow building"
+			},
+			{
+				"carouselTxt": "good design empowers business!",
+				"carouselImg": "/images/pencils.webp",
+				"carouselAlt": "pencils"
+			}
+		],
 		"portfolio": {
+			"websites-title": "Websites",
+			"projects-title": "Projets",
+			"all": "Todos",
 			"websites": [
 				{
 					"title": "victó's art gallery",
@@ -114,7 +131,7 @@
 				{ "name": "início", "link": "/" },
 				{ "name": "portfólio", "link": "/portfolio" },
 				{ "name": "sobre", "link": "/about" },
-				{ "name": "contacto", "link": "/contact" }
+				{ "name": "contactos", "link": "/contact" }
 			],
 			"footer": {
 				"privacy": "política de privacidade",
@@ -134,13 +151,30 @@
 			]
 		},
 		"home": {
-			"carousel1": "utilize design intuitivo para dar superpoderes ao teu negócio",
-			"carousel2": "eu ❤️ criar websites modernos",
-			"carousel3": "bom design fortalece o negócio!",
 			"techstack": "Tecnologias",
 			"trending": "Portfólio"
 		},
+		"carousel": [
+			{
+				"carouselTxt": "use intuitive design to give your business new superpowers",
+				"carouselImg": "/images/building-orange.webp",
+				"carouselAlt": "orange building"
+			},
+			{
+				"carouselTxt": "i ❤️ creating modern websites",
+				"carouselImg": "/images/building-yellow.webp",
+				"carouselAlt": "yellow building"
+			},
+			{
+				"carouselTxt": "good design empowers business!",
+				"carouselImg": "/images/pencils.webp",
+				"carouselAlt": "pencils"
+			}
+		],
 		"portfolio": {
+			"websites-title": "Websites",
+			"projects-title": "Projetos",
+			"all": "Todos",
 			"websites": [
 				{
 					"title": "galeria de arte do victó",
@@ -205,12 +239,12 @@
 			"paragraph7": "A história de Daniel Freire é mais do que uma transição de carreira - é uma narrativa de evolução pessoal, demonstrando que o crescimento profissional muitas vezes vem de abraçar caminhos inesperados e alavancar conjuntos de competências diversos."
 		},
 		"contact": {
-			"title": "contactar",
+			"title": "entrar em contacto",
 			"name": "nome",
 			"email": "email",
 			"phone": "número de telefone",
 			"message": "mensagem",
-			"label": "Li e concordo com a ",
+			"label": "li e concordo com a ",
 			"privacy": "política de privacidade",
 			"btn": "enviar mensagem"
 		}

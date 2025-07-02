@@ -1,3 +1,5 @@
+import { EmblaOptionsType } from "embla-carousel";
+
 export interface TechCardProps {
 	techstackMap: JSX.Element;
 }
@@ -58,3 +60,29 @@ interface Data {
 export interface LocalizedData {
 	[key: string]: Data;
 }
+
+// App Context
+export type AppContextType = {
+	userLanguage: UserLanguageType;
+	setUserLanguage: (language: UserLanguageType) => void;
+};
+
+interface AboutClientProps {
+	initialAbout: (typeof data)["en-US"]["about"];
+}
+
+// Carousel DS
+export type Slide = {
+	carouselTxt: string;
+	carouselAlt: string;
+	carouselImg: string;
+};
+
+export type CarouselProps = {
+	slides: Slide[];
+};
+
+export type PropType = {
+	slides: number[];
+	options?: EmblaOptionsType;
+};
