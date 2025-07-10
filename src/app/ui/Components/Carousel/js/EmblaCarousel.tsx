@@ -1,12 +1,14 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
+import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import AutoScroll from "embla-carousel-auto-scroll";
+import Fade from "embla-carousel-fade";
 import {
 	NextButton,
 	PrevButton,
 	usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
+import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import { PropType } from "@/app/ui/types";
 import Image from "next/image";
 
@@ -72,6 +74,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [currentSlide, setCurrentSlide] = useState(0);
 
+	const { selectedIndex, scrollSnaps, onDotButtonClick } =
+		useDotButton(emblaApi);
+
 	const {
 		prevBtnDisabled,
 		nextBtnDisabled,
@@ -122,9 +127,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 				<div className="embla__container">
 					{slides.map((index) => (
 						<div className="embla__slide" key={index}>
-							<div className={`embla__slide__number slide${index + 1} w-96`}>
-								{switchIndex(index, currentSlide)}
-							</div>
+							{switchIndex(index, currentSlide)}
 						</div>
 					))}
 				</div>
@@ -132,19 +135,21 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
 			<div className="embla__controls">
 				<div className="embla__buttons">
-					<PrevButton
-						onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
-						disabled={prevBtnDisabled}
-					/>
-					<NextButton
-						onClick={() => onButtonAutoplayClick(onNextButtonClick)}
-						disabled={nextBtnDisabled}
-					/>
+					<PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+					<NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
 				</div>
 
-				<button className="embla__play" onClick={toggleAutoplay} type="button">
-					{isPlaying ? "Stop" : "Start"}
-				</button>
+				<div className="embla__dots">
+					{scrollSnaps.map((_, index) => (
+						<DotButton
+							key={index}
+							onClick={() => onDotButtonClick(index)}
+							className={"embla__dot".concat(
+								index === selectedIndex ? " embla__dot--selected" : "",
+							)}
+						/>
+					))}
+				</div>
 			</div>
 		</div>
 	);

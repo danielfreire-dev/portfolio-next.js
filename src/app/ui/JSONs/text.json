@@ -123,6 +123,16 @@
 			"label": "I have read and agree with ",
 			"privacy": "privacy policy",
 			"btn": "send message"
+		},
+		"icons": {
+			"leftarrow": {
+				"src": "/images/icons/chevron-left.svg",
+				"alt": "left arrow"
+			},
+			"rightarrow": {
+				"src": "/images/icons/chevron-right.svg",
+				"alt": "right arrow"
+			}
 		}
 	},
 	"pt-PT": {
@@ -247,6 +257,16 @@
 			"label": "li e concordo com a ",
 			"privacy": "política de privacidade",
 			"btn": "enviar mensagem"
+		},
+		"icons": {
+			"left-arrow": {
+				"src": "public/images/icons/chevron-left.svg public/images/icons/chevron-right.svg",
+				"alt": "seta para a esquerda"
+			},
+			"right-arrow": {
+				"src": "public/images/icons/chevron-right.svg",
+				"alt": "seta para a direita"
+			}
 		}
 	}
 }

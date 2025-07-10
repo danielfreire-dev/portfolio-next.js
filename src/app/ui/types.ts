@@ -86,3 +86,11 @@ export type PropType = {
 	slides: number[];
 	options?: EmblaOptionsType;
 };
+
+export interface CarouselItem {
+	id: number;
+	title: string;
+	description: string;
+	imageUrl: string;
+	alt: string;
+}
