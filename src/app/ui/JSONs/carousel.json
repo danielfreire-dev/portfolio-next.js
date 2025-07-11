@@ -1,0 +1,56 @@
+{
+	"carousel": [
+		{
+			"id": 1,
+			"title": "Lossless Youths",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"imageUrl": "/images/Carousel/dP3N4qnEZ4tCTCLq59iysd.jpg",
+			"alt": "Abstract futuristic cityscape"
+		},
+		{
+			"id": 2,
+			"title": "Estrange Bond",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"imageUrl": "/images/Carousel/tc0aqpv92pn21.jpg",
+			"alt": "Mountain landscape with fog"
+		},
+		{
+			"id": 3,
+			"title": "The Gate Keeper",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"imageUrl": "/images/Carousel/bio_north.jpg",
+			"alt": "Industrial laboratory interior"
+		},
+		{
+			"id": 4,
+			"title": "Last Trace Of Us",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"imageUrl": "/images/Carousel/878663.jpg",
+			"alt": "Abandoned building with overgrowth"
+		},
+		{
+			"id": 5,
+			"title": "Urban Decay",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"imageUrl": "/images/Carousel/simon_stalenhag_the_electric_state_6.webp",
+			"alt": "Futuristic robot in field"
+		},
+		{
+			"id": 6,
+			"title": "The Migration",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"imageUrl": "/images/Carousel/simon-december1994.jpg",
+			"alt": "Snowy forest landscape"
+		}
+	],
+	"icons": {
+		"leftarrow": {
+			"src": "/images/icons/chevron-left.svg",
+			"alt": "left arrow"
+		},
+		"rightarrow": {
+			"src": "/images/icons/chevron-right.svg",
+			"alt": "right arrow"
+		}
+	}
+}
