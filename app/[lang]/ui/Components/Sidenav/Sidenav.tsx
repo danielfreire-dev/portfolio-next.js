@@ -1,36 +1,34 @@
-"use client";
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import data from "@/app/ui/JSONs/text.json";
+
 import "../../styles/styles.css";
 import { kolker } from "../../fonts";
 import { montserrat } from "../../fonts";
 import { nanoid } from "nanoid";
-import { useAppContext } from "../AppContext";
-import { UserLanguageType, LocalizedData } from "../../types";
 
-const json: LocalizedData = data as LocalizedData;
+import LocaleSwitcher from "./LocaleSwitcher";
+import { type getDictionary } from "@/app/i18n/get-dictionary";
 
-export const Sidenav = () => {
-	const { userLanguage, setUserLanguage } = useAppContext();
-
-	const pathname = usePathname();
+export const Sidenav = ({
+	dictionary,
+}: {
+	dictionary: Awaited<ReturnType<typeof getDictionary>>["sidenav"];
+}) => {
+	/* const { userLanguage, setUserLanguage } = useAppContext(); */
 
 	// Handle language selection change
-	const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+	/* const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		setUserLanguage(e.target.value as UserLanguageType);
-	};
+	}; */
 
 	// Type guard to ensure userLanguage exists in json
-	if (!json[userLanguage]) {
+	/* if (!json[userLanguage]) {
 		console.error(`Language ${userLanguage} not found in data`);
 		setUserLanguage("en-US"); // Fallback to default language
 		return null;
-	}
+	} */
 
-	const nav = data[userLanguage].sidenav.links.map((data) => {
+	const nav = dictionary.links.map((data) => {
 		const isActive =
 			pathname === data.link ||
 			(pathname.startsWith(data.link) && data.link !== "/")
@@ -83,7 +81,7 @@ export const Sidenav = () => {
 					</a>
 				</div>
 
-				<div>
+				{/* <div>
 					<select
 						name="language"
 						id="language"
@@ -95,9 +93,10 @@ export const Sidenav = () => {
 						<option value="en-US">🇺🇸 English</option>
 					</select>
 					<button type="button" name="theme-switcher"></button>
-				</div>
+				</div> */}
+				<LocaleSwitcher />
 				<footer className={`${montserrat.className}`}>
-					{json[userLanguage].sidenav.footer.blurb}{" "}
+					{dictionary.footer.blurb}{" "}
 					<a
 						href="https://github.com/danielfreire-dev/"
 						target="_blank"

@@ -1,7 +1,9 @@
-import { EmblaOptionsType } from "embla-carousel";
-
 export interface TechCardProps {
-	techstackMap: JSX.Element;
+	techstackMap: Record<string, string>;
+	tech: string;
+	logo: string;
+	link: string;
+	alt: string;
 }
 
 // userLanguage Types
