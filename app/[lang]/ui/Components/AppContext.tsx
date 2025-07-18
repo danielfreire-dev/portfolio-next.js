@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 import React, { createContext, useContext, useState } from "react";
 import { UserLanguageType } from "../types";
 import { AppContextType } from "../types";
@@ -22,3 +22,4 @@ export const useAppContext = () => {
 	}
 	return context;
 };
+ */
