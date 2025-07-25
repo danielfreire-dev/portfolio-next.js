@@ -1,0 +1,281 @@
+{
+	"about": {
+		"image": "/images/Lensa/Lensa2.jpg",
+		"paragraph1": "A jornada de Daniel Freire começou no vibrante mundo do marketing, mas não da forma que se poderia esperar. Enquanto muitos profissionais de marketing mergulham no design e na narrativa criativa, Daniel sentiu-se cada vez mais atraído pelos fundamentos tecnológicos das estratégias digitais. Além disso, a sua perspetiva única permitiu-lhe ver o marketing não apenas como um empreendimento criativo, mas como um ecossistema complexo impulsionado por dados, análise e inovação tecnológica.",
+		"paragraph2": "Desde o início, Daniel foi diferente. Em vez de se concentrar apenas na criação de campanhas visualmente apelativas, ficou fascinado pelos mecanismos técnicos que impulsionavam os esforços de marketing digital. Percebeu desde cedo que o marketing moderno não se trata apenas de visuais atraentes, mas de compreender paisagens digitais complexas e aproveitar a tecnologia para gerar envolvimento significativo.",
+		"paragraph3": "Como programador web com formação em marketing, Daniel descobriu que a sua verdadeira paixão estava no intrincado mundo do código e da arquitetura de sistemas. Progressivamente, transitou de funções tradicionais de marketing para posições mais técnicas, onde a sua combinação única de conhecimento de marketing e competências tecnológicas o distinguiu dos seus pares.",
+		"paragraph4": "A sua jornada profissional tornou-se um testemunho do poder das competências interdisciplinares. Daniel percebeu que a sua experiência em marketing não era um obstáculo, mas uma vantagem significativa nas suas buscas tecnológicas. Conseguia compreender a experiência do utilizador, entender as necessidades dos clientes e traduzir conceitos técnicos complexos para uma linguagem acessível – um conjunto de competências que muitos tecnólogos puros têm dificuldade em desenvolver.",
+		"paragraph5": "A transição não foi apenas uma mudança de títulos profissionais; foi uma profunda transformação pessoal e profissional. Daniel abraçou o desafio de se tornar um programador web completo, aprendendo continuamente e expandindo o seu conjunto de ferramentas tecnológicas. A sua formação em marketing proporcionou-lhe capacidades de pensamento estratégico que complementavam a sua perícia técnica.",
+		"paragraph6": "O que verdadeiramente distinguiu Daniel foi a sua abordagem holística à tecnologia. Ele não via o código apenas como linhas num ecrã, mas como uma ferramenta poderosa para resolver problemas do mundo real. A sua capacidade de combinar conhecimentos de marketing com soluções técnicas robustas tornou-o um profissional singularmente valioso numa paisagem digital cada vez mais complexa.",
+		"paragraph7": "A história de Daniel Freire é mais do que uma transição de carreira – é uma narrativa de evolução pessoal, demonstrando que o crescimento profissional frequentemente surge ao abraçar caminhos inesperados e aproveitar conjuntos de competências diversificadas.",
+		"title1": "Transformação Tecnológica de Daniel Freire: De Maverick do Marketing a Condutor de Código",
+		"title2": "As Raízes no Marketing – Onde a Criatividade Encontra a Tecnologia",
+		"title3": "O Despertar Tecnológico",
+		"title4": "Ligando Mundos – Uma Nova Identidade Profissional",
+		"title5": "Uma Jornada de Crescimento Contínuo"
+	},
+	"carousel": [
+		{
+			"alt": "Paisagem urbana futurista abstrata",
+			"cta": "Saber Mais",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"id": 1,
+			"imageUrl": "/images/Carousel/white.webp",
+			"title": "Lossless Youths",
+			"url": ""
+		},
+		{
+			"alt": "Paisagem montanhosa com nevoeiro",
+			"cta": "Saber Mais",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"id": 2,
+			"imageUrl": "/images/Carousel/umbrellas.webp",
+			"title": "Estrange Bond",
+			"url": ""
+		},
+		{
+			"alt": "Interior de laboratório industrial",
+			"cta": "Saber Mais",
+			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"id": 3,
+			"imageUrl": "/images/Carousel/estatuas.webp",
+			"title": "The Gate Keeper",
+			"url": ""
+		},
+		{
+			"alt": "edifício laranja",
+			"cta": "Saber Mais",
+			"description": "utilize design intuitivo para dar superpoderes ao seu negócio",
+			"id": 4,
+			"imageUrl": "/images/Carousel/building-orange.webp",
+			"title": "The Migration",
+			"url": ""
+		},
+		{
+			"alt": "edifício amarelo",
+			"cta": "Saber Mais",
+			"description": "adoro criar websites modernos",
+			"id": 5,
+			"imageUrl": "/images/Carousel/building-yellow.webp",
+			"title": "The Migration",
+			"url": ""
+		},
+		{
+			"alt": "lápis",
+			"cta": "Saber Mais",
+			"description": "bom design capacita negócios!",
+			"id": 6,
+			"imageUrl": "/images/Carousel/pencils.webp",
+			"title": "The Migration",
+			"url": ""
+		}
+	],
+	"contact": {
+		"btn": "enviar mensagem",
+		"email": "e-mail",
+		"firstName": "primeiro nome",
+		"label": "Li e concordo com a ",
+		"lastName": "último nome",
+		"message": "mensagem",
+		"pageTitle": "Contactos",
+		"phone": "número de telefone",
+		"placeholder": {
+			"email": "Introduza o seu email",
+			"firstName": "Introduza o seu primeiro nome",
+			"lastName": "Introduza o seu último nome",
+			"message": "Introduza a sua mensagem",
+			"phone": "Introduza o seu número de telefone"
+		},
+		"privacy": "política de privacidade",
+		"title": "contacte-me"
+	},
+	"cta": {
+		"button": [
+			"Vamos falar sobre o seu negócio",
+			"Tem um Projeto em Mente? Vamos Conversar.",
+			"À Procura de um Programador Front-End? Encontrou Um!",
+			"Diga Olá — Não Mordo 👋",
+			"Vamos Tornar o Seu Website Inesquecível →",
+			"Precisa de um Programador que Entregue? Vamos Conversar.",
+			"Vamos Construir Algo Fantástico Juntos →"
+		],
+		"title": "contacte-me"
+	},
+	"home": {
+		"techstack": "Tecnologias",
+		"trending": "Portfólio"
+	},
+	"icons": {
+		"leftarrow": {
+			"alt": "seta esquerda",
+			"src": "/images/icons/chevron-left.svg"
+		},
+		"rightarrow": {
+			"alt": "seta direita",
+			"src": "/images/icons/chevron-right.svg"
+		}
+	},
+	"portfolio": {
+		"all": "Todos",
+		"cta": ["ver projeto", "ver projeto online →"],
+		"pageTitle": "portfólio",
+		"projects": [
+			{
+				"link": "https://quizzicall-bydainelli.netlify.app/",
+				"src": "/images/screenshots/quizzical.gif",
+				"summary": "Jogo de trivia com mais de 4.000 perguntas.",
+				"title": "quizzical"
+			},
+			{
+				"link": "https://pollyglot-bydainelli.netlify.app/",
+				"src": "/images/screenshots/pollyglot.gif",
+				"summary": "Aplicação de tradução com IA.",
+				"title": "pollyglot"
+			},
+			{
+				"link": "https://danielfreire.pages.dev",
+				"src": "/images/screenshots/BnB_Screenshot.webp",
+				"summary": "Portfólio antigo do Daniel.",
+				"title": "old portfolio"
+			},
+			{
+				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
+				"src": "/images/screenshots/drumsVeryBig.webp",
+				"summary": "Projeto divertido para reproduzir uma bateria no seu PC.",
+				"title": "drum kit app"
+			},
+			{
+				"link": "https://tenzi-bydaniel.netlify.app/",
+				"src": "/images/screenshots/Tenzi_Screenshot.webp",
+				"summary": "O jogo de dados mais popular do mundo, agora no seu navegador.",
+				"title": "tenzi"
+			}
+		],
+		"projects-title": "Projetos",
+		"websites": [
+			{
+				"link": "https://victo.pages.dev",
+				"src": "/images/screenshots/victo.webp",
+				"summary": "Website criado para exibir as obras do famoso artista português Victó.",
+				"title": "victó's art gallery"
+			},
+			{
+				"link": "https://insurbia.com",
+				"src": "/images/screenshots/insurbia.webp",
+				"summary": "Website desenvolvido para ser ponto de contacto do coletivo de arquitetura Insurbia.",
+				"title": "insurbia"
+			}
+		],
+		"websites-title": "Websites"
+	},
+	"sidenav": {
+		"footer": {
+			"blurb": "Feito com 🔋 por",
+			"icons": {
+				"github": {
+					"alt": "GitHub",
+					"link": "https://github.com/danielfreire-dev/",
+					"src": "/images/icons/github-square.svg"
+				},
+				"linkedin": {
+					"alt": "LinkedIn",
+					"link": "https://www.linkedin.com/in/danielfreire-swe/",
+					"src": "/images/icons/linkedin.svg"
+				}
+			}
+		},
+		"header": {
+			"title": "daniel freire"
+		},
+		"links": [
+			{ "link": "/", "name": "início" },
+			{ "link": "/portfolio", "name": "portfólio" },
+			{ "link": "/about", "name": "sobre" },
+			{ "link": "/contact", "name": "contactos" }
+		],
+		"privacy": "política de privacidade",
+		"rights": "Daniel Freire ® todos os direitos reservados"
+	},
+	"tech": [
+		{
+			"link": "https://nextjs.org",
+			"logo": "/images/icons/nextjs-13.svg",
+			"name": "next.js"
+		},
+		{
+			"link": "https://react.dev",
+			"logo": "/images/icons/react2.svg",
+			"name": "react.js"
+		},
+		{
+			"link": "https://www.typescriptlang.org",
+			"logo": "/images/icons/Typescript.svg",
+			"name": "typeScript"
+		},
+		{
+			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			"logo": "/images/icons/javascript-original.svg",
+			"name": "javaScript"
+		},
+		{
+			"link": "https://www.w3.org/html/",
+			"logo": "/images/icons/html5-original-wordmark.svg",
+			"name": "HTML5"
+		},
+		{
+			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			"logo": "/images/icons/Official_CSS_Logo.svg",
+			"name": "CSS3"
+		},
+		{
+			"link": "https://webpack.js.org/",
+			"logo": "/images/icons/webpack.svg",
+			"name": "webpack"
+		},
+		{
+			"link": "https://vite.dev",
+			"logo": "/images/icons/vitejs.svg",
+			"name": "vite.js"
+		},
+		{
+			"link": "https://git-scm.com/",
+			"logo": "/images/icons/git-scm-icon.svg",
+			"name": "git"
+		},
+		{
+			"link": "https://github.com/",
+			"logo": "/images/icons/github.svg",
+			"name": "gitHub"
+		},
+		{
+			"link": "https://jestjs.io/",
+			"logo": "/images/icons/jestjsio-icon.svg",
+			"name": "jest"
+		},
+		{
+			"link": "https://selenium-python.readthedocs.io/",
+			"logo": "/images/icons/selenium.svg",
+			"name": "selenium"
+		},
+		{
+			"link": "https://www.python.org/",
+			"logo": "/images/icons/python-original.svg",
+			"name": "python"
+		},
+		{
+			"link": "https://www.linux.org/",
+			"logo": "/images/icons/linux-original.svg",
+			"name": "linux"
+		},
+		{
+			"link": "https://www.gnu.org/software/bash/",
+			"logo": "/images/icons/bash-icon-svgrepo-com.svg",
+			"name": "bash"
+		},
+		{
+			"link": "https://www.zsh.org/",
+			"logo": "/images/icons/color_zsh.svg",
+			"name": "zsh"
+		}
+	]
+}

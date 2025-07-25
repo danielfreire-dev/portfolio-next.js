@@ -1,0 +1,40 @@
+.offset {
+	--color: #f27a3d;
+	--hover: #f2993d;
+}
+
+.raise {
+	--color: #f27a3d;
+	--hover: #f2593d;
+}
+.offset {
+	box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+	margin: 1em;
+}
+.offset:hover,
+.offset:focus {
+	box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+button {
+	color: var(--color);
+	transition: 0.25s;
+}
+button:hover,
+button:focus {
+	border-color: var(--hover);
+	color: #fff;
+}
+button {
+	background: none;
+	border: 2px solid;
+	font: inherit;
+	line-height: 1;
+	margin: 0.5em;
+	padding: 1em 2em;
+}
+
+.raise:hover,
+.raise:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+}
