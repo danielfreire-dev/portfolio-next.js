@@ -1,0 +1,9 @@
+{
+	"required-headings": [
+		"# Project Title",
+		"## Overview",
+		"## Installation",
+		"## Usage",
+		"## Contributing"
+	]
+}
