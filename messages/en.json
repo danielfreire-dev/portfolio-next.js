@@ -17,76 +17,69 @@
 	"carousel": [
 		{
 			"alt": "Abstract futuristic cityscape",
+			"cta": "Read More",
 			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
 			"id": 1,
-			"imageUrl": "/images/Carousel/dP3N4qnEZ4tCTCLq59iysd.jpg",
+			"imageUrl": "/images/Carousel/white.webp",
 			"title": "Lossless Youths"
 		},
 		{
 			"alt": "Mountain landscape with fog",
+			"cta": "Read More",
 			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
 			"id": 2,
-			"imageUrl": "/images/Carousel/tc0aqpv92pn21.jpg",
+			"imageUrl": "/images/Carousel/umbrellas.webp",
 			"title": "Estrange Bond"
 		},
 		{
 			"alt": "Industrial laboratory interior",
+			"cta": "Read More",
 			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
 			"id": 3,
-			"imageUrl": "/images/Carousel/bio_north.jpg",
+			"imageUrl": "/images/Carousel/estatuas.webp",
 			"title": "The Gate Keeper"
 		},
 		{
-			"alt": "Abandoned building with overgrowth",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-			"id": 4,
-			"imageUrl": "/images/Carousel/878663.jpg",
-			"title": "Last Trace Of Us"
-		},
-		{
-			"alt": "Futuristic robot in field",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-			"id": 5,
-			"imageUrl": "/images/Carousel/simon_stalenhag_the_electric_state_6.webp",
-			"title": "Urban Decay"
-		},
-		{
-			"alt": "Snowy forest landscape",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-			"id": 6,
-			"imageUrl": "/images/Carousel/simon-december1994.jpg",
-			"title": "The Migration"
-		},
-		{
 			"alt": "orange building",
+			"cta": "Read More",
 			"description": "use intuitive design to give your business new superpowers",
-			"id": 7,
-			"imageUrl": "/images/building-orange.webp",
+			"id": 4,
+			"imageUrl": "/images/Carousel/building-orange.webp",
 			"title": "The Migration"
 		},
 		{
 			"alt": "yellow building",
+			"cta": "Read More",
 			"description": "i ❤️ creating modern websites",
-			"id": 8,
-			"imageUrl": "/images/building-yellow.webp",
+			"id": 5,
+			"imageUrl": "/images/Carousel/building-yellow.webp",
 			"title": "The Migration"
 		},
 		{
 			"alt": "pencils",
+			"cta": "Read More",
 			"description": "good design empowers business!",
-			"id": 9,
-			"imageUrl": "/images/pencils.webp",
+			"id": 6,
+			"imageUrl": "/images/Carousel/pencils.webp",
 			"title": "The Migration"
 		}
 	],
 	"contact": {
 		"btn": "send message",
 		"email": "email",
+		"firstName": "first name",
 		"label": "I have read and agree with ",
+		"lastName": "last name",
 		"message": "message",
-		"name": "name",
 		"pageTitle": "Contact",
 		"phone": "phone number",
+		"placeholder": {
+			"email": "Input your email",
+			"firstName": "Input your first name",
+			"lastName": "Input your last name",
+			"message": "Input your message",
+			"phone": "Input your phone number"
+		},
 		"privacy": "privacy policy",
 		"title": "get in touch"
 	},
@@ -115,6 +108,9 @@
 			"alt": "right arrow",
 			"src": "/images/icons/chevron-right.svg"
 		}
+	},
+	"localeSwitcher": {
+		"locale": "{locale, select, en {🇺🇸 English} pt {🇵🇹 Português} other {Unknown}}"
 	},
 	"portfolio": {
 		"all": "All",
@@ -202,22 +198,22 @@
 		{
 			"link": "https://nextjs.org",
 			"logo": "/images/icons/nextjs-13.svg",
-			"name": "Next.js"
+			"name": "next.js"
 		},
 		{
 			"link": "https://react.dev",
 			"logo": "/images/icons/react2.svg",
-			"name": "React.js"
+			"name": "react.js"
 		},
 		{
 			"link": "https://www.typescriptlang.org",
 			"logo": "/images/icons/Typescript.svg",
-			"name": "TypeScript"
+			"name": "typeScript"
 		},
 		{
 			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 			"logo": "/images/icons/javascript-original.svg",
-			"name": "JavaScript"
+			"name": "javaScript"
 		},
 		{
 			"link": "https://www.w3.org/html/",
@@ -232,52 +228,52 @@
 		{
 			"link": "https://webpack.js.org/",
 			"logo": "/images/icons/webpack.svg",
-			"name": "Webpack"
+			"name": "webpack"
 		},
 		{
 			"link": "https://vite.dev",
 			"logo": "/images/icons/vitejs.svg",
-			"name": "Vite.js"
+			"name": "vite.js"
 		},
 		{
 			"link": "https://git-scm.com/",
 			"logo": "/images/icons/git-scm-icon.svg",
-			"name": "Git"
+			"name": "git"
 		},
 		{
 			"link": "https://github.com/",
 			"logo": "/images/icons/github.svg",
-			"name": "GitHub"
+			"name": "gitHub"
 		},
 		{
 			"link": "https://jestjs.io/",
 			"logo": "/images/icons/jestjsio-icon.svg",
-			"name": "Jest"
+			"name": "jest"
 		},
 		{
 			"link": "https://selenium-python.readthedocs.io/",
 			"logo": "/images/icons/selenium.svg",
-			"name": "Selenium"
+			"name": "selenium"
 		},
 		{
 			"link": "https://www.python.org/",
 			"logo": "/images/icons/python-original.svg",
-			"name": "Python"
+			"name": "python"
 		},
 		{
 			"link": "https://www.linux.org/",
 			"logo": "/images/icons/linux-original.svg",
-			"name": "Linux"
+			"name": "linux"
 		},
 		{
 			"link": "https://www.gnu.org/software/bash/",
 			"logo": "/images/icons/bash-icon-svgrepo-com.svg",
-			"name": "Bash"
+			"name": "bash"
 		},
 		{
 			"link": "https://www.zsh.org/",
 			"logo": "/images/icons/color_zsh.svg",
-			"name": "Zsh"
+			"name": "zsh"
 		}
 	]
 }
