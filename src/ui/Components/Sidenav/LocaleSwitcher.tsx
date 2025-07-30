@@ -1,45 +1,19 @@
-/* eslint-disable i18next/no-literal-string */
-"use client";
+import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
 
-import { usePathname, useRouter } from "next/navigation";
-import { i18n, type Locale } from "@/src/i18n/i18n-config";
-
+import { useLocale, useTranslations } from "next-intl";
+import { routing } from "@/i18n/routing";
 const LocaleSwitcher = () => {
-	const pathname = usePathname();
-	const router = useRouter();
-
-	const redirectedPathname = (locale: Locale) => {
-		if (!pathname) return "/";
-		const segments = pathname.split("/");
-		segments[1] = locale;
-		return segments.join("/");
-	};
-
-	const currentLocale =
-		(pathname?.split("/")[1] as Locale) || i18n.defaultLocale;
-
-	const handleLocaleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-		const newLocale = e.target.value as Locale;
-		router.push(redirectedPathname(newLocale));
-	};
+	const t = useTranslations("localeSwitcher");
+	const locale = useLocale();
 
 	return (
-		<select
-			value={currentLocale}
-			onChange={handleLocaleChange}
-			aria-label="Select language"
-			name="language"
-			id="language"
-			className={` hover:cursor-pointer`}
-		>
-			{i18n.locales.map((locale) => {
-				return (
-					<option value={locale} key={locale} className="capitalize">
-						{locale === "en" ? "🇺🇸 English" : "🇵🇹 Português"}
-					</option>
-				);
-			})}
-		</select>
+		<LocaleSwitcherSelect defaultValue={locale}>
+			{routing.locales.map((lang) => (
+				<option key={lang} value={lang}>
+					{t("locale", { locale: lang })}
+				</option>
+			))}
+		</LocaleSwitcherSelect>
 	);
 };
 

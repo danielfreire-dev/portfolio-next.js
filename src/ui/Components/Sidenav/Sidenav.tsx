@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,14 +6,14 @@ import { kolker } from "../../fonts";
 import { montserrat } from "../../fonts";
 import { nanoid } from "nanoid";
 
-import { usePathname } from "next/navigation";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { Dictionary } from "@/src/types";
+import { useTranslations } from "next-intl";
+import NavigationLink from "./NavigationLink";
 
-const Sidenav = ({ dictionary }: { dictionary: Dictionary["sidenav"] }) => {
-	const pathname = usePathname();
+const Sidenav = () => {
+	const t = useTranslations("sidenav");
 
-	const nav = dictionary.links.map((data) => {
+	/* const nav = {t("links")}.map((data) => {
 		const lang = pathname.split("/")[1];
 
 		const isActive =
@@ -28,7 +27,7 @@ const Sidenav = ({ dictionary }: { dictionary: Dictionary["sidenav"] }) => {
 				<Link href={`/${lang}${data.link}`}>{data.name}</Link>
 			</li>
 		);
-	});
+	}); */
 
 	return (
 		<nav className="hidden md:sticky  top-0 left-0 h-screen w-64 z-50 flex-shrink-0 flex-grow-0 p-4 bg-black shadow-lg md:flex flex-col justify-between">
@@ -36,33 +35,46 @@ const Sidenav = ({ dictionary }: { dictionary: Dictionary["sidenav"] }) => {
 				<h1
 					className={`${kolker.className} text-6xl capitalize transition delay-150 duration-900 ease-in-out hover:text-orange-400`}
 				>
-					{dictionary.header.title}
+					{t("header.title")}
 				</h1>
 			</Link>
 
-			<ul className={`capitalize ${montserrat.className}`}>{nav}</ul>
+			<ul className={`capitalize ${montserrat.className}`}>
+				<NavigationLink href={t("links[0].link")}>
+					{t("links[0].name")}
+				</NavigationLink>
+				<NavigationLink href={t("links[1].link")}>
+					{t("links[1].name")}
+				</NavigationLink>
+				<NavigationLink href={t("links[2].link")}>
+					{t("links[2].name")}
+				</NavigationLink>
+				<NavigationLink href={t("links[3].link")}>
+					{t("links[3].name")}
+				</NavigationLink>
+			</ul>
 			<section>
 				<div className="flex gap-2">
 					<a
-						href={dictionary.footer.icons.github.link}
+						href={t("footer.icons.github.link")}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Image
-							src={dictionary.footer.icons.github.src}
-							alt={dictionary.footer.icons.github.alt}
+							src={t("footer.icons.github.link")}
+							alt={t("footer.icons.github.alt")}
 							width={20}
 							height={20}
 						/>
 					</a>
 					<a
-						href={dictionary.footer.icons.linkedin.link}
+						href={t("footer.icons.linkedin.link")}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Image
-							src={dictionary.footer.icons.linkedin.src}
-							alt={dictionary.footer.icons.linkedin.alt}
+							src={t("footer.icons.linkedin.src")}
+							alt={t("footer.icons.linkedin.alt")}
 							width={20}
 							height={20}
 						/>
@@ -76,7 +88,7 @@ const Sidenav = ({ dictionary }: { dictionary: Dictionary["sidenav"] }) => {
 					aria-details="footer"
 					role="contentinfo"
 				>
-					{dictionary.footer.blurb}{" "}
+					{t("footer.blurb")}{" "}
 					<a
 						href="https://github.com/danielfreire-dev/"
 						target="_blank"
@@ -86,7 +98,7 @@ const Sidenav = ({ dictionary }: { dictionary: Dictionary["sidenav"] }) => {
 						title="Daniel Freire's GitHub"
 						aria-details="Daniel Freire's GitHub"
 					>
-						{dictionary.header.title}
+						{t("header.title")}
 					</a>
 				</footer>
 			</section>
