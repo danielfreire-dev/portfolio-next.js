@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { kolker, montserrat, lusitana } from "../../ui/fonts";
+import { kolker, montserrat, lusitana } from "@/ui/fonts";
 import "./globals.css";
-import Sidenav from "../../ui/Components/Sidenav/Sidenav";
+import Sidenav from "@/ui/Components/Sidenav/Sidenav";
+
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
 	title: {
@@ -32,19 +34,22 @@ export default async function RootLayout({
 		notFound();
 	}
 
+	// Get messages for the locale
+	const messages = await getMessages();
+
 	return (
 		<html lang={locale}>
 			<body
 				className={`${montserrat.className} ${lusitana.className} ${kolker.className} antialiased flex min-h-screen`}
 			>
-				<header className="flex">
-					<NextIntlClientProvider>
+				<NextIntlClientProvider messages={messages}>
+					<header className="flex">
 						<Sidenav />
-					</NextIntlClientProvider>
-				</header>
-				<main className="flex flex-1 justify-center flex-col overflow-hidden">
-					<NextIntlClientProvider> {children} </NextIntlClientProvider>
-				</main>
+					</header>
+					<main className="flex flex-1 justify-center flex-col overflow-hidden">
+						{children}
+					</main>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

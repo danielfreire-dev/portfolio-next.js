@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { Dictionary } from "@/src/types";
 
-import "@/src/ui/styles/border.css";
+import "@/ui/styles/border.css";
+import { useTranslations } from "next-intl";
 
-const Cta = ({ dictionary }: { dictionary: Dictionary }) => {
+const Cta = () => {
+	const t = useTranslations("cta");
+
 	const getRandomItem = (array: string[]) => {
 		if (array.length === 0) {
 			return null;
@@ -14,9 +16,7 @@ const Cta = ({ dictionary }: { dictionary: Dictionary }) => {
 	return (
 		<>
 			<Link href="/contact" className="ml-10 mb-1">
-				<button className="offset ">
-					{getRandomItem(dictionary.cta.button)}
-				</button>
+				<button className="offset ">{getRandomItem(t.raw("button"))}</button>
 			</Link>
 		</>
 	);

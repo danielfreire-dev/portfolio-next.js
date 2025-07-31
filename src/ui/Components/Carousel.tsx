@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import "@/src/ui/styles/carousel.css";
+import "@/ui/styles/carousel.css";
+import { useTranslations } from "next-intl";
 
 interface SliderItem {
 	imageUrl: string;
@@ -13,13 +14,9 @@ interface SliderItem {
 
 interface SliderProps {
 	items: SliderItem[];
-	icons: {
-		leftarrow: { src: string; alt: string };
-		rightarrow: { src: string; alt: string };
-	};
 }
 
-export default function Slider({ items, icons }: SliderProps) {
+export default function Slider({ items }: SliderProps) {
 	const [slideOrder, setSlideOrder] = useState<number[]>(
 		Array.from({ length: items.length }, (_, i) => i),
 	);
@@ -63,9 +60,10 @@ export default function Slider({ items, icons }: SliderProps) {
 		// eslint-disable-next-line no-undef
 		return () => clearInterval(timer);
 	}, [goNext, isPaused]);
+	const c = useTranslations();
+	const i = useTranslations("icons");
 
 	return (
-		// eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
 		<main
 			className="slider-container"
 			onMouseEnter={() => setIsPaused(true)}
@@ -73,8 +71,9 @@ export default function Slider({ items, icons }: SliderProps) {
 		>
 			<ul className="slider">
 				{slideOrder.map((itemIndex) => {
-					const item = items[itemIndex];
-					// Create unique key with version number
+					// eslint-disable-next-line i18next/no-literal-string
+					const item = c(`carousel[${itemIndex}]`);
+					/* Create unique key with version number */
 					const uniqueKey = `${item.imageUrl}-${
 						itemVersions[item.imageUrl] || 0
 					}`;
@@ -90,7 +89,7 @@ export default function Slider({ items, icons }: SliderProps) {
 								blurDataURL={item.imageUrl}
 								objectPosition="center"
 								style={{
-									objectFit: "cover", // cover, contain, none
+									objectFit: "cover",
 								}}
 							/>
 							<div className="content">
@@ -106,16 +105,16 @@ export default function Slider({ items, icons }: SliderProps) {
 			<div className="nav">
 				<button onClick={goPrev} className="btn prev">
 					<Image
-						src={icons.leftarrow.src}
-						alt={icons.leftarrow.alt}
+						src={i("leftarrow.src")}
+						alt={i("leftarrow.alt")}
 						width={24}
 						height={24}
 					/>
 				</button>
 				<button onClick={goNext} className="btn next">
 					<Image
-						src={icons.rightarrow.src}
-						alt={icons.rightarrow.alt}
+						src={i("rightarrow.src")}
+						alt={i("rightarrow.alt")}
 						width={24}
 						height={24}
 					/>

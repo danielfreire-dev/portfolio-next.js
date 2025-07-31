@@ -1,14 +1,16 @@
-import { Dictionary } from "@/src/types";
-import "@/src/ui/styles/border.css";
+import "@/ui/styles/border.css";
+import { useTranslations } from "next-intl";
 
-const ContactForm = ({ contact }: { contact: Dictionary["contact"] }) => {
+const ContactForm = () => {
+	const t = useTranslations("contact");
+
 	return (
 		<>
 			<form action="" method="post" className="mx-auto ">
 				<div className="name-div flex">
 					<section className="flex flex-col">
 						<label htmlFor="firstName" className="capitalize">
-							{contact.firstName}
+							{t("firstName")}
 						</label>
 						<input
 							type="text"
@@ -19,7 +21,7 @@ const ContactForm = ({ contact }: { contact: Dictionary["contact"] }) => {
 					</section>
 					<section className="flex flex-col">
 						<label htmlFor="lastName" className="capitalize">
-							{contact.lastName}
+							{t("lastName")}
 						</label>
 						<input
 							type="text"
@@ -32,7 +34,7 @@ const ContactForm = ({ contact }: { contact: Dictionary["contact"] }) => {
 				<div className="contacts-div flex">
 					<section className="flex flex-col">
 						<label htmlFor="email" className="capitalize">
-							{contact.email}
+							{t("email")}
 						</label>
 						<input
 							type="email"
@@ -43,7 +45,7 @@ const ContactForm = ({ contact }: { contact: Dictionary["contact"] }) => {
 					</section>
 					<section className="flex flex-col">
 						<label htmlFor="telephone" className="capitalize">
-							{contact.phone}
+							{t("phone")}
 						</label>
 						<input
 							type="tel"
@@ -58,7 +60,7 @@ const ContactForm = ({ contact }: { contact: Dictionary["contact"] }) => {
 				</div>
 				<section className="message-div flex flex-col">
 					<label htmlFor="message" className="capitalize">
-						{contact.message}
+						{t("message")}
 					</label>
 					<textarea
 						name="message"
@@ -73,7 +75,7 @@ const ContactForm = ({ contact }: { contact: Dictionary["contact"] }) => {
 				</section>
 				<section className="flex justify-center mx-auto my-1.5 ">
 					<button type="submit" className="raise   capitalize">
-						{contact.btn}
+						{t("btn")}
 					</button>
 				</section>
 			</form>

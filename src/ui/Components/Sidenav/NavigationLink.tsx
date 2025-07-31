@@ -1,7 +1,6 @@
 "use client";
 
 import { useSelectedLayoutSegment } from "next/navigation";
-import { nanoid } from "nanoid";
 import { ComponentProps } from "react";
 import { Link } from "@/i18n/navigation";
 
@@ -14,13 +13,7 @@ const NavigationLink = ({ href, ...rest }: ComponentProps<typeof Link>) => {
 			: "";
 
 	return (
-		<li className={`navLinks${isActive}`} key={nanoid()}>
-			<Link
-				aria-current={isActive ? "page" : undefined}
-				href={href}
-				{...rest}
-			/>
-		</li>
+		<Link aria-current={isActive ? "page" : undefined} href={href} {...rest} />
 	);
 };
 

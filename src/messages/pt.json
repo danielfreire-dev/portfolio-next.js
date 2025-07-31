@@ -1,148 +1,150 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.jpg",
-		"paragraph1": "A jornada de Daniel Freire começou no vibrante mundo do marketing, mas não da forma que se poderia esperar. Enquanto muitos profissionais de marketing mergulham no design e na narrativa criativa, Daniel sentiu-se cada vez mais atraído pelos fundamentos tecnológicos das estratégias digitais. Além disso, a sua perspetiva única permitiu-lhe ver o marketing não apenas como um empreendimento criativo, mas como um ecossistema complexo impulsionado por dados, análise e inovação tecnológica.",
-		"paragraph2": "Desde o início, Daniel foi diferente. Em vez de se concentrar apenas na criação de campanhas visualmente apelativas, ficou fascinado pelos mecanismos técnicos que impulsionavam os esforços de marketing digital. Percebeu desde cedo que o marketing moderno não se trata apenas de visuais atraentes, mas de compreender paisagens digitais complexas e aproveitar a tecnologia para gerar envolvimento significativo.",
-		"paragraph3": "Como programador web com formação em marketing, Daniel descobriu que a sua verdadeira paixão estava no intrincado mundo do código e da arquitetura de sistemas. Progressivamente, transitou de funções tradicionais de marketing para posições mais técnicas, onde a sua combinação única de conhecimento de marketing e competências tecnológicas o distinguiu dos seus pares.",
-		"paragraph4": "A sua jornada profissional tornou-se um testemunho do poder das competências interdisciplinares. Daniel percebeu que a sua experiência em marketing não era um obstáculo, mas uma vantagem significativa nas suas buscas tecnológicas. Conseguia compreender a experiência do utilizador, entender as necessidades dos clientes e traduzir conceitos técnicos complexos para uma linguagem acessível – um conjunto de competências que muitos tecnólogos puros têm dificuldade em desenvolver.",
-		"paragraph5": "A transição não foi apenas uma mudança de títulos profissionais; foi uma profunda transformação pessoal e profissional. Daniel abraçou o desafio de se tornar um programador web completo, aprendendo continuamente e expandindo o seu conjunto de ferramentas tecnológicas. A sua formação em marketing proporcionou-lhe capacidades de pensamento estratégico que complementavam a sua perícia técnica.",
-		"paragraph6": "O que verdadeiramente distinguiu Daniel foi a sua abordagem holística à tecnologia. Ele não via o código apenas como linhas num ecrã, mas como uma ferramenta poderosa para resolver problemas do mundo real. A sua capacidade de combinar conhecimentos de marketing com soluções técnicas robustas tornou-o um profissional singularmente valioso numa paisagem digital cada vez mais complexa.",
-		"paragraph7": "A história de Daniel Freire é mais do que uma transição de carreira – é uma narrativa de evolução pessoal, demonstrando que o crescimento profissional frequentemente surge ao abraçar caminhos inesperados e aproveitar conjuntos de competências diversificadas.",
-		"title1": "Transformação Tecnológica de Daniel Freire: De Maverick do Marketing a Condutor de Código",
-		"title2": "As Raízes no Marketing – Onde a Criatividade Encontra a Tecnologia",
+		"paragraph1": "A jornada de Daniel Freire começou no vibrante mundo do marketing, mas não da maneira que se poderia esperar. Enquanto muitos profissionais de marketing se aprofundam em design e storytelling criativo, Daniel viu-se cada vez mais atraído pelos alicerces tecnológicos das estratégias digitais. Além disso, sua perspectiva única permitiu-lhe ver o marketing não apenas como um empreendimento criativo, mas como um ecossistema complexo impulsionado por dados, análises e inovação tecnológica.",
+		"paragraph2": "Desde o início, Daniel foi diferente. Em vez de se concentrar apenas na criação de campanhas chamativas, ficou fascinado pelos mecanismos técnicos que alimentavam os esforços de marketing digital. Ele entendeu desde cedo que o marketing moderno não se trata apenas de visuais bonitos, mas de entender paisagens digitais complexas e utilizar a tecnologia para impulsionar um envolvimento significativo.",
+		"paragraph3": "Como desenvolvedor web com formação em marketing, Daniel descobriu que sua verdadeira paixão estava no intrincado mundo do código e da arquitetura de sistemas. Gradualmente, transitou de funções tradicionais de marketing para posições mais focadas tecnicamente, onde sua mistura única de insights de marketing e habilidades tecnológicas o destacou de seus pares.",
+		"paragraph4": "Sua jornada profissional tornou-se um testemunho do poder das habilidades interdisciplinares. Daniel percebeu que sua experiência em marketing não era um impedimento, mas uma vantagem significativa em suas buscas tecnológicas. Ele podia compreender a experiência do usuário, entender as necessidades dos clientes e traduzir conceitos técnicos complexos em linguagem acessível - um conjunto de habilidades que muitos tecnólogos puros lutam para desenvolver.",
+		"paragraph5": "A transição não foi apenas sobre mudar títulos de trabalho; foi uma transformação pessoal e profissional profunda. Daniel abraçou o desafio de se tornar um desenvolvedor web completo, aprendendo e expandindo continuamente seu kit de ferramentas tecnológicas. Seu histórico em marketing forneceu-lhe habilidades de pensamento estratégico que complementaram sua expertise técnica.",
+		"paragraph6": "O que realmente destacou Daniel foi sua abordagem holística à tecnologia. Ele não via o código apenas como linhas num ecrã, mas como uma ferramenta poderosa para resolver problemas do mundo real. Sua capacidade de combinar insights de marketing com soluções tecnológicas robustas tornou-o um profissional de valor único num cenário digital cada vez mais complexo.",
+		"paragraph7": "A história de Daniel Freire é mais do que uma transição de carreira - é uma narrativa de evolução pessoal, demonstrando que o crescimento profissional muitas vezes vem de abraçar caminhos inesperados e aproveitar conjuntos de habilidades diversos.",
+		"title1": "A Transformação Tecnológica de Daniel Freire: De Mestre do Marketing a Maestro do Código",
+		"title2": "As Raízes do Marketing - Onde a Criatividade Encontra a Tecnologia",
 		"title3": "O Despertar Tecnológico",
-		"title4": "Ligando Mundos – Uma Nova Identidade Profissional",
+		"title4": "Conectando Mundos - Uma Nova Identidade Profissional",
 		"title5": "Uma Jornada de Crescimento Contínuo"
 	},
 	"carousel": [
 		{
 			"alt": "Paisagem urbana futurista abstrata",
-			"cta": "Saber Mais",
+			"cta": "Leia Mais",
 			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
 			"id": 1,
 			"imageUrl": "/images/Carousel/white.webp",
-			"title": "Lossless Youths",
-			"url": ""
+			"title": "Juventude sem Perdas"
 		},
 		{
 			"alt": "Paisagem montanhosa com nevoeiro",
-			"cta": "Saber Mais",
+			"cta": "Leia Mais",
 			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
 			"id": 2,
 			"imageUrl": "/images/Carousel/umbrellas.webp",
-			"title": "Estrange Bond",
-			"url": ""
+			"title": "Laço Estrangeiro"
 		},
 		{
 			"alt": "Interior de laboratório industrial",
-			"cta": "Saber Mais",
+			"cta": "Leia Mais",
 			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
 			"id": 3,
 			"imageUrl": "/images/Carousel/estatuas.webp",
-			"title": "The Gate Keeper",
-			"url": ""
+			"title": "O Porteiro"
 		},
 		{
 			"alt": "edifício laranja",
-			"cta": "Saber Mais",
-			"description": "utilize design intuitivo para dar superpoderes ao seu negócio",
+			"cta": "Leia Mais",
+			"description": "utilizar design intuitivo para dar ao seu negócio novos superpoderes",
 			"id": 4,
 			"imageUrl": "/images/Carousel/building-orange.webp",
-			"title": "The Migration",
-			"url": ""
+			"title": "A Migração"
 		},
 		{
 			"alt": "edifício amarelo",
-			"cta": "Saber Mais",
+			"cta": "Leia Mais",
 			"description": "adoro criar websites modernos",
 			"id": 5,
 			"imageUrl": "/images/Carousel/building-yellow.webp",
-			"title": "The Migration",
-			"url": ""
+			"title": "A Migração"
 		},
 		{
 			"alt": "lápis",
-			"cta": "Saber Mais",
-			"description": "bom design capacita negócios!",
+			"cta": "Leia Mais",
+			"description": "bom design fortalece os negócios!",
 			"id": 6,
 			"imageUrl": "/images/Carousel/pencils.webp",
-			"title": "The Migration",
-			"url": ""
+			"title": "A Migração"
 		}
 	],
 	"contact": {
 		"btn": "enviar mensagem",
-		"email": "e-mail",
+		"email": "email",
 		"firstName": "primeiro nome",
-		"label": "Li e concordo com a ",
+		"label": "Li e concordo com a",
 		"lastName": "último nome",
 		"message": "mensagem",
-		"pageTitle": "Contactos",
+		"pageTitle": "Contacto",
 		"phone": "número de telefone",
 		"placeholder": {
-			"email": "Introduza o seu email",
-			"firstName": "Introduza o seu primeiro nome",
-			"lastName": "Introduza o seu último nome",
-			"message": "Introduza a sua mensagem",
-			"phone": "Introduza o seu número de telefone"
+			"email": "Insira o seu email",
+			"firstName": "Insira o seu primeiro nome",
+			"lastName": "Insira o seu último nome",
+			"message": "Insira a sua mensagem",
+			"phone": "Insira o seu número de telefone"
 		},
 		"privacy": "política de privacidade",
-		"title": "contacte-me"
+		"title": "entre em contacto"
 	},
 	"cta": {
 		"button": [
 			"Vamos falar sobre o seu negócio",
 			"Tem um Projeto em Mente? Vamos Conversar.",
-			"À Procura de um Programador Front-End? Encontrou Um!",
-			"Diga Olá — Não Mordo 👋",
+			"Procurando um Desenvolvedor Front-End? Encontrou Um!",
+			"Diga Olá — Eu Não Mordo 👋",
 			"Vamos Tornar o Seu Website Inesquecível →",
-			"Precisa de um Programador que Entregue? Vamos Conversar.",
-			"Vamos Construir Algo Fantástico Juntos →"
+			"Precisa de um Desenvolvedor Que Entrega? Vamos Conversar.",
+			"Vamos Construir Algo Grande Juntos →"
 		],
-		"title": "contacte-me"
+		"title": "entre em contacto"
+	},
+	"error": {
+		"404": "Página não encontrada",
+		"back": "Voltar para a página inicial",
+		"description": "Parece que você se perdeu. Não se preocupe, acontece aos melhores."
 	},
 	"home": {
-		"techstack": "Tecnologias",
+		"techstack": "Pilha Tecnológica",
 		"trending": "Portfólio"
 	},
 	"icons": {
 		"leftarrow": {
-			"alt": "seta esquerda",
+			"alt": "seta para a esquerda",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
-			"alt": "seta direita",
+			"alt": "seta para a direita",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
+	"localeSwitcher": {
+		"locale": "{locale, select, en {🇺🇸 Inglês} pt {🇵🇹 Português} other {Desconhecido}}"
+	},
 	"portfolio": {
 		"all": "Todos",
-		"cta": ["ver projeto", "ver projeto online →"],
+		"cta": ["confira", "veja o projeto ao vivo →"],
 		"pageTitle": "portfólio",
 		"projects": [
 			{
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.gif",
-				"summary": "Jogo de trivia com mais de 4.000 perguntas.",
+				"summary": "Jogo de perguntas com mais de 4.000 perguntas.",
 				"title": "quizzical"
 			},
 			{
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.gif",
-				"summary": "Aplicação de tradução com IA.",
-				"title": "pollyglot"
+				"summary": "Aplicativo de tradução com IA.",
+				"title": "poliglota"
 			},
 			{
 				"link": "https://danielfreire.pages.dev",
 				"src": "/images/screenshots/BnB_Screenshot.webp",
-				"summary": "Portfólio antigo do Daniel.",
-				"title": "old portfolio"
+				"summary": "Portfólio antigo de Daniel.",
+				"title": "portfólio antigo"
 			},
 			{
 				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
 				"src": "/images/screenshots/drumsVeryBig.webp",
-				"summary": "Projeto divertido para reproduzir uma bateria no seu PC.",
-				"title": "drum kit app"
+				"summary": "Projeto divertido para reproduzir um Kit de Bateria no seu PC.",
+				"title": "aplicativo kit de bateria"
 			},
 			{
 				"link": "https://tenzi-bydaniel.netlify.app/",
@@ -156,13 +158,13 @@
 			{
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Website criado para exibir as obras do famoso artista português Victó.",
-				"title": "victó's art gallery"
+				"summary": "Website criado para mostrar as obras do famoso artista português Victó.",
+				"title": "galeria de arte de victó"
 			},
 			{
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia.webp",
-				"summary": "Website desenvolvido para ser ponto de contacto do coletivo de arquitetura Insurbia.",
+				"summary": "Website desenvolvido para ser o ponto de contacto do coletivo de arquitetura Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -191,7 +193,7 @@
 			{ "link": "/", "name": "início" },
 			{ "link": "/portfolio", "name": "portfólio" },
 			{ "link": "/about", "name": "sobre" },
-			{ "link": "/contact", "name": "contactos" }
+			{ "link": "/contact", "name": "contacto" }
 		],
 		"privacy": "política de privacidade",
 		"rights": "Daniel Freire ® todos os direitos reservados"
