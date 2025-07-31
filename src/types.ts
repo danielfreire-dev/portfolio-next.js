@@ -7,7 +7,7 @@ export interface TechCardProps {
 }
 
 // userLanguage Types
-export type UserLanguageType = "pt-PT" | "en-US";
+export type UserLanguageType = "pt" | "en";
 export interface SidenavProps {
 	userLanguage: UserLanguageType;
 	onLanguageChange: (lang: UserLanguageType) => void;
@@ -43,20 +43,10 @@ interface Home {
 	trending: string;
 }
 
-interface Portfolio {
-	// Define portfolio properties here
-}
-
-interface About {
-	// Define about properties here
-}
-
 interface Data {
 	sidenav: SidenavData;
 	cta: CTA;
 	home: Home;
-	portfolio: Portfolio;
-	about: About;
 }
 
 export type LocalizedData = Record<string, Data>;

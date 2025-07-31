@@ -1,7 +1,7 @@
 import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
-
 import { useLocale, useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
+
 const LocaleSwitcher = () => {
 	const t = useTranslations("localeSwitcher");
 	const locale = useLocale();

@@ -6,4 +6,17 @@ export const routing = defineRouting({
 
 	// Used when no locale matches
 	defaultLocale: "en",
+	pathnames: {
+		"/": "/",
+		"/about": { pt: "/sobre" },
+		"/portfolio": { pt: "/portfolio" },
+		"/contact": { pt: "/contactos" },
+		"/privacy-policy": { pt: "/politica-de-privacidade" },
+		"/terms-of-service": { pt: "/termos-de-servico" },
+		"/cookies-policy": { pt: "/politica-de-cookies" },
+		"/accessibility-statement": { pt: "/declaracao-de-acessibilidade" },
+		"/sitemap.xml": { pt: "/sitemap.xml" },
+		"/robots.txt": { pt: "/robots.txt" },
+		"/404": { pt: "/404" },
+	},
 });

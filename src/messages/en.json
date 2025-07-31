@@ -95,6 +95,11 @@
 		],
 		"title": "get in touch"
 	},
+	"error": {
+		"404": "Page",
+		"back": "Go back to homepage",
+		"description": "Looks like you got lost. Don't worry, it happens to the best of us."
+	},
 	"home": {
 		"techstack": "Tech Stack",
 		"trending": "Portfolio"
