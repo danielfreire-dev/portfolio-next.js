@@ -61,51 +61,52 @@ export default [
 			},
 		},
 		rules: {
-			...reactPlugin.configs.recommended.rules,
-			...reactHooks.configs.recommended.rules,
 			...jsxA11y.configs.recommended.rules,
 
-			// React specific rules
-			"react/prop-types": "off",
-			"react/jsx-filename-extension": "off",
-			"react/react-in-jsx-scope": "off",
-			"react/jsx-uses-react": "off",
-
+			/* React Recommended */
+			"react/display-name": "error",
+			"react/jsx-key": "error",
+			"react/jsx-no-comment-textnodes": "error",
+			"react/jsx-no-duplicate-props": "error",
+			"react/jsx-no-target-blank": "error",
+			"react/jsx-no-undef": "off",
+			"react/jsx-uses-react": "error",
+			"react/jsx-uses-vars": "error",
+			"react/no-children-prop": "error",
+			"react/no-danger-with-children": "error",
+			"react/no-deprecated": "error",
+			"react/no-direct-mutation-state": "error",
+			"react/no-find-dom-node": "error",
+			"react/no-is-mounted": "error",
+			"react/no-render-return-value": "error",
+			"react/no-string-refs": "error",
+			"react/no-unescaped-entities": "error",
+			"react/no-unknown-property": "error",
+			"react/no-unsafe": "off",
+			"react/prop-types": "error",
+			"react/react-in-jsx-scope": "error",
+			"react/require-render-return": "error",
 			"react/jsx-boolean-value": "warn",
 			"react/jsx-curly-brace-presence": "warn",
 			"react/jsx-fragments": "warn",
-			"react/jsx-key": "warn",
-			"react/jsx-no-comment-textnodes": "warn",
-			"react/jsx-no-duplicate-props": "warn",
-			"react/jsx-no-target-blank": "warn",
-			"react/jsx-no-undef": "warn",
 			"react/jsx-pascal-case": "warn",
-			"react/jsx-uses-vars": "warn",
 			"react/no-access-state-in-setstate": "warn",
 			"react/no-array-index-key": "warn",
-			"react/no-children-prop": "warn",
 			"react/no-danger": "warn",
-			"react/no-danger-with-children": "warn",
-			"react/no-deprecated": "warn",
 			"react/no-did-mount-set-state": "warn",
 			"react/no-did-update-set-state": "warn",
-			"react/no-direct-mutation-state": "warn",
-			"react/no-find-dom-node": "warn",
-			"react/no-is-mounted": "warn",
 			"react/no-multi-comp": "warn",
-			"react/no-render-return-value": "warn",
-			"react/no-string-refs": "warn",
-			"react/no-unescaped-entities": "warn",
-			"react/no-unknown-property": "warn",
-			"react/no-unsafe": "warn",
 			"react/no-unused-prop-types": "warn",
 			"react/prefer-es6-class": "warn",
 			"react/prefer-stateless-function": "warn",
-			"react/require-render-return": "warn",
 			"react/self-closing-comp": "warn",
 			"react/sort-comp": "warn",
 			"react/style-prop-object": "warn",
 			"react/void-dom-elements-no-children": "warn",
+			"react/jsx-filename-extension": "off",
+
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
 
 			// Accessibility rules
 			"jsx-a11y/anchor-is-valid": [
@@ -166,11 +167,11 @@ export default [
 					depth: 5,
 				},
 			],
+			"jsx-a11y/scope": "off",
+
 			"jsx-a11y/aria-props": "error",
 			"jsx-a11y/aria-proptypes": "error",
 			"jsx-a11y/anchor-has-content": ["error", { components: [] }],
-			"jsx-a11y/scope": "off",
-
 			"jsx-a11y/anchor-ambiguous-text": "warn",
 			"jsx-a11y/aria-role": ["error", { ignoreNonDOM: false }],
 			"jsx-a11y/aria-unsupported-elements": "error",
@@ -183,7 +184,6 @@ export default [
 			"jsx-a11y/interactive-supports-focus": "warn",
 			"jsx-a11y/no-aria-hidden-on-focusable": "warn",
 			"jsx-a11y/lang": "error",
-
 			"jsx-a11y/media-has-caption": [
 				"error",
 				{
@@ -308,6 +308,7 @@ export default [
 			"css/no-duplicate-imports": "error",
 			"css/no-empty-blocks": "error",
 			"css/no-important": "warn",
+
 			// Disable irrelevant ESLint core rules
 			"css/use-layers": "off",
 			"css/use-baseline": "off",
@@ -396,7 +397,7 @@ export default [
 	{
 		files: ["**/*.test.{ts,tsx}", "**/__mocks__/**", "**/test-utils/**"],
 		rules: {
-			"i18next/no-literal-string": "off",
+			"i18next/no-literal-string": "warn",
 			"jsx-a11y/media-has-caption": "off",
 		},
 	},

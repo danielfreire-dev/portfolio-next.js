@@ -7,5 +7,7 @@ export const config = {
 	// Match all pathnames except for
 	// - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
 	// - … the ones containing a dot (e.g. `favicon.ico`)
-	matcher: ["/((?!api|_next/static|_next/image|favicon.ico|.*\\.svg$).*)"],
+	matcher: [
+		"/((?!api|_next/static|_next/image|favicon.ico|.*\\.svg$|.*\\.png$|.*\\.webp$|.*\\.gif$).*)",
+	],
 };

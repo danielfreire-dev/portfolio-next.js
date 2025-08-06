@@ -10,7 +10,7 @@ interface Props {
 	defaultValue: string;
 }
 
-export default function LocaleSwitcherSelect({
+export default function LocaleSwitcherSelectMobile({
 	children,
 	defaultValue,
 }: Props) {
@@ -35,7 +35,7 @@ export default function LocaleSwitcherSelect({
 	return (
 		<>
 			<select
-				className="hidden lg:block text-center bg-transparent py-2 my-2 pl-2 pr-6 hover:cursor-pointer select-class"
+				className="lg:hidden items-center mb-10px bg-transparent hover:cursor-pointer select-class"
 				defaultValue={defaultValue}
 				disabled={isPending}
 				onChange={onSelectChange}

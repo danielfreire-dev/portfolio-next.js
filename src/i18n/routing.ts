@@ -9,14 +9,15 @@ export const routing = defineRouting({
 	pathnames: {
 		"/": "/",
 		"/about": { pt: "/sobre" },
-		"/portfolio": { pt: "/portfolio" },
+		"/portfolio": { pt: "/portfólio" },
 		"/contact": { pt: "/contactos" },
-		"/privacy-policy": { pt: "/politica-de-privacidade" },
+		"/privacy-policy": { pt: "/política-de-privacidade" },
 		"/terms-of-service": { pt: "/termos-de-servico" },
-		"/cookies-policy": { pt: "/politica-de-cookies" },
+		"/cookies-policy": { pt: "/política-de-cookies" },
 		"/accessibility-statement": { pt: "/declaracao-de-acessibilidade" },
 		"/sitemap.xml": { pt: "/sitemap.xml" },
 		"/robots.txt": { pt: "/robots.txt" },
 		"/404": { pt: "/404" },
+		"/resume": { pt: "/curriculo" },
 	},
 });

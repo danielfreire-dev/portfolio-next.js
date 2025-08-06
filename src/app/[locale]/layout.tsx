@@ -7,14 +7,14 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
+import Dock from "@/ui/Components/Sidenav/Dock";
 
 export const metadata: Metadata = {
 	title: {
-		template: "Daniel Freire | %s",
-		default: "Daniel Freire's Webpage",
+		template: "%s | Daniel Freire",
+		default: "Daniel Freire",
 	},
 	description: "Daniel Freire's Portfolio",
-	/* metadataBase: new URL("https://next-learn-dashboard.vercel.sh"), */
 };
 
 export function generateStaticParams() {
@@ -46,8 +46,9 @@ export default async function RootLayout({
 					<header className="flex">
 						<Sidenav />
 					</header>
-					<main className="flex flex-1 justify-center flex-col overflow-hidden">
+					<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
 						{children}
+						<Dock />
 					</main>
 				</NextIntlClientProvider>
 			</body>

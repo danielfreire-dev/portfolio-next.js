@@ -1,6 +1,6 @@
 {
 	"about": {
-		"image": "/images/Lensa/Lensa2.jpg",
+		"image": "/images/Lensa/Lensa2.webp",
 		"paragraph1": "A jornada de Daniel Freire começou no vibrante mundo do marketing, mas não da maneira que se poderia esperar. Enquanto muitos profissionais de marketing se aprofundam em design e storytelling criativo, Daniel viu-se cada vez mais atraído pelos alicerces tecnológicos das estratégias digitais. Além disso, sua perspectiva única permitiu-lhe ver o marketing não apenas como um empreendimento criativo, mas como um ecossistema complexo impulsionado por dados, análises e inovação tecnológica.",
 		"paragraph2": "Desde o início, Daniel foi diferente. Em vez de se concentrar apenas na criação de campanhas chamativas, ficou fascinado pelos mecanismos técnicos que alimentavam os esforços de marketing digital. Ele entendeu desde cedo que o marketing moderno não se trata apenas de visuais bonitos, mas de entender paisagens digitais complexas e utilizar a tecnologia para impulsionar um envolvimento significativo.",
 		"paragraph3": "Como desenvolvedor web com formação em marketing, Daniel descobriu que sua verdadeira paixão estava no intrincado mundo do código e da arquitetura de sistemas. Gradualmente, transitou de funções tradicionais de marketing para posições mais focadas tecnicamente, onde sua mistura única de insights de marketing e habilidades tecnológicas o destacou de seus pares.",
@@ -17,51 +17,57 @@
 	"carousel": [
 		{
 			"alt": "Paisagem urbana futurista abstrata",
-			"cta": "Leia Mais",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"cta": "Revolucione a Sua Presença Digital!",
+			"description": "O seu website está a travar o crescimento do seu negócio? A nossa auditoria abrangente de desempenho analisa profundamente a infraestrutura técnica, a experiência do utilizador e o potencial de conversão do seu site. Forneceremos um relatório detalhado destacando melhorias críticas que podem aumentar dramaticamente o desempenho online.",
 			"id": 1,
 			"imageUrl": "/images/Carousel/white.webp",
-			"title": "Juventude sem Perdas"
+			"title": "revolucione a sua presença digital agora!",
+			"url": "/contact"
 		},
 		{
 			"alt": "Paisagem montanhosa com nevoeiro",
-			"cta": "Leia Mais",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"cta": "Desbloqueie o Pleno Potencial do Seu Website",
+			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
 			"id": 2,
 			"imageUrl": "/images/Carousel/umbrellas.webp",
-			"title": "Laço Estrangeiro"
+			"title": "desbloqueie o pleno potencial do seu website",
+			"url": "/contact"
 		},
 		{
 			"alt": "Interior de laboratório industrial",
-			"cta": "Leia Mais",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"cta": "Construa o Seu Projeto dos Sonhos Hoje",
+			"description": "Pare de se contentar com modelos genéricos. Os nossos serviços personalizados de desenvolvimento web criam experiências digitais totalmente adaptadas que se alinham perfeitamente com a identidade única da sua marca e os objetivos do seu negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
 			"id": 3,
 			"imageUrl": "/images/Carousel/estatuas.webp",
-			"title": "O Porteiro"
+			"title": "construa o seu projeto dos sonhos hoje",
+			"url": "/contact"
 		},
 		{
 			"alt": "edifício laranja",
-			"cta": "Leia Mais",
-			"description": "utilizar design intuitivo para dar ao seu negócio novos superpoderes",
+			"cta": "Dê o Primeiro Passo",
+			"description": "A velocidade não é apenas uma funcionalidade—é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carregue extremamente rápido, proporcionando uma experiência de utilizador excecional que mantém os visitantes envolvidos e converte mais eficazmente.",
 			"id": 4,
 			"imageUrl": "/images/Carousel/building-orange.webp",
-			"title": "A Migração"
+			"title": "acelere o potencial do seu website",
+			"url": "/contact"
 		},
 		{
 			"alt": "edifício amarelo",
-			"cta": "Leia Mais",
-			"description": "adoro criar websites modernos",
+			"cta": "Modernize a Sua Infraestrutura Digital",
+			"description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a transitar perfeitamente para tecnologias web modernas e eficientes sem interromper as suas operações existentes. Garantimos um caminho de atualização suave e com risco gerido.",
 			"id": 5,
 			"imageUrl": "/images/Carousel/building-yellow.webp",
-			"title": "A Migração"
+			"title": "modernize a sua infraestrutura digital",
+			"url": "/contact"
 		},
 		{
 			"alt": "lápis",
-			"cta": "Leia Mais",
-			"description": "bom design fortalece os negócios!",
+			"cta": "cuide dos seus ativos digitais",
+			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
 			"id": 6,
 			"imageUrl": "/images/Carousel/pencils.webp",
-			"title": "A Migração"
+			"title": "cuidado contínuo para os seus ativos digitais",
+			"url": "/contact"
 		}
 	],
 	"contact": {
@@ -88,7 +94,6 @@
 			"Vamos falar sobre o seu negócio",
 			"Tem um Projeto em Mente? Vamos Conversar.",
 			"Procurando um Desenvolvedor Front-End? Encontrou Um!",
-			"Diga Olá — Eu Não Mordo 👋",
 			"Vamos Tornar o Seu Website Inesquecível →",
 			"Precisa de um Desenvolvedor Que Entrega? Vamos Conversar.",
 			"Vamos Construir Algo Grande Juntos →"
@@ -101,7 +106,7 @@
 		"description": "Parece que você se perdeu. Não se preocupe, acontece aos melhores."
 	},
 	"home": {
-		"techstack": "Pilha Tecnológica",
+		"techstack": "Ferramentas Tecnológicas",
 		"trending": "Portfólio"
 	},
 	"icons": {
@@ -115,7 +120,14 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, en {🇺🇸 Inglês} pt {🇵🇹 Português} other {Desconhecido}}"
+		"locale": "{locale, select, en {🇺🇸 Inglês} pt {🇵🇹 Português} other {Desconhecido}}",
+		"localeMobile": "{locale, select, en {🇺🇸} pt {🇵🇹} other {Desconhecido}}"
+	},
+	"metadata": {
+		"about": "Sobre",
+		"contact": "Contactos",
+		"home": "Início | Daniel Freire",
+		"portfolio": "Portfólio"
 	},
 	"portfolio": {
 		"all": "Todos",
@@ -132,23 +144,23 @@
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.gif",
 				"summary": "Aplicativo de tradução com IA.",
-				"title": "poliglota"
+				"title": "polyGlot"
 			},
 			{
 				"link": "https://danielfreire.pages.dev",
-				"src": "/images/screenshots/BnB_Screenshot.webp",
+				"src": "/images/screenshots/oldPortfolio.gif",
 				"summary": "Portfólio antigo de Daniel.",
 				"title": "portfólio antigo"
 			},
 			{
 				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
-				"src": "/images/screenshots/drumsVeryBig.webp",
+				"src": "/images/screenshots/drumkit.gif",
 				"summary": "Projeto divertido para reproduzir um Kit de Bateria no seu PC.",
 				"title": "aplicativo kit de bateria"
 			},
 			{
 				"link": "https://tenzi-bydaniel.netlify.app/",
-				"src": "/images/screenshots/Tenzi_Screenshot.webp",
+				"src": "/images/screenshots/tenzi.gif",
 				"summary": "O jogo de dados mais popular do mundo, agora no seu navegador.",
 				"title": "tenzi"
 			}
@@ -157,13 +169,13 @@
 		"websites": [
 			{
 				"link": "https://victo.pages.dev",
-				"src": "/images/screenshots/victo.webp",
+				"src": "/images/screenshots/victo.gif",
 				"summary": "Website criado para mostrar as obras do famoso artista português Victó.",
 				"title": "galeria de arte de victó"
 			},
 			{
 				"link": "https://insurbia.com",
-				"src": "/images/screenshots/insurbia.webp",
+				"src": "/images/screenshots/insurbia.gif",
 				"summary": "Website desenvolvido para ser o ponto de contacto do coletivo de arquitetura Insurbia.",
 				"title": "insurbia"
 			}
@@ -191,9 +203,9 @@
 		},
 		"links": [
 			{ "link": "/", "name": "início" },
-			{ "link": "/portfolio", "name": "portfólio" },
-			{ "link": "/about", "name": "sobre" },
-			{ "link": "/contact", "name": "contacto" }
+			{ "link": "/portfólio", "name": "portfólio" },
+			{ "link": "/sobre", "name": "sobre" },
+			{ "link": "/contactos", "name": "contacto" }
 		],
 		"privacy": "política de privacidade",
 		"rights": "Daniel Freire ® todos os direitos reservados"
@@ -253,6 +265,11 @@
 			"link": "https://jestjs.io/",
 			"logo": "/images/icons/jestjsio-icon.svg",
 			"name": "jest"
+		},
+		{
+			"link": "https://vitest.dev/",
+			"logo": "/images/icons/vitest.svg",
+			"name": "vitest"
 		},
 		{
 			"link": "https://selenium-python.readthedocs.io/",

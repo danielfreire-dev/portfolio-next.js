@@ -15,8 +15,10 @@ const Cta = () => {
 	};
 	return (
 		<>
-			<Link href="/contact" className="ml-10 mb-1">
-				<button className="offset ">{getRandomItem(t.raw("button"))}</button>
+			<Link href="/contact" className="size-min ml-10 mb-1 ">
+				<button className="offset overflow-hidden text-ellipsis whitespace-nowrap hover:cursor-pointer">
+					{getRandomItem(t.raw("button"))}
+				</button>
 			</Link>
 		</>
 	);

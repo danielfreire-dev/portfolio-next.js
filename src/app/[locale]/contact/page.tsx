@@ -1,11 +1,19 @@
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import ContactForm from "./ContactForm";
 import { Suspense } from "react";
 import { useTranslations } from "next-intl";
 
-export const metadata: Metadata = {
-	title: "Contact",
-};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata({ params }: { params: any }): Promise<{
+	title: string;
+}> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata" });
+
+	return {
+		title: t("contact"),
+	};
+}
 
 const Contact = () => {
 	const t = useTranslations("contact");
