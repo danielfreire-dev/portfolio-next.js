@@ -2,54 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import "../../styles/styles.css";
 import { kolker } from "../../fonts";
 import { montserrat } from "../../fonts";
-import { nanoid } from "nanoid";
 
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
-import NavigationLink from "./NavigationLink";
-import { usePathname } from "next/navigation";
-
-interface NavLink {
-	link:
-		| "/"
-		| "/about"
-		| "/portfolio"
-		| "/contact"
-		| "/privacy-policy"
-		| "/terms-of-service"
-		| "/cookies-policy"
-		| "/accessibility-statement"
-		| "/sitemap.xml"
-		| "/robots.txt"
-		| "/404";
-	name: string;
-}
+import NavigationList from "./NavigationList";
 
 const Sidenav = () => {
-	const pathname = usePathname();
 	const t = useTranslations("sidenav");
 
-	const nav = t.raw("links").map((data: NavLink) => {
-		/* const lang = pathname.split("/")[1]; */
-
-		const isActive =
-			pathname === data.link ||
-			(pathname.startsWith(data.link) && data.link !== "/")
-				? " active"
-				: "";
-
-		return (
-			<li className={`navLinks${isActive}`} key={nanoid()}>
-				<NavigationLink href={data.link}>{data.name}</NavigationLink>
-			</li>
-		);
-	});
-
 	return (
-		<nav className="hidden md:sticky  top-0 left-0 h-screen w-64 z-50 flex-shrink-0 flex-grow-0 p-4 bg-black shadow-lg md:flex flex-col justify-between">
+		<nav className="hidden lg:sticky  top-0 left-0 h-screen w-64 z-50 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center">
 			<Link href="/">
 				<h1
 					className={`${kolker.className} text-6xl capitalize transition delay-150 duration-900 ease-in-out hover:text-orange-400`}
@@ -57,17 +21,18 @@ const Sidenav = () => {
 					{t("header.title")}
 				</h1>
 			</Link>
-
-			<ul className={`capitalize ${montserrat.className}`}>{nav}</ul>
-			<section>
-				<div className="flex gap-2">
+			<ul className="capitalize">
+				<NavigationList />
+			</ul>
+			<section className="flex flex-col justify-center">
+				<div className="flex justify-center gap-2">
 					<a
 						href={t("footer.icons.github.link")}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<Image
-							src={t("footer.icons.github.link")}
+							src={t("footer.icons.github.src")}
 							alt={t("footer.icons.github.alt")}
 							width={20}
 							height={20}

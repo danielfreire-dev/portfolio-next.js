@@ -6,19 +6,19 @@ import Image from "next/image";
 const WebsiteCards = () => {
 	const t = useTranslations("portfolio");
 
-	const collectionMap = (collection: "websites" | "projects") => {
+	const collectionMap = (items: "websites" | "projects") => {
 		return t
-			.raw(`[${collection}]`)
-			.map((item: Dictionary["portfolio"][typeof collection][number]) => (
-				<div className="max-w-lg  mr-10 last:mr-0  mb-6" key={nanoid()}>
+			.raw(`${items}`)
+			.map((item: Dictionary["portfolio"]["websites" | "projects"][number]) => (
+				<div className="max-w-lg  mr-10 last:mr-0  mb-6 " key={nanoid()}>
 					<div className="overflow-hidden rounded-lg shadow-md">
 						<a href={item.link} target="_blank" rel="noopener noreferrer">
 							<Image
 								src={item.src}
-								alt={item.title || "Project image"}
+								alt={item.title}
 								width={1000}
 								height={1000}
-								className=" hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110"
+								className="hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110"
 							/>
 						</a>
 					</div>
@@ -42,7 +42,7 @@ const WebsiteCards = () => {
 	};
 
 	return (
-		<>
+		<div className="mx-15">
 			<h2>{t("websites-title")}</h2>
 			<section className="flex flex-row flex-wrap">
 				{collectionMap("websites")}
@@ -51,7 +51,7 @@ const WebsiteCards = () => {
 			<section className="flex flex-row flex-wrap">
 				{collectionMap("projects")}
 			</section>
-		</>
+		</div>
 	);
 };
 

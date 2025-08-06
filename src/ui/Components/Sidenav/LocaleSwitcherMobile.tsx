@@ -1,20 +1,20 @@
-import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
+import LocaleSwitcherSelectMobile from "./LocaleSwitcherSelectMobile";
 import { useLocale, useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
 
-const LocaleSwitcher = () => {
+const LocaleSwitcherMobile = () => {
 	const t = useTranslations("localeSwitcher");
 	const locale = useLocale();
 
 	return (
-		<LocaleSwitcherSelect defaultValue={locale}>
+		<LocaleSwitcherSelectMobile defaultValue={locale}>
 			{routing.locales.map((lang) => (
 				<option key={lang} value={lang} className="dark:bg-black">
-					{t("locale", { locale: lang })}
+					{t("localeMobile", { locale: lang })}
 				</option>
 			))}
-		</LocaleSwitcherSelect>
+		</LocaleSwitcherSelectMobile>
 	);
 };
 
-export default LocaleSwitcher;
+export default LocaleSwitcherMobile;

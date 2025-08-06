@@ -1,3 +1,32 @@
+:root {
+	/* Light Theme (Goku Base) */
+	--primary: #ff6f00;
+	--secondary: #0077c8;
+	--background: #fff9f2;
+	--surface: #ffffff;
+	--text: #2a2a36;
+	--accent1: #ffd100;
+	--accent2: #d00060;
+	--error: #e63946;
+	--success: #2a9d;
+	--aura-hue: 20deg;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary: #ff9e30;
+		--secondary: #00b4f0;
+		--background: #0f1624;
+		--surface: #1c2536;
+		--text: #e6f0ff;
+		--accent1: #ffea70;
+		--accent2: #ff4081;
+		--error: #ff6b6b;
+		--success: #70d6a3;
+		--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
+	}
+}
+
 .slider-container {
 	position: relative;
 	width: 100dvw;
@@ -86,8 +115,8 @@
 	& button {
 		width: fit-content;
 		background-color: rgba(0, 0, 0, 0.1);
-		color: white;
-		border: 2px solid white;
+		color: var(--text);
+		border: 2px solid var(--text);
 		border-radius: 0.25rem;
 		padding: 0.75rem;
 		cursor: pointer;

@@ -3,17 +3,30 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import "@/ui/styles/carousel.css";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 interface SliderItem {
-	imageUrl: string;
 	alt: string;
-	title: string;
-	description: string;
 	cta: string;
+	description: string;
+	id: number;
+	imageUrl: string;
+	title: string;
+	url: string;
 }
 
 interface SliderProps {
 	items: SliderItem[];
+}
+
+interface CarouselItemProps {
+	alt: string;
+	cta: string;
+	description: string;
+	id: number;
+	imageUrl: string;
+	title: string;
+	url: string;
 }
 
 export default function Slider({ items }: SliderProps) {
@@ -60,7 +73,7 @@ export default function Slider({ items }: SliderProps) {
 		// eslint-disable-next-line no-undef
 		return () => clearInterval(timer);
 	}, [goNext, isPaused]);
-	const c = useTranslations();
+
 	const i = useTranslations("icons");
 
 	return (
@@ -71,31 +84,32 @@ export default function Slider({ items }: SliderProps) {
 		>
 			<ul className="slider">
 				{slideOrder.map((itemIndex) => {
-					// eslint-disable-next-line i18next/no-literal-string
-					const item = c(`carousel[${itemIndex}]`);
+					const itemSlice: CarouselItemProps = items[itemIndex];
 					/* Create unique key with version number */
-					const uniqueKey = `${item.imageUrl}-${
-						itemVersions[item.imageUrl] || 0
+					const uniqueKey = `${itemSlice.imageUrl}-${
+						itemVersions[itemSlice.imageUrl] || 0
 					}`;
 
 					return (
 						<li className="item" key={uniqueKey}>
 							<Image
-								src={item.imageUrl}
-								alt={item.alt}
+								src={itemSlice.imageUrl}
+								alt={itemSlice.alt}
 								fill
 								quality={100}
 								placeholder="blur"
-								blurDataURL={item.imageUrl}
+								blurDataURL={itemSlice.imageUrl}
 								objectPosition="center"
 								style={{
 									objectFit: "cover",
 								}}
 							/>
 							<div className="content">
-								<h2>{item.title}</h2>
-								<p>{item.description}</p>
-								<button>{item.cta}</button>
+								<h2 className="capitalize">{itemSlice.title}</h2>
+								<p>{itemSlice.description}</p>
+								<Link href={itemSlice.url}>
+									<button>{itemSlice.cta}</button>
+								</Link>
 							</div>
 						</li>
 					);

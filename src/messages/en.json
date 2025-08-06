@@ -1,6 +1,6 @@
 {
 	"about": {
-		"image": "/images/Lensa/Lensa2.jpg",
+		"image": "/images/Lensa/Lensa2.webp",
 		"paragraph1": "Daniel Freire's journey began in the vibrant world of marketing, but not in the way you might expect. While many marketing professionals dive into design and creative storytelling, Daniel found himself increasingly drawn to the technological underpinnings of digital strategies. Moreover, his unique perspective allowed him to see marketing not just as a creative endeavor, but as a complex ecosystem driven by data, analytics, and technological innovation.",
 		"paragraph2": "From the very beginning, Daniel was different. Instead of focusing solely on crafting eye-catching campaigns, he became fascinated by the technical mechanisms that powered digital marketing efforts. He understood early on that modern marketing isn't just about beautiful visuals, but about understanding complex digital landscapes and leveraging technology to drive meaningful engagement.",
 		"paragraph3": "As a web developer with a marketing background, Daniel discovered his true passion lay in the intricate world of code and system architecture. Gradually, he transitioned from traditional marketing roles to more technically focused positions, where his unique blend of marketing insight and technological skill set him apart from his peers.",
@@ -16,52 +16,58 @@
 	},
 	"carousel": [
 		{
-			"alt": "Abstract futuristic cityscape",
-			"cta": "Read More",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"alt": "Revolutionize Your Digital Presence Now!",
+			"cta": "Revolutionize Your Digital Presence!",
+			"description": "Is your website holding your business back? Our comprehensive performance audit digs deep into your site's technical infrastructure, user experience, and conversion potential. We'll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
 			"id": 1,
 			"imageUrl": "/images/Carousel/white.webp",
-			"title": "Lossless Youths"
+			"title": "revolutionize your digital presence now!",
+			"url": "/contact"
 		},
 		{
-			"alt": "Mountain landscape with fog",
-			"cta": "Read More",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"alt": "Unlock Your Website's Full Potential",
+			"cta": "Unlock Your Website's Full Potential",
+			"description": "Websites require consistent care to remain secure, functional, and competitive. Our comprehensive maintenance packages provide proactive monitoring, immediate issue resolution, and continuous technological updates.",
 			"id": 2,
 			"imageUrl": "/images/Carousel/umbrellas.webp",
-			"title": "Estrange Bond"
+			"title": "unlock your website's full potential",
+			"url": "/contact"
 		},
 		{
-			"alt": "Industrial laboratory interior",
-			"cta": "Read More",
-			"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
+			"alt": "Build Your Dream Project Today",
+			"cta": "Build Your Dream Project Today",
+			"description": "Stop settling for generic templates. Our bespoke web development services create fully customized digital experiences that perfectly align with your brand's unique identity and business objectives. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
 			"id": 3,
 			"imageUrl": "/images/Carousel/estatuas.webp",
-			"title": "The Gate Keeper"
+			"title": "build your dream project today",
+			"url": "/contact"
 		},
 		{
-			"alt": "orange building",
-			"cta": "Read More",
-			"description": "use intuitive design to give your business new superpowers",
+			"alt": "Take the First Step Towards Digital Excellence",
+			"cta": "Take the First Step",
+			"description": "Speed isn't just a feature—it's a competitive advantage. Our performance optimization service ensures your website loads lightning-fast, providing an exceptional user experience that keeps visitors engaged and converts more effectively.",
 			"id": 4,
 			"imageUrl": "/images/Carousel/building-orange.webp",
-			"title": "The Migration"
+			"title": "accelerate your website's potential",
+			"url": "/contact"
 		},
 		{
-			"alt": "yellow building",
-			"cta": "Read More",
-			"description": "i ❤️ creating modern websites",
+			"alt": "Modernize Your Digital Infrastructure",
+			"cta": "Modernize Your Digital Infrastructure",
+			"description": "Technology evolves rapidly. Our expert migration services help you seamlessly transition to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
 			"id": 5,
 			"imageUrl": "/images/Carousel/building-yellow.webp",
-			"title": "The Migration"
+			"title": "modernize your digital infrastructure",
+			"url": "/contact"
 		},
 		{
 			"alt": "pencils",
-			"cta": "Read More",
-			"description": "good design empowers business!",
+			"cta": "care for your digital assets",
+			"description": "Websites require consistent care to remain secure, functional, and competitive. Our comprehensive maintenance packages provide proactive monitoring, immediate issue resolution, and continuous technological updates.",
 			"id": 6,
 			"imageUrl": "/images/Carousel/pencils.webp",
-			"title": "The Migration"
+			"title": "continuous care for your digital assets",
+			"url": "/contact"
 		}
 	],
 	"contact": {
@@ -115,7 +121,14 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, en {🇺🇸 English} pt {🇵🇹 Português} other {Unknown}}"
+		"locale": "{locale, select, en {🇺🇸 English} pt {🇵🇹 Português} other {Unknown}}",
+		"localeMobile": "{locale, select, en {🇺🇸} pt {🇵🇹} other {Unknown}}"
+	},
+	"metadata": {
+		"about": "About",
+		"contact": "Contact",
+		"home": "Homepage | Daniel Freire",
+		"portfolio": "Portfolio"
 	},
 	"portfolio": {
 		"all": "All",
@@ -133,23 +146,23 @@
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.gif",
 				"summary": "Translation app with AI.",
-				"title": "pollyglot"
+				"title": "pollyGlot"
 			},
 			{
 				"link": "https://danielfreire.pages.dev",
-				"src": "/images/screenshots/BnB_Screenshot.webp",
+				"src": "/images/screenshots/oldPortfolio.gif",
 				"summary": "Daniel's old portfolio.",
 				"title": "old portfolio"
 			},
 			{
 				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
-				"src": "/images/screenshots/drumsVeryBig.webp",
+				"src": "/images/screenshots/drumkit.gif",
 				"summary": "Fun project to reproduce a Drum Kit in your PC.",
 				"title": "drum kit app"
 			},
 			{
 				"link": "https://tenzi-bydaniel.netlify.app/",
-				"src": "/images/screenshots/Tenzi_Screenshot.webp",
+				"src": "/images/screenshots/tenzi.gif",
 				"summary": "The world's most popular dice game, now in your browser.",
 				"title": "tenzi"
 			}
@@ -158,13 +171,13 @@
 		"websites": [
 			{
 				"link": "https://victo.pages.dev",
-				"src": "/images/screenshots/victo.webp",
+				"src": "/images/screenshots/victo.gif",
 				"summary": "Website built to showcase the works of the famous Portuguese artist Victó.",
 				"title": "victó's art gallery"
 			},
 			{
 				"link": "https://insurbia.com",
-				"src": "/images/screenshots/insurbia.webp",
+				"src": "/images/screenshots/insurbia.gif",
 				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
 				"title": "insurbia"
 			}

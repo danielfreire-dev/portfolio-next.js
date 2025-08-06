@@ -9,14 +9,15 @@ const ClientSideAbout = () => {
 
 	return (
 		<>
-			<div className="grid grid-cols-2 gap-6">
+			<div className="px-20 lg:grid lg:grid-cols-2 gap-6">
 				<Image
 					src={t("image")}
 					alt="drawing of Daniel"
 					width={1000}
 					height={1000}
+					className="hidden lg:block"
 				/>
-				<div>
+				<div className="text-justify">
 					<h2>{t("title1")}</h2>
 					<h3>{t("title2")}</h3>
 					<p>{t("paragraph1")}</p>
