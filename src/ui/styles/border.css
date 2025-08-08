@@ -1,5 +1,5 @@
 :root {
-	/* Light Theme (Goku Base) */
+	/* Light Theme */
 	--primary: #ff6f00;
 	--secondary: #0077c8;
 	--background: #fff9f2;
@@ -28,8 +28,8 @@
 }
 
 .offset {
-	--color: var(--accent1);
-	--hover: var(--primary);
+	--color: var(--primary);
+	--hover: var(--accent1);
 }
 
 .raise {
@@ -43,6 +43,7 @@
 .offset:hover,
 .offset:focus {
 	box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+
 }
 button {
 	color: var(--color);
@@ -51,7 +52,9 @@ button {
 button:hover,
 button:focus {
 	border-color: var(--hover);
-	color: #fff;
+	color: var(--background);
+	cursor: pointer;
+	background-color: var(--surface);
 }
 button {
 	background: none;
@@ -66,4 +69,5 @@ button {
 .raise:focus {
 	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
 	transform: translateY(-0.25em);
+	color: var(--hover);
 }

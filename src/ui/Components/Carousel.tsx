@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import "@/ui/styles/carousel.css";
+
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -66,13 +67,13 @@ export default function Slider({ items }: SliderProps) {
 		});
 	}, [items]);
 
-	useEffect(() => {
+	/* useEffect(() => {
 		if (isPaused) return;
 		// eslint-disable-next-line no-undef
 		const timer = setInterval(goNext, 4000);
 		// eslint-disable-next-line no-undef
 		return () => clearInterval(timer);
-	}, [goNext, isPaused]);
+	}, [goNext, isPaused]); */
 
 	const i = useTranslations("icons");
 
@@ -107,8 +108,10 @@ export default function Slider({ items }: SliderProps) {
 							<div className="content">
 								<h2 className="capitalize">{itemSlice.title}</h2>
 								<p>{itemSlice.description}</p>
-								<Link href={itemSlice.url}>
-									<button>{itemSlice.cta}</button>
+								<Link href={itemSlice.url} className="size-min">
+									<button className="content-btn offset overflow-hidden text-ellipsis whitespace-nowrap hover:cursor-pointer">
+										{itemSlice.cta}
+									</button>
 								</Link>
 							</div>
 						</li>

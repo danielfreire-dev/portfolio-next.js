@@ -3,11 +3,13 @@ import { kolker, montserrat, lusitana } from "@/ui/fonts";
 import "./globals.css";
 import Sidenav from "@/ui/Components/Sidenav/Sidenav";
 
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { NextIntlClientProvider, hasLocale, Locale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import Dock from "@/ui/Components/Sidenav/Dock";
+import { useTranslations } from "next-intl";
+import { Providers } from "@/ui/Components/CookieBanner";
 
 export const metadata: Metadata = {
 	title: {
@@ -43,13 +45,15 @@ export default async function RootLayout({
 				className={`${montserrat.className} ${lusitana.className} ${kolker.className} antialiased flex min-h-screen`}
 			>
 				<NextIntlClientProvider messages={messages}>
-					<header className="flex">
-						<Sidenav />
-					</header>
-					<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
-						{children}
-						<Dock />
-					</main>
+					<Providers>
+						<header className="flex">
+							<Sidenav />
+						</header>
+						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
+							{children}
+							<Dock />
+						</main>
+					</Providers>
 				</NextIntlClientProvider>
 			</body>
 		</html>

@@ -13,10 +13,10 @@ const Sidenav = () => {
 	const t = useTranslations("sidenav");
 
 	return (
-		<nav className="hidden lg:sticky  top-0 left-0 h-screen w-64 z-50 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center">
+		<nav className="hidden lg:sticky  top-0 left-0 h-screen w-64 z-15 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center ">
 			<Link href="/">
 				<h1
-					className={`${kolker.className} text-6xl capitalize transition delay-150 duration-900 ease-in-out hover:text-orange-400`}
+					className={`${kolker.className} text-6xl capitalize flex justify-center transition delay-150 duration-900 ease-in-out hover:text-orange-400`}
 				>
 					{t("header.title")}
 				</h1>
@@ -54,7 +54,7 @@ const Sidenav = () => {
 
 				<LocaleSwitcher />
 				<footer
-					className={`${montserrat.className}`}
+					className={`${montserrat.className} flex justify-center mt-2`}
 					aria-label="footer"
 					aria-details="footer"
 					role="contentinfo"

@@ -26,7 +26,7 @@ const TechCards = ({ tech }: TechCardsProps) => {
 				>
 					<Image
 						src={data.logo}
-						alt={`${data.name} logo`}
+						alt={`${data.name} logo shadow-xl`}
 						width={100}
 						height={50}
 						className="mb-2 "

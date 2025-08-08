@@ -1,8 +1,11 @@
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
+import { loadEnvConfig } from "@next/env";
 
 const ContactForm = () => {
 	const t = useTranslations("contact");
+	const projectDir = process.cwd();
+	loadEnvConfig(projectDir);
 
 	return (
 		<>
@@ -16,7 +19,7 @@ const ContactForm = () => {
 							type="text"
 							name="name"
 							id="name"
-							className="bg-gray-700 ml-2 my-1"
+							className="bg-(--surface) ml-2 my-1"
 						/>
 					</section>
 					<section className="flex flex-col">
@@ -27,7 +30,7 @@ const ContactForm = () => {
 							type="text"
 							name="lastName"
 							id="lastName"
-							className="bg-gray-700 ml-2 my-1"
+							className="bg-(--surface) ml-2 my-1"
 						/>
 					</section>
 				</div>
@@ -40,7 +43,7 @@ const ContactForm = () => {
 							type="email"
 							name="email"
 							id="email"
-							className="bg-gray-700 ml-2 my-1"
+							className="bg-(--surface) ml-2 my-1"
 						/>
 					</section>
 					<section className="flex flex-col">
@@ -51,7 +54,7 @@ const ContactForm = () => {
 							type="tel"
 							name="telephone"
 							id="telephone"
-							className="bg-gray-700 ml-2 my-1"
+							className="bg-(--surface) ml-2 my-1"
 							required
 							aria-autocomplete="both"
 							aria-required="true"
@@ -70,11 +73,11 @@ const ContactForm = () => {
 						required
 						aria-autocomplete="none"
 						aria-required="true"
-						className="bg-gray-700 ml-2 my-1"
+						className="bg-(--surface) ml-2 my-1"
 					/>
 				</section>
 				<section className="flex justify-center mx-auto my-1.5 ">
-					<button type="submit" className="raise   capitalize">
+					<button type="submit" className="bg-(--surface) raise capitalize ">
 						{t("btn")}
 					</button>
 				</section>
