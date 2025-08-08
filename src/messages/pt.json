@@ -89,13 +89,39 @@
 		"privacy": "política de privacidade",
 		"title": "entre em contacto"
 	},
+	"cookies": {
+		"buttonText": "Aceitar Tudo",
+		"declineButtonText": "Recusar",
+		"manageAdvertSubtitle": "Personalizar publicidade e medir o seu desempenho",
+		"manageAdvertTitle": "Publicidade",
+		"manageAnalyticsSubtitle": "Ajude-nos a compreender como os visitantes interagem com o nosso website",
+		"manageAnalyticsTitle": "Análise",
+		"manageButtonText": "Gerir Cookies",
+		"manageCancelButtonText": "Cancelar",
+		"manageCookiesStatus": "Estado: {{status}} em {{data}}",
+		"manageCookiesStatusConsented": "Consentido",
+		"manageCookiesStatusDeclined": "Recusado",
+		"manageEssentialStatus": "Estado: Sempre ativas",
+		"manageEssentialStatusButtonText": "Sempre Ativas",
+		"manageEssentialSubtitle": "Requeridas para o funcionamento adequado do website",
+		"manageEssentialTitle": "Essenciais",
+		"manageMessage": "Gerencie as suas preferências de cookies abaixo. Os cookies essenciais estão sempre ativos, pois são necessários para o funcionamento do website.",
+		"manageSaveButtonText": "Guardar Preferências",
+		"manageSocialSubtitle": "Ativar funcionalidades e partilha de redes sociais",
+		"manageSocialTitle": "Redes Sociais",
+		"manageTitle": "Preferências de Cookies",
+		"message": "Valorizamos a sua privacidade. Escolha quais os cookies que pretende permitir. Os cookies essenciais estão sempre ativos, pois são necessários para o funcionamento do website.",
+		"privacyPolicyText": "Política de Privacidade",
+		"privacyurl": "/pt/privacy-policy",
+		"title": "Quer Aceitar um Cookie? 🍪"
+	},
 	"cta": {
 		"button": [
 			"Vamos falar sobre o seu negócio",
 			"Tem um Projeto em Mente? Vamos Conversar.",
-			"Procurando um Desenvolvedor Front-End? Encontrou Um!",
+			"Procura um Programador Front-End? Encontrou Um!",
 			"Vamos Tornar o Seu Website Inesquecível →",
-			"Precisa de um Desenvolvedor Que Entrega? Vamos Conversar.",
+			"Precisa de um Programador Que Entrega? Vamos Conversar.",
 			"Vamos Construir Algo Grande Juntos →"
 		],
 		"title": "entre em contacto"
@@ -120,7 +146,7 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, en {🇺🇸 Inglês} pt {🇵🇹 Português} other {Desconhecido}}",
+		"locale": "{locale, select, en {🇺🇸 English} pt {🇵🇹 Português} other {Desconhecido}}",
 		"localeMobile": "{locale, select, en {🇺🇸} pt {🇵🇹} other {Desconhecido}}"
 	},
 	"metadata": {
@@ -136,31 +162,31 @@
 		"projects": [
 			{
 				"link": "https://quizzicall-bydainelli.netlify.app/",
-				"src": "/images/screenshots/quizzical.gif",
+				"src": "/images/screenshots/quizzical.webp",
 				"summary": "Jogo de perguntas com mais de 4.000 perguntas.",
 				"title": "quizzical"
 			},
 			{
 				"link": "https://pollyglot-bydainelli.netlify.app/",
-				"src": "/images/screenshots/pollyglot.gif",
+				"src": "/images/screenshots/pollyglot.webp",
 				"summary": "Aplicativo de tradução com IA.",
 				"title": "polyGlot"
 			},
 			{
 				"link": "https://danielfreire.pages.dev",
-				"src": "/images/screenshots/oldPortfolio.gif",
+				"src": "/images/screenshots/oldPortfolio.webp",
 				"summary": "Portfólio antigo de Daniel.",
 				"title": "portfólio antigo"
 			},
 			{
 				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
-				"src": "/images/screenshots/drumkit.gif",
+				"src": "/images/screenshots/drumsVeryBig1920.webp",
 				"summary": "Projeto divertido para reproduzir um Kit de Bateria no seu PC.",
 				"title": "aplicativo kit de bateria"
 			},
 			{
 				"link": "https://tenzi-bydaniel.netlify.app/",
-				"src": "/images/screenshots/tenzi.gif",
+				"src": "/images/screenshots/Tenzi.webp",
 				"summary": "O jogo de dados mais popular do mundo, agora no seu navegador.",
 				"title": "tenzi"
 			}
@@ -169,13 +195,13 @@
 		"websites": [
 			{
 				"link": "https://victo.pages.dev",
-				"src": "/images/screenshots/victo.gif",
+				"src": "/images/screenshots/victo.webp",
 				"summary": "Website criado para mostrar as obras do famoso artista português Victó.",
 				"title": "galeria de arte de victó"
 			},
 			{
 				"link": "https://insurbia.com",
-				"src": "/images/screenshots/insurbia.gif",
+				"src": "/images/screenshots/insurbia2.webp",
 				"summary": "Website desenvolvido para ser o ponto de contacto do coletivo de arquitetura Insurbia.",
 				"title": "insurbia"
 			}
@@ -184,7 +210,7 @@
 	},
 	"sidenav": {
 		"footer": {
-			"blurb": "Feito com 🔋 por",
+			"blurb": "Feito com 🐞 por",
 			"icons": {
 				"github": {
 					"alt": "GitHub",
@@ -220,6 +246,11 @@
 			"link": "https://react.dev",
 			"logo": "/images/icons/react2.svg",
 			"name": "react.js"
+		},
+		{
+			"link": "https://nodejs.org/en",
+			"logo": "/images/icons/node-js.svg",
+			"name": "node.js"
 		},
 		{
 			"link": "https://www.typescriptlang.org",
@@ -262,14 +293,14 @@
 			"name": "gitHub"
 		},
 		{
-			"link": "https://jestjs.io/",
-			"logo": "/images/icons/jestjsio-icon.svg",
-			"name": "jest"
-		},
-		{
 			"link": "https://vitest.dev/",
 			"logo": "/images/icons/vitest.svg",
 			"name": "vitest"
+		},
+		{
+			"link": "https://jestjs.io/",
+			"logo": "/images/icons/jestjsio-icon.svg",
+			"name": "jest"
 		},
 		{
 			"link": "https://selenium-python.readthedocs.io/",

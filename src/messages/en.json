@@ -89,6 +89,32 @@
 		"privacy": "privacy policy",
 		"title": "get in touch"
 	},
+	"cookies": {
+		"buttonText": "Accept All",
+		"declineButtonText": "Decline All",
+		"manageAdvertSubtitle": "Personalize advertisements and measure their performance",
+		"manageAdvertTitle": "Advertising",
+		"manageAnalyticsSubtitle": "Help us understand how visitors interact with our website",
+		"manageAnalyticsTitle": "Analytics",
+		"manageButtonText": "Manage Cookies",
+		"manageCancelButtonText": "Cancel",
+		"manageCookiesStatus": "Status: {{status}} on {{date}}",
+		"manageCookiesStatusConsented": "Consented",
+		"manageCookiesStatusDeclined": "Declined",
+		"manageEssentialStatus": "Status: Always enabled",
+		"manageEssentialStatusButtonText": "Always On",
+		"manageEssentialSubtitle": "Required for the website to function properly",
+		"manageEssentialTitle": "Essential",
+		"manageMessage": "Manage your cookie preferences below. Essential cookies are always enabled as they are necessary for the website to function properly.",
+		"manageSaveButtonText": "Save Preferences",
+		"manageSocialSubtitle": "Enable social media features and sharing",
+		"manageSocialTitle": "Social",
+		"manageTitle": "Cookie Preferences",
+		"message": "We value your privacy. Choose which cookies you want to allow. Essential cookies are always enabled as they are necessary for the website to function properly.",
+		"privacyPolicyText": "Privacy Policy",
+		"privacyurl": "/en/privacy-policy",
+		"title": "Would You Like A Cookie? 🍪"
+	},
 	"cta": {
 		"button": [
 			"Let's talk about your business",
@@ -138,31 +164,31 @@
 		"projects": [
 			{
 				"link": "https://quizzicall-bydainelli.netlify.app/",
-				"src": "/images/screenshots/quizzical.gif",
+				"src": "/images/screenshots/quizzical.webp",
 				"summary": "Trivia game with 4.000+ questions.",
 				"title": "quizzical"
 			},
 			{
 				"link": "https://pollyglot-bydainelli.netlify.app/",
-				"src": "/images/screenshots/pollyglot.gif",
+				"src": "/images/screenshots/pollyglot.webp",
 				"summary": "Translation app with AI.",
 				"title": "pollyGlot"
 			},
 			{
 				"link": "https://danielfreire.pages.dev",
-				"src": "/images/screenshots/oldPortfolio.gif",
+				"src": "/images/screenshots/oldPortfolio.webp",
 				"summary": "Daniel's old portfolio.",
 				"title": "old portfolio"
 			},
 			{
 				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
-				"src": "/images/screenshots/drumkit.gif",
+				"src": "/images/screenshots/drumsVeryBig1920.webp",
 				"summary": "Fun project to reproduce a Drum Kit in your PC.",
 				"title": "drum kit app"
 			},
 			{
 				"link": "https://tenzi-bydaniel.netlify.app/",
-				"src": "/images/screenshots/tenzi.gif",
+				"src": "/images/screenshots/Tenzi.webp",
 				"summary": "The world's most popular dice game, now in your browser.",
 				"title": "tenzi"
 			}
@@ -171,13 +197,13 @@
 		"websites": [
 			{
 				"link": "https://victo.pages.dev",
-				"src": "/images/screenshots/victo.gif",
+				"src": "/images/screenshots/victo.webp",
 				"summary": "Website built to showcase the works of the famous Portuguese artist Victó.",
 				"title": "victó's art gallery"
 			},
 			{
 				"link": "https://insurbia.com",
-				"src": "/images/screenshots/insurbia.gif",
+				"src": "/images/screenshots/insurbia2.webp",
 				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
 				"title": "insurbia"
 			}
@@ -186,7 +212,7 @@
 	},
 	"sidenav": {
 		"footer": {
-			"blurb": "Made with 🔋 by",
+			"blurb": "Made with 🐞 by",
 			"icons": {
 				"github": {
 					"alt": "GitHub",
@@ -222,6 +248,11 @@
 			"link": "https://react.dev",
 			"logo": "/images/icons/react2.svg",
 			"name": "react.js"
+		},
+		{
+			"link": "https://nodejs.org/en",
+			"logo": "/images/icons/node-js.svg",
+			"name": "node.js"
 		},
 		{
 			"link": "https://www.typescriptlang.org",
@@ -262,6 +293,11 @@
 			"link": "https://github.com/",
 			"logo": "/images/icons/github.svg",
 			"name": "gitHub"
+		},
+		{
+			"link": "https://vitest.dev/",
+			"logo": "/images/icons/vitest.svg",
+			"name": "vitest"
 		},
 		{
 			"link": "https://jestjs.io/",

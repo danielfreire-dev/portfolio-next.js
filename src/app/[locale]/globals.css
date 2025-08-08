@@ -1,32 +1,54 @@
 /** eslint-disable css/use-layers */
+/** eslint-disable css/no-invalid-properties */
 @import "tailwindcss";
 
 :root {
-	/* Light Theme (Goku Base) */
+	/* Light Theme */
 	--primary: #ff6f00;
 	--secondary: #0077c8;
-	--background: #fff9f2;
+	--secondary-hover: #0065ac;
+	--background: rgb(255, 249, 242);
 	--surface: #ffffff;
 	--text: #2a2a36;
+	--text-hover: #4b5563;
+	--text-tertiary: #6b7280;
+	--text-carousel: rgb(255, 249, 242);
+	--btn-text: #2a2a36;
 	--accent1: #ffd100;
 	--accent2: #d00060;
 	--error: #e63946;
+	--error-hover: #d32f3d;
 	--success: #2a9d;
+	--success-hover: #238a7d;
+	--nextjs: #000;
+	--reactjs: #61dafb;
 	--aura-hue: 20deg;
+	--spacing: 0.38rem;
+	--surface-rgb: 255, 255, 255;
 }
 
-[data-theme="dark"] {
-	/* Dark Theme (Ultra Instinct) */
-	--primary: #ff9e30;
-	--secondary: #00b4f0;
-	--background: #0f1624;
-	--surface: #1c2536;
-	--text: #e6f0ff;
-	--accent1: #ffea70;
-	--accent2: #ff4081;
-	--error: #ff6b6b;
-	--success: #70d6a3;
-	--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primary: #ff9e30;
+		--secondary: #00b4f0;
+		--secondary-hover: #00a0d6;
+		--background: rgb(15, 22, 36);
+		--surface: #1c2536;
+		--text: #e6f0ff;
+		--text-hover: #d1d5db;
+		--text-tertiary: #bac1ce;
+		--text-carousel: rgb(255, 249, 242);
+		--accent1: #ffea70;
+		--accent2: #ff4081;
+		--error: #ff6b6b;
+		--error-hover: #ff5252;
+		--success: #70d6a3;
+		--success-hover: #5ac394;
+		--nextjs: #ececec;
+
+		--surface-rgb: rgb(28, 37, 54);
+		--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
+	}
 }
 
 .energy-glow {
@@ -38,35 +60,6 @@
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
-}
-
-:root {
-	--primary: #ff6f00;
-	--secondary: #0077c8;
-	--background: #fff9f2;
-	--surface: #ffffff;
-	--text: #2a2a36;
-	--accent1: #ffd100;
-	--accent2: #d00060;
-	--error: #e63946;
-	--success: #2a9d;
-	--aura-hue: 20deg;
-	--spacing: 0.38rem;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--primary: #ff9e30;
-		--secondary: #00b4f0;
-		--background: #0f1624;
-		--surface: #1c2536;
-		--text: #e6f0ff;
-		--accent1: #ffea70;
-		--accent2: #ff4081;
-		--error: #ff6b6b;
-		--success: #70d6a3;
-		--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
-	}
 }
 
 body {
