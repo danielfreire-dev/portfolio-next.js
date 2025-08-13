@@ -1,15 +1,25 @@
+"use client";
+
+import { getData } from "@/lib/getData";
+import { sendEmail } from "@/lib/resend";
+/* import { sendEmail } from "@/app/api/send"; */
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { loadEnvConfig } from "@next/env";
 
 const ContactForm = () => {
 	const t = useTranslations("contact");
-	const projectDir = process.cwd();
-	loadEnvConfig(projectDir);
 
+	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
+		e.preventDefault();
+
+		const formData = new FormData(e.currentTarget);
+		const formValues = Object.fromEntries(formData);
+		await sendEmail(formValues);
+		await getData(formValues);
+	}
 	return (
 		<>
-			<form action="" method="post" className="mx-auto ">
+			<form onSubmit={sendContactForm} className="mx-auto ">
 				<div className="name-div flex">
 					<section className="flex flex-col">
 						<label htmlFor="firstName" className="capitalize">
@@ -17,8 +27,8 @@ const ContactForm = () => {
 						</label>
 						<input
 							type="text"
-							name="name"
-							id="name"
+							name="firstName"
+							id="firstName"
 							className="bg-(--surface) ml-2 my-1"
 						/>
 					</section>
