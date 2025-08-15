@@ -2,21 +2,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { kolker } from "../../fonts";
-import { montserrat } from "../../fonts";
-
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
 import NavigationList from "./NavigationList";
+import ThemeToggle from "../ThemeToggle";
 
 const Sidenav = () => {
 	const t = useTranslations("sidenav");
 
 	return (
-		<nav className="hidden lg:sticky  top-0 left-0 h-screen w-64 z-15 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center ">
+		<nav className="hidden lg:sticky top-0 left-0 h-screen w-64 z-15 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center ">
 			<Link href="/">
 				<h1
-					className={`${kolker.className} text-6xl capitalize flex justify-center transition delay-150 duration-900 ease-in-out hover:text-orange-400`}
+					className="text-5xl capitalize flex justify-center text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
+					id="logo"
 				>
 					{t("header.title")}
 				</h1>
@@ -25,7 +24,7 @@ const Sidenav = () => {
 				<NavigationList />
 			</ul>
 			<section className="flex flex-col justify-center">
-				<div className="flex justify-center gap-2">
+				<div className="flex justify-center gap-2 ">
 					<a
 						href={t("footer.icons.github.link")}
 						target="_blank"
@@ -51,10 +50,10 @@ const Sidenav = () => {
 						/>
 					</a>
 				</div>
-
+				{/* <ThemeToggle /> */}
 				<LocaleSwitcher />
 				<footer
-					className={`${montserrat.className} flex justify-center mt-2`}
+					className="flex justify-center mt-2 whitespace-pre-wrap"
 					aria-label="footer"
 					aria-details="footer"
 					role="contentinfo"

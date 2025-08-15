@@ -10,8 +10,11 @@ const WebsiteCards = () => {
 		return t
 			.raw(`${items}`)
 			.map((item: Dictionary["portfolio"]["websites" | "projects"][number]) => (
-				<div className="max-w-lg  mr-10 last:mr-0  mb-6 " key={nanoid()}>
-					<div className="overflow-hidden rounded-lg shadow-md">
+				<div
+					className="max-w-lg last:mr-0 mb-6 p-3 bg-(--surface)"
+					key={nanoid()}
+				>
+					<div className="overflow-hidden shadow-md">
 						<a href={item.link} target="_blank" rel="noopener noreferrer">
 							<Image
 								src={item.src}
@@ -33,7 +36,7 @@ const WebsiteCards = () => {
 								{item.title}
 							</h3>
 						</a>
-						<small className="block text-gray-600 text-sm break-words mt-1">
+						<small className="block text-(--text-tertiary) text-sm break-words mt-1">
 							{item.summary}
 						</small>
 					</div>
@@ -42,13 +45,13 @@ const WebsiteCards = () => {
 	};
 
 	return (
-		<div className="mx-15">
+		<div className="mx-15 text-center flex flex-wrap flex-col justify-center">
 			<h2>{t("websites-title")}</h2>
-			<section className="flex flex-row flex-wrap">
+			<section className="flex flex-row flex-wrap justify-center gap-x-7">
 				{collectionMap("websites")}
 			</section>
 			<h2>{t("projects-title")}</h2>
-			<section className="flex flex-row flex-wrap">
+			<section className="flex flex-row flex-wrap justify-center gap-x-7">
 				{collectionMap("projects")}
 			</section>
 		</div>
