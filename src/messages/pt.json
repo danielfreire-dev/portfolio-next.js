@@ -35,11 +35,11 @@
 		},
 		{
 			"alt": "Interior de laboratório industrial",
-			"cta": "Construa o Seu Projeto dos Sonhos Hoje",
+			"cta": "Construa o Projeto dos Seus Sonhos Hoje",
 			"description": "Pare de se contentar com modelos genéricos. Os nossos serviços personalizados de desenvolvimento web criam experiências digitais totalmente adaptadas que se alinham perfeitamente com a identidade única da sua marca e os objetivos do seu negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
 			"id": 3,
 			"imageUrl": "/images/Carousel/estatuas.webp",
-			"title": "construa o seu projeto dos sonhos hoje",
+			"title": "construa o projeto dos seus sonhos hoje",
 			"url": "/contact"
 		},
 		{
@@ -73,6 +73,10 @@
 	"contact": {
 		"btn": "enviar mensagem",
 		"email": "email",
+		"farewell": {
+			"text": "Agradeço o voto de confiança. Deve esperar uma resposta durante os próximos dias úteis.",
+			"title": "Obrigado"
+		},
 		"firstName": "primeiro nome",
 		"label": "Li e concordo com a",
 		"lastName": "último nome",
@@ -121,10 +125,15 @@
 			"Tem um Projeto em Mente? Vamos Conversar.",
 			"Procura um Programador Front-End? Encontrou Um!",
 			"Vamos Tornar o Seu Website Inesquecível →",
-			"Precisa de um Programador Que Entrega? Vamos Conversar.",
+			"Precisa de um Programador Que Cumpre? Vamos Conversar.",
 			"Vamos Construir Algo Grande Juntos →"
 		],
 		"title": "entre em contacto"
+	},
+	"email": {
+		"email": "ola@daniel-freire.com",
+		"message": "Mensagem aleatória",
+		"title": "Olá"
 	},
 	"error": {
 		"404": "Página não encontrada",

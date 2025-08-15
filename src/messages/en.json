@@ -73,6 +73,10 @@
 	"contact": {
 		"btn": "send message",
 		"email": "email",
+		"farewell": {
+			"text": "I appreciate your vote of confidence. You should expect a reply over the next business days.",
+			"title": "thank you"
+		},
 		"firstName": "first name",
 		"label": "I have read and agree with ",
 		"lastName": "last name",
@@ -126,6 +130,16 @@
 			"Let’s Build Something Great Together →"
 		],
 		"title": "get in touch"
+	},
+	"email": {
+		"email": "hello@daniel-freire.com",
+		"message": "random message",
+		"title": "Hello",
+		"welcome": {
+			"Heading": "this is a Heading",
+			"maintext": "Thank you for contacting me.",
+			"preview": "welcome email"
+		}
 	},
 	"error": {
 		"404": "Page",

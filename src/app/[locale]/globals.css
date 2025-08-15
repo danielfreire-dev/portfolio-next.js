@@ -69,6 +69,30 @@ body {
 	padding-bottom: env(safe-area-inset-bottom);
 }
 
+#logo {
+	font-family: var(--font-logo), serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading), Arial, Helvetica, sans-serif;
+}
+p,
+li,
+select,
+footer,
+form {
+	font-family: var(--font-text), Arial, Helvetica, sans-serif;
+}
+
+small,
+.cta {
+	font-family: var(--font-small), Arial, Helvetica, sans-serif;
+}
+
 input,
 textarea {
 	border-color: #f27a3d;
@@ -178,4 +202,8 @@ nav ul li.active a:after {
 	-ms-transform: scaleX(1);
 	-o-transform: scaleX(1);
 	transform: scaleX(1);
+}
+
+footer a {
+	font-family: var(--font-small-itallic);
 }

@@ -1,4 +1,4 @@
-import ClientSideAbout from "./ClientPage";
+import ClientSideAbout from "../../../ui/Components/ClientPage";
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 

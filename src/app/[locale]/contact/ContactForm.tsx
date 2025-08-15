@@ -5,21 +5,36 @@ import { sendEmail } from "@/lib/resend";
 /* import { sendEmail } from "@/app/api/send"; */
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import ContactFarewell from "./ContactFarewell";
 
 const ContactForm = () => {
+	const [submitted, setSubmitted] = useState<boolean>(false);
+	const [loading, setLoading] = useState<boolean>(false);
+
 	const t = useTranslations("contact");
 
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
+		setLoading((prev) => !prev);
+
 		const formData = new FormData(e.currentTarget);
+
 		const formValues = Object.fromEntries(formData);
-		await sendEmail(formValues);
+
+		/* await sendEmail(formValues); */
 		await getData(formValues);
+
+		setSubmitted((prev) => !prev);
+		setLoading((prev) => !prev);
 	}
 	return (
 		<>
-			<form onSubmit={sendContactForm} className="mx-auto ">
+			<form
+				onSubmit={sendContactForm}
+				className={`mx-auto ${submitted && "hidden"}`}
+			>
 				<div className="name-div flex">
 					<section className="flex flex-col">
 						<label htmlFor="firstName" className="capitalize">
@@ -87,11 +102,16 @@ const ContactForm = () => {
 					/>
 				</section>
 				<section className="flex justify-center mx-auto my-1.5 ">
-					<button type="submit" className="bg-(--surface) raise capitalize ">
+					<button
+						type="submit"
+						className="bg-(--surface) raise capitalize"
+						disabled={loading}
+					>
 						{t("btn")}
 					</button>
 				</section>
 			</form>
+			<ContactFarewell submitted={submitted} />
 		</>
 	);
 };
