@@ -23,7 +23,7 @@ const ContactForm = () => {
 
 		const formValues = Object.fromEntries(formData);
 
-		/* await sendEmail(formValues); */
+		await sendEmail(formValues);
 		await getData(formValues);
 
 		setSubmitted((prev) => !prev);

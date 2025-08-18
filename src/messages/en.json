@@ -134,11 +134,26 @@
 	"email": {
 		"email": "hello@daniel-freire.com",
 		"message": "random message",
-		"title": "Hello",
+		"title": "💻🚀 Hello",
 		"welcome": {
-			"Heading": "this is a Heading",
-			"maintext": "Thank you for contacting me.",
-			"preview": "welcome email"
+			"conclusion": "This is more than a website—it’s your digital handshake, your first impression, and your opportunity to stand out in a crowded field. Let’s make it unforgettable.",
+			"happensNext0": "Here’s what happens next:",
+			"happensNext1": "I’ll personally review your submission and respond with a customized plan (or any questions to refine the scope) within 2–3 business days.",
+			"happensNext2": "Over the next business days, you’ll hear from me with clear next steps, timelines, and how we’ll collaborate to bring your vision to life.",
+			"happensNext3": "If you don’t see my email by then, don’t hesitate to follow up—I’m either deep in code or battling my inbox (and I’ll always prioritize your project).",
+			"heading": "Hello",
+			"intro": "Let’s start with a simple truth: building an online presence that truly represents your services/skills as a professional takes courage and vision. The fact that you’re here—taking concrete steps to elevate your work—speaks volumes about your commitment to growth. That’s worth celebrating.",
+			"introduction": "I am Daniel Freire, and I specialize in crafting high-impact, client-focused websites that don’t just display projects but tell a compelling story about what you bring to the table. Whether you’re aiming to attract top-tier clients, land your dream job, or simply showcase your expertise with clarity and style, your website is your most powerful tool. And I’m here to help you sharpen it.",
+			"signature": "Looking forward to working with you,",
+			"whileWait0": "While you wait, feel free to:",
+			"whileWait1": "✅ Reply to this email with any additional thoughts—like specific projects you’re proud of, design preferences, or goals for your website (e.g., “I want recruiters to immediately see my full-stack expertise”). ",
+			"whileWait2": "✅ Gather assets (GitHub links, case studies, or even rough sketches) to streamline the process once we begin.",
+			"view": "View the",
+			"privacyPolicy": "privacy policy",
+			"webLink": "daniel-freire.com",
+			"name": "Daniel Freire",
+			"privacyPolicyUrl": "en/privacy-policy/",
+			"preview": "Daniel Freire's Welcome Email"
 		}
 	},
 	"error": {

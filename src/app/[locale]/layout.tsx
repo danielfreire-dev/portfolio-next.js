@@ -9,8 +9,9 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import Dock from "@/ui/Components/Sidenav/Dock";
-import { useTranslations } from "next-intl";
+
 import { Providers } from "@/ui/Components/CookieBanner";
+import { PostHogProvider } from "@/lib/posthog";
 
 /* Metadata */
 export const metadata: Metadata = {
@@ -85,13 +86,15 @@ export default async function RootLayout({
 			>
 				<NextIntlClientProvider messages={messages}>
 					<Providers>
-						<header className="flex">
-							<Sidenav />
-						</header>
-						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
-							{children}
-							<Dock />
-						</main>
+						<PostHogProvider>
+							<header className="flex">
+								<Sidenav />
+							</header>
+							<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
+								{children}
+								<Dock />
+							</main>
+						</PostHogProvider>
 					</Providers>
 				</NextIntlClientProvider>
 			</body>
