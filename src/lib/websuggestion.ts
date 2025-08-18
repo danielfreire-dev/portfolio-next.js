@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { resend } from "../../lib/resend";
+import WelcomeEmail from "./EmailTemplate";
 
 const send = async (req: NextApiRequest, res: NextApiResponse) => {
 	const { method } = req;
@@ -10,7 +11,7 @@ const send = async (req: NextApiRequest, res: NextApiResponse) => {
 				from: "Acme <onboarding@resend.dev>",
 				to: ["delivered@resend.dev"],
 				subject: "Waitlist",
-				html: "<h1>Hey There!</h1>",
+				html: WelcomeEmail(firstName: data.firstName, lastName: data.lastName)
 			});
 
 			return res.status(200).send({ data: data.id });

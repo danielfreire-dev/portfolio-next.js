@@ -133,7 +133,27 @@
 	"email": {
 		"email": "ola@daniel-freire.com",
 		"message": "Mensagem aleatória",
-		"title": "Olá"
+		"title": "💻🚀 Olá",
+		"welcome": {
+			"conclusion": "Estamos a falar de mais do que um website — é o seu aperto de mão digital, a sua primeira impressão e a oportunidade de se destacar num mercado cada vez mais competitivo. Vamos torná-lo inesquecível.",
+			"happensNext0": "Eis o que acontece a seguir:",
+			"happensNext1": "Analisarei pessoalmente a sua submissão e responderei com um plano personalizado (ou eventuais perguntas para refinar o projecto) em 2–3 dias úteis.",
+			"happensNext2": "Nos próximos dias úteis, receberá de mim os próximos passos claros, cronogramas e como colaboraremos para dar vida à sua visão.",
+			"happensNext3": "Se não receber o meu e-mail até lá, não hesite em contactar-me novamente — estarei ou mergulhado em código ou a combater a caixa de entrada (e darei sempre prioridade ao seu projeto).",
+			"heading": "Olá",
+			"intro": "Comecemos com uma verdade simples: construir uma presença online que represente verdadeiramente os seus serviços/competências enquanto profissional exige coragem e visão. O facto de estar aqui — a dar passos concretos para valorizar o seu trabalho — diz muito sobre o seu compromisso com o crescimento. Isso merece ser celebrado.",
+			"introduction": "Sou o Daniel Freire e a minha especialidade é a criação de websites de alto impacto, focados no cliente, que não se limitam a exibir projetos, mas contam uma história convincente sobre o valor que traz para a mesa. Quer pretenda atrair clientes de topo, conquistar o emprego dos seus sonhos ou simplesmente exibir a sua experiência com clareza e estilo, o seu website é a sua ferramenta mais poderosa. E estou aqui para o ajudar a aperfeiçoá-la.",
+			"name": "Daniel Freire",
+			"preview": "Email de Boas-Vindas de Daniel Freire",
+			"privacyPolicy": "política de privacidade",
+			"privacyPolicyUrl": "pt/politica-privacidade/",
+			"signature": "Aguardando o nosso trabalho em conjunto com entusiasmo,",
+			"view": "Veja a",
+			"webLink": "daniel-freire.com",
+			"whileWait0": "Enquanto aguarda, sinta-se à vontade para:",
+			"whileWait1": "✅ Responder a este e-mail com quaisquer ideias adicionais — como projetos específicos de que se orgulhe, preferências de design ou objetivos para o seu website.",
+			"whileWait2": "✅ Reunir materiais (links, estudos de caso ou até rascunhos) para agilizar o processo quando começarmos."
+		}
 	},
 	"error": {
 		"404": "Página não encontrada",
