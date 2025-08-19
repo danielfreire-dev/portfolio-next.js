@@ -13,7 +13,7 @@ import md from "eslint-plugin-markdown";
 
 export default [
 	// Base configuration
-	js.configs.recommended,
+	/* js.configs.recommended, */
 	// TypeScript configuration
 	{
 		files: ["**/*.{ts,tsx}"],
@@ -167,8 +167,7 @@ export default [
 					depth: 5,
 				},
 			],
-			"jsx-a11y/scope": "off",
-
+			"jsx-a11y/scope": "warn",
 			"jsx-a11y/aria-props": "error",
 			"jsx-a11y/aria-proptypes": "error",
 			"jsx-a11y/anchor-has-content": ["error", { components: [] }],
@@ -178,9 +177,9 @@ export default [
 			"jsx-a11y/autocomplete-valid": "warn",
 			"jsx-a11y/click-events-have-key-events": "warn",
 			"jsx-a11y/heading-has-content": "warn",
-			"jsx-a11y/html-has-lang": "warn",
+			"jsx-a11y/html-has-lang": "error",
 			"jsx-a11y/iframe-has-title": "warn",
-			"jsx-a11y/img-redundant-alt": "warn",
+			"jsx-a11y/img-redundant-alt": "error",
 			"jsx-a11y/interactive-supports-focus": "warn",
 			"jsx-a11y/no-aria-hidden-on-focusable": "warn",
 			"jsx-a11y/lang": "error",

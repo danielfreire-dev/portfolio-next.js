@@ -1,5 +1,5 @@
-/** eslint-disable css/use-layers */
-/** eslint-disable css/no-invalid-properties */
+/* eslint-disable css/no-invalid-properties */
+
 @import "tailwindcss";
 
 :root {
@@ -20,11 +20,14 @@
 	--error-hover: #d32f3d;
 	--success: #2a9d;
 	--success-hover: #238a7d;
-	--nextjs: #000;
-	--reactjs: #61dafb;
+
 	--aura-hue: 20deg;
 	--spacing: 0.38rem;
 	--surface-rgb: 255, 255, 255;
+
+	--nextjs-fill: #171717;
+	--html-fill: #000;
+	--github-fill: #0f0e0fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,7 +47,9 @@
 		--error-hover: #ff5252;
 		--success: #70d6a3;
 		--success-hover: #5ac394;
-		--nextjs: #ececec;
+		--nextjs-fill: #ececec;
+		--html-fill: #f9f9f9;
+		--github-fill: #fff;
 
 		--surface-rgb: rgb(28, 37, 54);
 		--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
@@ -136,7 +141,6 @@ p {
 }
 
 .dock {
-	/*eslint-disable-next-line css/no-invalid-properties*/
 	padding-bottom: env(safe-area-inset-bottom);
 }
 
