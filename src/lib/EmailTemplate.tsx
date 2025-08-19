@@ -7,34 +7,34 @@ import {
 	Hr,
 	Html,
 	Link,
-	pixelBasedPreset,
 	Preview,
 	Section,
 	Tailwind,
 	Text,
 } from "@react-email/components";
-import localFont from "next/font/local";
 
-export default function WelcomeEmail(t, firstName: string, lastName: string) {
+export default function WelcomeEmail(
+	/*  eslint-disable-next-line @typescript-eslint/no-explicit-any */
+	t: any,
+	firstName: string,
+	lastName: string,
+) {
 	return (
 		<Html>
 			<Head>
 				<Font
 					fontFamily="Mozilla Headline"
-					fallbackFontFamily="Arial, Verdana"
+					fallbackFontFamily="sans-serif"
 					webFont={{
-						url: [
-							"https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap",
-						],
+						url: "https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap",
 						format: "woff2",
 					}}
 					fontWeight={400}
-					fontDisplay="swap"
 					fontStyle="normal"
 				/>
 				<Font
 					fontFamily="IBM Plex Sans"
-					fallbackFontFamily="Verdana"
+					fallbackFontFamily="serif"
 					webFont={{
 						url: "https://fonts.googleapis.com/css2?family=IBM+IBM Plex Sans+Sans:ital,wght@0,100..700;1,100..700&display=swap",
 						format: "woff2",
@@ -115,8 +115,6 @@ const h1 = {
 	fontWeight: "bold",
 	marginBottom: "15px",
 };
-
-const Moz = { fontFamily: "Mozilla Headline, Arial, Verdana" };
 
 const link = {
 	color: "#2754C5",

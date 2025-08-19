@@ -13,6 +13,21 @@ interface TechCardsProps {
 
 const TechCards = ({ tech }: TechCardsProps) => {
 	const techstackMap = tech.map((data) => {
+		let fillClass: string;
+		switch (data.name) {
+			case "next.js":
+				fillClass = " fill-(--nextjs-fill)";
+				break;
+			case "HTML5":
+				fillClass = " fill-(--html-fill)";
+				break;
+			case "gitHub":
+				fillClass = " fill-(--github-fill)";
+				break;
+			default:
+				fillClass = "";
+		}
+		console.log("fillClass", fillClass);
 		return (
 			<div
 				className="flex flex-col flex-nowrap justify-items-center justify-center items-center bg-(--surface) py-7 px-9 m-4"
@@ -29,7 +44,7 @@ const TechCards = ({ tech }: TechCardsProps) => {
 						alt={`${data.name} logo shadow-xl`}
 						width={100}
 						height={50}
-						className="mb-2"
+						className={`mb-2${fillClass}`}
 					/>
 					<p className="capitalize">{data.name}</p>
 				</a>

@@ -91,6 +91,9 @@
 			"phone": "Insira o seu número de telefone"
 		},
 		"privacy": "política de privacidade",
+		"privacyPolicyCheck": "Confirmo que li e aceito a",
+		"privacyPolicyUrl": "politica-privacidade/",
+		"required": "necessário",
 		"title": "entre em contacto"
 	},
 	"cookies": {
@@ -116,7 +119,7 @@
 		"manageTitle": "Preferências de Cookies",
 		"message": "Valorizamos a sua privacidade. Escolha quais os cookies que pretende permitir. Os cookies essenciais estão sempre ativos, pois são necessários para o funcionamento do website.",
 		"privacyPolicyText": "Política de Privacidade",
-		"privacyurl": "/pt/privacy-policy",
+		"privacyurl": "/pt/politica-privacidade",
 		"title": "Quer Aceitar um Cookie? 🍪"
 	},
 	"cta": {
@@ -236,6 +239,47 @@
 			}
 		],
 		"websites-title": "Websites"
+	},
+	"privacyPolicy": {
+		"contactEmail": "rgpd@daniel-freire.com",
+		"header1": "1. Introdução",
+		"header10": "10. Atualizações a Esta Política de Privacidade",
+		"header11": "11. Contacte-nos",
+		"header2": "2. Informações que Recolhemos",
+		"header3": "3. Finalidade da Recolha de Dados",
+		"header4": "4. Base Legal para o Tratamento",
+		"header5": "5. Partilha de Dados Pessoais",
+		"header6": "6. Conservação de Dados",
+		"header7": "7. Os Seus Direitos",
+		"header8": "8. Segurança de Dados",
+		"header9": "9. Reclamações",
+		"paragraph1": "Bem-vindo ao website de Daniel Freire. Estamos empenhados em proteger a sua informação pessoal e o seu direito à privacidade. Se tiver alguma questão ou preocupação sobre este aviso de privacidade ou sobre as nossas práticas relativamente à sua informação pessoal, por favor contacte-nos através de",
+		"paragraph10": "Podemos atualizar esta política de privacidade periodicamente. Notificá-lo-emos de quaisquer alterações através da publicação da nova política de privacidade nesta página.",
+		"paragraph11": "Se tiver alguma questão sobre esta política de privacidade, por favor contacte-nos através de",
+		"paragraph2": "Recolhemos informações pessoais que nos fornece voluntariamente quando preenche um formulário no nosso website. As informações pessoais que recolhemos incluem:",
+		"paragraph2li": [
+			"Primeiro nome",
+			"Último nome",
+			"Endereço de email",
+			"Número de telefone"
+		],
+		"paragraph3": "As informações recolhidas serão utilizadas para o contactar no futuro. Utilizaremos os seus dados pessoais apenas para esta finalidade específica.",
+		"paragraph4": "Tratamos os seus dados pessoais com base no seu consentimento, que nos concede ao preencher o formulário no nosso website.",
+		"paragraph5": "Não partilhamos os seus dados pessoais com terceiros, exceto se exigido por lei.",
+		"paragraph6": "Conservaremos os seus dados pessoais apenas durante o tempo necessário para cumprir as finalidades para as quais os recolhemos, incluindo para o cumprimento de quaisquer requisitos legais.",
+		"paragraph7": "Tem o direito de:",
+		"paragraph7li": [
+			"Aceder aos seus dados pessoais",
+			"Solicitar a retificação dos seus dados pessoais",
+			"Solicitar a eliminação dos seus dados pessoais",
+			"Opor-se ao tratamento dos seus dados pessoais",
+			"Solicitar a limitação do tratamento dos seus dados pessoais",
+			"Solicitar a portabilidade dos seus dados pessoais",
+			"Retirar o consentimento a qualquer momento"
+		],
+		"paragraph8": "Implementamos medidas técnicas e organizativas adequadas para garantir um nível de segurança apropriado face ao risco inerente ao tratamento dos seus dados pessoais.",
+		"paragraph9": "Se acredita que não cumprimos com as leis de proteção de dados, tem o direito de apresentar uma reclamação junto da autoridade de controlo competente.",
+		"title": "Política de Privacidade do Website de Daniel Freire"
 	},
 	"sidenav": {
 		"footer": {

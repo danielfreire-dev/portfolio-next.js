@@ -91,6 +91,9 @@
 			"phone": "Input your phone number"
 		},
 		"privacy": "privacy policy",
+		"privacyPolicyCheck": "I confirm that I read and agree with the",
+		"privacyPolicyUrl": "privacy-policy/",
+		"required": "required",
 		"title": "get in touch"
 	},
 	"cookies": {
@@ -144,16 +147,16 @@
 			"heading": "Hello",
 			"intro": "Let’s start with a simple truth: building an online presence that truly represents your services/skills as a professional takes courage and vision. The fact that you’re here—taking concrete steps to elevate your work—speaks volumes about your commitment to growth. That’s worth celebrating.",
 			"introduction": "I am Daniel Freire, and I specialize in crafting high-impact, client-focused websites that don’t just display projects but tell a compelling story about what you bring to the table. Whether you’re aiming to attract top-tier clients, land your dream job, or simply showcase your expertise with clarity and style, your website is your most powerful tool. And I’m here to help you sharpen it.",
+			"name": "Daniel Freire",
+			"preview": "Daniel Freire's Welcome Email",
+			"privacyPolicy": "privacy policy",
+			"privacyPolicyUrl": "en/privacy-policy/",
 			"signature": "Looking forward to working with you,",
+			"view": "View the",
+			"webLink": "daniel-freire.com",
 			"whileWait0": "While you wait, feel free to:",
 			"whileWait1": "✅ Reply to this email with any additional thoughts—like specific projects you’re proud of, design preferences, or goals for your website (e.g., “I want recruiters to immediately see my full-stack expertise”). ",
-			"whileWait2": "✅ Gather assets (GitHub links, case studies, or even rough sketches) to streamline the process once we begin.",
-			"view": "View the",
-			"privacyPolicy": "privacy policy",
-			"webLink": "daniel-freire.com",
-			"name": "Daniel Freire",
-			"privacyPolicyUrl": "en/privacy-policy/",
-			"preview": "Daniel Freire's Welcome Email"
+			"whileWait2": "✅ Gather assets (GitHub links, case studies, or even rough sketches) to streamline the process once we begin."
 		}
 	},
 	"error": {
@@ -238,6 +241,47 @@
 			}
 		],
 		"websites-title": "Websites"
+	},
+	"privacyPolicy": {
+		"contactEmail": "gdpr@daniel-freire.com",
+		"header1": "1. Introduction",
+		"header10": "10. Updates to This Privacy Policy",
+		"header11": "11. Contact Us",
+		"header2": "2. Information We Collect",
+		"header3": "3. Purpose of Data Collection",
+		"header4": "4. Legal Basis for Processing",
+		"header5": "5. Sharing of Personal Data",
+		"header6": "6. Data Retention",
+		"header7": "7. Your Rights",
+		"header8": "8. Data Security",
+		"header9": "9. Complaints",
+		"paragraph1": "Welcome to Daniel Freire's website. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at",
+		"paragraph10": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.",
+		"paragraph11": "If you have any questions about this privacy policy, please contact us at",
+		"paragraph2": "We collect personal information that you voluntarily provide to us when you fill out a form on our website. The personal information we collect includes:",
+		"paragraph2li": [
+			"First name",
+			"Last name",
+			"Email address",
+			"Phone number"
+		],
+		"paragraph3": "The information we collect will be used to contact you in the future. We will only use your personal data for this specific purpose.",
+		"paragraph4": "We process your personal data based on your consent, which you provide by filling out the form on our website.",
+		"paragraph5": "We do not share your personal data with third parties except as required by law.",
+		"paragraph6": "We will retain your personal data only for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal requirements.",
+		"paragraph7": "You have the right to:",
+		"paragraph7li": [
+			"Access your personal data",
+			"Request correction of your personal data",
+			"Request erasure of your personal data",
+			"Object to processing of your personal data",
+			"Request restriction of processing your personal data",
+			"Request transfer of your personal data",
+			"Withdraw consent at any time"
+		],
+		"paragraph8": "We implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk of processing your personal data.",
+		"paragraph9": "If you believe that we have not complied with data protection laws, you have the right to lodge a complaint with the relevant supervisory authority.",
+		"title": "Privacy Po,licy for Daniel Freire's Website"
 	},
 	"sidenav": {
 		"footer": {

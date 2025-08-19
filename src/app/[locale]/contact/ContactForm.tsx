@@ -7,6 +7,7 @@ import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import ContactFarewell from "./ContactFarewell";
+import { Link } from "@/i18n/navigation";
 
 const ContactForm = () => {
 	const [submitted, setSubmitted] = useState<boolean>(false);
@@ -39,6 +40,7 @@ const ContactForm = () => {
 					<section className="flex flex-col">
 						<label htmlFor="firstName" className="capitalize">
 							{t("firstName")}
+							<span className="text-(--error)">*</span>
 						</label>
 						<input
 							type="text"
@@ -63,6 +65,7 @@ const ContactForm = () => {
 					<section className="flex flex-col">
 						<label htmlFor="email" className="capitalize">
 							{t("email")}
+							<span className="text-(--error)">*</span>
 						</label>
 						<input
 							type="email"
@@ -74,6 +77,7 @@ const ContactForm = () => {
 					<section className="flex flex-col">
 						<label htmlFor="telephone" className="capitalize">
 							{t("phone")}
+							<span className="text-(--error)">*</span>
 						</label>
 						<input
 							type="tel"
@@ -89,6 +93,7 @@ const ContactForm = () => {
 				<section className="message-div flex flex-col">
 					<label htmlFor="message" className="capitalize">
 						{t("message")}
+						<span className="text-(--error)">*</span>
 					</label>
 					<textarea
 						name="message"
@@ -101,6 +106,26 @@ const ContactForm = () => {
 						className="bg-(--surface) ml-2 my-1"
 					/>
 				</section>
+				<p>
+					<span className="text-(--error)">*</span>
+					<span className="capitalize">{t("required")}</span>
+				</p>
+				<label htmlFor="privacy-policy-check">
+					<input
+						type="checkbox"
+						name="privacy-policy-check"
+						id="privacy-policy-check"
+						required
+					/>{" "}
+					{t("privacyPolicyCheck")}{" "}
+					<Link
+						href={t("privacyPolicyUrl") as "/privacy-policy"}
+						target="_blank"
+					>
+						{t("privacy")}
+					</Link>
+				</label>
+
 				<section className="flex justify-center mx-auto my-1.5 ">
 					<button
 						type="submit"

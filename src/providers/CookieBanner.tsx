@@ -1,19 +1,16 @@
-/* eslint-disable no-undef */
 "use client";
 
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
+import "@/ui/styles/cookieBanner.css";
+/* import "@/ui/styles/cookieBannerOG.css"; */
+/* import { PostHogProvider } from "./posJavali"; */
 
 const CookieManager = dynamic(
 	() => import("react-cookie-manager").then((mod) => mod.CookieManager),
 	{ ssr: false, loading: () => null },
 );
 
-import "@/ui/styles/cookieBanner.css";
-/* import "@/ui/styles/cookieBannerOG.css"; */
-import { Locale } from "next-intl";
-
-// In your Providers component or layout
 export function Providers({ children }: { children: React.ReactNode }) {
 	const t = useTranslations("cookies");
 
@@ -73,6 +70,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			}}
 		>
 			{children}
+			{/* <PostHogProvider>{children}</PostHogProvider> */}
 		</CookieManager>
 	);
 }
