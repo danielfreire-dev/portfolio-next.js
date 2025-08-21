@@ -2,7 +2,18 @@
 /* eslint-disable react/no-multi-comp */
 import { useTranslations } from "next-intl";
 import { nanoid } from "nanoid";
-import { ReactNode } from "react";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params }: { params: any }): Promise<{
+	title: string;
+}> {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata" });
+
+	return {
+		title: t("privacyPolicy"),
+	};
+}
 
 interface ListParagraphProps {
 	list: string[];

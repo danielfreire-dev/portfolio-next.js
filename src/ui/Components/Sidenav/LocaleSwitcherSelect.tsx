@@ -35,7 +35,7 @@ export default function LocaleSwitcherSelect({
 	return (
 		<>
 			<select
-				className="hidden lg:block text-center bg-transparent py-2 my-2 pl-2 pr-6 hover:cursor-pointer select-class"
+				className="hidden lg:block appearance-none text-center bg-transparent py-2 my-2 pl-2 pr-6 hover:cursor-pointer hover:bg-(--surface) focus:bg-(--surface) select-class"
 				defaultValue={defaultValue}
 				disabled={isPending}
 				onChange={onSelectChange}

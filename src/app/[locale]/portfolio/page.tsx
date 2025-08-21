@@ -3,6 +3,7 @@ import Cta from "../../../ui/Components/CtA/Cta";
 import WebsiteCards from "../../../ui/Components/WebsiteCards";
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
+import { WebsiteCardsSkeleton } from "@/ui/Components/Skeletons";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function generateMetadata({ params }: { params: any }): Promise<{
@@ -22,10 +23,10 @@ const Portfolio = () => {
 	return (
 		<>
 			<h2 className="capitalize mx-15 my-5">{t("pageTitle")}!</h2>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<WebsiteCardsSkeleton />}>
 				<WebsiteCards />
 			</Suspense>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<WebsiteCardsSkeleton />}>
 				<Cta />
 			</Suspense>
 		</>

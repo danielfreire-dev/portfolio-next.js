@@ -6,6 +6,7 @@ import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
 import NavigationList from "./NavigationList";
 import ThemeToggle from "../ThemeToggle";
+import { GitHubIcon, LinkedInIcon } from "../svgs";
 
 const Sidenav = () => {
 	const t = useTranslations("sidenav");
@@ -29,25 +30,29 @@ const Sidenav = () => {
 						href={t("footer.icons.github.link")}
 						target="_blank"
 						rel="noopener noreferrer"
+						className="sidenav-icons"
 					>
-						<Image
+						<GitHubIcon />
+						{/* <Image
 							src={t("footer.icons.github.src")}
 							alt={t("footer.icons.github.alt")}
 							width={20}
 							height={20}
-						/>
+						/> */}
 					</a>
 					<a
 						href={t("footer.icons.linkedin.link")}
 						target="_blank"
 						rel="noopener noreferrer"
+						className="sidenav-icons"
 					>
-						<Image
+						<LinkedInIcon />
+						{/* <Image
 							src={t("footer.icons.linkedin.src")}
 							alt={t("footer.icons.linkedin.alt")}
 							width={20}
 							height={20}
-						/>
+						/> */}
 					</a>
 				</div>
 				{/* <ThemeToggle /> */}

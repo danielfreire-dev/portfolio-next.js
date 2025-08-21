@@ -35,7 +35,7 @@ export default function LocaleSwitcherSelectMobile({
 	return (
 		<>
 			<select
-				className="lg:hidden items-center mb-10px bg-transparent hover:cursor-pointer select-class"
+				className="lg:hidden bg-(--background) hover:cursor-pointer select-class"
 				defaultValue={defaultValue}
 				disabled={isPending}
 				onChange={onSelectChange}

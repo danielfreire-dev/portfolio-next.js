@@ -6,8 +6,8 @@ import { sendEmail } from "@/lib/resend";
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import ContactFarewell from "./ContactFarewell";
 import { Link } from "@/i18n/navigation";
+import ContactFarewell from "./ContactFarewell";
 
 const ContactForm = () => {
 	const [submitted, setSubmitted] = useState<boolean>(false);
@@ -34,9 +34,9 @@ const ContactForm = () => {
 		<>
 			<form
 				onSubmit={sendContactForm}
-				className={`mx-auto ${submitted && "hidden"}`}
+				className={`mx-5 lg:mx-auto ${submitted && "hidden"}`}
 			>
-				<div className="name-div flex">
+				<div className="name-div flex flex-col lg:flex-row">
 					<section className="flex flex-col">
 						<label htmlFor="firstName" className="capitalize">
 							{t("firstName")}
@@ -46,7 +46,8 @@ const ContactForm = () => {
 							type="text"
 							name="firstName"
 							id="firstName"
-							className="bg-(--surface) ml-2 my-1"
+							required
+							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
 						/>
 					</section>
 					<section className="flex flex-col">
@@ -57,11 +58,11 @@ const ContactForm = () => {
 							type="text"
 							name="lastName"
 							id="lastName"
-							className="bg-(--surface) ml-2 my-1"
+							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
 						/>
 					</section>
 				</div>
-				<div className="contacts-div flex">
+				<div className="contacts-div flex flex-col lg:flex-row">
 					<section className="flex flex-col">
 						<label htmlFor="email" className="capitalize">
 							{t("email")}
@@ -71,7 +72,8 @@ const ContactForm = () => {
 							type="email"
 							name="email"
 							id="email"
-							className="bg-(--surface) ml-2 my-1"
+							required
+							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
 						/>
 					</section>
 					<section className="flex flex-col">
@@ -83,7 +85,7 @@ const ContactForm = () => {
 							type="tel"
 							name="telephone"
 							id="telephone"
-							className="bg-(--surface) ml-2 my-1"
+							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
 							required
 							aria-autocomplete="both"
 							aria-required="true"
@@ -103,7 +105,7 @@ const ContactForm = () => {
 						required
 						aria-autocomplete="none"
 						aria-required="true"
-						className="bg-(--surface) ml-2 my-1"
+						className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
 					/>
 				</section>
 				<p>
@@ -115,6 +117,7 @@ const ContactForm = () => {
 						type="checkbox"
 						name="privacy-policy-check"
 						id="privacy-policy-check"
+						className=" accent-(--primary) focus:shadow-(--primary)"
 						required
 					/>{" "}
 					{t("privacyPolicyCheck")}{" "}
@@ -124,12 +127,13 @@ const ContactForm = () => {
 					>
 						{t("privacy")}
 					</Link>
+					.
 				</label>
 
 				<section className="flex justify-center mx-auto my-1.5 ">
 					<button
 						type="submit"
-						className="bg-(--surface) raise capitalize"
+						className="bg-(--surface) raise capitalize disabled:opacity-75 disabled:pointer:disabled"
 						disabled={loading}
 					>
 						{t("btn")}

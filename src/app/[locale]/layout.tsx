@@ -18,7 +18,8 @@ export const metadata: Metadata = {
 		template: "%s | Daniel Freire",
 		default: "Daniel Freire",
 	},
-	description: "Daniel Freire's Portfolio",
+	description: "Daniel Freire | Portfolio",
+	metadataBase: new URL("https://www.daniel-freire.com/"),
 };
 
 /* Fonts */
@@ -81,7 +82,7 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body
-				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen`}
+				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--secondary)`}
 			>
 				<NextIntlClientProvider messages={messages}>
 					<Providers>

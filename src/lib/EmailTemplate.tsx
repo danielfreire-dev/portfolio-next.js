@@ -22,7 +22,7 @@ export default function WelcomeEmail(
 	return (
 		<Html>
 			<Head>
-				<Font
+				{/* <Font
 					fontFamily="Mozilla Headline"
 					fallbackFontFamily="sans-serif"
 					webFont={{
@@ -41,7 +41,15 @@ export default function WelcomeEmail(
 					}}
 					fontWeight={400}
 					fontStyle="normal"
-				/>
+				/> */}
+				<style>
+					{/* eslint-disable-next-line i18next/no-literal-string */}
+					{`
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Mozilla+Headline:wght@200..700&display=swap');
+            *{
+            font-family: 'IBM Plex Sans', 'Mozilla Headline', sans-serif;
+            }`}
+				</style>
 			</Head>
 			<Tailwind>
 				<Body style={main}>
@@ -110,7 +118,7 @@ const container = {
 
 const h1 = {
 	color: "#333",
-	fontFamily: "Mozilla Headline, IBM Plex Sans, Arial, Verdana",
+	fontFamily: "Mozilla Headline, Arial, Verdana",
 	fontSize: "20px",
 	fontWeight: "bold",
 	marginBottom: "15px",
@@ -128,7 +136,7 @@ const link = {
 const text = {
 	color: "#333",
 	fontFamily:
-		"-apple-system, BlinkMacSystemFont, 'Segoe UI', 'IBM Plex Sans', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+		"IBM Plex Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
 	fontSize: "14px",
 	margin: "24px 0",
 };

@@ -15,7 +15,8 @@ interface NavLink {
 		| "/accessibility-statement"
 		| "/sitemap.xml"
 		| "/robots.txt"
-		| "/404";
+		| "/404"
+		| "/prices";
 	name: string;
 }
 

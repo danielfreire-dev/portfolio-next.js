@@ -14,6 +14,7 @@ interface SliderItem {
 	imageUrl: string;
 	title: string;
 	url: string;
+	loading: "eager" | "lazy" | undefined;
 }
 
 interface SliderProps {
@@ -28,6 +29,7 @@ interface CarouselItemProps {
 	imageUrl: string;
 	title: string;
 	url: string;
+	loading: "eager" | "lazy" | undefined;
 }
 
 export default function Slider({ items }: SliderProps) {
@@ -104,6 +106,7 @@ export default function Slider({ items }: SliderProps) {
 								style={{
 									objectFit: "cover",
 								}}
+								loading={itemSlice.loading}
 							/>
 							<div className="content">
 								<h2 className="capitalize">{itemSlice.title}</h2>

@@ -10,6 +10,7 @@
 		"@formatjs/intl-localematcher": "0.5.7",
 		"@next/env": "^15.4.6",
 		"@react-email/components": "0.5.0",
+		"@svgr/webpack": "^8.1.0",
 		"@tailwindcss/postcss": "^4.1.11",
 		"@testing-library/jest-dom": "^6.6.4",
 		"@testing-library/react": "^16.3.0",

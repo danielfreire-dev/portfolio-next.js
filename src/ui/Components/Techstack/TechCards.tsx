@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { nanoid } from "nanoid";
+import * as SVGs from "../svgs";
 
 interface TechItem {
 	link: string;
 	logo: string;
 	name: string;
+	svgr: string;
 }
 
 interface TechCardsProps {
@@ -13,24 +15,16 @@ interface TechCardsProps {
 
 const TechCards = ({ tech }: TechCardsProps) => {
 	const techstackMap = tech.map((data) => {
-		let fillClass: string;
-		switch (data.name) {
-			case "next.js":
-				fillClass = " fill-(--nextjs-fill)";
-				break;
-			case "HTML5":
-				fillClass = " fill-(--html-fill)";
-				break;
-			case "gitHub":
-				fillClass = " fill-(--github-fill)";
-				break;
-			default:
-				fillClass = "";
+		const SvgComponent = SVGs[data.svgr as keyof typeof SVGs];
+
+		if (!SvgComponent) {
+			console.warn(`No SVG component found for: ${data.name}`);
+			return null;
 		}
-		console.log("fillClass", fillClass);
+
 		return (
 			<div
-				className="flex flex-col flex-nowrap justify-items-center justify-center items-center bg-(--surface) py-7 px-9 m-4"
+				className=" flex flex-col flex-nowrap justify-items-center justify-center items-center bg-(--surface) py-7 px-9 m-4"
 				key={nanoid()}
 			>
 				<a
@@ -39,20 +33,24 @@ const TechCards = ({ tech }: TechCardsProps) => {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<Image
-						src={data.logo}
-						alt={`${data.name} logo shadow-xl`}
-						width={100}
-						height={50}
-						className={`mb-2${fillClass}`}
-					/>
+					<SvgComponent alt={`${data.name} logo`} />
+
 					<p className="capitalize">{data.name}</p>
 				</a>
 			</div>
 		);
 	});
 
-	return techstackMap;
+	return <>{techstackMap}</>;
 };
 
 export default TechCards;
+{
+	/* <Image
+						src={data.logo}
+						alt={`${data.name} logo`}
+						width={100}
+						height={50}
+						className={`mb-2${fillClass}`}
+					/> */
+}

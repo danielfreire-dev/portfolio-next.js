@@ -1,47 +1,4 @@
-:root {
-	/* Light Theme */
-	--primary: #ff6f00;
-	--secondary: #0077c8;
-	--secondary-hover: #0065ac;
-	--background: rgb(255, 249, 242);
-	--surface: #ffffff;
-	--text: #2a2a36;
-	--text-hover: #4b5563;
-	--text-tertiary: #6b7280;
-	--text-carousel: rgb(255, 249, 242);
-	--btn-text: #2a2a36;
-	--accent1: #ffd100;
-	--accent2: #d00060;
-	--error: #e63946;
-	--error-hover: #d32f3d;
-	--success: #2a9d;
-	--success-hover: #238a7d;
-	--aura-hue: 20deg;
-	--spacing: 0.38rem;
-	--surface-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--primary: #ff9e30;
-		--secondary: #00b4f0;
-		--secondary-hover: #00a0d6;
-		--background: rgb(15, 22, 36);
-		--surface: #1c2536;
-		--text: #e6f0ff;
-		--text-hover: #d1d5db;
-		--text-tertiary: #bac1ce;
-		--text-carousel: rgb(255, 249, 242);
-		--accent1: #ffea70;
-		--accent2: #ff4081;
-		--error: #ff6b6b;
-		--error-hover: #ff5252;
-		--success: #70d6a3;
-		--success-hover: #5ac394;
-		--surface-rgb: rgb(28, 37, 54);
-		--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
-	}
-}
 
 .slider-container {
 	position: relative;
@@ -74,7 +31,12 @@
 	z-index: 1;
 	border-radius: 20px;
 	box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
-	transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+	transition:
+		transform 0.1s,
+		left 0.75s,
+		top 0.75s,
+		width 0.75s,
+		height 0.75s;
 	overflow: hidden;
 	&:nth-child(1),
 	&:nth-child(2) {
@@ -111,7 +73,9 @@
 	top: 50%;
 	left: 3rem;
 	transform: translateY(-50%);
-	font: 400 0.85rem helvetica, sans-serif;
+	font:
+		400 0.85rem helvetica,
+		sans-serif;
 	color: white;
 	text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 	opacity: 0;
