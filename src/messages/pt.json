@@ -21,6 +21,7 @@
 			"description": "O seu website está a travar o crescimento do seu negócio? A nossa auditoria abrangente de desempenho analisa profundamente a infraestrutura técnica, a experiência do utilizador e o potencial de conversão do seu site. Forneceremos um relatório detalhado destacando melhorias críticas que podem aumentar dramaticamente o desempenho online.",
 			"id": 1,
 			"imageUrl": "/images/Carousel/white.webp",
+			"loading": "lazy",
 			"title": "revolucione a sua presença digital agora!",
 			"url": "/contact"
 		},
@@ -30,6 +31,7 @@
 			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
 			"id": 2,
 			"imageUrl": "/images/Carousel/umbrellas.webp",
+			"loading": "eager",
 			"title": "desbloqueie o pleno potencial do seu website",
 			"url": "/contact"
 		},
@@ -39,6 +41,7 @@
 			"description": "Pare de se contentar com modelos genéricos. Os nossos serviços personalizados de desenvolvimento web criam experiências digitais totalmente adaptadas que se alinham perfeitamente com a identidade única da sua marca e os objetivos do seu negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
 			"id": 3,
 			"imageUrl": "/images/Carousel/estatuas.webp",
+			"loading": "eager",
 			"title": "construa o projeto dos seus sonhos hoje",
 			"url": "/contact"
 		},
@@ -48,6 +51,7 @@
 			"description": "A velocidade não é apenas uma funcionalidade—é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carregue extremamente rápido, proporcionando uma experiência de utilizador excecional que mantém os visitantes envolvidos e converte mais eficazmente.",
 			"id": 4,
 			"imageUrl": "/images/Carousel/building-orange.webp",
+			"loading": "eager",
 			"title": "acelere o potencial do seu website",
 			"url": "/contact"
 		},
@@ -57,6 +61,7 @@
 			"description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a transitar perfeitamente para tecnologias web modernas e eficientes sem interromper as suas operações existentes. Garantimos um caminho de atualização suave e com risco gerido.",
 			"id": 5,
 			"imageUrl": "/images/Carousel/building-yellow.webp",
+			"loading": "eager",
 			"title": "modernize a sua infraestrutura digital",
 			"url": "/contact"
 		},
@@ -66,6 +71,7 @@
 			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
 			"id": 6,
 			"imageUrl": "/images/Carousel/pencils.webp",
+			"loading": "lazy",
 			"title": "cuidado contínuo para os seus ativos digitais",
 			"url": "/contact"
 		}
@@ -178,15 +184,17 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, en {🇺🇸 English} pt {🇵🇹 Português} other {Desconhecido}}",
-		"localeMobile": "{locale, select, en {🇺🇸} pt {🇵🇹} other {Desconhecido}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} other {Desconhecido}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} other {Desconhecido}}"
 	},
 	"metadata": {
 		"about": "Sobre",
 		"contact": "Contactos",
 		"home": "Início | Daniel Freire",
-		"portfolio": "Portfólio"
+		"portfolio": "Portfólio",
+		"privacyPolicy": "Política de Privacidade"
 	},
+
 	"portfolio": {
 		"all": "Todos",
 		"cta": ["confira", "veja o projeto ao vivo →"],
@@ -313,92 +321,116 @@
 		{
 			"link": "https://nextjs.org",
 			"logo": "/images/icons/nextjs-13.svg",
-			"name": "next.js"
+			"name": "next.js",
+			"svgr": "Nextjs"
 		},
 		{
 			"link": "https://react.dev",
 			"logo": "/images/icons/react2.svg",
-			"name": "react.js"
+			"name": "react.js",
+			"svgr": "Reactjs"
 		},
 		{
 			"link": "https://nodejs.org/en",
 			"logo": "/images/icons/node-js.svg",
-			"name": "node.js"
+			"name": "node.js",
+			"svgr": "Nodejs"
 		},
 		{
 			"link": "https://www.typescriptlang.org",
 			"logo": "/images/icons/Typescript.svg",
-			"name": "typeScript"
+			"name": "typeScript",
+			"svgr": "TypeScript"
 		},
 		{
 			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
 			"logo": "/images/icons/javascript-original.svg",
-			"name": "javaScript"
+			"name": "javaScript",
+			"svgr": "JavaScript"
 		},
 		{
 			"link": "https://www.w3.org/html/",
 			"logo": "/images/icons/html5-original-wordmark.svg",
-			"name": "HTML5"
+			"name": "HTML5",
+			"svgr": "HTML5"
 		},
 		{
 			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
 			"logo": "/images/icons/Official_CSS_Logo.svg",
-			"name": "CSS3"
+			"name": "CSS3",
+			"svgr": "CSS3"
+		},
+		{
+			"link": "https://www.postgresql.org",
+			"logo": "/images/icons/postgresql.svg",
+			"name": "postgreSQL",
+			"svgr": "PostgreSQL"
 		},
 		{
 			"link": "https://webpack.js.org/",
 			"logo": "/images/icons/webpack.svg",
-			"name": "webpack"
+			"name": "webpack",
+			"svgr": "Webpack"
 		},
 		{
 			"link": "https://vite.dev",
 			"logo": "/images/icons/vitejs.svg",
-			"name": "vite.js"
+			"name": "vite.js",
+			"svgr": "Vitejs"
 		},
 		{
 			"link": "https://git-scm.com/",
 			"logo": "/images/icons/git-scm-icon.svg",
-			"name": "git"
+			"name": "git",
+			"svgr": "Git"
 		},
 		{
 			"link": "https://github.com/",
 			"logo": "/images/icons/github.svg",
-			"name": "gitHub"
+			"name": "gitHub",
+			"svgr": "Github"
 		},
 		{
 			"link": "https://vitest.dev/",
 			"logo": "/images/icons/vitest.svg",
-			"name": "vitest"
+			"name": "vitest",
+			"svgr": "Vitest"
 		},
 		{
 			"link": "https://jestjs.io/",
 			"logo": "/images/icons/jestjsio-icon.svg",
-			"name": "jest"
+			"name": "jest",
+			"svgr": "Jest"
 		},
 		{
 			"link": "https://selenium-python.readthedocs.io/",
 			"logo": "/images/icons/selenium.svg",
-			"name": "selenium"
+			"name": "selenium",
+			"svgr": "Selenium"
 		},
 		{
 			"link": "https://www.python.org/",
 			"logo": "/images/icons/python-original.svg",
-			"name": "python"
+			"name": "python",
+			"svgr": "Python"
 		},
 		{
 			"link": "https://www.linux.org/",
 			"logo": "/images/icons/linux-original.svg",
-			"name": "linux"
+			"name": "linux",
+			"svgr": "Linux"
 		},
 		{
 			"link": "https://www.gnu.org/software/bash/",
 			"logo": "/images/icons/bash-icon-svgrepo-com.svg",
-			"name": "bash"
+			"name": "bash",
+			"svgr": "Bash"
 		},
 		{
 			"link": "https://www.zsh.org/",
 			"logo": "/images/icons/color_zsh.svg",
-			"name": "zsh"
+			"name": "zsh",
+			"svgr": "Zsh"
 		}
 	]
 }
