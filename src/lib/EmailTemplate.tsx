@@ -31,7 +31,7 @@ export default function WelcomeEmail(
 					}}
 					fontWeight={400}
 					fontStyle="normal"
-				/>
+				/> */}
 				<Font
 					fontFamily="IBM Plex Sans"
 					fallbackFontFamily="serif"
@@ -41,7 +41,7 @@ export default function WelcomeEmail(
 					}}
 					fontWeight={400}
 					fontStyle="normal"
-				/> */}
+				/>
 				<style>
 					{/* eslint-disable-next-line i18next/no-literal-string */}
 					{`
