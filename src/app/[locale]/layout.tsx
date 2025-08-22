@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		template: "%s | Daniel Freire",
 		default: "Daniel Freire",
 	},
-	description: "Daniel Freire | Portfolio",
+	description: { default: "Daniel Freire", template: "%s" },
 	metadataBase: new URL("https://www.daniel-freire.com/"),
 };
 
@@ -90,7 +90,7 @@ export default async function RootLayout({
 							<Sidenav />
 						</header>
 						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
-							{children}
+							<div id="main">{children}</div>
 							<Dock />
 						</main>
 					</Providers>

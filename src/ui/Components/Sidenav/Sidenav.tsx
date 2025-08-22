@@ -1,26 +1,26 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
 import NavigationList from "./NavigationList";
 import ThemeToggle from "../ThemeToggle";
 import { GitHubIcon, LinkedInIcon } from "../svgs";
+import { TransitionLink } from "./TransitionLink";
 
 const Sidenav = () => {
 	const t = useTranslations("sidenav");
 
 	return (
 		<nav className="hidden lg:sticky top-0 left-0 h-screen w-64 z-15 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center ">
-			<Link href="/">
+			<TransitionLink href="/">
 				<h1
 					className="text-5xl capitalize flex justify-center text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
 					id="logo"
 				>
 					{t("header.title")}
 				</h1>
-			</Link>
+			</TransitionLink>
 			<ul className="capitalize">
 				<NavigationList />
 			</ul>
@@ -33,12 +33,6 @@ const Sidenav = () => {
 						className="sidenav-icons"
 					>
 						<GitHubIcon />
-						{/* <Image
-							src={t("footer.icons.github.src")}
-							alt={t("footer.icons.github.alt")}
-							width={20}
-							height={20}
-						/> */}
 					</a>
 					<a
 						href={t("footer.icons.linkedin.link")}
@@ -47,12 +41,6 @@ const Sidenav = () => {
 						className="sidenav-icons"
 					>
 						<LinkedInIcon />
-						{/* <Image
-							src={t("footer.icons.linkedin.src")}
-							alt={t("footer.icons.linkedin.alt")}
-							width={20}
-							height={20}
-						/> */}
 					</a>
 				</div>
 				{/* <ThemeToggle /> */}

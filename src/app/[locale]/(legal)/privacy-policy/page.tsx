@@ -4,14 +4,22 @@ import { useTranslations } from "next-intl";
 import { nanoid } from "nanoid";
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params }: { params: any }): Promise<{
+interface Params {
+	locale: string;
+}
+export async function generateMetadata({
+	params,
+}: {
+	params: Params;
+}): Promise<{
 	title: string;
 }> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "metadata" });
 
 	return {
-		title: t("privacyPolicy"),
+		title: t("title.privacyPolicy"),
+		description: t("description.privacyPolicy"),
 	};
 }
 

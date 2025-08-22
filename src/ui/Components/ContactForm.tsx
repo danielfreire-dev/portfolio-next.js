@@ -5,9 +5,10 @@ import { sendEmail } from "@/lib/resend";
 /* import { sendEmail } from "@/app/api/send"; */
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Link } from "@/i18n/navigation";
 import ContactFarewell from "./ContactFarewell";
+import { TransitionLink } from "./Sidenav/TransitionLink";
 
 const ContactForm = () => {
 	const [submitted, setSubmitted] = useState<boolean>(false);
@@ -34,81 +35,93 @@ const ContactForm = () => {
 		<>
 			<form
 				onSubmit={sendContactForm}
-				className={`mx-5 lg:mx-auto ${submitted && "hidden"}`}
+				className={`mx-5 flex flex-col flex-nowrap items-center ${submitted && "hidden"}`}
 			>
 				<div className="name-div flex flex-col lg:flex-row">
-					<section className="flex flex-col">
-						<label htmlFor="firstName" className="capitalize">
-							{t("firstName")}
-							<span className="text-(--error)">*</span>
-						</label>
-						<input
-							type="text"
-							name="firstName"
-							id="firstName"
-							required
-							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
-						/>
-					</section>
-					<section className="flex flex-col">
-						<label htmlFor="lastName" className="capitalize">
-							{t("lastName")}
-						</label>
-						<input
-							type="text"
-							name="lastName"
-							id="lastName"
-							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
-						/>
-					</section>
+					<Suspense fallback={<p>Loading...</p>}>
+						<section className="flex flex-col">
+							<label htmlFor="firstName" className="capitalize">
+								{t("firstName")}
+								<span className="text-(--error)">*</span>
+							</label>
+							<input
+								type="text"
+								name="firstName"
+								id="firstName"
+								required
+								aria-required="true"
+								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+							/>
+						</section>
+					</Suspense>
+					<Suspense fallback={<p>Loading...</p>}>
+						<section className="flex flex-col">
+							<label htmlFor="lastName" className="capitalize">
+								{t("lastName")}
+							</label>
+							<input
+								type="text"
+								name="lastName"
+								id="lastName"
+								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+								aria-required="false"
+							/>
+						</section>
+					</Suspense>
 				</div>
 				<div className="contacts-div flex flex-col lg:flex-row">
-					<section className="flex flex-col">
-						<label htmlFor="email" className="capitalize">
-							{t("email")}
-							<span className="text-(--error)">*</span>
-						</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							required
-							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
-						/>
-					</section>
-					<section className="flex flex-col">
-						<label htmlFor="telephone" className="capitalize">
-							{t("phone")}
-							<span className="text-(--error)">*</span>
-						</label>
-						<input
-							type="tel"
-							name="telephone"
-							id="telephone"
-							className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
-							required
-							aria-autocomplete="both"
-							aria-required="true"
-						/>
-					</section>
+					<Suspense fallback={<p>Loading...</p>}>
+						<section className="flex flex-col">
+							<label htmlFor="email" className="capitalize">
+								{t("email")}
+								<span className="text-(--error)">*</span>
+							</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								required
+								aria-required="true"
+								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+							/>
+						</section>
+					</Suspense>
+					<Suspense fallback={<p>Loading...</p>}>
+						<section className="flex flex-col">
+							<label htmlFor="telephone" className="capitalize">
+								{t("phone")}
+								<span className="text-(--error)">*</span>
+							</label>
+							<input
+								type="tel"
+								name="telephone"
+								id="telephone"
+								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+								aria-autocomplete="both"
+								aria-required="false"
+							/>
+						</section>
+					</Suspense>
 				</div>
-				<section className="message-div flex flex-col">
-					<label htmlFor="message" className="capitalize">
-						{t("message")}
-						<span className="text-(--error)">*</span>
-					</label>
-					<textarea
-						name="message"
-						id="message"
-						rows={4}
-						cols={40}
-						required
-						aria-autocomplete="none"
-						aria-required="true"
-						className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
-					/>
-				</section>
-				<p>
+				<Suspense fallback={<p>Loading...</p>}>
+					<section className="message-div flex flex-col">
+						<label htmlFor="message" className="capitalize">
+							{t("message")}
+							<span className="text-(--error)">*</span>
+						</label>
+						<textarea
+							name="message"
+							id="message"
+							rows={4}
+							cols={45}
+							required
+							aria-autocomplete="none"
+							aria-required="true"
+							className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+						/>
+					</section>
+				</Suspense>
+				<p className="align-start">
 					<span className="text-(--error)">*</span>
 					<span className="capitalize">{t("required")}</span>
 				</p>
@@ -121,12 +134,12 @@ const ContactForm = () => {
 						required
 					/>{" "}
 					{t("privacyPolicyCheck")}{" "}
-					<Link
+					<TransitionLink
 						href={t("privacyPolicyUrl") as "/privacy-policy"}
 						target="_blank"
 					>
 						{t("privacy")}
-					</Link>
+					</TransitionLink>
 					.
 				</label>
 

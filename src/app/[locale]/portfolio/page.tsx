@@ -5,15 +5,22 @@ import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
 import { WebsiteCardsSkeleton } from "@/ui/Components/Skeletons";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function generateMetadata({ params }: { params: any }): Promise<{
+interface Params {
+	locale: string;
+}
+export async function generateMetadata({
+	params,
+}: {
+	params: Params;
+}): Promise<{
 	title: string;
 }> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "metadata" });
 
 	return {
-		title: t("portfolio"),
+		title: t("title.portfolio"),
+		description: t("description.portfolio"),
 	};
 }
 
@@ -23,12 +30,10 @@ const Portfolio = () => {
 	return (
 		<>
 			<h2 className="capitalize mx-15 my-5">{t("pageTitle")}!</h2>
-			<Suspense fallback={<WebsiteCardsSkeleton />}>
-				<WebsiteCards />
-			</Suspense>
-			<Suspense fallback={<WebsiteCardsSkeleton />}>
-				<Cta />
-			</Suspense>
+
+			<WebsiteCards />
+
+			<Cta />
 		</>
 	);
 };
