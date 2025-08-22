@@ -9,7 +9,7 @@ const LocaleSwitcherMobile = () => {
 	return (
 		<LocaleSwitcherSelectMobile defaultValue={locale}>
 			{routing.locales.map((lang) => (
-				<option key={lang} value={lang} className="dark:bg-black">
+				<option key={lang} value={lang} className="bg-(--background)">
 					{t("localeMobile", { locale: lang })}
 				</option>
 			))}

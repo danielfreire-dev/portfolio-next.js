@@ -1,0 +1,33 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Main cloud, rounded Toriyama style -->
+    <g class="cloud cloud1">
+      <ellipse cx="70" cy="100" rx="40" ry="20" fill="#f5f5f5" stroke="#aaa" stroke-width="3" />
+      <ellipse cx="105" cy="107" rx="15" ry="8" fill="#f5f5f5" stroke="#aaa" stroke-width="3" />
+      <ellipse cx="90" cy="85" rx="12" ry="8" fill="#f5f5f5" stroke="#aaa" stroke-width="3" />
+    </g>
+    <!-- Second cloud -->
+    <g class="cloud cloud2">
+      <ellipse cx="200" cy="80" rx="30" ry="15" fill="#e0e0e0" stroke="#aaa" stroke-width="2" />
+      <ellipse cx="230" cy="87" rx="12" ry="7" fill="#e0e0e0" stroke="#aaa" stroke-width="2" />
+      <ellipse cx="218" cy="70" rx="8" ry="5" fill="#e0e0e0" stroke="#aaa" stroke-width="2" />
+    </g>
+  </g>
+  <style>
+    /* Akira Toriyama-style cloud animation: slow, smooth horizontal movement */
+    .cloud1 {
+      animation: moveCloud1 12s linear infinite;
+    }
+    .cloud2 {
+      animation: moveCloud2 16s linear infinite;
+    }
+    @keyframes moveCloud1 {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(80px); }
+    }
+    @keyframes moveCloud2 {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100px); }
+    }
+  </style>
+</svg>

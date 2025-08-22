@@ -87,24 +87,24 @@ export function ContactFormSkeleton() {
 		<div
 			className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-4 shadow-sm`}
 		>
-			<div className="name-div flex">
+			<div className="name-div flex flex-col lg:flex-row">
+				<section className="flex flex-col lg:mr-4">
+					<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
+					<div className="h-10 w-full rounded-md bg-gray-200" />
+				</section>
 				<section className="flex flex-col">
 					<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
-					<div className="h-8 w-full rounded-md bg-gray-200" />
-				</section>
-				<section className="flex flex-col ml-4">
-					<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
-					<div className="h-8 w-full rounded-md bg-gray-200" />
+					<div className="h-10 w-full rounded-md bg-gray-200" />
 				</section>
 			</div>
-			<div className="contacts-div flex mt-4">
+			<div className="contacts-div flex flex-col lg:flex-row mt-4">
+				<section className="flex flex-col lg:mr-4">
+					<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
+					<div className="h-10 w-full rounded-md bg-gray-200" />
+				</section>
 				<section className="flex flex-col">
 					<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
-					<div className="h-8 w-full rounded-md bg-gray-200" />
-				</section>
-				<section className="flex flex-col ml-4">
-					<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
-					<div className="h-8 w-full rounded-md bg-gray-200" />
+					<div className="h-10 w-full rounded-md bg-gray-200" />
 				</section>
 			</div>
 			<section className="message-div flex flex-col mt-4">
@@ -112,8 +112,7 @@ export function ContactFormSkeleton() {
 				<div className="h-24 w-full rounded-md bg-gray-200" />
 			</section>
 			<div className="mt-4">
-				<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
-				<div className="h-4 w-48 rounded-md bg-gray-200" />
+				<div className="h-6 w-48 rounded-md bg-gray-200 mb-2" />
 			</div>
 			<section className="flex justify-center mx-auto my-1.5">
 				<div className="h-10 w-24 rounded-md bg-gray-200" />

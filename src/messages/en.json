@@ -166,9 +166,13 @@
 		}
 	},
 	"error": {
-		"404": "Page",
+		"404": "page not found",
 		"back": "Go back to homepage",
-		"description": "Looks like you got lost. Don't worry, it happens to the best of us."
+		"description": "Looks like you got lost. Don't worry, it happens to the best of us.",
+		"errorLoading": {
+			"description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+			"title": "Something went wrong!"
+		}
 	},
 	"home": {
 		"techstack": "Tech Stack",
@@ -189,11 +193,25 @@
 		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} other {Unknown}}"
 	},
 	"metadata": {
-		"about": "About",
-		"contact": "Contact",
-		"home": "Homepage | Daniel Freire",
-		"portfolio": "Portfolio",
-		"privacyPolicy": "Privacy Policy"
+		"description": {
+			"about": "Learn more about Daniel",
+			"contact": "This is the best place to contact Daniel",
+			"home": "Daniel's Introduction",
+			"portfolio": "This is where Daniel will publish his favourite work",
+			"privacyPolicy": "Find out more about your rights."
+		},
+		"name": "Daniel Freire",
+		"opengraphImage": "metadata/open-graph.png",
+		"opengraphImageAlt": "Daniel Freire",
+		"title": {
+			"about": "About",
+			"contact": "Contact",
+			"home": "Homepage | Daniel Freire",
+			"portfolio": "Portfolio",
+			"privacyPolicy": "Privacy Policy"
+		},
+		"twitterImage": "metadata/open-graph.png",
+		"twitterImageAlt": "Daniel Freire"
 	},
 	"portfolio": {
 		"all": "All",

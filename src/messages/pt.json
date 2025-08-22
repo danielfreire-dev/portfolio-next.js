@@ -169,6 +169,7 @@
 		"back": "Voltar para a página inicial",
 		"description": "Parece que você se perdeu. Não se preocupe, acontece aos melhores."
 	},
+
 	"home": {
 		"techstack": "Ferramentas Tecnológicas",
 		"trending": "Portfólio"
@@ -188,11 +189,25 @@
 		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} other {Desconhecido}}"
 	},
 	"metadata": {
-		"about": "Sobre",
-		"contact": "Contactos",
-		"home": "Início | Daniel Freire",
-		"portfolio": "Portfólio",
-		"privacyPolicy": "Política de Privacidade"
+		"description": {
+			"about": "Sabe mais sobre o Daniel",
+			"contact": "Este é o melhor local para contactares o Daniel",
+			"home": "Introdução do Daniel",
+			"portfolio": "Este é o local onde o Daniel publicará o seu trabalho favorito",
+			"privacyPolicy": "Fica a saber mais sobre os teus direitos."
+		},
+		"name": "Daniel Freire",
+		"opengraphImage": "metadata/open-graph.png",
+		"opengraphImageAlt": "Daniel Freire",
+		"title": {
+			"about": "Sobre",
+			"contact": "Contacto",
+			"home": "Página Inicial | Daniel Freire",
+			"portfolio": "Portfólio",
+			"privacyPolicy": "Política de Privacidade"
+		},
+		"twitterImage": "metadata/open-graph.png",
+		"twitterImageAlt": "Daniel Freire"
 	},
 
 	"portfolio": {

@@ -5,6 +5,7 @@ import "@/ui/styles/carousel.css";
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { TransitionLink } from "./Sidenav/TransitionLink";
 
 interface SliderItem {
 	alt: string;
@@ -80,7 +81,7 @@ export default function Slider({ items }: SliderProps) {
 	const i = useTranslations("icons");
 
 	return (
-		<main
+		<section
 			className="slider-container"
 			onMouseEnter={() => setIsPaused(true)}
 			onMouseLeave={() => setIsPaused(false)}
@@ -140,6 +141,6 @@ export default function Slider({ items }: SliderProps) {
 					/>
 				</button>
 			</div>
-		</main>
+		</section>
 	);
 }

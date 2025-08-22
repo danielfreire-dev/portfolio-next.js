@@ -3,6 +3,7 @@
 import { useSelectedLayoutSegment } from "next/navigation";
 import { ComponentProps } from "react";
 import { Link } from "@/i18n/navigation";
+import { TransitionLink } from "./TransitionLink";
 
 const NavigationLink = ({ href, ...rest }: ComponentProps<typeof Link>) => {
 	const selectedLayoutSegment = useSelectedLayoutSegment();
@@ -13,7 +14,11 @@ const NavigationLink = ({ href, ...rest }: ComponentProps<typeof Link>) => {
 			: "";
 
 	return (
-		<Link aria-current={isActive ? "page" : undefined} href={href} {...rest} />
+		<TransitionLink
+			aria-current={isActive ? "page" : undefined}
+			href={href}
+			{...rest}
+		/>
 	);
 };
 

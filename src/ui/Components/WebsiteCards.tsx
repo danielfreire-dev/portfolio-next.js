@@ -2,6 +2,8 @@ import { Dictionary } from "@/types";
 import { nanoid } from "nanoid";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Suspense } from "react";
+import { WebsiteCardSkeleton } from "./Skeletons";
 
 const WebsiteCards = () => {
 	const t = useTranslations("portfolio");
@@ -14,17 +16,19 @@ const WebsiteCards = () => {
 					className=" max-w-lg last:mr-0 mb-6 p-3 bg-(--surface)"
 					key={nanoid()}
 				>
-					<div className="overflow-hidden shadow-md">
-						<a href={item.link} target="_blank" rel="noopener noreferrer">
-							<Image
-								src={item.src}
-								alt={item.title}
-								width={1000}
-								height={1000}
-								className="hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110 website-card-image"
-							/>
-						</a>
-					</div>
+					<Suspense fallback={<WebsiteCardSkeleton />}>
+						<div className="overflow-hidden shadow-md">
+							<a href={item.link} target="_blank" rel="noopener noreferrer">
+								<Image
+									src={item.src}
+									alt={item.title}
+									width={1000}
+									height={1000}
+									className="hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110 website-card-image"
+								/>
+							</a>
+						</div>
+					</Suspense>
 					<div className="mt-4 box-border">
 						<a
 							href={item.link}
