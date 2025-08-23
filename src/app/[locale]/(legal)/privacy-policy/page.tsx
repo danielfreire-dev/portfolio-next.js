@@ -5,13 +5,13 @@ import { nanoid } from "nanoid";
 import { getTranslations } from "next-intl/server";
 
 interface Params {
-	locale: string;
+	params: {
+		locale: string;
+	};
 }
 export async function generateMetadata({
 	params,
-}: {
-	params: Params;
-}): Promise<{ title: string; description: string }> {
+}: Params): Promise<{ title: string; description: string }> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "metadata" });
 
