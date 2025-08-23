@@ -1,9 +1,7 @@
 import { useTranslations } from "next-intl";
 import Cta from "../../../ui/Components/CtA/Cta";
 import WebsiteCards from "../../../ui/Components/WebsiteCards";
-import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
-import { WebsiteCardsSkeleton } from "@/ui/Components/Skeletons";
 
 interface Params {
 	locale: string;
@@ -14,6 +12,7 @@ export async function generateMetadata({
 	params: Params;
 }): Promise<{
 	title: string;
+	description: string;
 }> {
 	const { locale } = await params;
 	const t = await getTranslations({ locale, namespace: "metadata" });
