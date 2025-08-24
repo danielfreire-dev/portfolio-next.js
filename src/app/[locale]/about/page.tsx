@@ -9,10 +9,10 @@ interface Props {
 	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export async function generateMetadata(
-	{ params, searchParams }: Props,
-	parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+	searchParams,
+}: Props): Promise<Metadata> {
 	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
 	const t = await getTranslations({
@@ -20,16 +20,15 @@ export async function generateMetadata(
 		namespace: "metadata",
 	});
 	// optionally access and extend (rather than replace) parent metadata
-	const previousImages = (await parent).openGraph?.images || [];
 
 	return {
 		title: t("title.about"),
 		description: t("description.about"),
 		alternates: {
-			canonical: "https://daniel-freire.com",
+			canonical: "https://daniel-freire.com/about",
 			languages: {
-				en: "https://daniel-freire.com/en",
-				pt: "https://daniel-freire.com/pt",
+				en: "https://daniel-freire.com/en/about",
+				pt: "https://daniel-freire.com/pt/sobre",
 			},
 		},
 		openGraph: {
@@ -40,6 +39,8 @@ export async function generateMetadata(
 			images: [
 				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
 			],
+			locale: locale,
+			type: "website",
 		},
 	};
 }
