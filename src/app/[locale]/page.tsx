@@ -7,6 +7,7 @@ import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Metadata, ResolvingMetadata } from "next";
+import { alt } from "./opengraph-image";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
