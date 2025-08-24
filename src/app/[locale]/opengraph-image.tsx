@@ -11,8 +11,6 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export const contentType = "image/png";
-
 // Image generation
 export default async function Image() {
 	// Font loading, process.cwd() is Next.js project directory
