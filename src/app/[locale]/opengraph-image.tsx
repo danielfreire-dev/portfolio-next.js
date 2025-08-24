@@ -29,9 +29,9 @@ export default async function Image() {
 					fontSize: 128,
 					background: "var(--background)",
 					color: "var(--primary)",
-					width: "auto",
-					height: "auto",
-					display: "flex",
+					width: "100%",
+					height: "100%",
+					display: "<display-box>",
 					alignItems: "center",
 					justifyContent: "center",
 				}}
