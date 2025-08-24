@@ -36,13 +36,15 @@ export async function generateMetadata(
 			},
 		},
 		openGraph: {
+			type: "website",
 			title: t("opengraphImageAlt"),
 			description: t("description.about"),
 			url: "https://daniel-freire.com",
 			siteName: t("title.about"),
 			images: [
-				{ url: `https://daniel-freire.com/metadata/open-graph-initials.png` },
+				{ url: `https://daniel-freire.com/metadata/open-graph-initials2.png` },
 			],
+			locale: locale,
 		},
 	};
 }
