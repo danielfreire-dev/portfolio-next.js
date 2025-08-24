@@ -38,7 +38,7 @@ export async function generateMetadata(
 			url: "https://daniel-freire.com",
 			siteName: `${t("title.portfolio")} | Daniel Freire`,
 			images: [
-				{ url: "https://daniel-freire.com/metadata/open-graph.png" },
+				{ url: "https://daniel-freire.com/metadata/open-graph2.png" },
 				...previousImages,
 			],
 		},
