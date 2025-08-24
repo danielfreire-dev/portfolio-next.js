@@ -24,7 +24,6 @@ export async function generateMetadata(
 		namespace: "metadata",
 	});
 	// optionally access and extend (rather than replace) parent metadata
-	const previousImages = (await parent).openGraph?.images || [];
 
 	return {
 		title: t("title.about"),
@@ -43,7 +42,6 @@ export async function generateMetadata(
 			siteName: t("title.about"),
 			images: [
 				{ url: `https://daniel-freire.com/metadata/open-graph-initials.png` },
-				...previousImages,
 			],
 		},
 	};
