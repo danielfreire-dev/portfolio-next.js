@@ -3,7 +3,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 export const nextConfig: NextConfig = {
 	reactStrictMode: true,
-	swcMinify: true,
 	webpack(config) {
 		config.module.rules.push({
 			test: /\.svg$/,

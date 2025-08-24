@@ -6,30 +6,52 @@ import { Locale, useTranslations } from "next-intl";
 import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
-
-interface Params {
-	locale: string;
-}
-export async function generateMetadata({
-	params,
-}: {
-	params: Params;
-}): Promise<{
-	title: string;
-	description: string;
-}> {
-	const { locale } = await params;
-	const t = await getTranslations({ locale, namespace: "metadata" });
-
-	return {
-		title: t("title.home"),
-		description: t("description.home"),
-	};
-}
+import { Metadata, ResolvingMetadata } from "next";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
+	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
+
+export async function generateMetadata(
+	{ params, searchParams }: Props,
+	parent: ResolvingMetadata,
+): Promise<Metadata> {
+	// Await the params Promise to get the actual locale value
+	const { locale } = await params;
+	const t = await getTranslations({
+		locale: locale,
+		namespace: "metadata",
+	});
+	// optionally access and extend (rather than replace) parent metadata
+	const previousImages = (await parent).openGraph?.images || [];
+
+	return {
+		title: t("title.about"),
+		description: t("description.about"),
+		alternates: {
+			canonical: "https://daniel-freire.com",
+			languages: {
+				en: "https://daniel-freire.com/en",
+				pt: "https://daniel-freire.com/pt",
+			},
+		},
+		openGraph: {
+			title: t("opengraphImageAlt"),
+			description: t("description.about"),
+			url: "https://daniel-freire.com",
+			siteName: t("title.about"),
+			images: [
+				{ url: "https://daniel-freire.com/metadata/open-graph.png" },
+				...previousImages,
+			],
+		},
+	};
+}
+
+/* interface Props {
+	params: Promise<{ locale: Locale }>;
+} */
 
 export default function HomePage({ params }: Props) {
 	const { locale } = use(params);
