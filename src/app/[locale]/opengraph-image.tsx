@@ -6,8 +6,8 @@ import { join } from "node:path";
 // Image metadata
 export const alt = "Daniel Freire Portfolio";
 export const size = {
-	width: 1179,
-	height: 139,
+	width: "auto",
+	height: "auto",
 };
 
 export const contentType = "image/png";
