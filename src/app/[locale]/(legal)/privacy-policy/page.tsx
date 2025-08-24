@@ -1,28 +1,48 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-multi-comp */
-import { useTranslations } from "next-intl";
+import { Locale, useTranslations } from "next-intl";
 import { nanoid } from "nanoid";
 import { getTranslations } from "next-intl/server";
+import { Metadata, ResolvingMetadata } from "next";
 
-interface Params {
-	locale: string;
+interface Props {
+	params: Promise<{ locale: Locale }>;
+	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-interface PageProps {
-	params: Params;
-	// Add other properties if needed, like searchParams
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<{
-	title: string;
-	description: string;
-}> {
+export async function generateMetadata(
+	{ params, searchParams }: Props,
+	parent: ResolvingMetadata,
+): Promise<Metadata> {
+	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
-	const t = await getTranslations({ locale, namespace: "metadata" });
+	const t = await getTranslations({
+		locale: locale,
+		namespace: "metadata",
+	});
+	// optionally access and extend (rather than replace) parent metadata
+	const previousImages = (await parent).openGraph?.images || [];
 
 	return {
 		title: t("title.privacyPolicy"),
 		description: t("description.privacyPolicy"),
+		alternates: {
+			canonical: "https://daniel-freire.com",
+			languages: {
+				en: "https://daniel-freire.com/en",
+				pt: "https://daniel-freire.com/pt",
+			},
+		},
+		openGraph: {
+			title: t("opengraphImageAlt"),
+			description: t("description.privacyPolicy"),
+			url: "https://daniel-freire.com",
+			siteName: t("title.privacyPolicy"),
+			images: [
+				{ url: "https://daniel-freire.com/metadata/open-graph.png" },
+				...previousImages,
+			],
+		},
 	};
 }
 
@@ -30,17 +50,17 @@ interface ListParagraphProps {
 	list: string[];
 }
 
+const ListParagraph: React.FC<ListParagraphProps> = ({ list }) => {
+	return (
+		<>
+			{Array.isArray(list) &&
+				list.map((item) => <li key={nanoid()}>{item}</li>)}
+		</>
+	);
+};
+
 const PrivacyPolicy = () => {
 	const t = useTranslations("privacyPolicy");
-
-	const ListParagraph: React.FC<ListParagraphProps> = ({ list }) => {
-		return (
-			<>
-				{Array.isArray(list) &&
-					list.map((item) => <li key={nanoid()}>{item}</li>)}
-			</>
-		);
-	};
 
 	return (
 		<section className="m-7">

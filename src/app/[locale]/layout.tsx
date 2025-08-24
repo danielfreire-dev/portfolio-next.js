@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		template: "%s | Daniel Freire",
 		default: "Daniel Freire",
 	},
-	description: { default: "Daniel Freire", template: "%s" },
+
 	metadataBase: new URL("https://www.daniel-freire.com/"),
 };
 
