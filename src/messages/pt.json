@@ -325,7 +325,7 @@
 		},
 		"links": [
 			{ "link": "/", "name": "início" },
-			{ "link": "/portfólio", "name": "portfólio" },
+			{ "link": "/portfolio", "name": "portfólio" },
 			{ "link": "/sobre", "name": "sobre" },
 			{ "link": "/contactos", "name": "contacto" }
 		],
