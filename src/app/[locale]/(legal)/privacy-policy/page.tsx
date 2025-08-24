@@ -10,18 +10,16 @@ interface Props {
 	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export async function generateMetadata(
-	{ params, searchParams }: Props,
-	parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+	searchParams,
+}: Props): Promise<Metadata> {
 	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: locale,
 		namespace: "metadata",
 	});
-	// optionally access and extend (rather than replace) parent metadata
-	const previousImages = (await parent).openGraph?.images || [];
 
 	return {
 		title: t("title.privacyPolicy"),
@@ -39,9 +37,10 @@ export async function generateMetadata(
 			url: "https://daniel-freire.com",
 			siteName: t("title.privacyPolicy"),
 			images: [
-				{ url: "https://daniel-freire.com/metadata/open-graph.png" },
-				...previousImages,
+				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
 			],
+			locale: locale,
+			type: "website",
 		},
 	};
 }

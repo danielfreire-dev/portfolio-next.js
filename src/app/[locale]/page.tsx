@@ -14,17 +14,16 @@ interface Props {
 	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export async function generateMetadata(
-	{ params, searchParams }: Props,
-	parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+	searchParams,
+}: Props): Promise<Metadata> {
 	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: locale,
 		namespace: "metadata",
 	});
-	// optionally access and extend (rather than replace) parent metadata
 
 	return {
 		title: t("title.about"),

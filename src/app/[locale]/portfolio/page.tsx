@@ -9,27 +9,25 @@ interface Props {
 	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export async function generateMetadata(
-	{ params, searchParams }: Props,
-	parent: ResolvingMetadata,
-): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+	searchParams,
+}: Props): Promise<Metadata> {
 	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: locale,
 		namespace: "metadata",
 	});
-	// optionally access and extend (rather than replace) parent metadata
-	const previousImages = (await parent).openGraph?.images || [];
 
 	return {
 		title: t("title.portfolio"),
 		description: t("description.portfolio"),
 		alternates: {
-			canonical: "https://daniel-freire.com",
+			canonical: "https://daniel-freire.com/portfolio",
 			languages: {
-				en: "https://daniel-freire.com/en",
-				pt: "https://daniel-freire.com/pt",
+				en: "https://daniel-freire.com/en/portfolio",
+				pt: "https://daniel-freire.com/pt/portfolio",
 			},
 		},
 		openGraph: {
@@ -38,9 +36,10 @@ export async function generateMetadata(
 			url: "https://daniel-freire.com",
 			siteName: `${t("title.portfolio")} | Daniel Freire`,
 			images: [
-				{ url: "https://daniel-freire.com/metadata/open-graph2.png" },
-				...previousImages,
+				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
 			],
+			locale: locale,
+			type: "website",
 		},
 	};
 }
