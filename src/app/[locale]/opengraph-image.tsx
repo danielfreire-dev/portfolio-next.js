@@ -6,8 +6,8 @@ import { join } from "node:path";
 // Image metadata
 export const alt = "Daniel Freire Portfolio";
 export const size = {
-	width: "auto",
-	height: "auto",
+	width: 1179,
+	height: 139,
 };
 
 export const contentType = "image/png";
@@ -36,9 +36,8 @@ export default async function Image() {
 					alignItems: "center",
 					justifyContent: "center",
 				}}
-				// eslint-disable-next-line i18next/no-literal-string
 			>
-				Daniel Freire
+				DF
 			</div>
 		),
 		// ImageResponse options
