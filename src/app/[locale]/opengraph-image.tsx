@@ -7,7 +7,7 @@ import { join } from "node:path";
 export const alt = "Daniel Freire | Portfolio";
 export const size = {
 	width: 1200,
-	height: 630, // Standard OG image size
+	height: 630,
 };
 export const contentType = "image/png";
 
