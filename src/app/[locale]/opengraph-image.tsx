@@ -30,7 +30,7 @@ export default async function Image() {
 					fontSize: 128,
 					background: "var(--background)",
 					color: "var(--primary)",
-					width: "100dvh",
+					width: "auto",
 					height: "auto",
 					display: "flex",
 					alignItems: "center",
