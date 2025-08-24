@@ -4,11 +4,12 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 // Image metadata
-export const alt = "Daniel Freire Portfolio";
+export const alt = "Daniel Freire | Portfolio";
 export const size = {
-	width: 1179,
-	height: 139,
+	width: 1200,
+	height: 630, // Standard OG image size
 };
+export const contentType = "image/png";
 
 export const contentType = "image/png";
 
@@ -30,8 +31,8 @@ export default async function Image() {
 					fontSize: 128,
 					background: "var(--background)",
 					color: "var(--primary)",
-					width: "auto",
-					height: "auto",
+					width: "100%",
+					height: "100%",
 					display: "flex",
 					alignItems: "center",
 					justifyContent: "center",
@@ -47,7 +48,7 @@ export default async function Image() {
 			...size,
 			fonts: [
 				{
-					name: "Mozilla_Headline",
+					name: "Mozilla Headline",
 					data: Headline,
 					style: "normal",
 					weight: 400,
