@@ -37,7 +37,9 @@ export async function generateMetadata(
 			description: t("description.about"),
 			url: "https://daniel-freire.com",
 			siteName: t("title.about"),
-			images: [...previousImages],
+			images: [
+				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
+			],
 		},
 	};
 }
