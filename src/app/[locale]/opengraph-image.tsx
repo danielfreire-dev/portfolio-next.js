@@ -31,7 +31,7 @@ export default async function Image() {
 					color: "var(--primary)",
 					width: "100%",
 					height: "100%",
-					display: "<display-box>",
+					display: "flex",
 					alignItems: "center",
 					justifyContent: "center",
 				}}
