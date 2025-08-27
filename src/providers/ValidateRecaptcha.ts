@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+/* export default async function handler(req, res) {
 	const { recaptchaResponse } = req.body;
 	const secretKey = process.env.RECAPTCHA_SECRET;
 
@@ -16,3 +16,4 @@ export default async function handler(req, res) {
 		res.status(400).json({ success: false });
 	}
 }
+ */
