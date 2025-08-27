@@ -6,7 +6,6 @@ import { sendEmail } from "@/lib/resend";
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
 import { Suspense, useState } from "react";
-import { Link } from "@/i18n/navigation";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 
@@ -121,29 +120,31 @@ const ContactForm = () => {
 						/>
 					</section>
 				</Suspense>
-				<p className="align-start">
-					<span className="text-(--error)">*</span>
-					<span className="capitalize">{t("required")}</span>
-				</p>
-				<label htmlFor="privacy-policy-check">
-					<input
-						type="checkbox"
-						name="privacy-policy-check"
-						id="privacy-policy-check"
-						className=" accent-(--primary) focus:shadow-(--primary)"
-						required
-					/>{" "}
-					{t("privacyPolicyCheck")}{" "}
-					<TransitionLink
-						href={t("privacyPolicyUrl") as "/privacy-policy"}
-						target="_blank"
-					>
-						{t("privacy")}
-					</TransitionLink>
-					.
-				</label>
+				<div className="privacy-policy-req mt-1.5">
+					<p className="align-start">
+						<span className="text-(--error)">*</span>
+						<span className="capitalize">{t("required")}</span>
+					</p>
+					<label htmlFor="privacy-policy-check">
+						<input
+							type="checkbox"
+							name="privacy-policy-check"
+							id="privacy-policy-check"
+							className=" accent-(--primary) focus:shadow-(--primary)"
+							required
+						/>{" "}
+						{t("privacyPolicyCheck")}{" "}
+						<TransitionLink
+							href={t("privacyPolicyUrl") as "/privacy-policy"}
+							target="_blank"
+						>
+							{t("privacy")}
+						</TransitionLink>
+						.
+					</label>
+				</div>
 
-				<section className="flex justify-center mx-auto my-1.5 ">
+				<section className="flex justify-center mx-auto mt-2.5">
 					<button
 						type="submit"
 						className="bg-(--surface) raise capitalize disabled:opacity-75 disabled:pointer:disabled"

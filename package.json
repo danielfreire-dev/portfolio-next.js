@@ -18,6 +18,7 @@
 		"negotiator": "1.0.0",
 		"next": "latest",
 		"next-intl": "^4.3.4",
+		"next-recaptcha-v3": "^1.5.2",
 		"postcss": "^8.5.6",
 		"posthog-js": "^1.260.1",
 		"react": "^18.3.1",

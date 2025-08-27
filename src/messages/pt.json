@@ -87,7 +87,7 @@
 		"label": "Li e concordo com a",
 		"lastName": "último nome",
 		"message": "mensagem",
-		"pageTitle": "Contacto",
+		"pageTitle": "Contactos",
 		"phone": "número de telefone",
 		"placeholder": {
 			"email": "Insira o seu email",
@@ -165,9 +165,14 @@
 		}
 	},
 	"error": {
-		"404": "Página não encontrada",
+		"404": "404 - página não encontrada",
 		"back": "Voltar para a página inicial",
-		"description": "Parece que você se perdeu. Não se preocupe, acontece aos melhores."
+		"description": "Parece que se perdeu. Não se preocupe, acontece aos melhores.",
+		"errorLoading": {
+			"contact": "<p>Se acredita que deveria haver uma página aqui, por favor contacte <a>webmaster@daniel-freire.com</a></p>",
+			"description": "<p>Infelizmente, encontrámos um erro.</p><p>Pode tentar <retry>recarregar a página</retry> que estava a visitar.</p>",
+			"title": "algo correu mal!"
+		}
 	},
 
 	"home": {
@@ -201,7 +206,7 @@
 		"opengraphImageAlt": "Daniel Freire",
 		"title": {
 			"about": "Sobre",
-			"contact": "Contacto",
+			"contact": "Contactos",
 			"home": "Página Inicial | Daniel Freire",
 			"portfolio": "Portfólio",
 			"privacyPolicy": "Política de Privacidade"
@@ -327,7 +332,7 @@
 			{ "link": "/", "name": "início" },
 			{ "link": "/portfolio", "name": "portfólio" },
 			{ "link": "/sobre", "name": "sobre" },
-			{ "link": "/contactos", "name": "contacto" }
+			{ "link": "/contactos", "name": "contactos" }
 		],
 		"privacy": "política de privacidade",
 		"rights": "Daniel Freire ® todos os direitos reservados"

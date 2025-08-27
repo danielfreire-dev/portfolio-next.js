@@ -1,4 +1,4 @@
 User-Agent: *
-Allow: /
+Allow: /*
 Disallow: /private/
 Sitemap: https://daniel-freire.com/sitemap.xml

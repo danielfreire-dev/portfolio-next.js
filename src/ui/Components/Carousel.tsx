@@ -1,11 +1,10 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import "@/ui/styles/carousel.css";
-
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { TransitionLink } from "./Sidenav/TransitionLink";
+import { NavLink } from "../../types";
 
 interface SliderItem {
 	alt: string;
@@ -14,7 +13,7 @@ interface SliderItem {
 	id: number;
 	imageUrl: string;
 	title: string;
-	url: string;
+	url: NavLink["link"];
 	loading: "eager" | "lazy" | undefined;
 }
 
@@ -29,7 +28,7 @@ interface CarouselItemProps {
 	id: number;
 	imageUrl: string;
 	title: string;
-	url: string;
+	url: NavLink["link"];
 	loading: "eager" | "lazy" | undefined;
 }
 
@@ -112,11 +111,11 @@ export default function Slider({ items }: SliderProps) {
 							<div className="content">
 								<h2 className="capitalize">{itemSlice.title}</h2>
 								<p>{itemSlice.description}</p>
-								<Link href={itemSlice.url} className="size-min">
+								<TransitionLink href={itemSlice.url} className="size-min">
 									<button className="content-btn offset overflow-hidden text-ellipsis whitespace-nowrap hover:cursor-pointer">
 										{itemSlice.cta}
 									</button>
-								</Link>
+								</TransitionLink>
 							</div>
 						</li>
 					);

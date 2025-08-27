@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		...getEntries("/about"),
 		...getEntries("/contact"),
 		...getEntries("/portfolio"),
+		...getEntries("/privacy-policy"),
 	];
 }
 
