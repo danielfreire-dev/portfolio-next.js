@@ -166,12 +166,13 @@
 		}
 	},
 	"error": {
-		"404": "page not found",
+		"404": "404 - page not found",
 		"back": "Go back to homepage",
 		"description": "Looks like you got lost. Don't worry, it happens to the best of us.",
 		"errorLoading": {
+			"contact": "<p>If you believe there should a page here, please contact <a>webmaster@daniel-freire.com</a></p>",
 			"description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
-			"title": "Something went wrong!"
+			"title": "something went wrong!"
 		}
 	},
 	"home": {

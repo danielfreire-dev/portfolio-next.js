@@ -188,3 +188,20 @@ export interface Dictionary {
 		name: string;
 	}[];
 }
+
+export interface NavLink {
+	link:
+		| "/"
+		| "/about"
+		| "/portfolio"
+		| "/contact"
+		| "/privacy-policy"
+		| "/terms-of-service"
+		| "/cookies-policy"
+		| "/accessibility-statement"
+		| "/sitemap.xml"
+		| "/robots.txt"
+		| "/404"
+		| "/prices";
+	name: string;
+}
