@@ -17,7 +17,7 @@ const TopMainPage = () => {
 		}
 		const randomIndex = Math.floor(Math.random() * array.length);
 		return (
-			<div>
+			<div className="px-1.5 lg:px-0">
 				<h2 className="title capitalize">{array[randomIndex].title}</h2>
 				<div className="text mt-2">{array[randomIndex].description}</div>
 			</div>
