@@ -214,7 +214,6 @@
 		"twitterImage": "metadata/open-graph.png",
 		"twitterImageAlt": "Daniel Freire"
 	},
-
 	"portfolio": {
 		"all": "Todos",
 		"cta": ["confira", "veja o projeto ao vivo →"],
@@ -451,6 +450,32 @@
 			"logo": "/images/icons/color_zsh.svg",
 			"name": "zsh",
 			"svgr": "Zsh"
+		}
+	],
+	"topMainPage": [
+		{
+			"description": "O seu website está a travar o crescimento do seu negócio? A nossa auditoria abrangente de desempenho analisa profundamente a infraestrutura técnica, a experiência do utilizador e o potencial de conversão do seu site. Forneceremos um relatório detalhado destacando melhorias críticas que podem aumentar dramaticamente o desempenho online.",
+			"title": "revolucione a sua presença digital agora!"
+		},
+		{
+			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+			"title": "desbloqueie o pleno potencial do seu website"
+		},
+		{
+			"description": "Pare de se contentar com modelos genéricos. Os nossos serviços personalizados de desenvolvimento web criam experiências digitais totalmente adaptadas que se alinham perfeitamente com a identidade única da sua marca e os objetivos do seu negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
+			"title": "construa o projeto dos seus sonhos hoje"
+		},
+		{
+			"description": "A velocidade não é apenas uma funcionalidade—é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carregue extremamente rápido, proporcionando uma experiência de utilizador excecional que mantém os visitantes envolvidos e converte mais eficazmente.",
+			"title": "acelere o potencial do seu website"
+		},
+		{
+			"description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a transitar perfeitamente para tecnologias web modernas e eficientes sem interromper as suas operações existentes. Garantimos um caminho de atualização suave e com risco gerido.",
+			"title": "modernize a sua infraestrutura digital"
+		},
+		{
+			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+			"title": "cuidado contínuo para os seus ativos digitais"
 		}
 	]
 }

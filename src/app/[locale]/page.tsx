@@ -8,6 +8,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Metadata, ResolvingMetadata } from "next";
 import { alt } from "./opengraph-image";
+import TopMainPage from "@/ui/Components/TopMainPage";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -26,8 +27,8 @@ export async function generateMetadata({
 	});
 
 	return {
-		title: t("title.about"),
-		description: t("description.about"),
+		title: t("title.home"),
+		description: t("description.home"),
 		alternates: {
 			canonical: "https://daniel-freire.com",
 			languages: {
@@ -38,7 +39,7 @@ export async function generateMetadata({
 		openGraph: {
 			type: "website",
 			title: t("opengraphImageAlt"),
-			description: t("description.about"),
+			description: t("description.home"),
 			url: "https://daniel-freire.com",
 			siteName: t("title.about"),
 			images: [
@@ -63,7 +64,8 @@ export default function HomePage({ params }: Props) {
 
 	return (
 		<>
-			<Slider items={t.raw("carousel")} />
+			{/* <Slider items={t.raw("carousel")} /> */}
+			<TopMainPage />
 			<Techstack />
 			<Cta />
 		</>
