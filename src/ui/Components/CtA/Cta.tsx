@@ -12,6 +12,7 @@ const Cta = () => {
 		const randomIndex = Math.floor(Math.random() * array.length);
 		return array[randomIndex];
 	};
+
 	return (
 		<>
 			<TransitionLink href="/contact" className="size-min ml-10 mb-1 cta">

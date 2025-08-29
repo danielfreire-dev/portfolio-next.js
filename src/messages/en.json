@@ -452,5 +452,31 @@
 			"name": "zsh",
 			"svgr": "Zsh"
 		}
+	],
+	"topMainPage": [
+		{
+			"description": "Is your website holding back your business growth? Our comprehensive performance audit deeply analyzes your technical infrastructure, user experience, and conversion potential. We’ll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
+			"title": "Revolutionize Your Digital Presence Now!"
+		},
+		{
+			"description": "Websites require constant care to stay secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
+			"title": "Unlock Your Website’s Full Potential"
+		},
+		{
+			"description": "Stop settling for generic templates. Our custom web development services create fully tailored digital experiences that align perfectly with your brand’s unique identity and business goals. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
+			"title": "Build Your Dream Project Today"
+		},
+		{
+			"description": "Speed isn’t just a feature—it’s a competitive advantage. Our performance optimization service ensures your website loads extremely fast, delivering an exceptional user experience that keeps visitors engaged and converts more effectively.",
+			"title": "Accelerate Your Website’s Potential"
+		},
+		{
+			"description": "Technology evolves rapidly. Our specialized migration services help you transition seamlessly to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
+			"title": "Modernize Your Digital Infrastructure"
+		},
+		{
+			"description": "Websites require constant care to remain secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
+			"title": "Ongoing Care for Your Digital Assets"
+		}
 	]
 }
