@@ -1,18 +1,13 @@
 {
 	"about": {
-		"image": "/images/Lensa/Lensa2.webp",
-		"paragraph1": "A jornada de Daniel Freire começou no vibrante mundo do marketing, mas não da maneira que se poderia esperar. Enquanto muitos profissionais de marketing se aprofundam em design e storytelling criativo, Daniel viu-se cada vez mais atraído pelos alicerces tecnológicos das estratégias digitais. Além disso, sua perspectiva única permitiu-lhe ver o marketing não apenas como um empreendimento criativo, mas como um ecossistema complexo impulsionado por dados, análises e inovação tecnológica.",
-		"paragraph2": "Desde o início, Daniel foi diferente. Em vez de se concentrar apenas na criação de campanhas chamativas, ficou fascinado pelos mecanismos técnicos que alimentavam os esforços de marketing digital. Ele entendeu desde cedo que o marketing moderno não se trata apenas de visuais bonitos, mas de entender paisagens digitais complexas e utilizar a tecnologia para impulsionar um envolvimento significativo.",
-		"paragraph3": "Como desenvolvedor web com formação em marketing, Daniel descobriu que sua verdadeira paixão estava no intrincado mundo do código e da arquitetura de sistemas. Gradualmente, transitou de funções tradicionais de marketing para posições mais focadas tecnicamente, onde sua mistura única de insights de marketing e habilidades tecnológicas o destacou de seus pares.",
-		"paragraph4": "Sua jornada profissional tornou-se um testemunho do poder das habilidades interdisciplinares. Daniel percebeu que sua experiência em marketing não era um impedimento, mas uma vantagem significativa em suas buscas tecnológicas. Ele podia compreender a experiência do usuário, entender as necessidades dos clientes e traduzir conceitos técnicos complexos em linguagem acessível - um conjunto de habilidades que muitos tecnólogos puros lutam para desenvolver.",
-		"paragraph5": "A transição não foi apenas sobre mudar títulos de trabalho; foi uma transformação pessoal e profissional profunda. Daniel abraçou o desafio de se tornar um desenvolvedor web completo, aprendendo e expandindo continuamente seu kit de ferramentas tecnológicas. Seu histórico em marketing forneceu-lhe habilidades de pensamento estratégico que complementaram sua expertise técnica.",
-		"paragraph6": "O que realmente destacou Daniel foi sua abordagem holística à tecnologia. Ele não via o código apenas como linhas num ecrã, mas como uma ferramenta poderosa para resolver problemas do mundo real. Sua capacidade de combinar insights de marketing com soluções tecnológicas robustas tornou-o um profissional de valor único num cenário digital cada vez mais complexo.",
-		"paragraph7": "A história de Daniel Freire é mais do que uma transição de carreira - é uma narrativa de evolução pessoal, demonstrando que o crescimento profissional muitas vezes vem de abraçar caminhos inesperados e aproveitar conjuntos de habilidades diversos.",
-		"title1": "A Transformação Tecnológica de Daniel Freire: De Mestre do Marketing a Maestro do Código",
-		"title2": "As Raízes do Marketing - Onde a Criatividade Encontra a Tecnologia",
-		"title3": "O Despertar Tecnológico",
-		"title4": "Conectando Mundos - Uma Nova Identidade Profissional",
-		"title5": "Uma Jornada de Crescimento Contínuo"
+		"paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspectiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
+		"paragraph2": "Entrei neste campo vindo do marketing, embora não da vertente que possas imaginar. O meu mundo era menos sobre campanhas e mais sobre padrões: analisar dados de mercado, decifrar o comportamento dos utilizadores e compreender os mecanismos precisos de como as pessoas encontram e usam um produto online. SEO e SEM, no seu cerne, são apenas psicologia aplicada e resolução de problemas. Aprende-se a ouvir o que os dados gritam, e, mais importante, o que sussurram.",
+		"paragraph3": "É esse o background que trago para cada projeto de desenvolvimento. A maioria dos desenvolvedores consegue escrever código elegante; o meu foco está em construir soluções elegantes. Há uma diferença crucial.",
+		"paragraph4": "Quando arquiteto uma aplicação com React ou Next.js, não estou apenas a pensar em gestão de estado ou estrutura de componentes. Estou a pensar na jornada do utilizador que o trouxe até ali. Estou a considerar a marcação semântica que dá significado ao nosso conteúdo para além do ecrã. Construo com uma compreensão inata do desempenho, porque sei, em primeira mão, que um atraso de apenas meio segundo é uma decisão que o utilizador toma para sair.",
+		"paragraph5": "Aqui está o que muitos desenvolvedores talentosos erram: constroem para o dispositivo. Constróem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
+		"paragraph6": "Seja um front-end elegante, um robusto admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
+		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
+		"title1": "Construir para o Humano por Trás do Ecrã"
 	},
 	"carousel": [
 		{
@@ -198,6 +193,7 @@
 			"about": "Sabe mais sobre o Daniel",
 			"contact": "Este é o melhor local para contactares o Daniel",
 			"home": "Introdução do Daniel",
+			"impressum": "",
 			"portfolio": "Este é o local onde o Daniel publicará o seu trabalho favorito",
 			"privacyPolicy": "Fica a saber mais sobre os teus direitos."
 		},
@@ -207,7 +203,8 @@
 		"title": {
 			"about": "Sobre",
 			"contact": "Contactos",
-			"home": "Página Inicial | Daniel Freire",
+			"home": "Início | Daniel Freire",
+			"impressum": "Impressum",
 			"portfolio": "Portfólio",
 			"privacyPolicy": "Política de Privacidade"
 		},
@@ -326,6 +323,12 @@
 		},
 		"header": {
 			"title": "daniel freire"
+		},
+		"legal": {
+			"impressumLink": "/impressum",
+			"impressumName": "impressum",
+			"privacyLink": "/politica-privacidade",
+			"privacyName": "política de privacidade"
 		},
 		"links": [
 			{ "link": "/", "name": "início" },

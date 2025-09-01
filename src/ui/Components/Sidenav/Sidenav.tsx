@@ -7,6 +7,7 @@ import NavigationList from "./NavigationList";
 import ThemeToggle from "../ThemeToggle";
 import { GitHubIcon, LinkedInIcon } from "../svgs";
 import { TransitionLink } from "./TransitionLink";
+import LegalLinks from "./LegalLinks";
 
 const Sidenav = () => {
 	const t = useTranslations("sidenav");
@@ -45,6 +46,7 @@ const Sidenav = () => {
 				</div>
 				{/* <ThemeToggle /> */}
 				<LocaleSwitcher />
+
 				<footer
 					className="flex justify-center mt-2 whitespace-pre-wrap"
 					aria-label="footer"
@@ -64,6 +66,7 @@ const Sidenav = () => {
 						{t("header.title")}
 					</a>
 				</footer>
+				<LegalLinks />
 			</section>
 		</nav>
 	);

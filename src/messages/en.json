@@ -1,18 +1,14 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
-		"paragraph1": "Daniel Freire's journey began in the vibrant world of marketing, but not in the way you might expect. While many marketing professionals dive into design and creative storytelling, Daniel found himself increasingly drawn to the technological underpinnings of digital strategies. Moreover, his unique perspective allowed him to see marketing not just as a creative endeavor, but as a complex ecosystem driven by data, analytics, and technological innovation.",
-		"paragraph2": "From the very beginning, Daniel was different. Instead of focusing solely on crafting eye-catching campaigns, he became fascinated by the technical mechanisms that powered digital marketing efforts. He understood early on that modern marketing isn't just about beautiful visuals, but about understanding complex digital landscapes and leveraging technology to drive meaningful engagement.",
-		"paragraph3": "As a web developer with a marketing background, Daniel discovered his true passion lay in the intricate world of code and system architecture. Gradually, he transitioned from traditional marketing roles to more technically focused positions, where his unique blend of marketing insight and technological skill set him apart from his peers.",
-		"paragraph4": "His professional journey became a testament to the power of interdisciplinary skills. Daniel realized that his marketing experience wasn't a hindrance but a significant advantage in his technological pursuits. He could comprehend user experience, understand client needs, and translate complex technical concepts into accessible language - a skill set that many pure technologists struggle to develop.",
-		"paragraph5": "The transition wasn't just about changing job titles; it was a profound personal and professional transformation. Daniel embraced the challenge of becoming a full-fledged web developer, continuously learning and expanding his technological toolkit. His marketing background provided him with strategic thinking skills that complemented his technical expertise.",
-		"paragraph6": "What truly set Daniel apart was his holistic approach to technology. He didn't just see code as lines on a screen but as a powerful tool for solving real-world problems. His ability to combine marketing insights with robust technical solutions made him a uniquely valuable professional in an increasingly complex digital landscape.",
-		"paragraph7": "Daniel Freire's story is more than a career transition - it's a narrative of personal evolution, demonstrating that professional growth often comes from embracing unexpected paths and leveraging diverse skill sets.",
-		"title1": "Daniel Freire's Tech Transformation: From Marketing Maverick to Code Conductor",
-		"title2": "The Marketing Roots - Where Creativity Meets Technology",
-		"title3": "The Technological Awakening",
-		"title4": "Bridging Worlds - A New Professional Identity",
-		"title5": "A Journey of Continuous Growth"
+		"paragraph1": "For the last two years, I’ve been building things on the web. But my perspective on what to build, and why, was shaped long before I wrote my first line of code.",
+		"paragraph2": "I came into this field from marketing, though not the side you might imagine. My world was less about campaigns and more about patterns: analyzing market data, deciphering user behavior, and understanding the precise mechanics of how people find and use a product online. SEO and SEM, at their core, are just applied psychology and problem-solving. You learn to listen to what the data is screaming, and more importantly, to what it’s whispering.",
+		"paragraph3": "That’s the background I bring to every development project. Most developers can write elegant code; my focus is on building elegant solutions. There’s a crucial difference.",
+		"paragraph4": "When I architect an application with React or Next.js, I’m not just thinking about state management or component structure. I’m thinking about the user’s journey that brought them there. I’m considering the semantic markup that gives our content meaning beyond the screen. I’m building with an innate understanding of performance because I know firsthand that a delay of even a half-second is a decision a user makes to leave.",
+		"paragraph5": "Here’s what a lot of talented developers get wrong: they build for the device. They build for the spec. But they forget to build for the human on the other side, and for the business objective that makes the project worthwhile. My experience allows me to sit at that intersection. I can translate a business need into a technical requirement not as an abstract concept, but as a lived experience. I’ve been the person asking for the data, and now I’m the person building the systems that provide it.",
+		"paragraph6": "Whether it’s a sleek front-end, a robust Django admin, or a full-stack Node.js application, the question I always start with is: \"What are we actually solving for?\" The technology is a means to an end. The real craft is in choosing the right tool for the job and wielding it with the wisdom of knowing what that job truly is.",
+		"paragraph7": "I don’t just build things right. I build the right things.",
+		"title1": "Building for the Human Behind the Screen"
 	},
 	"carousel": [
 		{
@@ -198,6 +194,7 @@
 			"about": "Learn more about Daniel",
 			"contact": "This is the best place to contact Daniel",
 			"home": "Daniel's Introduction",
+			"impressum": "",
 			"portfolio": "This is where Daniel will publish his favourite work",
 			"privacyPolicy": "Find out more about your rights."
 		},
@@ -208,6 +205,7 @@
 			"about": "About",
 			"contact": "Contact",
 			"home": "Homepage | Daniel Freire",
+			"impressum": "Impressum",
 			"portfolio": "Portfolio",
 			"privacyPolicy": "Privacy Policy"
 		},
@@ -327,6 +325,12 @@
 		},
 		"header": {
 			"title": "daniel freire"
+		},
+		"legal": {
+			"impressumLink": "/impressum",
+			"impressumName": "impressum",
+			"privacyLink": "/privacy-policy",
+			"privacyName": "privacy policy"
 		},
 		"links": [
 			{ "link": "/", "name": "home" },

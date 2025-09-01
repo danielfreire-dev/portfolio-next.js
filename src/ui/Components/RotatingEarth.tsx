@@ -35,7 +35,7 @@ export interface GlobeRotation {
 const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 	width = 800,
 	height = 600,
-	rotationSpeed = 0.1,
+	rotationSpeed = 1.2,
 	autoRotate = true,
 	backgroundColor = "rgba(0,0,0,0)",
 	globeImageUrl = "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg",
@@ -164,7 +164,7 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 					arcColor="color"
 					arcDashLength={() => Math.random()}
 					arcDashGap={() => Math.random()}
-					arcDashAnimateTime={() => Math.random() * 4000 + 500}
+					arcDashAnimateTime={() => Math.random() * 4000 + 1000}
 				/>
 
 				{/* Custom overlay */}
