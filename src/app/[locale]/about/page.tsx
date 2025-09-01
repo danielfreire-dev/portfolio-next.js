@@ -1,7 +1,7 @@
 import ClientSideAbout from "../../../ui/Components/ClientPage";
 import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { Locale } from "next-intl";
 
 interface Props {

@@ -8,22 +8,37 @@ import { useTranslations } from "next-intl";
 import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
+import { Turnstile } from "next-turnstile";
 
 const ContactForm = () => {
 	const [submitted, setSubmitted] = useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(false);
+	const [turnstileStatus, setTurnstileStatus] = useState<
+		"success" | "error" | "expired" | "required"
+	>("required");
+	const [error, setError] = useState<string | null>(null);
 
 	const t = useTranslations("contact");
 
+	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
+		console.log("turnstileStatus", turnstileStatus);
+
+		setError(null);
 		setLoading((prev) => !prev);
+
+		if (turnstileStatus !== "success") {
+			setError("Please verify you are not a robot");
+			setLoading(false);
+			return;
+		}
 
 		const formData = new FormData(e.currentTarget);
 
 		const formValues = Object.fromEntries(formData);
-
+		const token = formData.get("cf-turnstile-response");
 		await sendEmail(formValues);
 		await getData(formValues);
 
@@ -143,12 +158,33 @@ const ContactForm = () => {
 						.
 					</label>
 				</div>
-
-				<section className="flex justify-center mx-auto mt-2.5">
+				<section className="flex flex-col justify-center mx-auto mt-2.5">
+					<Turnstile
+						siteKey={siteKey!}
+						sandbox={siteKey === "development"}
+						retry="auto"
+						refreshExpired="auto"
+						onError={() => {
+							setTurnstileStatus("error");
+							setError("Security check failed. Please try again.");
+						}}
+						onExpire={() => {
+							setTurnstileStatus("expired");
+							setError("Security check expired. Please verify again.");
+						}}
+						onLoad={() => {
+							setTurnstileStatus("required");
+							setError(null);
+						}}
+						onVerify={(token) => {
+							setTurnstileStatus("success");
+							setError(null);
+						}}
+					/>
 					<button
 						type="submit"
 						className="bg-(--surface) raise capitalize disabled:opacity-75 disabled:pointer:disabled"
-						disabled={loading}
+						disabled={loading || turnstileStatus !== "success"}
 					>
 						{t("btn")}
 					</button>

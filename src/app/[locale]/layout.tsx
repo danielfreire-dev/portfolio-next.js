@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Sidenav from "@/ui/Components/Sidenav/Sidenav";
 
-import { NextIntlClientProvider, hasLocale, Locale } from "next-intl";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
