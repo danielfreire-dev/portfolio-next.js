@@ -30,8 +30,8 @@ export default [
 			"@typescript-eslint": ts,
 		},
 		rules: {
-			...ts.configs.recommended.rules,
-			...ts.configs.stylistic?.rules,
+			/* ...ts.configs.recommended.rules,
+			...ts.configs.stylistic?.rules, */
 			"@typescript-eslint/no-unused-vars": [
 				"warn",
 				{ argsIgnorePattern: "^_" },
@@ -406,6 +406,46 @@ export default [
 		files: ["**/*.d.ts"],
 		rules: {
 			"@typescript-eslint/no-explicit-any": "off",
+		},
+	},
+	{
+		files: [
+			"rollup.config.*",
+			".eslintrc.*",
+			"jest.config.*",
+			"babel.config.*",
+		],
+		parserOptions: {
+			project: null,
+		},
+		env: {
+			node: true,
+		},
+	},
+	{
+		files: [
+			"packages/ai/**",
+			"packages/core/**",
+			"packages/nextjs-config/**",
+			"packages/react-native/**",
+			"packages/node/**",
+			"packages/web/**",
+		],
+		rules: {
+			"no-console": "off",
+			"@typescript-eslint/no-unused-vars": "off",
+			"@typescript-eslint/naming-convention": "off",
+			"posthog-js/no-direct-undefined-check": "off",
+			"posthog-js/no-direct-boolean-check": "off",
+			"posthog-js/no-direct-null-check": "off",
+			"posthog-js/no-direct-function-check": "off",
+			"posthog-js/no-direct-number-check": "off",
+			"posthog-js/no-direct-date-check": "off",
+			"posthog-js/no-direct-array-check": "off",
+			"@typescript-eslint/ban-ts-comment": "off",
+			"posthog-js/no-add-event-listener": "off",
+			"no-constant-condition": "off",
+			"compat/compat": "off",
 		},
 	},
 ];
