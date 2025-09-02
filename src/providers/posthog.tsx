@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 // NOTE: This is how you can include the external dependencies so they are in your bundle and not loaded async at runtime
 // import 'posthog-js/dist/recorder'
 // import 'posthog-js/dist/surveys'
@@ -8,7 +6,6 @@
 
 import posthogJS, { PostHog, PostHogConfig } from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
-import { useEffect } from "react";
 
 export const PERSON_PROCESSING_MODE: "always" | "identified_only" | "never" =
 	(process.env.NEXT_PUBLIC_POSTHOG_PERSON_PROCESSING_MODE as any) ||
@@ -33,9 +30,10 @@ export type ConsentState = "granted" | "denied" | "pending" | undefined;
  * Once given, we enable autocapture, session recording, and use localStorage+cookie for persistence via set_config
  * This is only an example - data privacy requirements are different for every project
  */
+
 export function cookieConsentGiven(): ConsentState {
 	if (typeof window === "undefined") return undefined;
-	return (posthog as any).get_explicit_consent_status();
+	return (posthog as any).get_explicit_consent_status;
 }
 
 export const configForConsent = (): Partial<PostHogConfig> => {
@@ -131,3 +129,7 @@ if (typeof window !== "undefined") {
 		}
 	},
 }; */
+
+export function NextHogProvider({ children }: { children: React.ReactNode }) {
+	return <PHProvider client={posthog}>{children}</PHProvider>;
+}

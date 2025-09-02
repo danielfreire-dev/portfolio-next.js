@@ -1,4 +1,3 @@
-/* eslint-disable posthog-js/no-direct-null-check */
 "use client";
 
 import dynamic from "next/dynamic";
@@ -9,6 +8,7 @@ import { useEffect, useState } from "react";
 import {
 	ConsentState,
 	cookieConsentGiven,
+	NextHogProvider,
 	posthog,
 	updatePostHogConsent,
 } from "./posthog";
@@ -27,6 +27,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	const t = useTranslations("cookies");
 
 	const consentAnalytics = () => {
+		posthog.opt_in_capturing();
 		setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
 	};
 	const consentSocial = () => {
@@ -101,8 +102,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
 				manageCookieToggleChecked: "toggle-checked",
 			}}
 		>
-			{children}
-			{/* <PostHogProvider>{children}</PostHogProvider> */}
+			{/* {children} */}
+			<NextHogProvider>{children}</NextHogProvider>
 		</CookieManager>
 	);
 }
