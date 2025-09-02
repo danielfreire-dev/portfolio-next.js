@@ -32,7 +32,7 @@ const TopMainPage = () => {
 					<RotatingEarth
 						backgroundColor="rgba(0,0,0,0)"
 						className="hidden lg:block"
-						globeImageUrl="/images/globes/earth-blue-marble.jpg"
+						globeImageUrl="/images/globes/Blank_Map_of_The_World_Equirectangular_Projection.png"
 					/>
 				</Suspense>
 			</div>
