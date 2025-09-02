@@ -15,7 +15,7 @@ const Cta = () => {
 
 	return (
 		<>
-			<TransitionLink href="/contact" className="size-min ml-10 mb-1 cta">
+			<TransitionLink href="/contact" inputData="CtA">
 				<button className="offset overflow-hidden text-ellipsis whitespace-nowrap hover:cursor-pointer">
 					{getRandomItem(t.raw("button"))}
 				</button>
