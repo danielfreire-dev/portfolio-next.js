@@ -41,7 +41,7 @@ export async function generateMetadata({
 			title: t("opengraphImageAlt"),
 			description: t("description.home"),
 			url: "https://daniel-freire.com",
-			siteName: t("title.about"),
+			siteName: t("title.home"),
 			images: [
 				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
 			],

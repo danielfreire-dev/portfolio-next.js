@@ -9,6 +9,7 @@ import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
+import posthog from "posthog-js";
 
 const ContactForm = () => {
 	const [submitted, setSubmitted] = useState<boolean>(false);
@@ -21,10 +22,17 @@ const ContactForm = () => {
 	const t = useTranslations("contact");
 
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+	const captureButtonClick = () => {
+		posthog.capture("ContactButton_clicked", {
+			cool: true,
+		});
+	};
+
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
-		console.log("turnstileStatus", turnstileStatus);
+		captureButtonClick();
 
 		setError(null);
 		setLoading((prev) => !prev);
@@ -158,29 +166,32 @@ const ContactForm = () => {
 						.
 					</label>
 				</div>
+
 				<section className="flex flex-col justify-center mx-auto mt-2.5">
-					<Turnstile
-						siteKey={siteKey!}
-						sandbox={siteKey === "development"}
-						retry="auto"
-						refreshExpired="auto"
-						onError={() => {
-							setTurnstileStatus("error");
-							setError("Security check failed. Please try again.");
-						}}
-						onExpire={() => {
-							setTurnstileStatus("expired");
-							setError("Security check expired. Please verify again.");
-						}}
-						onLoad={() => {
-							setTurnstileStatus("required");
-							setError(null);
-						}}
-						onVerify={(token) => {
-							setTurnstileStatus("success");
-							setError(null);
-						}}
-					/>
+					<Suspense>
+						<Turnstile
+							siteKey={siteKey!}
+							/* sandbox={siteKey === "development"} */
+							retry="auto"
+							refreshExpired="auto"
+							onError={() => {
+								setTurnstileStatus("error");
+								setError("Security check failed. Please try again.");
+							}}
+							onExpire={() => {
+								setTurnstileStatus("expired");
+								setError("Security check expired. Please verify again.");
+							}}
+							onLoad={() => {
+								setTurnstileStatus("required");
+								setError(null);
+							}}
+							onVerify={(token) => {
+								setTurnstileStatus("success");
+								setError(null);
+							}}
+						/>
+					</Suspense>
 					<button
 						type="submit"
 						className="bg-(--surface) raise capitalize disabled:opacity-75 disabled:pointer:disabled"
