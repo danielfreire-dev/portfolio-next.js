@@ -1,10 +1,11 @@
 {
 	"about": {
-		"paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspectiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
+		"image": "/images/Lensa/Lensa2.webp",
+		"paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspetiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
 		"paragraph2": "Entrei neste campo vindo do marketing, embora não da vertente que possas imaginar. O meu mundo era menos sobre campanhas e mais sobre padrões: analisar dados de mercado, decifrar o comportamento dos utilizadores e compreender os mecanismos precisos de como as pessoas encontram e usam um produto online. SEO e SEM, no seu cerne, são apenas psicologia aplicada e resolução de problemas. Aprende-se a ouvir o que os dados gritam, e, mais importante, o que sussurram.",
 		"paragraph3": "É esse o background que trago para cada projeto de desenvolvimento. A maioria dos desenvolvedores consegue escrever código elegante; o meu foco está em construir soluções elegantes. Há uma diferença crucial.",
 		"paragraph4": "Quando arquiteto uma aplicação com React ou Next.js, não estou apenas a pensar em gestão de estado ou estrutura de componentes. Estou a pensar na jornada do utilizador que o trouxe até ali. Estou a considerar a marcação semântica que dá significado ao nosso conteúdo para além do ecrã. Construo com uma compreensão inata do desempenho, porque sei, em primeira mão, que um atraso de apenas meio segundo é uma decisão que o utilizador toma para sair.",
-		"paragraph5": "Aqui está o que muitos desenvolvedores talentosos erram: constroem para o dispositivo. Constróem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
+		"paragraph5": "Aqui está onde muitos programadors com talento erram: constroem para o dispositivo. Constroem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
 		"paragraph6": "Seja um front-end elegante, um robusto admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
 		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
 		"title1": "Construir para o Humano por Trás do Ecrã"
@@ -109,11 +110,11 @@
 		"manageCookiesStatus": "Estado: {{status}} em {{data}}",
 		"manageCookiesStatusConsented": "Consentido",
 		"manageCookiesStatusDeclined": "Recusado",
-		"manageEssentialStatus": "Estado: Sempre ativas",
-		"manageEssentialStatusButtonText": "Sempre Ativas",
+		"manageEssentialStatus": "Estado: Sempre Ativo",
+		"manageEssentialStatusButtonText": "Análise",
 		"manageEssentialSubtitle": "Requeridas para o funcionamento adequado do website",
 		"manageEssentialTitle": "Essenciais",
-		"manageMessage": "Gerencie as suas preferências de cookies abaixo. Os cookies essenciais estão sempre ativos, pois são necessários para o funcionamento do website.",
+		"manageMessage": "Gerencie as suas preferências de cookies abaixo. Os cookies essenciais são essenciais, pois são necessários para o funcionamento do website.",
 		"manageSaveButtonText": "Guardar Preferências",
 		"manageSocialSubtitle": "Ativar funcionalidades e partilha de redes sociais",
 		"manageSocialTitle": "Redes Sociais",
@@ -130,7 +131,8 @@
 			"Procura um Programador Front-End? Encontrou Um!",
 			"Vamos Tornar o Seu Website Inesquecível →",
 			"Precisa de um Programador Que Cumpre? Vamos Conversar.",
-			"Vamos Construir Algo Grande Juntos →"
+			"Vamos Construir Algo Grande Juntos →",
+			"Saiba mais"
 		],
 		"title": "entre em contacto"
 	},

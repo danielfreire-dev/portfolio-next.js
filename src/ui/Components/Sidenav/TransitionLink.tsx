@@ -1,13 +1,16 @@
 "use client";
 
-import React, { ComponentProps } from "react";
+import React, { ComponentProps, ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/navigation";
+import posthog from "posthog-js";
+import { LinkProps } from "next/link";
 
-/* interface TransitionLinkProps extends Link {
-	children: React.ReactNode;
-	href: string;
-} */
+type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink";
+
+interface TransitionLinkProps extends ComponentProps<typeof Link> {
+	inputData?: onClickCmdProps;
+}
 
 function sleep(ms: number): Promise<void> {
 	return new Promise((resolve) => setTimeout(resolve, ms));
@@ -16,9 +19,30 @@ function sleep(ms: number): Promise<void> {
 export const TransitionLink = ({
 	children,
 	href,
+	inputData,
 	...props
-}: ComponentProps<typeof Link>) => {
+}: TransitionLinkProps) => {
 	const router = useRouter();
+
+	const captureButtonClick = (message: string) => {
+		posthog.capture(message, {
+			cool: true,
+		});
+	};
+
+	switch (inputData) {
+		case "CtA":
+			captureButtonClick("CtAButton_clicked");
+			break;
+		case "NavLink":
+			captureButtonClick("NavLink_clicked");
+			break;
+		case "MobileNavLink":
+			captureButtonClick("MobileNavLink_clicked");
+			break;
+		default:
+			break;
+	}
 
 	const handleTransition = async (
 		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,

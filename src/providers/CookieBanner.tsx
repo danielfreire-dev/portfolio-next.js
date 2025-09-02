@@ -1,10 +1,17 @@
+/* eslint-disable posthog-js/no-direct-null-check */
 "use client";
 
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import "@/ui/styles/cookieBanner.css";
+import { useEffect, useState } from "react";
 /* import "@/ui/styles/cookieBannerOG.css"; */
-/* import { PostHogProvider } from "./posJavali"; */
+import {
+	ConsentState,
+	cookieConsentGiven,
+	posthog,
+	updatePostHogConsent,
+} from "./posthog";
 
 const CookieManager = dynamic(
 	() => import("react-cookie-manager").then((mod) => mod.CookieManager),
@@ -12,7 +19,22 @@ const CookieManager = dynamic(
 );
 
 export function Providers({ children }: { children: React.ReactNode }) {
+	const [cookieConsentGiven, setCookieConsentGiven] = useState({
+		analytics: false,
+		social: false,
+		marketing: false,
+	});
 	const t = useTranslations("cookies");
+
+	const consentAnalytics = () => {
+		setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
+	};
+	const consentSocial = () => {
+		setCookieConsentGiven({ ...cookieConsentGiven, social: true });
+	};
+	const consentMarketing = () => {
+		setCookieConsentGiven({ ...cookieConsentGiven, marketing: true });
+	};
 
 	return (
 		<CookieManager
@@ -53,17 +75,27 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			privacyPolicyUrl={t("privacyurl")}
 			displayType="modal"
 			onManage={(preferences) => {
-				if (preferences) {
-					console.log("Cookie preferences updated:", preferences);
+				console.log("Custom preferences saved:", preferences);
+				// Handle granular consent
+				if (preferences?.Analytics) {
+					consentAnalytics();
+				}
+				if (preferences?.Advertising) {
+					consentMarketing();
+				}
+				if (preferences?.Social) {
+					consentSocial();
 				}
 			}}
 			onAccept={() => {
 				console.log("User accepted all cookies");
-				// Analytics tracking can be initialized here
+				consentAnalytics();
+				consentSocial();
+				consentMarketing();
 			}}
 			onDecline={() => {
 				console.log("User declined all cookies");
-				// Handle declined state if needed
+				posthog.config.cookieless_mode = "on_reject";
 			}}
 			classNames={{
 				manageCookieToggleChecked: "toggle-checked",
