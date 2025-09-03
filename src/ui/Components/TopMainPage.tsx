@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import RotatingEarth from "./RotatingEarth";
 import { Suspense } from "react";
 
@@ -17,7 +16,7 @@ const TopMainPage = () => {
 		}
 		const randomIndex = Math.floor(Math.random() * array.length);
 		return (
-			<div className=" justify-center lg:px-0 text-center">
+			<div className=" justify-center px-10 lg:px-0 text-center">
 				<h2 className="title capitalize">{array[randomIndex].title}</h2>
 				<div className="text mt-2">{array[randomIndex].description}</div>
 			</div>
@@ -25,17 +24,18 @@ const TopMainPage = () => {
 	};
 
 	return (
-		<div className="container px-10 w-dvw flex flex-wrap flex-row lg:grid lg:grid-cols-2 lg:items-center  ">
+		<div className="container mx-auto flex flex-nowrap flex-row justify-center items-center xl:gap-7">
 			{getRandomItem(t.raw("topMainPage"))}
-			<div>
-				<Suspense fallback="Loading globe...">
-					<RotatingEarth
-						backgroundColor="rgba(0,0,0,0)"
-						className="hidden lg:block"
-						globeImageUrl="/images/globes/Blank_Map_of_The_World_Equirectangular_Projection.png"
-					/>
-				</Suspense>
-			</div>
+
+			<Suspense fallback="Loading globe...">
+				<RotatingEarth
+					width={500}
+					height={500}
+					backgroundColor="rgba(0,0,0,0)"
+					className="hidden md:block"
+					globeImageUrl="/images/globes/earth-blue-marble.png"
+				/>
+			</Suspense>
 		</div>
 	);
 };

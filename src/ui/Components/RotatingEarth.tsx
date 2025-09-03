@@ -24,6 +24,7 @@ export interface RotatingGlobeProps {
 		specular: string;
 	};
 	showNightPattern?: boolean;
+	animateIn?: boolean;
 }
 
 export interface GlobeRotation {
@@ -33,7 +34,7 @@ export interface GlobeRotation {
 }
 
 const RotatingEarth: React.FC<RotatingGlobeProps> = ({
-	width = 800,
+	width = 600,
 	height = 600,
 	rotationSpeed = 1.2,
 	autoRotate = true,
@@ -41,9 +42,10 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 	globeImageUrl = "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg",
 	bumpImageUrl = "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png",
 	className = "",
+	animateIn = true,
 }) => {
 	// Refs
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 	const globeRef = useRef<any>();
 	const containerRef = useRef<HTMLDivElement>(null);
 
@@ -137,13 +139,9 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 	}));
 
 	return (
-		<div
-			ref={containerRef}
-			className={`relative ${className}`}
-			style={{ width: `${width}px`, height: `${height}px` }}
-		>
+		<div ref={containerRef} className={`relative ${className}`}>
 			{/* Globe container */}
-			<div className="relative w-full h-full">
+			<div className="relative w-full">
 				<Globe
 					ref={globeRef}
 					width={width}
@@ -155,6 +153,7 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 					bumpImageUrl={bumpImageUrl}
 					backgroundColor={backgroundColor}
 					onGlobeReady={handleGlobeReady}
+					animateIn
 					showAtmosphere
 					atmosphereColor="lightskyblue"
 					atmosphereAltitude={0.15}
