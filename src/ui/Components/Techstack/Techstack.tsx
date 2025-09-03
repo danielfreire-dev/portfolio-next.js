@@ -9,7 +9,10 @@ const Techstack = () => {
 			<h2 className="mt-7 text-3xl font-bold text-center">
 				{title("techstack")}
 			</h2>
-			<div className="stack-container flex flex-wrap flex-row justify-center">
+			<div
+				className="flex flex-wrap flex-row justify-center"
+				id="stack-container"
+			>
 				<TechCards tech={tech.raw("tech")} />
 			</div>
 		</>

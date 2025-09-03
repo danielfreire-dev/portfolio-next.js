@@ -174,9 +174,10 @@ export default [
 			"jsx-a11y/anchor-ambiguous-text": "warn",
 			"jsx-a11y/aria-role": ["error", { ignoreNonDOM: false }],
 			"jsx-a11y/aria-unsupported-elements": "error",
+			"jsx-a11y/aria-activedescendant-has-tabindex": "error",
 			"jsx-a11y/autocomplete-valid": "warn",
 			"jsx-a11y/click-events-have-key-events": "warn",
-			"jsx-a11y/heading-has-content": "warn",
+			"jsx-a11y/heading-has-content": ["error", { components: [""] }],
 			"jsx-a11y/html-has-lang": "error",
 			"jsx-a11y/iframe-has-title": "warn",
 			"jsx-a11y/img-redundant-alt": "error",
@@ -253,9 +254,22 @@ export default [
 					allowExpressionValues: true,
 				},
 			],
-
+			"jsx-a11y/no-static-element-interactions": [
+				"error",
+				{
+					handlers: [
+						"onClick",
+						"onMouseDown",
+						"onMouseUp",
+						"onKeyPress",
+						"onKeyDown",
+						"onKeyUp",
+					],
+				},
+			],
+			"jsx-a11y/prefer-tag-over-role": "off",
 			"jsx-a11y/no-redundant-roles": [
-				"warn",
+				"error",
 				{
 					nav: ["navigation"],
 				},
@@ -288,6 +302,7 @@ export default [
 					ignoreAttribute: ["direction", "size", "as", "align"],
 				},
 			],
+			"jsx-a11y/scope": "error",
 		},
 	},
 	// CSS configuration

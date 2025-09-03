@@ -13,6 +13,7 @@
 	--text-hover: #4b5563;
 	--text-tertiary: #6b7280;
 	--text-carousel: rgb(255, 249, 242);
+	--hover-text: #534080;
 	--btn-text: #2a2a36;
 	--accent1: #ffc400;
 	--accent2: #ff4d4d;
@@ -23,6 +24,7 @@
 	--aura-hue: 20deg;
 	--spacing: 0.38rem;
 	--surface-rgb: 255, 255, 255;
+
 	/* Brands */
 	--nextjs-fill: #171717;
 	--html-fill: #000;
@@ -42,6 +44,7 @@
 		--surface: #1c2536;
 		--text: #e6f0ff;
 		--text-hover: #d1d5db;
+		--hover-text: #4b5563;
 		--text-tertiary: #bac1ce;
 		--text-carousel: rgb(255, 249, 242);
 		--accent1: #ffea70;
@@ -70,6 +73,8 @@
 
 
  */
+
+/* eslint-disable-next-line css/no-invalid-at-rules */
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
@@ -238,7 +243,7 @@ footer a {
 }
 
 /* Tech Stack icons */
-.stack-container > div > a > svg {
+#stack-container > div > a > svg {
 	width: 7em;
 	height: 7em;
 }
@@ -270,4 +275,10 @@ select * {
 #lastName:hover,
 #firstName:hover {
 	box-shadow: 0 0 0 2px var(--primary);
+}
+
+#contact-form:disabled {
+	cursor: not-allowed;
+	opacity: 75%;
+	transition: opacity 0.5s ease-in-out;
 }

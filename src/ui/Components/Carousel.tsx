@@ -36,6 +36,7 @@ export default function Slider({ items }: SliderProps) {
 	const [slideOrder, setSlideOrder] = useState<number[]>(
 		Array.from({ length: items.length }, (_, i) => i),
 	);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [isPaused, setIsPaused] = useState(false);
 	const [itemVersions, setItemVersions] = useState<Record<string, number>>({});
 

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { nanoid } from "nanoid";
 import * as SVGs from "../svgs";
 import { Suspense } from "react";

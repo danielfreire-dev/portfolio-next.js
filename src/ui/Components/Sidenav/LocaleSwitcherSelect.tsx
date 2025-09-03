@@ -19,16 +19,16 @@ export default function LocaleSwitcherSelect({
 	const pathname = usePathname();
 	const params = useParams();
 
-	function sleep(ms: number): Promise<void> {
+	/* function sleep(ms: number): Promise<void> {
 		return new Promise((resolve) => setTimeout(resolve, ms));
-	}
+	} */
 
 	async function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
 		const nextLocale = event.target.value as Locale;
-		const mainElement = document.querySelector("main");
+		/* const mainElement = document.querySelector("body");
 		mainElement?.classList.add("page-transition");
 
-		await sleep(500);
+		await sleep(500); */
 		startTransition(() => {
 			router.replace(
 				// @ts-expect-error -- TypeScript will validate that only known `params`
@@ -39,8 +39,8 @@ export default function LocaleSwitcherSelect({
 			);
 		});
 
-		mainElement?.classList.add("page-transition");
-		await sleep(500);
+		/* mainElement?.classList.remove("page-transition");
+		await sleep(500); */
 	}
 
 	return (

@@ -3,15 +3,9 @@
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import "@/ui/styles/cookieBanner.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 /* import "@/ui/styles/cookieBannerOG.css"; */
-import {
-	ConsentState,
-	cookieConsentGiven,
-	NextHogProvider,
-	posthog,
-	updatePostHogConsent,
-} from "./posthog";
+import { NextHogProvider, posthog, updatePostHogConsent } from "./posthog";
 
 const CookieManager = dynamic(
 	() => import("react-cookie-manager").then((mod) => mod.CookieManager),
@@ -29,6 +23,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	const consentAnalytics = () => {
 		posthog.opt_in_capturing();
 		setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
+		updatePostHogConsent("granted");
+		posthog.opt_in_capturing();
 	};
 	const consentSocial = () => {
 		setCookieConsentGiven({ ...cookieConsentGiven, social: true });
@@ -96,6 +92,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			}}
 			onDecline={() => {
 				console.log("User declined all cookies");
+				updatePostHogConsent("denied");
+				posthog.opt_out_capturing();
 				posthog.config.cookieless_mode = "on_reject";
 			}}
 			classNames={{
