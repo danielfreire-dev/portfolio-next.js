@@ -1,10 +1,10 @@
 "use client";
-import Link from "next/link";
+/* import Link from "next/link"; */
 
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
 import NavigationList from "./NavigationList";
-import ThemeToggle from "../ThemeToggle";
+/* import ThemeToggle from "../ThemeToggle"; */
 import { GitHubIcon, LinkedInIcon } from "../svgs";
 import { TransitionLink } from "./TransitionLink";
 import LegalLinks from "./LegalLinks";

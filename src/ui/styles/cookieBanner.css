@@ -123,14 +123,14 @@
 .cookie-manager :host {
 	line-height: 1.5;
 	-webkit-text-size-adjust: 100%;
-	font-family:
+	/* font-family:
 		ui-sans-serif,
 		system-ui,
 		sans-serif,
 		Apple Color Emoji,
 		Segoe UI Emoji,
 		Segoe UI Symbol,
-		Noto Color Emoji;
+		Noto Color Emoji; */
 	font-feature-settings: normal;
 	font-variation-settings: normal;
 	-moz-tab-size: 4;
@@ -172,7 +172,7 @@
 .cookie-manager kbd,
 .cookie-manager pre,
 .cookie-manager samp {
-	font-family:
+	/* font-family:
 		ui-monospace,
 		SFMono-Regular,
 		Menlo,
@@ -180,7 +180,7 @@
 		Consolas,
 		Liberation Mono,
 		Courier New,
-		monospace;
+		monospace; */
 	font-feature-settings: normal;
 	font-size: 1em;
 	font-variation-settings: normal;

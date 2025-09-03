@@ -7,6 +7,11 @@
 	--color: var(--primary);
 	--hover: var(--accent1);
 }
+
+.raise:disabled {
+	--color: var(--primary);
+	--hover: var(--text-hover);
+}
 .offset {
 	box-shadow:
 		0.3em 0.3em 0 0 var(--color),

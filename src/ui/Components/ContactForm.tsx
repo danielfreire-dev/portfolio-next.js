@@ -194,7 +194,8 @@ const ContactForm = () => {
 					</Suspense>
 					<button
 						type="submit"
-						className="bg-(--surface) raise capitalize disabled:opacity-75 disabled:pointer:disabled"
+						className="bg-(--surface) raise capitalize"
+						id="contact-form"
 						disabled={loading || turnstileStatus !== "success"}
 					>
 						{t("btn")}
