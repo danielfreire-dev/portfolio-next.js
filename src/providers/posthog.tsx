@@ -66,7 +66,7 @@ if (typeof window !== "undefined") {
 		api_host:
 			process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com",
 		session_recording: {
-			recordCrossOriginIframes: true,
+			recordCrossOriginIframes: false,
 			blockSelector: ".ph-block-image",
 			ignoreClass: "ph-ignore-image",
 		},

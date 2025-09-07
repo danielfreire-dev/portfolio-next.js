@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 import posthog from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { ReactNode } from "react";
@@ -12,12 +12,12 @@ if (typeof window !== "undefined" && posthogKey) {
 	posthog.init(posthogKey, {
 		opt_out_capturing_by_default: true,
 		api_host: posthogHost,
-		capture_pageview: true,
-		capture_pageleave: true,
+		capture_pageview: "history_change",
+		capture_pageleave: "if_capture_pageview",
 		disable_session_recording: true,
 		persistence: "localStorage",
 		loaded: (posthog) => {
-			if (process.env.NODE_ENV === "development") posthog.debug();
+			if (process.env.NODE_ENV === "production") posthog.debug();
 		},
 	});
 } else if (typeof window !== "undefined") {
@@ -40,3 +40,4 @@ export function PostHogProviderComponent({
 
 	return <PHProvider client={posthog}>{children}</PHProvider>;
 }
+ */
