@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import "@/ui/styles/cookieBanner.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 /* import "@/ui/styles/cookieBannerOG.css"; */
 import { NextHogProvider, posthog, updatePostHogConsent } from "./posthog";
 
@@ -23,8 +23,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	const consentAnalytics = () => {
 		posthog.opt_in_capturing();
 		setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
-		updatePostHogConsent("granted");
-		posthog.opt_in_capturing();
 	};
 	const consentSocial = () => {
 		setCookieConsentGiven({ ...cookieConsentGiven, social: true });

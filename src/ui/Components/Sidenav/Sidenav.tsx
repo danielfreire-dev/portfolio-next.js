@@ -26,12 +26,12 @@ const Sidenav = () => {
 				<NavigationList />
 			</ul>
 			<section className="flex flex-col justify-center">
-				<div className="flex justify-center gap-2 ">
+				<div className="flex justify-center gap-2">
 					<a
 						href={t("footer.icons.github.link")}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="sidenav-icons"
+						className="sidenav-icons hover:scale-140 delay-150 ease-in duration-400"
 					>
 						<GitHubIcon />
 					</a>
@@ -39,7 +39,7 @@ const Sidenav = () => {
 						href={t("footer.icons.linkedin.link")}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="sidenav-icons"
+						className="sidenav-icons hover:scale-140 delay-150 ease-in duration-400"
 					>
 						<LinkedInIcon />
 					</a>
