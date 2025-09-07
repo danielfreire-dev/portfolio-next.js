@@ -18,6 +18,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		social: false,
 		marketing: false,
 	});
+
 	const t = useTranslations("cookies");
 
 	const consentAnalytics = () => {
