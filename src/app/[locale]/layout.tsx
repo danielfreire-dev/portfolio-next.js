@@ -22,6 +22,41 @@ export const metadata: Metadata = {
 	metadataBase: new URL("https://www.daniel-freire.com/"),
 };
 
+export async function generateMetadata({
+	params,
+	searchParams,
+}: Props): Promise<Metadata> {
+	// Await the params Promise to get the actual locale value
+	const { locale } = await params;
+	const t = await getTranslations({
+		locale: locale,
+		namespace: "metadata",
+	});
+
+	return {
+		title: t("title.home"),
+		description: t("description.home"),
+		alternates: {
+			canonical: "https://daniel-freire.com",
+			languages: {
+				en: "https://daniel-freire.com/en",
+				pt: "https://daniel-freire.com/pt",
+			},
+		},
+		openGraph: {
+			type: "website",
+			title: t("opengraphImageAlt"),
+			description: t("description.home"),
+			url: "https://daniel-freire.com",
+			siteName: t("title.home"),
+			images: [
+				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
+			],
+			locale: locale,
+		},
+	};
+}
+
 /* Fonts */
 const Logo = localFont({
 	src: "../../ui/fonts/Mozilla_Headline/MozillaHeadline-VariableFont_wdth,wght.ttf",
