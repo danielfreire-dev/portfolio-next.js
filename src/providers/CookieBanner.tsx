@@ -93,7 +93,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 				console.log("User declined all cookies");
 				updatePostHogConsent("denied");
 				posthog.opt_out_capturing();
-				posthog.config.cookieless_mode = "on_reject";
+				posthog.config.cookieless_mode = undefined;
 			}}
 			classNames={{
 				manageCookieToggleChecked: "toggle-checked",

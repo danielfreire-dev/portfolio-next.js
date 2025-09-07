@@ -18,6 +18,7 @@ const NavigationLink = ({ href, ...rest }: ComponentProps<typeof Link>) => {
 			aria-current={isActive ? "page" : undefined}
 			href={href}
 			{...rest}
+			inputData="NavLink"
 		/>
 	);
 };
