@@ -192,8 +192,8 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 
 			{/* Loading indicator */}
 			{!globeReady && (
-				<div className="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-sm">
-					<div className="text-white">Loading globe...</div>
+				<div className="absolute inset-0 flex items-center justify-center bg-transparent">
+					<div className="text-(--text)">Loading...</div>
 				</div>
 			)}
 		</div>
