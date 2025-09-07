@@ -86,7 +86,7 @@ if (typeof window !== "undefined") {
 			crispChat: true,
 		},
 		__preview_remote_config: true,
-		cookieless_mode: "on_reject",
+		cookieless_mode: undefined, //"on_reject",
 		__preview_flags_v2: true,
 		...configForConsent(),
 	});
