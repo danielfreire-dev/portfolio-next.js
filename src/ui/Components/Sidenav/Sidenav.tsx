@@ -14,7 +14,7 @@ const Sidenav = () => {
 
 	return (
 		<nav className="hidden lg:sticky top-0 left-0 h-screen w-64 z-15 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center ">
-			<TransitionLink href="/">
+			<TransitionLink href="/" inputData="Logo">
 				<h1
 					className="text-5xl capitalize flex justify-center text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
 					id="logo"

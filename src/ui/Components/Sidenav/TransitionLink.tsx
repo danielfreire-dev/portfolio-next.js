@@ -6,7 +6,7 @@ import { Link } from "@/i18n/navigation";
 import posthog from "posthog-js";
 import { LinkProps } from "next/link";
 
-type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink";
+type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink" | "Logo";
 
 interface TransitionLinkProps extends ComponentProps<typeof Link> {
 	inputData?: onClickCmdProps;
@@ -39,6 +39,9 @@ export const TransitionLink = ({
 			break;
 		case "MobileNavLink":
 			captureButtonClick("MobileNavLink_clicked");
+			break;
+		case "Logo":
+			captureButtonClick("Logo");
 			break;
 		default:
 			break;
