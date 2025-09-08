@@ -13,20 +13,20 @@ import Dock from "@/ui/Components/Sidenav/Dock";
 import { Providers } from "@/providers/CookieBanner";
 
 /* Metadata */
-/* export const metadata: Metadata = {
+export const metadata: Metadata = {
 	title: {
 		template: "%s | Daniel Freire",
 		default: "Daniel Freire",
 	},
 
 	metadataBase: new URL("https://www.daniel-freire.com/"),
-}; */
+};
 
-export async function generateMetadata({
+/* export async function generateMetadata({
 	params,
 	searchParams,
 }: Props): Promise<Metadata> {
-	// Await the params Promise to get the actual locale value
+
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: locale,
@@ -55,7 +55,7 @@ export async function generateMetadata({
 			locale: locale,
 		},
 	};
-}
+} */
 
 /* Fonts */
 const Logo = localFont({
