@@ -391,28 +391,28 @@
 			"svgr": "PostgreSQL"
 		},
 		{
-			"link": "https://webpack.js.org/",
-			"logo": "/images/icons/webpack.svg",
-			"name": "webpack",
-			"svgr": "Webpack"
-		},
-		{
 			"link": "https://vite.dev",
 			"logo": "/images/icons/vitejs.svg",
 			"name": "vite.js",
 			"svgr": "Vitejs"
 		},
 		{
-			"link": "https://git-scm.com/",
-			"logo": "/images/icons/git-scm-icon.svg",
-			"name": "git",
-			"svgr": "Git"
+			"link": "https://webpack.js.org/",
+			"logo": "/images/icons/webpack.svg",
+			"name": "webpack",
+			"svgr": "Webpack"
 		},
 		{
 			"link": "https://github.com/",
 			"logo": "/images/icons/github.svg",
 			"name": "gitHub",
 			"svgr": "Github"
+		},
+		{
+			"link": "https://git-scm.com/",
+			"logo": "/images/icons/git-scm-icon.svg",
+			"name": "git",
+			"svgr": "Git"
 		},
 		{
 			"link": "https://vitest.dev/",
