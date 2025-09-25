@@ -12,6 +12,9 @@ import { Turnstile } from "next-turnstile";
 import posthog from "posthog-js";
 
 const ContactForm = () => {
+	/* TODO: Replace boolean states w/ type submition */
+	type submition = "loading" | "loaded" | "error" | "submitted";
+
 	const [submitted, setSubmitted] = useState<boolean>(false);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [turnstileStatus, setTurnstileStatus] = useState<
@@ -112,7 +115,6 @@ const ContactForm = () => {
 						<section className="flex flex-col">
 							<label htmlFor="telephone" className="capitalize">
 								{t("phone")}
-								<span className="text-(--error)">*</span>
 							</label>
 							<input
 								type="tel"
