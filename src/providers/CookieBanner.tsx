@@ -24,6 +24,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	const consentAnalytics = () => {
 		posthog.opt_in_capturing();
 		setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
+		window.gtag("consent", "update", {
+			analytics_storage: "granted",
+		});
 	};
 	const consentSocial = () => {
 		setCookieConsentGiven({ ...cookieConsentGiven, social: true });

@@ -8,23 +8,28 @@ import NavigationList from "./NavigationList";
 import { GitHubIcon, LinkedInIcon } from "../svgs";
 import { TransitionLink } from "./TransitionLink";
 import LegalLinks from "./LegalLinks";
+import ThemeToggle from "../ThemeToggle";
 
 const Sidenav = () => {
 	const t = useTranslations("sidenav");
 
 	return (
 		<nav className="hidden lg:sticky top-0 left-0 h-screen w-64 z-15 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center ">
-			<TransitionLink href="/" inputData="Logo">
-				<h1
-					className="text-5xl capitalize flex justify-center text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
-					id="logo"
-				>
-					{t("header.title")}
-				</h1>
-			</TransitionLink>
+			<div>
+				<TransitionLink href="/" inputData="Logo">
+					<h1
+						className="text-5xl capitalize flex justify-center text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
+						id="logo"
+					>
+						{t("header.title")}
+					</h1>
+				</TransitionLink>
+				<h3 className="flex justify-center mb-2">{t("header.role")}</h3>
+			</div>
 			<ul className="capitalize">
 				<NavigationList />
 			</ul>
+
 			<section className="flex flex-col justify-center">
 				<div className="flex justify-center gap-2">
 					<a
@@ -44,8 +49,11 @@ const Sidenav = () => {
 						<LinkedInIcon />
 					</a>
 				</div>
-				{/* <ThemeToggle /> */}
-				<LocaleSwitcher />
+
+				<div className="flex flex-nowrap">
+					<LocaleSwitcher />
+					<ThemeToggle />
+				</div>
 
 				<footer
 					className="flex justify-center mt-2 whitespace-pre-wrap"
