@@ -31,6 +31,8 @@ export type ConsentState = "granted" | "denied" | "pending" | undefined;
  * This is only an example - data privacy requirements are different for every project
  */
 
+//FIXME: Not registering users countries
+
 export function cookieConsentGiven(): ConsentState {
 	if (typeof window === "undefined") return undefined;
 	return (posthog as any).get_explicit_consent_status;

@@ -19,3 +19,5 @@ export { default as Bash } from "./bash.svg";
 export { default as Zsh } from "./zsh.svg";
 export { default as GitHubIcon } from "./github-square.svg";
 export { default as LinkedInIcon } from "./linkedin-square.svg";
+export { default as Sun } from "./sun.svg";
+export { default as Moon } from "./moon1.svg";

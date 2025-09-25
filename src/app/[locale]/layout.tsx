@@ -9,8 +9,10 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import Dock from "@/ui/Components/Sidenav/Dock";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/providers/CookieBanner";
+import GoogleAnalytics from "@/providers/GoogleAnalytics";
+import { Suspense } from "react";
 
 /* Metadata */
 export const metadata: Metadata = {
@@ -98,6 +100,8 @@ export function generateStaticParams() {
 	return routing.locales.map((locale) => ({ locale }));
 }
 
+const googleAnalytics = process.env.NEXT_PUBLIC_GA4;
+
 export default async function RootLayout({
 	children,
 	params,
@@ -116,6 +120,10 @@ export default async function RootLayout({
 
 	return (
 		<html lang={locale}>
+			<SpeedInsights />
+			<Suspense fallback={null}>
+				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
+			</Suspense>
 			<body
 				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--hover-text)`}
 			>
