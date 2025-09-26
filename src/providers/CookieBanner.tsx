@@ -22,8 +22,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	const t = useTranslations("cookies");
 
 	const consentAnalytics = () => {
-		posthog.opt_in_capturing();
 		setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
+		/* posthog.opt_in_capturing(); */
 		window.gtag("consent", "update", {
 			analytics_storage: "granted",
 		});

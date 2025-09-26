@@ -1,4 +1,4 @@
-// NOTE: This is how you can include the external dependencies so they are in your bundle and not loaded async at runtime
+/* // NOTE: This is how you can include the external dependencies so they are in your bundle and not loaded async at runtime
 // import 'posthog-js/dist/recorder'
 // import 'posthog-js/dist/surveys'
 // import 'posthog-js/dist/exception-autocapture'
@@ -23,15 +23,7 @@ export const posthog: PostHog = POSTHOG_USE_SNIPPET
 // we use undefined for SSR to indicated that we haven't check yet (as the state lives in cookies)
 export type ConsentState = "granted" | "denied" | "pending" | undefined;
 
-/**
- * Below is an example of a consent-driven config for PostHog
- * Lots of things start in a disabled state and posthog will not use cookies without consent
- *
- * Once given, we enable autocapture, session recording, and use localStorage+cookie for persistence via set_config
- * This is only an example - data privacy requirements are different for every project
- */
 
-//FIXME: Not registering users countries
 
 export function cookieConsentGiven(): ConsentState {
 	if (typeof window === "undefined") return undefined;
@@ -96,42 +88,7 @@ if (typeof window !== "undefined") {
 	(window as any).posthog = posthog;
 }
 
-// Helpers for tracking user behaviour
-/* export const posthogHelpers = {
-	onLogin: (user: User) => {
-		if (PERSON_PROCESSING_MODE === "never") {
-			// We just set the user properties instead of identifying them
-			posthogHelpers.setUser(user);
-		} else {
-			posthog.identify(user.email, user);
-		}
-
-		posthog.capture("Logged in");
-	},
-	onLogout: () => {
-		posthog.capture("Logged out");
-		posthog.reset();
-	},
-	setUser: (user: User) => {
-		if (PERSON_PROCESSING_MODE === "never") {
-			const eventProperties = {
-				person_id: user.email,
-				person_email: user.email,
-				person_name: user.name,
-				team_id: user.team?.id,
-				team_name: user.team?.name,
-			};
-			posthog.register(eventProperties);
-			posthog.setPersonPropertiesForFlags(user);
-		} else {
-			// NOTE: Would this always get set?
-			if (user.team) {
-				posthog.group("team", user.team.id, user.team);
-			}
-		}
-	},
-}; */
-
 export function NextHogProvider({ children }: { children: React.ReactNode }) {
 	return <PHProvider client={posthog}>{children}</PHProvider>;
 }
+ */

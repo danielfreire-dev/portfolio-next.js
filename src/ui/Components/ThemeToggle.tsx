@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
-/* import sun from "svgs/sun1.svg";
-import moon from "svgs/moon1.svg"; */
-import { Sun, Moon } from "@/ui/Components/svgs";
 import { LineMdMoonFilledToSunnyFilledLoopTransition } from "./svgs/sun";
 import { LineMdSunnyFilledLoopToMoonFilledLoopTransition } from "./svgs/moon";
+import posthog from "posthog-js";
+
 const ThemeToggle = () => {
 	const [isDark, setIsDark] = useState(false);
 
@@ -20,6 +18,16 @@ const ThemeToggle = () => {
 		return () => mediaQuery.removeEventListener("change", handleChange);
 	}, []);
 
+	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+		setIsDark(e.target.checked);
+		captureButtonClick("themeToggle_clicked");
+	}
+
+	const captureButtonClick = (message: string) => {
+		posthog.capture(message, {
+			cool: true,
+		});
+	};
 	return (
 		<>
 			<input
@@ -27,7 +35,7 @@ const ThemeToggle = () => {
 				className="hidden appearance-none"
 				id="theme-toggle"
 				checked={isDark}
-				onChange={(e) => setIsDark(e.target.checked)}
+				onChange={handleChange}
 			/>
 			<label
 				className="toggle hover:cursor-pointer py-3 px-2"
