@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import "@/ui/styles/cookieBanner.css";
 import { useState, useEffect } from "react";
 /* import "@/ui/styles/cookieBannerOG.css"; */
-import { NextHogProvider, posthog, updatePostHogConsent } from "./posthog";
+/* import { NextHogProvider, posthog, updatePostHogConsent } from "./posthog"; */
 
 const CookieManager = dynamic(
 	() => import("react-cookie-manager").then((mod) => mod.CookieManager),
@@ -94,15 +94,15 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			}}
 			onDecline={() => {
 				console.log("User declined all cookies");
-				updatePostHogConsent("denied");
-				posthog.opt_out_capturing();
+				/* updatePostHogConsent("denied");
+				posthog.opt_out_capturing(); */
 			}}
 			classNames={{
 				manageCookieToggleChecked: "toggle-checked",
 			}}
 		>
-			{/* {children} */}
-			<NextHogProvider>{children}</NextHogProvider>
+			{children}
+			{/*<NextHogProvider>{children}</NextHogProvider> */}
 		</CookieManager>
 	);
 }
