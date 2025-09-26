@@ -4,7 +4,6 @@
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
 import NavigationList from "./NavigationList";
-/* import ThemeToggle from "../ThemeToggle"; */
 import { GitHubIcon, LinkedInIcon } from "../svgs";
 import { TransitionLink } from "./TransitionLink";
 import LegalLinks from "./LegalLinks";
@@ -14,7 +13,36 @@ const Sidenav = () => {
 	const t = useTranslations("sidenav");
 
 	return (
-		<nav className="hidden lg:sticky top-0 left-0 h-screen w-64 z-15 flex-shrink-0 flex-grow-0 p-4 lg:flex flex-col justify-between items-center ">
+		<nav
+			id="sidenav"
+			className="fixed lg:sticky top-0 left-0 h-screen w-64 z-50 flex-shrink-0 flex-grow-0 p-4 flex flex-col justify-between items-center
+			transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out
+			bg-background lg:bg-transparent
+			lg:relative"
+		>
+			{/* Close button for mobile */}
+			<button
+				className="lg:hidden absolute top-4 right-4 p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+				onClick={() =>
+					document.getElementById("sidenav")?.classList.add("-translate-x-full")
+				}
+				aria-label="Close menu"
+			>
+				<svg
+					className="w-6 h-6"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						strokeWidth={2}
+						d="M6 18L18 6M6 6l12 12"
+					/>
+				</svg>
+			</button>
+
 			<div>
 				<TransitionLink href="/" inputData="Logo">
 					<h1
