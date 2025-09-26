@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LineMdMoonFilledToSunnyFilledLoopTransition } from "./svgs/sun";
 import { LineMdSunnyFilledLoopToMoonFilledLoopTransition } from "./svgs/moon";
-import posthog from "posthog-js";
+/* import posthog from "posthog-js"; */
 
 const ThemeToggle = () => {
 	const [isDark, setIsDark] = useState(false);
@@ -20,14 +20,14 @@ const ThemeToggle = () => {
 
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		setIsDark(e.target.checked);
-		captureButtonClick("themeToggle_clicked");
+		/* captureButtonClick("themeToggle_clicked"); */
 	}
 
-	const captureButtonClick = (message: string) => {
+	/* const captureButtonClick = (message: string) => {
 		posthog.capture(message, {
 			cool: true,
 		});
-	};
+	}; */
 	return (
 		<>
 			<input

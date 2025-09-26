@@ -3,7 +3,7 @@
 import React, { ComponentProps, ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import posthog from "posthog-js";
+/* import posthog from "posthog-js"; */
 import { LinkProps } from "next/link";
 
 type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink" | "Logo";
@@ -24,13 +24,13 @@ export const TransitionLink = ({
 }: TransitionLinkProps) => {
 	const router = useRouter();
 
-	const captureButtonClick = (message: string) => {
+	/* const captureButtonClick = (message: string) => {
 		posthog.capture(message, {
 			cool: true,
 		});
-	};
+	}; */
 
-	switch (inputData) {
+	/* switch (inputData) {
 		case "CtA":
 			captureButtonClick("CtAButton_clicked");
 			break;
@@ -45,7 +45,7 @@ export const TransitionLink = ({
 			break;
 		default:
 			break;
-	}
+	} */
 
 	const handleTransition = async (
 		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
