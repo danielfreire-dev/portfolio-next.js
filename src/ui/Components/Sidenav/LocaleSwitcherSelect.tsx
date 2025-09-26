@@ -52,7 +52,7 @@ export default function LocaleSwitcherSelect({
 				onChange={onSelectChange}
 				aria-label="Select language"
 				name="language"
-				id="language"
+				id="language-sidenav"
 			>
 				{children}
 			</select>

@@ -9,7 +9,7 @@ import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
-import posthog from "posthog-js";
+/* import posthog from "posthog-js"; */
 
 const ContactForm = () => {
 	/* TODO: Replace boolean states w/ type submition */
@@ -26,16 +26,16 @@ const ContactForm = () => {
 
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
-	const captureButtonClick = () => {
+	/* 	const captureButtonClick = () => {
 		posthog.capture("ContactButton_clicked", {
 			cool: true,
 		});
-	};
+	}; */
 
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
-		captureButtonClick();
+		/* captureButtonClick(); */
 
 		setError(null);
 		setLoading((prev) => !prev);
