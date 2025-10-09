@@ -5,7 +5,17 @@ import { ComponentProps } from "react";
 import { Link } from "@/i18n/navigation";
 import { TransitionLink } from "./TransitionLink";
 
-const NavigationLink = ({ href, ...rest }: ComponentProps<typeof Link>) => {
+interface NavigationLinkProps extends ComponentProps<typeof Link> {
+	isOpen: boolean;
+	setIsOpen: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+}
+
+const NavigationLink = ({
+	href,
+	isOpen,
+	setIsOpen,
+	...rest
+}: NavigationLinkProps) => {
 	const selectedLayoutSegment = useSelectedLayoutSegment();
 	const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : "/";
 	const isActive =
@@ -19,6 +29,8 @@ const NavigationLink = ({ href, ...rest }: ComponentProps<typeof Link>) => {
 			href={href}
 			{...rest}
 			inputData="NavLink"
+			isOpen={isOpen}
+			setIsOpen={setIsOpen}
 		/>
 	);
 };
