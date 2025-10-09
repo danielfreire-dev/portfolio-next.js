@@ -13,10 +13,10 @@ import { Turnstile } from "next-turnstile";
 
 const ContactForm = () => {
 	/* TODO: Replace boolean states w/ type submition */
-	type submition = "loading" | "loaded" | "error" | "submitted";
+	type submission = "idle" | "loading" | "loaded" | "error" | "submitted";
 
-	const [submitted, setSubmitted] = useState<boolean>(false);
-	const [loading, setLoading] = useState<boolean>(false);
+	/* const [submitted, setSubmitted] = useState<boolean>(false); */
+	const [loading, setLoading] = useState<submission>("idle"); //og false
 	const [turnstileStatus, setTurnstileStatus] = useState<
 		"success" | "error" | "expired" | "required"
 	>("required");
@@ -37,12 +37,11 @@ const ContactForm = () => {
 
 		/* captureButtonClick(); */
 
-		setError(null);
-		setLoading((prev) => !prev);
+		setLoading("loading");
 
 		if (turnstileStatus !== "success") {
 			setError("Please verify you are not a robot");
-			setLoading(false);
+			setLoading("error");
 			return;
 		}
 
@@ -53,14 +52,15 @@ const ContactForm = () => {
 		await sendEmail(formValues);
 		await getData(formValues);
 
-		setSubmitted((prev) => !prev);
-		setLoading((prev) => !prev);
+		/* setSubmitted((prev) => !prev); */
+		setLoading("submitted");
 	}
 	return (
 		<>
+			{/* TODO: Add form input sanitation */}
 			<form
 				onSubmit={sendContactForm}
-				className={`mx-5 flex flex-col flex-nowrap items-center ${submitted && "hidden"}`}
+				className={`mx-5 flex flex-col flex-nowrap items-center ${loading === "submitted" && "hidden"}`}
 			>
 				<div className="name-div flex flex-col lg:flex-row">
 					<Suspense fallback={<p>Loading...</p>}>
@@ -75,7 +75,8 @@ const ContactForm = () => {
 								id="firstName"
 								required
 								aria-required="true"
-								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
 							/>
 						</section>
 					</Suspense>
@@ -88,7 +89,8 @@ const ContactForm = () => {
 								type="text"
 								name="lastName"
 								id="lastName"
-								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
 								aria-required="false"
 							/>
 						</section>
@@ -107,7 +109,8 @@ const ContactForm = () => {
 								id="email"
 								required
 								aria-required="true"
-								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
 							/>
 						</section>
 					</Suspense>
@@ -120,7 +123,8 @@ const ContactForm = () => {
 								type="tel"
 								name="telephone"
 								id="telephone"
-								className="bg-(--surface) ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
 								aria-autocomplete="both"
 								aria-required="false"
 							/>
@@ -141,7 +145,8 @@ const ContactForm = () => {
 							required
 							aria-autocomplete="none"
 							aria-required="true"
-							className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 user-valid:border-(--success) autofill:bg-(--secondary) required:border(--error)"
+							className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
+							spellCheck
 						/>
 					</section>
 				</Suspense>
@@ -173,16 +178,17 @@ const ContactForm = () => {
 					<Suspense>
 						<Turnstile
 							siteKey={siteKey!}
-							/* sandbox={siteKey === "development"} */
 							retry="auto"
 							refreshExpired="auto"
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");
+								setLoading("error");
 							}}
 							onExpire={() => {
 								setTurnstileStatus("expired");
 								setError("Security check expired. Please verify again.");
+								setLoading("error");
 							}}
 							onLoad={() => {
 								setTurnstileStatus("required");
@@ -191,6 +197,7 @@ const ContactForm = () => {
 							onVerify={(token) => {
 								setTurnstileStatus("success");
 								setError(null);
+								setLoading("error");
 							}}
 						/>
 					</Suspense>
@@ -198,13 +205,13 @@ const ContactForm = () => {
 						type="submit"
 						className="bg-(--surface) raise capitalize"
 						id="contact-form"
-						disabled={loading || turnstileStatus !== "success"}
+						disabled={loading === "loading" || turnstileStatus !== "success"}
 					>
 						{t("btn")}
 					</button>
 				</section>
 			</form>
-			<ContactFarewell submitted={submitted} />
+			<ContactFarewell submitted={loading === "submitted"} />
 		</>
 	);
 };

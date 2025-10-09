@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-
 import "./globals.css";
 import Sidenav from "@/ui/Components/Sidenav/Sidenav";
-
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -20,8 +18,31 @@ export const metadata: Metadata = {
 		template: "%s | Daniel Freire",
 		default: "Daniel Freire",
 	},
-
+	authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
+	creator: "Daniel Freire",
+	keywords: [
+		"Daniel Freire",
+		"Portfolio",
+		"Next.js",
+		"React",
+		"TypeScript",
+		"JavaScript",
+		"Digital Marketing",
+	],
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
 	metadataBase: new URL("https://www.daniel-freire.com/"),
+
+	openGraph: {
+		type: "website",
+
+		images: [
+			{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
+		],
+	},
 };
 
 /* export async function generateMetadata({
@@ -129,12 +150,12 @@ export default async function RootLayout({
 			>
 				<NextIntlClientProvider messages={messages}>
 					<Providers>
-						<header className="flex">
+						<header className="flex flex-row">
 							<Sidenav />
 						</header>
 						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
 							<div id="main">{children}</div>
-							<Dock />
+							{/* <Dock /> */}
 						</main>
 					</Providers>
 				</NextIntlClientProvider>

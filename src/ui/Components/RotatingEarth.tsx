@@ -39,8 +39,8 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 	rotationSpeed = 1.2,
 	autoRotate = true,
 	backgroundColor = "rgba(0,0,0,0)",
-	globeImageUrl = "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg",
-	bumpImageUrl = "//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png",
+	globeImageUrl = "images/globes/earth-blue-marble.jpg",
+	bumpImageUrl = "images/globes/earth-topology.png",
 	className = "",
 	animateIn = true,
 }) => {
@@ -146,11 +146,12 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 					ref={globeRef}
 					width={width}
 					height={height}
+					bumpImageUrl={bumpImageUrl}
 					globeImageUrl={globeImageUrl}
 					/* globeTileEngineUrl={(x, y, l) =>
 						`https://tile.openstreetmap.org/${l}/${x}/${y}.png`
 					} */
-					bumpImageUrl={bumpImageUrl}
+
 					backgroundColor={backgroundColor}
 					onGlobeReady={handleGlobeReady}
 					animateIn

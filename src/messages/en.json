@@ -444,18 +444,6 @@
 			"logo": "/images/icons/linux-original.svg",
 			"name": "linux",
 			"svgr": "Linux"
-		},
-		{
-			"link": "https://www.gnu.org/software/bash/",
-			"logo": "/images/icons/bash-icon-svgrepo-com.svg",
-			"name": "bash",
-			"svgr": "Bash"
-		},
-		{
-			"link": "https://www.zsh.org/",
-			"logo": "/images/icons/color_zsh.svg",
-			"name": "zsh",
-			"svgr": "Zsh"
 		}
 	],
 	"topMainPage": [

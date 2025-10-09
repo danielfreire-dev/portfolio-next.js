@@ -18,9 +18,17 @@ interface NavLink {
 		| "/404"
 		| "/prices";
 	name: string;
+	isOpen?: boolean;
+	setIsOpen?: (value: boolean | ((prevVar: boolean) => boolean)) => void;
 }
 
-const NavigationList = () => {
+const NavigationList = ({
+	isOpen,
+	setIsOpen,
+}: {
+	isOpen: boolean;
+	setIsOpen: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+}) => {
 	const pathname = usePathname();
 	const t = useTranslations("sidenav");
 
@@ -57,7 +65,9 @@ const NavigationList = () => {
 				className={`navLinks${isActiveClass} flex justify-center`}
 				key={nanoid()}
 			>
-				<NavigationLink href={data.link}>{data.name}</NavigationLink>
+				<NavigationLink href={data.link} isOpen={isOpen} setIsOpen={setIsOpen}>
+					{data.name}
+				</NavigationLink>
 			</li>
 		);
 	});
