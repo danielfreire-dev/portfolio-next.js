@@ -6,7 +6,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
-import Dock from "@/ui/Components/Sidenav/Dock";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/providers/CookieBanner";
 import GoogleAnalytics from "@/providers/GoogleAnalytics";
@@ -155,7 +154,6 @@ export default async function RootLayout({
 						</header>
 						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
 							<div id="main">{children}</div>
-							{/* <Dock /> */}
 						</main>
 					</Providers>
 				</NextIntlClientProvider>
