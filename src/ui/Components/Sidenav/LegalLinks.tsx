@@ -1,11 +1,13 @@
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { TransitionLink } from "./TransitionLink";
 
 const LegalLinks = () => {
 	const t = useTranslations("sidenav");
+	const url = t("legal.privacyLink") as "/privacy-policy";
+
 	return (
 		<div className="flex flex-nowrap justify-center capitalize underline italic">
-			<Link href={t("legal.privacyLink")}>{t("legal.privacyName")}</Link>
+			<TransitionLink href={url}>{t("legal.privacyName")}</TransitionLink>
 			{/* <Link href={t("legal.impressumLink")} className="hidden">
 				{t("legal.impressumName")}
 			</Link> */}

@@ -25,7 +25,7 @@ export async function generateMetadata({
 		title: t("title.about"),
 		description: t("description.about"),
 		alternates: {
-			canonical: "https://daniel-freire.com/about",
+			canonical: "/about",
 			languages: {
 				en: "https://daniel-freire.com/en/about",
 				pt: "https://daniel-freire.com/pt/sobre",
