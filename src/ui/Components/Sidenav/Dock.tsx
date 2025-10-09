@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 import LocaleSwitcherMobile from "./LocaleSwitcherMobile";
 import NavigationList from "./NavigationList";
 
@@ -14,3 +14,4 @@ const Dock = () => {
 };
 
 export default Dock;
+ */
