@@ -2,6 +2,7 @@ import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
 import { TransitionLink } from "../Sidenav/TransitionLink";
 
+/* TODO: Fix btn for smaller screens */
 const Cta = () => {
 	const t = useTranslations("cta");
 

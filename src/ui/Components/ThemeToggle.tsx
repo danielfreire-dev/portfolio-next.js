@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { LineMdMoonFilledToSunnyFilledLoopTransition } from "./svgs/sun";
 import { LineMdSunnyFilledLoopToMoonFilledLoopTransition } from "./svgs/moon";
+
 /* import posthog from "posthog-js"; */
 
 const ThemeToggle = () => {

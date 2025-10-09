@@ -1,13 +1,11 @@
 import Techstack from "@/ui/Components/Techstack/Techstack";
 import Cta from "@/ui/Components/CtA/Cta";
-import Slider from "@/ui/Components/Carousel";
 
 import { Locale, useTranslations } from "next-intl";
 import { use } from "react";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Metadata, ResolvingMetadata } from "next";
-import { alt } from "./opengraph-image";
 import TopMainPage from "@/ui/Components/TopMainPage";
 
 interface Props {
@@ -30,7 +28,7 @@ export async function generateMetadata({
 		title: t("title.home"),
 		description: t("description.home"),
 		alternates: {
-			canonical: "https://daniel-freire.com",
+			canonical: "/",
 			languages: {
 				en: "https://daniel-freire.com/en",
 				pt: "https://daniel-freire.com/pt",
@@ -42,9 +40,6 @@ export async function generateMetadata({
 			description: t("description.home"),
 			url: "https://daniel-freire.com",
 			siteName: t("title.home"),
-			images: [
-				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
-			],
 			locale: locale,
 		},
 	};
