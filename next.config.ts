@@ -11,14 +11,14 @@ export const nextConfig: NextConfig = {
 
 		return config;
 	},
-	async rewrites() {
+	/* async rewrites() {
 		return [
 			{
 				source: "/ingest/:path*",
 				destination: "https://app.posthog.com/:path*",
 			},
 		];
-	},
+	}, */
 	allowedDevOrigins: [
 		"http://192.168.1.13:3000/*", // Replace with your actual IP and port
 		"http://localhost:3000/*", // Include localhost for local development

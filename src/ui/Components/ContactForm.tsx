@@ -203,7 +203,7 @@ const ContactForm = () => {
 					</Suspense>
 					<button
 						type="submit"
-						className="bg-(--surface) raise capitalize"
+						className="bg-(--surface) raise capitalize button-class"
 						id="contact-form"
 						disabled={loading === "loading" || turnstileStatus !== "success"}
 					>
