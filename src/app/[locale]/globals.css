@@ -2,13 +2,35 @@
 
 @import "tailwindcss";
 
+/* Add truncate to all text elements */
+/* @layer base {
+	/* Or target specific elements */
+/*	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	li,
+	span,
+	label,
+	small,
+	a,
+	footer {
+		@apply truncate;
+	}
+}
+*/
+
 :root {
-	/* Light Theme */
+	/*LightTheme*/
 	--primary: #ff7f00;
 	--secondary: #0066cc;
 	--secondary-hover: #005bb5;
 	--background: rgb(252, 252, 252);
-	--surface: rgba(255, 128, 0, 0.05);
+	--surface: #fdf6f0;
+	--surface-hover: #fae9dd;
 	--text: #2a2a36;
 	--text-hover: #4b5563;
 	--text-tertiary: #6b7280;
@@ -23,13 +45,11 @@
 	--success-hover: #238a7d;
 	--aura-hue: 20deg;
 	--spacing: 0.38rem;
-	--surface-rgb: 255, 255, 255;
-
-	/* Brands */
+	--surface-rgb: 253, 246, 240;
+	/*Brands*/
 	--nextjs-fill: #171717;
 	--html-fill: #000;
 	--github-fill: #0f0e0fff;
-
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -40,6 +60,7 @@
 	--secondary-hover: #00a0d6;
 	--background: #0f1624;
 	--surface: #1c2536;
+	--surface-hover: #253042;
 	--text: #e6f0ff;
 	--text-hover: #d1d5db;
 	--hover-text: #4b5563;
@@ -51,12 +72,11 @@
 	--error-hover: #ff5252;
 	--success: #70d6a3;
 	--success-hover: #5ac394;
-	/* Brands */
+	/*Brands*/
 	--nextjs-fill: #ececec;
 	--html-fill: #f9f9f9;
 	--github-fill: #fff;
-
-	--surface-rgb: rgb(28, 37, 54);
+	--surface-rgb: 28, 37, 54;
 	--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
 }
 
@@ -84,6 +104,21 @@ body {
 	color: var(--text);
 	font-family: Arial, Helvetica, sans-serif;
 	padding-bottom: env(safe-area-inset-bottom);
+	transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-webkit-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-moz-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-ms-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-o-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
 }
 #main {
 	transition-property: opacity, transform, filter, background;
@@ -185,7 +220,7 @@ select option {
 }
 /* NavLinks underline */
 nav ul li {
-	margin: 0 0 20px 0;
+	margin: 15px 0 15px 0;
 	padding: 0;
 	list-style: none;
 }
@@ -266,17 +301,17 @@ footer a {
 
 option:hover,
 option:focus {
-	background: var(--surface);
+	background-color: var(--surface);
 }
 
 select *:hover,
 select *:focus-within {
-	background: var(--secondary);
+	background-color: var(--secondary);
 }
 
 select *,
 select * {
-	background: var(--surface) !important;
+	background-color: var(--surface) !important;
 }
 
 #privacy-policy-check:focus,
@@ -328,4 +363,9 @@ select * {
 
 ::spelling-error {
 	text-decoration: underline solid var(--error) 2px;
+}
+
+.locale-option {
+	margin: 0;
+	padding: 10px 0;
 }

@@ -19,7 +19,7 @@ const Sidenav = () => {
 			<nav
 				id="sidenav"
 				className={`fixed lg:sticky top-0 left-0 h-screen w-64 z-50 flex-shrink-0 flex-grow-0 p-4 flex flex-col justify-between items-center
-				bg-background lg:bg-transparent lg:relative
+				bg-background lg:bg-transparent
 				transform transition-transform duration-500 ease-in-out
 				${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
 			>
@@ -37,7 +37,9 @@ const Sidenav = () => {
 							{t("header.title")}
 						</h1>
 					</TransitionLink>
-					<h3 className="flex justify-center mb-2">{t("header.role")}</h3>
+					<h3 className="flex justify-center mb-2 capitalize">
+						{t("header.role")}
+					</h3>
 				</div>
 				<ul className="capitalize">
 					<NavigationList isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -62,7 +64,7 @@ const Sidenav = () => {
 						</a>
 					</div>
 
-					<div className="flex flex-nowrap">
+					<div className="flex flex-nowrap justify-between">
 						<LocaleSwitcher />
 						<ThemeToggle />
 					</div>
