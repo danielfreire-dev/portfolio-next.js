@@ -95,6 +95,9 @@
 		"privacy": "privacy policy",
 		"privacyPolicyCheck": "I confirm that I read and agree with the",
 		"privacyPolicyUrl": "privacy-policy/",
+		"privacyPolicyUrlAriaDetails": "Privacy Policy",
+		"privacyPolicyUrlAriaLabel": "Privacy Policy",
+		"privacyPolicyUrlTitle": "Privacy Policy",
 		"required": "required",
 		"title": "get in touch"
 	},
@@ -313,24 +316,33 @@
 			"icons": {
 				"github": {
 					"alt": "GitHub",
+					"ariaDetails": "Daniel Freire's GitHub",
+					"ariaLAbel": "Daniel Freire's GitHub",
 					"link": "https://github.com/danielfreire-dev/",
-					"src": "/images/icons/github-square.svg"
+					"src": "/images/icons/github-square.svg",
+					"title": "Daniel Freire's GitHub"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
+					"ariaDetails": "Daniel Freire's Linkedin",
+					"ariaLAbel": "Daniel Freire's Linkedin",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
-					"src": "/images/icons/linkedin.svg"
+					"src": "/images/icons/linkedin.svg",
+					"title": "Daniel Freire's Linkedin"
 				}
 			}
 		},
 		"header": {
-			"role": "Front End Developer",
+			"role": "front end developer",
 			"title": "daniel freire"
 		},
 		"legal": {
 			"impressumLink": "/impressum",
 			"impressumName": "impressum",
 			"privacyLink": "/privacy-policy",
+			"privacyLinkAriaDetails": "Privacy Policy",
+			"privacyLinkAriaLabel": "Privacy Policy",
+			"privacyLinkTitle": "Privacy Policy",
 			"privacyName": "privacy policy"
 		},
 		"links": [
@@ -340,7 +352,11 @@
 			{ "link": "/contact", "name": "contact" }
 		],
 		"privacy": "privacy policy",
-		"rights": "Daniel Freire ® all rights reserved"
+		"rights": "Daniel Freire ® all rights reserved",
+		"select": {
+			"languageSelectAriaLabel": "Select Language Menu",
+			"languageSelectTitle": "Select Language Menu"
+		}
 	},
 	"tech": [
 		{

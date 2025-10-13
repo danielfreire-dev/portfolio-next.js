@@ -1,20 +1,19 @@
-import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
-import { useLocale, useTranslations } from "next-intl";
-import { routing } from "@/i18n/routing";
+"use client";
+
+import { useLocale } from "next-intl";
+import CustomSelect from "./CustomSelect";
 
 const LocaleSwitcher = () => {
-	const t = useTranslations("localeSwitcher");
-	const locale = useLocale();
+	const currentLocale = useLocale();
 
-	return (
-		<LocaleSwitcherSelect defaultValue={locale}>
-			{routing.locales.map((lang) => (
-				<option key={lang} value={lang} className="">
-					{t("locale", { locale: lang })}
-				</option>
-			))}
-		</LocaleSwitcherSelect>
-	);
+	// Define your available locales with their labels
+	const locales = [
+		{ value: "en", label: "🇬🇧 English" },
+		{ value: "pt", label: "🇵🇹 Português" },
+		// Add more locales as needed
+	];
+
+	return <CustomSelect defaultValue={currentLocale} locales={locales} />;
 };
 
 export default LocaleSwitcher;

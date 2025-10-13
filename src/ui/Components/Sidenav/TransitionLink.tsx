@@ -12,6 +12,9 @@ interface TransitionLinkProps extends ComponentProps<typeof Link> {
 	inputData?: onClickCmdProps;
 	isOpen?: boolean;
 	setIsOpen?: (value: boolean | ((prevVar: boolean) => boolean)) => void;
+	ariaLabel?: string;
+	title?: string;
+	ariaDetails?: string;
 }
 
 function sleep(ms: number): Promise<void> {
@@ -24,6 +27,9 @@ export const TransitionLink = ({
 	inputData,
 	isOpen,
 	setIsOpen,
+	ariaLabel,
+	title,
+	ariaDetails,
 	...props
 }: TransitionLinkProps) => {
 	const router = useRouter();
@@ -49,7 +55,15 @@ export const TransitionLink = ({
 	};
 
 	return (
-		<Link {...props} href={href} onClick={HandleTransition}>
+		<Link
+			{...props}
+			href={href}
+			onClick={HandleTransition}
+			aria-label={ariaLabel}
+			title={title}
+			aria-details={ariaDetails}
+			className="truncate"
+		>
 			{children}
 		</Link>
 	);
