@@ -7,7 +7,14 @@ const LegalLinks = () => {
 
 	return (
 		<div className="flex flex-nowrap justify-center capitalize underline italic">
-			<TransitionLink href={url}>{t("legal.privacyName")}</TransitionLink>
+			<TransitionLink
+				href={url}
+				ariaLabel={t("legal.privacyLinkAriaLabel")}
+				title={t("legal.privacyLinkTitle")}
+				ariaDetails={t("legal.privacyLinkAriaDetails")}
+			>
+				{t("legal.privacyName")}
+			</TransitionLink>
 			{/* <Link href={t("legal.impressumLink")} className="hidden">
 				{t("legal.impressumName")}
 			</Link> */}

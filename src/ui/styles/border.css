@@ -24,18 +24,19 @@
 		0 0 0 0 var(--hover),
 		inset 6em 3.5em 0 0 var(--hover);
 }
-button {
+.button-class {
 	color: var(--color);
 	transition: 0.25s;
 }
-button:hover,
-button:focus {
+
+.button-class:hover,
+.button-class:focus {
 	border-color: var(--hover);
 	color: var(--background);
 	cursor: pointer;
 	background-color: var(--surface);
 }
-button {
+.button-class {
 	background: none;
 	border: 2px solid;
 	font: inherit;
