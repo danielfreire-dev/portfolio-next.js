@@ -164,6 +164,10 @@ textarea {
 	border-color: var(--primary);
 	padding: 0.25em 0.5em;
 
+	&::spelling-error {
+		text-decoration: underline solid var(--error) 2px;
+	}
+
 	&:focus {
 		outline: none;
 		border-color: var(--primary);
@@ -175,12 +179,10 @@ textarea {
 		border-color: var(--primary);
 		box-shadow: 0 0 0 2px var(--primary);
 	}
-	&:valid,
+
 	&:user-valid {
 		border-color: var(--success);
 	}
-
-	&:invalid,
 	&:user-invalid {
 		outline: none;
 		border-color: var(--error);
@@ -299,21 +301,6 @@ footer a {
 	height: 2em;
 }
 
-option:hover,
-option:focus {
-	background-color: var(--surface);
-}
-
-select *:hover,
-select *:focus-within {
-	background-color: var(--secondary);
-}
-
-select *,
-select * {
-	background-color: var(--surface) !important;
-}
-
 #privacy-policy-check:focus,
 #message:hover,
 #telephone:hover,
@@ -361,11 +348,13 @@ select * {
 	}
 }
 
-::spelling-error {
-	text-decoration: underline solid var(--error) 2px;
-}
-
 .locale-option {
 	margin: 0;
 	padding: 10px 0;
+}
+.required::after {
+	content: "*" / "Required";
+}
+.optional::after {
+	content: "Optional" / "Optional";
 }

@@ -176,7 +176,7 @@
 	},
 
 	"home": {
-		"techstack": "Ferramentas Tecnológicas",
+		"techstack": "Competências e Ferramentas",
 		"trending": "Portfólio"
 	},
 	"icons": {
@@ -347,8 +347,8 @@
 		},
 		"links": [
 			{ "link": "/", "name": "início" },
-			{ "link": "/portfolio", "name": "portfólio" },
 			{ "link": "/sobre", "name": "sobre" },
+			{ "link": "/portfolio", "name": "portfólio" },
 			{ "link": "/contactos", "name": "contactos" }
 		],
 		"privacy": "política de privacidade",
