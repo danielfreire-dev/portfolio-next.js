@@ -175,7 +175,7 @@
 		}
 	},
 	"home": {
-		"techstack": "Tech Stack",
+		"techstack": "Skills & Tools",
 		"trending": "Portfolio"
 	},
 	"icons": {
@@ -347,8 +347,8 @@
 		},
 		"links": [
 			{ "link": "/", "name": "home" },
-			{ "link": "/portfolio", "name": "portfolio" },
 			{ "link": "/about", "name": "about" },
+			{ "link": "/portfolio", "name": "portfolio" },
 			{ "link": "/contact", "name": "contact" }
 		],
 		"privacy": "privacy policy",

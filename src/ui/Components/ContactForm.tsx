@@ -67,7 +67,7 @@ const ContactForm = () => {
 						<section className="flex flex-col">
 							<label htmlFor="firstName" className="capitalize">
 								{t("firstName")}
-								<span className="text-(--error)">*</span>
+								<span className="text-(--error) required" />
 							</label>
 							<input
 								type="text"
@@ -101,7 +101,7 @@ const ContactForm = () => {
 						<section className="flex flex-col">
 							<label htmlFor="email" className="capitalize">
 								{t("email")}
-								<span className="text-(--error)">*</span>
+								<span className="text-(--error) required" />
 							</label>
 							<input
 								type="email"
@@ -135,7 +135,7 @@ const ContactForm = () => {
 					<section className="message-div flex flex-col">
 						<label htmlFor="message" className="capitalize">
 							{t("message")}
-							<span className="text-(--error)">*</span>
+							<span className="text-(--error) required" />
 						</label>
 						<textarea
 							name="message"
