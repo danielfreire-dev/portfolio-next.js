@@ -157,7 +157,7 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 					animateIn
 					showAtmosphere
 					atmosphereColor="lightskyblue"
-					atmosphereAltitude={0.15}
+					atmosphereAltitude={0}
 					showGraticules={false}
 					enablePointerInteraction={false}
 					arcsData={arcsData}
