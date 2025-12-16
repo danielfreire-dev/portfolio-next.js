@@ -176,7 +176,7 @@
 	},
 
 	"home": {
-		"techstack": "Ferramentas Tecnológicas",
+		"techstack": "Competências e Ferramentas",
 		"trending": "Portfólio"
 	},
 	"icons": {
@@ -221,6 +221,12 @@
 		"cta": ["confira", "veja o projeto ao vivo →"],
 		"pageTitle": "portfólio",
 		"projects": [
+			{
+				"link": "https://muraryu.com",
+				"src": "/images/screenshots/muraryu.webp",
+				"summary": "MuraRyu é uma nova Admnistradora de Condomínios em Portugal.",
+				"title": "muraRyu"
+			},
 			{
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
@@ -310,6 +316,14 @@
 		"paragraph9": "Se acredita que não cumprimos com as leis de proteção de dados, tem o direito de apresentar uma reclamação junto da autoridade de controlo competente.",
 		"title": "Política de Privacidade do Website de Daniel Freire"
 	},
+	"services": {
+		"numberFive": "",
+		"numberFour": "",
+		"numberOne": "",
+		"numberSix": "",
+		"numberThree": "",
+		"numberTwo": ""
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Feito com 🐞 por",
@@ -333,7 +347,7 @@
 			}
 		},
 		"header": {
-			"role": "Desenvolvedor Front End",
+			"role": "desenvolvedor web",
 			"title": "daniel freire"
 		},
 		"legal": {
@@ -347,8 +361,8 @@
 		},
 		"links": [
 			{ "link": "/", "name": "início" },
-			{ "link": "/portfolio", "name": "portfólio" },
 			{ "link": "/sobre", "name": "sobre" },
+			{ "link": "/portfolio", "name": "portfólio" },
 			{ "link": "/contactos", "name": "contactos" }
 		],
 		"privacy": "política de privacidade",

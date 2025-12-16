@@ -14,7 +14,6 @@ import {
 } from "@react-email/components";
 
 export default function WelcomeEmail(
-	/*  eslint-disable-next-line @typescript-eslint/no-explicit-any */
 	t: any,
 	firstName: string,
 	lastName: string,

@@ -24,7 +24,7 @@ const TopMainPage = () => {
 	};
 
 	return (
-		<div className="container mx-auto flex flex-nowrap flex-row justify-center items-center xl:gap-7 ">
+		<div className="mx-auto l:pr-20 flex flex-nowrap flex-row justify-center items-center xl:gap-7 bg-radial-[at_84%_50%] from-(--primary)/20 via-(--accent1)/5 to-transparent to-66%">
 			{getRandomItem(t.raw("topMainPage"))}
 
 			<Suspense>

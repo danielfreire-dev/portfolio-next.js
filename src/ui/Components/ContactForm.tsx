@@ -9,7 +9,6 @@ import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
-/* import posthog from "posthog-js"; */
 
 const ContactForm = () => {
 	/* TODO: Replace boolean states w/ type submition */
@@ -52,7 +51,6 @@ const ContactForm = () => {
 		await sendEmail(formValues);
 		await getData(formValues);
 
-		/* setSubmitted((prev) => !prev); */
 		setLoading("submitted");
 	}
 	return (
@@ -67,7 +65,7 @@ const ContactForm = () => {
 						<section className="flex flex-col">
 							<label htmlFor="firstName" className="capitalize">
 								{t("firstName")}
-								<span className="text-(--error)">*</span>
+								<span className="text-(--error) required" />
 							</label>
 							<input
 								type="text"
@@ -101,7 +99,7 @@ const ContactForm = () => {
 						<section className="flex flex-col">
 							<label htmlFor="email" className="capitalize">
 								{t("email")}
-								<span className="text-(--error)">*</span>
+								<span className="text-(--error) required" />
 							</label>
 							<input
 								type="email"
@@ -135,7 +133,7 @@ const ContactForm = () => {
 					<section className="message-div flex flex-col">
 						<label htmlFor="message" className="capitalize">
 							{t("message")}
-							<span className="text-(--error)">*</span>
+							<span className="text-(--error) required" />
 						</label>
 						<textarea
 							name="message"
@@ -180,6 +178,7 @@ const ContactForm = () => {
 							siteKey={siteKey!}
 							retry="auto"
 							refreshExpired="auto"
+							sandbox={process.env.NODE_ENV === "development"}
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");

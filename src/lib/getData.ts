@@ -3,8 +3,13 @@
 import { getTranslations } from "next-intl/server";
 import { Resend } from "resend";
 
-// eslint-disable-next-line no-undef
-const resend = new Resend(process.env.NEXT_PUBLIC_resend);
+const resendApiKey = process.env.NEXT_PUBLIC_resend;
+
+if (!resendApiKey) {
+	throw new Error("Missing Resend API key");
+}
+
+const resend = new Resend(resendApiKey);
 
 function getCurrentWESTDateTime() {
 	const now = new Date();
@@ -32,7 +37,6 @@ export const getData = async (data: Record<string, FormDataEntryValue>) => {
 	await resend.emails.send({
 		from: `Daniel Freire <${t("email")}>`,
 
-		// eslint-disable-next-line no-undef
 		to: `${process.env.NEXT_PUBLIC_dataEmail}`,
 		subject: `${data.firstName} ${data.lastName} | Portfólio Daniel Freire`,
 		html: `<p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
