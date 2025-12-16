@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import * as SVGs from "../svgs";
-import { Suspense } from "react";
+import Image from "next/image";
 
 interface TechItem {
 	link: string;
@@ -14,6 +14,7 @@ interface TechCardsProps {
 }
 
 const TechCards = ({ tech }: TechCardsProps) => {
+
 	const techstackMap = tech.map((data) => {
 		const SvgComponent = SVGs[data.svgr as keyof typeof SVGs];
 
@@ -22,20 +23,24 @@ const TechCards = ({ tech }: TechCardsProps) => {
 			return null;
 		}
 
+
+
 		return (
 			<div className="bg-(--surface) py-7 px-9 m-4" key={nanoid()}>
-				<Suspense>
+
 					<a
 						href={data.link}
 						className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<SvgComponent alt={`${data.name} logo`} />
+
+
+						<SvgComponent alt={`${data.name} logo`}  />
 
 						<p className="capitalize mt-1.5 self-center">{data.name}</p>
 					</a>
-				</Suspense>
+
 			</div>
 		);
 	});
@@ -44,12 +49,12 @@ const TechCards = ({ tech }: TechCardsProps) => {
 };
 
 export default TechCards;
-{
-	/* <Image
-						src={data.logo}
-						alt={`${data.name} logo`}
-						width={100}
-						height={50}
-						className={`mb-2${fillClass}`}
-					/> */
-}
+
+	{/* <Image
+		src={data.logo}
+		alt={`${data.name} logo`}
+		width={100}
+		height={50}
+		className={`mb-2 ${fillClass} text-amber-300 `}
+		/> */}
+

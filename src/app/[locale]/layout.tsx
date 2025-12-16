@@ -145,14 +145,14 @@ export default async function RootLayout({
 				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
 			</Suspense>
 			<body
-				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--hover-text)`}
+				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--hover-text) stars`}
 			>
 				<NextIntlClientProvider messages={messages}>
 					<Providers>
 						<header className="flex flex-row">
 							<Sidenav />
 						</header>
-						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-[60px] lg:pb-0">
+						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5">
 							<div id="main">{children}</div>
 						</main>
 					</Providers>

@@ -222,6 +222,12 @@
 		"pageTitle": "portfólio",
 		"projects": [
 			{
+				"link": "https://muraryu.com",
+				"src": "/images/screenshots/muraryu.webp",
+				"summary": "MuraRyu é uma nova Admnistradora de Condomínios em Portugal.",
+				"title": "muraRyu"
+			},
+			{
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
 				"summary": "Jogo de perguntas com mais de 4.000 perguntas.",
@@ -333,7 +339,7 @@
 			}
 		},
 		"header": {
-			"role": "Desenvolvedor Front End",
+			"role": "desenvolvedor web",
 			"title": "daniel freire"
 		},
 		"legal": {
