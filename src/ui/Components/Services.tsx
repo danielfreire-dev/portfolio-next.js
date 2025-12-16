@@ -1,9 +1,7 @@
+import { useTranslations } from "next-intl";
+
 const Services = () => {
 	const t = useTranslations();
-	return (
-		<>
-			<h2>Services</h2>{" "}
-		</>
-	);
+	return <></>;
 };
 export default Services;
