@@ -50,7 +50,7 @@ const ThemeToggle = () => {
 
 		mediaQuery.addEventListener("change", handleChange);
 		return () => mediaQuery.removeEventListener("change", handleChange);
-	}); // Remove dependency array to run on every render
+	}); /* Removed dependency array to run on every render */
 
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const newTheme = e.target.checked;

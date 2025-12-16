@@ -13,7 +13,6 @@ export const sendEmail = async (data: Record<string, FormDataEntryValue>) => {
 		from: `Daniel Freire <${t("email")}>`,
 		to: `${data.email as string}`,
 		subject: `${t("title")} ${data.firstName as string} ${data.lastName as string}`,
-		/* html: `${t("message")} ${data.firstName} ${data.lastName}`, */
 		react: WelcomeEmail(e, data.firstName as string, data.lastName as string),
 	});
 };
