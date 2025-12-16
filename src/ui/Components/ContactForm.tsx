@@ -9,7 +9,6 @@ import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
-/* import posthog from "posthog-js"; */
 
 const ContactForm = () => {
 	/* TODO: Replace boolean states w/ type submition */
@@ -52,7 +51,6 @@ const ContactForm = () => {
 		await sendEmail(formValues);
 		await getData(formValues);
 
-		/* setSubmitted((prev) => !prev); */
 		setLoading("submitted");
 	}
 	return (
@@ -180,6 +178,7 @@ const ContactForm = () => {
 							siteKey={siteKey!}
 							retry="auto"
 							refreshExpired="auto"
+							sandbox={process.env.NODE_ENV === "development"}
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");

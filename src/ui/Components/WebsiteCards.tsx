@@ -25,7 +25,6 @@ const WebsiteCards = () => {
 									width={1000}
 									height={1000}
 									className="hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110 website-card-image"
-									placeholder="blur"
 								/>
 							</a>
 						</div>

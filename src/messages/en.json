@@ -255,9 +255,15 @@
 		"projects-title": "Projects",
 		"websites": [
 			{
+				"link": "https://muraryu.com",
+				"src": "/images/screenshots/muraryu.webp",
+				"summary": "MuraRyu is a new Condominium Management company in Portugal.",
+				"title": "muraRyu"
+			},
+			{
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Website built to showcase the works of the famous Portuguese artist Victó.",
+				"summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
 				"title": "victó's art gallery"
 			},
 			{
@@ -310,6 +316,14 @@
 		"paragraph9": "If you believe that we have not complied with data protection laws, you have the right to lodge a complaint with the relevant supervisory authority.",
 		"title": "Privacy Policy for Daniel Freire's Website"
 	},
+	"services": {
+		"numberFive": "",
+		"numberFour": "",
+		"numberOne": "",
+		"numberSix": "",
+		"numberThree": "",
+		"numberTwo": ""
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Made with 🐞 by",
@@ -333,7 +347,7 @@
 			}
 		},
 		"header": {
-			"role": "front end developer",
+			"role": "web developer",
 			"title": "daniel freire"
 		},
 		"legal": {

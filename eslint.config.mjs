@@ -324,6 +324,7 @@ export default [
 			"css/no-important": "warn",
 
 			// Disable irrelevant ESLint core rules
+			"css/no-invalid-properties": "off",
 			"css/use-layers": "off",
 			"css/use-baseline": "off",
 			"no-irregular-whitespace": "off",
