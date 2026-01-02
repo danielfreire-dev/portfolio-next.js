@@ -24,8 +24,11 @@ const TopMainPage = () => {
 	};
 
 	return (
-		<div className="mx-auto l:pr-20 flex flex-nowrap flex-row justify-center items-center xl:gap-7 bg-radial-[at_84%_50%] from-(--primary)/20 via-(--accent1)/5 to-transparent to-66%">
-			{getRandomItem(t.raw("topMainPage"))}
+		<div className="mx-auto l:pr-20 flex flex-nowrap flex-row justify-center items-center xl:gap-7 md:bg-radial-[at_84%_50%] from-(--primary)/20 via-(--accent1)/5 to-transparent to-66%">
+			<div className="justify-center px-10 text-center lg:px-0  lg:text-left focus-in-expand">
+				<h2 className="">{t("topMainPageBlurb.p1")}</h2>
+				<div className="text mt-2">{t("topMainPageBlurb.p2")}</div>
+			</div>
 
 			<Suspense>
 				<RotatingEarth

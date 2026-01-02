@@ -189,8 +189,8 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} other {Unknown}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} other {Unknown}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {
@@ -501,5 +501,9 @@
 			"description": "Websites require constant care to remain secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
 			"title": "Ongoing Care for Your Digital Assets"
 		}
-	]
+	],
+	"topMainPageBlurb": {
+		"p1": "Tired of software that holds your business back?",
+		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications—like CRM systems, project trackers, and data dashboards—that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let’s discuss what you’re trying to achieve."
+	}
 }
