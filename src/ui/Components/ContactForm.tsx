@@ -165,8 +165,9 @@ const ContactForm = () => {
 						<TransitionLink
 							href={t("privacyPolicyUrl") as "/privacy-policy"}
 							target="_blank"
+							className="underline"
 						>
-							{t("privacy")}
+				<span className="underline">{t("privacy")}</span>
 						</TransitionLink>
 						.
 					</label>

@@ -7,7 +7,7 @@ export interface TechCardProps {
 }
 
 // userLanguage Types
-export type UserLanguageType = "pt" | "en";
+export type UserLanguageType = "pt" | "en" | "dk" | "pl" | "de";
 export interface SidenavProps {
 	userLanguage: UserLanguageType;
 	onLanguageChange: (lang: UserLanguageType) => void;
