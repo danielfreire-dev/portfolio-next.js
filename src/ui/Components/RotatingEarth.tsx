@@ -141,7 +141,7 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 	return (
 		<div ref={containerRef} className={`relative ${className}`}>
 			{/* Globe container */}
-			<div className="relative w-full">
+			<div className="relative w-full cursor-grab">
 				<Globe
 					ref={globeRef}
 					width={width}
@@ -159,7 +159,7 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 					atmosphereColor="lightskyblue"
 					atmosphereAltitude={0}
 					showGraticules={false}
-					enablePointerInteraction={false}
+					enablePointerInteraction
 					arcsData={arcsData}
 					arcColor="color"
 					arcDashLength={() => Math.random()}

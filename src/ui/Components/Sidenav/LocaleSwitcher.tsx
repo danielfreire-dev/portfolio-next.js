@@ -10,6 +10,9 @@ const LocaleSwitcher = () => {
 	const locales = [
 		{ value: "en", label: "🇬🇧 English" },
 		{ value: "pt", label: "🇵🇹 Português" },
+		{ value: "dk", label: "🇩🇰 Dansk" },
+		{ value: "pl", label: "🇵🇱 Polski" },
+		{ value: "de", label: "🇩🇪 Deutsch" },
 		// Add more locales as needed
 	];
 
