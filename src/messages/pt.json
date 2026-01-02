@@ -190,8 +190,8 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} other {Desconhecido}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} other {Desconhecido}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {
@@ -501,5 +501,9 @@
 			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
 			"title": "cuidado contínuo para os seus ativos digitais"
 		}
-	]
+	],
+	"topMainPageBlurb": {
+		"p1": "Cansado de software que limita o seu negócio?",
+		"p2": "A maior parte do software empresarial é demasiado rígido ou demasiado complexo. Eu especializo-me no desenvolvimento de aplicações web personalizadas — como sistemas CRM, rastreadores de projetos e painéis de dados — que se adaptam à forma como o seu negócio realmente funciona. Se precisa de uma ferramenta que resolva um problema específico sem funcionalidades desnecessárias, vamos discutir o que pretende alcançar."
+	}
 }
