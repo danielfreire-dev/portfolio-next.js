@@ -189,8 +189,8 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} other {Unbekannt}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} other {Unbekannt}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {
