@@ -39,3 +39,10 @@ Take a look at these couple examples that I have in my own portfolio:
 **Twitter Battle:** https://github.com/alecortega/twitter-battle
 
 **Patch Panel:** https://github.com/alecortega/patch-panel
+
+### Adding language
+
+1. create new .json file in (...)/messages
+2. update routing.ts in (...)/i18n
+3. update UserLanguageType in types.ts
+4. update LocaleSwitcher.tsx
