@@ -81,6 +81,12 @@ const ContactForm = () => {
 
 		// Initial update
 		updateCookieTheme();
+
+		// Set up interval to check for cookie changes
+		const intervalId = setInterval(updateCookieTheme, 1000);
+
+		// Clean up interval on unmount
+		return () => clearInterval(intervalId);
 	}, []);
 
 	// Force Turnstile to re-mount when theme changes
@@ -217,6 +223,7 @@ const ContactForm = () => {
 							refreshExpired="auto"
 							sandbox={process.env.NODE_ENV === "development"}
 							theme={cookieTheme}
+							appearance="execute"
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");

@@ -159,10 +159,42 @@ small,
 	font-family: var(--font-small), Arial, Helvetica, sans-serif;
 }
 
+div {
+	transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-webkit-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-moz-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-ms-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-o-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+}
 input,
 textarea {
 	border-color: var(--primary);
 	padding: 0.25em 0.5em;
+	transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-webkit-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-moz-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-ms-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-o-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
 
 	&::spelling-error {
 		text-decoration: underline solid var(--error) 2px;
