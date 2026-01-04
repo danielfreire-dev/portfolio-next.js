@@ -5,7 +5,7 @@ import { sendEmail } from "@/lib/resend";
 /* import { sendEmail } from "@/app/api/send"; */
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
@@ -20,10 +20,6 @@ const ContactForm = () => {
 		"success" | "error" | "expired" | "required"
 	>("required");
 	const [error, setError] = useState<string | null>(null);
-	const [cookieTheme, setCookieTheme] = useState<"auto" | "light" | "dark">(
-		"auto",
-	);
-	const [turnstileKey, setTurnstileKey] = useState(0);
 
 	const t = useTranslations("contact");
 
@@ -57,43 +53,6 @@ const ContactForm = () => {
 
 		setLoading("submitted");
 	}
-
-	/* getCookie Theme */
-	function getCookie(name: string): string | null {
-		if (typeof document === "undefined") return null; // SSR safety
-		const value = `; ${document.cookie}`;
-		const parts = value.split(`; ${name}=`);
-		if (parts.length === 2) {
-			return parts.pop()?.split(";").shift() || null;
-		}
-		return null;
-	}
-
-	useEffect(() => {
-		const updateCookieTheme = () => {
-			const theme = getCookie("theme");
-			if (theme === "auto" || theme === "light" || theme === "dark") {
-				setCookieTheme(theme);
-			} else {
-				setCookieTheme("auto");
-			}
-		};
-
-		// Initial update
-		updateCookieTheme();
-
-		// Set up interval to check for cookie changes
-		const intervalId = setInterval(updateCookieTheme, 1000);
-
-		// Clean up interval on unmount
-		return () => clearInterval(intervalId);
-	}, []);
-
-	// Force Turnstile to re-mount when theme changes
-	useEffect(() => {
-		setTurnstileKey((prev) => prev + 1);
-	}, [cookieTheme]);
-
 	return (
 		<>
 			{/* TODO: Add form input sanitation */}
@@ -217,12 +176,10 @@ const ContactForm = () => {
 				<section className="flex flex-col justify-center mx-auto mt-2.5">
 					<Suspense>
 						<Turnstile
-							key={`turnstile-${turnstileKey}`}
 							siteKey={siteKey!}
 							retry="auto"
 							refreshExpired="auto"
 							sandbox={process.env.NODE_ENV === "development"}
-							theme={cookieTheme}
 							appearance="execute"
 							onError={() => {
 								setTurnstileStatus("error");
