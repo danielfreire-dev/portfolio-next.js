@@ -78,18 +78,21 @@
 	--github-fill: #fff;
 	--surface-rgb: 28, 37, 54;
 	--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scrollbar-color: var(--accent1) var(--surface);
+	scrollbar-width: auto;
+	scroll-behavior: smooth;
+	transition: scrollbar-color 0.3s ease-in;
 }
 
 .energy-glow {
 	box-shadow: 0 0 8px hsl(var(--aura-hue), 100%, 50%, 0.3);
 }
-
-/* ::selection {
-	background-color: var(--primary);
-}
-
-
- */
 
 /* eslint-disable-next-line css/no-invalid-at-rules */
 @theme inline {
@@ -124,26 +127,6 @@ body {
 	transition-property: opacity, transform, filter, background;
 	transition-timing-function: ease-in-out;
 	transition-duration: 500ms;
-}
-
-/* width */
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: var(--surface);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: var(--accent1);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: var(--accent2);
 }
 
 .page-transition {
