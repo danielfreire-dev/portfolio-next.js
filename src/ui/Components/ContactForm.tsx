@@ -167,7 +167,7 @@ const ContactForm = () => {
 							target="_blank"
 							className="underline"
 						>
-				<span className="underline">{t("privacy")}</span>
+							<span className="underline">{t("privacy")}</span>
 						</TransitionLink>
 						.
 					</label>
@@ -180,6 +180,7 @@ const ContactForm = () => {
 							retry="auto"
 							refreshExpired="auto"
 							sandbox={process.env.NODE_ENV === "development"}
+							appearance="execute"
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");

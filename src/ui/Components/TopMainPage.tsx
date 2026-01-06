@@ -22,22 +22,22 @@ const TopMainPage = () => {
 			</div>
 		);
 	};
-
+	/* md:bg-radial-[at_84%_50%] from-(--primary)/20 via-(--accent1)/5 to-transparent to-66%" */
 	return (
-		<div className="mx-auto l:pr-20 flex flex-nowrap flex-row justify-center items-center xl:gap-7 md:bg-radial-[at_84%_50%] from-(--primary)/20 via-(--accent1)/5 to-transparent to-66%">
+		<div className="mx-auto lg:mr-[33%] flex flex-nowrap flex-row  justify-center items-center xl:gap-7 l">
 			<div className="justify-center px-10 text-center lg:px-0  lg:text-left focus-in-expand">
 				<h2 className="">{t("topMainPageBlurb.p1")}</h2>
 				<div className="text mt-2">{t("topMainPageBlurb.p2")}</div>
 			</div>
 
 			<Suspense>
-				<RotatingEarth
+				{/* <RotatingEarth
 					width={500}
 					height={500}
 					backgroundColor="rgba(0,0,0,0)"
 					className="hidden md:block"
 					globeImageUrl="/images/globes/earth-blue-marble.png"
-				/>
+				/> */}
 			</Suspense>
 		</div>
 	);

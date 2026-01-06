@@ -78,18 +78,25 @@
 	--github-fill: #fff;
 	--surface-rgb: 28, 37, 54;
 	--cosmos-bg: linear-gradient(135deg, #0f1624 0%, #1a2233 100%);
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scrollbar-color: var(--accent1) var(--surface);
+	scrollbar-width: auto;
+	scroll-behavior: smooth;
+	transition: scrollbar-color 0.3s ease-in;
+	-webkit-transition: scrollbar-color 0.3s ease-in;
+	-moz-transition: scrollbar-color 0.3s ease-in;
+	-ms-transition: scrollbar-color 0.3s ease-in;
+	-o-transition: scrollbar-color 0.3s ease-in;
 }
 
 .energy-glow {
 	box-shadow: 0 0 8px hsl(var(--aura-hue), 100%, 50%, 0.3);
 }
-
-/* ::selection {
-	background-color: var(--primary);
-}
-
-
- */
 
 /* eslint-disable-next-line css/no-invalid-at-rules */
 @theme inline {
@@ -131,6 +138,7 @@ body {
 	background: var(--background);
 	transform: translateY(40px);
 	filter: blur(12px);
+	-webkit-filter: blur(12px);
 }
 
 #logo {
@@ -159,10 +167,42 @@ small,
 	font-family: var(--font-small), Arial, Helvetica, sans-serif;
 }
 
+div {
+	transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-webkit-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-moz-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-ms-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-o-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+}
 input,
 textarea {
 	border-color: var(--primary);
 	padding: 0.25em 0.5em;
+	transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-webkit-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-moz-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-ms-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+	-o-transition:
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
 
 	&::spelling-error {
 		text-decoration: underline solid var(--error) 2px;
@@ -613,8 +653,7 @@ footer a {
 
 .stars::after {
 	animation-delay: 2s;
-	box-shadow:
-    /* Original stars for after element */
+	box-shadow:    /* Original stars for after element */
 		30px 60px 0 0 rgba(252, 252, 252, 0.4),
 		80px 120px 0 0 rgba(252, 252, 252, 0.2),
 		130px 90px 0 0 rgba(252, 252, 252, 0.5),
@@ -647,11 +686,17 @@ footer a {
 		2180px 160px 0 0 rgba(252, 252, 252, 0.3),
 		2050px 700px 0 0 rgba(252, 252, 252, 0.4),
 		2150px 750px 0 0 rgba(252, 252, 252, 0.2);
-
 	animation:
 		star-twinkle 4s ease-in-out infinite,
 		parallax-smooth 180s linear infinite;
 	transform: translateX(50px) translateY(30px);
+	-webkit-animation:
+		star-twinkle 4s ease-in-out infinite,
+		parallax-smooth 180s linear infinite;
+	-webkit-transform: translateX(50px) translateY(30px);
+	-moz-transform: translateX(50px) translateY(30px);
+	-ms-transform: translateX(50px) translateY(30px);
+	-o-transform: translateX(50px) translateY(30px);
 }
 
 /* Smooth parallax animation that loops seamlessly */
