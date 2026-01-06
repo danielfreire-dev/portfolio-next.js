@@ -84,7 +84,7 @@
 }
 
 html {
-	scrollbar-color: var(--accent1) var(--surface);
+	scrollbar-color: var(--accent1) var(--surface-hover);
 	scrollbar-width: auto;
 	scroll-behavior: smooth;
 	transition: scrollbar-color 0.3s ease-in;
