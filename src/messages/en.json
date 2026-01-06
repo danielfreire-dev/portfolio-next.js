@@ -128,10 +128,11 @@
 		"title": "Would You Like A Cookie? 🍪"
 	},
 	"cta": {
+		"blurb": "Got a Project in Mind? Let’s Chat.",
 		"button": [
 			"Let's talk about your business",
 			"Got a Project in Mind? Let’s Chat.",
-			"Looking for a Front-End Developer? You Found One!",
+			"Looking for a Web Developer? You Found One!",
 			"Say Hello — I Don’t Byte 👋",
 			"Let’s Make Your Website Unforgetable →",
 			"Need a Developer Who Delivers? Let's Talk.",
@@ -189,8 +190,8 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} other {Unknown}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} other {Unknown}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {

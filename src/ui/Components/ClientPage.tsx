@@ -15,10 +15,10 @@ const ClientSideAbout = () => {
 					alt="drawing of Daniel"
 					width={900}
 					height={900}
-					className="hidden lg:block mt-10 transition duration-900 ease-in"
+					className="hidden lg:block mt-4 transition duration-900 ease-in"
 				/>
 				<div className="text-justify">
-					<h2 className="pt-5">{t("title1")}</h2>
+					<h2 className="">{t("title1")}</h2>
 
 					<p className="mb-2">{t("paragraph1")}</p>
 					<p className="mb-2">{t("paragraph2")}</p>

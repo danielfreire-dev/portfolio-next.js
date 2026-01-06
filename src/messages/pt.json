@@ -128,6 +128,7 @@
 		"title": "Quer Aceitar um Cookie? 🍪"
 	},
 	"cta": {
+		"blurb": "Tem um Projeto em Mente? Vamos Conversar.",
 		"button": [
 			"Vamos falar sobre o seu negócio",
 			"Tem um Projeto em Mente? Vamos Conversar.",
@@ -190,8 +191,8 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} other {Unknown}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} other {Unknown}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {

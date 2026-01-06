@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import { LineMdMoonFilledToSunnyFilledLoopTransition } from "./svgs/sun";
 import { LineMdSunnyFilledLoopToMoonFilledLoopTransition } from "./svgs/moon";
 
-/* import posthog from "posthog-js"; */
-
 const ThemeToggle = () => {
 	const [isDark, setIsDark] = useState(false);
 
 	// Helper function to get cookie value
 	function getCookie(name: string): string | null {
 		if (typeof document === "undefined") return null; // SSR safety
+
 		const value = `; ${document.cookie}`;
 		const parts = value.split(`; ${name}=`);
 		if (parts.length === 2) {
