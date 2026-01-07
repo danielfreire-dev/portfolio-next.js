@@ -25,6 +25,14 @@ const ContactForm = () => {
 
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
+	/**
+	 * Handle contact form submission by validating Turnstile, sending form data, and updating submission state.
+	 *
+	 * Prevents the default form submission, verifies the Turnstile result, collects form fields (including the Turnstile token),
+	 * forwards the data to the configured email and data endpoints, and updates loading/error states to reflect progress or failure.
+	 *
+	 * @param e - The form submit event for the contact form
+	 */
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
