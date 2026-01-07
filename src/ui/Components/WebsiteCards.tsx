@@ -13,7 +13,7 @@ const WebsiteCards = () => {
 			.raw(`${items}`)
 			.map((item: Dictionary["portfolio"]["websites" | "projects"][number]) => (
 				<div
-					className=" max-w-lg last:mr-0 mb-6 p-3 bg-(--surface)"
+					className=" max-w-lg last:mr-0 mb-6 p-3 surface-cards"
 					key={nanoid()}
 				>
 					<Suspense fallback={<WebsiteCardSkeleton />}>

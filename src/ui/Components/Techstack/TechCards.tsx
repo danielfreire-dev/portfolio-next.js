@@ -14,7 +14,6 @@ interface TechCardsProps {
 }
 
 const TechCards = ({ tech }: TechCardsProps) => {
-
 	const techstackMap = tech.map((data) => {
 		const SvgComponent = SVGs[data.svgr as keyof typeof SVGs];
 
@@ -23,24 +22,18 @@ const TechCards = ({ tech }: TechCardsProps) => {
 			return null;
 		}
 
-
-
 		return (
-			<div className="bg-(--surface) py-7 px-9 m-4" key={nanoid()}>
+			<div className="py-7 px-9 m-4 surface-cards" key={nanoid()}>
+				<a
+					href={data.link}
+					className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<SvgComponent alt={`${data.name} logo`} />
 
-					<a
-						href={data.link}
-						className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-
-
-						<SvgComponent alt={`${data.name} logo`}  />
-
-						<p className="capitalize mt-1.5 self-center">{data.name}</p>
-					</a>
-
+					<p className="capitalize mt-1.5 self-center">{data.name}</p>
+				</a>
 			</div>
 		);
 	});
@@ -50,11 +43,12 @@ const TechCards = ({ tech }: TechCardsProps) => {
 
 export default TechCards;
 
-	{/* <Image
+{
+	/* <Image
 		src={data.logo}
 		alt={`${data.name} logo`}
 		width={100}
 		height={50}
 		className={`mb-2 ${fillClass} text-amber-300 `}
-		/> */}
-
+		/> */
+}

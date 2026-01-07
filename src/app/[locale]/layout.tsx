@@ -152,7 +152,7 @@ export default async function RootLayout({
 						<header className="flex flex-row">
 							<Sidenav />
 						</header>
-						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-8">
+						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
 							<div id="main">{children}</div>
 						</main>
 					</Providers>
