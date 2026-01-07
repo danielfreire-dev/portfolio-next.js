@@ -9,12 +9,11 @@ import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
+import { useThemeStore } from "@/stores/theme-store";
 
 const ContactForm = () => {
 	/* TODO: Replace boolean states w/ type submition */
 	type submission = "idle" | "loading" | "loaded" | "error" | "submitted";
-
-	/* const [submitted, setSubmitted] = useState<boolean>(false); */
 	const [loading, setLoading] = useState<submission>("idle"); //og false
 	const [turnstileStatus, setTurnstileStatus] = useState<
 		"success" | "error" | "expired" | "required"
@@ -22,14 +21,9 @@ const ContactForm = () => {
 	const [error, setError] = useState<string | null>(null);
 
 	const t = useTranslations("contact");
+	const { isDarkStore, setValue } = useThemeStore();
 
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
-
-	/* 	const captureButtonClick = () => {
-		posthog.capture("ContactButton_clicked", {
-			cool: true,
-		});
-	}; */
 
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
@@ -176,11 +170,13 @@ const ContactForm = () => {
 				<section className="flex flex-col justify-center mx-auto mt-2.5">
 					<Suspense>
 						<Turnstile
+							key={`turnstile-${isDarkStore ? "dark" : "light"}`}
 							siteKey={siteKey!}
 							retry="auto"
 							refreshExpired="auto"
 							sandbox={process.env.NODE_ENV === "development"}
 							appearance="execute"
+							theme={isDarkStore ? "dark" : "light"}
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");
