@@ -87,13 +87,24 @@ html {
 	scrollbar-color: var(--accent1) var(--surface-hover);
 	scrollbar-width: auto;
 	scroll-behavior: smooth;
-	transition: scrollbar-color 0.3s ease-in;
-	-webkit-transition: scrollbar-color 0.3s ease-in;
-	-moz-transition: scrollbar-color 0.3s ease-in;
-	-ms-transition: scrollbar-color 0.3s ease-in;
-	-o-transition: scrollbar-color 0.3s ease-in;
-}
+	background: var(--background);
+	color: var(--text);
+	padding-bottom: env(safe-area-inset-bottom);
 
+	font-family: Arial, Helvetica, sans-serif;
+	/* Combined transitions for better performance */
+	transition:
+		scrollbar-color 0.3s ease-in,
+		background-color 0.3s ease-in,
+		color 0.3s ease-in;
+}
+.surface-cards {
+	color: var(--text);
+	background: var(--surface);
+	transition:
+		background-color 0.4s ease-in,
+		color 0.4s ease-in;
+}
 .energy-glow {
 	box-shadow: 0 0 8px hsl(var(--aura-hue), 100%, 50%, 0.3);
 }
@@ -106,27 +117,6 @@ html {
 	--font-mono: var(--font-geist-mono);
 }
 
-body {
-	background: var(--background);
-	color: var(--text);
-	font-family: Arial, Helvetica, sans-serif;
-	padding-bottom: env(safe-area-inset-bottom);
-	transition:
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-webkit-transition:
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-moz-transition:
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-ms-transition:
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-o-transition:
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-}
 #main {
 	transition-property: opacity, transform, filter, background;
 	transition-timing-function: ease-in-out;
