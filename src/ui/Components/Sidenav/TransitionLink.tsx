@@ -4,6 +4,7 @@ import React, { ComponentProps, ReactNode, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { set } from "node_modules/cypress/types/lodash";
+import path from "path";
 /* import posthog from "posthog-js"; */
 
 type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink" | "Logo";
@@ -35,6 +36,7 @@ export const TransitionLink = ({
 	const router = useRouter();
 	const pathname = usePathname();
 	const mainElement = document.getElementById("main");
+
 	useEffect(() => {
 		if (setIsOpen && isOpen) {
 			setIsOpen((prev) => !prev);
@@ -47,11 +49,17 @@ export const TransitionLink = ({
 	) => {
 		e.preventDefault();
 
-		mainElement?.classList.add("page-transition");
+		if (
+			(href === "/" && pathname.slice(0, -2) !== href) ||
+			(href !== "/" && pathname.slice(3) !== href)
+		) {
+			mainElement?.classList.add("page-transition");
 
-		await sleep(500);
+			/* defines how fast the transition happens */
+			await sleep(333);
 
-		router.push(href as string);
+			router.push(href as string);
+		}
 	};
 
 	return (
