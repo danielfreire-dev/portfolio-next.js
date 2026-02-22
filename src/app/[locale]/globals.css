@@ -32,7 +32,7 @@
 	--text: #2a2a36; /* 15.6:1 */
 	--text-hover: #4b5563; /* 10.5:1 */
 	--text-tertiary: #6b7280; /* 7.2:1 */
-	--text-carousel: rgb(255, 249, 242);
+	--text-carousel: rgb(255 249 242);
 	--hover-text: #e0e0ff; /* 4.6:1 */
 	--btn-text: #2a2a36; /* 14.8:1  */
 	--accent1: #ffc400;
@@ -44,6 +44,7 @@
 	--aura-hue: 20deg;
 	--spacing: 0.38rem;
 	--surface-rgb: 253, 246, 240;
+	--selector-txt: #22222c;
 	/*Brands*/
 	--nextjs-fill: #171717;
 	--html-fill: #000;
@@ -65,13 +66,14 @@
 	--text-hover: #d1d5db; /* 8.3:1 */
 	--hover-text: #e0e0ff;
 	--text-tertiary: #bac1ce; /* 6.1:1  */
-	--text-carousel: rgb(255, 249, 242);
+	--text-carousel: rgb(255 249 242);
 	--accent1: #ffea70; /* 10.2:1 */
 	--accent2: #ff4081; /* 5.6:1 */
 	--error: #ff5555;
 	--error-hover: #ff4040;
 	--success: #70d6a3; /* 6.3:1  */
 	--success-hover: #5ac394;
+	--selector-txt: #002e74;
 	/*Brands*/
 	--nextjs-fill: #ececec;
 	--html-fill: #f9f9f9;
@@ -109,7 +111,7 @@ html {
 	box-shadow: 0 0 8px hsl(var(--aura-hue), 100%, 50%, 0.3);
 }
 
-a[href^="https"]:not([href*="yourdomain"])::after {
+a[href^="https"]:not([href*="daniel-freire.com"])::after {
 	content: "";
 	width: 1em;
 	height: 1em;
