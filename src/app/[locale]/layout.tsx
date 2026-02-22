@@ -122,6 +122,15 @@ export function generateStaticParams() {
 
 const googleAnalytics = process.env.NEXT_PUBLIC_GA4;
 
+/**
+ * Renders the application's root HTML layout with the resolved locale.
+ *
+ * Validates the resolved `locale` and triggers a 404 response if it is not supported; loads localization messages and returns the root HTML structure containing internationalization and global providers, analytics, and the application shell.
+ *
+ * @param children - The page content to render inside the main application container
+ * @param params - A promise that resolves to an object with the `locale` string used to set the document language and select localization messages
+ * @returns The root HTML element for the application, with `lang` set to the resolved locale and global providers (i18n, app providers, analytics) applied
+ */
 export default async function RootLayout({
 	children,
 	params,
