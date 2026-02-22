@@ -145,7 +145,9 @@ export default async function RootLayout({
 				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
 			</Suspense>
 			<body
-				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--hover-text) stars`}
+				className={
+					`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) ` /* stars */
+				}
 			>
 				<NextIntlClientProvider messages={messages}>
 					<Providers>

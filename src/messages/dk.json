@@ -128,6 +128,7 @@
 		"title": "Kunne Du Tænke Dig En Småkage? 🍪"
 	},
 	"cta": {
+		"blurb": "Har du et projekt i tankerne? Lad os tale sammen.",
 		"button": [
 			"Lad os tale om din virksomhed",
 			"Har du et projekt i tankerne? Lad os snakke.",
@@ -311,14 +312,34 @@
 		"paragraph9": "Hvis du mener at vi ikke har overholdt databeskyttelseslovene, har du ret til at indgive en klage til den relevante tilsynsmyndighed.",
 		"title": "Privatlivspolitik for Daniel Freires Hjemmeside"
 	},
-	"services": {
-		"numberFive": "",
-		"numberFour": "",
-		"numberOne": "",
-		"numberSix": "",
-		"numberThree": "",
-		"numberTwo": ""
-	},
+	"services": [
+		{
+			"icon": "",
+			"text": "Skab en unik tilstedeværelse online og skil din virksomhed ud.",
+			"title": "Webudvikling"
+		},
+		{
+			"icon": "",
+			"text": "Byg skræddersyede online butikker med sikker betalingsbehandling.",
+			"title": "E-handelsudvikling"
+		},
+		{
+			"icon": "",
+			"text": "Bliv fundet og vis folk, at din løsning er den bedste.",
+			"title": "SEO"
+		},
+		{
+			"icon": "",
+			"text": "Jeg hjælper dig med at tage dit brand til det næste niveau.",
+			"title": "Digital markedsføring"
+		},
+		{
+			"icon": "",
+			"text": "Håndter alt relateret til hosting.",
+			"title": "Hosting Management & Support"
+		}
+	],
+
 	"sidenav": {
 		"footer": {
 			"blurb": "Lavet med 🐞 af",

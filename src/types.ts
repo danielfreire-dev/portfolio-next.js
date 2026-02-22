@@ -205,3 +205,9 @@ export interface NavLink {
 		| "/prices";
 	name: string;
 }
+
+export interface Service {
+	icon: string;
+	title: string;
+	text: string;
+}

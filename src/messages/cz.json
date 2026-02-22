@@ -311,14 +311,34 @@
 		"paragraph9": "Pokud se domníváte, že jsme nepostupovali v souladu se zákony o ochraně osobních údajů, máte právo podat stížnost u příslušného dozorového orgánu.",
 		"title": "Zásady ochrany osobních údajů pro webové stránky Daniela Freire"
 	},
-	"services": {
-		"numberFive": "",
-		"numberFour": "",
-		"numberOne": "",
-		"numberSix": "",
-		"numberThree": "",
-		"numberTwo": ""
-	},
+	"services": [
+		{
+			"icon": "",
+			"text": "Vytvořte si jedinečnou online přítomnost a odlište se od konkurence.",
+			"title": "Vývoj webových stránek"
+		},
+		{
+			"icon": "",
+			"text": "Vytvářejte vlastní online obchody se zabezpečeným zpracováním plateb.",
+			"title": "Vývoj e-commerce"
+		},
+		{
+			"icon": "",
+			"text": "Buďte vidět a ukažte lidem, že vaše řešení je to nejlepší.",
+			"title": "SEO (Optimalizace pro vyhledávače)"
+		},
+		{
+			"icon": "",
+			"text": "Pomůžu vám posunout vaši značku na další úroveň.",
+			"title": "Digitální marketing"
+		},
+		{
+			"icon": "",
+			"text": "Správa všeho souvisejícího s hostingem.",
+			"title": "Správa a podpora hostingu"
+		}
+	],
+
 	"sidenav": {
 		"footer": {
 			"blurb": "Vytvořeno s 🐞",
