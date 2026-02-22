@@ -1,3 +1,5 @@
+import { SVGProps } from "react";
+
 export function ExternalLink(props: SVGProps<SVGSVGElement>) {
 	return (
 		<svg
