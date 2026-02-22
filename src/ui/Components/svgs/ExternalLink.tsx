@@ -9,8 +9,8 @@ export function ExternalLink(props: SVGProps<SVGSVGElement>) {
 			viewBox="0 0 24 24"
 			{...props}
 		>
-			<!-- eslint-disable-next-line i18next/no-literal-string -->
-			<title>External-link SVG Icon</title>
+			{/* <!-- eslint-disable-next-line i18next/no-literal-string -->
+			<title>Externa	l-link SVG Icon</title> */}
 			<g
 				fill="none"
 				stroke="currentColor"
