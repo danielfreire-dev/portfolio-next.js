@@ -1,4 +1,4 @@
-import { Service } from "@/types";
+/* import { Service } from "@/types";
 import { nanoid } from "nanoid";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -62,3 +62,4 @@ const Services = () => {
 	);
 };
 export default Services;
+ */
