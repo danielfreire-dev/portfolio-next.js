@@ -312,14 +312,33 @@
 		"paragraph9": "Jeśli uważasz, że nie przestrzegamy przepisów o ochronie danych, masz prawo wnieść skargę do właściwego organu nadzorczego.",
 		"title": "Polityka Prywatności Strony Internetowej Daniela Freire"
 	},
-	"services": {
-		"numberFive": "",
-		"numberFour": "",
-		"numberOne": "",
-		"numberSix": "",
-		"numberThree": "",
-		"numberTwo": ""
-	},
+	"services": [
+		{
+			"icon": "",
+			"text": "Stwórz unikalną obecność online i wyróżnij swoją firmę.",
+			"title": "Rozwój stron internetowych"
+		},
+		{
+			"icon": "",
+			"text": "Tworzenie niestandardowych sklepów internetowych z bezpiecznym przetwarzaniem płatności.",
+			"title": "Rozwój e-commerce"
+		},
+		{
+			"icon": "",
+			"text": "Bądź widoczny i pokaż ludziom, że Twoje rozwiązanie jest najlepsze.",
+			"title": "SEO (Optymalizacja dla wyszukiwarek)"
+		},
+		{
+			"icon": "",
+			"text": "Pomogę Ci przenieść Twoją markę na wyższy poziom.",
+			"title": "Marketing cyfrowy"
+		},
+		{
+			"icon": "",
+			"text": "Zarządzaj wszystkimi sprawami związanymi z hostingiem.",
+			"title": "Zarządzanie i wsparcie hostingu"
+		}
+	],
 	"sidenav": {
 		"footer": {
 			"blurb": "Stworzone z 🐞 przez",
