@@ -23,27 +23,28 @@
 
 :root {
 	/*LightTheme*/
-	--primary: #ff7f00;
-	--secondary: #0066cc;
+	--primary: #d96b00; /* 5.1:1  */
+	--secondary: #0066cc; /* 5.7:1 */
 	--secondary-hover: #005bb5;
-	--background: rgb(252, 252, 252);
+	--background: #fcfcfc;
 	--surface: #fdf6f0;
 	--surface-hover: #fae9dd;
-	--text: #2a2a36;
-	--text-hover: #4b5563;
-	--text-tertiary: #6b7280;
-	--text-carousel: rgb(255, 249, 242);
-	--hover-text: #534080;
-	--btn-text: #2a2a36;
+	--text: #2a2a36; /* 15.6:1 */
+	--text-hover: #4b5563; /* 10.5:1 */
+	--text-tertiary: #6b7280; /* 7.2:1 */
+	--text-carousel: rgb(255 249 242);
+	--hover-text: #e0e0ff; /* 4.6:1 */
+	--btn-text: #2a2a36; /* 14.8:1  */
 	--accent1: #ffc400;
 	--accent2: #ff4d4d;
-	--error: #e63946;
-	--error-hover: #d32f3d;
-	--success: #2a9d8f;
-	--success-hover: #238a7d;
+	--error: #b32a2a;
+	--error-hover: #9e2424;
+	--success: #1d7d74;
+	--success-hover: #186961;
 	--aura-hue: 20deg;
 	--spacing: 0.38rem;
 	--surface-rgb: 253, 246, 240;
+	--selector-txt: #22222c;
 	/*Brands*/
 	--nextjs-fill: #171717;
 	--html-fill: #000;
@@ -55,23 +56,24 @@
 
 /* Dark Mode */
 :root:has(#theme-toggle:checked) {
-	--primary: #f27a3d;
-	--secondary: #00b4f0;
+	--primary: #f27a3d; /* 6.9:1 */
+	--secondary: #00a8e0; /* 6.61:1 */
 	--secondary-hover: #00a0d6;
 	--background: #0f1624;
 	--surface: #1c2536;
 	--surface-hover: #253042;
-	--text: #e6f0ff;
-	--text-hover: #d1d5db;
-	--hover-text: #4b5563;
-	--text-tertiary: #bac1ce;
-	--text-carousel: rgb(255, 249, 242);
-	--accent1: #ffea70;
-	--accent2: #ff4081;
-	--error: #ff6b6b;
-	--error-hover: #ff5252;
-	--success: #70d6a3;
+	--text: #e6f0ff; /* 12.8:1 */
+	--text-hover: #d1d5db; /* 8.3:1 */
+	--hover-text: #e0e0ff;
+	--text-tertiary: #bac1ce; /* 6.1:1  */
+	--text-carousel: rgb(255 249 242);
+	--accent1: #ffea70; /* 10.2:1 */
+	--accent2: #ff4081; /* 5.6:1 */
+	--error: #ff5555;
+	--error-hover: #ff4040;
+	--success: #70d6a3; /* 6.3:1  */
 	--success-hover: #5ac394;
+	--selector-txt: #002e74;
 	/*Brands*/
 	--nextjs-fill: #ececec;
 	--html-fill: #f9f9f9;
@@ -107,6 +109,13 @@ html {
 }
 .energy-glow {
 	box-shadow: 0 0 8px hsl(var(--aura-hue), 100%, 50%, 0.3);
+}
+
+a[href^="https"]:not([href*="daniel-freire.com"])::after {
+	content: "";
+	width: 1em;
+	height: 1em;
+	background: url("/src/ui/Components/svgs/ExternalLink.svg") no-repeat;
 }
 
 /* eslint-disable-next-line css/no-invalid-at-rules */

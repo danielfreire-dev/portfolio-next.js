@@ -223,12 +223,6 @@
 		"pageTitle": "portfólio",
 		"projects": [
 			{
-				"link": "https://muraryu.com",
-				"src": "/images/screenshots/muraryu.webp",
-				"summary": "MuraRyu é uma nova Admnistradora de Condomínios em Portugal.",
-				"title": "muraRyu"
-			},
-			{
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
 				"summary": "Jogo de perguntas com mais de 4.000 perguntas.",
@@ -261,6 +255,12 @@
 		],
 		"projects-title": "Projetos",
 		"websites": [
+			{
+				"link": "https://muraryu.com",
+				"src": "/images/screenshots/muraryu.webp",
+				"summary": "MuraRyu é uma nova Admnistradora de Condomínios em Portugal.",
+				"title": "muraRyu"
+			},
 			{
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
@@ -317,14 +317,33 @@
 		"paragraph9": "Se acredita que não cumprimos com as leis de proteção de dados, tem o direito de apresentar uma reclamação junto da autoridade de controlo competente.",
 		"title": "Política de Privacidade do Website de Daniel Freire"
 	},
-	"services": {
-		"numberFive": "",
-		"numberFour": "",
-		"numberOne": "",
-		"numberSix": "",
-		"numberThree": "",
-		"numberTwo": ""
-	},
+	"services": [
+		{
+			"icon": "",
+			"text": "Crie uma presença única online e destaque o seu negócio.",
+			"title": "Desenvolvimento Web"
+		},
+		{
+			"icon": "",
+			"text": "Desenvolva lojas online personalizadas com processamento de pagamentos seguro.",
+			"title": "Desenvolvimento de E-commerce"
+		},
+		{
+			"icon": "",
+			"text": "Seja encontrado e mostre às pessoas que a sua solução é a melhor.",
+			"title": "SEO (Otimização para Motores de Busca)"
+		},
+		{
+			"icon": "",
+			"text": "Vou ajudá-lo a levar a sua marca para o próximo nível.",
+			"title": "Marketing Digital"
+		},
+		{
+			"icon": "",
+			"text": "Gerencie tudo relacionado ao hospedagem.",
+			"title": "Gestão e Suporte de Hospedagem"
+		}
+	],
 	"sidenav": {
 		"footer": {
 			"blurb": "Feito com 🐞 por",

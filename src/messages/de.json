@@ -311,14 +311,33 @@
 		"paragraph9": "Wenn Sie der Ansicht sind, dass wir die Datenschutzgesetze nicht eingehalten haben, haben Sie das Recht, Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.",
 		"title": "Datenschutzerklärung für die Website von Daniel Freire"
 	},
-	"services": {
-		"numberFive": "",
-		"numberFour": "",
-		"numberOne": "",
-		"numberSix": "",
-		"numberThree": "",
-		"numberTwo": ""
-	},
+	"services": [
+		{
+			"icon": "",
+			"text": "Bauen Sie eine einzigartige Online-Präsenz auf und heben Sie Ihr Unternehmen hervor.",
+			"title": "Webentwicklung"
+		},
+		{
+			"icon": "",
+			"text": "Erstellen Sie maßgeschneiderte Online-Shops mit sicherer Zahlungsabwicklung.",
+			"title": "E-Commerce-Entwicklung"
+		},
+		{
+			"icon": "",
+			"text": "Werden Sie gefunden und zeigen Sie den Menschen, dass Ihre Lösung die beste ist.",
+			"title": "SEO (Suchmaschinenoptimierung)"
+		},
+		{
+			"icon": "",
+			"text": "Ich helfe Ihnen, Ihre Marke auf das nächste Level zu bringen.",
+			"title": "Digitales Marketing"
+		},
+		{
+			"icon": "",
+			"text": "Verwalten Sie alles rund um das Hosting.",
+			"title": "Hosting-Management & Support"
+		}
+	],
 	"sidenav": {
 		"footer": {
 			"blurb": "Gemacht mit 🐞 von",

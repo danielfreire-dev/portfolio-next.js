@@ -7,6 +7,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Metadata, ResolvingMetadata } from "next";
 import TopMainPage from "@/ui/Components/TopMainPage";
+import Services from "@/ui/Components/Services";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -55,12 +56,13 @@ export default function HomePage({ params }: Props) {
 	// Enable static rendering
 	setRequestLocale(locale);
 
-	const t = useTranslations();
+	/* const t = useTranslations(); */
 
 	return (
 		<>
 			{/* <Slider items={t.raw("carousel")} /> */}
 			<TopMainPage />
+			{/* <Services /> */}
 			<Techstack />
 			<Cta />
 		</>

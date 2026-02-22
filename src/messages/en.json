@@ -317,14 +317,33 @@
 		"paragraph9": "If you believe that we have not complied with data protection laws, you have the right to lodge a complaint with the relevant supervisory authority.",
 		"title": "Privacy Policy for Daniel Freire's Website"
 	},
-	"services": {
-		"numberFive": "",
-		"numberFour": "",
-		"numberOne": "",
-		"numberSix": "",
-		"numberThree": "",
-		"numberTwo": ""
-	},
+	"services": [
+		{
+			"icon": "",
+			"text": "Build a unique presence online and set your business apart.",
+			"title": "Web Development"
+		},
+		{
+			"icon": "",
+			"text": "Build custom online stores with secure payment processing.",
+			"title": "E-commerce Development"
+		},
+		{
+			"icon": "",
+			"text": "Be found and show people that your solution is the very best.",
+			"title": "SEO"
+		},
+		{
+			"icon": "",
+			"text": "I will help you take your brand to the next level.",
+			"title": "Digital Marketing"
+		},
+		{
+			"icon": "",
+			"text": "Manage all things related to hosting.",
+			"title": "Hosting Management & Support"
+		}
+	],
 	"sidenav": {
 		"footer": {
 			"blurb": "Made with 🐞 by",
