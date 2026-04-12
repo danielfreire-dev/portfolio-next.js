@@ -218,10 +218,7 @@
   },
   "portfolio": {
     "all": "Todos",
-    "cta": [
-      "confira",
-      "veja o projeto ao vivo →"
-    ],
+    "cta": ["confira", "veja o projeto ao vivo →"],
     "pageTitle": "portfólio",
     "projects": [
       {
@@ -513,32 +510,31 @@
   "topMainPage": {
     "blurbsArray": [
       {
-        "description": "Is your website holding back your business growth? Our comprehensive performance audit deeply analyzes your technical infrastructure, user experience, and conversion potential. We’ll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
-        "title": "Revolutionize Your Digital Presence Now!"
+        "description": "O seu website está a limitar o crescimento do seu negócio? A nossa auditoria de desempenho abrangente analisa profundamente a sua infraestrutura técnica, a experiência do utilizador e o potencial de conversão. Forneceremos um relatório detalhado com as melhorias críticas que podem aumentar drasticamente o seu desempenho online.",
+        "title": "Revolucione já a sua presença digital!"
       },
       {
-        "description": "Websites require constant care to stay secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Unlock Your Website’s Full Potential"
+        "description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+        "title": "Desbloqueie todo o potencial do seu website"
       },
       {
-        "description": "Stop settling for generic templates. Our custom web development services create fully tailored digital experiences that align perfectly with your brand’s unique identity and business goals. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
-        "title": "Build Your Dream Project Today"
+        "description": "Pare de se contentar com modelos genéricos. Os nossos serviços de desenvolvimento web personalizado criam experiências digitais totalmente adaptadas à identidade única da sua marca e aos seus objetivos de negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
+        "title": "Construa hoje o seu projeto de sonho"
       },
       {
-        "description": "Speed isn’t just a feature—it’s a competitive advantage. Our performance optimization service ensures your website loads extremely fast, delivering an exceptional user experience that keeps visitors engaged and converts more effectively.",
-        "title": "Accelerate Your Website’s Potential"
+        "description": "A velocidade não é apenas uma funcionalidade – é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carrega extremamente rápido, proporcionando uma experiência excecional ao utilizador que mantém os visitantes envolvidos e converte de forma mais eficaz.",
+        "title": "Acelere o potencial do seu website"
       },
       {
-        "description": "Technology evolves rapidly. Our specialized migration services help you transition seamlessly to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
-        "title": "Modernize Your Digital Infrastructure"
+        "description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a fazer a transição para tecnologias web modernas e eficientes, sem interromper as suas operações existentes. Garantimos um percurso de atualização suave e com gestão de riscos.",
+        "title": "Modernize a sua infraestrutura digital"
       },
       {
-        "description": "Websites require constant care to remain secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Ongoing Care for Your Digital Assets"
+        "description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+        "title": "Cuidados contínuos para os seus ativos digitais"
       }
     ],
-    "p1": "Default text for p1",
-    "p2": "Default text for p2",
-    "rocket": "/images/icons/django-rocket.svg"
+    "p1": "Cansado de software que atrasa o seu negócio?",
+    "p2": "A maioria do software empresarial é demasiado rígido ou demasiado complexo. Especializo-me no desenvolvimento de aplicações web personalizadas – como sistemas CRM, rastreadores de projetos e painéis de dados – que se adequam à forma como o seu negócio realmente funciona. Se precisa de uma ferramenta que resolva um problema específico sem funcionalidades desnecessárias, vamos discutir o que pretende alcançar."
   }
 }
