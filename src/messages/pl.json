@@ -218,10 +218,7 @@
   },
   "portfolio": {
     "all": "Wszystkie",
-    "cta": [
-      "sprawdź to",
-      "zobacz żywy projekt →"
-    ],
+    "cta": ["sprawdź to", "zobacz żywy projekt →"],
     "pageTitle": "portfolio",
     "projects": [
       {
@@ -295,12 +292,7 @@
     "paragraph10": "Możemy aktualizować niniejszą politykę prywatności od czasu do czasu. Poinformujemy Cię o wszelkich zmianach, publikując nową politykę prywatności na tej stronie.",
     "paragraph11": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej polityki prywatności, skontaktuj się z nami pod adresem",
     "paragraph2": "Zbieramy informacje osobiste, które dobrowolnie nam podajesz, kiedy wypełniasz formularz na naszej stronie internetowej. Informacje osobiste, które zbieramy, obejmują:",
-    "paragraph2li": [
-      "Imię",
-      "Nazwisko",
-      "Adres e-mail",
-      "Numer telefonu"
-    ],
+    "paragraph2li": ["Imię", "Nazwisko", "Adres e-mail", "Numer telefonu"],
     "paragraph3": "Zebrane informacje będą wykorzystywane do kontaktu z Tobą w przyszłości. Będziemy używać Twoich danych osobowych wyłącznie w tym konkretnym celu.",
     "paragraph4": "Przetwarzamy Twoje dane osobowe w oparciu o Twoją zgodę, którą wyrażasz, wypełniając formularz na naszej stronie internetowej.",
     "paragraph5": "Nie udostępniamy Twoich danych osobowych stronom trzecim, z wyjątkiem przypadków wymaganych przez prawo.",
@@ -513,32 +505,31 @@
   "topMainPage": {
     "blurbsArray": [
       {
-        "description": "Is your website holding back your business growth? Our comprehensive performance audit deeply analyzes your technical infrastructure, user experience, and conversion potential. We’ll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
-        "title": "Revolutionize Your Digital Presence Now!"
+        "description": "Czy Twoja strona internetowa hamuje rozwój Twojej firmy? Nasz kompleksowy audyt wydajności dogłębnie analizuje Twoją infrastrukturę techniczną, doświadczenia użytkowników i potencjał konwersji. Przedstawimy szczegółowy raport wskazujący kluczowe ulepszenia, które mogą drastycznie zwiększyć Twoje wyniki online.",
+        "title": "Zrewolucjonizuj swoją obecność w sieci już teraz!"
       },
       {
-        "description": "Websites require constant care to stay secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Unlock Your Website’s Full Potential"
+        "description": "Strony internetowe wymagają stałej opieki, aby pozostać bezpiecznymi, funkcjonalnymi i konkurencyjnymi. Nasze kompleksowe pakiety konserwacyjne oferują proaktywne monitorowanie, natychmiastowe rozwiązywanie problemów i ciągłe aktualizacje technologiczne.",
+        "title": "Odblokuj pełny potencjał swojej strony"
       },
       {
-        "description": "Stop settling for generic templates. Our custom web development services create fully tailored digital experiences that align perfectly with your brand’s unique identity and business goals. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
-        "title": "Build Your Dream Project Today"
+        "description": "Przestań zadowalać się generycznymi szablonami. Nasze usługi tworzenia niestandardowych stron internetowych zapewniają w pełni dostosowane doświadczenia cyfrowe, które idealnie pasują do unikalnej tożsamości Twojej marki i celów biznesowych. Przekształcamy Twój koncept w wydajne, responsywne i nowoczesne rozwiązanie internetowe.",
+        "title": "Zbuduj swój wymarzony projekt już dziś"
       },
       {
-        "description": "Speed isn’t just a feature—it’s a competitive advantage. Our performance optimization service ensures your website loads extremely fast, delivering an exceptional user experience that keeps visitors engaged and converts more effectively.",
-        "title": "Accelerate Your Website’s Potential"
+        "description": "Szybkość to nie tylko funkcja – to przewaga konkurencyjna. Nasza usługa optymalizacji wydajności zapewnia niezwykle szybkie ładowanie Twojej witryny, dostarczając wyjątkowych doświadczeń użytkowników, które angażują odwiedzających i skuteczniej zwiększają konwersje.",
+        "title": "Przyspiesz potencjał swojej strony"
       },
       {
-        "description": "Technology evolves rapidly. Our specialized migration services help you transition seamlessly to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
-        "title": "Modernize Your Digital Infrastructure"
+        "description": "Technologia rozwija się szybko. Nasze specjalistyczne usługi migracji pomagają płynnie przejść na nowoczesne, wydajne technologie internetowe bez zakłócania dotychczasowych operacji. Zapewniamy gładką ścieżkę modernizacji z kontrolowanym ryzykiem.",
+        "title": "Zmodernizuj swoją infrastrukturę cyfrową"
       },
       {
-        "description": "Websites require constant care to remain secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Ongoing Care for Your Digital Assets"
+        "description": "Strony internetowe wymagają stałej opieki, aby pozostać bezpiecznymi, funkcjonalnymi i konkurencyjnymi. Nasze kompleksowe pakiety konserwacyjne oferują proaktywne monitorowanie, natychmiastowe rozwiązywanie problemów i ciągłe aktualizacje technologiczne.",
+        "title": "Ciągła opieka nad Twoimi aktywami cyfrowymi"
       }
     ],
-    "p1": "Default text for p1",
-    "p2": "Default text for p2",
-    "rocket": "/images/icons/django-rocket.svg"
+    "p1": "Masz dość oprogramowania, które hamuje rozwój Twojej firmy?",
+    "p2": "Większość oprogramowania biznesowego jest albo zbyt sztywna, albo zbyt złożona. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych – takich jak systemy CRM, trackery projektów i pulpity danych – które pasują do tego, jak Twoja firma faktycznie działa. Jeśli potrzebujesz narzędzia, które rozwiązuje konkretny problem bez zbędnych funkcji, porozmawiajmy o tym, co chcesz osiągnąć."
   }
 }

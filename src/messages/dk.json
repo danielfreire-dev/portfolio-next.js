@@ -218,10 +218,7 @@
   },
   "portfolio": {
     "all": "Alle",
-    "cta": [
-      "tjek det ud",
-      "se det live projekt →"
-    ],
+    "cta": ["tjek det ud", "se det live projekt →"],
     "pageTitle": "portfolio",
     "projects": [
       {
@@ -295,12 +292,7 @@
     "paragraph10": "Vi kan opdatere denne privatlivspolitik fra tid til anden. Vi vil underrette dig om eventuelle ændringer ved at offentliggøre den nye privatlivspolitik på denne side.",
     "paragraph11": "Hvis du har spørgsmål om denne privatlivspolitik, kontakt os venligst på",
     "paragraph2": "Vi indsamler personlige oplysninger som du frivilligt giver os når du udfylder en formular på vores hjemmeside. De personlige oplysninger vi indsamler inkluderer:",
-    "paragraph2li": [
-      "Fornavn",
-      "Efternavn",
-      "E-mail adresse",
-      "Telefonnummer"
-    ],
+    "paragraph2li": ["Fornavn", "Efternavn", "E-mail adresse", "Telefonnummer"],
     "paragraph3": "De oplysninger vi indsamler vil blive brugt til at kontakte dig i fremtiden. Vi vil kun bruge dine personlige data til dette specifikke formål.",
     "paragraph4": "Vi behandler dine personlige data baseret på dit samtykke, som du giver ved at udfylde formularen på vores hjemmeside.",
     "paragraph5": "Vi deler ikke dine personlige data med tredjeparter medmindre det er påkrævet af loven.",
@@ -513,32 +505,31 @@
   "topMainPage": {
     "blurbsArray": [
       {
-        "description": "Is your website holding back your business growth? Our comprehensive performance audit deeply analyzes your technical infrastructure, user experience, and conversion potential. We’ll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
-        "title": "Revolutionize Your Digital Presence Now!"
+        "description": "Bremst Ihre Website Ihr Geschäftswachstum aus? Unser umfassender Performance-Audit analysiert tiefgehend Ihre technische Infrastruktur, Benutzererfahrung und Ihr Conversion-Potenzial. Wir liefern Ihnen einen detaillierten Bericht mit entscheidenden Verbesserungen, die Ihre Online-Performance dramatisch steigern können.",
+        "title": "Revolutionieren Sie jetzt Ihre digitale Präsenz!"
       },
       {
-        "description": "Websites require constant care to stay secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Unlock Your Website’s Full Potential"
+        "description": "Websites benötigen ständige Pflege, um sicher, funktional und wettbewerbsfähig zu bleiben. Unsere umfassenden Wartungspakete bieten proaktives Monitoring, sofortige Problemlösung und kontinuierliche technologische Updates.",
+        "title": "Schöpfen Sie das volle Potenzial Ihrer Website aus"
       },
       {
-        "description": "Stop settling for generic templates. Our custom web development services create fully tailored digital experiences that align perfectly with your brand’s unique identity and business goals. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
-        "title": "Build Your Dream Project Today"
+        "description": "Geben Sie sich nicht länger mit generischen Vorlagen zufrieden. Unsere maßgeschneiderten Webentwicklungsdienste schaffen vollständig angepasste digitale Erlebnisse, die perfekt mit der einzigartigen Identität Ihrer Marke und Ihren Geschäftszielen übereinstimmen. Wir verwandeln Ihr Konzept in eine leistungsstarke, responsive und zukunftsweisende Weblösung.",
+        "title": "Verwirklichen Sie noch heute Ihr Traumprojekt"
       },
       {
-        "description": "Speed isn’t just a feature—it’s a competitive advantage. Our performance optimization service ensures your website loads extremely fast, delivering an exceptional user experience that keeps visitors engaged and converts more effectively.",
-        "title": "Accelerate Your Website’s Potential"
+        "description": "Geschwindigkeit ist nicht nur ein Feature – sie ist ein Wettbewerbsvorteil. Unser Service zur Leistungsoptimierung sorgt für extrem schnelles Laden Ihrer Website und bietet eine außergewöhnliche Benutzererfahrung, die Besucher bindet und effektiver zu Konversionen führt.",
+        "title": "Beschleunigen Sie das Potenzial Ihrer Website"
       },
       {
-        "description": "Technology evolves rapidly. Our specialized migration services help you transition seamlessly to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
-        "title": "Modernize Your Digital Infrastructure"
+        "description": "Die Technologie entwickelt sich rasant weiter. Unsere spezialisierten Migrationsdienste helfen Ihnen beim nahtlosen Übergang zu modernen, effizienten Webtechnologien, ohne Ihren laufenden Betrieb zu stören. Wir gewährleisten einen reibungslosen, risikomanagerten Upgrade-Pfad.",
+        "title": "Modernisieren Sie Ihre digitale Infrastruktur"
       },
       {
-        "description": "Websites require constant care to remain secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Ongoing Care for Your Digital Assets"
+        "description": "Websites benötigen ständige Pflege, um sicher, funktional und wettbewerbsfähig zu bleiben. Unsere umfassenden Wartungspakete bieten proaktives Monitoring, sofortige Problemlösung und kontinuierliche technologische Updates.",
+        "title": "Laufende Betreuung Ihrer digitalen Assets"
       }
     ],
-    "p1": "Default text for p1",
-    "p2": "Default text for p2",
-    "rocket": "/images/icons/django-rocket.svg"
+    "p1": "Haben Sie es satt, dass Software Ihr Geschäft ausbremst?",
+    "p2": "Die meisten Geschäftsanwendungen sind entweder zu starr oder zu komplex. Ich spezialisiere mich auf die Entwicklung maßgeschneiderter Webanwendungen – wie CRM-Systeme, Projekt-Tracker und Daten-Dashboards – die genau zu Ihrer tatsächlichen Arbeitsweise passen. Wenn Sie ein Werkzeug benötigen, das ein bestimmtes Problem ohne überflüssige Funktionen löst, sprechen wir darüber, was Sie erreichen möchten."
   }
 }
