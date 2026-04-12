@@ -8,8 +8,6 @@ import { getTranslations } from "next-intl/server";
 import { Metadata, ResolvingMetadata } from "next";
 import TopMainPage from "@/ui/Components/TopMainPage";
 import Services from "@/ui/Components/Services";
-import Test from "./Test.jsx";
-import TestList from "./TestList";
 
 interface Props {
   params: Promise<{ locale: Locale }>;
