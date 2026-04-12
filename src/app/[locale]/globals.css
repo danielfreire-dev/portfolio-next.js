@@ -543,6 +543,12 @@ form:has(:invalid) [type="submit"] {
   pointer-events: none;
 }
 
+@media screen and (max-width: 768px) {
+  .figure {
+    display: none;
+  }
+}
+
 .figure {
   margin: auto;
   max-width: calc(100% * 2 / 3);
