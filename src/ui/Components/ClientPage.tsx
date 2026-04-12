@@ -12,10 +12,11 @@ const ClientSideAbout = () => {
 			<div className="px-20 lg:grid lg:grid-cols-2 gap-6">
 				<Image
 					src={t("image")}
-					alt="drawing of Daniel"
+					/* TODO: add internationalization to alt */
+					alt="oil painting of Daniel"
 					width={900}
 					height={900}
-					className="hidden lg:block mt-4 transition duration-900 ease-in"
+					className="hidden lg:block mt-4"
 				/>
 				<div className="text-justify">
 					<h2 className="">{t("title1")}</h2>
