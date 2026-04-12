@@ -8,7 +8,11 @@ const ThemeToggle = () => {
 
 	const { isDarkStore, setValue } = useThemeStore();
 
-	// Helper function to get cookie value
+	/**
+	 * Retrieve the value of a named cookie from document.cookie.
+	 *
+	 * @returns The cookie value for the given name, or `null` if the cookie is not present or if `document` is unavailable (e.g., during SSR).
+	 */
 	function getCookie(name: string): string | null {
 		if (typeof document === "undefined") return null; // SSR safety
 
@@ -52,7 +56,11 @@ const ThemeToggle = () => {
 
 		mediaQuery.addEventListener("change", handleChange);
 		return () => mediaQuery.removeEventListener("change", handleChange);
-	}, []); /* Removed dependency array to run on every render */
+	}, []); /**
+	 * Update the theme from the toggle input and persist the user's preference to a cookie.
+	 *
+	 * @param e - Change event from the theme toggle checkbox; checked = dark theme when `true`
+	 */
 
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const newTheme = e.target.checked;

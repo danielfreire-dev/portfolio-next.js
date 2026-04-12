@@ -19,7 +19,6 @@ export async function generateMetadata({
 		locale: locale,
 		namespace: "metadata",
 	});
-	// optionally access and extend (rather than replace) parent metadata
 
 	return {
 		title: t("title.about"),
