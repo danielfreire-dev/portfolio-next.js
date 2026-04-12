@@ -13,35 +13,35 @@ import { Suspense } from "react";
 
 /* Metadata */
 export const metadata: Metadata = {
-	title: {
-		template: "%s | Daniel Freire",
-		default: "Daniel Freire",
-	},
-	authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
-	creator: "Daniel Freire",
-	keywords: [
-		"Daniel Freire",
-		"Portfolio",
-		"Next.js",
-		"React",
-		"TypeScript",
-		"JavaScript",
-		"Digital Marketing",
-	],
-	formatDetection: {
-		email: false,
-		address: false,
-		telephone: false,
-	},
-	metadataBase: new URL("https://www.daniel-freire.com/"),
+  title: {
+    template: "%s | Daniel Freire",
+    default: "Daniel Freire",
+  },
+  authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
+  creator: "Daniel Freire",
+  keywords: [
+    "Daniel Freire",
+    "Portfolio",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Digital Marketing",
+  ],
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://www.daniel-freire.com/"),
 
-	openGraph: {
-		type: "website",
+  openGraph: {
+    type: "website",
 
-		images: [
-			{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
-		],
-	},
+    images: [
+      { url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
+    ],
+  },
 };
 
 /* export async function generateMetadata({
@@ -81,85 +81,94 @@ export const metadata: Metadata = {
 
 /* Fonts */
 const Logo = localFont({
-	src: "../../ui/fonts/Mozilla_Headline/MozillaHeadline-VariableFont_wdth,wght.ttf",
-	display: "swap",
-	variable: "--font-logo",
-	weight: "500",
+  src: "../../ui/fonts/Mozilla_Headline/MozillaHeadline-VariableFont_wdth,wght.ttf",
+  display: "swap",
+  variable: "--font-logo",
+  weight: "500",
 });
 
 const Heading = localFont({
-	src: "../../ui/fonts/IBM_Plex/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf",
-	display: "swap",
-	variable: "--font-heading",
+  src: "../../ui/fonts/IBM_Plex/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf",
+  display: "swap",
+  variable: "--font-heading",
 });
 
 const Text = localFont({
-	src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
+  src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
 
-	display: "swap",
-	variable: "--font-text",
-	weight: "400",
+  display: "swap",
+  variable: "--font-text",
+  weight: "400",
 });
 
 const Small = localFont({
-	src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
-	display: "swap",
-	variable: "--font-small",
-	weight: "300",
+  src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
+  display: "swap",
+  variable: "--font-small",
+  weight: "300",
 });
 
 const SmallItalic = localFont({
-	src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Italic.woff2",
-	display: "swap",
-	variable: "--font-small-itallic",
-	style: "italic",
+  src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Italic.woff2",
+  display: "swap",
+  variable: "--font-small-itallic",
+  style: "italic",
 });
 
 /* Create i18n routes */
 export function generateStaticParams() {
-	return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 const googleAnalytics = process.env.NEXT_PUBLIC_GA4;
 
+/**
+ * Renders the application's root HTML layout with the resolved locale.
+ *
+ * Validates the resolved `locale` and triggers a 404 response if it is not supported; loads localization messages and returns the root HTML structure containing internationalization and global providers, analytics, and the application shell.
+ *
+ * @param children - The page content to render inside the main application container
+ * @param params - A promise that resolves to an object with the `locale` string used to set the document language and select localization messages
+ * @returns The root HTML element for the application, with `lang` set to the resolved locale and global providers (i18n, app providers, analytics) applied
+ */
 export default async function RootLayout({
-	children,
-	params,
+  children,
+  params,
 }: {
-	children: React.ReactNode;
-	params: Promise<{ locale: string }>;
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
-	// Ensure that the incoming `locale` is valid
-	const { locale } = await params;
-	if (!hasLocale(routing.locales, locale)) {
-		notFound();
-	}
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-	// Get messages for the locale
-	const messages = await getMessages();
+  // Get messages for the locale
+  const messages = await getMessages();
 
-	return (
-		<html lang={locale}>
-			<SpeedInsights />
-			<Suspense fallback={null}>
-				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
-			</Suspense>
-			<body
-				className={
-					`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable}  antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) ` /* stars */
-				}
-			>
-				<NextIntlClientProvider messages={messages}>
-					<Providers>
-						<header className="flex flex-row">
-							<Sidenav />
-						</header>
-						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
-							<div id="main">{children}</div>
-						</main>
-					</Providers>
-				</NextIntlClientProvider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang={locale}>
+      <SpeedInsights />
+      <Suspense fallback={null}>
+        <GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
+      </Suspense>
+      <body
+        className={
+          `${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) ` /* stars */
+        }
+      >
+        <NextIntlClientProvider messages={messages}>
+          <Providers>
+            <header className="flex flex-row">
+              <Sidenav />
+            </header>
+            <main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
+              <div id="main">{children}</div>
+            </main>
+          </Providers>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
 }
