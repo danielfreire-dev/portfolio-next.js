@@ -218,10 +218,7 @@
   },
   "portfolio": {
     "all": "Vše",
-    "cta": [
-      "podívejte se",
-      "zobrazit živý projekt →"
-    ],
+    "cta": ["podívejte se", "zobrazit živý projekt →"],
     "pageTitle": "portfolio",
     "projects": [
       {
@@ -295,12 +292,7 @@
     "paragraph10": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O jakýchkoli změnách vás budeme informovat zveřejněním nových zásad na této stránce.",
     "paragraph11": "Pokud máte jakékoli otázky týkající se těchto zásad ochrany osobních údajů, kontaktujte nás na",
     "paragraph2": "Sbíráme osobní údaje, které nám dobrovolně poskytnete při vyplňování formuláře na našich webových stránkách. Osobní údaje, které sbíráme, zahrnují:",
-    "paragraph2li": [
-      "Jméno",
-      "Příjmení",
-      "Emailová adresa",
-      "Telefonní číslo"
-    ],
+    "paragraph2li": ["Jméno", "Příjmení", "Emailová adresa", "Telefonní číslo"],
     "paragraph3": "Informace, které sbíráme, budou použity k tomu, abychom vás v budoucnu kontaktovali. Vaše osobní údaje budeme používat pouze pro tento konkrétní účel.",
     "paragraph4": "Zpracování vašich osobních údajů je založeno na vašem souhlasu, který udělujete vyplněním formuláře na našich webových stránkách.",
     "paragraph5": "Vaše osobní údaje nesdílíme s třetími stranami, kromě případů požadovaných zákonem.",
@@ -513,32 +505,31 @@
   "topMainPage": {
     "blurbsArray": [
       {
-        "description": "Is your website holding back your business growth? Our comprehensive performance audit deeply analyzes your technical infrastructure, user experience, and conversion potential. We’ll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
-        "title": "Revolutionize Your Digital Presence Now!"
+        "description": "Brzdí váš web růst vašeho podnikání? Náš komplexní audit výkonnosti důkladně analyzuje vaši technickou infrastrukturu, uživatelskou zkušenost a konverzní potenciál. Poskytneme vám podrobnou zprávu s klíčovými vylepšeními, která mohou dramaticky zvýšit váš online výkon.",
+        "title": "Revolucionizujte svou digitální přítomnost hned teď!"
       },
       {
-        "description": "Websites require constant care to stay secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Unlock Your Website’s Full Potential"
+        "description": "Webové stránky vyžadují neustálou péči, aby zůstaly bezpečné, funkční a konkurenceschopné. Naše komplexní balíčky údržby nabízejí proaktivní monitorování, okamžité řešení problémů a průběžné technologické aktualizace.",
+        "title": "Odemkněte plný potenciál svého webu"
       },
       {
-        "description": "Stop settling for generic templates. Our custom web development services create fully tailored digital experiences that align perfectly with your brand’s unique identity and business goals. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
-        "title": "Build Your Dream Project Today"
+        "description": "Přestaňte se spokojovat s obecnými šablonami. Naše služby vývoje webu na míru vytvářejí plně přizpůsobená digitální prostředí, která dokonale odpovídají jedinečné identitě vaší značky a vašim obchodním cílům. Proměníme váš koncept ve výkonné, responzivní a moderní webové řešení.",
+        "title": "Postavte si svůj vysněný projekt ještě dnes"
       },
       {
-        "description": "Speed isn’t just a feature—it’s a competitive advantage. Our performance optimization service ensures your website loads extremely fast, delivering an exceptional user experience that keeps visitors engaged and converts more effectively.",
-        "title": "Accelerate Your Website’s Potential"
+        "description": "Rychlost není jen funkce – je to konkurenční výhoda. Naše služba optimalizace výkonu zajišťuje extrémně rychlé načítání vašeho webu, což přináší výjimečnou uživatelskou zkušenost, která udrží návštěvníky a efektivněji je konvertuje.",
+        "title": "Zrychlete potenciál svého webu"
       },
       {
-        "description": "Technology evolves rapidly. Our specialized migration services help you transition seamlessly to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
-        "title": "Modernize Your Digital Infrastructure"
+        "description": "Technologie se vyvíjejí rychle. Naše specializované migrační služby vám pomohou plynule přejít na moderní, efektivní webové technologie bez narušení vašich stávajících operací. Zajišťujeme hladký a řízený upgrade s minimem rizik.",
+        "title": "Modernizujte svou digitální infrastrukturu"
       },
       {
-        "description": "Websites require constant care to remain secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-        "title": "Ongoing Care for Your Digital Assets"
+        "description": "Webové stránky vyžadují neustálou péči, aby zůstaly bezpečné, funkční a konkurenceschopné. Naše komplexní balíčky údržby nabízejí proaktivní monitorování, okamžité řešení problémů a průběžné technologické aktualizace.",
+        "title": "Průběžná péče o vaše digitální aktiva"
       }
     ],
-    "p1": "Default text for p1",
-    "p2": "Default text for p2",
-    "rocket": "/images/icons/django-rocket.svg"
+    "p1": "Už vás nebaví software, který vás ve vašem podnikání brzdí?",
+    "p2": "Většina podnikového softwaru je buď příliš rigidní, nebo příliš složitá. Specializuji se na vývoj vlastních webových aplikací – jako jsou CRM systémy, sledování projektů a datové přehledy – které přesně odpovídají tomu, jak vaše firma skutečně funguje. Pokud potřebujete nástroj, který řeší konkrétní problém bez zbytečných funkcí, pojďme probrat, čeho chcete dosáhnout."
   }
 }
