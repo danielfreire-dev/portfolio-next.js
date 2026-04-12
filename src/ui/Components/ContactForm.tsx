@@ -5,25 +5,29 @@ import { sendEmail } from "@/lib/resend";
 /* import { sendEmail } from "@/app/api/send"; */
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
 import { useThemeStore } from "@/stores/theme-store";
 
 const ContactForm = () => {
-	/* TODO: Replace boolean states w/ type submition */
 	type submission = "idle" | "loading" | "loaded" | "error" | "submitted";
 	const [loading, setLoading] = useState<submission>("idle"); //og false
 	const [turnstileStatus, setTurnstileStatus] = useState<
 		"success" | "error" | "expired" | "required"
 	>("required");
 	const [error, setError] = useState<string | null>(null);
+	const [turnstileLoaded, setTurnstileLoaded] = useState(false);
+	const [animationKey, setAnimationKey] = useState(0);
 
 	const t = useTranslations("contact");
 	const { isDarkStore, setValue } = useThemeStore();
-
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+	useEffect(() => {
+		setAnimationKey((prev) => prev + 1);
+	}, [isDarkStore]);
 
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
@@ -170,13 +174,14 @@ const ContactForm = () => {
 				<section className="flex flex-col justify-center mx-auto mt-2.5">
 					<Suspense>
 						<Turnstile
-							key={`turnstile-${isDarkStore ? "dark" : "light"}`}
+							key={`turnstile-${isDarkStore ? "dark" : "light"}-${animationKey}`}
 							siteKey={siteKey!}
 							retry="auto"
 							refreshExpired="auto"
 							sandbox={process.env.NODE_ENV === "development"}
 							appearance="execute"
 							theme={isDarkStore ? "dark" : "light"}
+							className="turnstile-transition turnstile-animated"
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");
@@ -190,6 +195,7 @@ const ContactForm = () => {
 							onLoad={() => {
 								setTurnstileStatus("required");
 								setError(null);
+								setTurnstileLoaded(true); // Set this to trigger button animation
 							}}
 							onVerify={(token) => {
 								setTurnstileStatus("success");
@@ -200,7 +206,7 @@ const ContactForm = () => {
 					</Suspense>
 					<button
 						type="submit"
-						className="bg-(--surface) raise capitalize button-class"
+						className={`bg-(--surface) raise capitalize button-class ${turnstileLoaded ? "button-class-animate-in" : "button-class-initially-hidden"}`}
 						id="contact-form"
 						disabled={loading === "loading" || turnstileStatus !== "success"}
 					>

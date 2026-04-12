@@ -1,45 +1,25 @@
 import { useTranslations } from "next-intl";
-import RotatingEarth from "./RotatingEarth";
-import { Suspense } from "react";
-
+import { DjangoRocket } from "./svgs/django-rocket";
+import DjangoRocketSwitcher from "./DjangoRocketSwitcher";
 interface topMainPage {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const TopMainPage = () => {
-	const t = useTranslations();
+  const t = useTranslations("topMainPage");
 
-	const getRandomItem = (array: topMainPage[]) => {
-		if (array.length === 0) {
-			return null;
-		}
-		const randomIndex = Math.floor(Math.random() * array.length);
-		return (
-			<div className="justify-center px-10 lg:px-0 text-center focus-in-expand">
-				<h2 className="title capitalize">{array[randomIndex].title}</h2>
-				<div className="text mt-2">{array[randomIndex].description}</div>
-			</div>
-		);
-	};
-	/* md:bg-radial-[at_84%_50%] from-(--primary)/20 via-(--accent1)/5 to-transparent to-66%" */
-	return (
-		<div className="mx-auto lg:mr-[33%] flex flex-nowrap flex-row  justify-center items-center xl:gap-7 l">
-			<div className="justify-center px-10 text-center lg:px-0  lg:text-left focus-in-expand">
-				<h2 className="">{t("topMainPageBlurb.p1")}</h2>
-				<div className="text mt-2">{t("topMainPageBlurb.p2")}</div>
-			</div>
+  /* md:bg-radial-[at_84%_50%] from-(--primary)/20 via-(--accent1)/5 to-transparent to-66%" */
+  return (
+    <div className="grid grid-cols-2 justify-items-center-safe content-evenly gap-3 xl:gap-7 l h-[90dvh]">
+      <div className="grid place-items-center h-full items-center-safe px-10 text-center lg:px-0 focus-in-expand mb-30">
+        <h2 className="">{t("p1")}</h2>
+        <div className="text mt-2">{t("p2")}</div>
+      </div>
 
-			<Suspense>
-				{/* <RotatingEarth
-					width={500}
-					height={500}
-					backgroundColor="rgba(0,0,0,0)"
-					className="hidden md:block"
-					globeImageUrl="/images/globes/earth-blue-marble.png"
-				/> */}
-			</Suspense>
-		</div>
-	);
+      <DjangoRocket />
+      {/* <DjangoRocketSwitcher /> */}
+    </div>
+  );
 };
 export default TopMainPage;
