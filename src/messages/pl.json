@@ -222,54 +222,63 @@
     "pageTitle": "portfolio",
     "projects": [
       {
+        "demo": "Demo",
+        "github": "https://github.com/danielfreire-dev/Quizzical",
         "link": "https://quizzicall-bydainelli.netlify.app/",
         "src": "/images/screenshots/quizzical.webp",
-        "summary": "Gra quizowa z ponad 4000 pytaniami.",
+        "summary": "Trivia game with 4.000+ questions.",
         "title": "quizzical"
       },
       {
+        "demo": "Demo",
+        "github": "https://github.com/danielfreire-dev/PollyGlot",
         "link": "https://pollyglot-bydainelli.netlify.app/",
         "src": "/images/screenshots/pollyglot.webp",
-        "summary": "Aplikacja do tłumaczeń z SI.",
+        "summary": "Translation app with AI.",
         "title": "pollyGlot"
       },
+
       {
-        "link": "https://danielfreire.pages.dev",
-        "src": "/images/screenshots/oldPortfolio.webp",
-        "summary": "Stare portfolio Daniela.",
-        "title": "stare portfolio"
-      },
-      {
+        "demo": "Demo",
+        "github": "",
         "link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
         "src": "/images/screenshots/drumsVeryBig1920.webp",
-        "summary": "Zabawny projekt odtwarzający zestaw perkusyjny na Twoim PC.",
-        "title": "aplikacja perkusyjna"
+        "summary": "Fun project to reproduce a Drum Kit in your PC.",
+        "title": "drum kit app"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://tenzi-bydaniel.netlify.app/",
         "src": "/images/screenshots/Tenzi.webp",
-        "summary": "Najpopularniejsza gra w kości na świecie, teraz w Twojej przeglądarce.",
+        "summary": "The world's most popular dice game, now in your browser.",
         "title": "tenzi"
       }
     ],
-    "projects-title": "Projekty",
+    "projects-title": "Projects",
     "websites": [
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://muraryu.com",
         "src": "/images/screenshots/muraryu.webp",
-        "summary": "MuraRyu to nowa firma zarządzająca nieruchomościami w Portugalii.",
+        "summary": "MuraRyu is a new Condominium Management company in Portugal.",
         "title": "muraRyu"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://victo.pages.dev",
         "src": "/images/screenshots/victo.webp",
-        "summary": "Strona-galerii zbudowana, aby zaprezentować prace słynnego portugalskiego artysty Victó.",
-        "title": "galeria sztuki victó"
+        "summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+        "title": "victó's art gallery"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://insurbia.com",
         "src": "/images/screenshots/insurbia2.webp",
-        "summary": "Strona internetowa stworzona jako punkt kontaktowy dla kolektywu architektonicznego Insurbia.",
+        "summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
         "title": "insurbia"
       }
     ],

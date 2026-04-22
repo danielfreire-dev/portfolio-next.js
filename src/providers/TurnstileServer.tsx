@@ -2,22 +2,28 @@ import { NextRequest, NextResponse } from "next/server";
 import { validateTurnstileToken } from "next-turnstile";
 import { nanoid } from "nanoid";
 
+/**
+ * POST handler for Cloudflare Turnstile token validation.
+ *
+ * Receives a Turnstile token from the client, validates it server-side using
+ * the configured secret key, and returns a success or error response.
+ * Uses an idempotency key to prevent token replay attacks.
+ */
 export async function POST(req: NextRequest) {
-	const { token } = await req.json();
+  const { token } = await req.json();
 
-	const validationResponse = await validateTurnstileToken({
-		token,
-		secretKey: process.env.NEXT_PUBLIC_TURNSTILE_SECRET_KEY!,
-		// Optional: Add an idempotency key to prevent token reuse
-		idempotencyKey: nanoid(),
-		sandbox: process.env.NODE_ENV === "development",
-	});
+  const validationResponse = await validateTurnstileToken({
+    token,
+    secretKey: process.env.NEXT_PUBLIC_TURNSTILE_SECRET_KEY!,
+    // Idempotency key prevents the same token from being reused
+    idempotencyKey: nanoid(),
+    sandbox: process.env.NODE_ENV === "development",
+  });
 
-	if (!validationResponse.success) {
-		return NextResponse.json({ message: "Invalid token" }, { status: 400 });
-	}
+  if (!validationResponse.success) {
+    return NextResponse.json({ message: "Invalid token" }, { status: 400 });
+  }
 
-	// Handle login
-
-	return NextResponse.json({ message: "Login successful" });
+  // Token is valid — proceed with the intended action (e.g. login)
+  return NextResponse.json({ message: "Login successful" });
 }

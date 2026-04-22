@@ -1,6 +1,12 @@
 import React from "react";
 import type { SVGProps } from "react";
 
+/**
+ * AlertAnimation - An animated alert/exclamation SVG icon.
+ *
+ * Features a pulsing exclamation mark inside a triangle, with staggered
+ * stroke-dashoffset animations for a "drawing" effect and a blinking dot.
+ */
 export function AlertAnimation(props: SVGProps<SVGSVGElement>) {
 	return (
 		<svg

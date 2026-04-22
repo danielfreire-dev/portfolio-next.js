@@ -36,17 +36,33 @@
 //   }
 // }
 
+/**
+ * Custom Cypress command: `metatag`
+ *
+ * Queries a `<meta>` element in the document `<head>` by matching both
+ * the `name` and `content` attributes.
+ *
+ * @param metadata - The value of the `name` attribute (e.g. "description")
+ * @param content  - The expected value of the `content` attribute
+ * @returns The matching `<meta>` element wrapped in a Cypress chainable
+ *
+ * @example
+ *   cy.metatag("description", "Daniel's Introduction")
+ */
 Cypress.Commands.add("metatag", (metadata: string, content: string) => {
-	return cy.get(`head > <meta name="${metadata}" content="${content}">`);
+  return cy.get(`head > <meta name="${metadata}" content="${content}">`);
 });
 
-// types.d.ts
+/**
+ * Extend the Cypress `Chainable` interface so TypeScript recognises
+ * the custom `metatag` command and its overloaded signatures.
+ */
 declare namespace Cypress {
-	interface Chainable<Subject> {
-		metatag(
-			metadata: string,
-			content: string,
-		): Chainable<JQuery<HTMLMetaElement>>;
-		metatag(metadata: string, content: string): Chainable<Subject>;
-	}
+  interface Chainable<Subject> {
+    metatag(
+      metadata: string,
+      content: string,
+    ): Chainable<JQuery<HTMLMetaElement>>;
+    metatag(metadata: string, content: string): Chainable<Subject>;
+  }
 }

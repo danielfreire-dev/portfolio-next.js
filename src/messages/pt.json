@@ -222,54 +222,63 @@
     "pageTitle": "portfólio",
     "projects": [
       {
+        "demo": "Demo",
+        "github": "https://github.com/danielfreire-dev/Quizzical",
         "link": "https://quizzicall-bydainelli.netlify.app/",
         "src": "/images/screenshots/quizzical.webp",
-        "summary": "Jogo de perguntas com mais de 4.000 perguntas.",
+        "summary": "Trivia game with 4.000+ questions.",
         "title": "quizzical"
       },
       {
+        "demo": "Demo",
+        "github": "https://github.com/danielfreire-dev/PollyGlot",
         "link": "https://pollyglot-bydainelli.netlify.app/",
         "src": "/images/screenshots/pollyglot.webp",
-        "summary": "Aplicativo de tradução com IA.",
-        "title": "polyGlot"
+        "summary": "Translation app with AI.",
+        "title": "pollyGlot"
       },
+
       {
-        "link": "https://danielfreire.pages.dev",
-        "src": "/images/screenshots/oldPortfolio.webp",
-        "summary": "Portfólio antigo de Daniel.",
-        "title": "portfólio antigo"
-      },
-      {
+        "demo": "Demo",
+        "github": "",
         "link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
         "src": "/images/screenshots/drumsVeryBig1920.webp",
-        "summary": "Projeto divertido para reproduzir um Kit de Bateria no seu PC.",
-        "title": "aplicativo kit de bateria"
+        "summary": "Fun project to reproduce a Drum Kit in your PC.",
+        "title": "drum kit app"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://tenzi-bydaniel.netlify.app/",
         "src": "/images/screenshots/Tenzi.webp",
-        "summary": "O jogo de dados mais popular do mundo, agora no seu navegador.",
+        "summary": "The world's most popular dice game, now in your browser.",
         "title": "tenzi"
       }
     ],
-    "projects-title": "Projetos",
+    "projects-title": "Projects",
     "websites": [
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://muraryu.com",
         "src": "/images/screenshots/muraryu.webp",
-        "summary": "MuraRyu é uma nova Admnistradora de Condomínios em Portugal.",
+        "summary": "MuraRyu is a new Condominium Management company in Portugal.",
         "title": "muraRyu"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://victo.pages.dev",
         "src": "/images/screenshots/victo.webp",
-        "summary": "Website criado para mostrar as obras do famoso artista português Victó.",
-        "title": "galeria de arte de victó"
+        "summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+        "title": "victó's art gallery"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://insurbia.com",
         "src": "/images/screenshots/insurbia2.webp",
-        "summary": "Website desenvolvido para ser o ponto de contacto do coletivo de arquitetura Insurbia.",
+        "summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
         "title": "insurbia"
       }
     ],

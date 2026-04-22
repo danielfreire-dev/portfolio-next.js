@@ -1,15 +1,29 @@
 "use client";
 import { CldImage } from "next-cloudinary";
 
+/** Props for the Cloudinary image wrapper component. */
 interface CloudinaryImgProps {
+	/** Public ID or URL of the Cloudinary image. */
 	src: string;
+	/** Alt text for accessibility. */
 	alt?: string;
+	/** Display width in pixels. */
 	width?: number;
+	/** Display height in pixels. */
 	height?: number;
+	/** Additional CSS class names. */
 	className?: string;
+	/** Loading strategy: lazy (default) or eager. */
 	loading?: "lazy" | "eager";
 }
-// By default, the CldImage component applies auto-format and auto-quality to all delivery URLs for optimized delivery.
+
+/**
+ * Cloudinary-optimised image component.
+ *
+ * Wraps `next-cloudinary`'s `CldImage` with sensible defaults. Auto-format
+ * and auto-quality are applied by the underlying component for optimised
+ * delivery.
+ */
 const CloudinaryImg = ({
 	src,
 	alt = "Cloudinary image",
@@ -20,8 +34,8 @@ const CloudinaryImg = ({
 }: CloudinaryImgProps) => {
 	return (
 		<CldImage
-			src={src} // Use this sample image or upload your own via the Media Explorer
-			width={width} // Transform the image: auto-crop to square aspect_ratio
+			src={src}
+			width={width}
 			height={height}
 			alt={alt}
 			className={className}

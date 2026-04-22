@@ -3,11 +3,21 @@ import { nanoid } from "nanoid";
 import Image from "next/image";
 import { Suspense } from "react";
 
+/** Props for a single service card. */
 interface ServiceCardProps {
+	/** Card title. */
 	title: string;
+	/** Descriptive text. */
 	text: string;
+	/** URL or path to the service icon image. */
 	icon: string;
 }
+
+/**
+ * Service card component.
+ *
+ * Renders an icon image, title, and description for a single service offering.
+ */
 const ServiceCard = ({ title, text, icon }: ServiceCardProps) => {
 	return (
 		<>

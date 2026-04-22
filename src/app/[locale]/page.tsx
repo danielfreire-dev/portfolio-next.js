@@ -14,6 +14,12 @@ interface Props {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
+/**
+ * Generates localized metadata for the home page.
+ *
+ * Fetches translated title, description, and Open Graph data based on the
+ * resolved locale from the route params.
+ */
 export async function generateMetadata({
   params,
   searchParams,
@@ -50,26 +56,29 @@ export async function generateMetadata({
 	params: Promise<{ locale: Locale }>;
 } */
 
+/**
+ * Home page — the main landing route for the application.
+ *
+ * Renders the hero section (`TopMainPage`), the tech stack showcase, and a
+ * call-to-action button. The tech stack is wrapped in `Suspense` for lazy
+ * loading. Uses `setRequestLocale` to enable static rendering per locale.
+ *
+ * @param params - Route params containing the resolved locale.
+ */
 export default function HomePage({ params }: Props) {
   const { locale } = use(params);
 
   // Enable static rendering
   setRequestLocale(locale);
 
-  /* const t = useTranslations(); */
-
   return (
     <>
-      {/* <Slider items={t.raw("carousel")} /> */}
-
       <TopMainPage />
-      {/*<Suspense> <Services /></Suspense> */}
       <Suspense>
         <Techstack />
       </Suspense>
-      <Suspense>
-        <Cta />
-      </Suspense>
+
+      <Cta />
     </>
   );
 }
