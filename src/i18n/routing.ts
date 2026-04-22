@@ -1,11 +1,19 @@
 import { defineRouting } from "next-intl/routing";
 
+/**
+ * Internationalization routing configuration for the portfolio.
+ *
+ * Defines supported locales, the default fallback locale, and localized
+ * pathname mappings for every route in the application.
+ */
 export const routing = defineRouting({
-  // A list of all locales that are supported
+  /** All locales the application supports. */
   locales: ["pt", "en", "dk", "pl", "de", "cz"],
 
-  // Used when no locale matches
+  /** Default locale used when no locale matches the request. */
   defaultLocale: "en",
+
+  /** Pathname-based routing with per-locale overrides. */
   pathnames: {
     "/": "/",
     "/about": {

@@ -11,7 +11,13 @@ import { Providers } from "@/providers/CookieBanner";
 import GoogleAnalytics from "@/providers/GoogleAnalytics";
 import { Suspense } from "react";
 
-/* Metadata */
+/**
+ * Static metadata for the root layout.
+ *
+ * Defines the default title template, author info, SEO keywords, and
+ * Open Graph image used across all pages unless overridden by page-level
+ * `generateMetadata`.
+ */
 export const metadata: Metadata = {
   title: {
     template: "%s | Daniel Freire",
@@ -79,7 +85,14 @@ export const metadata: Metadata = {
 	};
 } */
 
-/* Fonts */
+/**
+ * Custom local font definitions.
+ *
+ * Each font is loaded via `next/font/local` and assigned a CSS custom property
+ * so it can be referenced throughout the application's styles.
+ */
+
+/** Logo / display font — Mozilla Headline variable weight. */
 const Logo = localFont({
   src: "../../ui/fonts/Mozilla_Headline/MozillaHeadline-VariableFont_wdth,wght.ttf",
   display: "swap",
@@ -87,20 +100,22 @@ const Logo = localFont({
   weight: "500",
 });
 
+/** Heading font — IBM Plex Serif regular weight. */
 const Heading = localFont({
   src: "../../ui/fonts/IBM_Plex/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf",
   display: "swap",
   variable: "--font-heading",
 });
 
+/** Body text font — IBM Plex Sans variable weight (Roman). */
 const Text = localFont({
   src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
-
   display: "swap",
   variable: "--font-text",
   weight: "400",
 });
 
+/** Small / secondary text font — IBM Plex Sans variable weight (light). */
 const Small = localFont({
   src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
   display: "swap",
@@ -108,6 +123,7 @@ const Small = localFont({
   weight: "300",
 });
 
+/** Small italic text font — IBM Plex Sans variable weight (italic). */
 const SmallItalic = localFont({
   src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Italic.woff2",
   display: "swap",
@@ -115,7 +131,12 @@ const SmallItalic = localFont({
   style: "italic",
 });
 
-/* Create i18n routes */
+/**
+ * Generates static route params for each supported locale.
+ *
+ * Required for static site generation (SSG) with `next-intl` so that
+ * Next.js pre-renders a page for every locale at build time.
+ */
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -123,13 +144,15 @@ export function generateStaticParams() {
 const googleAnalytics = process.env.NEXT_PUBLIC_GA4;
 
 /**
- * Renders the application's root HTML layout with the resolved locale.
+ * Root layout component for the application.
  *
- * Validates the resolved `locale` and triggers a 404 response if it is not supported; loads localization messages and returns the root HTML structure containing internationalization and global providers, analytics, and the application shell.
+ * Validates the incoming locale against the supported list (triggers 404 if
+ * invalid), loads the corresponding i18n messages, and renders the full HTML
+ * shell with font variables, analytics, cookie consent provider, and the
+ * persistent sidenav navigation.
  *
- * @param children - The page content to render inside the main application container
- * @param params - A promise that resolves to an object with the `locale` string used to set the document language and select localization messages
- * @returns The root HTML element for the application, with `lang` set to the resolved locale and global providers (i18n, app providers, analytics) applied
+ * @param children - Page content rendered inside the main content area.
+ * @param params  - A promise resolving to an object containing the `locale` segment.
  */
 export default async function RootLayout({
   children,
@@ -154,9 +177,7 @@ export default async function RootLayout({
         <GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
       </Suspense>
       <body
-        className={
-          `${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) ` /* stars */
-        }
+        className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}
       >
         <NextIntlClientProvider messages={messages}>
           <Providers>

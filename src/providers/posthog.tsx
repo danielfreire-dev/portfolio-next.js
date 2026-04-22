@@ -7,29 +7,38 @@
 import posthogJS, { PostHog, PostHogConfig } from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
 
+/** Person-processing mode for PostHog: always, identified_only, or never. */
 export const PERSON_PROCESSING_MODE: "always" | "identified_only" | "never" =
 	(process.env.NEXT_PUBLIC_POSTHOG_PERSON_PROCESSING_MODE as any) ||
 	"identified_only";
 
+/** Whether to use the PostHog snippet loader instead of the NPM package. */
 export const POSTHOG_USE_SNIPPET: boolean =
 	(process.env.NEXT_PUBLIC_POSTHOG_USE_SNIPPET as any) || false;
 
+/**
+ * Shared PostHog instance.
+ * Uses the snippet-based client if configured, otherwise the NPM package.
+ */
 export const posthog: PostHog = POSTHOG_USE_SNIPPET
 	? typeof window !== "undefined"
 		? (window as any).posthog
 		: null
 	: posthogJS;
 
-// we use undefined for SSR to indicated that we haven't check yet (as the state lives in cookies)
+/**
+ * Consent state type.
+ * `undefined` is used during SSR to indicate the check hasn't run yet.
+ */
 export type ConsentState = "granted" | "denied" | "pending" | undefined;
 
-
-
+/** Reads the current explicit-consent status from the PostHog instance. */
 export function cookieConsentGiven(): ConsentState {
 	if (typeof window === "undefined") return undefined;
 	return (posthog as any).get_explicit_consent_status;
 }
 
+/** Builds a PostHog config object that respects the current consent state. */
 export const configForConsent = (): Partial<PostHogConfig> => {
 	const consentGiven = cookieConsentGiven();
 
@@ -40,6 +49,7 @@ export const configForConsent = (): Partial<PostHogConfig> => {
 	};
 };
 
+/** Updates PostHog's opt-in/out state and re-applies the consent-aware config. */
 export const updatePostHogConsent = (consentGiven: ConsentState) => {
 	if (consentGiven !== undefined) {
 		if (consentGiven === "granted") {
@@ -55,6 +65,7 @@ export const updatePostHogConsent = (consentGiven: ConsentState) => {
 	posthog.set_config(configForConsent());
 };
 
+// Initialise PostHog on the client side
 if (typeof window !== "undefined") {
 	posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || "", {
 		api_host:
@@ -84,10 +95,14 @@ if (typeof window !== "undefined") {
 		__preview_flags_v2: true,
 		...configForConsent(),
 	});
-	// Help with debugging
+	// Expose PostHog globally for debugging
 	(window as any).posthog = posthog;
 }
 
+/**
+ * PostHog provider component.
+ * Wraps children with the PostHog React context provider.
+ */
 export function NextHogProvider({ children }: { children: React.ReactNode }) {
 	return <PHProvider client={posthog}>{children}</PHProvider>;
 }

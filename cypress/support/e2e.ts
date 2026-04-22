@@ -13,6 +13,16 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
+/**
+ * Cypress E2E support entry point.
+ *
+ * Imports custom commands defined in `commands.ts` so they are
+ * available globally across all test files. Additional global
+ * setup (e.g. accessibility checker) can be uncommented below.
+ */
+
+// Import custom commands (metatag, etc.) so they are available in every test
 import "./commands";
+
+// Uncomment to enable the accessibility checker plugin globally:
 // import "cypress-accessibility-checker";

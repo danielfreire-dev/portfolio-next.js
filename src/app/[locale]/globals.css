@@ -146,11 +146,57 @@ html {
   box-shadow: 0 0 8px hsl(var(--aura-hue), 100%, 50%, 0.3);
 }
 
+/* External link indicator */
+/*
 a[href^="https"]:not([href*="daniel-freire.com"])::after {
   content: "";
+  background-image: url("../../ui/Components/svgs/ExternalLink.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 1em;
   height: 1em;
-  /* background: url("/src/ui/Components/svgs/ExternalLink.svg") no-repeat; */
+  display: inline-block;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+*/
+
+.demo::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.3em;
+
+  /* Use the SVG as a mask */
+  mask-image: url("/images/icons/line-md--compass-filled.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+
+  /* Fill the masked area with your theme color variable */
+  background-color: var(--text, currentColor);
+
+  /* Fallback for older browsers */
+  background-image: none;
+}
+
+.github::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.3em;
+
+  /* Use the SVG as a mask */
+  mask-image: url("/images/icons/line-md--github-loop(2).svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+
+  /* Fill the masked area with your theme color variable */
+  background-color: var(--text, currentColor);
+
+  /* Fallback for older browsers */
+  background-image: none;
 }
 
 /* eslint-disable-next-line css/no-invalid-at-rules */
