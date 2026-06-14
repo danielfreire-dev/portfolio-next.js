@@ -5,43 +5,52 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 declare global {
-	interface Window {
-		gtag: any;
-	}
+  interface Window {
+    gtag: any;
+  }
 }
 
+/**
+ * Google Analytics 4 integration component.
+ *
+ * Injects the GA4 script tag and initialises gtag with consent defaults set
+ * to `denied`. Tracks page views on route changes via the `usePathname` and
+ * `useSearchParams` hooks.
+ */
 export default function GoogleAnalytics({
-	GA_MEASUREMENT_ID,
+  GA_MEASUREMENT_ID,
 }: {
-	GA_MEASUREMENT_ID: string;
+  GA_MEASUREMENT_ID: string;
 }) {
-	const pathname = usePathname();
-	// SearchParams is a client side function.
-	const searchParams = useSearchParams();
+  const pathname = usePathname();
+  // `useSearchParams` is a client-side hook; safe to call here.
+  const searchParams = useSearchParams();
 
-	useEffect(() => {
-		const url = pathname + searchParams.toString();
+  // Send a page_view event whenever the route changes
+  useEffect(() => {
+    const url = pathname + searchParams.toString();
 
-		if (typeof window !== "undefined" && window.gtag) {
-			window.gtag("config", GA_MEASUREMENT_ID, {
-				page_path: url,
-			});
-		}
-	}, [pathname, searchParams, GA_MEASUREMENT_ID]);
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", GA_MEASUREMENT_ID, {
+        page_path: url,
+      });
+    }
+  }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
-	// Script is added to the head of the document. To Begin, consent is denied.
-	return (
-		<>
-			<Script
-				strategy="afterInteractive"
-				src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-			/>
+  return (
+    <>
+      {/* GA4 library script loaded asynchronously after page becomes interactive */}
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
 
-			<Script
-				id="google-analytics"
-				strategy="afterInteractive"
-				dangerouslySetInnerHTML={{
-					__html: `
+      {/* Initialisation script: sets up dataLayer, consent default (denied), and initial page view */}
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -54,8 +63,8 @@ export default function GoogleAnalytics({
                     page_path: window.location.pathname,
                 });
                 `,
-				}}
-			/>
-		</>
-	);
+        }}
+      />
+    </>
+  );
 }

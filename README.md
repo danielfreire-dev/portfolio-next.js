@@ -2,7 +2,7 @@
 
 A modern, accessible portfolio website built with Next.js 15, featuring internationalization, theme switching, and smooth animations. The site showcases my work as a web developer while maintaining high performance and accessibility standards.
 
-**Link to project:** https://daniel-freire.com
+**Link to project:** https://daniel-freire.com/
 ![Portfolio Screenshot](public/images/screenshots/landingPage.webp)
 
 ## How It's Made:

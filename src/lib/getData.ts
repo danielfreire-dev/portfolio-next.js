@@ -11,6 +11,10 @@ if (!resendApiKey) {
 
 const resend = new Resend(resendApiKey);
 
+/**
+ * Returns the current date and time formatted for the Europe/Lisbon timezone
+ * (WEST/WET), e.g. "15 de Abril, 2026 | 14:30".
+ */
 function getCurrentWESTDateTime() {
 	const now = new Date();
 	const formatter = new Intl.DateTimeFormat("pt-PT", {
@@ -31,6 +35,12 @@ function getCurrentWESTDateTime() {
 	return `${day} de ${month}, ${year} | ${hour}:${minute}`;
 }
 
+/**
+ * Server action that sends contact-form data via the Resend API.
+ *
+ * Builds an HTML email with the submitted name, phone, email, and message,
+ * and dispatches it to the configured recipient address.
+ */
 export const getData = async (data: Record<string, FormDataEntryValue>) => {
 	const t = await getTranslations("email");
 

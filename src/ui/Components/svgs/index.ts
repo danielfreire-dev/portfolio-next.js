@@ -1,3 +1,5 @@
+/** SVG icon index - re-exports all SVG icon components for convenient imports. */
+
 export { default as Nextjs } from "./nextjs.svg";
 export { default as Reactjs } from "./react.svg";
 export { default as Nodejs } from "./node-js.svg";
