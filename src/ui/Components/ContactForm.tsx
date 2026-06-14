@@ -11,9 +11,17 @@ import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
 import { useThemeStore } from "@/stores/theme-store";
 
+/**
+ * Contact form component.
+ *
+ * Renders a multi-field form with Cloudflare Turnstile bot protection.
+ * On successful submission, sends a notification email via Resend and
+ * displays a farewell message. Tracks submission state through an
+ * explicit state machine (idle → loading → submitted/error).
+ */
 const ContactForm = () => {
   type submission = "idle" | "loading" | "loaded" | "error" | "submitted";
-  const [loading, setLoading] = useState<submission>("idle"); //og false
+  const [loading, setLoading] = useState<submission>("idle");
   const [turnstileStatus, setTurnstileStatus] = useState<
     "success" | "error" | "expired" | "required"
   >("required");
@@ -25,14 +33,14 @@ const ContactForm = () => {
   const { isDarkStore, setValue } = useThemeStore();
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
+  // Force re-mount Turnstile when theme changes so it picks up the correct theme
   useEffect(() => {
     setAnimationKey((prev) => prev + 1);
   }, [isDarkStore]);
 
+  /** Handles form submission: validates Turnstile, sends email, stores data. */
   async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
-    /* captureButtonClick(); */
 
     setLoading("loading");
 
@@ -43,14 +51,13 @@ const ContactForm = () => {
     }
 
     const formData = new FormData(e.currentTarget);
-
     const formValues = Object.fromEntries(formData);
-    const token = formData.get("cf-turnstile-response");
     await sendEmail(formValues);
     await getData(formValues);
 
     setLoading("submitted");
   }
+
   return (
     <>
       {/* TODO: Add form input sanitation */}
@@ -195,7 +202,7 @@ const ContactForm = () => {
               onLoad={() => {
                 setTurnstileStatus("required");
                 setError(null);
-                setTurnstileLoaded(true); // Set this to trigger button animation
+                setTurnstileLoaded(true);
               }}
               onVerify={(token) => {
                 setTurnstileStatus("success");

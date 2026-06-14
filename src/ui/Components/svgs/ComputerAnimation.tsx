@@ -1,6 +1,12 @@
 import React from "react";
 import type { SVGProps } from "react";
 
+/**
+ * ComputerAnimation - An animated computer/monitor SVG icon.
+ *
+ * Features a monitor with a sliding keyboard tray that drops down, and a
+ * stroke-dashoffset animation that draws the monitor outline.
+ */
 export function ComputerAnimation(props: SVGProps<SVGSVGElement>) {
 	return (
 		<svg

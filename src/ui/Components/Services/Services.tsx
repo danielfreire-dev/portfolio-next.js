@@ -5,6 +5,12 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { WebsiteCardSkeleton } from "./Skeletons";
 
+/**
+ * Services section (commented out — legacy implementation).
+ *
+ * Previously rendered a grid of service cards from translation data.
+ * Kept for reference in case the services section is re-enabled.
+ * /
 const Services = () => {
 	const t = useTranslations("services");
 

@@ -1,0 +1,12 @@
+import React from 'react';
+import type { SVGProps } from 'react';
+
+/**
+ * LineMdCompassFilled - An animated compass SVG icon.
+ *
+ * Draws a circular compass outline, then reveals a directional needle that
+ * rotates into position, indicating north.
+ */
+export function LineMdCompassFilled(props: SVGProps<SVGSVGElement>) {
+	return (<svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" {...props}><defs><mask id="SVGpETNgGRc"><path fill="#fff" fillOpacity={0} stroke="#fff" strokeDasharray={60} strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3c4.97 0 9 4.03 9 9c0 4.97 -4.03 9 -9 9c-4.97 0 -9 -4.03 -9 -9c0 -4.97 4.03 -9 9 -9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="60;0"></animate><animate fill="freeze" attributeName="fill-opacity" begin="0.6s" dur="0.4s" to={1}></animate></path><path d="M11 11l1 1l1 1l-1 -1Z" transform="rotate(-180 12 12)"><animate fill="freeze" attributeName="d" begin="1.1s" dur="0.3s" to="M10.2 10.2l6.8 -3.2l-3.2 6.8l-6.8 3.2Z"></animate><animateTransform fill="freeze" attributeName="transform" begin="1.1s" dur="0.5s" type="rotate" values="-180 12 12;0 12 12"></animateTransform></path></mask></defs><g fill="currentColor"><path d="M0 0h24v24H0z" mask="url(#SVGpETNgGRc)"></path><circle cx={12} cy={12}><animate fill="freeze" attributeName="r" begin="1.1s" dur="0.3s" to={1}></animate></circle></g></svg>);
+}

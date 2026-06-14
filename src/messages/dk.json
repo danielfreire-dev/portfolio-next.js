@@ -222,54 +222,63 @@
     "pageTitle": "portfolio",
     "projects": [
       {
+        "demo": "Demo",
+        "github": "https://github.com/danielfreire-dev/Quizzical",
         "link": "https://quizzicall-bydainelli.netlify.app/",
         "src": "/images/screenshots/quizzical.webp",
-        "summary": "Quizspil med 4.000+ spørgsmål.",
+        "summary": "Trivia game with 4.000+ questions.",
         "title": "quizzical"
       },
       {
+        "demo": "Demo",
+        "github": "https://github.com/danielfreire-dev/PollyGlot",
         "link": "https://pollyglot-bydainelli.netlify.app/",
         "src": "/images/screenshots/pollyglot.webp",
-        "summary": "Oversættelsesapp med AI.",
+        "summary": "Translation app with AI.",
         "title": "pollyGlot"
       },
+
       {
-        "link": "https://danielfreire.pages.dev",
-        "src": "/images/screenshots/oldPortfolio.webp",
-        "summary": "Daniels gamle portfolio.",
-        "title": "gammel portfolio"
-      },
-      {
+        "demo": "Demo",
+        "github": "",
         "link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
         "src": "/images/screenshots/drumsVeryBig1920.webp",
-        "summary": "Sjovt projekt til at reproducere et trommesæt på din pc.",
-        "title": "trommesæt app"
+        "summary": "Fun project to reproduce a Drum Kit in your PC.",
+        "title": "drum kit app"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://tenzi-bydaniel.netlify.app/",
         "src": "/images/screenshots/Tenzi.webp",
-        "summary": "Verdens mest populære terningspil, nu i din browser.",
+        "summary": "The world's most popular dice game, now in your browser.",
         "title": "tenzi"
       }
     ],
-    "projects-title": "Projekter",
+    "projects-title": "Projects",
     "websites": [
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://muraryu.com",
         "src": "/images/screenshots/muraryu.webp",
-        "summary": "MuraRyu er et nyt boligadministrationsejet selskab i Portugal.",
+        "summary": "MuraRyu is a new Condominium Management company in Portugal.",
         "title": "muraRyu"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://victo.pages.dev",
         "src": "/images/screenshots/victo.webp",
-        "summary": "Galleri hjemmeside bygget til at vise værker fra den berømte portugisiske kunstner Victó.",
-        "title": "victós kunstudstilling"
+        "summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+        "title": "victó's art gallery"
       },
       {
+        "demo": "Demo",
+        "github": "",
         "link": "https://insurbia.com",
         "src": "/images/screenshots/insurbia2.webp",
-        "summary": "Hjemmeside udviklet til at være kontaktpunkt for arkitekturkollektivet Insurbia.",
+        "summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
         "title": "insurbia"
       }
     ],

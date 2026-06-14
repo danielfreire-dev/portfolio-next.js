@@ -4,14 +4,24 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 // Image metadata
+/** Alt text for the Open Graph image. */
 export const alt = "Daniel Freire | Portfolio";
+/** Dimensions for the Open Graph image (1200x630, standard OG size). */
 export const size = {
 	width: 1200,
 	height: 630,
 };
+/** MIME type for the generated image. */
 export const contentType = "image/png";
 
-// Image generation
+/**
+ * Generates the Open Graph image for the portfolio.
+ *
+ * Renders a styled "DF" initials on a centered layout using the Mozilla Headline
+ * font. The image is generated server-side using `next/og` (Satori).
+ *
+ * @returns An ImageResponse containing the generated OG image.
+ */
 export default async function Image() {
 	// Font loading, process.cwd() is Next.js project directory
 	const Headline = await readFile(
