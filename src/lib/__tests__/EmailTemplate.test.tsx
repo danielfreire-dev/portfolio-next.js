@@ -69,7 +69,16 @@ describe("EmailTemplate (WelcomeEmail)", () => {
 		it("should contain a link to daniel-freire.com", () => {
 			const { container } = render(WelcomeEmail(mockT, "John", "Doe"));
 			const links = container.querySelectorAll("a");
-			const siteLink = Array.from(links).find((l) => l.getAttribute("href")?.includes("daniel-freire.com"));
+			const siteLink = Array.from(links).find((l) => {
+				const href = l.getAttribute("href");
+				if (!href) return false;
+				try {
+					const parsedUrl = new URL(href, "http://localhost");
+					return parsedUrl.hostname === "daniel-freire.com";
+				} catch {
+					return false;
+				}
+			});
 			expect(siteLink).toBeTruthy();
 		});
 	});
