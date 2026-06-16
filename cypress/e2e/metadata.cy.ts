@@ -1,43 +1,48 @@
 /**
  * Metadata E2E tests for the portfolio site.
  *
- * Verifies that the English-language homepage includes the correct
- * HTML `<title>` and `<meta>` tags (description, author, creator).
+ * Verifies HTML `<title>` and `<meta>` tags across all supported
+ * locales and pages.
+ *
+ * Requires the dev server to be running.
  *
  * @module metadata.cy
  */
 
-describe("English Metadata", () => {
-	cy.visit("http://daniel-freire.com/en");
+const locales = [
+	{ code: "en", label: "English" },
+	{ code: "pt", label: "Portuguese" },
+	/* DK, PL, DE, CZ can be added as translations complete */
+];
 
-	it("multi-page testing", () => {
-		// Assert the page title includes the expected branding
-		cy.title().should("include", "Homepage | Daniel Freire");
+describe("Metadata across locales", () => {
+	describe("Home page", () => {
+		locales.forEach(({ code, label }) => {
+			it(`should have correct metadata for ${label} (${code})`, () => {
+				cy.visit(`https://daniel-freire.com/${code}`);
 
-		// Assert the meta description matches the expected content
-		cy.get('body meta[name="description"]').should(
-			"have.attr",
-			"content",
-			"Daniel's Introduction",
-		);
-		cy.get('body meta[name="description"]').should(
-			"have.attr",
-			"content",
-			"Daniel's Introduction",
-		);
+				// Title should include the site name
+				cy.title().should("include", "Daniel Freire");
 
-		// Assert the author meta tag
-		cy.get('body meta[name="author"]').should(
-			"have.attr",
-			"content",
-			"Daniel Freire",
-		);
+				// Should have a meta description
+				cy.get('meta[name="description"]').should("exist");
+			});
+		});
 
-		// Assert the creator meta tag
-		cy.get('body meta[name="creator"]').should(
-			"have.attr",
-			"content",
-			"Daniel Freire",
-		);
+		it("should have Open Graph meta tags", () => {
+			cy.visit("https://daniel-freire.com/en");
+
+			cy.get('meta[property="og:title"]').should("exist");
+			cy.get('meta[property="og:description"]').should("exist");
+			cy.get('meta[property="og:type"]').should("have.attr", "content", "website");
+			cy.get('meta[property="og:url"]').should("exist");
+		});
+
+		it("should have author and creator meta tags", () => {
+			cy.visit("https://daniel-freire.com/en");
+
+			cy.get('meta[name="author"]').should("have.attr", "content", "Daniel Freire");
+			cy.get('meta[name="creator"]').should("have.attr", "content", "Daniel Freire");
+		});
 	});
 });

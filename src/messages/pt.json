@@ -1,549 +1,539 @@
 {
-  "about": {
-    "image": "/images/Lensa/Lensa2.webp",
-    "paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspetiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
-    "paragraph2": "Entrei neste campo vindo do marketing, embora não da vertente que possas imaginar. O meu mundo era menos sobre campanhas e mais sobre padrões: analisar dados de mercado, decifrar o comportamento dos utilizadores e compreender os mecanismos precisos de como as pessoas encontram e usam um produto online. SEO e SEM, no seu cerne, são apenas psicologia aplicada e resolução de problemas. Aprende-se a ouvir o que os dados gritam, e, mais importante, o que sussurram.",
-    "paragraph3": "É esse o background que trago para cada projeto de desenvolvimento. A maioria dos desenvolvedores consegue escrever código elegante; o meu foco está em construir soluções elegantes. Há uma diferença crucial.",
-    "paragraph4": "Quando arquiteto uma aplicação com React ou Next.js, não estou apenas a pensar em gestão de estado ou estrutura de componentes. Estou a pensar na jornada do utilizador que o trouxe até ali. Estou a considerar a marcação semântica que dá significado ao nosso conteúdo para além do ecrã. Construo com uma compreensão inata do desempenho, porque sei, em primeira mão, que um atraso de apenas meio segundo é uma decisão que o utilizador toma para sair.",
-    "paragraph5": "Aqui está onde muitos programadors com talento erram: constroem para o dispositivo. Constroem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
-    "paragraph6": "Seja um front-end elegante, um robusto admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
-    "paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
-    "title1": "Construir para o Humano por Trás do Ecrã"
-  },
-  "carousel": [
-    {
-      "alt": "Paisagem urbana futurista abstrata",
-      "cta": "Revolucione a Sua Presença Digital!",
-      "description": "O seu website está a travar o crescimento do seu negócio? A nossa auditoria abrangente de desempenho analisa profundamente a infraestrutura técnica, a experiência do utilizador e o potencial de conversão do seu site. Forneceremos um relatório detalhado destacando melhorias críticas que podem aumentar dramaticamente o desempenho online.",
-      "id": 1,
-      "imageUrl": "/images/Carousel/white.webp",
-      "loading": "lazy",
-      "title": "revolucione a sua presença digital agora!",
-      "url": "/contact"
-    },
-    {
-      "alt": "Paisagem montanhosa com nevoeiro",
-      "cta": "Desbloqueie o Pleno Potencial do Seu Website",
-      "description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-      "id": 2,
-      "imageUrl": "/images/Carousel/umbrellas.webp",
-      "loading": "eager",
-      "title": "desbloqueie o pleno potencial do seu website",
-      "url": "/contact"
-    },
-    {
-      "alt": "Interior de laboratório industrial",
-      "cta": "Construa o Projeto dos Seus Sonhos Hoje",
-      "description": "Pare de se contentar com modelos genéricos. Os nossos serviços personalizados de desenvolvimento web criam experiências digitais totalmente adaptadas que se alinham perfeitamente com a identidade única da sua marca e os objetivos do seu negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
-      "id": 3,
-      "imageUrl": "/images/Carousel/estatuas.webp",
-      "loading": "eager",
-      "title": "construa o projeto dos seus sonhos hoje",
-      "url": "/contact"
-    },
-    {
-      "alt": "edifício laranja",
-      "cta": "Dê o Primeiro Passo",
-      "description": "A velocidade não é apenas uma funcionalidade—é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carregue extremamente rápido, proporcionando uma experiência de utilizador excecional que mantém os visitantes envolvidos e converte mais eficazmente.",
-      "id": 4,
-      "imageUrl": "/images/Carousel/building-orange.webp",
-      "loading": "eager",
-      "title": "acelere o potencial do seu website",
-      "url": "/contact"
-    },
-    {
-      "alt": "edifício amarelo",
-      "cta": "Modernize a Sua Infraestrutura Digital",
-      "description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a transitar perfeitamente para tecnologias web modernas e eficientes sem interromper as suas operações existentes. Garantimos um caminho de atualização suave e com risco gerido.",
-      "id": 5,
-      "imageUrl": "/images/Carousel/building-yellow.webp",
-      "loading": "eager",
-      "title": "modernize a sua infraestrutura digital",
-      "url": "/contact"
-    },
-    {
-      "alt": "lápis",
-      "cta": "cuide dos seus ativos digitais",
-      "description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-      "id": 6,
-      "imageUrl": "/images/Carousel/pencils.webp",
-      "loading": "lazy",
-      "title": "cuidado contínuo para os seus ativos digitais",
-      "url": "/contact"
-    }
-  ],
-  "contact": {
-    "btn": "enviar mensagem",
-    "email": "email",
-    "farewell": {
-      "text": "Agradeço o voto de confiança. Deve esperar uma resposta durante os próximos dias úteis.",
-      "title": "Obrigado"
-    },
-    "firstName": "primeiro nome",
-    "label": "Li e concordo com a",
-    "lastName": "último nome",
-    "message": "mensagem",
-    "pageTitle": "Contactos",
-    "phone": "número de telefone",
-    "placeholder": {
-      "email": "Insira o seu email",
-      "firstName": "Insira o seu primeiro nome",
-      "lastName": "Insira o seu último nome",
-      "message": "Insira a sua mensagem",
-      "phone": "Insira o seu número de telefone"
-    },
-    "privacy": "política de privacidade",
-    "privacyPolicyCheck": "Confirmo que li e aceito a",
-    "privacyPolicyUrl": "politica-privacidade/",
-    "privacyPolicyUrlAriaDetails": "Política de Privacidade",
-    "privacyPolicyUrlAriaLabel": "Política de Privacidade",
-    "privacyPolicyUrlTitle": "Política de Privacidade",
-    "required": "necessário",
-    "title": "entre em contacto"
-  },
-  "cookies": {
-    "buttonText": "Aceitar Tudo",
-    "declineButtonText": "Recusar",
-    "manageAdvertSubtitle": "Personalizar publicidade e medir o seu desempenho",
-    "manageAdvertTitle": "Publicidade",
-    "manageAnalyticsSubtitle": "Ajude-nos a compreender como os visitantes interagem com o nosso website",
-    "manageAnalyticsTitle": "Análise",
-    "manageButtonText": "Gerir Cookies",
-    "manageCancelButtonText": "Cancelar",
-    "manageCookiesStatus": "Estado: {{status}} em {{data}}",
-    "manageCookiesStatusConsented": "Consentido",
-    "manageCookiesStatusDeclined": "Recusado",
-    "manageEssentialStatus": "Estado: Sempre Ativo",
-    "manageEssentialStatusButtonText": "Análise",
-    "manageEssentialSubtitle": "Requeridas para o funcionamento adequado do website",
-    "manageEssentialTitle": "Essenciais",
-    "manageMessage": "Gerencie as suas preferências de cookies abaixo. Os cookies essenciais são essenciais, pois são necessários para o funcionamento do website.",
-    "manageSaveButtonText": "Guardar Preferências",
-    "manageSocialSubtitle": "Ativar funcionalidades e partilha de redes sociais",
-    "manageSocialTitle": "Redes Sociais",
-    "manageTitle": "Preferências de Cookies",
-    "message": "Valorizamos a sua privacidade. Escolha quais os cookies que pretende permitir. Os cookies essenciais estão sempre ativos, pois são necessários para o funcionamento do website.",
-    "privacyPolicyText": "Política de Privacidade",
-    "privacyurl": "/pt/politica-privacidade",
-    "title": "Quer Aceitar um Cookie? 🍪"
-  },
-  "cta": {
-    "blurb": "Tem um Projeto em Mente? Vamos Conversar.",
-    "button": [
-      "Vamos falar sobre o seu negócio",
-      "Tem um Projeto em Mente? Vamos Conversar.",
-      "Procura um Programador Front-End? Encontrou Um!",
-      "Vamos Tornar o Seu Website Inesquecível →",
-      "Precisa de um Programador Que Cumpre? Vamos Conversar.",
-      "Vamos Construir Algo Grande Juntos →",
-      "Saiba mais"
-    ],
-    "title": "entre em contacto"
-  },
-  "email": {
-    "email": "ola@daniel-freire.com",
-    "message": "Mensagem aleatória",
-    "title": "💻🚀 Olá",
-    "welcome": {
-      "conclusion": "Estamos a falar de mais do que um website — é o seu aperto de mão digital, a sua primeira impressão e a oportunidade de se destacar num mercado cada vez mais competitivo. Vamos torná-lo inesquecível.",
-      "happensNext0": "Eis o que acontece a seguir:",
-      "happensNext1": "Analisarei pessoalmente a sua submissão e responderei com um plano personalizado (ou eventuais perguntas para refinar o projecto) em 2–3 dias úteis.",
-      "happensNext2": "Nos próximos dias úteis, receberá de mim os próximos passos claros, cronogramas e como colaboraremos para dar vida à sua visão.",
-      "happensNext3": "Se não receber o meu e-mail até lá, não hesite em contactar-me novamente — estarei ou mergulhado em código ou a combater a caixa de entrada (e darei sempre prioridade ao seu projeto).",
-      "heading": "Olá",
-      "intro": "Comecemos com uma verdade simples: construir uma presença online que represente verdadeiramente os seus serviços/competências enquanto profissional exige coragem e visão. O facto de estar aqui — a dar passos concretos para valorizar o seu trabalho — diz muito sobre o seu compromisso com o crescimento. Isso merece ser celebrado.",
-      "introduction": "Sou o Daniel Freire e a minha especialidade é a criação de websites de alto impacto, focados no cliente, que não se limitam a exibir projetos, mas contam uma história convincente sobre o valor que traz para a mesa. Quer pretenda atrair clientes de topo, conquistar o emprego dos seus sonhos ou simplesmente exibir a sua experiência com clareza e estilo, o seu website é a sua ferramenta mais poderosa. E estou aqui para o ajudar a aperfeiçoá-la.",
-      "name": "Daniel Freire",
-      "preview": "Email de Boas-Vindas de Daniel Freire",
-      "privacyPolicy": "política de privacidade",
-      "privacyPolicyUrl": "pt/politica-privacidade/",
-      "signature": "Aguardando o nosso trabalho em conjunto com entusiasmo,",
-      "view": "Veja a",
-      "webLink": "daniel-freire.com",
-      "whileWait0": "Enquanto aguarda, sinta-se à vontade para:",
-      "whileWait1": "✅ Responder a este e-mail com quaisquer ideias adicionais — como projetos específicos de que se orgulhe, preferências de design ou objetivos para o seu website.",
-      "whileWait2": "✅ Reunir materiais (links, estudos de caso ou até rascunhos) para agilizar o processo quando começarmos."
-    }
-  },
-  "error": {
-    "404": "404 - página não encontrada",
-    "back": "Voltar para a página inicial",
-    "description": "Parece que se perdeu. Não se preocupe, acontece aos melhores.",
-    "errorLoading": {
-      "contact": "<p>Se acredita que deveria haver uma página aqui, por favor contacte <a>webmaster@daniel-freire.com</a></p>",
-      "description": "<p>Infelizmente, encontrámos um erro.</p><p>Pode tentar <retry>recarregar a página</retry> que estava a visitar.</p>",
-      "title": "algo correu mal!"
-    }
-  },
-  "home": {
-    "techstack": "Competências e Ferramentas",
-    "trending": "Portfólio"
-  },
-  "icons": {
-    "leftarrow": {
-      "alt": "seta para a esquerda",
-      "src": "/images/icons/chevron-left.svg"
-    },
-    "rightarrow": {
-      "alt": "seta para a direita",
-      "src": "/images/icons/chevron-right.svg"
-    }
-  },
-  "localeSwitcher": {
-    "locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
-    "localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
-  },
-  "metadata": {
-    "description": {
-      "about": "Sabe mais sobre o Daniel",
-      "contact": "Este é o melhor local para contactares o Daniel",
-      "home": "Introdução do Daniel",
-      "impressum": "",
-      "portfolio": "Este é o local onde o Daniel publicará o seu trabalho favorito",
-      "privacyPolicy": "Fica a saber mais sobre os teus direitos."
-    },
-    "name": "Daniel Freire",
-    "opengraphImage": "metadata/open-graph.png",
-    "opengraphImageAlt": "Daniel Freire",
-    "title": {
-      "about": "Sobre",
-      "contact": "Contactos",
-      "home": "Início | Daniel Freire",
-      "impressum": "Impressum",
-      "portfolio": "Portfólio",
-      "privacyPolicy": "Política de Privacidade"
-    },
-    "twitterImage": "metadata/open-graph.png",
-    "twitterImageAlt": "Daniel Freire"
-  },
-  "portfolio": {
-    "all": "Todos",
-    "cta": ["confira", "veja o projeto ao vivo →"],
-    "pageTitle": "portfólio",
-    "projects": [
-      {
-        "demo": "Demo",
-        "github": "https://github.com/danielfreire-dev/Quizzical",
-        "link": "https://quizzicall-bydainelli.netlify.app/",
-        "src": "/images/screenshots/quizzical.webp",
-        "summary": "Trivia game with 4.000+ questions.",
-        "title": "quizzical"
-      },
-      {
-        "demo": "Demo",
-        "github": "https://github.com/danielfreire-dev/PollyGlot",
-        "link": "https://pollyglot-bydainelli.netlify.app/",
-        "src": "/images/screenshots/pollyglot.webp",
-        "summary": "Translation app with AI.",
-        "title": "pollyGlot"
-      },
+	"about": {
+		"image": "/images/Lensa/Lensa2.webp",
+		"paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspetiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
+		"paragraph2": "Entrei neste campo vindo do marketing, embora não da vertente que possas imaginar. O meu mundo era menos sobre campanhas e mais sobre padrões: analisar dados de mercado, decifrar o comportamento dos utilizadores e compreender os mecanismos precisos de como as pessoas encontram e usam um produto online. SEO e SEM, no seu cerne, são apenas psicologia aplicada e resolução de problemas. Aprende-se a ouvir o que os dados gritam, e, mais importante, o que sussurram.",
+		"paragraph3": "É esse o background que trago para cada projeto de desenvolvimento. A maioria dos desenvolvedores consegue escrever código elegante; o meu foco está em construir soluções elegantes. Há uma diferença crucial.",
+		"paragraph4": "Quando arquiteto uma aplicação com React ou Next.js, não estou apenas a pensar em gestão de estado ou estrutura de componentes. Estou a pensar na jornada do utilizador que o trouxe até ali. Estou a considerar a marcação semântica que dá significado ao nosso conteúdo para além do ecrã. Construo com uma compreensão inata do desempenho, porque sei, em primeira mão, que um atraso de apenas meio segundo é uma decisão que o utilizador toma para sair.",
+		"paragraph5": "Aqui está onde muitos programadors com talento erram: constroem para o dispositivo. Constroem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
+		"paragraph6": "Seja um front-end elegante, um robusto admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
+		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
+		"title1": "Construir para o Humano por Trás do Ecrã"
+	},
+	"carousel": [
+		{
+			"alt": "Paisagem urbana futurista abstrata",
+			"cta": "Revolucione a Sua Presença Digital!",
+			"description": "O seu website está a travar o crescimento do seu negócio? A nossa auditoria abrangente de desempenho analisa profundamente a infraestrutura técnica, a experiência do utilizador e o potencial de conversão do seu site. Forneceremos um relatório detalhado destacando melhorias críticas que podem aumentar dramaticamente o desempenho online.",
+			"id": 1,
+			"imageUrl": "/images/Carousel/white.webp",
+			"loading": "lazy",
+			"title": "revolucione a sua presença digital agora!",
+			"url": "/contact"
+		},
+		{
+			"alt": "Paisagem montanhosa com nevoeiro",
+			"cta": "Desbloqueie o Pleno Potencial do Seu Website",
+			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+			"id": 2,
+			"imageUrl": "/images/Carousel/umbrellas.webp",
+			"loading": "eager",
+			"title": "desbloqueie o pleno potencial do seu website",
+			"url": "/contact"
+		},
+		{
+			"alt": "Interior de laboratório industrial",
+			"cta": "Construa o Projeto dos Seus Sonhos Hoje",
+			"description": "Pare de se contentar com modelos genéricos. Os nossos serviços personalizados de desenvolvimento web criam experiências digitais totalmente adaptadas que se alinham perfeitamente com a identidade única da sua marca e os objetivos do seu negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
+			"id": 3,
+			"imageUrl": "/images/Carousel/estatuas.webp",
+			"loading": "eager",
+			"title": "construa o projeto dos seus sonhos hoje",
+			"url": "/contact"
+		},
+		{
+			"alt": "edifício laranja",
+			"cta": "Dê o Primeiro Passo",
+			"description": "A velocidade não é apenas uma funcionalidade—é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carregue extremamente rápido, proporcionando uma experiência de utilizador excecional que mantém os visitantes envolvidos e converte mais eficazmente.",
+			"id": 4,
+			"imageUrl": "/images/Carousel/building-orange.webp",
+			"loading": "eager",
+			"title": "acelere o potencial do seu website",
+			"url": "/contact"
+		},
+		{
+			"alt": "edifício amarelo",
+			"cta": "Modernize a Sua Infraestrutura Digital",
+			"description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a transitar perfeitamente para tecnologias web modernas e eficientes sem interromper as suas operações existentes. Garantimos um caminho de atualização suave e com risco gerido.",
+			"id": 5,
+			"imageUrl": "/images/Carousel/building-yellow.webp",
+			"loading": "eager",
+			"title": "modernize a sua infraestrutura digital",
+			"url": "/contact"
+		},
+		{
+			"alt": "lápis",
+			"cta": "cuide dos seus ativos digitais",
+			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+			"id": 6,
+			"imageUrl": "/images/Carousel/pencils.webp",
+			"loading": "lazy",
+			"title": "cuidado contínuo para os seus ativos digitais",
+			"url": "/contact"
+		}
+	],
+	"contact": {
+		"btn": "enviar mensagem",
+		"email": "email",
+		"farewell": {
+			"text": "Agradeço o voto de confiança. Deve esperar uma resposta durante os próximos dias úteis.",
+			"title": "Obrigado"
+		},
+		"firstName": "primeiro nome",
+		"label": "Li e concordo com a",
+		"lastName": "último nome",
+		"message": "mensagem",
+		"pageTitle": "Contactos",
+		"phone": "número de telefone",
+		"placeholder": {
+			"email": "Insira o seu email",
+			"firstName": "Insira o seu primeiro nome",
+			"lastName": "Insira o seu último nome",
+			"message": "Insira a sua mensagem",
+			"phone": "Insira o seu número de telefone"
+		},
+		"privacy": "política de privacidade",
+		"privacyPolicyCheck": "Confirmo que li e aceito a",
+		"privacyPolicyUrl": "politica-privacidade/",
+		"privacyPolicyUrlAriaDetails": "Política de Privacidade",
+		"privacyPolicyUrlAriaLabel": "Política de Privacidade",
+		"privacyPolicyUrlTitle": "Política de Privacidade",
+		"required": "necessário",
+		"title": "entre em contacto"
+	},
+	"cookies": {
+		"buttonText": "Aceitar Tudo",
+		"declineButtonText": "Recusar",
+		"manageAdvertSubtitle": "Personalizar publicidade e medir o seu desempenho",
+		"manageAdvertTitle": "Publicidade",
+		"manageAnalyticsSubtitle": "Ajude-nos a compreender como os visitantes interagem com o nosso website",
+		"manageAnalyticsTitle": "Análise",
+		"manageButtonText": "Gerir Cookies",
+		"manageCancelButtonText": "Cancelar",
+		"manageCookiesStatus": "Estado: {{status}} em {{data}}",
+		"manageCookiesStatusConsented": "Consentido",
+		"manageCookiesStatusDeclined": "Recusado",
+		"manageEssentialStatus": "Estado: Sempre Ativo",
+		"manageEssentialStatusButtonText": "Análise",
+		"manageEssentialSubtitle": "Requeridas para o funcionamento adequado do website",
+		"manageEssentialTitle": "Essenciais",
+		"manageMessage": "Gerencie as suas preferências de cookies abaixo. Os cookies essenciais são essenciais, pois são necessários para o funcionamento do website.",
+		"manageSaveButtonText": "Guardar Preferências",
+		"manageSocialSubtitle": "Ativar funcionalidades e partilha de redes sociais",
+		"manageSocialTitle": "Redes Sociais",
+		"manageTitle": "Preferências de Cookies",
+		"message": "Valorizamos a sua privacidade. Escolha quais os cookies que pretende permitir. Os cookies essenciais estão sempre ativos, pois são necessários para o funcionamento do website.",
+		"privacyPolicyText": "Política de Privacidade",
+		"privacyurl": "/pt/politica-privacidade",
+		"title": "Quer Aceitar um Cookie? 🍪"
+	},
+	"cta": {
+		"blurb": "Tem um Projeto em Mente? Vamos Conversar.",
+		"button": [
+			"Vamos falar sobre o seu negócio",
+			"Tem um Projeto em Mente? Vamos Conversar.",
+			"Procura um Programador Front-End? Encontrou Um!",
+			"Vamos Tornar o Seu Website Inesquecível →",
+			"Precisa de um Programador Que Cumpre? Vamos Conversar.",
+			"Vamos Construir Algo Grande Juntos →",
+			"Saiba mais"
+		],
+		"title": "entre em contacto"
+	},
+	"email": {
+		"email": "ola@daniel-freire.com",
+		"message": "Mensagem aleatória",
+		"title": "💻🚀 Olá",
+		"welcome": {
+			"conclusion": "Estamos a falar de mais do que um website — é o seu aperto de mão digital, a sua primeira impressão e a oportunidade de se destacar num mercado cada vez mais competitivo. Vamos torná-lo inesquecível.",
+			"happensNext0": "Eis o que acontece a seguir:",
+			"happensNext1": "Analisarei pessoalmente a sua submissão e responderei com um plano personalizado (ou eventuais perguntas para refinar o projecto) em 2–3 dias úteis.",
+			"happensNext2": "Nos próximos dias úteis, receberá de mim os próximos passos claros, cronogramas e como colaboraremos para dar vida à sua visão.",
+			"happensNext3": "Se não receber o meu e-mail até lá, não hesite em contactar-me novamente — estarei ou mergulhado em código ou a combater a caixa de entrada (e darei sempre prioridade ao seu projeto).",
+			"heading": "Olá",
+			"intro": "Comecemos com uma verdade simples: construir uma presença online que represente verdadeiramente os seus serviços/competências enquanto profissional exige coragem e visão. O facto de estar aqui — a dar passos concretos para valorizar o seu trabalho — diz muito sobre o seu compromisso com o crescimento. Isso merece ser celebrado.",
+			"introduction": "Sou o Daniel Freire e a minha especialidade é a criação de websites de alto impacto, focados no cliente, que não se limitam a exibir projetos, mas contam uma história convincente sobre o valor que traz para a mesa. Quer pretenda atrair clientes de topo, conquistar o emprego dos seus sonhos ou simplesmente exibir a sua experiência com clareza e estilo, o seu website é a sua ferramenta mais poderosa. E estou aqui para o ajudar a aperfeiçoá-la.",
+			"name": "Daniel Freire",
+			"preview": "Email de Boas-Vindas de Daniel Freire",
+			"privacyPolicy": "política de privacidade",
+			"privacyPolicyUrl": "pt/politica-privacidade/",
+			"signature": "Aguardando o nosso trabalho em conjunto com entusiasmo,",
+			"view": "Veja a",
+			"webLink": "daniel-freire.com",
+			"whileWait0": "Enquanto aguarda, sinta-se à vontade para:",
+			"whileWait1": "✅ Responder a este e-mail com quaisquer ideias adicionais — como projetos específicos de que se orgulhe, preferências de design ou objetivos para o seu website.",
+			"whileWait2": "✅ Reunir materiais (links, estudos de caso ou até rascunhos) para agilizar o processo quando começarmos."
+		}
+	},
+	"error": {
+		"404": "404 - página não encontrada",
+		"back": "Voltar para a página inicial",
+		"description": "Parece que se perdeu. Não se preocupe, acontece aos melhores.",
+		"errorLoading": {
+			"contact": "<p>Se acredita que deveria haver uma página aqui, por favor contacte <a>webmaster@daniel-freire.com</a></p>",
+			"description": "<p>Infelizmente, encontrámos um erro.</p><p>Pode tentar <retry>recarregar a página</retry> que estava a visitar.</p>",
+			"title": "algo correu mal!"
+		}
+	},
+	"home": {
+		"techstack": "Competências e Ferramentas",
+		"trending": "Portfólio"
+	},
+	"icons": {
+		"leftarrow": {
+			"alt": "seta para a esquerda",
+			"src": "/images/icons/chevron-left.svg"
+		},
+		"rightarrow": {
+			"alt": "seta para a direita",
+			"src": "/images/icons/chevron-right.svg"
+		}
+	},
+	"localeSwitcher": {
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
+	},
+	"metadata": {
+		"description": {
+			"about": "Sabe mais sobre o Daniel",
+			"contact": "Este é o melhor local para contactares o Daniel",
+			"home": "Introdução do Daniel",
+			"impressum": "",
+			"portfolio": "Este é o local onde o Daniel publicará o seu trabalho favorito",
+			"privacyPolicy": "Fica a saber mais sobre os teus direitos."
+		},
+		"name": "Daniel Freire",
+		"opengraphImage": "metadata/open-graph.png",
+		"opengraphImageAlt": "Daniel Freire",
+		"title": {
+			"about": "Sobre",
+			"contact": "Contactos",
+			"home": "Início | Daniel Freire",
+			"impressum": "Impressum",
+			"portfolio": "Portfólio",
+			"privacyPolicy": "Política de Privacidade"
+		},
+		"twitterImage": "metadata/open-graph.png",
+		"twitterImageAlt": "Daniel Freire"
+	},
+	"portfolio": {
+		"all": "Todos",
+		"cta": ["confira", "veja o projeto ao vivo →"],
+		"pageTitle": "portfólio",
+		"projects": [
+			{
+				"demo": "Demo",
+				"github": "https://github.com/danielfreire-dev/Quizzical",
+				"link": "https://quizzicall-bydainelli.netlify.app/",
+				"src": "/images/screenshots/quizzical.webp",
+				"summary": "Trivia game with 4.000+ questions.",
+				"title": "quizzical"
+			},
+			{
+				"demo": "Demo",
+				"github": "https://github.com/danielfreire-dev/PollyGlot",
+				"link": "https://pollyglot-bydainelli.netlify.app/",
+				"src": "/images/screenshots/pollyglot.webp",
+				"summary": "Translation app with AI.",
+				"title": "pollyGlot"
+			},
 
-      {
-        "demo": "Demo",
-        "github": "",
-        "link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
-        "src": "/images/screenshots/drumsVeryBig1920.webp",
-        "summary": "Fun project to reproduce a Drum Kit in your PC.",
-        "title": "drum kit app"
-      },
-      {
-        "demo": "Demo",
-        "github": "",
-        "link": "https://tenzi-bydaniel.netlify.app/",
-        "src": "/images/screenshots/Tenzi.webp",
-        "summary": "The world's most popular dice game, now in your browser.",
-        "title": "tenzi"
-      }
-    ],
-    "projects-title": "Projects",
-    "websites": [
-      {
-        "demo": "Demo",
-        "github": "",
-        "link": "https://muraryu.com",
-        "src": "/images/screenshots/muraryu.webp",
-        "summary": "MuraRyu is a new Condominium Management company in Portugal.",
-        "title": "muraRyu"
-      },
-      {
-        "demo": "Demo",
-        "github": "",
-        "link": "https://victo.pages.dev",
-        "src": "/images/screenshots/victo.webp",
-        "summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
-        "title": "victó's art gallery"
-      },
-      {
-        "demo": "Demo",
-        "github": "",
-        "link": "https://insurbia.com",
-        "src": "/images/screenshots/insurbia2.webp",
-        "summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
-        "title": "insurbia"
-      }
-    ],
-    "websites-title": "Websites"
-  },
-  "privacyPolicy": {
-    "contactEmail": "rgpd@daniel-freire.com",
-    "header1": "1. Introdução",
-    "header10": "10. Atualizações a Esta Política de Privacidade",
-    "header11": "11. Contacte-nos",
-    "header2": "2. Informações que Recolhemos",
-    "header3": "3. Finalidade da Recolha de Dados",
-    "header4": "4. Base Legal para o Tratamento",
-    "header5": "5. Partilha de Dados Pessoais",
-    "header6": "6. Conservação de Dados",
-    "header7": "7. Os Seus Direitos",
-    "header8": "8. Segurança de Dados",
-    "header9": "9. Reclamações",
-    "paragraph1": "Bem-vindo ao website de Daniel Freire. Estamos empenhados em proteger a sua informação pessoal e o seu direito à privacidade. Se tiver alguma questão ou preocupação sobre este aviso de privacidade ou sobre as nossas práticas relativamente à sua informação pessoal, por favor contacte-nos através de",
-    "paragraph10": "Podemos atualizar esta política de privacidade periodicamente. Notificá-lo-emos de quaisquer alterações através da publicação da nova política de privacidade nesta página.",
-    "paragraph11": "Se tiver alguma questão sobre esta política de privacidade, por favor contacte-nos através de",
-    "paragraph2": "Recolhemos informações pessoais que nos fornece voluntariamente quando preenche um formulário no nosso website. As informações pessoais que recolhemos incluem:",
-    "paragraph2li": [
-      "Primeiro nome",
-      "Último nome",
-      "Endereço de email",
-      "Número de telefone"
-    ],
-    "paragraph3": "As informações recolhidas serão utilizadas para o contactar no futuro. Utilizaremos os seus dados pessoais apenas para esta finalidade específica.",
-    "paragraph4": "Tratamos os seus dados pessoais com base no seu consentimento, que nos concede ao preencher o formulário no nosso website.",
-    "paragraph5": "Não partilhamos os seus dados pessoais com terceiros, exceto se exigido por lei.",
-    "paragraph6": "Conservaremos os seus dados pessoais apenas durante o tempo necessário para cumprir as finalidades para as quais os recolhemos, incluindo para o cumprimento de quaisquer requisitos legais.",
-    "paragraph7": "Tem o direito de:",
-    "paragraph7li": [
-      "Aceder aos seus dados pessoais",
-      "Solicitar a retificação dos seus dados pessoais",
-      "Solicitar a eliminação dos seus dados pessoais",
-      "Opor-se ao tratamento dos seus dados pessoais",
-      "Solicitar a limitação do tratamento dos seus dados pessoais",
-      "Solicitar a portabilidade dos seus dados pessoais",
-      "Retirar o consentimento a qualquer momento"
-    ],
-    "paragraph8": "Implementamos medidas técnicas e organizativas adequadas para garantir um nível de segurança apropriado face ao risco inerente ao tratamento dos seus dados pessoais.",
-    "paragraph9": "Se acredita que não cumprimos com as leis de proteção de dados, tem o direito de apresentar uma reclamação junto da autoridade de controlo competente.",
-    "title": "Política de Privacidade do Website de Daniel Freire"
-  },
-  "services": [
-    {
-      "icon": "",
-      "text": "Crie uma presença única online e destaque o seu negócio.",
-      "title": "Desenvolvimento Web"
-    },
-    {
-      "icon": "",
-      "text": "Desenvolva lojas online personalizadas com processamento de pagamentos seguro.",
-      "title": "Desenvolvimento de E-commerce"
-    },
-    {
-      "icon": "",
-      "text": "Seja encontrado e mostre às pessoas que a sua solução é a melhor.",
-      "title": "SEO (Otimização para Motores de Busca)"
-    },
-    {
-      "icon": "",
-      "text": "Vou ajudá-lo a levar a sua marca para o próximo nível.",
-      "title": "Marketing Digital"
-    },
-    {
-      "icon": "",
-      "text": "Gerencie tudo relacionado ao hospedagem.",
-      "title": "Gestão e Suporte de Hospedagem"
-    }
-  ],
-  "sidenav": {
-    "footer": {
-      "blurb": "Feito com 🐞 por",
-      "icons": {
-        "github": {
-          "alt": "GitHub",
-          "ariaDetails": "GitHub de Daniel Freire",
-          "ariaLAbel": "GitHub de Daniel Freire",
-          "link": "https://github.com/danielfreire-dev/",
-          "src": "/images/icons/github-square.svg",
-          "title": "GitHub de Daniel Freire"
-        },
-        "linkedin": {
-          "alt": "LinkedIn",
-          "ariaDetails": "LinkedIn de Daniel Freire",
-          "ariaLAbel": "LinkedIn de Daniel Freire",
-          "link": "https://www.linkedin.com/in/danielfreire-swe/",
-          "src": "/images/icons/linkedin.svg",
-          "title": "LinkedIn de Daniel Freire"
-        }
-      }
-    },
-    "header": {
-      "role": "desenvolvedor web",
-      "title": "daniel freire"
-    },
-    "legal": {
-      "impressumLink": "/impressum",
-      "impressumName": "impressum",
-      "privacyLink": "/politica-privacidade",
-      "privacyLinkAriaDetails": "Política de Privacidade",
-      "privacyLinkAriaLabel": "Política de Privacidade",
-      "privacyLinkTitle": "Política de Privacidade",
-      "privacyName": "política de privacidade"
-    },
-    "links": [
-      {
-        "link": "/",
-        "name": "início"
-      },
-      {
-        "link": "/sobre",
-        "name": "sobre"
-      },
-      {
-        "link": "/portfolio",
-        "name": "portfólio"
-      },
-      {
-        "link": "/contactos",
-        "name": "contactos"
-      }
-    ],
-    "privacy": "política de privacidade",
-    "rights": "Daniel Freire ® todos os direitos reservados",
-    "select": {
-      "languageSelectAriaLabel": "Menú para selecionar língua",
-      "languageSelectTitle": "Menú para selecionar língua"
-    }
-  },
-  "tech": [
-    {
-      "link": "https://nextjs.org",
-      "logo": "/images/icons/nextjs-13.svg",
-      "name": "next.js",
-      "svgr": "Nextjs"
-    },
-    {
-      "link": "https://react.dev",
-      "logo": "/images/icons/react2.svg",
-      "name": "react.js",
-      "svgr": "Reactjs"
-    },
-    {
-      "link": "https://nodejs.org/en",
-      "logo": "/images/icons/node-js.svg",
-      "name": "node.js",
-      "svgr": "Nodejs"
-    },
-    {
-      "link": "https://www.typescriptlang.org",
-      "logo": "/images/icons/Typescript.svg",
-      "name": "typeScript",
-      "svgr": "TypeScript"
-    },
-    {
-      "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      "logo": "/images/icons/javascript-original.svg",
-      "name": "javaScript",
-      "svgr": "JavaScript"
-    },
-    {
-      "link": "https://www.w3.org/html/",
-      "logo": "/images/icons/html5-original-wordmark.svg",
-      "name": "HTML5",
-      "svgr": "HTML5"
-    },
-    {
-      "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      "logo": "/images/icons/Official_CSS_Logo.svg",
-      "name": "CSS3",
-      "svgr": "CSS3"
-    },
-    {
-      "link": "https://www.postgresql.org",
-      "logo": "/images/icons/postgresql.svg",
-      "name": "postgreSQL",
-      "svgr": "PostgreSQL"
-    },
-    {
-      "link": "https://vite.dev",
-      "logo": "/images/icons/vitejs.svg",
-      "name": "vite.js",
-      "svgr": "Vitejs"
-    },
-    {
-      "link": "https://webpack.js.org/",
-      "logo": "/images/icons/webpack.svg",
-      "name": "webpack",
-      "svgr": "Webpack"
-    },
-    {
-      "link": "https://github.com/",
-      "logo": "/images/icons/github.svg",
-      "name": "gitHub",
-      "svgr": "Github"
-    },
-    {
-      "link": "https://git-scm.com/",
-      "logo": "/images/icons/git-scm-icon.svg",
-      "name": "git",
-      "svgr": "Git"
-    },
-    {
-      "link": "https://vitest.dev/",
-      "logo": "/images/icons/vitest.svg",
-      "name": "vitest",
-      "svgr": "Vitest"
-    },
-    {
-      "link": "https://jestjs.io/",
-      "logo": "/images/icons/jestjsio-icon.svg",
-      "name": "jest",
-      "svgr": "Jest"
-    },
-    {
-      "link": "https://selenium-python.readthedocs.io/",
-      "logo": "/images/icons/selenium.svg",
-      "name": "selenium",
-      "svgr": "Selenium"
-    },
-    {
-      "link": "https://www.python.org/",
-      "logo": "/images/icons/python-original.svg",
-      "name": "python",
-      "svgr": "Python"
-    },
-    {
-      "link": "https://www.linux.org/",
-      "logo": "/images/icons/linux-original.svg",
-      "name": "linux",
-      "svgr": "Linux"
-    }
-  ],
-  "topMainPage": {
-    "blurbsArray": [
-      {
-        "description": "O seu website está a limitar o crescimento do seu negócio? A nossa auditoria de desempenho abrangente analisa profundamente a sua infraestrutura técnica, a experiência do utilizador e o potencial de conversão. Forneceremos um relatório detalhado com as melhorias críticas que podem aumentar drasticamente o seu desempenho online.",
-        "title": "Revolucione já a sua presença digital!"
-      },
-      {
-        "description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-        "title": "Desbloqueie todo o potencial do seu website"
-      },
-      {
-        "description": "Pare de se contentar com modelos genéricos. Os nossos serviços de desenvolvimento web personalizado criam experiências digitais totalmente adaptadas à identidade única da sua marca e aos seus objetivos de negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
-        "title": "Construa hoje o seu projeto de sonho"
-      },
-      {
-        "description": "A velocidade não é apenas uma funcionalidade – é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carrega extremamente rápido, proporcionando uma experiência excecional ao utilizador que mantém os visitantes envolvidos e converte de forma mais eficaz.",
-        "title": "Acelere o potencial do seu website"
-      },
-      {
-        "description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a fazer a transição para tecnologias web modernas e eficientes, sem interromper as suas operações existentes. Garantimos um percurso de atualização suave e com gestão de riscos.",
-        "title": "Modernize a sua infraestrutura digital"
-      },
-      {
-        "description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-        "title": "Cuidados contínuos para os seus ativos digitais"
-      }
-    ],
-    "p1": "Cansado de software que atrasa o seu negócio?",
-    "p2": "A maioria do software empresarial é demasiado rígido ou demasiado complexo. Especializo-me no desenvolvimento de aplicações web personalizadas – como sistemas CRM, rastreadores de projetos e painéis de dados – que se adequam à forma como o seu negócio realmente funciona. Se precisa de uma ferramenta que resolva um problema específico sem funcionalidades desnecessárias, vamos discutir o que pretende alcançar."
-  }
+			{
+				"demo": "Demo",
+				"github": "",
+				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
+				"src": "/images/screenshots/drumsVeryBig1920.webp",
+				"summary": "Fun project to reproduce a Drum Kit in your PC.",
+				"title": "drum kit app"
+			},
+			{
+				"demo": "Demo",
+				"github": "",
+				"link": "https://tenzi-bydaniel.netlify.app/",
+				"src": "/images/screenshots/Tenzi.webp",
+				"summary": "The world's most popular dice game, now in your browser.",
+				"title": "tenzi"
+			}
+		],
+		"projects-title": "Projects",
+		"websites": [
+			{
+				"demo": "Demo",
+				"github": "",
+				"link": "https://muraryu.com",
+				"src": "/images/screenshots/muraryu.webp",
+				"summary": "MuraRyu is a new Condominium Management company in Portugal.",
+				"title": "muraRyu"
+			},
+			{
+				"demo": "Demo",
+				"github": "",
+				"link": "https://victo.pages.dev",
+				"src": "/images/screenshots/victo.webp",
+				"summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+				"title": "victó's art gallery"
+			},
+			{
+				"demo": "Demo",
+				"github": "",
+				"link": "https://insurbia.com",
+				"src": "/images/screenshots/insurbia2.webp",
+				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
+				"title": "insurbia"
+			}
+		],
+		"websites-title": "Websites"
+	},
+	"privacyPolicy": {
+		"contactEmail": "rgpd@daniel-freire.com",
+		"header1": "1. Introdução",
+		"header10": "10. Atualizações a Esta Política de Privacidade",
+		"header11": "11. Contacte-nos",
+		"header2": "2. Informações que Recolhemos",
+		"header3": "3. Finalidade da Recolha de Dados",
+		"header4": "4. Base Legal para o Tratamento",
+		"header5": "5. Partilha de Dados Pessoais",
+		"header6": "6. Conservação de Dados",
+		"header7": "7. Os Seus Direitos",
+		"header8": "8. Segurança de Dados",
+		"header9": "9. Reclamações",
+		"paragraph1": "Bem-vindo ao website de Daniel Freire. Estamos empenhados em proteger a sua informação pessoal e o seu direito à privacidade. Se tiver alguma questão ou preocupação sobre este aviso de privacidade ou sobre as nossas práticas relativamente à sua informação pessoal, por favor contacte-nos através de",
+		"paragraph10": "Podemos atualizar esta política de privacidade periodicamente. Notificá-lo-emos de quaisquer alterações através da publicação da nova política de privacidade nesta página.",
+		"paragraph11": "Se tiver alguma questão sobre esta política de privacidade, por favor contacte-nos através de",
+		"paragraph2": "Recolhemos informações pessoais que nos fornece voluntariamente quando preenche um formulário no nosso website. As informações pessoais que recolhemos incluem:",
+		"paragraph2li": ["Primeiro nome", "Último nome", "Endereço de email", "Número de telefone"],
+		"paragraph3": "As informações recolhidas serão utilizadas para o contactar no futuro. Utilizaremos os seus dados pessoais apenas para esta finalidade específica.",
+		"paragraph4": "Tratamos os seus dados pessoais com base no seu consentimento, que nos concede ao preencher o formulário no nosso website.",
+		"paragraph5": "Não partilhamos os seus dados pessoais com terceiros, exceto se exigido por lei.",
+		"paragraph6": "Conservaremos os seus dados pessoais apenas durante o tempo necessário para cumprir as finalidades para as quais os recolhemos, incluindo para o cumprimento de quaisquer requisitos legais.",
+		"paragraph7": "Tem o direito de:",
+		"paragraph7li": [
+			"Aceder aos seus dados pessoais",
+			"Solicitar a retificação dos seus dados pessoais",
+			"Solicitar a eliminação dos seus dados pessoais",
+			"Opor-se ao tratamento dos seus dados pessoais",
+			"Solicitar a limitação do tratamento dos seus dados pessoais",
+			"Solicitar a portabilidade dos seus dados pessoais",
+			"Retirar o consentimento a qualquer momento"
+		],
+		"paragraph8": "Implementamos medidas técnicas e organizativas adequadas para garantir um nível de segurança apropriado face ao risco inerente ao tratamento dos seus dados pessoais.",
+		"paragraph9": "Se acredita que não cumprimos com as leis de proteção de dados, tem o direito de apresentar uma reclamação junto da autoridade de controlo competente.",
+		"title": "Política de Privacidade do Website de Daniel Freire"
+	},
+	"services": [
+		{
+			"icon": "/images/icons/business-processes.svg",
+			"text": "Aplicações web à medida — CRMs, dashboards e ferramentas internas que se adaptam à forma como o seu negócio realmente funciona.",
+			"title": "Software Personalizado Empresarial"
+		},
+		{
+			"icon": "/images/icons/ai-recommend.svg",
+			"text": "Integração de IA nos seus fluxos de trabalho — chatbots, automação inteligente e funcionalidades baseadas em dados.",
+			"title": "Implementação de Soluções de IA"
+		},
+		{
+			"icon": "/images/icons/dns-services.svg",
+			"text": "Websites e aplicações modernas e de alto desempenho criadas com React, Next.js e TypeScript.",
+			"title": "Desenvolvimento Web"
+		},
+		{
+			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"text": "Auditorias baseadas em dados, otimização de desempenho e estratégia para ajudar o seu negócio a ser encontrado.",
+			"title": "SEO e Consultoria Técnica"
+		}
+	],
+	"sidenav": {
+		"footer": {
+			"blurb": "Feito com 🐞 por",
+			"icons": {
+				"github": {
+					"alt": "GitHub",
+					"ariaDetails": "GitHub de Daniel Freire",
+					"ariaLAbel": "GitHub de Daniel Freire",
+					"link": "https://github.com/danielfreire-dev/",
+					"src": "/images/icons/github-square.svg",
+					"title": "GitHub de Daniel Freire"
+				},
+				"linkedin": {
+					"alt": "LinkedIn",
+					"ariaDetails": "LinkedIn de Daniel Freire",
+					"ariaLAbel": "LinkedIn de Daniel Freire",
+					"link": "https://www.linkedin.com/in/danielfreire-swe/",
+					"src": "/images/icons/linkedin.svg",
+					"title": "LinkedIn de Daniel Freire"
+				}
+			}
+		},
+		"header": {
+			"role": "desenvolvedor web",
+			"title": "daniel freire"
+		},
+		"legal": {
+			"impressumLink": "/impressum",
+			"impressumName": "impressum",
+			"privacyLink": "/politica-privacidade",
+			"privacyLinkAriaDetails": "Política de Privacidade",
+			"privacyLinkAriaLabel": "Política de Privacidade",
+			"privacyLinkTitle": "Política de Privacidade",
+			"privacyName": "política de privacidade"
+		},
+		"links": [
+			{
+				"link": "/",
+				"name": "início"
+			},
+			{
+				"link": "/sobre",
+				"name": "sobre"
+			},
+			{
+				"link": "/portfolio",
+				"name": "portfólio"
+			},
+			{
+				"link": "/contactos",
+				"name": "contactos"
+			}
+		],
+		"privacy": "política de privacidade",
+		"rights": "Daniel Freire ® todos os direitos reservados",
+		"select": {
+			"languageSelectAriaLabel": "Menú para selecionar língua",
+			"languageSelectTitle": "Menú para selecionar língua"
+		}
+	},
+	"tech": [
+		{
+			"link": "https://nextjs.org",
+			"logo": "/images/icons/nextjs-13.svg",
+			"name": "next.js",
+			"svgr": "Nextjs"
+		},
+		{
+			"link": "https://react.dev",
+			"logo": "/images/icons/react2.svg",
+			"name": "react.js",
+			"svgr": "Reactjs"
+		},
+		{
+			"link": "https://nodejs.org/en",
+			"logo": "/images/icons/node-js.svg",
+			"name": "node.js",
+			"svgr": "Nodejs"
+		},
+		{
+			"link": "https://www.typescriptlang.org",
+			"logo": "/images/icons/Typescript.svg",
+			"name": "typeScript",
+			"svgr": "TypeScript"
+		},
+		{
+			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			"logo": "/images/icons/javascript-original.svg",
+			"name": "javaScript",
+			"svgr": "JavaScript"
+		},
+		{
+			"link": "https://www.w3.org/html/",
+			"logo": "/images/icons/html5-original-wordmark.svg",
+			"name": "HTML5",
+			"svgr": "HTML5"
+		},
+		{
+			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			"logo": "/images/icons/Official_CSS_Logo.svg",
+			"name": "CSS3",
+			"svgr": "CSS3"
+		},
+		{
+			"link": "https://www.postgresql.org",
+			"logo": "/images/icons/postgresql.svg",
+			"name": "postgreSQL",
+			"svgr": "PostgreSQL"
+		},
+		{
+			"link": "https://vite.dev",
+			"logo": "/images/icons/vitejs.svg",
+			"name": "vite.js",
+			"svgr": "Vitejs"
+		},
+		{
+			"link": "https://webpack.js.org/",
+			"logo": "/images/icons/webpack.svg",
+			"name": "webpack",
+			"svgr": "Webpack"
+		},
+		{
+			"link": "https://github.com/",
+			"logo": "/images/icons/github.svg",
+			"name": "gitHub",
+			"svgr": "Github"
+		},
+		{
+			"link": "https://git-scm.com/",
+			"logo": "/images/icons/git-scm-icon.svg",
+			"name": "git",
+			"svgr": "Git"
+		},
+		{
+			"link": "https://vitest.dev/",
+			"logo": "/images/icons/vitest.svg",
+			"name": "vitest",
+			"svgr": "Vitest"
+		},
+		{
+			"link": "https://jestjs.io/",
+			"logo": "/images/icons/jestjsio-icon.svg",
+			"name": "jest",
+			"svgr": "Jest"
+		},
+		{
+			"link": "https://selenium-python.readthedocs.io/",
+			"logo": "/images/icons/selenium.svg",
+			"name": "selenium",
+			"svgr": "Selenium"
+		},
+		{
+			"link": "https://www.python.org/",
+			"logo": "/images/icons/python-original.svg",
+			"name": "python",
+			"svgr": "Python"
+		},
+		{
+			"link": "https://www.linux.org/",
+			"logo": "/images/icons/linux-original.svg",
+			"name": "linux",
+			"svgr": "Linux"
+		}
+	],
+	"topMainPage": {
+		"blurbsArray": [
+			{
+				"description": "O seu website está a limitar o crescimento do seu negócio? A nossa auditoria de desempenho abrangente analisa profundamente a sua infraestrutura técnica, a experiência do utilizador e o potencial de conversão. Forneceremos um relatório detalhado com as melhorias críticas que podem aumentar drasticamente o seu desempenho online.",
+				"title": "Revolucione já a sua presença digital!"
+			},
+			{
+				"description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+				"title": "Desbloqueie todo o potencial do seu website"
+			},
+			{
+				"description": "Pare de se contentar com modelos genéricos. Os nossos serviços de desenvolvimento web personalizado criam experiências digitais totalmente adaptadas à identidade única da sua marca e aos seus objetivos de negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
+				"title": "Construa hoje o seu projeto de sonho"
+			},
+			{
+				"description": "A velocidade não é apenas uma funcionalidade – é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carrega extremamente rápido, proporcionando uma experiência excecional ao utilizador que mantém os visitantes envolvidos e converte de forma mais eficaz.",
+				"title": "Acelere o potencial do seu website"
+			},
+			{
+				"description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a fazer a transição para tecnologias web modernas e eficientes, sem interromper as suas operações existentes. Garantimos um percurso de atualização suave e com gestão de riscos.",
+				"title": "Modernize a sua infraestrutura digital"
+			},
+			{
+				"description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
+				"title": "Cuidados contínuos para os seus ativos digitais"
+			}
+		],
+		"p1": "Cansado de software que atrasa o seu negócio?",
+		"p2": "A maioria do software empresarial é demasiado rígido ou demasiado complexo. Especializo-me no desenvolvimento de aplicações web personalizadas – como sistemas CRM, rastreadores de projetos e painéis de dados – que se adequam à forma como o seu negócio realmente funciona. Se precisa de uma ferramenta que resolva um problema específico sem funcionalidades desnecessárias, vamos discutir o que pretende alcançar."
+	}
 }

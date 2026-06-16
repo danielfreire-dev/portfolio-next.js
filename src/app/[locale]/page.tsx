@@ -74,6 +74,7 @@ export default function HomePage({ params }: Props) {
   return (
     <>
       <TopMainPage />
+      <Services />
       <Suspense>
         <Techstack />
       </Suspense>
