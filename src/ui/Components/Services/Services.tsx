@@ -1,71 +1,33 @@
-/* import { Service } from "@/types";
-import { nanoid } from "nanoid";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { Suspense } from "react";
-import { WebsiteCardSkeleton } from "./Skeletons";
+import ServiceCard from "./ServiceCard";
 
 /**
- * Services section (commented out — legacy implementation).
+ * Services section — 2×2 grid of service offerings.
  *
- * Previously rendered a grid of service cards from translation data.
- * Kept for reference in case the services section is re-enabled.
- * /
+ * Reads the `services` array from i18n translations and maps each item
+ * to a {@link ServiceCard} inside a responsive CSS grid.
+ */
 const Services = () => {
-	const t = useTranslations("services");
-
-	const collectionMap = (items: "websites" | "projects") => {
-		return t
-			.raw(`${items}`)
-			.map((item: Dictionary["portfolio"]["websites" | "projects"][number]) => (
-				<div
-					className=" max-w-lg last:mr-0 mb-6 p-3 surface-cards"
-					key={nanoid()}
-				>
-					<Suspense fallback={<WebsiteCardSkeleton />}>
-						<div className="overflow-hidden shadow-md">
-							<a href={item.link} target="_blank" rel="noopener noreferrer">
-								<Image
-									src={item.src}
-									alt={item.title}
-									width={1000}
-									height={1000}
-									className="hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110 website-card-image"
-								/>
-							</a>
-						</div>
-					</Suspense>
-					<div className="mt-4 box-border">
-						<a
-							href={item.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-block"
-						>
-							<h3 className="capitalize text-xl hover:underline font-semibold size-fit">
-								{item.title}
-							</h3>
-						</a>
-						<small className="block text-(--text-tertiary) text-sm break-words mt-1">
-							{item.summary}
-						</small>
-					</div>
-				</div>
-			));
-	};
+	const t = useTranslations();
+	const services = t.raw("services") as Array<{
+		icon: string;
+		title: string;
+		text: string;
+	}>;
 
 	return (
-		<div className="mx-15 text-center flex flex-wrap flex-col justify-center">
-			<h2>{t("websites-title")}</h2>
-			<section className="flex flex-row flex-wrap justify-center gap-x-7 websites-title">
-				{collectionMap("websites")}
-			</section>
-			<h2>{t("projects-title")}</h2>
-			<section className="flex flex-row flex-wrap justify-center gap-x-7 projects-title">
-				{collectionMap("projects")}
-			</section>
-		</div>
+		<section className="mx-15">
+			<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
+				{services.map((service) => (
+					<ServiceCard
+						key={service.title}
+						icon={service.icon}
+						title={service.title}
+						text={service.text}
+					/>
+				))}
+			</div>
+		</section>
 	);
 };
 export default Services;
- */
