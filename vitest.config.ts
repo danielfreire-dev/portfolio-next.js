@@ -1,8 +1,7 @@
-import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import path from "node:path";
-import type { Plugin } from "vite";
+import { defineConfig, type Plugin } from "vitest/config";
 
 /**
  * Intercepts .css imports and returns an empty module.
