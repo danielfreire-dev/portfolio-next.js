@@ -5,7 +5,7 @@ type: template
 authors:
   - family-names: "Freire"
     given-names: "Daniel"
-    website: "https://santifer.io"
+    website: "https://daniel-freire.com"
 url: "https://daniel-freire.com"
 repository-code: "https://github.com/danielfreire-dev/portfolio-next.js"
 license: GNU
