@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import * as SVGs from "../svgs";
 
 /** A single technology item displayed in the tech stack. */
@@ -36,7 +35,7 @@ const TechCards = ({ tech }: TechCardsProps) => {
     }
 
     return (
-      <div className="py-7 px-9 m-4 surface-cards" key={nanoid()}>
+      <div className="py-7 px-9 m-4 surface-cards" key={data.name}>
         <a
           href={data.link}
           className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
