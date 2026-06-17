@@ -31,6 +31,15 @@ const ContactForm = () => {
 	const { isDarkStore, setValue } = useThemeStore();
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
+	// Guard: if the site key is missing, Turnstile silently fails to render.
+	// This catches the case where the env var wasn't set during build or deploy.
+	if (!siteKey) {
+		const msg = "ContactForm: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set. Turnstile will not render.";
+		if (typeof window !== "undefined") {
+			console.warn(msg);
+		}
+	}
+
 	// Force re-mount Turnstile when theme changes so it picks up the correct theme
 	useEffect(() => {
 		setAnimationKey((prev) => prev + 1);
@@ -194,7 +203,6 @@ const ContactForm = () => {
 							sandbox={process.env.NODE_ENV === "development"}
 							appearance="execute"
 							theme={isDarkStore ? "dark" : "light"}
-							className=""
 							onError={() => {
 								setTurnstileStatus("error");
 								setError("Security check failed. Please try again.");
@@ -217,15 +225,14 @@ const ContactForm = () => {
 							}}
 						/>
 					</Suspense>
-					{turnstileLoaded && (
-						<button
-							type="submit"
-							className="bg-(--surface) raise capitalize button-class"
-							id="contact-form"
-							disabled={loading === "loading" || turnstileStatus !== "success"}>
-							{t("btn")}
-						</button>
-					)}
+
+					<button
+						type="submit"
+						className="bg-(--surface) raise capitalize button-class"
+						id="contact-form"
+						disabled={loading === "loading" || turnstileStatus !== "success"}>
+						{t("btn")}
+					</button>
 				</section>
 			</form>
 			<ContactFarewell submitted={loading === "submitted"} />

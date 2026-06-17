@@ -38,9 +38,13 @@ vi.mock("next-intl", () => ({
 	NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => children as React.ReactElement,
 }));
 
-// Mock next-turnstile
+// Mock next-turnstile — captures props so tests can assert on siteKey, etc.
+let lastTurnstileProps: Record<string, unknown> = {};
+
 vi.mock("next-turnstile", () => ({
-	Turnstile: ({ onVerify, onLoad }: Record<string, unknown>) => {
+	Turnstile: (props: Record<string, unknown>) => {
+		lastTurnstileProps = props;
+		const { onVerify, onLoad } = props;
 		if (typeof onLoad === "function") setTimeout(() => onLoad(), 0);
 		return (
 			<div data-testid="turnstile-mock">
@@ -88,11 +92,18 @@ describe("ContactForm", () => {
 	beforeEach(() => {
 		mockIsDarkStore = false;
 		mockSetValue.mockClear();
+		lastTurnstileProps = {};
 	});
 
 	describe("rendering", () => {
 		beforeEach(() => {
 			renderWithProviders(<ContactForm />);
+		});
+
+		it("should pass a non-empty siteKey to Turnstile (prevents silent production failure)", () => {
+			expect(lastTurnstileProps.siteKey).toBeTruthy();
+			expect(typeof lastTurnstileProps.siteKey).toBe("string");
+			expect((lastTurnstileProps.siteKey as string).length).toBeGreaterThan(0);
 		});
 
 		it("should render the first name field (required)", () => {

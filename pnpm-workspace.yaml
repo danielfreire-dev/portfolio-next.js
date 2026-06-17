@@ -7,5 +7,6 @@ allowBuilds:
   esbuild: false
   react-cookie-manager: false
   sharp: false
+  workerd: true
 onlyBuiltDependencies:
   - cypress
