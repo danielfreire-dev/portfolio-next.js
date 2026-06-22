@@ -1075,3 +1075,267 @@
 		max-width: 42rem;
 	}
 }
+
+/* ================================================================== */
+/*  Theme & Brand Colour Overrides                                     */
+/*                                                                     */
+/*  Everything below maps react-cookie-manager's Tailwind utility      */
+/*  classes onto the project's CSS custom properties so the banner     */
+/*  tracks the light ↔ dark theme toggle AND reflects brand colours    */
+/*  (primary = orange) instead of the library's default blue.          */
+/* ================================================================== */
+
+/* ------------------------------------------------------------------ */
+/*  Background colours                                                  */
+/* ------------------------------------------------------------------ */
+.cookie-manager .bg-white\/95 {
+	background-color: var(--surface) !important;
+}
+.cookie-manager .bg-black\/95 {
+	background-color: var(--surface) !important;
+}
+.cookie-manager .bg-gray-200 {
+	background-color: var(--surface-hover) !important;
+}
+.cookie-manager .bg-gray-700 {
+	background-color: var(--surface-hover) !important;
+}
+.cookie-manager .bg-gray-800 {
+	background-color: var(--surface-hover) !important;
+}
+/* Primary action buttons — brand orange instead of library blue       */
+.cookie-manager .bg-blue-500 {
+	background-color: var(--primary) !important;
+}
+/* Modal backdrops — keep dark, slightly increased opacity for clarity */
+.cookie-manager .bg-black\/20 {
+	background-color: rgba(0, 0, 0, 0.55) !important;
+}
+.cookie-manager .bg-black\/40 {
+	background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.cookie-manager .bg-transparent {
+	background-color: transparent !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Text colours                                                        */
+/* ------------------------------------------------------------------ */
+/* Body / heading text                                                 */
+.cookie-manager .text-gray-900,
+.cookie-manager .text-gray-800,
+.cookie-manager .text-gray-200 {
+	color: var(--text) !important;
+}
+/* Banner message & subtitle text — use full text colour for max       */
+/* readability against the surface background                          */
+.cookie-manager .text-gray-700,
+.cookie-manager .text-gray-600,
+.cookie-manager .text-gray-500,
+.cookie-manager .text-gray-400,
+.cookie-manager .text-gray-300 {
+	color: var(--text) !important;
+}
+/* White text — keep as real white for contrast on coloured buttons    */
+/* and dark backdrops. The library only uses it where the background   */
+/* is dark or saturated enough to meet contrast requirements.          */
+.cookie-manager .text-white {
+	color: #fff !important;
+}
+/* Links and interactive accents — brand orange                        */
+.cookie-manager .text-blue-500 {
+	color: var(--primary) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Borders                                                             */
+/* ------------------------------------------------------------------ */
+.cookie-manager .border-black\/10 {
+	border-color: var(--surface) !important;
+}
+.cookie-manager .border-blue-500 {
+	border-color: var(--primary) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Hover states                                                        */
+/* ------------------------------------------------------------------ */
+.cookie-manager .hover\:bg-gray-300:hover {
+	background-color: var(--surface-hover) !important;
+}
+.cookie-manager .hover\:bg-gray-600:hover {
+	background-color: var(--surface-hover) !important;
+}
+.cookie-manager .hover\:bg-gray-700:hover {
+	background-color: var(--surface-hover) !important;
+}
+.cookie-manager .hover\:bg-blue-600:hover {
+	filter: brightness(0.85);
+}
+
+.cookie-manager .hover\:text-gray-700:hover,
+.cookie-manager .hover\:text-gray-900:hover {
+	color: var(--text) !important;
+}
+.cookie-manager .hover\:text-gray-200:hover {
+	color: var(--text-hover) !important;
+}
+.cookie-manager .hover\:text-blue-400:hover,
+.cookie-manager .hover\:text-blue-600:hover {
+	color: var(--primary) !important;
+}
+.cookie-manager .hover\:text-white:hover {
+	color: #fff !important;
+}
+.cookie-manager .hover\:border-blue-400:hover,
+.cookie-manager .hover\:border-blue-600:hover {
+	border-color: var(--primary) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Custom banner message class — passed via classNames prop.           */
+/*  When a custom class is provided the library drops all its defaults, */
+/*  so we supply the full presentation here.                            */
+/* ------------------------------------------------------------------ */
+.cookie-manager .cookie-banner-message {
+	color: var(--text) !important;
+	font-size: 0.875rem !important;
+	font-weight: 500 !important;
+	line-height: 1.5 !important;
+	text-align: left;
+}
+@media (max-width: 639px) {
+	.cookie-manager .cookie-banner-message {
+		text-align: center;
+	}
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base text colour — ensures every element inside the cookie banner  */
+/*  inherits the theme text colour. Buttons / links have their own     */
+/*  explicit overrides above.                                          */
+/* ------------------------------------------------------------------ */
+.cookie-manager,
+.cookie-manager div,
+.cookie-manager p,
+.cookie-manager span,
+.cookie-manager h1,
+.cookie-manager h2,
+.cookie-manager h3,
+.cookie-manager h4,
+.cookie-manager h5,
+.cookie-manager h6 {
+	color: var(--text);
+}
+/* Keep real white on coloured buttons and dark backgrounds            */
+.cookie-manager .text-white,
+.cookie-manager button.text-white,
+.cookie-manager [class*="bg-blue"] {
+	color: #fff !important;
+}
+/* Keep brand-orange links and accents                                  */
+.cookie-manager .text-blue-500 {
+	color: var(--primary) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Ring / focus overrides                                              */
+/* ------------------------------------------------------------------ */
+.cookie-manager .ring-black\/10 {
+	--tw-ring-color: var(--surface) !important;
+}
+.cookie-manager .ring-white\/10 {
+	--tw-ring-color: var(--surface) !important;
+}
+.cookie-manager .ring-gray-200 {
+	--tw-ring-color: var(--surface) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Banner accent — thick top border + shadow for visual separation    */
+/* ------------------------------------------------------------------ */
+.cookie-manager > div:first-child {
+	border-top: 3px solid var(--primary) !important;
+	box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Toggle switch                                                       */
+/* ------------------------------------------------------------------ */
+.cookie-manager .peer:checked ~ .peer-checked\:bg-blue-500,
+.cookie-manager .peer ~ .bg-gray-200,
+.cookie-manager .peer ~ .bg-gray-700,
+.cookie-manager .peer ~ .bg-gray-800 {
+	overflow: hidden !important;
+}
+.cookie-manager .peer:checked ~ .peer-checked\:bg-blue-500 {
+	background-color: var(--primary) !important;
+}
+.cookie-manager .after\:bg-white:after {
+	background-color: #fff !important;
+}
+.cookie-manager .peer:checked ~ .peer-checked\:after\:translate-x-full:after {
+	background-color: var(--background) !important;
+	width: 1.25rem !important;
+	height: 1.25rem !important;
+	left: 2px !important;
+	top: 0.125rem !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Focus rings                                                         */
+/* ------------------------------------------------------------------ */
+.cookie-manager .focus\:ring-blue-500:focus,
+.cookie-manager .peer:focus ~ .peer-focus\:ring-blue-500 {
+	--tw-ring-color: var(--primary) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Consent-blocked placeholder                                         */
+/* ------------------------------------------------------------------ */
+.cookie-manager .cookie-consent-wrapper-content {
+	color: var(--text) !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Hide "Powered by CookieKit" branding                                */
+/* ------------------------------------------------------------------ */
+.cookie-manager a[href*="cookiekit.io"] {
+	display: none !important;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Smooth theme transitions (0.3s ease-in, matching globals.css)      */
+/* ------------------------------------------------------------------ */
+.cookie-manager .bg-white\/95,
+.cookie-manager .bg-black\/95,
+.cookie-manager .bg-gray-200,
+.cookie-manager .bg-gray-700,
+.cookie-manager .bg-gray-800,
+.cookie-manager .bg-blue-500,
+.cookie-manager .bg-black\/20,
+.cookie-manager .bg-black\/40,
+.cookie-manager > div:first-child {
+	transition:
+		background-color 0.3s ease-in,
+		border-color 0.3s ease-in,
+		box-shadow 0.3s ease-in;
+	-webkit-transition:
+		background-color 0.3s ease-in,
+		border-color 0.3s ease-in,
+		box-shadow 0.3s ease-in;
+}
+
+.cookie-manager .text-gray-900,
+.cookie-manager .text-gray-800,
+.cookie-manager .text-gray-700,
+.cookie-manager .text-gray-600,
+.cookie-manager .text-gray-500,
+.cookie-manager .text-gray-400,
+.cookie-manager .text-gray-300,
+.cookie-manager .text-gray-200,
+.cookie-manager .text-blue-500,
+.cookie-manager .cookie-consent-wrapper-content {
+	transition: color 0.3s ease-in;
+	-webkit-transition: color 0.3s ease-in;
+}
