@@ -80,18 +80,18 @@
   "scripts": {
     "build": "next build",
     "build-clean": "rm -rf .next && npm run build",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "dev": "next dev",
     "email": "email dev",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.md,.json",
     "lint-fix": "eslint --fix --ext  .js,.jsx,.ts,.tsx,.md,.json .",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload"
   },
   "type": "module",
   "version": "1.0.0"

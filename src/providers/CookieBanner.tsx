@@ -8,10 +8,10 @@ import { useState, useEffect } from "react";
 /* import { NextHogProvider, posthog, updatePostHogConsent } from "./posthog"; */
 
 /** Dynamically imported cookie consent manager (client-side only). */
-const CookieManager = dynamic(
-  () => import("react-cookie-manager").then((mod) => mod.CookieManager),
-  { ssr: false, loading: () => null },
-);
+const CookieManager = dynamic(() => import("react-cookie-manager").then((mod) => mod.CookieManager), {
+	ssr: false,
+	loading: () => null,
+});
 
 /**
  * Root providers wrapper.
@@ -21,101 +21,100 @@ const CookieManager = dynamic(
  * Updates Google Analytics consent status when analytics are accepted.
  */
 export function Providers({ children }: { children: React.ReactNode }) {
-  const [cookieConsentGiven, setCookieConsentGiven] = useState({
-    analytics: false,
-    social: false,
-    marketing: false,
-  });
+	const [cookieConsentGiven, setCookieConsentGiven] = useState({
+		analytics: false,
+		social: false,
+		marketing: false,
+	});
 
-  const t = useTranslations("cookies");
+	const t = useTranslations("cookies");
 
-  /** Grants analytics consent and updates the GA consent default. */
-  const consentAnalytics = () => {
-    setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
-    /* posthog.opt_in_capturing(); */
-    window.gtag("consent", "update", {
-      analytics_storage: "granted",
-    });
-  };
+	/** Grants analytics consent and updates the GA consent default. */
+	const consentAnalytics = () => {
+		setCookieConsentGiven({ ...cookieConsentGiven, analytics: true });
+		/* posthog.opt_in_capturing(); */
+		window.gtag("consent", "update", {
+			analytics_storage: "granted",
+		});
+	};
 
-  /** Grants social-media cookie consent. */
-  const consentSocial = () => {
-    setCookieConsentGiven({ ...cookieConsentGiven, social: true });
-  };
+	/** Grants social-media cookie consent. */
+	const consentSocial = () => {
+		setCookieConsentGiven({ ...cookieConsentGiven, social: true });
+	};
 
-  /** Grants marketing/advertising cookie consent. */
-  const consentMarketing = () => {
-    setCookieConsentGiven({ ...cookieConsentGiven, marketing: true });
-  };
+	/** Grants marketing/advertising cookie consent. */
+	const consentMarketing = () => {
+		setCookieConsentGiven({ ...cookieConsentGiven, marketing: true });
+	};
 
-  return (
-    <CookieManager
-      cookieKitId={process.env.NEXT_PUBLIC_cookieKitId}
-      translations={{
-        title: t("title"),
-        message: t("message"),
-        buttonText: t("buttonText"),
-        declineButtonText: t("declineButtonText"),
-        privacyPolicyText: t("privacyPolicyText"),
-        manageButtonText: t("manageButtonText"),
+	return (
+		<CookieManager
+			cookieKitId={process.env.NEXT_PUBLIC_cookieKitId}
+			translations={{
+				title: t("title"),
+				message: t("message"),
+				buttonText: t("buttonText"),
+				declineButtonText: t("declineButtonText"),
+				privacyPolicyText: t("privacyPolicyText"),
+				manageButtonText: t("manageButtonText"),
 
-        manageTitle: t("manageTitle"),
-        manageMessage: t("manageMessage"),
+				manageTitle: t("manageTitle"),
+				manageMessage: t("manageMessage"),
 
-        manageEssentialTitle: t("manageEssentialTitle"),
-        manageEssentialSubtitle: t("manageEssentialSubtitle"),
-        manageEssentialStatus: t("manageEssentialStatus"),
-        manageEssentialStatusButtonText: t("manageEssentialStatusButtonText"),
+				manageEssentialTitle: t("manageEssentialTitle"),
+				manageEssentialSubtitle: t("manageEssentialSubtitle"),
+				manageEssentialStatus: t("manageEssentialStatus"),
+				manageEssentialStatusButtonText: t("manageEssentialStatusButtonText"),
 
-        manageAnalyticsTitle: t("manageEssentialStatusButtonText"),
-        manageAnalyticsSubtitle: t("manageAnalyticsSubtitle"),
+				manageAnalyticsTitle: t("manageEssentialStatusButtonText"),
+				manageAnalyticsSubtitle: t("manageAnalyticsSubtitle"),
 
-        manageSocialTitle: t("manageSocialTitle"),
-        manageSocialSubtitle: t("manageSocialSubtitle"),
+				manageSocialTitle: t("manageSocialTitle"),
+				manageSocialSubtitle: t("manageSocialSubtitle"),
 
-        manageAdvertTitle: t("manageAdvertTitle"),
-        manageAdvertSubtitle: t("manageAdvertSubtitle"),
+				manageAdvertTitle: t("manageAdvertTitle"),
+				manageAdvertSubtitle: t("manageAdvertSubtitle"),
 
-        /* manageCookiesStatus: t("manageCookiesStatus"), */
-        manageCookiesStatusConsented: t("manageCookiesStatusConsented"),
-        manageCookiesStatusDeclined: t("manageCookiesStatusDeclined"),
+				/* manageCookiesStatus: t("manageCookiesStatus"), */
+				manageCookiesStatusConsented: t("manageCookiesStatusConsented"),
+				manageCookiesStatusDeclined: t("manageCookiesStatusDeclined"),
 
-        manageCancelButtonText: t("manageCancelButtonText"),
-        manageSaveButtonText: t("manageSaveButtonText"),
-      }}
-      showManageButton
-      privacyPolicyUrl={t("privacyurl")}
-      displayType="modal"
-      onManage={(preferences) => {
-        console.log("Custom preferences saved:", preferences);
-        // Handle granular consent
-        if (preferences?.Analytics) {
-          consentAnalytics();
-        }
-        if (preferences?.Advertising) {
-          consentMarketing();
-        }
-        if (preferences?.Social) {
-          consentSocial();
-        }
-      }}
-      onAccept={() => {
-        console.log("User accepted all cookies");
-        consentAnalytics();
-        consentSocial();
-        consentMarketing();
-      }}
-      onDecline={() => {
-        console.log("User declined all cookies");
-        /* updatePostHogConsent("denied");
+				manageCancelButtonText: t("manageCancelButtonText"),
+				manageSaveButtonText: t("manageSaveButtonText"),
+			}}
+			showManageButton
+			privacyPolicyUrl={t("privacyurl")}
+			displayType="banner"
+			onManage={(preferences) => {
+				console.log("Custom preferences saved:", preferences);
+				// Handle granular consent
+				if (preferences?.Analytics) {
+					consentAnalytics();
+				}
+				if (preferences?.Advertising) {
+					consentMarketing();
+				}
+				if (preferences?.Social) {
+					consentSocial();
+				}
+			}}
+			onAccept={() => {
+				console.log("User accepted all cookies");
+				consentAnalytics();
+				consentSocial();
+				consentMarketing();
+			}}
+			onDecline={() => {
+				console.log("User declined all cookies");
+				/* updatePostHogConsent("denied");
 				posthog.opt_out_capturing(); */
-      }}
-      classNames={{
-        manageCookieToggleChecked: "toggle-checked",
-      }}
-    >
-      {children}
-      {/*<NextHogProvider>{children}</NextHogProvider> */}
-    </CookieManager>
-  );
+			}}
+			classNames={{
+				manageCookieToggleChecked: "toggle-checked",
+			}}>
+			{children}
+			{/*<NextHogProvider>{children}</NextHogProvider> */}
+		</CookieManager>
+	);
 }

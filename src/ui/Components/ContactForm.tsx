@@ -5,7 +5,7 @@ import { sendEmail } from "@/lib/resend";
 /* import { sendEmail } from "@/app/api/send"; */
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";

@@ -518,9 +518,8 @@
 }
 .cookie-manager .-translate-x-1\/2,
 .cookie-manager .translate-y-0 {
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+		skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cookie-manager .translate-y-0 {
 	--tw-translate-y: 0px;
@@ -530,9 +529,8 @@
 }
 .cookie-manager .rotate-0,
 .cookie-manager .translate-y-full {
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+		skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cookie-manager .rotate-0 {
 	--tw-rotate: 0deg;
@@ -543,18 +541,16 @@
 }
 .cookie-manager .scale-100,
 .cookie-manager .scale-95 {
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+		skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cookie-manager .scale-95 {
 	--tw-scale-x: 0.95;
 	--tw-scale-y: 0.95;
 }
 .cookie-manager .transform {
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+		skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cookie-manager .cursor-pointer {
 	cursor: pointer;
@@ -764,32 +760,21 @@
 	opacity: 1;
 }
 .cookie-manager .shadow-lg {
-	--tw-shadow:
-		0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-	--tw-shadow-colored:
-		0 10px 15px -3px var(--tw-shadow-color),
-		0 4px 6px -4px var(--tw-shadow-color);
-	box-shadow:
-		var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
-		var(--tw-shadow);
+	--tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+	--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .cookie-manager .ring-1 {
-	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-		var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-		calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
 }
 .cookie-manager .ring-1,
 .cookie-manager .ring-2 {
-	box-shadow:
-		var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-		var(--tw-shadow, 0 0 #0000);
+	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 .cookie-manager .ring-2 {
-	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-		var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-		calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
 }
 .cookie-manager .ring-black\/10 {
 	--tw-ring-color: rgba(0, 0, 0, 0.1);
@@ -800,30 +785,24 @@
 }
 .cookie-manager .ring-white\/10 {
 	--tw-ring-color: hsla(0, 0%, 100%, 0.1);
-	transition-property:
-		color, background-color, border-color, text-decoration-color, fill, stroke;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 }
 .cookie-manager .blur {
 	--tw-blur: blur(8px);
-	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-		var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-		var(--tw-sepia) var(--tw-drop-shadow);
+	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
+		var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .cookie-manager .backdrop-blur-sm {
 	--tw-backdrop-blur: blur(4px);
 }
 .cookie-manager .backdrop-blur-sm,
 .cookie-manager .backdrop-saturate-150 {
-	-webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-		var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-		var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-		var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-		var(--tw-backdrop-sepia);
-	backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-		var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-		var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-		var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-		var(--tw-backdrop-sepia);
+	-webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+		var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+		var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+	backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast)
+		var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity)
+		var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .cookie-manager .backdrop-saturate-150 {
 	--tw-backdrop-saturate: saturate(1.5);
@@ -843,8 +822,8 @@
 		filter,
 		-webkit-backdrop-filter;
 	transition-property:
-		color, background-color, border-color, text-decoration-color, fill, stroke,
-		opacity, box-shadow, transform, filter, backdrop-filter;
+		color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+		backdrop-filter;
 	transition-property:
 		color,
 		background-color,
@@ -944,9 +923,8 @@
 }
 .cookie-manager .hover\:-translate-y-2:hover,
 .cookie-manager .hover\:rotate-12:hover {
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+		skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 	-webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y));
 	-moz-transform: translate(var(--tw-translate-x), var(--tw-translate-y));
 	-ms-transform: translate(var(--tw-translate-x), var(--tw-translate-y));
@@ -962,9 +940,8 @@
 }
 .cookie-manager .hover\:scale-105:hover,
 .cookie-manager .hover\:scale-110:hover {
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+	transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+		skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cookie-manager .hover\:scale-110:hover {
 	--tw-scale-x: 1.1;
@@ -1026,13 +1003,9 @@
 	outline-color: transparent;
 }
 .cookie-manager .focus\:ring-2:focus {
-	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-		var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-		calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-	box-shadow:
-		var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-		var(--tw-shadow, 0 0 #0000);
+	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 .cookie-manager .focus\:ring-blue-500:focus {
 	--tw-ring-opacity: 1;
@@ -1060,9 +1033,7 @@
 .cookie-manager .peer:checked ~ .peer-checked\:after\:translate-x-full:after {
 	content: var(--tw-content);
 	--tw-translate-x: 100%;
-	transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-		rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-		scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+
 	background-color: var(--success);
 }
 /* .cookie-manager .peer:focus ~ .peer-focus\:ring-2 {
