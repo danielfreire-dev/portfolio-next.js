@@ -3,7 +3,8 @@
 import dynamic from "next/dynamic";
 import { useTranslations } from "next-intl";
 import "@/ui/styles/cookieBanner.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useThemeStore } from "@/stores/theme-store";
 /* import "@/ui/styles/cookieBannerOG.css"; */
 /* import { NextHogProvider, posthog, updatePostHogConsent } from "./posthog"; */
 
@@ -19,6 +20,7 @@ const CookieManager = dynamic(() => import("react-cookie-manager").then((mod) =>
  * Renders the cookie consent banner via `react-cookie-manager` and manages
  * granular consent state for analytics, social, and marketing categories.
  * Updates Google Analytics consent status when analytics are accepted.
+ * Reads the current theme from Zustand so the banner tracks light/dark mode.
  */
 export function Providers({ children }: { children: React.ReactNode }) {
 	const [cookieConsentGiven, setCookieConsentGiven] = useState({
@@ -28,6 +30,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	});
 
 	const t = useTranslations("cookies");
+	const isDark = useThemeStore((s) => s.isDarkStore);
 
 	/** Grants analytics consent and updates the GA consent default. */
 	const consentAnalytics = () => {
@@ -51,6 +54,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 	return (
 		<CookieManager
 			cookieKitId={process.env.NEXT_PUBLIC_cookieKitId}
+			theme={isDark ? "dark" : "light"}
 			translations={{
 				title: t("title"),
 				message: t("message"),
@@ -112,6 +116,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			}}
 			classNames={{
 				manageCookieToggleChecked: "toggle-checked",
+				bannerMessage: "cookie-banner-message",
 			}}>
 			{children}
 			{/*<NextHogProvider>{children}</NextHogProvider> */}
