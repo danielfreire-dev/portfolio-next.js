@@ -5,7 +5,7 @@ import Sidenav from "@/ui/Components/Sidenav/Sidenav";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/providers/CookieBanner";
 import GoogleAnalytics from "@/providers/GoogleAnalytics";
@@ -166,6 +166,9 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  // Enable static rendering for this locale
+  setRequestLocale(locale);
 
   // Get messages for the locale
   const messages = await getMessages();

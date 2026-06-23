@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-multi-comp */
 import { Locale, useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
-import { Metadata, ResolvingMetadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Metadata } from "next";
+import { use } from "react";
 
-/** Props for the Privacy Policy page, receiving locale and search params from Next.js. */
+/** Props for the Privacy Policy page, receiving locale from Next.js. */
 interface Props {
 	/** Promise resolving to an object with the locale. */
 	params: Promise<{ locale: Locale }>;
-	/** Promise resolving to a record of search parameters. */
-	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
 /**
@@ -20,7 +19,7 @@ interface Props {
  * @param props.searchParams - Promise resolving to search parameters (unused but required by Next.js).
  * @returns Metadata object with localized title, description, canonical URL, and Open Graph data.
  */
-export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
 	const t = await getTranslations({
@@ -76,7 +75,10 @@ const ListParagraph: React.FC<ListParagraphProps> = ({ list }) => {
  *
  * @returns The privacy policy section with legal content.
  */
-const PrivacyPolicy = () => {
+const PrivacyPolicy = ({ params }: Props) => {
+	const { locale } = use(params);
+	setRequestLocale(locale);
+
 	const t = useTranslations("privacyPolicy");
 
 	return (
