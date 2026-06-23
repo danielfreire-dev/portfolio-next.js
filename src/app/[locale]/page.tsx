@@ -1,17 +1,15 @@
 import Techstack from "@/ui/Components/Techstack/Techstack";
 import Cta from "@/ui/Components/CtA/Cta";
 
-import { Locale, useTranslations } from "next-intl";
+import { Locale } from "next-intl";
 import { Suspense, use } from "react";
-import { setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
-import { Metadata, ResolvingMetadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Metadata } from "next";
 import TopMainPage from "@/ui/Components/TopMainPage";
 import Services from "@/ui/Components/Services";
 
 interface Props {
-  params: Promise<{ locale: Locale }>;
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
+	params: Promise<{ locale: Locale }>;
 }
 
 /**
@@ -20,36 +18,33 @@ interface Props {
  * Fetches translated title, description, and Open Graph data based on the
  * resolved locale from the route params.
  */
-export async function generateMetadata({
-  params,
-  searchParams,
-}: Props): Promise<Metadata> {
-  // Await the params Promise to get the actual locale value
-  const { locale } = await params;
-  const t = await getTranslations({
-    locale: locale,
-    namespace: "metadata",
-  });
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	// Await the params Promise to get the actual locale value
+	const { locale } = await params;
+	const t = await getTranslations({
+		locale: locale,
+		namespace: "metadata",
+	});
 
-  return {
-    title: t("title.home"),
-    description: t("description.home"),
-    alternates: {
-      canonical: "/",
-      languages: {
-        en: "https://daniel-freire.com/en",
-        pt: "https://daniel-freire.com/pt",
-      },
-    },
-    openGraph: {
-      type: "website",
-      title: t("opengraphImageAlt"),
-      description: t("description.home"),
-      url: "https://daniel-freire.com",
-      siteName: t("title.home"),
-      locale: locale,
-    },
-  };
+	return {
+		title: t("title.home"),
+		description: t("description.home"),
+		alternates: {
+			canonical: "/",
+			languages: {
+				en: "https://daniel-freire.com/en",
+				pt: "https://daniel-freire.com/pt",
+			},
+		},
+		openGraph: {
+			type: "website",
+			title: t("opengraphImageAlt"),
+			description: t("description.home"),
+			url: "https://daniel-freire.com",
+			siteName: t("title.home"),
+			locale: locale,
+		},
+	};
 }
 
 /* interface Props {
@@ -66,20 +61,20 @@ export async function generateMetadata({
  * @param params - Route params containing the resolved locale.
  */
 export default function HomePage({ params }: Props) {
-  const { locale } = use(params);
+	const { locale } = use(params);
 
-  // Enable static rendering
-  setRequestLocale(locale);
+	// Enable static rendering
+	setRequestLocale(locale);
 
-  return (
-    <>
-      <TopMainPage />
-      <Services />
-      <Suspense>
-        <Techstack />
-      </Suspense>
+	return (
+		<>
+			<TopMainPage />
+			<Services />
+			<Suspense>
+				<Techstack />
+			</Suspense>
 
-      <Cta />
-    </>
-  );
+			<Cta />
+		</>
+	);
 }
