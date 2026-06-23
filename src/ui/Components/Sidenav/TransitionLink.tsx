@@ -52,9 +52,9 @@ export const TransitionLink = ({
 }: TransitionLinkProps) => {
 	const router = useRouter();
 	const pathname = usePathname();
-	const mainElement = document.getElementById("main");
 
 	useEffect(() => {
+		const mainElement = document.getElementById("main");
 		if (setIsOpen && isOpen) {
 			setIsOpen((prev) => !prev);
 		}
@@ -63,6 +63,7 @@ export const TransitionLink = ({
 
 	const HandleTransition = async (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
+		const mainElement = document.getElementById("main");
 
 		if ((href === "/" && pathname.slice(0, -2) !== href) || (href !== "/" && pathname.slice(3) !== href)) {
 			mainElement?.classList.add("page-transition");
