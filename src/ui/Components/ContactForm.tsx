@@ -23,6 +23,7 @@ const ContactForm = () => {
 	type submission = "idle" | "loading" | "loaded" | "error" | "submitted";
 	const [loading, setLoading] = useState<submission>("idle");
 	const [turnstileStatus, setTurnstileStatus] = useState<"success" | "error" | "expired" | "required">("required");
+	const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 	const [error, setError] = useState<string | null>(null);
 	const [turnstileLoaded, setTurnstileLoaded] = useState(false);
 
@@ -45,7 +46,7 @@ const ContactForm = () => {
 
 		setLoading("loading");
 
-		if (turnstileStatus !== "success") {
+		if (turnstileStatus !== "success" || !turnstileToken) {
 			setError("Please verify you are not a robot");
 			setLoading("error");
 			return;
@@ -53,8 +54,8 @@ const ContactForm = () => {
 
 		const formData = new FormData(e.currentTarget);
 		const formValues = Object.fromEntries(formData);
-		await sendEmail(formValues);
-		await getData(formValues);
+		await sendEmail(turnstileToken, formValues);
+		await getData(turnstileToken, formValues);
 
 		setLoading("submitted");
 	}
@@ -211,9 +212,25 @@ const ContactForm = () => {
 							setError(null);
 							setTurnstileLoaded(true);
 						}}
-						onVerify={(token) => {
-							setTurnstileStatus("success");
-							setError(null);
+						onVerify={async (token) => {
+							try {
+								const res = await fetch("/api/turnstile", {
+									method: "POST",
+									headers: { "Content-Type": "application/json" },
+									body: JSON.stringify({ token }),
+								});
+								if (res.ok) {
+									setTurnstileToken(token);
+									setTurnstileStatus("success");
+									setError(null);
+								} else {
+									setTurnstileStatus("error");
+									setError("Security check failed. Please try again.");
+								}
+							} catch {
+								setTurnstileStatus("error");
+								setError("Security check failed. Please try again.");
+							}
 						}}
 					/>
 

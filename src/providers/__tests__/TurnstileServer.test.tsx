@@ -14,8 +14,11 @@ let handler: {
 	}>;
 };
 
+const MOCK_SECRET_KEY = "0xTEST_SECRET_KEY";
+
 describe("TurnstileServer POST handler", () => {
 	beforeAll(async () => {
+		vi.stubEnv("TURNSTILE_SECRET_KEY", MOCK_SECRET_KEY);
 		vi.spyOn(crypto, "randomUUID").mockReturnValue("test-idempotency-key-123");
 		const mod = await import("@/providers/TurnstileServer");
 		handler = mod as unknown as typeof handler;
@@ -52,6 +55,20 @@ describe("TurnstileServer POST handler", () => {
 
 		expect(response.status).toBe(200);
 		expect(body).toEqual({ message: "Login successful" });
+	});
+
+	it("should pass the private TURNSTILE_SECRET_KEY (not the NEXT_PUBLIC_ variant)", async () => {
+		mockValidate.mockResolvedValue({ success: true });
+
+		const req = {
+			json: async () => ({ token: "token-xyz" }),
+		};
+
+		await handler.POST(req);
+
+		expect(mockValidate).toHaveBeenCalledTimes(1);
+		const callArgs = mockValidate.mock.calls[0][0];
+		expect(callArgs.secretKey).toBe(MOCK_SECRET_KEY);
 	});
 
 	it("should pass an idempotency key to prevent replay attacks", async () => {
