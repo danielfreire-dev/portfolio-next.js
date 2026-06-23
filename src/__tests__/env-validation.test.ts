@@ -97,8 +97,9 @@ describe("Environment variable documentation", () => {
 		expect(documentedVars.has("NEXT_PUBLIC_TURNSTILE_SITE_KEY")).toBe(true);
 	});
 
-	it(".env.example should contain the Turnstile secret key entry", () => {
-		const documentedVars = readEnvExampleKeys();
-		expect(documentedVars.has("NEXT_PUBLIC_TURNSTILE_SECRET_KEY")).toBe(true);
+	it(".env.example should contain the Turnstile secret key entry (private, TURNSTILE_SECRET_KEY)", () => {
+		const envPath = path.join(PROJECT_ROOT, ".env.example");
+		const content = fs.readFileSync(envPath, "utf-8");
+		expect(content).toContain("TURNSTILE_SECRET_KEY");
 	});
 });
