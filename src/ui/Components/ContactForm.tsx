@@ -5,7 +5,7 @@ import { sendEmail } from "@/lib/resend";
 /* import { sendEmail } from "@/app/api/send"; */
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
@@ -25,7 +25,6 @@ const ContactForm = () => {
 	const [turnstileStatus, setTurnstileStatus] = useState<"success" | "error" | "expired" | "required">("required");
 	const [error, setError] = useState<string | null>(null);
 	const [turnstileLoaded, setTurnstileLoaded] = useState(false);
-	const [animationKey, setAnimationKey] = useState(0);
 
 	const t = useTranslations("contact");
 	const { isDarkStore, setValue } = useThemeStore();
@@ -39,11 +38,6 @@ const ContactForm = () => {
 			console.warn(msg);
 		}
 	}
-
-	// Force re-mount Turnstile when theme changes so it picks up the correct theme
-	useEffect(() => {
-		setAnimationKey((prev) => prev + 1);
-	}, [isDarkStore]);
 
 	/** Handles form submission: validates Turnstile, sends email, stores data. */
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
@@ -194,37 +188,34 @@ const ContactForm = () => {
 				</div>
 
 				<section className="flex flex-col justify-center mx-auto mt-2.5">
-					<Suspense>
-						<Turnstile
-							key={`turnstile-${isDarkStore ? "dark" : "light"}-${animationKey}`}
-							siteKey={siteKey!}
-							retry="auto"
-							refreshExpired="auto"
-							sandbox={process.env.NODE_ENV === "development"}
-							appearance="execute"
-							theme={isDarkStore ? "dark" : "light"}
-							onError={() => {
-								setTurnstileStatus("error");
-								setError("Security check failed. Please try again.");
-								setLoading("error");
-							}}
-							onExpire={() => {
-								setTurnstileStatus("expired");
-								setError("Security check expired. Please verify again.");
-								setLoading("error");
-							}}
-							onLoad={() => {
-								setTurnstileStatus("required");
-								setError(null);
-								setTurnstileLoaded(true);
-							}}
-							onVerify={(token) => {
-								setTurnstileStatus("success");
-								setError(null);
-								setLoading("error");
-							}}
-						/>
-					</Suspense>
+					<Turnstile
+						key={`turnstile-${isDarkStore ? "dark" : "light"}`}
+						siteKey={siteKey!}
+						retry="auto"
+						refreshExpired="auto"
+						sandbox={process.env.NODE_ENV === "development"}
+						appearance="always"
+						theme={isDarkStore ? "dark" : "light"}
+						onError={() => {
+							setTurnstileStatus("error");
+							setError("Security check failed. Please try again.");
+							setLoading("error");
+						}}
+						onExpire={() => {
+							setTurnstileStatus("expired");
+							setError("Security check expired. Please verify again.");
+							setLoading("error");
+						}}
+						onLoad={() => {
+							setTurnstileStatus("required");
+							setError(null);
+							setTurnstileLoaded(true);
+						}}
+						onVerify={(token) => {
+							setTurnstileStatus("success");
+							setError(null);
+						}}
+					/>
 
 					<button
 						type="submit"

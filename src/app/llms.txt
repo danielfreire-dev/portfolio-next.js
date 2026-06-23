@@ -28,7 +28,7 @@
 - [src/providers/GoogleAnalytics.tsx](src/providers/GoogleAnalytics.tsx): Google Analytics 4 integration component
 - [src/providers/posthog.tsx](src/providers/posthog.tsx): PostHog analytics provider (currently commented out)
 - [src/providers/TurnstileServer.tsx](src/providers/TurnstileServer.tsx): Cloudflare Turnstile server-side token validation
-- [src/providers/CookieBanner.tsx](src/providers/CookieBanner.tsx): Cookie consent banner with granular analytics opt-in/out (react-cookie-manager + CookieKit)
+- [src/providers/CookieBanner.tsx](src/providers/CookieBanner.tsx): Cookie consent banner with granular analytics opt-in/out (custom, no third-party library)
 - [src/lib/resend.ts](src/lib/resend.ts): Server action that sends a welcome email to the user via Resend (renders EmailTemplate as React email)
 - [src/lib/getData.ts](src/lib/getData.ts): Server action that sends contact-form submission data to the site owner's email via Resend
 - [src/lib/EmailTemplate.tsx](src/lib/EmailTemplate.tsx): Welcome email React component (rendered server-side via Resend)
@@ -66,7 +66,7 @@ The project follows the Next.js App Router convention with a `[locale]` dynamic 
 - **Animation:** GSAP, Motion (Framer Motion)
 - **Email:** Resend, @react-email/components, react-email (dev server), create-email (scaffolding)
 - **Form Protection:** Cloudflare Turnstile (next-turnstile)
-- **Cookie Consent:** react-cookie-manager + CookieKit
+- **Cookie Consent:** Custom-built banner with granular consent (no library)
 - **Analytics:** Google Analytics 4 (GA4), PostHog (commented out)
 - **Deployment:** Cloudflare Workers via OpenNext (@opennextjs/cloudflare), Wrangler CLI
 - **Performance:** @vercel/speed-insights
@@ -85,7 +85,7 @@ The project follows the Next.js App Router convention with a `[locale]` dynamic 
 - **Dark/Light Theme:** Zustand-powered theme toggle with system preference detection and persistence
 - **Contact Form:** Server-side email delivery via Resend — welcome email to user (resend.ts) and form data notification to site owner (getData.ts) — with Cloudflare Turnstile spam protection and multi-language email templates
 - **Cloudflare Edge Deployment:** Full-stack Next.js deployed to Cloudflare Workers via OpenNext adapter, with assets binding, service bindings, and image optimization
-- **Cookie Consent:** Granular analytics opt-in/out via react-cookie-manager with CookieKit integration
+- **Cookie Consent:** Granular analytics opt-in/out via custom cookie banner (localStorage-backed)
 - **Analytics:** Google Analytics 4 integration with consent-based tracking
 - **Accessibility:** Comprehensive ESLint JSX-a11y rules, accessibility checker in Cypress tests
 - **SEO:** Full sitemap generation with hreflang alternates, dynamic Open Graph images, metadata per page
@@ -113,7 +113,6 @@ The project uses a `.env` file loaded via @next/env ([envConfig.ts](envConfig.ts
 - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` — Cloudflare Turnstile site key (public, embedded in client JS)
 - `NEXT_PUBLIC_TURNSTILE_SECRET_KEY` — Cloudflare Turnstile secret key (on Cloudflare Workers, set via `wrangler secret put TURNSTILE_SECRET_KEY`)
 - `NEXT_PUBLIC_GA4` — Google Analytics 4 measurement ID
-- `NEXT_PUBLIC_cookieKitId` — CookieKit analytics ID for cookie consent management
 - `NEXT_PUBLIC_POSTHOG_KEY` — PostHog API key (commented out)
 - `NEXT_PUBLIC_POSTHOG_HOST` — PostHog host URL (commented out)
 - `VERCEL_PROJECT_PRODUCTION_URL` — Vercel deployment URL (set automatically on Vercel)
