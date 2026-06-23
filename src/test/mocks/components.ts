@@ -26,11 +26,6 @@ export const MockTurnstile = (props: Record<string, unknown>) =>
 		...props,
 	});
 
-// ---- react-cookie-manager (CookieManager + useCookieManager) ----
-
-export const MockCookieManager = ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) =>
-	React.createElement("div", { "data-testid": "cookie-manager", ...props }, children);
-
 // ---- @vercel/speed-insights (SpeedInsights) ----
 
 export const MockSpeedInsights = () => React.createElement("div", { "data-testid": "speed-insights" });

@@ -3,101 +3,98 @@ import { LineMdMoonFilledToSunnyFilledLoopTransition } from "./svgs/sun";
 import { LineMdSunnyFilledLoopToMoonFilledLoopTransition } from "./svgs/moon";
 import { useThemeStore } from "@/stores/theme-store";
 
+/** Key used to store the theme preference in localStorage. */
+const THEME_KEY = "theme";
+
+/**
+ * Reads the persisted theme preference from localStorage.
+ *
+ * @returns The stored theme value, or `null` if no preference is saved
+ *          or if `localStorage` is unavailable (e.g., during SSR).
+ */
+function getStoredTheme(): string | null {
+	if (typeof window === "undefined") return null;
+	return localStorage.getItem(THEME_KEY);
+}
+
+/**
+ * Persists the theme preference to localStorage.
+ *
+ * @param value - The theme value to store.
+ */
+function setStoredTheme(value: string): void {
+	if (typeof window === "undefined") return;
+	localStorage.setItem(THEME_KEY, value);
+}
+
 /**
  * Dark/light theme toggle component.
  *
  * Renders a hidden checkbox that controls the theme state via Zustand.
- * Persists the user's preference to a cookie and falls back to the system
- * `prefers-color-scheme` media query when no saved preference exists.
+ * Persists the user's preference to localStorage and falls back to the
+ * system `prefers-color-scheme` media query when no saved preference exists.
  */
 const ThemeToggle = () => {
-  const { isDarkStore, setValue } = useThemeStore();
+	const { isDarkStore, setValue } = useThemeStore();
 
-  /**
-   * Retrieve the value of a named cookie from document.cookie.
-   *
-   * @returns The cookie value for the given name, or `null` if the cookie is not present or if `document` is unavailable (e.g., during SSR).
-   */
-  function getCookie(name: string): string | null {
-    if (typeof document === "undefined") return null; // SSR safety
+	// Initialise theme from localStorage or system preference on mount
+	useEffect(() => {
+		const savedTheme = getStoredTheme();
+		if (savedTheme) {
+			setValue(savedTheme === "dark");
+			return;
+		}
 
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) {
-      return parts.pop()?.split(";").shift() || null;
-    }
-    return null;
-  }
+		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+		if (!savedTheme) {
+			setValue(mediaQuery.matches);
+		}
 
-  /** Persists a cookie with the given name, value, and expiry in days. */
-  function setCookie(name: string, value: string, days: number) {
-    if (typeof document === "undefined") return; // SSR safety
-    const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    const expires = `expires=${date.toUTCString()}`;
-    document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
-  }
+		const handleChange = (e: MediaQueryListEvent) => {
+			// Only react to system changes when no explicit user preference is saved
+			if (!getStoredTheme()) {
+				setValue(e.matches);
+			}
+		};
 
-  // Initialise theme from cookie or system preference on mount
-  useEffect(() => {
-    const savedTheme = getCookie("theme");
-    if (savedTheme) {
-      setValue(savedTheme === "dark");
-      return;
-    }
+		mediaQuery.addEventListener("change", handleChange);
+		return () => mediaQuery.removeEventListener("change", handleChange);
+	}, []);
 
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    if (!savedTheme) {
-      setValue(mediaQuery.matches);
-    }
+	/**
+	 * Update the theme from the toggle input and persist the user's preference
+	 * to localStorage.
+	 *
+	 * @param e - Change event from the theme toggle checkbox; checked = dark theme when `true`
+	 */
+	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+		const newTheme = e.target.checked;
+		setValue(newTheme);
 
-    const handleChange = (e: MediaQueryListEvent) => {
-      // Only react to system changes when no explicit user preference is saved
-      if (!getCookie("theme")) {
-        setValue(e.matches);
-      }
-    };
+		// Save preference to localStorage immediately
+		setStoredTheme(newTheme ? "dark" : "light");
+	}
 
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
-
-  /**
-   * Update the theme from the toggle input and persist the user's preference to a cookie.
-   *
-   * @param e - Change event from the theme toggle checkbox; checked = dark theme when `true`
-   */
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const newTheme = e.target.checked;
-    setValue(newTheme);
-
-    // Save preference to cookies immediately
-    setCookie("theme", newTheme ? "dark" : "light", 365);
-  }
-
-  return (
-    <>
-      <input
-        type="checkbox"
-        className="hidden appearance-none"
-        id="theme-toggle"
-        checked={isDarkStore}
-        onChange={handleChange}
-      />
-      <label
-        className="toggle hover:cursor-pointer py-3 px-2"
-        htmlFor="theme-toggle"
-      >
-        <div>
-          {isDarkStore ? (
-            <LineMdSunnyFilledLoopToMoonFilledLoopTransition />
-          ) : (
-            <LineMdMoonFilledToSunnyFilledLoopTransition />
-          )}
-        </div>
-      </label>
-    </>
-  );
+	return (
+		<>
+			<input
+				type="checkbox"
+				className="hidden appearance-none"
+				id="theme-toggle"
+				checked={isDarkStore}
+				onChange={handleChange}
+			/>
+			<label
+				className="toggle hover:cursor-pointer py-3 px-2"
+				htmlFor="theme-toggle">
+				<div>
+					{isDarkStore ?
+						<LineMdSunnyFilledLoopToMoonFilledLoopTransition />
+					:	<LineMdMoonFilledToSunnyFilledLoopTransition />}
+				</div>
+			</label>
+		</>
+	);
 };
 
 export default ThemeToggle;

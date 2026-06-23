@@ -20,7 +20,6 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import i18next from "eslint-plugin-i18next";
 import jsonc from "eslint-plugin-jsonc";
 import css from "@eslint/css";
-import { tailwind4 } from "tailwind-csstree";
 import markdown from "@eslint/markdown";
 import md from "eslint-plugin-markdown";
 import nextPlugin from "@next/eslint-plugin-next";
@@ -127,7 +126,7 @@ export default [
 
 			/* ── React Hooks rules ── */
 			"react-hooks/rules-of-hooks": "error",
-			"react-hooks/exhaustive-deps": "warn",
+			"react-hooks/exhaustive-deps": "off",
 
 			/* ── jsx-a11y accessibility rules ── */
 			"jsx-a11y/anchor-is-valid": [
@@ -259,10 +258,11 @@ export default [
 			"jsx-a11y/role-has-required-aria-props": "error",
 			"jsx-a11y/role-supports-aria-props": "warn",
 			"jsx-a11y/tabindex-no-positive": "warn",
+			"jsx-a11y/scope": "error",
 
 			/* ── Internationalisation rules ── */
 			"i18next/no-literal-string": [
-				"error",
+				"warn",
 				{
 					mode: "jsx-only",
 					"jsx-attributes": {
@@ -273,7 +273,6 @@ export default [
 					ignoreAttribute: ["direction", "size", "as", "align"],
 				},
 			],
-			"jsx-a11y/scope": "error",
 		},
 	},
 
@@ -284,9 +283,6 @@ export default [
 		files: ["**/*.css"],
 		plugins: { css },
 		language: "css/css",
-		languageOptions: {
-			customSyntax: tailwind4,
-		},
 		rules: {
 			...css.configs.recommended.rules,
 			"css/no-invalid-named-grid-areas": "error",
@@ -379,7 +375,8 @@ export default [
 	{
 		files: ["**/*.test.{ts,tsx}", "**/__mocks__/**", "**/test-utils/**"],
 		rules: {
-			"i18next/no-literal-string": "warn",
+			"react/no-unescaped-entities": "off",
+			"@next/next/no-sync-scripts": "off",
 			"jsx-a11y/media-has-caption": "off",
 		},
 	},

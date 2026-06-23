@@ -11,6 +11,8 @@ vi.mock("@/lib/resend", () => ({
 }));
 
 import ContactForm from "@/ui/Components/ContactForm";
+import { getData } from "@/lib/getData";
+import { sendEmail } from "@/lib/resend";
 
 // Mock next-intl
 vi.mock("next-intl", () => ({
@@ -38,10 +40,12 @@ vi.mock("next-intl", () => ({
 	NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => children as React.ReactElement,
 }));
 
-// Mock next-turnstile
+// Mock next-turnstile — captures props so tests can assert on siteKey, etc.
+let lastTurnstileProps: Record<string, unknown> = {};
 vi.mock("next-turnstile", () => ({
-	Turnstile: ({ onVerify, onLoad }: Record<string, unknown>) => {
-		if (typeof onLoad === "function") setTimeout(() => onLoad(), 0);
+	Turnstile: (props: Record<string, unknown>) => {
+		lastTurnstileProps = props;
+		const { onVerify } = props;
 		return (
 			<div data-testid="turnstile-mock">
 				<button
@@ -84,15 +88,27 @@ vi.mock("@/ui/Components/ContactFarewell", () => ({
 	),
 }));
 
+const MOCK_SITE_KEY = "0x4AAAAAABx80K-mxQMUUheL";
+
 describe("ContactForm", () => {
 	beforeEach(() => {
 		mockIsDarkStore = false;
 		mockSetValue.mockClear();
+		lastTurnstileProps = {};
+		vi.clearAllMocks();
+		// Ensure the Turnstile site key is available and fetch is mocked
+		// for the server-side onVerify API call.
+		vi.stubEnv("NEXT_PUBLIC_TURNSTILE_SITE_KEY", MOCK_SITE_KEY);
+		global.fetch = vi.fn().mockResolvedValue({ ok: true });
 	});
 
 	describe("rendering", () => {
 		beforeEach(() => {
 			renderWithProviders(<ContactForm />);
+		});
+
+		it("should pass a non-empty siteKey to Turnstile (prevents silent production failure)", () => {
+			expect(lastTurnstileProps.siteKey).toBe(MOCK_SITE_KEY);
 		});
 
 		it("should render the first name field (required)", () => {
@@ -137,22 +153,30 @@ describe("ContactForm", () => {
 	});
 
 	describe("Turnstile verification", () => {
-		it("should enable the submit button after Turnstile verification", () => {
+		it("should enable the submit button after Turnstile verification", async () => {
 			renderWithProviders(<ContactForm />);
 
 			const verifyBtn = screen.getByTestId("turnstile-verify-btn");
 			fireEvent.click(verifyBtn);
 
-			const submitBtn = screen.getByRole("button", { name: "Send" });
-			expect(submitBtn).not.toBeDisabled();
+			// onVerify is now async (calls /api/turnstile) — wait for the
+			// state update to flush before asserting.
+			await waitFor(() => {
+				const submitBtn = screen.getByRole("button", { name: "Send" });
+				expect(submitBtn).not.toBeDisabled();
+			});
 		});
 	});
 
 	describe("form submission", () => {
-		it("should show farewell message after successful submission", async () => {
+		it("should disable the submit button during submission", async () => {
 			renderWithProviders(<ContactForm />);
 
 			fireEvent.click(screen.getByTestId("turnstile-verify-btn"));
+			const submitBtn = screen.getByRole("button", { name: "Send" });
+			await waitFor(() => {
+				expect(submitBtn).not.toBeDisabled();
+			});
 
 			fireEvent.change(screen.getByLabelText(/First Name/), {
 				target: { value: "John" },
@@ -165,13 +189,49 @@ describe("ContactForm", () => {
 			});
 			fireEvent.click(screen.getByLabelText(/I agree to the/));
 
-			const form = document.querySelector("form")!;
+			const form = submitBtn.closest("form")!;
 			fireEvent.submit(form);
 
+			// sendContactForm sets loading="loading" first, which disables the button
+			await waitFor(() => {
+				expect(submitBtn).toBeDisabled();
+			});
+		});
+
+		it("should show farewell message after successful submission", async () => {
+			renderWithProviders(<ContactForm />);
+
+			fireEvent.click(screen.getByTestId("turnstile-verify-btn"));
+			const submitBtn = screen.getByRole("button", { name: "Send" });
+			await waitFor(() => {
+				expect(submitBtn).not.toBeDisabled();
+			});
+
+			fireEvent.change(screen.getByLabelText(/First Name/), {
+				target: { value: "John" },
+			});
+			fireEvent.change(screen.getByLabelText(/E-mail/), {
+				target: { value: "john@example.com" },
+			});
+			fireEvent.change(screen.getByLabelText(/Message/), {
+				target: { value: "Hello!" },
+			});
+			fireEvent.click(screen.getByLabelText(/I agree to the/));
+
+			const form = submitBtn.closest("form")!;
+			fireEvent.submit(form);
+
+			// Form submission completes → farewell shown
 			await waitFor(() => {
 				const farewell = screen.getByTestId("farewell");
 				expect(farewell).toHaveAttribute("data-submitted", "true");
 			});
+
+			// Verify server actions were called with token + form data
+			expect(sendEmail).toHaveBeenCalledTimes(1);
+			expect(sendEmail).toHaveBeenCalledWith("mock-token", expect.any(Object));
+			expect(getData).toHaveBeenCalledTimes(1);
+			expect(getData).toHaveBeenCalledWith("mock-token", expect.any(Object));
 		});
 	});
 
@@ -180,6 +240,10 @@ describe("ContactForm", () => {
 			renderWithProviders(<ContactForm />);
 
 			fireEvent.click(screen.getByTestId("turnstile-verify-btn"));
+			const submitBtn = screen.getByRole("button", { name: "Send" });
+			await waitFor(() => {
+				expect(submitBtn).not.toBeDisabled();
+			});
 
 			fireEvent.change(screen.getByLabelText(/First Name/), {
 				target: { value: "John" },
@@ -192,10 +256,10 @@ describe("ContactForm", () => {
 			});
 			fireEvent.click(screen.getByLabelText(/I agree to the/));
 
-			fireEvent.submit(document.querySelector("form")!);
+			const form = submitBtn.closest("form")!;
+			fireEvent.submit(form);
 
 			await waitFor(() => {
-				const form = document.querySelector("form");
 				expect(form).toHaveClass("hidden");
 			});
 		});
