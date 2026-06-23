@@ -1,11 +1,10 @@
 allowBuilds:
-  '@parcel/watcher': false
-  '@swc/core': false
+  "@parcel/watcher": false
+  "@swc/core": false
   core-js: false
   cypress: false
   cypress-accessibility-checker: false
   esbuild: false
-  react-cookie-manager: false
   sharp: false
   workerd: true
 onlyBuiltDependencies:
