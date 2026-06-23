@@ -53,3 +53,5 @@ const withNextIntl = createNextIntlPlugin();
 
 // Export the wrapped configuration
 export default withNextIntl(nextConfig);
+
+import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());

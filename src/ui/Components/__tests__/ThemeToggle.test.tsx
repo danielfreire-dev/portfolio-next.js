@@ -76,27 +76,25 @@ describe("ThemeToggle", () => {
 		});
 	});
 
-	describe("cookie persistence", () => {
-		it("should set a 'theme' cookie when toggling to dark mode", () => {
+	describe("localStorage persistence", () => {
+		it("should set 'theme' in localStorage when toggling to dark mode", () => {
 			mockIsDarkStore = false;
 			renderWithProviders(<ThemeToggle />);
 			const checkbox = screen.getByRole("checkbox");
 			fireEvent.click(checkbox);
 
-			// The cookie should be set to "dark"
-			const cookie = document.cookie;
-			expect(cookie).toContain("theme=dark");
+			// localStorage should be set to "dark"
+			expect(localStorage.getItem("theme")).toBe("dark");
 		});
 
-		it("should set a 'theme' cookie when toggling to light mode", () => {
+		it("should set 'theme' in localStorage when toggling to light mode", () => {
 			mockIsDarkStore = true;
 			renderWithProviders(<ThemeToggle />);
 			const checkbox = screen.getByRole("checkbox");
 			fireEvent.click(checkbox);
 
-			// The cookie should be set to "light"
-			const cookie = document.cookie;
-			expect(cookie).toContain("theme=light");
+			// localStorage should be set to "light"
+			expect(localStorage.getItem("theme")).toBe("light");
 		});
 	});
 
