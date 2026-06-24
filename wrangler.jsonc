@@ -1,0 +1,29 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"main": ".open-next/worker.js",
+	"name": "danielfreiresportfolio",
+	"compatibility_date": "2026-06-16",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS",
+	},
+	"vars": {
+		// Cloudflare Turnstile site key — public, embedded in client-side JS
+		// Secret key must be set via `wrangler secret put TURNSTILE_SECRET_KEY`
+		"NEXT_PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAABx80K-mxQMUUheL",
+	},
+	"services": [
+		{
+			// Self-reference service binding, the service name must match the worker name
+			// see https://opennext.js.org/cloudflare/caching
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "danielfreiresportfolio",
+		},
+	],
+	"images": {
+		// Enable image optimization
+		// see https://opennext.js.org/cloudflare/howtos/image
+		"binding": "IMAGES",
+	},
+}
