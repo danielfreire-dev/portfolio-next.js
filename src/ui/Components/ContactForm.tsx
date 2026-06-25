@@ -34,10 +34,10 @@ const ContactForm = () => {
 	// Guard: if the site key is missing, Turnstile silently fails to render.
 	// This catches the case where the env var wasn't set during build or deploy.
 	if (!siteKey) {
-		const msg = "ContactForm: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set. Turnstile will not render.";
 		if (typeof window !== "undefined") {
-			console.warn(msg);
+			console.warn("ContactForm: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set. Turnstile will not render.");
 		}
+		return null;
 	}
 
 	/** Handles form submission: validates Turnstile, sends email, stores data. */

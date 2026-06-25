@@ -21,6 +21,19 @@ export const nextConfig: NextConfig = {
 	reactStrictMode: true,
 
 	/**
+	 * Explicitly expose public environment variables to the client bundle.
+	 * This is needed as a fallback because the @opennextjs/cloudflare dev
+	 * adapter can bypass Next.js' standard NEXT_PUBLIC_* auto-inlining.
+	 */
+	env: {
+		NEXT_PUBLIC_TURNSTILE_SITE_KEY: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
+		NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+		NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+		NEXT_PUBLIC_GA4: process.env.NEXT_PUBLIC_GA4,
+		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
+	},
+
+	/**
 	 * Custom webpack configuration.
 	 * Adds a rule to import SVG files as React components using @svgr/webpack.
 	 * @param config - The webpack configuration object
