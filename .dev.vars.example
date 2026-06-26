@@ -1,9 +1,12 @@
-# Required for local development with OpenNext/Cloudflare.
-# Copy this file to .dev.vars and fill in the values.
+# This file is AUTO-GENERATED from .env by `npm run sync:env`.
+# You should NOT edit it manually — edit .env instead.
+#
+# Listed here for reference so contributors know which variables
+# are available in the Cloudflare/Wrangler environment.
 #
 # NEVER commit .dev.vars — it contains secrets and is gitignored.
 
-NEXTJS_ENV=development
+NEXTJS_ENV
 
 # Resend API key for email sending
 NEXT_PUBLIC_resend

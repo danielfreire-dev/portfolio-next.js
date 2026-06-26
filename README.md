@@ -133,17 +133,37 @@ npm run lint-fix
 
 ### Environment Variables
 
-Copy `.env.example` to `.env.local` and fill in the required values:
+This project targets **two hosting platforms** (Vercel production + Cloudflare staging) and uses a **single source of truth** for environment variables:
 
-```bash
-cp .env.example .env.local
+```
+.env          ← Canonical source (edit this)
+├── read by next dev / Vercel / @next/env
+└── generates → .dev.vars  (auto-generated, never edit manually)
+                └── read by Wrangler / Cloudflare Workers
 ```
 
-Key environment variables include:
+**Setup:**
 
-- `NEXT_PUBLIC_TURNSTILE_SITE_KEY`: Cloudflare Turnstile site key for form protection
-- `RESEND_API_KEY`: Resend email API key for contact form functionality
-- `NODE_ENV`: Environment specification (development/production/test)
+```bash
+# 1. Create your canonical env file from the template
+cp .env.example .env
+# 2. Fill in real values in .env
+# 3. Generate the Cloudflare-compatible file
+npm run sync:env
+```
+
+**Key scripts:**
+
+| Script | Purpose |
+|---|---|
+| `npm run sync:env` | Generate `.dev.vars` from `.env` |
+| `npm run sync:env:check` | Validate `.env` and `.dev.vars` are in sync (CI-safe) |
+| `npm run preview` | Auto-syncs then builds & previews on Cloudflare |
+| `npm run deploy` | Auto-syncs then builds & deploys to Cloudflare |
+
+**The `sync:env` script runs automatically** before every `preview`, `deploy`, and `upload` — you only need to remember to edit `.env`.
+
+All `NEXT_PUBLIC_*` variables are documented in [`.env.example`](.env.example). The [`.dev.vars.example`](.dev.vars.example) file is kept for reference but is auto-generated.
 
 ### Testing Strategy
 

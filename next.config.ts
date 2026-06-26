@@ -24,6 +24,9 @@ export const nextConfig: NextConfig = {
 	 * Explicitly expose public environment variables to the client bundle.
 	 * This is needed as a fallback because the @opennextjs/cloudflare dev
 	 * adapter can bypass Next.js' standard NEXT_PUBLIC_* auto-inlining.
+	 *
+	 * IMPORTANT: Keep this list in sync with .env.example.
+	 *            Every NEXT_PUBLIC_* variable documented there must appear here.
 	 */
 	env: {
 		NEXT_PUBLIC_TURNSTILE_SITE_KEY: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
