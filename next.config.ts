@@ -1,11 +1,3 @@
-// Ensure .env files are loaded before any config evaluation.
-// This is critical for OpenNext/Cloudflare builds where the standard
-// Next.js env-loading can be bypassed by the adapter.
-import { loadEnvConfig } from "@next/env";
-
-const projectDir = process.cwd();
-loadEnvConfig(projectDir);
-
 import { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
@@ -20,21 +12,6 @@ export const nextConfig: NextConfig = {
 	// Enable React strict mode to catch potential issues in development
 	reactStrictMode: true,
 
-	/**
-	 * Explicitly expose public environment variables to the client bundle.
-	 * This is needed as a fallback because the @opennextjs/cloudflare dev
-	 * adapter can bypass Next.js' standard NEXT_PUBLIC_* auto-inlining.
-	 *
-	 * IMPORTANT: Keep this list in sync with .env.example.
-	 *            Every NEXT_PUBLIC_* variable documented there must appear here.
-	 */
-	env: {
-		NEXT_PUBLIC_TURNSTILE_SITE_KEY: process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY,
-		NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
-		NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-		NEXT_PUBLIC_GA4: process.env.NEXT_PUBLIC_GA4,
-		NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
-	},
 
 	/**
 	 * Custom webpack configuration.
@@ -77,5 +54,3 @@ const withNextIntl = createNextIntlPlugin();
 
 // Export the wrapped configuration
 export default withNextIntl(nextConfig);
-
-import("@opennextjs/cloudflare").then((m) => m.initOpenNextCloudflareForDev());
