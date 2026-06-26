@@ -5,7 +5,7 @@ import { Resend } from "resend";
 import { validateTurnstileToken } from "next-turnstile";
 import WelcomeEmail from "./EmailTemplate";
 
-const resend = new Resend(process.env.NEXT_PUBLIC_resend);
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND);
 
 /**
  * Server action that sends a welcome email via Resend after a contact-form

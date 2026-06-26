@@ -7,6 +7,5 @@ allowBuilds:
   cypress-accessibility-checker: false
   esbuild: false
   sharp: false
-  workerd: true
 onlyBuiltDependencies:
   - cypress

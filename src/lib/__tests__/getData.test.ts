@@ -12,7 +12,7 @@ describe("getData module", () => {
 	describe("module exports", () => {
 		it("should export getData as a function", async () => {
 			// We mock the Resend API key to avoid the throw in module init
-			process.env.NEXT_PUBLIC_resend = "test-key";
+			process.env.NEXT_PUBLIC_RESEND = "test-key";
 
 			const mod = await import("@/lib/getData");
 			expect(typeof mod.getData).toBe("function");

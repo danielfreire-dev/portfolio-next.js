@@ -33,7 +33,6 @@ yarn-error.log*
 .env*.local
 .env.local
 .env
-.dev.vars
 # vercel
 .vercel
 
@@ -44,6 +43,3 @@ next-env.d.ts
 # AI
 /.continue
 /plans
-
-# OpenNext
-.open-next

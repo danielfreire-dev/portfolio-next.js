@@ -103,7 +103,7 @@
 	},
 	"cookies": {
 		"buttonText": "Acceptér Alle",
-		"declineButtonText": "Afvis Alle",
+		"declineButtonText": "Acceptér Kun Nødvendige",
 		"manageAdvertSubtitle": "Tilpas annoncer og mål deres performance",
 		"manageAdvertTitle": "Reklame",
 		"manageAnalyticsSubtitle": "Hjælp os med at forstå hvordan besøgende interagerer med vores hjemmeside",

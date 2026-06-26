@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Resend } from "resend";
 import { validateTurnstileToken } from "next-turnstile";
 
-const resendApiKey = process.env.NEXT_PUBLIC_resend;
+const resendApiKey = process.env.NEXT_PUBLIC_RESEND;
 
 if (!resendApiKey) {
 	throw new Error("Missing Resend API key");
@@ -57,7 +57,7 @@ export const getData = async (token: string, data: Record<string, FormDataEntryV
 	await resend.emails.send({
 		from: `Daniel Freire <${t("email")}>`,
 
-		to: `${process.env.NEXT_PUBLIC_dataEmail}`,
+		to: `${process.env.NEXT_PUBLIC_DATA_EMAIL}`,
 		subject: `${data.firstName} ${data.lastName} | Portfólio Daniel Freire`,
 		html: `<p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
 		<p><strong>Phone #:</strong> ${data.telephone}</p>

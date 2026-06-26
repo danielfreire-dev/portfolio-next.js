@@ -7,7 +7,7 @@ A modern, accessible portfolio website built with Next.js 15, featuring internat
 
 ## How It's Made:
 
-**Tech used:** Next.js 15, React 18, TypeScript, Tailwind CSS, next-intl, Zustand, Resend, Cloudflare Turnstile
+**Tech used:** Next.js 15, React 18, TypeScript, Tailwind CSS, next-intl, Zustand, Resend, Turnstile
 
 This portfolio is built with a modern tech stack prioritizing performance, accessibility, and developer experience:
 
@@ -133,17 +133,17 @@ npm run lint-fix
 
 ### Environment Variables
 
-Copy `.env.example` to `.env.local` and fill in the required values:
+This project uses a single `.env` file as the source of truth for all environment variables. Next.js automatically inlines all `NEXT_PUBLIC_*` variables into the client bundle.
+
+**Setup:**
 
 ```bash
-cp .env.example .env.local
+# Create your env file from the template
+cp .env.example .env
+# Fill in real values in .env
 ```
 
-Key environment variables include:
-
-- `NEXT_PUBLIC_TURNSTILE_SITE_KEY`: Cloudflare Turnstile site key for form protection
-- `RESEND_API_KEY`: Resend email API key for contact form functionality
-- `NODE_ENV`: Environment specification (development/production/test)
+All `NEXT_PUBLIC_*` variables are documented in [`.env.example`](.env.example).
 
 ### Testing Strategy
 
