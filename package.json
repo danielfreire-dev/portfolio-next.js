@@ -41,7 +41,6 @@
 		"@eslint/markdown": "^7.5.1",
 		"@iconify-json/line-md": "^1.2.11",
 		"@next/eslint-plugin-next": "^16.2.9",
-		"@opennextjs/cloudflare": "^1.19.11",
 		"@testing-library/dom": "^10.4.1",
 		"@types/negotiator": "0.6.3",
 		"@types/node": "^22.19.3",
@@ -71,28 +70,21 @@
 		"tailwind-csstree": "^0.1.4",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.50.0",
-		"vite": "^7.3.5",
-		"wrangler": "^4.100.0"
+		"vite": "^7.3.5"
 	},
 	"name": "Daniel Freire's Portfolio",
 	"private": true,
 	"scripts": {
 		"build": "next build",
 		"build-clean": "rm -rf .next && npm run build",
-		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-		"deploy": "npm run sync:env && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
 		"dev": "next dev",
 		"email": "email dev",
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx,.md,.json",
 		"lint-fix": "eslint --fix --ext  .js,.jsx,.ts,.tsx,.md,.json .",
-		"preview": "npm run sync:env && opennextjs-cloudflare build && opennextjs-cloudflare preview",
 		"start": "next start",
-		"sync:env": "node scripts/sync-env.mjs",
-		"sync:env:check": "node scripts/sync-env.mjs --check",
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage",
-		"test:watch": "vitest",
-		"upload": "npm run sync:env && opennextjs-cloudflare build && opennextjs-cloudflare upload"
+		"test:watch": "vitest"
 	},
 	"type": "module",
 	"version": "1.0.0"
