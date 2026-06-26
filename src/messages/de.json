@@ -103,7 +103,7 @@
 	},
 	"cookies": {
 		"buttonText": "Alle akzeptieren",
-		"declineButtonText": "Alle ablehnen",
+		"declineButtonText": "Nur notwendige akzeptieren",
 		"manageAdvertSubtitle": "Personalisieren Sie Werbung und messen Sie deren Leistung",
 		"manageAdvertTitle": "Werbung",
 		"manageAnalyticsSubtitle": "Helfen Sie uns zu verstehen, wie Besucher mit unserer Website interagieren",
