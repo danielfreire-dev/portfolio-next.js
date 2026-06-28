@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "send message",
+		"sending": "sending…",
 		"email": "email",
 		"farewell": {
 			"text": "I appreciate your vote of confidence. You should expect a reply over the next business days.",

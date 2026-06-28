@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "send besked",
+		"sending": "sender…",
 		"email": "e-mail",
 		"farewell": {
 			"text": "Jeg sætter pris på din tillid. Du kan forvente et svar inden for de næste hverdage.",

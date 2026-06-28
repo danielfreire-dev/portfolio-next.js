@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "Nachricht senden",
+		"sending": "sende…",
 		"email": "E-Mail",
 		"farewell": {
 			"text": "Ich schätze Ihr Vertrauen. Sie können eine Antwort innerhalb der nächsten Werktage erwarten.",
