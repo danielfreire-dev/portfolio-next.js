@@ -45,6 +45,7 @@ const ContactForm = () => {
 		e.preventDefault();
 
 		setLoading("loading");
+		setError(null);
 
 		if (turnstileStatus !== "success" || !turnstileToken) {
 			setError("Please verify you are not a robot");
@@ -54,10 +55,16 @@ const ContactForm = () => {
 
 		const formData = new FormData(e.currentTarget);
 		const formValues = Object.fromEntries(formData);
-		await sendEmail(turnstileToken, formValues);
-		await getData(turnstileToken, formValues);
 
-		setLoading("submitted");
+		try {
+			await sendEmail(turnstileToken, formValues);
+			await getData(turnstileToken, formValues);
+			setLoading("submitted");
+		} catch (err) {
+			console.error("ContactForm submission failed:", err);
+			setError("Failed to send message. Please try again.");
+			setLoading("error");
+		}
 	}
 
 	return (
@@ -208,7 +215,11 @@ const ContactForm = () => {
 							setLoading("error");
 						}}
 						onLoad={() => {
-							setTurnstileStatus("required");
+							// Only set "required" on initial load — never overwrite
+							// a previously successful verification (e.g. on re-render).
+							if (turnstileStatus === "required" || turnstileStatus === "error" || turnstileStatus === "expired") {
+								setTurnstileStatus("required");
+							}
 							setError(null);
 							setTurnstileLoaded(true);
 						}}
@@ -234,12 +245,26 @@ const ContactForm = () => {
 						}}
 					/>
 
+					{error && (
+						<p
+							role="alert"
+							className="text-(--error) text-sm mt-2 text-center">
+							{error}
+						</p>
+					)}
+
+					{turnstileStatus === "required" && turnstileLoaded && !error && (
+						<p className="text-(--secondary) text-xs mt-1 text-center">
+							Complete the security check above to enable the submit button.
+						</p>
+					)}
+
 					<button
 						type="submit"
 						className="bg-(--surface) raise capitalize button-class"
 						id="contact-form"
 						disabled={loading === "loading" || turnstileStatus !== "success"}>
-						{t("btn")}
+						{loading === "loading" ? t("sending") || "Sending…" : t("btn")}
 					</button>
 				</section>
 			</form>

@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "wyślij wiadomość",
+		"sending": "wysyłanie…",
 		"email": "e-mail",
 		"farewell": {
 			"text": "Doceniam Twoje zaufanie. Możesz spodziewać się odpowiedzi w ciągu najbliższych dni roboczych.",

@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "enviar mensagem",
+		"sending": "a enviar…",
 		"email": "email",
 		"farewell": {
 			"text": "Agradeço o voto de confiança. Deve esperar uma resposta durante os próximos dias úteis.",

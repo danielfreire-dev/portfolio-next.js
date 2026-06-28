@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "odeslat zprávu",
+		"sending": "odesílání…",
 		"email": "email",
 		"farewell": {
 			"text": "Děkujeme za vaši důvěru. Můžete očekávat odpověď během několika pracovních dní.",
