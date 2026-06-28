@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "Nachricht senden",
+		"sending": "sende…",
 		"email": "E-Mail",
 		"farewell": {
 			"text": "Ich schätze Ihr Vertrauen. Sie können eine Antwort innerhalb der nächsten Werktage erwarten.",
@@ -200,7 +201,8 @@
 			"home": "Daniels Vorstellung",
 			"impressum": "",
 			"portfolio": "Hier wird Daniel seine Lieblingsarbeiten veröffentlichen",
-			"privacyPolicy": "Erfahren Sie mehr über Ihre Rechte."
+			"privacyPolicy": "Erfahren Sie mehr über Ihre Rechte.",
+			"services": "Entdecken Sie Daniel Freires Dienstleistungen in den Bereichen Webentwicklung, KI, maßgeschneiderte Software und technische Beratung."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -211,7 +213,8 @@
 			"home": "Startseite | Daniel Freire",
 			"impressum": "Impressum",
 			"portfolio": "Portfolio",
-			"privacyPolicy": "Datenschutzerklärung"
+			"privacyPolicy": "Datenschutzerklärung",
+			"services": "Dienstleistungen"
 		},
 		"twitterImage": "metadata/open-graph.png",
 		"twitterImageAlt": "Daniel Freire"
@@ -315,24 +318,69 @@
 	},
 	"services": [
 		{
+			"slug": "massgeschneiderte-unternehmenssoftware",
 			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
 			"text": "Maßgeschneiderte Webanwendungen — CRMs, Dashboards und interne Tools, die zu Ihren Geschäftsprozessen passen.",
-			"title": "Maßgeschneiderte Unternehmenssoftware"
+			"title": "Maßgeschneiderte Unternehmenssoftware",
+			"longDescription": "Jedes Unternehmen hat einzigartige Prozesse, Arbeitsabläufe und Herausforderungen — und die Software, die Sie verwenden, sollte das widerspiegeln. Ich bin spezialisiert auf die Entwicklung maßgeschneiderter Webanwendungen, die sich an die tatsächliche Arbeitsweise Ihres Unternehmens anpassen, anstatt Ihr Team zu zwingen, sich an Standardsoftware anzupassen.\n\nVon CRM-Systemen, die auf Ihren spezifischen Verkaufszyklus zugeschnitten sind, bis hin zu Dashboards, die genau die Kennzahlen anzeigen, die Sie benötigen — jedes Projekt beginnt mit einer gründlichen Analyse Ihrer Geschäftsprozesse. Das Ergebnis ist ein Werkzeug, das Ihr Team tatsächlich nutzen möchte — weil es für sie gebaut wurde.\n\nMit Technologien wie React, Next.js und PostgreSQL erstelle ich Lösungen, die robust, skalierbar und mit dem Wachstum Ihres Unternehmens leicht zu warten sind.",
+			"features": [
+				"CRM-Systeme, zugeschnitten auf Ihre Vertriebspipeline",
+				"Maßgeschneiderte Analyse-Dashboards und Berichte",
+				"Interne Portale und Teammanagement-Tools",
+				"Workflow-Automatisierung für manuelle Prozesse",
+				"Integration mit bestehenden Drittanbieter-APIs und -Diensten",
+				"Admin-Panels mit granularer Zugriffskontrolle"
+			]
 		},
 		{
+			"slug": "implementierung-von-ki-losungen",
 			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
 			"text": "Integration von KI in Ihre Arbeitsabläufe — Chatbots, intelligente Automatisierung und datengesteuerte Funktionen.",
-			"title": "Implementierung von KI-Lösungen"
+			"title": "Implementierung von KI-Lösungen",
+			"longDescription": "Künstliche Intelligenz hat sich von einem futuristischen Versprechen zu einem echten Wettbewerbsvorteil entwickelt — wenn sie zweckgerichtet eingesetzt wird. Ich helfe Unternehmen, KI auf praktische und messbare Weise in ihre bestehenden Arbeitsabläufe zu integrieren, ohne unnötige Komplexität.\n\nOb es ein intelligenter Chatbot ist, der das Support-Ticket-Volumen um 40 % reduziert, eine Empfehlungsmaschine, die den durchschnittlichen Bestellwert erhöht, oder Dokumentenverarbeitungs-Pipelines, die stundenlange manuelle Arbeit eliminieren — der Fokus liegt immer auf dem Geschäftsergebnis, nicht auf der Technologie um ihrer selbst willen.\n\nIch arbeite mit APIs wie OpenAI, Vektordatenbanken für semantische Suche und RAG-Architekturen (Retrieval-Augmented Generation), um KI-Lösungen zu schaffen, die Ihren einzigartigen Geschäftskontext verstehen.",
+			"features": [
+				"Intelligente Chatbots für Kundensupport und Vertrieb",
+				"Automatisierte Dokumentenverarbeitung und -klassifikation",
+				"Semantische Suche und Wissensentdeckungssysteme",
+				"Geschäftsspezifische KI-Assistenten (RAG)",
+				"Automatische Inhaltsgenerierung und Zusammenfassung",
+				"Prädiktive Analytik und KI-gestützte Dashboards"
+			]
 		},
 		{
+			"slug": "webentwicklung",
 			"icon": "/images/icons/dns-services.svg",
-			"text": "Moderne, leistungsstarke Websites und Anwendungen mit React, Next.js und TypeScript.",
-			"title": "Webentwicklung"
+			"iconLarge": "/images/icons/dns-services.svg",
+			"text": "Schnelle, responsive Websites und Webanwendungen, die sofort laden, auf allen Geräten funktionieren und Besucher zu Kunden machen.",
+			"title": "Webentwicklung",
+			"longDescription": "Eine Website ist nicht nur eine digitale Visitenkarte — sie ist Ihr wichtigstes Marketinginstrument. Ich erstelle moderne Websites und Webanwendungen, die sofort laden, auf jedem Gerät funktionieren und Ihre Besucher auf natürliche Weise zu der gewünschten Aktion führen.\n\nJedes Projekt wird mit Leistung als Kern gebaut — von der ersten Codezeile an für Core Web Vitals optimiert. Das bedeutet, dass Ihre Seite nicht nur gut aussieht — sie wird von Google in den Suchergebnissen bevorzugt und bietet Ihren Nutzern ein flüssiges Erlebnis.\n\nVon konversionsstarken Landingpages bis hin zu voll ausgestatteten Webanwendungen mit Authentifizierung, Zahlungen und Dashboards — ich gehe jedes Projekt an, als wäre es mein eigenes, mit akribischer Liebe zum Detail und absolutem Fokus auf Leistung.",
+			"features": [
+				"Unternehmenswebsites und konversionsstarke Landingpages",
+				"Progressive Web Apps (PWA) mit Offline-Unterstützung",
+				"E-Commerce-Plattformen und Produktkataloge",
+				"Migration und Modernisierung von Legacy-Websites",
+				"Core Web Vitals und technische SEO-Optimierung",
+				"Responsive Design, getestet auf allen Geräten",
+				"Authentifizierungs-, Zahlungs- und Kundenportalsysteme"
+			]
 		},
 		{
+			"slug": "seo-technische-beratung",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
 			"text": "Datengestützte Audits, Performance-Optimierung und Strategie, damit Ihr Unternehmen gefunden wird.",
-			"title": "SEO & Technische Beratung"
+			"title": "SEO & Technische Beratung",
+			"longDescription": "Eine großartige Website zu haben ist nur die Hälfte der Gleichung — die andere Hälfte besteht darin, sicherzustellen, dass die richtigen Leute sie finden. Mein Hintergrund im digitalen Marketing, kombiniert mit tiefem technischem Wissen, ermöglicht es mir, eine einzigartige Perspektive anzubieten, die über konventionelle SEO-Audits hinausgeht.\n\nJedes Audit beginnt mit Daten: Ich analysiere die technische Architektur Ihrer Website, die Nutzererfahrungssignale (Core Web Vitals), die Inhaltsstruktur und die Wettbewerbspositionierung. Das Ergebnis ist ein priorisierter Aktionsplan, der jede technische Empfehlung mit einer konkreten geschäftlichen Auswirkung verknüpft.\n\nIch verkaufe keine magischen SEO-Formeln. Ich biete gründliche Analysen, transparente Empfehlungen und Implementierungen, die die Richtlinien der Suchmaschinen respektieren und gleichzeitig Ihre organische Sichtbarkeit maximieren.",
+			"features": [
+				"Vollständiges technisches SEO-Audit (Crawling, Indexierung, Architektur)",
+				"Core Web Vitals und Optimierung der Ladegeschwindigkeit",
+				"Wettbewerbsanalyse und strategische Keyword-Recherche",
+				"Content-Strategie und On-Page-Optimierung",
+				"Migrations- und Redesign-Beratung mit SEO-Erhalt",
+				"Analyse-Einrichtung und -Audit (GA4, Search Console)"
+			]
 		}
 	],
 	"sidenav": {
@@ -382,6 +430,10 @@
 			{
 				"link": "/portfolio",
 				"name": "portfolio"
+			},
+			{
+				"link": "/dienstleistungen",
+				"name": "dienstleistungen"
 			},
 			{
 				"link": "/kontakt",

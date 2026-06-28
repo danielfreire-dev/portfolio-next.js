@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "wyślij wiadomość",
+		"sending": "wysyłanie…",
 		"email": "e-mail",
 		"farewell": {
 			"text": "Doceniam Twoje zaufanie. Możesz spodziewać się odpowiedzi w ciągu najbliższych dni roboczych.",
@@ -200,7 +201,8 @@
 			"home": "Wprowadzenie Daniela",
 			"impressum": "",
 			"portfolio": "To tutaj Daniel będzie publikował swoje ulubione prace",
-			"privacyPolicy": "Dowiedz się więcej o swoich prawach."
+			"privacyPolicy": "Dowiedz się więcej o swoich prawach.",
+			"services": "Poznaj usługi Daniela Freire w zakresie tworzenia stron, AI, oprogramowania dedykowanego i doradztwa technicznego."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -211,7 +213,8 @@
 			"home": "Strona Główna | Daniel Freire",
 			"impressum": "Impressum",
 			"portfolio": "Portfolio",
-			"privacyPolicy": "Polityka Prywatności"
+			"privacyPolicy": "Polityka Prywatności",
+			"services": "Usługi"
 		},
 		"twitterImage": "metadata/open-graph.png",
 		"twitterImageAlt": "Daniel Freire"
@@ -322,24 +325,69 @@
 	},
 	"services": [
 		{
+			"slug": "dedykowane-oprogramowanie-biznesowe",
 			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
 			"text": "Aplikacje internetowe szyte na miarę — systemy CRM, pulpity nawigacyjne i narzędzia wewnętrzne dopasowane do sposobu działania Twojej firmy.",
-			"title": "Dedykowane Oprogramowanie Biznesowe"
+			"title": "Dedykowane Oprogramowanie Biznesowe",
+			"longDescription": "Każda firma ma unikalne procesy, przepływy pracy i wyzwania — a oprogramowanie, którego używasz, powinno to odzwierciedlać. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych, które dostosowują się do rzeczywistego sposobu działania Twojej firmy, zamiast zmuszać Twój zespół do dostosowywania się do gotowego oprogramowania.\n\nOd systemów CRM zaprojektowanych dla Twojego konkretnego cyklu sprzedaży po pulpity nawigacyjne pokazujące dokładnie te wskaźniki, których potrzebujesz — każdy projekt zaczyna się od dogłębnej analizy Twoich procesów biznesowych. Rezultatem jest narzędzie, którego Twój zespół będzie faktycznie chciał używać — ponieważ zostało zbudowane dla niego.\n\nKorzystając z technologii takich jak React, Next.js i PostgreSQL, buduję rozwiązania solidne, skalowalne i łatwe w utrzymaniu wraz z rozwojem Twojej firmy.",
+			"features": [
+				"Systemy CRM dostosowane do Twojego procesu sprzedaży",
+				"Niestandardowe pulpity analityczne i raporty",
+				"Portale wewnętrzne i narzędzia do zarządzania zespołem",
+				"Automatyzacja przepływów pracy i procesów ręcznych",
+				"Integracja z istniejącymi API i usługami zewnętrznymi",
+				"Panele administracyjne ze szczegółową kontrolą dostępu"
+			]
 		},
 		{
+			"slug": "wdrazanie-rozwiazan-ai",
 			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
 			"text": "Integracja AI w Twoich procesach — chatboty, inteligentna automatyzacja i funkcje oparte na danych.",
-			"title": "Wdrażanie Rozwiązań AI"
+			"title": "Wdrażanie Rozwiązań AI",
+			"longDescription": "Sztuczna inteligencja przestała być futurystyczną obietnicą, a stała się realną przewagą konkurencyjną — gdy jest stosowana z celem. Pomagam firmom integrować AI w ich istniejących przepływach pracy w praktyczny i mierzalny sposób, bez niepotrzebnej złożoności.\n\nNiezależnie od tego, czy jest to inteligentny chatbot redukujący liczbę zgłoszeń wsparcia o 40%, silnik rekomendacji zwiększający średnią wartość zamówienia, czy potoki przetwarzania dokumentów eliminujące godziny ręcznej pracy — uwaga zawsze skupia się na wyniku biznesowym, a nie technologii dla samej technologii.\n\nPracuję z API takimi jak OpenAI, wektorowymi bazami danych do wyszukiwania semantycznego i architekturami RAG (Retrieval-Augmented Generation), aby tworzyć rozwiązania AI rozumiejące unikalny kontekst Twojego biznesu.",
+			"features": [
+				"Inteligentne chatboty do obsługi klienta i sprzedaży",
+				"Automatyczne przetwarzanie i klasyfikacja dokumentów",
+				"Systemy wyszukiwania semantycznego i odkrywania wiedzy",
+				"Asystenci AI dostosowani do specyfiki Twojego biznesu (RAG)",
+				"Automatyczne generowanie i podsumowywanie treści",
+				"Analityka predykcyjna i pulpity oparte na AI"
+			]
 		},
 		{
+			"slug": "tworzenie-stron-internetowych",
 			"icon": "/images/icons/dns-services.svg",
-			"text": "Nowoczesne, wydajne strony i aplikacje internetowe zbudowane przy użyciu React, Next.js i TypeScript.",
-			"title": "Tworzenie Stron Internetowych"
+			"iconLarge": "/images/icons/dns-services.svg",
+			"text": "Szybkie, responsywne strony i aplikacje internetowe, które ładują się natychmiastowo, działają na każdym urządzeniu i zamieniają odwiedzających w klientów.",
+			"title": "Tworzenie Stron Internetowych",
+			"longDescription": "Strona internetowa to nie tylko cyfrowa wizytówka — to Twój najważniejszy zasób marketingowy. Buduję nowoczesne strony i aplikacje internetowe, które ładują się natychmiastowo, działają na każdym urządzeniu i naturalnie prowadzą odwiedzających do działania, które chcesz, aby podjęli.\n\nKażdy projekt jest budowany z wydajnością jako priorytetem — optymalizowany pod kątem Core Web Vitals od pierwszej linii kodu. Oznacza to, że Twoja strona nie tylko będzie świetnie wyglądać — będzie faworyzowana przez Google w wynikach wyszukiwania i zapewni płynne doświadczenie użytkownikom.\n\nOd wysokokonwertujących stron docelowych po pełnofunkcyjne aplikacje internetowe z uwierzytelnianiem, płatnościami i pulpitami nawigacyjnymi — podchodzę do każdego projektu jak do własnego, ze skrupulatną uwagą na szczegóły i absolutnym skupieniem na wydajności.",
+			"features": [
+				"Strony firmowe i wysokokonwertujące strony docelowe",
+				"Progresywne aplikacje internetowe (PWA) z obsługą offline",
+				"Platformy e-commerce i katalogi produktów",
+				"Migracja i modernizacja starszych stron internetowych",
+				"Optymalizacja Core Web Vitals i SEO technicznego",
+				"Responsywny design testowany na wszystkich urządzeniach",
+				"Systemy uwierzytelniania, płatności i portale klienta"
+			]
 		},
 		{
+			"slug": "seo-doradztwo-techniczne",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
 			"text": "Audyty oparte na danych, optymalizacja wydajności i strategia, które pomogą Twojej firmie zostać znalezioną.",
-			"title": "SEO i Doradztwo Techniczne"
+			"title": "SEO i Doradztwo Techniczne",
+			"longDescription": "Posiadanie świetnej strony internetowej to tylko połowa równania — druga połowa to upewnienie się, że znajdują ją właściwi ludzie. Moje doświadczenie w marketingu cyfrowym, połączone z głęboką wiedzą techniczną, pozwala mi zaoferować unikalną perspektywę wykraczającą poza konwencjonalne audyty SEO.\n\nKażdy audyt zaczyna się od danych: analizuję architekturę techniczną Twojej strony, sygnały doświadczenia użytkownika (Core Web Vitals), strukturę treści i pozycjonowanie konkurencyjne. Rezultatem jest priorytetyzowany plan działania, który łączy każde zalecenie techniczne z konkretnym wpływem biznesowym.\n\nNie sprzedaję magicznych formuł SEO. Oferuję rygorystyczną analizę, przejrzyste rekomendacje i wdrożenia respektujące wytyczne wyszukiwarek przy jednoczesnej maksymalizacji Twojej widoczności organicznej.",
+			"features": [
+				"Pełny audyt technicznego SEO (indeksowanie, architektura)",
+				"Optymalizacja Core Web Vitals i szybkości ładowania",
+				"Analiza konkurencji i strategiczne badanie słów kluczowych",
+				"Strategia treści i optymalizacja on-page",
+				"Doradztwo przy migracji i redesignie z zachowaniem SEO",
+				"Konfiguracja i audyt analityki (GA4, Search Console)"
+			]
 		}
 	],
 	"sidenav": {
@@ -389,6 +437,10 @@
 			{
 				"link": "/portfolio",
 				"name": "portfolio"
+			},
+			{
+				"link": "/services",
+				"name": "usługi"
 			},
 			{
 				"link": "/contact",

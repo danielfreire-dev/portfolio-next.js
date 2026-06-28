@@ -4,14 +4,6 @@ import { getTranslations } from "next-intl/server";
 import { Resend } from "resend";
 import { validateTurnstileToken } from "next-turnstile";
 
-const resendApiKey = process.env.NEXT_PUBLIC_RESEND;
-
-if (!resendApiKey) {
-	throw new Error("Missing Resend API key");
-}
-
-const resend = new Resend(resendApiKey);
-
 /**
  * Returns the current date and time formatted for the Europe/Lisbon timezone
  * (WEST/WET), e.g. "15 de Abril, 2026 | 14:30".
@@ -41,6 +33,11 @@ function getCurrentWESTDateTime() {
  * and dispatches it to the configured recipient address.
  */
 export const getData = async (token: string, data: Record<string, FormDataEntryValue>) => {
+	const resendApiKey = process.env.NEXT_PUBLIC_RESEND;
+	if (!resendApiKey) {
+		throw new Error("Missing Resend API key");
+	}
+
 	const validation = await validateTurnstileToken({
 		token,
 		secretKey: process.env.TURNSTILE_SECRET_KEY!,
@@ -52,11 +49,11 @@ export const getData = async (token: string, data: Record<string, FormDataEntryV
 		throw new Error("Turnstile token validation failed");
 	}
 
+	const resend = new Resend(resendApiKey);
 	const t = await getTranslations("email");
 
 	await resend.emails.send({
 		from: `Daniel Freire <${t("email")}>`,
-
 		to: `${process.env.NEXT_PUBLIC_DATA_EMAIL}`,
 		subject: `${data.firstName} ${data.lastName} | Portfólio Daniel Freire`,
 		html: `<p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>

@@ -5,8 +5,6 @@ import { Resend } from "resend";
 import { validateTurnstileToken } from "next-turnstile";
 import WelcomeEmail from "./EmailTemplate";
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND);
-
 /**
  * Server action that sends a welcome email via Resend after a contact-form
  * submission.
@@ -18,6 +16,11 @@ const resend = new Resend(process.env.NEXT_PUBLIC_RESEND);
  * @param data  - The submitted form fields.
  */
 export const sendEmail = async (token: string, data: Record<string, FormDataEntryValue>) => {
+	const resendApiKey = process.env.NEXT_PUBLIC_RESEND;
+	if (!resendApiKey) {
+		throw new Error("Missing Resend API key — set NEXT_PUBLIC_RESEND in .env");
+	}
+
 	const validation = await validateTurnstileToken({
 		token,
 		secretKey: process.env.TURNSTILE_SECRET_KEY!,
@@ -29,6 +32,7 @@ export const sendEmail = async (token: string, data: Record<string, FormDataEntr
 		throw new Error("Turnstile token validation failed");
 	}
 
+	const resend = new Resend(resendApiKey);
 	const t = await getTranslations("email");
 	const e = await getTranslations("email.welcome");
 	await resend.emails.send({

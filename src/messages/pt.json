@@ -74,6 +74,7 @@
 	],
 	"contact": {
 		"btn": "enviar mensagem",
+		"sending": "a enviar…",
 		"email": "email",
 		"farewell": {
 			"text": "Agradeço o voto de confiança. Deve esperar uma resposta durante os próximos dias úteis.",
@@ -200,7 +201,8 @@
 			"home": "Introdução do Daniel",
 			"impressum": "",
 			"portfolio": "Este é o local onde o Daniel publicará o seu trabalho favorito",
-			"privacyPolicy": "Fica a saber mais sobre os teus direitos."
+			"privacyPolicy": "Fica a saber mais sobre os teus direitos.",
+			"services": "Conhece os serviços de desenvolvimento web, IA, software personalizado e consultoria técnica de Daniel Freire."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -211,7 +213,8 @@
 			"home": "Início | Daniel Freire",
 			"impressum": "Impressum",
 			"portfolio": "Portfólio",
-			"privacyPolicy": "Política de Privacidade"
+			"privacyPolicy": "Política de Privacidade",
+			"services": "Serviços"
 		},
 		"twitterImage": "metadata/open-graph.png",
 		"twitterImageAlt": "Daniel Freire"
@@ -322,24 +325,69 @@
 	},
 	"services": [
 		{
+			"slug": "software-personalizado-empresarial",
 			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
 			"text": "Aplicações web à medida — CRMs, dashboards e ferramentas internas que se adaptam à forma como o seu negócio realmente funciona.",
-			"title": "Software Personalizado Empresarial"
+			"title": "Software Personalizado Empresarial",
+			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos — e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar — porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL, crio soluções que são simultaneamente robustas, escaláveis e fáceis de manter à medida que o seu negócio cresce.",
+			"features": [
+				"Sistemas CRM adaptados ao seu pipeline de vendas",
+				"Dashboards analíticos e relatórios personalizados",
+				"Portais internos e ferramentas de gestão de equipas",
+				"Automatização de fluxos de trabalho e processos manuais",
+				"Integração com APIs e serviços externos existentes",
+				"Painéis de administração com controlo de acesso granular"
+			]
 		},
 		{
+			"slug": "implementacao-solucoes-ia",
 			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
 			"text": "Integração de IA nos seus fluxos de trabalho — chatbots, automação inteligente e funcionalidades baseadas em dados.",
-			"title": "Implementação de Soluções de IA"
+			"title": "Implementação de Soluções de IA",
+			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real — quando aplicada com propósito. Ajudo empresas a integrar IA nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou pipelines de processamento de documentos que eliminam horas de trabalho manual — o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia.\n\nTrabalho com APIs como as da OpenAI, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
+			"features": [
+				"Chatbots inteligentes para apoio ao cliente e vendas",
+				"Automatização de processamento e classificação de documentos",
+				"Sistemas de pesquisa semântica e descoberta de conhecimento",
+				"Assistentes de IA com conhecimento específico do seu negócio (RAG)",
+				"Geração e sumarização automática de conteúdos",
+				"Análise preditiva e dashboards de indicadores com IA"
+			]
 		},
 		{
+			"slug": "desenvolvimento-web",
 			"icon": "/images/icons/dns-services.svg",
-			"text": "Websites e aplicações modernas e de alto desempenho criadas com React, Next.js e TypeScript.",
-			"title": "Desenvolvimento Web"
+			"iconLarge": "/images/icons/dns-services.svg",
+			"text": "Websites e aplicações web rápidas e responsivas que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
+			"title": "Desenvolvimento Web",
+			"longDescription": "Um website não é apenas um cartão de visita digital — é o seu ativo de marketing mais importante. Construo websites e aplicações web modernas que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem.\n\nCada projeto é construído com o desempenho no centro — otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards — abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
+			"features": [
+				"Websites empresariais e landing pages de alta conversão",
+				"Aplicações web progressivas (PWA) com funcionamento offline",
+				"Plataformas de e-commerce e catálogos de produtos",
+				"Migração e modernização de websites legados",
+				"Otimização para Core Web Vitals e SEO técnico",
+				"Design responsivo testado em todos os dispositivos",
+				"Sistemas de autenticação, pagamentos e áreas de cliente"
+			]
 		},
 		{
+			"slug": "seo-consultoria-tecnica",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
 			"text": "Auditorias baseadas em dados, otimização de desempenho e estratégia para ajudar o seu negócio a ser encontrado.",
-			"title": "SEO e Consultoria Técnica"
+			"title": "SEO e Consultoria Técnica",
+			"longDescription": "Ter um website excelente é apenas metade da equação — a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
+			"features": [
+				"Auditoria técnica de SEO completa (rastreabilidade, indexação, arquitetura)",
+				"Otimização de Core Web Vitals e velocidade de carregamento",
+				"Análise de concorrência e pesquisa estratégica de palavras-chave",
+				"Estratégia de conteúdo e otimização on-page",
+				"Consultoria de migração e redesenho com preservação de SEO",
+				"Configuração e auditoria de analytics (GA4, Search Console)"
+			]
 		}
 	],
 	"sidenav": {
@@ -389,6 +437,10 @@
 			{
 				"link": "/portfolio",
 				"name": "portfólio"
+			},
+			{
+				"link": "/servicos",
+				"name": "serviços"
 			},
 			{
 				"link": "/contactos",
