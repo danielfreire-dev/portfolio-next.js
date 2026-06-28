@@ -201,7 +201,8 @@
 			"home": "Danielův úvod",
 			"impressum": "",
 			"portfolio": "Zde Daniel zveřejňuje své oblíbené práce",
-			"privacyPolicy": "Zjistěte více o svých právech."
+			"privacyPolicy": "Zjistěte více o svých právech.",
+			"services": "Prozkoumejte služby Daniela Freire v oblasti vývoje webu, AI, zakázkového softwaru a technického poradenství."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -212,7 +213,8 @@
 			"home": "Domovská stránka | Daniel Freire",
 			"impressum": "Impressum",
 			"portfolio": "Portfolio",
-			"privacyPolicy": "Zásady ochrany osobních údajů"
+			"privacyPolicy": "Zásady ochrany osobních údajů",
+			"services": "Služby"
 		},
 		"twitterImage": "metadata/open-graph.png",
 		"twitterImageAlt": "Daniel Freire"
@@ -308,24 +310,69 @@
 	},
 	"services": [
 		{
+			"slug": "zakazkovy-firemni-software",
 			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
 			"text": "Webové aplikace na míru — CRM systémy, dashboardy a interní nástroje, které odpovídají tomu, jak vaše firma skutečně funguje.",
-			"title": "Zakázkový firemní software"
+			"title": "Zakázkový firemní software",
+			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy — a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete — každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat — protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL vytvářím řešení, která jsou robustní, škálovatelná a snadno udržovatelná s růstem vašeho podnikání.",
+			"features": [
+				"CRM systémy přizpůsobené vašemu prodejnímu procesu",
+				"Vlastní analytické dashboardy a reporty",
+				"Interní portály a nástroje pro správu týmů",
+				"Automatizace pracovních postupů a manuálních procesů",
+				"Integrace se stávajícími API a službami třetích stran",
+				"Administrátorské panely s podrobnou kontrolou přístupu"
+			]
 		},
 		{
+			"slug": "implementace-ai-reseni",
 			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
 			"text": "Integrace AI do vašich pracovních postupů — chatboti, inteligentní automatizace a funkce založené na datech.",
-			"title": "Implementace AI řešení"
+			"title": "Implementace AI řešení",
+			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou — pokud je aplikována s účelem. Pomáhám firmám integrovat AI do jejich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo pipeline pro zpracování dokumentů, které eliminují hodiny manuální práce — zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou.\n\nPracuji s API jako OpenAI, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
+			"features": [
+				"Inteligentní chatboti pro zákaznickou podporu a prodej",
+				"Automatizované zpracování a klasifikace dokumentů",
+				"Sémantické vyhledávání a systémy pro objevování znalostí",
+				"Obchodně specifické AI asistenty (RAG)",
+				"Automatické generování a sumarizace obsahu",
+				"Prediktivní analytika a dashboardy poháněné AI"
+			]
 		},
 		{
+			"slug": "vyvoj-webovych-stranek",
 			"icon": "/images/icons/dns-services.svg",
-			"text": "Moderní, výkonné webové stránky a aplikace postavené na React, Next.js a TypeScript.",
-			"title": "Vývoj webových stránek"
+			"iconLarge": "/images/icons/dns-services.svg",
+			"text": "Rychlé, responzivní webové stránky a aplikace, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
+			"title": "Vývoj webových stránek",
+			"longDescription": "Webová stránka není jen digitální vizitka — je to váš nejdůležitější marketingový nástroj. Vytvářím moderní webové stránky a aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli.\n\nKaždý projekt je stavěn s výkonem v jádru — optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat — bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy — ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
+			"features": [
+				"Firemní weby a vysoce konverzní landing pages",
+				"Progresivní webové aplikace (PWA) s offline podporou",
+				"E-commerce platformy a produktové katalogy",
+				"Migrace a modernizace starších webových stránek",
+				"Optimalizace Core Web Vitals a technického SEO",
+				"Responzivní design testovaný na všech zařízeních",
+				"Autentizační, platební a zákaznické portálové systémy"
+			]
 		},
 		{
+			"slug": "seo-technicke-poradenstvi",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
 			"text": "Audity založené na datech, optimalizace výkonu a strategie, která pomůže vaší firmě být vidět.",
-			"title": "SEO a technické poradenství"
+			"title": "SEO a technické poradenství",
+			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice — druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
+			"features": [
+				"Kompletní technický SEO audit (procházení, indexace, architektura)",
+				"Optimalizace Core Web Vitals a rychlosti načítání",
+				"Analýza konkurence a strategický výzkum klíčových slov",
+				"Obsahová strategie a on-page optimalizace",
+				"Konzultace migrace a redesignu se zachováním SEO",
+				"Nastavení a audit analytiky (GA4, Search Console)"
+			]
 		}
 	],
 	"sidenav": {
@@ -375,6 +422,10 @@
 			{
 				"link": "/portfolio",
 				"name": "portfolio"
+			},
+			{
+				"link": "/services",
+				"name": "služby"
 			},
 			{
 				"link": "/contact",

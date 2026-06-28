@@ -201,7 +201,8 @@
 			"home": "Daniel's Introduction",
 			"impressum": "",
 			"portfolio": "This is where Daniel will publish his favourite work",
-			"privacyPolicy": "Find out more about your rights."
+			"privacyPolicy": "Find out more about your rights.",
+			"services": "Explore Daniel Freire's web development, AI, custom software, and technical consulting services."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -212,7 +213,8 @@
 			"home": "Homepage | Daniel Freire",
 			"impressum": "Impressum",
 			"portfolio": "Portfolio",
-			"privacyPolicy": "Privacy Policy"
+			"privacyPolicy": "Privacy Policy",
+			"services": "Services"
 		},
 		"twitterImage": "metadata/open-graph.png",
 		"twitterImageAlt": "Daniel Freire"
@@ -324,24 +326,69 @@
 	},
 	"services": [
 		{
+			"slug": "business-custom-software",
 			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
 			"text": "Tailored web applications — CRMs, dashboards, and internal tools that fit how your business actually works.",
-			"title": "Business Custom Software"
+			"title": "Business Custom Software",
+			"longDescription": "Every business has unique processes, workflows, and challenges — and the software you use should reflect that. I specialise in developing custom web applications that adapt to how your company actually operates, rather than forcing your team to adapt to off-the-shelf software.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use — because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL, I build solutions that are robust, scalable, and easy to maintain as your business grows.",
+			"features": [
+				"CRM systems tailored to your sales pipeline",
+				"Custom analytics dashboards and reports",
+				"Internal portals and team management tools",
+				"Workflow automation for manual processes",
+				"Integration with existing third-party APIs and services",
+				"Admin panels with granular access control"
+			]
 		},
 		{
+			"slug": "ai-solution-implementation",
 			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
 			"text": "Integrating AI into your workflows — chatbots, intelligent automation, and data-driven features.",
-			"title": "AI Solution Implementation"
+			"title": "AI Solution Implementation",
+			"longDescription": "Artificial Intelligence has moved beyond futurist hype and become a genuine competitive advantage — when applied with purpose. I help businesses integrate AI into their existing workflows in a practical, measurable way, without unnecessary complexity.\n\nWhether it's an intelligent chatbot that reduces support ticket volume by 40%, a recommendation engine that increases average order value, or document processing pipelines that eliminate hours of manual work — the focus is always on the business outcome, not the technology for its own sake.\n\nI work with APIs like OpenAI, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
+			"features": [
+				"Intelligent chatbots for customer support and sales",
+				"Automated document processing and classification",
+				"Semantic search and knowledge discovery systems",
+				"Business-specific AI assistants (RAG)",
+				"Automated content generation and summarisation",
+				"Predictive analytics and AI-powered dashboards"
+			]
 		},
 		{
+			"slug": "web-development",
 			"icon": "/images/icons/dns-services.svg",
-			"text": "Modern, performant websites and applications built with React, Next.js, and TypeScript.",
-			"title": "Web Development"
+			"iconLarge": "/images/icons/dns-services.svg",
+			"text": "Fast, responsive websites and web applications that load instantly, work on every device, and turn visitors into customers.",
+			"title": "Web Development",
+			"longDescription": "A website isn't just a digital business card — it's your most important marketing asset. I build modern websites and web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take.\n\nEvery project is built with performance at its core — optimised for Core Web Vitals from the first line of code. This means your site won't just look great — it will be favoured by Google in search results and provide a fluid experience for your users.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards — I approach every project as if it were my own, with meticulous attention to detail and an absolute focus on performance.",
+			"features": [
+				"Business websites and high-conversion landing pages",
+				"Progressive Web Apps (PWA) with offline support",
+				"E-commerce platforms and product catalogues",
+				"Legacy website migration and modernisation",
+				"Core Web Vitals and technical SEO optimisation",
+				"Responsive design tested across all devices",
+				"Authentication, payments, and customer portal systems"
+			]
 		},
 		{
+			"slug": "seo-technical-consulting",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
 			"text": "Data-backed audits, performance optimization, and strategy to help your business get found.",
-			"title": "SEO & Technical Consulting"
+			"title": "SEO & Technical Consulting",
+			"longDescription": "Having a great website is only half the equation — the other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, allows me to offer a unique perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
+			"features": [
+				"Full technical SEO audit (crawlability, indexation, architecture)",
+				"Core Web Vitals and page speed optimisation",
+				"Competitor analysis and strategic keyword research",
+				"Content strategy and on-page optimisation",
+				"Migration and redesign consulting with SEO preservation",
+				"Analytics setup and auditing (GA4, Search Console)"
+			]
 		}
 	],
 	"sidenav": {
@@ -383,6 +430,7 @@
 			{ "link": "/", "name": "home" },
 			{ "link": "/about", "name": "about" },
 			{ "link": "/portfolio", "name": "portfolio" },
+			{ "link": "/services", "name": "services" },
 			{ "link": "/contact", "name": "contact" }
 		],
 		"privacy": "privacy policy",
