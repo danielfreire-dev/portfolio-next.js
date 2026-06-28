@@ -68,7 +68,7 @@ const ServicesPage = ({ params }: Props) => {
 		<>
 			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-8">{t("metadata.title.services")}</h2>
 
-			<section className="mx-4 sm:mx-15">
+			<section className="mx-4 sm:mx-15 mb-6">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
 					{services.map((service) => (
 						<TransitionLink
