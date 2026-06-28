@@ -2,10 +2,10 @@ import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
-import Link from "next/link";
 import { Locale } from "next-intl";
 import ServiceCard from "@/ui/Components/Services/ServiceCard";
 import Cta from "@/ui/Components/CtA/Cta";
+import { TransitionLink } from "@/ui/Components/Sidenav/TransitionLink";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -66,24 +66,21 @@ const ServicesPage = ({ params }: Props) => {
 
 	return (
 		<>
-			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-8">
-				{t("metadata.title.services")}
-			</h2>
+			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-8">{t("metadata.title.services")}</h2>
 
-			<section className="mx-4 sm:mx-15">
+			<section className="mx-4 sm:mx-15 mb-6">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
 					{services.map((service) => (
-						<Link
+						<TransitionLink
 							key={service.slug}
-							href={`/services/${service.slug}`}
-							className="block w-full max-w-lg hover:scale-[1.02] transition-transform duration-300 ease-in-out"
-						>
+							href={`/services/${service.slug}` as any}
+							className="block w-full max-w-lg hover:scale-[1.02] transition-transform duration-300 ease-in-out">
 							<ServiceCard
 								icon={service.icon}
 								title={service.title}
 								text={service.text}
 							/>
-						</Link>
+						</TransitionLink>
 					))}
 				</div>
 			</section>
