@@ -261,12 +261,20 @@ export interface NavLink {
 	name: string;
 }
 
-/** A service offering displayed on the services section. */
+/** A service offering displayed on the services section and detail pages. */
 export interface Service {
-	/** URL or path to the service icon. */
+	/** URL-friendly identifier for routing to the detail page (localized per locale). */
+	slug: string;
+	/** URL or path to the service icon (used on listing cards). */
 	icon: string;
+	/** URL or path to a larger icon variant for the detail page hero. */
+	iconLarge?: string;
 	/** Title of the service. */
 	title: string;
-	/** Description text for the service. */
+	/** Short description text for the service (used on listing cards). */
 	text: string;
+	/** Detailed multi-paragraph description for the service detail page. */
+	longDescription: string;
+	/** Feature / benefit bullet points for the service detail page. */
+	features: string[];
 }

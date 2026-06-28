@@ -11,8 +11,14 @@ import type { ReactNode } from "react";
 /** Minimal English message fixture used by default in test renders. */
 export const mockMessages: Record<string, unknown> = {
 	metadata: {
-		title: { home: "Homepage", about: "About", contact: "Contact", portfolio: "Portfolio" },
-		description: { home: "A portfolio", about: "About me", contact: "Get in touch", portfolio: "My work" },
+		title: { home: "Homepage", about: "About", contact: "Contact", portfolio: "Portfolio", services: "Services" },
+		description: {
+			home: "A portfolio",
+			about: "About me",
+			contact: "Get in touch",
+			portfolio: "My work",
+			services: "Explore services",
+		},
 		opengraphImageAlt: "Open Graph image",
 		canonical: "https://daniel-freire.com",
 	},
@@ -142,6 +148,26 @@ export const mockMessages: Record<string, unknown> = {
 		rightarrow: { alt: "Next", src: "/icons/chevron-right.svg" },
 	},
 	tech: [] as unknown[],
+	services: [
+		{
+			slug: "web-development",
+			icon: "/images/icons/dns-services.svg",
+			iconLarge: "/images/icons/dns-services.svg",
+			title: "Web Development",
+			text: "Fast, responsive websites.",
+			longDescription: "We build modern websites.\n\nThey load fast and work everywhere.",
+			features: ["Responsive design", "Core Web Vitals", "PWA support"],
+		},
+		{
+			slug: "ai-solution-implementation",
+			icon: "/images/icons/ai-recommend.svg",
+			iconLarge: "/images/icons/ai-recommend.svg",
+			title: "AI Solution Implementation",
+			text: "Integrating AI into workflows.",
+			longDescription: "AI applied with purpose.\n\nMeasurable business outcomes.",
+			features: ["Chatbots", "Document processing", "Predictive analytics"],
+		},
+	],
 	notFound: {
 		title: "Not Found",
 		description: "Page not found",

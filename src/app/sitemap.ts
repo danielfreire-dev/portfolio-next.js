@@ -14,13 +14,14 @@ const host = "https://daniel-freire.com";
  * crawlers understand the localized versions of each page.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    ...getEntries("/"),
-    ...getEntries("/about"),
-    ...getEntries("/contact"),
-    ...getEntries("/portfolio"),
-    ...getEntries("/privacy-policy"),
-  ];
+	return [
+		...getEntries("/"),
+		...getEntries("/about"),
+		...getEntries("/contact"),
+		...getEntries("/portfolio"),
+		...getEntries("/privacy-policy"),
+		...getEntries("/services"),
+	];
 }
 
 /** A valid route path that can be passed to `getPathname`. */
@@ -33,14 +34,12 @@ type Href = Parameters<typeof getPathname>[0]["href"];
  * @returns An array of sitemap entries, one per locale.
  */
 function getEntries(href: Href) {
-  return routing.locales.map((locale) => ({
-    url: getUrl(href, locale),
-    alternates: {
-      languages: Object.fromEntries(
-        routing.locales.map((cur) => [cur, getUrl(href, cur)]),
-      ),
-    },
-  }));
+	return routing.locales.map((locale) => ({
+		url: getUrl(href, locale),
+		alternates: {
+			languages: Object.fromEntries(routing.locales.map((cur) => [cur, getUrl(href, cur)])),
+		},
+	}));
 }
 
 /**
@@ -51,6 +50,6 @@ function getEntries(href: Href) {
  * @returns The absolute URL (e.g., "https://daniel-freire.com/en/about").
  */
 function getUrl(href: Href, locale: Locale) {
-  const pathname = getPathname({ locale, href });
-  return host + pathname;
+	const pathname = getPathname({ locale, href });
+	return host + pathname;
 }

@@ -507,6 +507,16 @@ footer a {
 .required::after {
 	content: "*" / "Required";
 }
+
+/* Features list bullet via ::before */
+.features-list > li::before {
+	content: "✦";
+	flex-shrink: 0;
+	margin-top: 0.125rem;
+	color: var(--primary);
+	font-size: 1.125rem;
+	line-height: 1;
+}
 .optional::after {
 	content: "Optional" / "Optional";
 }
