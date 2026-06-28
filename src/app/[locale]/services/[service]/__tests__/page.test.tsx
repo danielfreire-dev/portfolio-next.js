@@ -71,6 +71,17 @@ vi.mock("@/i18n/navigation", () => ({
 	),
 }));
 
+/** Mock TransitionLink to render a plain link in tests. */
+vi.mock("@/ui/Components/Sidenav/TransitionLink", () => ({
+	TransitionLink: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => (
+		<a
+			href={href}
+			className={className}>
+			{children}
+		</a>
+	),
+}));
+
 /** Mock Cta component. */
 vi.mock("@/ui/Components/CtA/Cta", () => ({
 	default: () => <div data-testid="cta">CTA</div>,

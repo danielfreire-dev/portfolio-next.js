@@ -48,6 +48,7 @@ export const TransitionLink = ({
 	ariaLabel,
 	title,
 	ariaDetails,
+	className,
 	...props
 }: TransitionLinkProps) => {
 	const router = useRouter();
@@ -83,7 +84,7 @@ export const TransitionLink = ({
 			aria-label={ariaLabel}
 			title={title}
 			aria-details={ariaDetails}
-			className="truncate">
+			className={className ? `${className} truncate` : "truncate"}>
 			{children}
 		</Link>
 	);

@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import { Locale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Cta from "@/ui/Components/CtA/Cta";
+import { TransitionLink } from "@/ui/Components/Sidenav/TransitionLink";
 
 interface Props {
 	params: Promise<{ locale: Locale; service: string }>;
@@ -141,7 +142,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 	return (
 		<article className="mx-auto max-w-3xl px-4 sm:px-6">
 			{/* Back link */}
-			<Link
+			<TransitionLink
 				href="/services"
 				className="inline-flex items-center gap-1 text-sm text-(--text-tertiary) hover:text-(--text-primary) transition-colors mb-8 whitespace-nowrap">
 				<svg
@@ -158,7 +159,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 					/>
 				</svg>
 				{t("metadata.title.services")}
-			</Link>
+			</TransitionLink>
 
 			{/* Hero section */}
 			<header className="flex flex-col sm:flex-row items-center gap-6 mb-10">
