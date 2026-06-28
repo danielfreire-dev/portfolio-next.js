@@ -22,7 +22,7 @@ const ServiceCard = ({ title, text, icon }: ServiceCardProps) => {
 	return (
 		<div className="flex flex-row items-start gap-4 w-full max-w-lg p-4 surface-cards">
 			<Suspense fallback="Loading...">
-				<div className="shrink-0 overflow-visible rounded-md">
+				<div className="shrink-0 overflow-hidden rounded-md">
 					<Image
 						src={icon}
 						alt={title}
@@ -32,9 +32,9 @@ const ServiceCard = ({ title, text, icon }: ServiceCardProps) => {
 					/>
 				</div>
 			</Suspense>
-			<div className="min-w-0 text-left">
-				<h3 className="capitalize text-xl font-semibold">{title}</h3>
-				<small className="block text-(--text-tertiary) text-sm mt-1">{text}</small>
+			<div className="min-w-0 overflow-hidden text-left">
+				<h3 className="capitalize text-xl font-semibold break-words hyphens-auto">{title}</h3>
+				<small className="block text-(--text-tertiary) text-sm mt-1 break-words hyphens-auto">{text}</small>
 			</div>
 		</div>
 	);

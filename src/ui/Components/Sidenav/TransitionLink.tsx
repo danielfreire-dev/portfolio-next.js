@@ -84,7 +84,7 @@ export const TransitionLink = ({
 			aria-label={ariaLabel}
 			title={title}
 			aria-details={ariaDetails}
-			className={className ? `${className} truncate` : "truncate"}>
+			className={className || "truncate"}>
 			{children}
 		</Link>
 	);
