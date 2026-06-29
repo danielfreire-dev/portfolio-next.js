@@ -1,15 +1,16 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import {
-  CardSkeleton,
-  CardsSkeleton,
-  RevenueChartSkeleton,
-  InvoiceSkeleton,
-  LatestInvoicesSkeleton,
-  ContactFormSkeleton,
-  WebsiteCardSkeleton,
-  WebsiteCardsSkeleton,
-  InvoicesMobileSkeleton,
+	CardSkeleton,
+	CardsSkeleton,
+	RevenueChartSkeleton,
+	InvoiceSkeleton,
+	LatestInvoicesSkeleton,
+	ContactFormSkeleton,
+	TurnstileSkeleton,
+	WebsiteCardSkeleton,
+	WebsiteCardsSkeleton,
+	InvoicesMobileSkeleton,
 } from "@/ui/Components/Skeletons";
 import DashboardSkeleton from "@/ui/Components/Skeletons";
 
@@ -59,6 +60,43 @@ describe("Skeletons", () => {
 			// Should contain multiple invoice skeletons
 			const invoiceContainers = container.querySelectorAll(".border-b");
 			expect(invoiceContainers.length).toBeGreaterThanOrEqual(4);
+		});
+	});
+
+	describe("TurnstileSkeleton", () => {
+		it("should render without crashing", () => {
+			const { container } = render(<TurnstileSkeleton />);
+			expect(container.firstChild).toBeInTheDocument();
+		});
+
+		it("should have the shimmer animation class", () => {
+			render(<TurnstileSkeleton />);
+			const container = document.querySelector(".before\\:absolute");
+			expect(container).toBeInTheDocument();
+		});
+
+		it("should render checkbox and privacy text placeholders", () => {
+			const { container } = render(<TurnstileSkeleton />);
+			// Checkbox placeholder: small square block (h-6 w-6 rounded-sm)
+			const checkbox = container.querySelector(".h-6.w-6.rounded-sm");
+			expect(checkbox).toBeInTheDocument();
+			// Label text bar
+			const labelBar = container.querySelector(".h-4.w-36");
+			expect(labelBar).toBeInTheDocument();
+			// Privacy/attribution text bar
+			const privacyBar = container.querySelector(".h-3.w-44");
+			expect(privacyBar).toBeInTheDocument();
+		});
+
+		it("should be purely presentational with no interactive elements", () => {
+			const { container } = render(<TurnstileSkeleton />);
+			const interactiveElements = container.querySelectorAll('button, a, input, select, textarea, [role="button"]');
+			expect(interactiveElements.length).toBe(0);
+		});
+
+		it("should have the test id for visibility assertions", () => {
+			render(<TurnstileSkeleton />);
+			expect(screen.getByTestId("turnstile-skeleton")).toBeInTheDocument();
 		});
 	});
 
