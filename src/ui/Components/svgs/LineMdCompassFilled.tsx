@@ -7,7 +7,7 @@ import type { SVGProps } from "react";
  * Draws a circular compass outline, then reveals a directional needle that
  * rotates into position, indicating north.
  */
-export function LineMdCompassFilled(props: SVGProps<SVGSVGElement>) {
+export function LineMdCompassFilled(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export function LineMdCompassFilled(props: SVGProps<SVGSVGElement>) {
 			height={24}
 			viewBox="0 0 24 24"
 			{...props}>
-			<title>Animated compass with rotating directional needle</title>
+			<title>{props.title ?? "Animated compass with rotating directional needle"}</title>
 			<defs>
 				<mask id="SVGpETNgGRc">
 					<path

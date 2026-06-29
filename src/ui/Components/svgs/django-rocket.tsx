@@ -6,14 +6,14 @@ import { SVGProps } from "react";
  * Renders a multi-layered SVG rocket with smoke, exhaust flame, and a
  * Django-themed color scheme using CSS custom properties for theming.
  */
-export function DjangoRocket(props: SVGProps<SVGSVGElement>) {
+export function DjangoRocket(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			className="figure"
 			viewBox="0 0 508 268"
 			aria-label="Django Rocket Illustration"
 			{...props}>
-			<title>Django rocket illustration</title>
+			<title>{props.title ?? "Django rocket illustration"}</title>
 			<desc>A stylized rocket illustration representing Django.</desc>
 			<path
 				d="M305.2 156.6c0 4.6-.5 9-1.6 13.2-2.5-4.4-5.6-8.4-9.2-12-4.6-4.6-10-8.4-16-11.2 2.8-11.2 4.5-22.9 5-34.6 1.8 1.4 3.5 2.9 5 4.5 10.5 10.3 16.8 24.5 16.8 40.1zm-75-10c-6 2.8-11.4 6.6-16 11.2-3.5 3.6-6.6 7.6-9.1 12-1-4.3-1.6-8.7-1.6-13.2 0-15.7 6.3-29.9 16.6-40.1 1.6-1.6 3.3-3.1 5.1-4.5.6 11.8 2.2 23.4 5 34.6z"

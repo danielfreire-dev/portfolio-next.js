@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { LineMdMoonFilledToSunnyFilledLoopTransition } from "./svgs/sun";
 import { LineMdSunnyFilledLoopToMoonFilledLoopTransition } from "./svgs/moon";
 import { useThemeStore } from "@/stores/theme-store";
@@ -36,6 +37,7 @@ function setStoredTheme(value: string): void {
  */
 const ThemeToggle = () => {
 	const { isDarkStore, setValue } = useThemeStore();
+	const t = useTranslations("svgTitles");
 
 	// Initialise theme from localStorage or system preference on mount
 	useEffect(() => {
@@ -89,8 +91,8 @@ const ThemeToggle = () => {
 				htmlFor="theme-toggle">
 				<div>
 					{isDarkStore ?
-						<LineMdSunnyFilledLoopToMoonFilledLoopTransition />
-					:	<LineMdMoonFilledToSunnyFilledLoopTransition />}
+						<LineMdSunnyFilledLoopToMoonFilledLoopTransition title={t("sunToMoon")} />
+					:	<LineMdMoonFilledToSunnyFilledLoopTransition title={t("moonToSun")} />}
 				</div>
 			</label>
 		</>

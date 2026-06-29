@@ -7,7 +7,7 @@ import type { SVGProps } from "react";
  * Animates from a close icon (two diagonal lines) to a hamburger menu icon
  * (three horizontal lines) using SVG path morphing.
  */
-export function LineMdCloseToMenuAltTransition(props: SVGProps<SVGSVGElement>) {
+export function LineMdCloseToMenuAltTransition(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export function LineMdCloseToMenuAltTransition(props: SVGProps<SVGSVGElement>) {
 			height="1.5em"
 			viewBox="0 0 24 24"
 			{...props}>
-			<title>Close to menu transition icon</title>
+			<title>{props.title ?? "Close to menu transition icon"}</title>
 			<g
 				fill="none"
 				stroke="currentColor"

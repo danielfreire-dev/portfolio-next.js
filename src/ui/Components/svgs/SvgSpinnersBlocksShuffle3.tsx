@@ -7,7 +7,7 @@ import type { SVGProps } from "react";
  * Displays three square blocks that shuffle positions in a 2x2 grid using
  * chained SVG animations, creating a looping shuffle effect.
  */
-export function SvgSpinnersBlocksShuffle3(props: SVGProps<SVGSVGElement>) {
+export function SvgSpinnersBlocksShuffle3(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export function SvgSpinnersBlocksShuffle3(props: SVGProps<SVGSVGElement>) {
 			height={24}
 			viewBox="0 0 24 24"
 			{...props}>
-			<title>Animated blocks shuffle loading spinner</title>
+			<title>{props.title ?? "Animated blocks shuffle loading spinner"}</title>
 			<rect
 				width={10}
 				height={10}

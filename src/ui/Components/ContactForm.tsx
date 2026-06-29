@@ -31,15 +31,6 @@ const ContactForm = () => {
 	const { isDarkStore } = useThemeStore();
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
-	// Guard: if the site key is missing, Turnstile silently fails to render.
-	// This catches the case where the env var wasn't set during build or deploy.
-	if (!siteKey) {
-		if (typeof window !== "undefined") {
-			console.warn("ContactForm: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set. Turnstile will not render.");
-		}
-		return null;
-	}
-
 	/**
 	 * Progressive retry: if the Turnstile script hasn't loaded after 3 seconds,
 	 * bump the key to force a remount. Then continue polling every 6 seconds
@@ -63,6 +54,15 @@ const ContactForm = () => {
 			if (intervalId !== null) clearInterval(intervalId);
 		};
 	}, [turnstileLoaded]);
+
+	// Guard: if the site key is missing, Turnstile silently fails to render.
+	// This catches the case where the env var wasn't set during build or deploy.
+	if (!siteKey) {
+		if (typeof window !== "undefined") {
+			console.warn("ContactForm: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set. Turnstile will not render.");
+		}
+		return null;
+	}
 
 	/** Handles form submission: validates Turnstile, sends email, stores data. */
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {

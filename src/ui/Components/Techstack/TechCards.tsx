@@ -1,20 +1,21 @@
+import { useTranslations } from "next-intl";
 import * as SVGs from "../svgs";
 
 /** A single technology item displayed in the tech stack. */
 interface TechItem {
-  /** URL to the technology's website. */
-  link: string;
-  /** Path to a fallback logo image. */
-  logo: string;
-  /** Display name of the technology. */
-  name: string;
-  /** Key referencing an SVG component in the `svgs` barrel export. */
-  svgr: string;
+	/** URL to the technology's website. */
+	link: string;
+	/** Path to a fallback logo image. */
+	logo: string;
+	/** Display name of the technology. */
+	name: string;
+	/** Key referencing an SVG component in the `svgs` barrel export. */
+	svgr: string;
 }
 
 /** Props for the tech cards grid. */
 interface TechCardsProps {
-  tech: TechItem[];
+	tech: TechItem[];
 }
 
 /**
@@ -26,31 +27,36 @@ interface TechCardsProps {
  * component is found.
  */
 const TechCards = ({ tech }: TechCardsProps) => {
-  const techstackMap = tech.map((data) => {
-    const SvgComponent = SVGs[data.svgr as keyof typeof SVGs];
+	const t = useTranslations("svgTitles");
+	const techstackMap = tech.map((data) => {
+		const SvgComponent = SVGs[data.svgr as keyof typeof SVGs];
 
-    if (!SvgComponent) {
-      console.warn(`No SVG component found for: ${data.name}`);
-      return null;
-    }
+		if (!SvgComponent) {
+			console.warn(`No SVG component found for: ${data.name}`);
+			return null;
+		}
 
-    return (
-      <div className="py-7 px-9 m-4 surface-cards" key={data.name}>
-        <a
-          href={data.link}
-          className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SvgComponent alt={`${data.name} logo`} />
+		return (
+			<div
+				className="py-7 px-9 m-4 surface-cards"
+				key={data.name}>
+				<a
+					href={data.link}
+					className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
+					target="_blank"
+					rel="noopener noreferrer">
+					<SvgComponent
+						alt={`${data.name} logo`}
+						title={t(data.svgr as never) ?? undefined}
+					/>
 
-          <p className="capitalize mt-1.5 self-center">{data.name}</p>
-        </a>
-      </div>
-    );
-  });
+					<p className="capitalize mt-1.5 self-center">{data.name}</p>
+				</a>
+			</div>
+		);
+	});
 
-  return <>{techstackMap}</>;
+	return <>{techstackMap}</>;
 };
 
 export default TechCards;

@@ -7,7 +7,7 @@ import type { SVGProps } from "react";
  * Displays four square blocks that pulse in size and shift position in a
  * staggered wave pattern, creating a rhythmic loading animation.
  */
-export function SvgSpinnersBlocksWave(props: SVGProps<SVGSVGElement>) {
+export function SvgSpinnersBlocksWave(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export function SvgSpinnersBlocksWave(props: SVGProps<SVGSVGElement>) {
 			height={24}
 			viewBox="0 0 24 24"
 			{...props}>
-			<title>Animated blocks wave loading spinner</title>
+			<title>{props.title ?? "Animated blocks wave loading spinner"}</title>
 			<rect
 				width={7.33}
 				height={7.33}
