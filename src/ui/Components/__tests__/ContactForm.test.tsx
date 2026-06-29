@@ -2,17 +2,12 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { renderWithProviders, screen, fireEvent, waitFor } from "@/test/test-utils";
 
 // Mock lib/server actions before anything imports them
-vi.mock("@/lib/getData", () => ({
-	getData: vi.fn().mockResolvedValue(undefined),
-}));
-
-vi.mock("@/lib/resend", () => ({
-	sendEmail: vi.fn().mockResolvedValue(undefined),
+vi.mock("@/lib/submitContact", () => ({
+	submitContact: vi.fn().mockResolvedValue(undefined),
 }));
 
 import ContactForm from "@/ui/Components/ContactForm";
-import { getData } from "@/lib/getData";
-import { sendEmail } from "@/lib/resend";
+import { submitContact } from "@/lib/submitContact";
 
 // Mock next-intl
 vi.mock("next-intl", () => ({
@@ -227,11 +222,9 @@ describe("ContactForm", () => {
 				expect(farewell).toHaveAttribute("data-submitted", "true");
 			});
 
-			// Verify server actions were called with token + form data
-			expect(sendEmail).toHaveBeenCalledTimes(1);
-			expect(sendEmail).toHaveBeenCalledWith("mock-token", expect.any(Object));
-			expect(getData).toHaveBeenCalledTimes(1);
-			expect(getData).toHaveBeenCalledWith("mock-token", expect.any(Object));
+			// Verify the combined server action was called with token + form data
+			expect(submitContact).toHaveBeenCalledTimes(1);
+			expect(submitContact).toHaveBeenCalledWith("mock-token", expect.any(Object));
 		});
 	});
 
