@@ -1,8 +1,6 @@
 "use client";
 
-import { getData } from "@/lib/getData";
-import { sendEmail } from "@/lib/resend";
-/* import { sendEmail } from "@/app/api/send"; */
+import { submitContact } from "@/lib/submitContact";
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
 import { Suspense, useState } from "react";
@@ -57,8 +55,7 @@ const ContactForm = () => {
 		const formValues = Object.fromEntries(formData);
 
 		try {
-			await sendEmail(turnstileToken, formValues);
-			await getData(turnstileToken, formValues);
+			await submitContact(turnstileToken, formValues);
 			setLoading("submitted");
 		} catch (err) {
 			console.error("ContactForm submission failed:", err);
