@@ -16,6 +16,7 @@ export function LineMdMenuToCloseAltTransition(props: SVGProps<SVGSVGElement>) {
       viewBox="0 0 24 24"
       {...props}
     >
+      <title>Menu to close transition icon</title>
       <g
         fill="none"
         stroke="currentColor"
