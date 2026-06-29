@@ -7,14 +7,14 @@ import type { SVGProps } from "react";
  * Features a monitor with a sliding keyboard tray that drops down, and a
  * stroke-dashoffset animation that draws the monitor outline.
  */
-export function ComputerAnimation(props: SVGProps<SVGSVGElement>) {
+export function ComputerAnimation(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="32"
 			height="32"
 			viewBox="0 0 24 24">
-			<title>Animated computer monitor with keyboard tray</title>
+			<title>{props.title ?? "Animated computer monitor with keyboard tray"}</title>
 			<path
 				fill="currentColor"
 				d="M10 16h4v0h-4z">

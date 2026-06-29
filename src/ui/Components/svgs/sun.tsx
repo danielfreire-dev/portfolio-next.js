@@ -6,7 +6,7 @@ import { SVGProps } from "react";
  * Animates from a moon (crescent) icon to a sunny (sun) icon using SVG path
  * morphing and mask animations, creating a looping night/day toggle effect.
  */
-export function LineMdMoonFilledToSunnyFilledLoopTransition(props: SVGProps<SVGSVGElement>) {
+export function LineMdMoonFilledToSunnyFilledLoopTransition(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ export function LineMdMoonFilledToSunnyFilledLoopTransition(props: SVGProps<SVGS
 			height="1em"
 			viewBox="0 0 24 24"
 			{...props}>
-			<title>Animated moon to sun transition icon</title>
+			<title>{props.title ?? "Animated moon to sun transition icon"}</title>
 			{/* Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt */}
 			<g
 				fill="none"

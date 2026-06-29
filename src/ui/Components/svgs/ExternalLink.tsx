@@ -6,7 +6,7 @@ import { SVGProps } from "react";
  * Draws a box with an arrow pointing outward, using stroke-dashoffset
  * animations for a sequential "drawing" effect.
  */
-export function ExternalLink(props: SVGProps<SVGSVGElement>) {
+export function ExternalLink(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@ export function ExternalLink(props: SVGProps<SVGSVGElement>) {
 			height="24"
 			viewBox="0 0 24 24"
 			{...props}>
-			<title>External link icon</title>
+			<title>{props.title ?? "External link icon"}</title>
 			<g
 				fill="none"
 				stroke="currentColor"
