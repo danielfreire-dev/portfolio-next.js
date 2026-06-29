@@ -3,7 +3,7 @@ import { renderWithProviders, screen, fireEvent, waitFor } from "@/test/test-uti
 
 // Mock lib/server actions before anything imports them
 vi.mock("@/lib/submitContact", () => ({
-	submitContact: vi.fn().mockResolvedValue(undefined),
+	submitContact: vi.fn().mockResolvedValue({ success: true }),
 }));
 
 import ContactForm from "@/ui/Components/ContactForm";
