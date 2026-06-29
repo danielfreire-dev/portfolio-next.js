@@ -15,6 +15,7 @@ interface topMainPage {
  */
 const TopMainPage = () => {
   const t = useTranslations("topMainPage");
+  const s = useTranslations("svgTitles");
 
   return (
     <div className="grid md:grid-cols-2 justify-items-center-safe content-evenly gap-3 xl:gap-7 l h-[90dvh]">
@@ -23,7 +24,7 @@ const TopMainPage = () => {
         <div className="text mt-2">{t("p2")}</div>
       </div>
 
-      <DjangoRocket />
+      <DjangoRocket title={s("djangoRocket")} />
     </div>
   );
 };

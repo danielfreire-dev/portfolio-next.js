@@ -7,14 +7,14 @@ import type { SVGProps } from "react";
  * Features a pulsing exclamation mark inside a triangle, with staggered
  * stroke-dashoffset animations for a "drawing" effect and a blinking dot.
  */
-export function AlertAnimation(props: SVGProps<SVGSVGElement>) {
+export function AlertAnimation(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="32"
 			height="32"
 			viewBox="0 0 24 24">
-			<title>Animated alert triangle with exclamation mark</title>
+			<title>{props.title ?? "Animated alert triangle with exclamation mark"}</title>
 			<g
 				fill="none"
 				stroke="currentColor"

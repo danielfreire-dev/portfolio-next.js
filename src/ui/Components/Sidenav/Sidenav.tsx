@@ -64,7 +64,7 @@ const Sidenav = () => {
               rel="noopener noreferrer"
               className="sidenav-icons hover:scale-140 delay-150 ease-in duration-400"
             >
-              <GitHubIcon />
+              <GitHubIcon title={t("footer.icons.github.title")} />
             </a>
             <a
               href={t("footer.icons.linkedin.link")}
@@ -72,7 +72,7 @@ const Sidenav = () => {
               rel="noopener noreferrer"
               className="sidenav-icons hover:scale-140 delay-150 ease-in duration-400"
             >
-              <LinkedInIcon />
+              <LinkedInIcon title={t("footer.icons.linkedin.title")} />
             </a>
           </div>
 
