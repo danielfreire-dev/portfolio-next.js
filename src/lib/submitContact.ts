@@ -27,6 +27,15 @@ function getCurrentWESTDateTime() {
 }
 
 /**
+ * Structured result returned by the submitContact server action.
+ * Uses a discriminated union so the client can check `success` and
+ * handle errors gracefully instead of receiving an opaque 500.
+ */
+type SubmitResult =
+	| { success: true }
+	| { success: false; error: string };
+
+/**
  * Server action for contact-form submission.
  *
  * Sends two emails via Resend:
@@ -37,36 +46,79 @@ function getCurrentWESTDateTime() {
  * route (TurnstileServer.tsx) via the onVerify callback in ContactForm.
  * Double-validating the same single-use token would always fail in production.
  *
+ * Errors are logged server-side with full detail (visible in Vercel / server
+ * logs) while the client receives only a sanitised error message.
+ *
  * @param _token - The Turnstile token from the client widget (pre-validated).
  * @param data   - The submitted form fields.
  */
-export const submitContact = async (_token: string, data: Record<string, FormDataEntryValue>) => {
-	const resendApiKey = process.env.NEXT_PUBLIC_RESEND;
+export const submitContact = async (
+	_token: string,
+	data: Record<string, FormDataEntryValue>,
+): Promise<SubmitResult> => {
+	// ── Validate required environment variables ──────────────────────────
+	const resendApiKey = process.env.RESEND_API_KEY;
+	const dataEmail = process.env.DATA_EMAIL;
+
 	if (!resendApiKey) {
-		throw new Error("Missing Resend API key — set NEXT_PUBLIC_RESEND in .env");
+		console.error("[submitContact] Missing RESEND_API_KEY environment variable.");
+		return { success: false, error: "Server configuration error. Please try again later." };
+	}
+	if (!dataEmail) {
+		console.error("[submitContact] Missing DATA_EMAIL environment variable.");
+		return { success: false, error: "Server configuration error. Please try again later." };
 	}
 
-	const resend = new Resend(resendApiKey);
-	const t = await getTranslations("email");
-	const e = await getTranslations("email.welcome");
+	let resend: Resend;
+	try {
+		resend = new Resend(resendApiKey);
+	} catch (err) {
+		console.error("[submitContact] Failed to initialise Resend client:", err);
+		return { success: false, error: "Server configuration error. Please try again later." };
+	}
 
-	// 1. Notification email to the site owner.
-	await resend.emails.send({
-		from: `Daniel Freire <${t("email")}>`,
-		to: `${process.env.NEXT_PUBLIC_DATA_EMAIL}`,
-		subject: `${data.firstName} ${data.lastName} | Portfólio Daniel Freire`,
-		html: `<p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+	let t: ReturnType<typeof getTranslations> extends Promise<infer T> ? T : never;
+	let e: ReturnType<typeof getTranslations> extends Promise<infer T> ? T : never;
+	try {
+		t = await getTranslations("email");
+		e = await getTranslations("email.welcome");
+	} catch (err) {
+		console.error("[submitContact] Failed to load translations:", err);
+		return { success: false, error: "Server error. Please try again later." };
+	}
+
+	// ── 1. Notification email to the site owner ──────────────────────────
+	try {
+		await resend.emails.send({
+			from: `Daniel Freire <${t("email")}>`,
+			to: dataEmail,
+			subject: `${data.firstName} ${data.lastName} | Portfólio Daniel Freire`,
+			html: `<p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
 		<p><strong>Phone #:</strong> ${data.telephone}</p>
 		<p><strong>Email:</strong> ${data.email}</p>
 		<p><strong>Message:</strong> ${data.message}</p>
 		<p><strong>date:</strong> ${getCurrentWESTDateTime()}</p>`,
-	});
+		});
+	} catch (err) {
+		console.error("[submitContact] Failed to send notification email:", err);
+		return { success: false, error: "Failed to send message. Please try again." };
+	}
 
-	// 2. Welcome email to the user who submitted the form.
-	await resend.emails.send({
-		from: `Daniel Freire <${t("email")}>`,
-		to: `${data.email as string}`,
-		subject: `${t("title")} ${data.firstName as string} ${data.lastName as string}`,
-		react: WelcomeEmail(e, data.firstName as string, data.lastName as string),
-	});
+	// ── 2. Welcome email to the user who submitted the form ──────────────
+	try {
+		await resend.emails.send({
+			from: `Daniel Freire <${t("email")}>`,
+			to: `${data.email as string}`,
+			subject: `${t("title")} ${data.firstName as string} ${data.lastName as string}`,
+			react: WelcomeEmail(e, data.firstName as string, data.lastName as string),
+		});
+	} catch (err) {
+		// Log the full error server-side for debugging.
+		// The WelcomeEmail React component may fail to render if there is a
+		// version mismatch with @react-email/components or a missing dependency.
+		console.error("[submitContact] Failed to send welcome email:", err);
+		return { success: false, error: "Failed to send confirmation. Your message was received." };
+	}
+
+	return { success: true };
 };

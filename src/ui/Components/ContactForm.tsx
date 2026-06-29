@@ -3,7 +3,7 @@
 import { submitContact } from "@/lib/submitContact";
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
@@ -26,7 +26,7 @@ const ContactForm = () => {
 	const [turnstileLoaded, setTurnstileLoaded] = useState(false);
 
 	const t = useTranslations("contact");
-	const { isDarkStore, setValue } = useThemeStore();
+	const { isDarkStore } = useThemeStore();
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 	// Guard: if the site key is missing, Turnstile silently fails to render.
@@ -54,12 +54,13 @@ const ContactForm = () => {
 		const formData = new FormData(e.currentTarget);
 		const formValues = Object.fromEntries(formData);
 
-		try {
-			await submitContact(turnstileToken, formValues);
+		const result = await submitContact(turnstileToken, formValues);
+
+		if (result.success) {
 			setLoading("submitted");
-		} catch (err) {
-			console.error("ContactForm submission failed:", err);
-			setError("Failed to send message. Please try again.");
+		} else {
+			console.error("ContactForm submission failed:", result.error);
+			setError(result.error);
 			setLoading("error");
 		}
 	}
@@ -71,103 +72,93 @@ const ContactForm = () => {
 				onSubmit={sendContactForm}
 				className={`mx-5 flex flex-col flex-nowrap items-center ${loading === "submitted" && "hidden"}`}>
 				<div className="name-div flex flex-col lg:flex-row">
-					<Suspense fallback={<p>Loading...</p>}>
-						<section className="flex flex-col">
-							<label
-								htmlFor="firstName"
-								className="capitalize">
-								{t("firstName")}
-								<span className="text-(--error) required" />
-							</label>
-							<input
-								type="text"
-								name="firstName"
-								id="firstName"
-								required
-								aria-required="true"
-								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
-							/>
-						</section>
-					</Suspense>
-					<Suspense fallback={<p>Loading...</p>}>
-						<section className="flex flex-col">
-							<label
-								htmlFor="lastName"
-								className="capitalize">
-								{t("lastName")}
-							</label>
-							<input
-								type="text"
-								name="lastName"
-								id="lastName"
-								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
-								aria-required="false"
-							/>
-						</section>
-					</Suspense>
-				</div>
-				<div className="contacts-div flex flex-col lg:flex-row">
-					<Suspense fallback={<p>Loading...</p>}>
-						<section className="flex flex-col">
-							<label
-								htmlFor="email"
-								className="capitalize">
-								{t("email")}
-								<span className="text-(--error) required" />
-							</label>
-							<input
-								type="email"
-								name="email"
-								id="email"
-								required
-								aria-required="true"
-								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
-							/>
-						</section>
-					</Suspense>
-					<Suspense fallback={<p>Loading...</p>}>
-						<section className="flex flex-col">
-							<label
-								htmlFor="telephone"
-								className="capitalize">
-								{t("phone")}
-							</label>
-							<input
-								type="tel"
-								name="telephone"
-								id="telephone"
-								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
-								aria-autocomplete="both"
-								aria-required="false"
-							/>
-						</section>
-					</Suspense>
-				</div>
-				<Suspense fallback={<p>Loading...</p>}>
-					<section className="message-div flex flex-col">
+					<section className="flex flex-col">
 						<label
-							htmlFor="message"
+							htmlFor="firstName"
 							className="capitalize">
-							{t("message")}
+							{t("firstName")}
 							<span className="text-(--error) required" />
 						</label>
-						<textarea
-							name="message"
-							id="message"
-							rows={4}
-							cols={45}
+						<input
+							type="text"
+							name="firstName"
+							id="firstName"
 							required
-							aria-autocomplete="none"
 							aria-required="true"
-							className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
-							spellCheck
+							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
 						/>
 					</section>
-				</Suspense>
+					<section className="flex flex-col">
+						<label
+							htmlFor="lastName"
+							className="capitalize">
+							{t("lastName")}
+						</label>
+						<input
+							type="text"
+							name="lastName"
+							id="lastName"
+							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
+							aria-required="false"
+						/>
+					</section>
+				</div>
+				<div className="contacts-div flex flex-col lg:flex-row">
+					<section className="flex flex-col">
+						<label
+							htmlFor="email"
+							className="capitalize">
+							{t("email")}
+							<span className="text-(--error) required" />
+						</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							required
+							aria-required="true"
+							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
+						/>
+					</section>
+					<section className="flex flex-col">
+						<label
+							htmlFor="telephone"
+							className="capitalize">
+							{t("phone")}
+						</label>
+						<input
+							type="tel"
+							name="telephone"
+							id="telephone"
+							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
+							aria-autocomplete="both"
+							aria-required="false"
+						/>
+					</section>
+				</div>
+				<section className="message-div flex flex-col">
+					<label
+						htmlFor="message"
+						className="capitalize">
+						{t("message")}
+						<span className="text-(--error) required" />
+					</label>
+					<textarea
+						name="message"
+						id="message"
+						rows={4}
+						cols={45}
+						required
+						aria-autocomplete="none"
+						aria-required="true"
+						className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
+						spellCheck
+					/>
+				</section>
 				<div className="privacy-policy-req mt-1.5">
 					<p className="align-start">
 						<span className="text-(--error)">*</span>
