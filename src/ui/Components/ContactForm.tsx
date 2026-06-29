@@ -196,6 +196,7 @@ const ContactForm = () => {
 					<Turnstile
 						key={`turnstile-${isDarkStore ? "dark" : "light"}`}
 						siteKey={siteKey!}
+						action="turnstile-spin-v1"
 						retry="auto"
 						refreshExpired="auto"
 						sandbox={process.env.NODE_ENV === "development"}
