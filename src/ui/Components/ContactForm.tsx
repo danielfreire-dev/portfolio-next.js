@@ -3,11 +3,12 @@
 import { submitContact } from "@/lib/submitContact";
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { Turnstile } from "next-turnstile";
 import { useThemeStore } from "@/stores/theme-store";
+import { TurnstileSkeleton } from "./Skeletons";
 
 /**
  * Contact form component.
@@ -24,6 +25,7 @@ const ContactForm = () => {
 	const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 	const [error, setError] = useState<string | null>(null);
 	const [turnstileLoaded, setTurnstileLoaded] = useState(false);
+	const [turnstileKeyCounter, setTurnstileKeyCounter] = useState(0);
 
 	const t = useTranslations("contact");
 	const { isDarkStore } = useThemeStore();
@@ -37,6 +39,30 @@ const ContactForm = () => {
 		}
 		return null;
 	}
+
+	/**
+	 * Progressive retry: if the Turnstile script hasn't loaded after 3 seconds,
+	 * bump the key to force a remount. Then continue polling every 6 seconds
+	 * until onLoad fires and turnstileLoaded flips to true, which clears timers.
+	 */
+	useEffect(() => {
+		if (turnstileLoaded) return;
+
+		let intervalId: ReturnType<typeof setInterval> | null = null;
+
+		const firstTimeout = setTimeout(() => {
+			setTurnstileKeyCounter((prev) => prev + 1);
+
+			intervalId = setInterval(() => {
+				setTurnstileKeyCounter((prev) => prev + 1);
+			}, 6000);
+		}, 3000);
+
+		return () => {
+			clearTimeout(firstTimeout);
+			if (intervalId !== null) clearInterval(intervalId);
+		};
+	}, [turnstileLoaded]);
 
 	/** Handles form submission: validates Turnstile, sends email, stores data. */
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
@@ -184,55 +210,62 @@ const ContactForm = () => {
 				</div>
 
 				<section className="flex flex-col justify-center mx-auto mt-2.5">
-					<Turnstile
-						key={`turnstile-${isDarkStore ? "dark" : "light"}`}
-						siteKey={siteKey!}
-						action="turnstile-spin-v1"
-						retry="auto"
-						refreshExpired="auto"
-						sandbox={process.env.NODE_ENV === "development"}
-						appearance="always"
-						theme={isDarkStore ? "dark" : "light"}
-						onError={() => {
-							setTurnstileStatus("error");
-							setError("Security check failed. Please try again.");
-							setLoading("error");
-						}}
-						onExpire={() => {
-							setTurnstileStatus("expired");
-							setError("Security check expired. Please verify again.");
-							setLoading("error");
-						}}
-						onLoad={() => {
-							// Only set "required" on initial load — never overwrite
-							// a previously successful verification (e.g. on re-render).
-							if (turnstileStatus === "required" || turnstileStatus === "error" || turnstileStatus === "expired") {
-								setTurnstileStatus("required");
-							}
-							setError(null);
-							setTurnstileLoaded(true);
-						}}
-						onVerify={async (token) => {
-							try {
-								const res = await fetch("/api/turnstile", {
-									method: "POST",
-									headers: { "Content-Type": "application/json" },
-									body: JSON.stringify({ token }),
-								});
-								if (res.ok) {
-									setTurnstileToken(token);
-									setTurnstileStatus("success");
-									setError(null);
-								} else {
+					{/* Always mount Turnstile so its script can load and fire onLoad;
+					    hide it with CSS until the skeleton can be swapped out. */}
+					<div className={turnstileLoaded ? "" : "hidden"}>
+						<Turnstile
+							key={`turnstile-${isDarkStore ? "dark" : "light"}-${turnstileKeyCounter}`}
+							siteKey={siteKey!}
+							action="turnstile-spin-v1"
+							retry="auto"
+							refreshExpired="auto"
+							sandbox={process.env.NODE_ENV === "development"}
+							appearance="always"
+							theme={isDarkStore ? "dark" : "light"}
+							onError={() => {
+								setTurnstileStatus("error");
+								setError("Security check failed. Please try again.");
+								setLoading("error");
+							}}
+							onExpire={() => {
+								setTurnstileStatus("expired");
+								setError("Security check expired. Please verify again.");
+								setLoading("error");
+							}}
+							onLoad={() => {
+								// Only set "required" on initial load — never overwrite
+								// a previously successful verification (e.g. on re-render).
+								if (turnstileStatus === "required" || turnstileStatus === "error" || turnstileStatus === "expired") {
+									setTurnstileStatus("required");
+								}
+								setError(null);
+								setTurnstileLoaded(true);
+							}}
+							onVerify={async (token) => {
+								try {
+									const res = await fetch("/api/turnstile", {
+										method: "POST",
+										headers: { "Content-Type": "application/json" },
+										body: JSON.stringify({ token }),
+									});
+									if (res.ok) {
+										setTurnstileToken(token);
+										setTurnstileStatus("success");
+										setError(null);
+									} else {
+										setTurnstileStatus("error");
+										setError("Security check failed. Please try again.");
+									}
+								} catch {
 									setTurnstileStatus("error");
 									setError("Security check failed. Please try again.");
 								}
-							} catch {
-								setTurnstileStatus("error");
-								setError("Security check failed. Please try again.");
-							}
-						}}
-					/>
+							}}
+						/>
+					</div>
+
+					{/* Skeleton shown while Turnstile script is loading */}
+					{!turnstileLoaded && <TurnstileSkeleton />}
 
 					{error && (
 						<p

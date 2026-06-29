@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { renderWithProviders, screen, fireEvent, waitFor } from "@/test/test-utils";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { renderWithProviders, screen, fireEvent, waitFor, act } from "@/test/test-utils";
 
 // Mock lib/server actions before anything imports them
 vi.mock("@/lib/submitContact", () => ({
@@ -35,12 +35,23 @@ vi.mock("next-intl", () => ({
 	NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => children as React.ReactElement,
 }));
 
-// Mock next-turnstile — captures props so tests can assert on siteKey, etc.
+// Mock next-turnstile — captures props and auto-fires onLoad asynchronously
+// to simulate the real Cloudflare Turnstile widget loading behavior.
+// The Turnstile component is always mounted (hidden via CSS until loaded),
+// so the mock will always receive and fire onLoad.
+// Uses setTimeout (macrotask) rather than queueMicrotask so test assertions
+// run before the onLoad callback triggers.
 let lastTurnstileProps: Record<string, unknown> = {};
+let shouldAutoLoadTurnstile = true;
+let turnstileRenderCount = 0;
 vi.mock("next-turnstile", () => ({
 	Turnstile: (props: Record<string, unknown>) => {
 		lastTurnstileProps = props;
-		const { onVerify } = props;
+		turnstileRenderCount++;
+		const { onVerify, onLoad } = props;
+		if (shouldAutoLoadTurnstile && typeof onLoad === "function") {
+			setTimeout(() => (onLoad as () => void)(), 0);
+		}
 		return (
 			<div data-testid="turnstile-mock">
 				<button
@@ -90,59 +101,100 @@ describe("ContactForm", () => {
 		mockIsDarkStore = false;
 		mockSetValue.mockClear();
 		lastTurnstileProps = {};
+		shouldAutoLoadTurnstile = true;
+		turnstileRenderCount = 0;
 		vi.clearAllMocks();
-		// Ensure the Turnstile site key is available and fetch is mocked
-		// for the server-side onVerify API call.
 		vi.stubEnv("NEXT_PUBLIC_TURNSTILE_SITE_KEY", MOCK_SITE_KEY);
 		global.fetch = vi.fn().mockResolvedValue({ ok: true });
 	});
 
+	afterEach(() => {
+		vi.useRealTimers();
+	});
+
 	describe("rendering", () => {
-		beforeEach(() => {
+		it("should render the Turnstile skeleton while Turnstile has not loaded", () => {
 			renderWithProviders(<ContactForm />);
+			// Synchronously after render: onLoad is scheduled via setTimeout,
+			// so skeleton is in the document and Turnstile mock is wrapped
+			// in a div.hidden (display:none) container.
+			expect(screen.getByTestId("turnstile-skeleton")).toBeInTheDocument();
+			// Turnstile mock is always mounted but hidden via CSS until loaded
+			const turnstileMock = screen.getByTestId("turnstile-mock");
+			expect(turnstileMock.closest(".hidden")).toBeTruthy();
 		});
 
-		it("should pass a non-empty siteKey to Turnstile (prevents silent production failure)", () => {
+		it("should replace the skeleton with the Turnstile widget after onLoad fires", async () => {
+			renderWithProviders(<ContactForm />);
+
+			// Initially skeleton is in the document, Turnstile is hidden
+			expect(screen.getByTestId("turnstile-skeleton")).toBeInTheDocument();
+			const turnstileMock = screen.getByTestId("turnstile-mock");
+			expect(turnstileMock.closest(".hidden")).toBeTruthy();
+
+			// Wait for the setTimeout onLoad to fire and React to re-render
+			await waitFor(() => {
+				expect(screen.queryByTestId("turnstile-skeleton")).not.toBeInTheDocument();
+			});
+
+			// Now the Turnstile mock should no longer be wrapped in a .hidden container
+			expect(turnstileMock.closest(".hidden")).toBeFalsy();
+		});
+
+		it("should pass a non-empty siteKey to Turnstile (prevents silent production failure)", async () => {
+			renderWithProviders(<ContactForm />);
+			// onLoad fires asynchronously via queueMicrotask — wait for it
+			await waitFor(() => {
+				expect(screen.queryByTestId("turnstile-skeleton")).not.toBeInTheDocument();
+			});
 			expect(lastTurnstileProps.siteKey).toBe(MOCK_SITE_KEY);
 		});
 
 		it("should render the first name field (required)", () => {
+			renderWithProviders(<ContactForm />);
 			expect(screen.getByLabelText(/First Name/)).toBeInTheDocument();
 			expect(screen.getByLabelText(/First Name/)).toBeRequired();
 		});
 
 		it("should render the last name field", () => {
+			renderWithProviders(<ContactForm />);
 			expect(screen.getByLabelText(/Last Name/)).toBeInTheDocument();
 		});
 
 		it("should render the email field (required)", () => {
+			renderWithProviders(<ContactForm />);
 			expect(screen.getByLabelText(/E-mail/)).toBeInTheDocument();
 			expect(screen.getByLabelText(/E-mail/)).toBeRequired();
 		});
 
 		it("should render the phone field", () => {
+			renderWithProviders(<ContactForm />);
 			expect(screen.getByLabelText(/Phone/)).toBeInTheDocument();
 		});
 
 		it("should render the message textarea (required)", () => {
+			renderWithProviders(<ContactForm />);
 			expect(screen.getByLabelText(/Message/)).toBeInTheDocument();
 			expect(screen.getByLabelText(/Message/)).toBeRequired();
 		});
 
 		it("should render the privacy policy checkbox", () => {
+			renderWithProviders(<ContactForm />);
 			expect(screen.getByLabelText(/I agree to the/)).toBeInTheDocument();
 		});
 
-		it("should render the Turnstile widget", () => {
-			expect(screen.getByTestId("turnstile-mock")).toBeInTheDocument();
-		});
-
-		it("should have the submit button disabled initially", () => {
+		it("should have the submit button disabled initially", async () => {
+			renderWithProviders(<ContactForm />);
+			// After onLoad fires, the submit button appears (disabled until Turnstile verified)
+			await waitFor(() => {
+				expect(screen.queryByTestId("turnstile-skeleton")).not.toBeInTheDocument();
+			});
 			const button = screen.getByRole("button", { name: "Send" });
 			expect(button).toBeDisabled();
 		});
 
 		it("should render the required fields note", () => {
+			renderWithProviders(<ContactForm />);
 			expect(screen.getByText("Required")).toBeInTheDocument();
 		});
 	});
@@ -151,10 +203,15 @@ describe("ContactForm", () => {
 		it("should enable the submit button after Turnstile verification", async () => {
 			renderWithProviders(<ContactForm />);
 
+			// Wait for Turnstile to load (onLoad microtask)
+			await waitFor(() => {
+				expect(screen.queryByTestId("turnstile-skeleton")).not.toBeInTheDocument();
+			});
+
 			const verifyBtn = screen.getByTestId("turnstile-verify-btn");
 			fireEvent.click(verifyBtn);
 
-			// onVerify is now async (calls /api/turnstile) — wait for the
+			// onVerify is async (calls /api/turnstile) — wait for the
 			// state update to flush before asserting.
 			await waitFor(() => {
 				const submitBtn = screen.getByRole("button", { name: "Send" });
@@ -167,6 +224,10 @@ describe("ContactForm", () => {
 		it("should disable the submit button during submission", async () => {
 			renderWithProviders(<ContactForm />);
 
+			await waitFor(() => {
+				expect(screen.queryByTestId("turnstile-skeleton")).not.toBeInTheDocument();
+			});
+
 			fireEvent.click(screen.getByTestId("turnstile-verify-btn"));
 			const submitBtn = screen.getByRole("button", { name: "Send" });
 			await waitFor(() => {
@@ -187,7 +248,6 @@ describe("ContactForm", () => {
 			const form = submitBtn.closest("form")!;
 			fireEvent.submit(form);
 
-			// sendContactForm sets loading="loading" first, which disables the button
 			await waitFor(() => {
 				expect(submitBtn).toBeDisabled();
 			});
@@ -196,6 +256,10 @@ describe("ContactForm", () => {
 		it("should show farewell message after successful submission", async () => {
 			renderWithProviders(<ContactForm />);
 
+			await waitFor(() => {
+				expect(screen.queryByTestId("turnstile-skeleton")).not.toBeInTheDocument();
+			});
+
 			fireEvent.click(screen.getByTestId("turnstile-verify-btn"));
 			const submitBtn = screen.getByRole("button", { name: "Send" });
 			await waitFor(() => {
@@ -216,13 +280,11 @@ describe("ContactForm", () => {
 			const form = submitBtn.closest("form")!;
 			fireEvent.submit(form);
 
-			// Form submission completes → farewell shown
 			await waitFor(() => {
 				const farewell = screen.getByTestId("farewell");
 				expect(farewell).toHaveAttribute("data-submitted", "true");
 			});
 
-			// Verify the combined server action was called with token + form data
 			expect(submitContact).toHaveBeenCalledTimes(1);
 			expect(submitContact).toHaveBeenCalledWith("mock-token", expect.any(Object));
 		});
@@ -231,6 +293,10 @@ describe("ContactForm", () => {
 	describe("form hidden state", () => {
 		it("should hide the form when submission is completed", async () => {
 			renderWithProviders(<ContactForm />);
+
+			await waitFor(() => {
+				expect(screen.queryByTestId("turnstile-skeleton")).not.toBeInTheDocument();
+			});
 
 			fireEvent.click(screen.getByTestId("turnstile-verify-btn"));
 			const submitBtn = screen.getByRole("button", { name: "Send" });
@@ -255,6 +321,48 @@ describe("ContactForm", () => {
 			await waitFor(() => {
 				expect(form).toHaveClass("hidden");
 			});
+		});
+	});
+
+	describe("Turnstile load retry", () => {
+		it("should retry at 3s then every 6s by rotating the key, and stop after onLoad", () => {
+			vi.useFakeTimers();
+			shouldAutoLoadTurnstile = false;
+
+			renderWithProviders(<ContactForm />);
+
+			// Initial mount — capture how many times Turnstile has rendered
+			const initialRenders = turnstileRenderCount;
+
+			// 3-second first retry — should bump key, causing a remount
+			act(() => {
+				vi.advanceTimersByTime(3000);
+			});
+			expect(turnstileRenderCount).toBeGreaterThan(initialRenders);
+			const rendersAfter3s = turnstileRenderCount;
+
+			// 6-second second retry — another remount
+			act(() => {
+				vi.advanceTimersByTime(6000);
+			});
+			expect(turnstileRenderCount).toBeGreaterThan(rendersAfter3s);
+
+			// Simulate Turnstile finally loading
+			act(() => {
+				if (typeof lastTurnstileProps.onLoad === "function") {
+					(lastTurnstileProps.onLoad as () => void)();
+				}
+			});
+
+			const rendersAfterLoad = turnstileRenderCount;
+
+			// Advance another 6s — polling should be stopped, no more remounts
+			act(() => {
+				vi.advanceTimersByTime(6000);
+			});
+			expect(turnstileRenderCount).toBe(rendersAfterLoad);
+
+			vi.useRealTimers();
 		});
 	});
 });
