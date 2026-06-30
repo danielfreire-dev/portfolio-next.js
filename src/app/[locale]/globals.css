@@ -109,26 +109,6 @@ html {
 	color: var(--text);
 	padding-bottom: env(safe-area-inset-bottom);
 	font-family: Arial, Helvetica, sans-serif;
-	transition:
-		scrollbar-color 0.3s ease-in,
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-webkit-transition:
-		scrollbar-color 0.3s ease-in,
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-moz-transition:
-		scrollbar-color 0.3s ease-in,
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-ms-transition:
-		scrollbar-color 0.3s ease-in,
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
-	-o-transition:
-		scrollbar-color 0.3s ease-in,
-		background-color 0.3s ease-in,
-		color 0.3s ease-in;
 }
 .surface-cards {
 	color: var(--text);
