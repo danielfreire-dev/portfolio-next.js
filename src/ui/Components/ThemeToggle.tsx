@@ -43,13 +43,17 @@ const ThemeToggle = () => {
 	useEffect(() => {
 		const savedTheme = getStoredTheme();
 		if (savedTheme) {
-			setValue(savedTheme === "dark");
+			const isDark = savedTheme === "dark";
+			setValue(isDark);
+			document.documentElement.classList.toggle("dark", isDark);
 			return;
 		}
 
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 		if (!savedTheme) {
-			setValue(mediaQuery.matches);
+			const isDark = mediaQuery.matches;
+			setValue(isDark);
+			document.documentElement.classList.toggle("dark", isDark);
 		}
 
 		const handleChange = (e: MediaQueryListEvent) => {
@@ -72,6 +76,9 @@ const ThemeToggle = () => {
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const newTheme = e.target.checked;
 		setValue(newTheme);
+
+		// Sync the class on <html> so CSS selectors match immediately
+		document.documentElement.classList.toggle("dark", newTheme);
 
 		// Save preference to localStorage immediately
 		setStoredTheme(newTheme ? "dark" : "light");
