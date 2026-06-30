@@ -19,35 +19,25 @@ import { Suspense } from "react";
  * `generateMetadata`.
  */
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Daniel Freire",
-    default: "Daniel Freire",
-  },
-  authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
-  creator: "Daniel Freire",
-  keywords: [
-    "Daniel Freire",
-    "Portfolio",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "JavaScript",
-    "Digital Marketing",
-  ],
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://www.daniel-freire.com/"),
+	title: {
+		template: "%s | Daniel Freire",
+		default: "Daniel Freire",
+	},
+	authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
+	creator: "Daniel Freire",
+	keywords: ["Daniel Freire", "Portfolio", "Next.js", "React", "TypeScript", "JavaScript", "Digital Marketing"],
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	metadataBase: new URL("https://www.daniel-freire.com/"),
 
-  openGraph: {
-    type: "website",
+	openGraph: {
+		type: "website",
 
-    images: [
-      { url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
-    ],
-  },
+		images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` }],
+	},
 };
 
 /* export async function generateMetadata({
@@ -94,41 +84,41 @@ export const metadata: Metadata = {
 
 /** Logo / display font — Mozilla Headline variable weight. */
 const Logo = localFont({
-  src: "../../ui/fonts/Mozilla_Headline/MozillaHeadline-VariableFont_wdth,wght.ttf",
-  display: "swap",
-  variable: "--font-logo",
-  weight: "500",
+	src: "../../ui/fonts/Mozilla_Headline/MozillaHeadline-VariableFont_wdth,wght.ttf",
+	display: "swap",
+	variable: "--font-logo",
+	weight: "500",
 });
 
 /** Heading font — IBM Plex Serif regular weight. */
 const Heading = localFont({
-  src: "../../ui/fonts/IBM_Plex/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf",
-  display: "swap",
-  variable: "--font-heading",
+	src: "../../ui/fonts/IBM_Plex/IBM_Plex_Serif/IBMPlexSerif-Regular.ttf",
+	display: "swap",
+	variable: "--font-heading",
 });
 
 /** Body text font — IBM Plex Sans variable weight (Roman). */
 const Text = localFont({
-  src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
-  display: "swap",
-  variable: "--font-text",
-  weight: "400",
+	src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
+	display: "swap",
+	variable: "--font-text",
+	weight: "400",
 });
 
 /** Small / secondary text font — IBM Plex Sans variable weight (light). */
 const Small = localFont({
-  src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
-  display: "swap",
-  variable: "--font-small",
-  weight: "300",
+	src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Roman.woff2",
+	display: "swap",
+	variable: "--font-small",
+	weight: "300",
 });
 
 /** Small italic text font — IBM Plex Sans variable weight (italic). */
 const SmallItalic = localFont({
-  src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Italic.woff2",
-  display: "swap",
-  variable: "--font-small-itallic",
-  style: "italic",
+	src: "../../ui/fonts/IBM_Plex/Sans_Variable/IBM Plex Sans Var-Italic.woff2",
+	display: "swap",
+	variable: "--font-small-itallic",
+	style: "italic",
 });
 
 /**
@@ -138,7 +128,7 @@ const SmallItalic = localFont({
  * Next.js pre-renders a page for every locale at build time.
  */
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+	return routing.locales.map((locale) => ({ locale }));
 }
 
 const googleAnalytics = process.env.NEXT_PUBLIC_GA4;
@@ -155,44 +145,48 @@ const googleAnalytics = process.env.NEXT_PUBLIC_GA4;
  * @param params  - A promise resolving to an object containing the `locale` segment.
  */
 export default async function RootLayout({
-  children,
-  params,
+	children,
+	params,
 }: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+	children: React.ReactNode;
+	params: Promise<{ locale: string }>;
 }) {
-  // Ensure that the incoming `locale` is valid
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+	// Ensure that the incoming `locale` is valid
+	const { locale } = await params;
+	if (!hasLocale(routing.locales, locale)) {
+		notFound();
+	}
 
-  // Enable static rendering for this locale
-  setRequestLocale(locale);
+	// Enable static rendering for this locale
+	setRequestLocale(locale);
 
-  // Get messages for the locale
-  const messages = await getMessages();
+	// Get messages for the locale
+	const messages = await getMessages();
 
-  return (
-    <html lang={locale}>
-      <SpeedInsights />
-      <Suspense fallback={null}>
-        <GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
-      </Suspense>
-      <body
-        className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}
-      >
-        <NextIntlClientProvider messages={messages}>
-          <Providers>
-            <header className="flex flex-row">
-              <Sidenav />
-            </header>
-            <main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
-              <div id="main">{children}</div>
-            </main>
-          </Providers>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang={locale}>
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark")}catch(e){}})();`,
+				}}
+			/>
+			<SpeedInsights />
+			<Suspense fallback={null}>
+				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
+			</Suspense>
+			<body
+				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}>
+				<NextIntlClientProvider messages={messages}>
+					<Providers>
+						<header className="flex flex-row">
+							<Sidenav />
+						</header>
+						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
+							<div id="main">{children}</div>
+						</main>
+					</Providers>
+				</NextIntlClientProvider>
+			</body>
+		</html>
+	);
 }

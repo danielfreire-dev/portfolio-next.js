@@ -62,6 +62,7 @@
 }
 
 /* Dark Mode */
+html.dark,
 :root:has(#theme-toggle:checked) {
 	--primary: #f27a3d; /* 6.9:1 */
 	--secondary: #00a8e0; /* 6.61:1 */
@@ -94,6 +95,7 @@
 }
 
 /* Invert service card icons in dark mode so black SVGs become white */
+html.dark .service-card-icon,
 :root:has(#theme-toggle:checked) .service-card-icon {
 	filter: invert(1);
 }
