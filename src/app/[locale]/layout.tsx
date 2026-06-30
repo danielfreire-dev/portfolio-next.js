@@ -164,20 +164,18 @@ export default async function RootLayout({
 	const messages = await getMessages();
 
 	return (
-		<html lang={locale}>
-			<head>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark")}catch(e){}})();`,
-					}}
-				/>
-			</head>
+		<html lang={locale} suppressHydrationWarning>
 			<SpeedInsights />
 			<Suspense fallback={null}>
 				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
 			</Suspense>
 			<body
 				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark")}catch(e){}})();`,
+					}}
+				/>
 				<NextIntlClientProvider messages={messages}>
 					<Providers>
 						<header className="flex flex-row">
