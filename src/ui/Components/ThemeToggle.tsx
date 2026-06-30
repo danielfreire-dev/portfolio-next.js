@@ -82,6 +82,9 @@ const ThemeToggle = () => {
 
 		// Save preference to localStorage immediately
 		setStoredTheme(newTheme ? "dark" : "light");
+
+		// Set cookie so the server can render the correct theme on next request
+		document.cookie = `theme=${newTheme ? "dark" : "light"};path=/;max-age=31536000;SameSite=Lax`;
 	}
 
 	return (
