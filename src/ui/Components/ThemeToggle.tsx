@@ -41,6 +41,9 @@ const ThemeToggle = () => {
 
 	// Initialise theme from localStorage or system preference on mount
 	useEffect(() => {
+		// Ensure transitions are enabled (the blocking script may have already set this)
+		document.documentElement.classList.add("theme-ready");
+
 		const savedTheme = getStoredTheme();
 		if (savedTheme) {
 			const isDark = savedTheme === "dark";
