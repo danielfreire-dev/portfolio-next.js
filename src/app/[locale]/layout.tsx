@@ -163,7 +163,7 @@ export default async function RootLayout({
 	// Get messages for the locale
 	const messages = await getMessages();
 
-	const themeScript = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark")}catch(e){}})();`;
+	const themeScript = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");document.documentElement.classList.add("theme-ready")}catch(e){}})();`;
 
 	return (
 		<html
