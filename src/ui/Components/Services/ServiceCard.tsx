@@ -20,9 +20,9 @@ interface ServiceCardProps {
  */
 const ServiceCard = ({ title, text, icon }: ServiceCardProps) => {
 	return (
-		<div className="flex flex-row items-start gap-4 w-full max-w-lg p-4 surface-cards">
+		<div className="flex flex-row items-start gap-4 w-full max-w-lg p-4 surface-cards h-full">
 			<Suspense fallback="Loading...">
-				<div className="shrink-0 overflow-hidden rounded-md">
+				<div className="shrink-0  rounded-md">
 					<Image
 						src={icon}
 						alt={title}
