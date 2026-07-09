@@ -23,12 +23,12 @@ const Services = () => {
 			<h2 className="mt-7 text-3xl font-bold text-center">{t("metadata.title.services")}</h2>
 
 			<section className="m-4 sm:mx-15 mb-6">
-				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center">
+				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch justify-items-center">
 					{services.map((service) => (
 						<TransitionLink
 							key={service.slug}
 							href={`/services/${service.slug}` as any}
-							className="block w-full max-w-lg hover:scale-[1.02] transition-transform duration-300 ease-in-out">
+							className="block w-full max-w-lg h-full hover:scale-[1.02] transition-transform duration-300 ease-in-out">
 							<ServiceCard
 								icon={service.icon}
 								title={service.title}
