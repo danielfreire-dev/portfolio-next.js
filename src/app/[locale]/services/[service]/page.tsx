@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { Locale } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Cta from "@/ui/Components/CtA/Cta";
 import { TransitionLink } from "@/ui/Components/Sidenav/TransitionLink";
 
 interface Props {
@@ -214,9 +213,6 @@ const ServiceDetailPage = ({ params }: Props) => {
 
 			{/* CTA */}
 			<div className="text-center mb-10">
-				<Suspense>
-					<Cta />
-				</Suspense>
 			</div>
 		</article>
 	);

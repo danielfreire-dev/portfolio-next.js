@@ -1,5 +1,4 @@
 import { Locale, useTranslations } from "next-intl";
-import Cta from "../../../ui/Components/CtA/Cta";
 import WebsiteCards from "../../../ui/Components/WebsiteCards";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
@@ -60,8 +59,6 @@ const Portfolio = ({ params }: Props) => {
 			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}!</h2>
 
 			<WebsiteCards />
-
-			<Cta />
 		</>
 	);
 };

@@ -1,7 +1,10 @@
+"use client";
+
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
 import { TransitionLink } from "../Sidenav/TransitionLink";
 import { Suspense } from "react";
+import { useIsActivePath } from "@/ui/hooks/useIsActivePath";
 
 /**
  * Returns a random element from the given array, or `null` if empty.
@@ -30,10 +33,22 @@ const getRandomItem = (array: string[]) => {
  * see fresh messaging. Wrapped in Suspense to avoid blocking above-the-fold
  * content while the CTA label resolves.
  *
+ * The component hides itself on the contact page (and any child routes) by
+ * comparing the current pathname against `/contact` via `useIsActivePath`,
+ * preventing a redundant "Contact me" button when the user is already
+ * viewing the contact form.
+ *
  * @todo Fix button layout on smaller screens (text overflow / wrapping).
  */
 const Cta = () => {
 	const t = useTranslations("cta");
+	const isActive = useIsActivePath();
+
+	// Hide on the contact page and its children — the user is already
+	// viewing the contact form, so showing a CTA to it is redundant.
+	if (isActive("/contact")) {
+		return null;
+	}
 
 	return (
 		<>
