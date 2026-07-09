@@ -25,70 +25,32 @@ vi.mock("next-intl", async () => {
 		...actual,
 		useTranslations: vi.fn().mockImplementation(() => {
 			const t = (key: string) => key;
-			t.raw = () => [
-				{
-					slug: "web-development",
-					icon: "/images/dns.svg",
-					title: "Web Dev",
-					text: "Modern websites.",
-				},
-			];
+			t.raw = () => [];
 			return t;
 		}),
 		useLocale: vi.fn().mockReturnValue("en"),
 	};
 });
 
-/** Mock Link from i18n/navigation. */
-vi.mock("@/i18n/navigation", () => ({
-	Link: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => (
-		<a
-			href={href}
-			className={className}>
-			{children}
-		</a>
-	),
-}));
-
-/** Mock TransitionLink to render a plain link in tests. */
-vi.mock("@/ui/Components/Sidenav/TransitionLink", () => ({
-	TransitionLink: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => (
-		<a
-			href={href}
-			className={className}>
-			{children}
-		</a>
-	),
-}));
-
-/** Mock ServiceCard to simplify assertions. */
-vi.mock("@/ui/Components/Services/ServiceCard", () => ({
-	default: ({ title, text }: { title: string; text: string; icon: string }) => (
-		<div data-testid="service-card">
-			<h3>{title}</h3>
-			<p>{text}</p>
-		</div>
-	),
-}));
-
-/** Mock the CTA component. */
-vi.mock("@/ui/Components/CtA/Cta", () => ({
-	default: () => <div data-testid="cta">CTA</div>,
+/** Mock the shared Services component. */
+vi.mock("@/ui/Components/Services", () => ({
+	default: () => <div data-testid="services-component">Services Component</div>,
 }));
 
 describe("ServicesPage", () => {
-	// Pass the resolved object — the mocked use() returns it as-is
 	const defaultParams = { locale: "en" } as unknown as Promise<{ locale: "en" }>;
 
-	it("renders the services heading", async () => {
+	it("renders the shared Services component", async () => {
 		renderWithProviders(<ServicesPage params={defaultParams} />);
 
-		expect(await screen.findByText("metadata.title.services")).toBeInTheDocument();
+		expect(await screen.findByTestId("services-component")).toBeInTheDocument();
 	});
 
-	it("renders the CTA section", async () => {
+	it("calls setRequestLocale with the resolved locale", async () => {
+		const { setRequestLocale } = await import("next-intl/server");
+
 		renderWithProviders(<ServicesPage params={defaultParams} />);
 
-		expect(await screen.findByTestId("cta")).toBeInTheDocument();
+		expect(setRequestLocale).toHaveBeenCalledWith("en");
 	});
 });
