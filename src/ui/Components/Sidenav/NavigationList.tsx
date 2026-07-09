@@ -87,7 +87,7 @@ const NavigationList = ({
 			return (
 				normalizedPath === localizedLink ||
 				normalizedPath === normalizedLink ||
-				normalizedPath.startsWith(`${normalizedLink}/`)
+				normalizedPath.startsWith(`${localizedLink}/`)
 			);
 		};
 
