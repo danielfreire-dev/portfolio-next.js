@@ -35,9 +35,14 @@ function sleep(ms: number): Promise<void> {
  * TransitionLink - A navigation link with a page-transition animation.
  *
  * On click, the component adds a `page-transition` CSS class to `<main>`,
- * waits for the animation to complete (333 ms), then navigates via
- * `router.push()`. On route change, it removes the transition class and
- * closes the mobile sidenav if open.
+ * waits 333 ms for the CSS fade-out animation to complete, then navigates
+ * via `router.push()`. This delay is the minimum needed for the CSS
+ * transition to be perceptible while keeping navigation feeling responsive.
+ *
+ * On route change (pathname update), the transition class is removed and
+ * the mobile sidenav is closed if it was open. Same-page clicks (where the
+ * target path matches the current path) are ignored to avoid unnecessary
+ * animation cycles.
  */
 export const TransitionLink = ({
 	children,
@@ -69,7 +74,6 @@ export const TransitionLink = ({
 		if ((href === "/" && pathname.slice(0, -2) !== href) || (href !== "/" && pathname.slice(3) !== href)) {
 			mainElement?.classList.add("page-transition");
 
-			/* defines how fast the transition happens */
 			await sleep(333);
 
 			router.push(href as string);

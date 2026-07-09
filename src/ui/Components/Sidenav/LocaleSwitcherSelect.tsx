@@ -33,12 +33,19 @@ export default function LocaleSwitcherSelect({
 		return new Promise((resolve) => setTimeout(resolve, ms));
 	} */
 
+  /**
+   * Handles locale selection from the desktop `<select>` dropdown.
+   *
+   * Reads the new locale value from the change event and performs a
+   * client-side navigation via `router.replace` inside `startTransition`
+   * so the UI remains responsive while the new locale's messages load.
+   * Page-transition animation logic is commented out but preserved for
+   * future re-enablement.
+   *
+   * @param event - The change event from the `<select>` element.
+   */
   async function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value as Locale;
-    /* const mainElement = document.querySelector("body");
-		mainElement?.classList.add("page-transition");
-
-		await sleep(500); */
     startTransition(() => {
       router.replace(
         // @ts-expect-error -- TypeScript will validate that only known `params`

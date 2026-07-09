@@ -31,32 +31,38 @@ function getCurrentWESTDateTime() {
  * Uses a discriminated union so the client can check `success` and
  * handle errors gracefully instead of receiving an opaque 500.
  */
-type SubmitResult =
-	| { success: true }
-	| { success: false; error: string };
+type SubmitResult = { success: true } | { success: false; error: string };
 
 /**
  * Server action for contact-form submission.
  *
- * Sends two emails via Resend:
- * 1. A notification to the site owner with the submitted form data.
- * 2. A welcome email to the user who submitted the form.
+ * Sends two emails via Resend in sequence:
+ * 1. A plain-text notification to the site owner with the submitted form
+ *    fields and a WEST-timestamped date.
+ * 2. A React-rendered welcome email to the user who submitted the form.
  *
- * The Turnstile token is already validated server-side by the /api/turnstile
- * route (TurnstileServer.tsx) via the onVerify callback in ContactForm.
- * Double-validating the same single-use token would always fail in production.
+ * The Turnstile token is already validated server-side by the `/api/turnstile`
+ * route (TurnstileServer.tsx) via the `onVerify` callback in ContactForm.
+ * Re-validating the same single-use token here would always fail in
+ * production because Turnstile tokens are one-shot.
  *
- * Errors are logged server-side with full detail (visible in Vercel / server
- * logs) while the client receives only a sanitised error message.
+ * Validation happens in three phases: environment variables first (fail
+ * fast with a clear error), then Resend client initialisation, then
+ * translation loading. Each phase returns a sanitised error message to
+ * the client while logging full details server-side for debugging.
  *
  * @param _token - The Turnstile token from the client widget (pre-validated).
- * @param data   - The submitted form fields.
+ * @param data   - The submitted form fields as FormData entry values.
+ * @returns A discriminated union: `{ success: true }` or
+ *          `{ success: false, error: string }`.
+ *
+ * @todo Consider adding rate limiting (e.g., Upstash Redis) to prevent
+ *       abuse of the contact form endpoint.
  */
 export const submitContact = async (
 	_token: string,
 	data: Record<string, FormDataEntryValue>,
 ): Promise<SubmitResult> => {
-	// ── Validate required environment variables ──────────────────────────
 	const resendApiKey = process.env.RESEND_API_KEY;
 	const dataEmail = process.env.DATA_EMAIL;
 
@@ -87,7 +93,6 @@ export const submitContact = async (
 		return { success: false, error: "Server error. Please try again later." };
 	}
 
-	// ── 1. Notification email to the site owner ──────────────────────────
 	try {
 		await resend.emails.send({
 			from: `Daniel Freire <${t("email")}>`,
@@ -104,7 +109,6 @@ export const submitContact = async (
 		return { success: false, error: "Failed to send message. Please try again." };
 	}
 
-	// ── 2. Welcome email to the user who submitted the form ──────────────
 	try {
 		await resend.emails.send({
 			from: `Daniel Freire <${t("email")}>`,
@@ -113,9 +117,6 @@ export const submitContact = async (
 			react: WelcomeEmail(e, data.firstName as string, data.lastName as string),
 		});
 	} catch (err) {
-		// Log the full error server-side for debugging.
-		// The WelcomeEmail React component may fail to render if there is a
-		// version mismatch with @react-email/components or a missing dependency.
 		console.error("[submitContact] Failed to send welcome email:", err);
 		return { success: false, error: "Failed to send confirmation. Your message was received." };
 	}

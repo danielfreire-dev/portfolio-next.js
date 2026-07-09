@@ -19,7 +19,6 @@ interface Props {
  * resolved locale from the route params.
  */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: locale,
@@ -63,7 +62,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function HomePage({ params }: Props) {
 	const { locale } = use(params);
 
-	// Enable static rendering
 	setRequestLocale(locale);
 
 	return (

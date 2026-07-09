@@ -49,8 +49,17 @@ export interface GlobeRotation {
  * 3D rotating Earth globe visualisation.
  *
  * Uses `react-globe.gl` to render an interactive, rotatable Earth with
- * optional auto-rotation, arc data visualisation, and GSAP-powered scroll
- * animations.
+ * auto-rotation powered by GSAP animation loops and optional scroll-driven
+ * parallax effects. Generates random arc data on render to create dynamic
+ * flight-path-style overlays that give the globe a live, data-rich feel.
+ *
+ * Globe initialisation is gated on the `globeReady` state, set by the
+ * `onGlobeReady` callback, to prevent GSAP from targeting a null ref.
+ * Rotation can be toggled via `toggleRotation` and reset via `resetRotation`
+ * (both are currently wired to commented-out UI buttons).
+ *
+ * @todo Expose `toggleRotation` and `resetRotation` through visible controls
+ *       so users can pause or restart the auto-rotation.
  */
 const RotatingEarth: React.FC<RotatingGlobeProps> = ({
   width = 600,
@@ -63,16 +72,12 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
   className = "",
   animateIn = true,
 }) => {
-  // Refs
-
   const globeRef = useRef<any>();
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // State
   const [isRotating, setIsRotating] = useState(autoRotate);
   const [globeReady, setGlobeReady] = useState(false);
 
-  // GSAP animation for rotation
   useGSAP(() => {
     if (!globeRef.current || !isRotating) return;
 
@@ -98,7 +103,6 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
     };
   }, [isRotating, rotationSpeed, globeReady]);
 
-  // Additional scroll-based animation
   useGSAP(() => {
     if (!containerRef.current) return;
 
@@ -114,37 +118,31 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
     });
   }, []);
 
-  // Handle globe initialization
   const handleGlobeReady = () => {
     setGlobeReady(true);
     if (globeRef.current) {
-      // Initial rotation setup
       globeRef.current.controls().autoRotate = isRotating;
       globeRef.current.controls().autoRotateSpeed = rotationSpeed;
       globeRef.current.controls().enableZoom = false;
     }
   };
 
-  // Toggle rotation
   const toggleRotation = () => {
     setIsRotating(!isRotating);
   };
 
-  // Reset rotation
   const resetRotation = () => {
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = false;
       globeRef.current.controls().reset();
       setIsRotating(false);
 
-      // Resume after a delay if autoRotate is enabled
       setTimeout(() => {
         setIsRotating(autoRotate);
       }, 1000);
     }
   };
 
-  // Gen random data
   const N = 20;
   const arcsData = [...Array(N).keys()].map(() => ({
     startLat: (Math.random() - 0.5) * 180,
@@ -159,7 +157,6 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
-      {/* Globe container */}
       <div className="relative w-full cursor-grab">
         <Globe
           ref={globeRef}
@@ -167,9 +164,6 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
           height={height}
           bumpImageUrl={bumpImageUrl}
           globeImageUrl={globeImageUrl}
-          /* globeTileEngineUrl={(x, y, l) =>
-						`https://tile.openstreetmap.org/${l}/${x}/${y}.png`
-					} */
 
           backgroundColor={backgroundColor}
           onGlobeReady={handleGlobeReady}
@@ -186,31 +180,11 @@ const RotatingEarth: React.FC<RotatingGlobeProps> = ({
           arcDashAnimateTime={() => Math.random() * 4000 + 1000}
         />
 
-        {/* Custom overlay */}
-        {/* <div className="absolute bottom-4 left-4 pointer-events-none">
-					<div className="bg-black/50 text-white text-sm px-3 py-1 rounded-lg backdrop-blur-sm">
-						Earth Visualization
-					</div>
-				</div> */}
       </div>
 
-      {/* Controls */}
       <div className="absolute bottom-4 right-4 flex space-x-2">
-        {/* <button
-					onClick={toggleRotation}
-					className="bg-white/90 hover:bg-white text-gray-800 px-3 py-1 rounded-lg text-sm font-medium shadow-md transition-all backdrop-blur-sm"
-				>
-					{isRotating ? "Pause" : "Play"}
-				</button> */}
-        {/* <button
-					onClick={resetRotation}
-					className="bg-white/90 hover:bg-white text-gray-800 px-3 py-1 rounded-lg text-sm font-medium shadow-md transition-all backdrop-blur-sm"
-				>
-					Reset
-				</button> */}
       </div>
 
-      {/* Loading indicator */}
       {!globeReady && (
         <div className="absolute inset-0 flex items-center justify-center bg-transparent">
           <div className="text-(--text)">Loading...</div>
