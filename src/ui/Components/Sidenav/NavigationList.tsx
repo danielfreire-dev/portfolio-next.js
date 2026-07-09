@@ -1,6 +1,6 @@
 import NavigationLink from "./NavigationLink";
-import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { useIsActivePath } from "@/ui/hooks/useIsActivePath";
 
 /** Describes a single navigation link entry from the translation file. */
 interface NavLink {
@@ -30,8 +30,9 @@ interface NavLink {
  * NavigationList - Renders the list of navigation links in the sidenav.
  *
  * Reads link definitions from the `sidenav.links` translation key, determines
- * which link is active based on the current pathname (with locale-aware
- * matching), and renders each as a `NavigationLink` inside an `<li>`.
+ * which link is active based on the current pathname using the shared
+ * `useIsActivePath` hook (locale-aware matching), and renders each as a
+ * `NavigationLink` inside an `<li>`.
  */
 const NavigationList = ({
 	isOpen,
@@ -40,36 +41,11 @@ const NavigationList = ({
 	isOpen: boolean;
 	setIsOpen: (value: boolean | ((prevVar: boolean) => boolean)) => void;
 }) => {
-	const pathname = usePathname();
+	const isActive = useIsActivePath();
 	const t = useTranslations("sidenav");
 
 	const nav = t.raw("links").map((data: NavLink) => {
-		const lang = pathname.split("/")[1];
-
-		const normalizePath = (path: string) => {
-			const decoded = decodeURIComponent(path);
-			return decoded.replace(/\/+/g, "/").replace(/\/$/, "");
-		};
-
-		const isActive = (link: string, currentPath: string) => {
-			const normalizedLink = normalizePath(link);
-			const normalizedPath = normalizePath(currentPath);
-			const localizedLink = normalizePath(`/${lang}${link}`);
-
-			// Special case for home link
-			if (link === "/") {
-				return normalizedPath === `/${lang}` || normalizedPath === "";
-			}
-
-			return (
-				normalizedPath === localizedLink ||
-				normalizedPath === normalizedLink ||
-				normalizedPath.startsWith(`${normalizedLink}/`)
-			);
-		};
-
-		// Usage in your component:
-		const isActiveClass = isActive(data.link, pathname) ? " active" : "";
+		const isActiveClass = isActive(data.link) ? " active" : "";
 
 		return (
 			<li

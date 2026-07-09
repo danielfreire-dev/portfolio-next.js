@@ -14,9 +14,17 @@ import { TurnstileSkeleton } from "./Skeletons";
  * Contact form component.
  *
  * Renders a multi-field form with Cloudflare Turnstile bot protection.
- * On successful submission, sends a notification email via Resend and
- * displays a farewell message. Tracks submission state through an
+ * On successful submission the form sends a notification email via Resend
+ * and swaps to a farewell message. Submission state is tracked through an
  * explicit state machine (idle → loading → submitted/error).
+ *
+ * Turnstile widget loading is handled with a progressive retry strategy:
+ * if the Turnstile script hasn't fired onLoad within 3 seconds the widget
+ * is force-remounted by bumping a React key; this repeats every 6 seconds
+ * until the script loads. If the Turnstile site key environment variable
+ * is missing the component renders nothing to avoid a broken widget.
+ *
+ * @todo Add form input sanitisation before sending data to the server.
  */
 const ContactForm = () => {
 	type submission = "idle" | "loading" | "loaded" | "error" | "submitted";
@@ -31,11 +39,6 @@ const ContactForm = () => {
 	const { isDarkStore } = useThemeStore();
 	const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
-	/**
-	 * Progressive retry: if the Turnstile script hasn't loaded after 3 seconds,
-	 * bump the key to force a remount. Then continue polling every 6 seconds
-	 * until onLoad fires and turnstileLoaded flips to true, which clears timers.
-	 */
 	useEffect(() => {
 		if (turnstileLoaded) return;
 
@@ -55,8 +58,6 @@ const ContactForm = () => {
 		};
 	}, [turnstileLoaded]);
 
-	// Guard: if the site key is missing, Turnstile silently fails to render.
-	// This catches the case where the env var wasn't set during build or deploy.
 	if (!siteKey) {
 		if (typeof window !== "undefined") {
 			console.warn("ContactForm: NEXT_PUBLIC_TURNSTILE_SITE_KEY is not set. Turnstile will not render.");
@@ -64,7 +65,16 @@ const ContactForm = () => {
 		return null;
 	}
 
-	/** Handles form submission: validates Turnstile, sends email, stores data. */
+	/**
+	 * Handles form submission by validating the Turnstile token and
+	 * delegating to the `submitContact` server action.
+	 *
+	 * Guards against submission without a valid Turnstile token (bots
+	 * or expired challenges) by checking `turnstileStatus` before
+	 * calling the server action. On success the form is hidden and a
+	 * farewell message is shown; on failure the error is surfaced
+	 * via the `error` state so the user can retry.
+	 */
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
 
@@ -93,7 +103,6 @@ const ContactForm = () => {
 
 	return (
 		<>
-			{/* TODO: Add form input sanitation */}
 			<form
 				onSubmit={sendContactForm}
 				className={`mx-5 flex flex-col flex-nowrap items-center ${loading === "submitted" && "hidden"}`}>
@@ -210,8 +219,6 @@ const ContactForm = () => {
 				</div>
 
 				<section className="flex flex-col justify-center mx-auto mt-2.5">
-					{/* Always mount Turnstile so its script can load and fire onLoad;
-					    hide it with CSS until the skeleton can be swapped out. */}
 					<div className={turnstileLoaded ? "" : "hidden"}>
 						<Turnstile
 							key={`turnstile-${isDarkStore ? "dark" : "light"}-${turnstileKeyCounter}`}
@@ -264,7 +271,6 @@ const ContactForm = () => {
 						/>
 					</div>
 
-					{/* Skeleton shown while Turnstile script is loading */}
 					{!turnstileLoaded && <TurnstileSkeleton />}
 
 					{error && (

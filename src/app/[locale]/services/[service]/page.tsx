@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Suspense } from "react";
 import { Locale } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Cta from "@/ui/Components/CtA/Cta";
 import { TransitionLink } from "@/ui/Components/Sidenav/TransitionLink";
 
 interface Props {
@@ -48,7 +47,13 @@ const ALL_SLUGS = [
 	"seo-technicke-poradenstvi",
 ];
 
-/** Localized heading for the features/included section on detail pages. */
+/**
+ * Localized heading for the features/included section on service detail pages.
+ *
+ * Provides a hardcoded fallback for the "What's Included" heading in every
+ * supported locale, ensuring the features section label is always visible even
+ * when the main translation files haven't been updated for a new locale.
+ */
 const FEATURES_HEADING: Record<string, string> = {
 	en: "What's Included",
 	pt: "O Que Está Incluído",
@@ -208,9 +213,6 @@ const ServiceDetailPage = ({ params }: Props) => {
 
 			{/* CTA */}
 			<div className="text-center mb-10">
-				<Suspense>
-					<Cta />
-				</Suspense>
 			</div>
 		</article>
 	);

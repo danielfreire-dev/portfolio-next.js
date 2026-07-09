@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Sidenav from "@/ui/Components/Sidenav/Sidenav";
+import Cta from "@/ui/Components/CtA/Cta";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -39,41 +40,6 @@ export const metadata: Metadata = {
 		images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` }],
 	},
 };
-
-/* export async function generateMetadata({
-	params,
-	searchParams,
-}: Props): Promise<Metadata> {
-
-	const { locale } = await params;
-	const t = await getTranslations({
-		locale: locale,
-		namespace: "metadata",
-	});
-
-	return {
-		title: t("title.home"),
-		description: t("description.home"),
-		alternates: {
-			canonical: "https://daniel-freire.com",
-			languages: {
-				en: "https://daniel-freire.com/en",
-				pt: "https://daniel-freire.com/pt",
-			},
-		},
-		openGraph: {
-			type: "website",
-			title: t("opengraphImageAlt"),
-			description: t("description.home"),
-			url: "https://daniel-freire.com",
-			siteName: t("title.home"),
-			images: [
-				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
-			],
-			locale: locale,
-		},
-	};
-} */
 
 /**
  * Custom local font definitions.
@@ -151,16 +117,13 @@ export default async function RootLayout({
 	children: React.ReactNode;
 	params: Promise<{ locale: string }>;
 }) {
-	// Ensure that the incoming `locale` is valid
 	const { locale } = await params;
 	if (!hasLocale(routing.locales, locale)) {
 		notFound();
 	}
 
-	// Enable static rendering for this locale
 	setRequestLocale(locale);
 
-	// Get messages for the locale
 	const messages = await getMessages();
 
 	const themeScript = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");document.documentElement.classList.add("theme-ready")}catch(e){}})();`;
@@ -182,7 +145,10 @@ export default async function RootLayout({
 							<Sidenav />
 						</header>
 						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
-							<div id="main">{children}</div>
+							<div id="main">
+								{children}
+								<Cta />
+							</div>
 						</main>
 					</Providers>
 				</NextIntlClientProvider>

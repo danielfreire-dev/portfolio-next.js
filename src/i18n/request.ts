@@ -8,17 +8,20 @@ import { routing } from "./routing";
  * Resolves the active locale from the request, validates it against the
  * supported locales list, and loads the corresponding translation messages.
  * Falls back to the default locale if the requested locale is unsupported or
- * if message loading fails.
+ * if message loading fails. Wraps the entire resolution in a try/catch to
+ * guarantee a working fallback even when catastrophic failures occur (e.g.,
+ * missing message files during a deployment cutover).
+ *
+ * @todo Consider adding structured logging (e.g., Pino) for locale-resolution
+ *       failures so they surface in monitoring dashboards.
  */
 export default getRequestConfig(async ({ requestLocale }) => {
   try {
-    // Resolve the locale from the `[locale]` URL segment
     const requested = await requestLocale;
     const locale = hasLocale(routing.locales, requested)
       ? requested
       : routing.defaultLocale;
 
-    // Load translation messages with a fallback to the default locale
     let messages;
     try {
       messages = (await import(`@/messages/${locale}.json`)).default;
@@ -34,7 +37,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
     };
   } catch (error) {
     console.error("Error in getRequestConfig:", error);
-    // Ultimate fallback: return default locale and messages
     return {
       locale: routing.defaultLocale,
       messages: (await import(`@/messages/${routing.defaultLocale}.json`))

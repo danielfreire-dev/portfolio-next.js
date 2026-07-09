@@ -1,5 +1,4 @@
 import { Locale, useTranslations } from "next-intl";
-import Cta from "../../../ui/Components/CtA/Cta";
 import WebsiteCards from "../../../ui/Components/WebsiteCards";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
@@ -16,7 +15,6 @@ interface Props {
  * resolved locale from the route params.
  */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-	// Await the params Promise to get the actual locale value
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: locale,
@@ -61,8 +59,6 @@ const Portfolio = ({ params }: Props) => {
 			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}!</h2>
 
 			<WebsiteCards />
-
-			<Cta />
 		</>
 	);
 };
