@@ -40,41 +40,6 @@ export const metadata: Metadata = {
 	},
 };
 
-/* export async function generateMetadata({
-	params,
-	searchParams,
-}: Props): Promise<Metadata> {
-
-	const { locale } = await params;
-	const t = await getTranslations({
-		locale: locale,
-		namespace: "metadata",
-	});
-
-	return {
-		title: t("title.home"),
-		description: t("description.home"),
-		alternates: {
-			canonical: "https://daniel-freire.com",
-			languages: {
-				en: "https://daniel-freire.com/en",
-				pt: "https://daniel-freire.com/pt",
-			},
-		},
-		openGraph: {
-			type: "website",
-			title: t("opengraphImageAlt"),
-			description: t("description.home"),
-			url: "https://daniel-freire.com",
-			siteName: t("title.home"),
-			images: [
-				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
-			],
-			locale: locale,
-		},
-	};
-} */
-
 /**
  * Custom local font definitions.
  *
@@ -151,16 +116,13 @@ export default async function RootLayout({
 	children: React.ReactNode;
 	params: Promise<{ locale: string }>;
 }) {
-	// Ensure that the incoming `locale` is valid
 	const { locale } = await params;
 	if (!hasLocale(routing.locales, locale)) {
 		notFound();
 	}
 
-	// Enable static rendering for this locale
 	setRequestLocale(locale);
 
-	// Get messages for the locale
 	const messages = await getMessages();
 
 	const themeScript = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");document.documentElement.classList.add("theme-ready")}catch(e){}})();`;

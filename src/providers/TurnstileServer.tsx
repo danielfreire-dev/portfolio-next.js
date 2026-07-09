@@ -14,7 +14,6 @@ export async function POST(req: NextRequest) {
 	const validationResponse = await validateTurnstileToken({
 		token,
 		secretKey: process.env.TURNSTILE_SECRET_KEY!,
-		// Idempotency key prevents the same token from being reused
 		idempotencyKey: crypto.randomUUID(),
 		sandbox: process.env.NODE_ENV === "development",
 	});
@@ -23,6 +22,5 @@ export async function POST(req: NextRequest) {
 		return NextResponse.json({ message: "Invalid token" }, { status: 400 });
 	}
 
-	// Token is valid — proceed with the intended action (e.g. login)
 	return NextResponse.json({ message: "Login successful" });
 }

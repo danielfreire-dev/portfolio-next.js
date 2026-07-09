@@ -13,7 +13,16 @@ type ConsentPrefs = {
 
 const STORAGE_KEY = "cookie-consent";
 
-/** Attempt to read previously-saved consent from localStorage. */
+/**
+ * Reads previously-saved cookie consent preferences from localStorage.
+ *
+ * Prevents the consent banner from re-appearing on subsequent visits by
+ * hydrating the user's prior consent choices. Returns `null` when running
+ * server-side (SSR) or when the stored JSON is malformed, so the component
+ * treats the user as a first-time visitor.
+ *
+ * @returns The saved consent preferences or `null` if unavailable.
+ */
 function loadConsent(): { prefs: ConsentPrefs } | null {
 	if (typeof window === "undefined") return null;
 	try {
@@ -27,7 +36,15 @@ function loadConsent(): { prefs: ConsentPrefs } | null {
 	}
 }
 
-/** Persist consent preferences to localStorage. */
+/**
+ * Persists cookie consent preferences to localStorage.
+ *
+ * Saves the user's consent choices alongside a timestamp so the banner can
+ * stay hidden on future visits. Silently ignores storage failures (quota
+ * exceeded, private browsing restrictions) rather than blocking the UX.
+ *
+ * @param prefs - The consent preferences to persist.
+ */
 function saveConsent(prefs: ConsentPrefs) {
 	try {
 		localStorage.setItem(STORAGE_KEY, JSON.stringify({ prefs, timestamp: Date.now() }));
@@ -36,34 +53,33 @@ function saveConsent(prefs: ConsentPrefs) {
 	}
 }
 
-/** Grant analytics consent to Google Analytics via gtag. */
+/**
+ * Grants analytics consent by updating the Google Analytics gtag defaults.
+ *
+ * Called whenever the user accepts analytics cookies (via Accept All or
+ * the granular Manage modal). Updates the consent state from `denied` to
+ * `granted` so GA4 can begin tracking page views and events.
+ */
 function grantAnalytics() {
 	if (typeof window !== "undefined" && window.gtag) {
 		window.gtag("consent", "update", { analytics_storage: "granted" });
 	}
 }
 
-/* ------------------------------------------------------------------ */
-/*  Providers — main cookie-banner wrapper                             */
-/* ------------------------------------------------------------------ */
-
 /**
  * Root providers wrapper that replaces the `react-cookie-manager` library.
  *
  * Renders a fixed bottom cookie-consent banner with Accept All / Decline All /
- * Manage buttons.  The Manage button opens a modal with granular toggles for
+ * Manage buttons. The Manage button opens a modal with granular toggles for
  * Analytics, Social and Advertising cookies (Essential is always on).
  *
  * Consent is persisted to `localStorage` so the banner stays hidden once the
- * user has made a choice.  Granting analytics consent calls `window.gtag`
- * to update Google Analytics consent defaults.
+ * user has made a choice. Granting analytics consent calls `window.gtag` to
+ * update Google Analytics consent defaults. While hydrating from localStorage
+ * on first render, only children are rendered to avoid a banner flash.
  */
 export function Providers({ children }: { children: React.ReactNode }) {
 	const t = useTranslations("cookies");
-
-	// ------------------------------------------------------------------
-	//  State
-	// ------------------------------------------------------------------
 
 	const [showBanner, setShowBanner] = useState(false);
 	const [showManage, setShowManage] = useState(false);
@@ -73,10 +89,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		marketing: false,
 	});
 	const [hydrated, setHydrated] = useState(false);
-
-	// ------------------------------------------------------------------
-	//  Hydrate from localStorage on first client render
-	// ------------------------------------------------------------------
 
 	useEffect(() => {
 		const stored = loadConsent();
@@ -88,10 +100,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		}
 		setHydrated(true);
 	}, []);
-
-	// ------------------------------------------------------------------
-	//  Consent actions
-	// ------------------------------------------------------------------
 
 	const grantAll = useCallback(() => {
 		const prefs: ConsentPrefs = { analytics: true, social: true, marketing: true };
@@ -115,11 +123,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		if (consent.analytics) grantAnalytics();
 	}, [consent]);
 
-	// ------------------------------------------------------------------
-	//  Render
-	// ------------------------------------------------------------------
-
-	/* While hydrating, render children only — no banner flash. */
 	if (!hydrated) {
 		return <>{children}</>;
 	}

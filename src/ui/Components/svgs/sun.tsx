@@ -15,7 +15,6 @@ export function LineMdMoonFilledToSunnyFilledLoopTransition(props: SVGProps<SVGS
 			viewBox="0 0 24 24"
 			{...props}>
 			<title>{props.title ?? "Animated moon to sun transition icon"}</title>
-			{/* Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt */}
 			<g
 				fill="none"
 				stroke="#ff8000"

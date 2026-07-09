@@ -48,7 +48,13 @@ const ALL_SLUGS = [
 	"seo-technicke-poradenstvi",
 ];
 
-/** Localized heading for the features/included section on detail pages. */
+/**
+ * Localized heading for the features/included section on service detail pages.
+ *
+ * Provides a hardcoded fallback for the "What's Included" heading in every
+ * supported locale, ensuring the features section label is always visible even
+ * when the main translation files haven't been updated for a new locale.
+ */
 const FEATURES_HEADING: Record<string, string> = {
 	en: "What's Included",
 	pt: "O Que Está Incluído",

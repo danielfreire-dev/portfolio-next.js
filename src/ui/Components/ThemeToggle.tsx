@@ -32,16 +32,23 @@ function setStoredTheme(value: string): void {
  * Dark/light theme toggle component.
  *
  * Renders a hidden checkbox that controls the theme state via Zustand.
- * Persists the user's preference to localStorage and falls back to the
- * system `prefers-color-scheme` media query when no saved preference exists.
+ * On mount, reads the persisted preference from localStorage; if none
+ * exists, falls back to the system `prefers-color-scheme` media query
+ * and listens for OS-level changes so the theme stays in sync.
+ *
+ * When toggled, the component immediately writes the choice to three
+ * places to eliminate any flash of incorrect theme (FOUC):
+ *   1. Zustand store (in-memory, instant)
+ *   2. `document.documentElement.classList` (CSS selectors)
+ *   3. `localStorage` + a `theme` cookie (survives page reloads and
+ *      lets the blocking script in `layout.tsx` apply the correct
+ *      class before the first paint)
  */
 const ThemeToggle = () => {
 	const { isDarkStore, setValue } = useThemeStore();
 	const t = useTranslations("svgTitles");
 
-	// Initialise theme from localStorage or system preference on mount
 	useEffect(() => {
-		// Ensure transitions are enabled (the blocking script may have already set this)
 		document.documentElement.classList.add("theme-ready");
 
 		const savedTheme = getStoredTheme();
@@ -60,7 +67,6 @@ const ThemeToggle = () => {
 		}
 
 		const handleChange = (e: MediaQueryListEvent) => {
-			// Only react to system changes when no explicit user preference is saved
 			if (!getStoredTheme()) {
 				setValue(e.matches);
 			}
@@ -71,22 +77,25 @@ const ThemeToggle = () => {
 	}, []);
 
 	/**
-	 * Update the theme from the toggle input and persist the user's preference
-	 * to localStorage.
+	 * Updates the theme from the toggle input and persists the user's
+	 * preference across localStorage, a cookie, and the Zustand store.
 	 *
-	 * @param e - Change event from the theme toggle checkbox; checked = dark theme when `true`
+	 * Writing to all three sinks simultaneously ensures the theme is
+	 * applied instantly (CSS class toggle), survives page reloads
+	 * (cookie for SSR + localStorage for client hydration), and stays
+	 * consistent across concurrent tabs (localStorage is per-origin).
+	 *
+	 * @param e - Change event from the theme toggle checkbox; checked
+	 *            means dark theme is active.
 	 */
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const newTheme = e.target.checked;
 		setValue(newTheme);
 
-		// Sync the class on <html> so CSS selectors match immediately
 		document.documentElement.classList.toggle("dark", newTheme);
 
-		// Save preference to localStorage immediately
 		setStoredTheme(newTheme ? "dark" : "light");
 
-		// Set cookie so the server can render the correct theme on next request
 		document.cookie = `theme=${newTheme ? "dark" : "light"};path=/;max-age=31536000;SameSite=Lax`;
 	}
 

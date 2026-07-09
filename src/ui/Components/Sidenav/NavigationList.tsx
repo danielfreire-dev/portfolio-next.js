@@ -46,17 +46,40 @@ const NavigationList = ({
 	const nav = t.raw("links").map((data: NavLink) => {
 		const lang = pathname.split("/")[1];
 
+		/**
+		 * Normalises a URL path for reliable comparison.
+		 *
+		 * Decodes any percent-encoded characters, collapses repeated
+		 * slashes, and strips trailing slashes so paths that differ
+		 * only in encoding or formatting still match correctly.
+		 *
+		 * @param path - The raw path string.
+		 * @returns The normalised path.
+		 */
 		const normalizePath = (path: string) => {
 			const decoded = decodeURIComponent(path);
 			return decoded.replace(/\/+/g, "/").replace(/\/$/, "");
 		};
 
+		/**
+		 * Determines whether a navigation link matches the current URL.
+		 *
+		 * Performs locale-aware path comparison: prepends the current
+		 * locale segment to the link path and normalises both before
+		 * comparing. The home link (`/`) is treated as a special case
+		 * that matches the bare locale path (e.g., `/en`). Nested
+		 * routes match via `startsWith` so that `/services/slug` is
+		 * highlighted when `/services` is active.
+		 *
+		 * @param link        - The navigation link path from the config.
+		 * @param currentPath - The current browser URL pathname.
+		 * @returns `true` if the link should be marked active.
+		 */
 		const isActive = (link: string, currentPath: string) => {
 			const normalizedLink = normalizePath(link);
 			const normalizedPath = normalizePath(currentPath);
 			const localizedLink = normalizePath(`/${lang}${link}`);
 
-			// Special case for home link
 			if (link === "/") {
 				return normalizedPath === `/${lang}` || normalizedPath === "";
 			}
@@ -68,7 +91,6 @@ const NavigationList = ({
 			);
 		};
 
-		// Usage in your component:
 		const isActiveClass = isActive(data.link, pathname) ? " active" : "";
 
 		return (
