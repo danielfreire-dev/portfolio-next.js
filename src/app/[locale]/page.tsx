@@ -1,5 +1,4 @@
 import Techstack from "@/ui/Components/Techstack/Techstack";
-import Cta from "@/ui/Components/CtA/Cta";
 
 import { Locale } from "next-intl";
 import { Suspense, use } from "react";
@@ -73,8 +72,6 @@ export default function HomePage({ params }: Props) {
 			<Suspense>
 				<Techstack />
 			</Suspense>
-
-			<Cta />
 		</>
 	);
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Sidenav from "@/ui/Components/Sidenav/Sidenav";
+import Cta from "@/ui/Components/CtA/Cta";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -144,7 +145,10 @@ export default async function RootLayout({
 							<Sidenav />
 						</header>
 						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
-							<div id="main">{children}</div>
+							<div id="main">
+								{children}
+								<Cta />
+							</div>
 						</main>
 					</Providers>
 				</NextIntlClientProvider>

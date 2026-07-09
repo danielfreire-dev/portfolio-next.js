@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Cta from "./CtA/Cta";
 import { Suspense } from "react";
 
 import { useTranslations } from "next-intl";
@@ -43,9 +42,6 @@ const ClientSideAbout = () => {
 					<p className="mb-2">{t("paragraph7")}</p>
 				</div>
 			</div>
-			<Suspense fallback={<div>Loading...</div>}>
-				<Cta />
-			</Suspense>
 		</>
 	);
 };

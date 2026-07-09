@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { use } from "react";
 import { Locale } from "next-intl";
 import Services from "@/ui/Components/Services";
-import Cta from "@/ui/Components/CtA/Cta";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -54,12 +53,7 @@ const ServicesPage = ({ params }: Props) => {
 	const { locale } = use(params);
 	setRequestLocale(locale);
 
-	return (
-		<>
-			<Services />
-			<Cta />
-		</>
-	);
+	return <Services />;
 };
 
 export default ServicesPage;
