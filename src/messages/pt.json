@@ -8,7 +8,8 @@
 		"paragraph5": "Aqui está onde muitos programadors com talento erram: constroem para o dispositivo. Constroem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
 		"paragraph6": "Seja uma aplicação web com IA, um front-end elegante, um admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
 		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
-		"title1": "Construir para o Humano por Trás do Ecrã"
+		"title1": "Construir para o Humano por Trás do Ecrã",
+		"imageAlt": "oil painting of Daniel"
 	},
 	"carousel": [
 		{
@@ -100,7 +101,9 @@
 		"privacyPolicyUrlAriaLabel": "Política de Privacidade",
 		"privacyPolicyUrlTitle": "Política de Privacidade",
 		"required": "necessário",
-		"title": "entre em contacto"
+		"title": "entre em contacto",
+		"formAriaLabel": "Contact form",
+		"requiredIndicator": "required"
 	},
 	"cookies": {
 		"buttonText": "Aceitar Tudo",
@@ -183,12 +186,16 @@
 	"icons": {
 		"leftarrow": {
 			"alt": "seta para a esquerda",
-			"src": "/images/icons/chevron-left.svg"
+			"src": "/images/icons/chevron-left.svg",
+			"label": "Previous slide"
 		},
 		"rightarrow": {
 			"alt": "seta para a direita",
-			"src": "/images/icons/chevron-right.svg"
-		}
+			"src": "/images/icons/chevron-right.svg",
+			"label": "Next slide"
+		},
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides"
 	},
 	"localeSwitcher": {
 		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
@@ -221,7 +228,10 @@
 	},
 	"portfolio": {
 		"all": "Todos",
-		"cta": ["confira", "veja o projeto ao vivo →"],
+		"cta": [
+			"confira",
+			"veja o projeto ao vivo →"
+		],
 		"pageTitle": "portfólio",
 		"projects": [
 			{
@@ -240,7 +250,6 @@
 				"summary": "Translation app with AI.",
 				"title": "pollyGlot"
 			},
-
 			{
 				"demo": "Demo",
 				"github": "",
@@ -285,7 +294,8 @@
 				"title": "insurbia"
 			}
 		],
-		"websites-title": "Websites"
+		"websites-title": "Websites",
+		"opensInNewTab": "opens in new tab"
 	},
 	"privacyPolicy": {
 		"contactEmail": "rgpd@daniel-freire.com",
@@ -304,7 +314,12 @@
 		"paragraph10": "Podemos atualizar esta política de privacidade periodicamente. Notificá-lo-emos de quaisquer alterações através da publicação da nova política de privacidade nesta página.",
 		"paragraph11": "Se tiver alguma questão sobre esta política de privacidade, por favor contacte-nos através de",
 		"paragraph2": "Recolhemos informações pessoais que nos fornece voluntariamente quando preenche um formulário no nosso website. As informações pessoais que recolhemos incluem:",
-		"paragraph2li": ["Primeiro nome", "Último nome", "Endereço de email", "Número de telefone"],
+		"paragraph2li": [
+			"Primeiro nome",
+			"Último nome",
+			"Endereço de email",
+			"Número de telefone"
+		],
 		"paragraph3": "As informações recolhidas serão utilizadas para o contactar no futuro. Utilizaremos os seus dados pessoais apenas para esta finalidade específica.",
 		"paragraph4": "Tratamos os seus dados pessoais com base no seu consentimento, que nos concede ao preencher o formulário no nosso website.",
 		"paragraph5": "Não partilhamos os seus dados pessoais com terceiros, exceto se exigido por lei.",
@@ -405,18 +420,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "GitHub de Daniel Freire",
-					"ariaLAbel": "GitHub de Daniel Freire",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
-					"title": "GitHub de Daniel Freire"
+					"title": "GitHub de Daniel Freire",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "LinkedIn de Daniel Freire",
-					"ariaLAbel": "LinkedIn de Daniel Freire",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "LinkedIn de Daniel Freire"
+					"title": "LinkedIn de Daniel Freire",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab"
 				}
 			}
 		},
@@ -637,6 +652,7 @@
 		"menuToClose": "Ícone de transição menu-para-fechar",
 		"moonToSun": "Ícone animado de transição lua-sol",
 		"nextjsTsx": "Logótipo do framework Next.js",
-		"sunToMoon": "Ícone animado de transição sol-lua"
+		"sunToMoon": "Ícone animado de transição sol-lua",
+		"opensInNewTab": "opens in new tab"
 	}
 }

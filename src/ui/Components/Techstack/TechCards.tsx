@@ -44,7 +44,8 @@ const TechCards = ({ tech }: TechCardsProps) => {
 					href={data.link}
 					className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
 					target="_blank"
-					rel="noopener noreferrer">
+					rel="noopener noreferrer"
+					aria-label={`${data.name} - ${t("opensInNewTab")}`}>
 					<SvgComponent
 						alt={`${data.name} logo`}
 						title={t(data.svgr as never) ?? undefined}

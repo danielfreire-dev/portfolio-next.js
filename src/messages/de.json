@@ -8,7 +8,8 @@
 		"paragraph5": "Hier liegt der Fehler, den viele talentierte Entwickler machen: Sie bauen für das Gerät. Sie bauen für die Spezifikation. Aber sie vergessen, für den Menschen auf der anderen Seite und für das Geschäftsziel zu bauen, das das Projekt überhaupt lohnenswert macht. Meine Erfahrung erlaubt es mir, an dieser Schnittstelle zu sitzen. Ich kann ein Geschäftsbedürfnis in eine technische Anforderung übersetzen, nicht als abstraktes Konzept, sondern als gelebte Erfahrung. Ich war die Person, die nach den Daten fragt, und jetzt bin die Person, die die Systeme baut, die sie liefern.",
 		"paragraph6": "Egal ob eine KI-gestützte Webanwendung, ein elegantes Frontend, ein Django-Admin oder eine Full-Stack-Node.js-Anwendung – die Frage, mit der ich immer beginne, lautet: \"Was lösen wir eigentlich?\" Die Technologie ist ein Mittel zum Zweck. Die wahre Kunst liegt darin, das richtige Werkzeug für die Aufgabe zu wählen und es mit der Weisheit einzusetzen, zu wissen, was diese Aufgabe wirklich ist.",
 		"paragraph7": "Ich baue Dinge nicht nur richtig. Ich baue die richtigen Dinge.",
-		"title1": "Bauen für den Menschen hinter dem Bildschirm"
+		"title1": "Bauen für den Menschen hinter dem Bildschirm",
+		"imageAlt": "oil painting of Daniel"
 	},
 	"carousel": [
 		{
@@ -100,7 +101,9 @@
 		"privacyPolicyUrlAriaLabel": "Datenschutzerklärung",
 		"privacyPolicyUrlTitle": "Datenschutzerklärung",
 		"required": "erforderlich",
-		"title": "Kontakt aufnehmen"
+		"title": "Kontakt aufnehmen",
+		"formAriaLabel": "Contact form",
+		"requiredIndicator": "required"
 	},
 	"cookies": {
 		"buttonText": "Alle akzeptieren",
@@ -183,12 +186,16 @@
 	"icons": {
 		"leftarrow": {
 			"alt": "Pfeil links",
-			"src": "/images/icons/chevron-left.svg"
+			"src": "/images/icons/chevron-left.svg",
+			"label": "Previous slide"
 		},
 		"rightarrow": {
 			"alt": "Pfeil rechts",
-			"src": "/images/icons/chevron-right.svg"
-		}
+			"src": "/images/icons/chevron-right.svg",
+			"label": "Next slide"
+		},
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides"
 	},
 	"localeSwitcher": {
 		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
@@ -221,7 +228,10 @@
 	},
 	"portfolio": {
 		"all": "Alle",
-		"cta": ["ansehen", "zum Live-Projekt →"],
+		"cta": [
+			"ansehen",
+			"zum Live-Projekt →"
+		],
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -238,7 +248,6 @@
 				"summary": "Translation app with AI.",
 				"title": "pollyGlot"
 			},
-
 			{
 				"github": "",
 				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
@@ -278,7 +287,8 @@
 				"title": "insurbia"
 			}
 		],
-		"websites-title": "Websites"
+		"websites-title": "Websites",
+		"opensInNewTab": "opens in new tab"
 	},
 	"privacyPolicy": {
 		"contactEmail": "gdpr@daniel-freire.com",
@@ -297,7 +307,12 @@
 		"paragraph10": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über etwaige Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.",
 		"paragraph11": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter",
 		"paragraph2": "Wir sammeln persönliche Informationen, die Sie uns freiwillig zur Verfügung stellen, wenn Sie ein Formular auf unserer Website ausfüllen. Die von uns gesammelten persönlichen Informationen umfassen:",
-		"paragraph2li": ["Vorname", "Nachname", "E-Mail-Adresse", "Telefonnummer"],
+		"paragraph2li": [
+			"Vorname",
+			"Nachname",
+			"E-Mail-Adresse",
+			"Telefonnummer"
+		],
 		"paragraph3": "Die von uns gesammelten Informationen werden verwendet, um Sie in Zukunft zu kontaktieren. Wir werden Ihre personenbezogenen Daten nur für diesen spezifischen Zweck verwenden.",
 		"paragraph4": "Wir verarbeiten Ihre personenbezogenen Daten auf der Grundlage Ihrer Einwilligung, die Sie durch das Ausfüllen des Formulars auf unserer Website erteilen.",
 		"paragraph5": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.",
@@ -398,18 +413,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Daniel Freires GitHub",
-					"ariaLAbel": "Daniel Freires GitHub",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
-					"title": "Daniel Freires GitHub"
+					"title": "Daniel Freires GitHub",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "Daniel Freires LinkedIn",
-					"ariaLAbel": "Daniel Freires LinkedIn",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "Daniel Freires LinkedIn"
+					"title": "Daniel Freires LinkedIn",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab"
 				}
 			}
 		},
@@ -630,6 +645,7 @@
 		"menuToClose": "Menü-zu-Schließen-Übergangssymbol",
 		"moonToSun": "Animiertes Mond-zu-Sonne-Übergangssymbol",
 		"nextjsTsx": "Next.js Framework-Schriftzug",
-		"sunToMoon": "Animiertes Sonne-zu-Mond-Übergangssymbol"
+		"sunToMoon": "Animiertes Sonne-zu-Mond-Übergangssymbol",
+		"opensInNewTab": "opens in new tab"
 	}
 }

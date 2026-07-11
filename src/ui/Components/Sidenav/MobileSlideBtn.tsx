@@ -38,7 +38,6 @@ const MobileSlideBtn = ({
 				className="hidden appearance-none"
 				onChange={toggleSidenav}
 				checked={isOpen}
-				aria-label={isOpen ? "Close menu" : "Open menu"}
 			/>
 			<label
 				htmlFor="slide-menu"
