@@ -4,9 +4,9 @@
 		"paragraph1": "Od dwóch lat tworzę rzeczy w sieci. Ale moja perspektywa na to, co budować i dlaczego, ukształtowała się na długo przed napisaniem pierwszej linijki kodu.",
 		"paragraph2": "Wszedłem do tej branży z marketingu, ale nie z tej strony, którą możesz sobie wyobrażać. Mój świat był mniej o kampaniach, a więcej o wzorcach: analizowaniu danych rynkowych, rozszyfrowywaniu zachowań użytkowników i zrozumieniu precyzyjnych mechanizmów, w jaki sposób ludzie znajdują i korzystają z produktu online. SEO i SEM, w swojej istocie, to po prostu zastosowana psychologia i rozwiązywanie problemów. Uczysz się słuchać, co dane krzyczą, a co ważniejsze, co szepczą.",
 		"paragraph3": "To jest tło, które wniosę do każdego projektu developerskiego. Większość developerów potrafi pisać elegancki kod; moim skupieniem jest budowanie eleganckich rozwiązań. Jest tu kluczowa różnica.",
-		"paragraph4": "Kiedy projektuję aplikację w React czy Next.js, nie myślę tylko o zarządzaniu stanem czy strukturze komponentów. Myślę o podróży użytkownika, która go tu przywiodła. Rozważam semantyczny znacznik, który nadaje naszej treści znaczenie wykraczające poza ekran. Buduję z wrodzonym zrozumieniem wydajności, ponieważ wiem z pierwszej ręki, że opóźnienie nawet o pół sekundy to decyzja użytkownika o opuszczeniu strony.",
+		"paragraph4": "Kiedy projektuję aplikację w React czy Next.js, nie myślę tylko o zarządzaniu stanem czy strukturze komponentów. Myślę o podróży użytkownika, która go tu przywiodła. Rozważam semantyczny znacznik, który nadaje naszej treści znaczenie wykraczające poza ekran. Buduję wysokowydajne aplikacje webowe z wrodzonym zrozumieniem wydajności, ponieważ wiem z pierwszej ręki, że opóźnienie nawet o pół sekundy to decyzja użytkownika o opuszczeniu strony.",
 		"paragraph5": "Oto, w czym błądzi wielu utalentowanych developerów: budują dla urządzenia. Budują zgodnie ze specyfikacją. Ale zapominają budować dla człowieka po drugiej stronie i dla celu biznesowego, który czyni projekt wartym zachodu. Moje doświadczenie pozwala mi funkcjonować na tym przecięciu. Potrafię przetłumaczyć potrzebę biznesową na wymaganie techniczne nie jako abstrakcyjny koncept, lecz jako przeżyte doświadczenie. Byłem osobą proszącą o dane, a teraz jestem osobą budującą systemy, które je dostarczają.",
-		"paragraph6": "Niezależnie od tego, czy to elegancki front-end, solidny panel admina Django czy pełna aplikacja full-stack w Node.js, pytanie, od którego zawsze zaczynam, brzmi: \"Co tak naprawdę rozwiązujemy?\" Technologia jest środkiem do celu. Prawdziwe kunszt polega na wyborze właściwego narzędzia do pracy i używaniu go z mądrością płynącą ze zrozumienia, na czym ta praca tak naprawdę polega.",
+		"paragraph6": "Niezależnie od tego, czy to aplikacja webowa z AI, elegancki front-end, solidny panel admina Django czy pełna aplikacja full-stack w Node.js, pytanie, od którego zawsze zaczynam, brzmi: \"Co tak naprawdę rozwiązujemy?\" Technologia jest środkiem do celu. Prawdziwe kunszt polega na wyborze właściwego narzędzia do pracy i używaniu go z mądrością płynącą ze zrozumienia, na czym ta praca tak naprawdę polega.",
 		"paragraph7": "Nie tylko buduję rzeczy poprawnie. Buduję właściwe rzeczy.",
 		"title1": "Budowanie dla Człowieka Za Ekranem"
 	},
@@ -196,13 +196,13 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Dowiedz się więcej o Danielu",
+			"about": "Poznaj Daniela Freire — web developera specjalizującego się w aplikacjach z AI, integracji LLM i wysokowydajnych rozwiązaniach webowych.",
 			"contact": "To jest najlepsze miejsce, aby skontaktować się z Danielem",
 			"home": "Wprowadzenie Daniela",
 			"impressum": "",
 			"portfolio": "To tutaj Daniel będzie publikował swoje ulubione prace",
 			"privacyPolicy": "Dowiedz się więcej o swoich prawach.",
-			"services": "Poznaj usługi Daniela Freire w zakresie tworzenia stron, AI, oprogramowania dedykowanego i doradztwa technicznego."
+			"services": "Aplikacje webowe z AI, integracja LLM i wysokowydajne tworzenie stron internetowych przez Daniela Freire. Oprogramowanie dedykowane, agenci AI i doradztwo techniczne z zwinnym dostarczaniem produktów."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -328,26 +328,31 @@
 			"slug": "dedykowane-oprogramowanie-biznesowe",
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"text": "Aplikacje internetowe szyte na miarę — systemy CRM, pulpity nawigacyjne i narzędzia wewnętrzne dopasowane do sposobu działania Twojej firmy.",
+			"text": "Aplikacje internetowe szyte na miarę — systemy CRM, pulpity nawigacyjne i narzędzia wewnętrzne zbudowane z modularnych komponentów i zwinnego dostarczania, dopasowane do sposobu działania Twojej firmy.",
 			"title": "Dedykowane Oprogramowanie Biznesowe",
-			"longDescription": "Każda firma ma unikalne procesy, przepływy pracy i wyzwania — a oprogramowanie, którego używasz, powinno to odzwierciedlać. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych, które dostosowują się do rzeczywistego sposobu działania Twojej firmy, zamiast zmuszać Twój zespół do dostosowywania się do gotowego oprogramowania.\n\nOd systemów CRM zaprojektowanych dla Twojego konkretnego cyklu sprzedaży po pulpity nawigacyjne pokazujące dokładnie te wskaźniki, których potrzebujesz — każdy projekt zaczyna się od dogłębnej analizy Twoich procesów biznesowych. Rezultatem jest narzędzie, którego Twój zespół będzie faktycznie chciał używać — ponieważ zostało zbudowane dla niego.\n\nKorzystając z technologii takich jak React, Next.js i PostgreSQL, buduję rozwiązania solidne, skalowalne i łatwe w utrzymaniu wraz z rozwojem Twojej firmy.",
+			"longDescription": "Każda firma ma unikalne procesy, przepływy pracy i wyzwania — a oprogramowanie, którego używasz, powinno to odzwierciedlać. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych, które dostosowują się do rzeczywistego sposobu działania Twojej firmy, zamiast zmuszać Twój zespół do dostosowywania się do gotowego oprogramowania. Dostarczam w metodyce zwinnej, koncentrując się na MVP i szybkich cyklach informacji zwrotnej, abyś widział wartość wcześnie i iterował na podstawie rzeczywistego użytkowania.\n\nOd systemów CRM zaprojektowanych dla Twojego konkretnego cyklu sprzedaży po pulpity nawigacyjne pokazujące dokładnie te wskaźniki, których potrzebujesz — każdy projekt zaczyna się od dogłębnej analizy Twoich procesów biznesowych. Rezultatem jest narzędzie, którego Twój zespół będzie faktycznie chciał używać — ponieważ zostało zbudowane dla niego.\n\nKorzystając z technologii takich jak React, Next.js i PostgreSQL — wdrażanych na AWS z architekturą cloud-native — buduję modularne, wielokrotnego użytku komponenty, które czynią Twoje rozwiązanie solidnym, skalowalnym i łatwym w utrzymaniu wraz z rozwojem Twojej firmy.",
 			"features": [
 				"Systemy CRM dostosowane do Twojego procesu sprzedaży",
 				"Niestandardowe pulpity analityczne i raporty",
 				"Portale wewnętrzne i narzędzia do zarządzania zespołem",
 				"Automatyzacja przepływów pracy i procesów ręcznych",
 				"Integracja z istniejącymi API i usługami zewnętrznymi",
-				"Panele administracyjne ze szczegółową kontrolą dostępu"
+				"Panele administracyjne ze szczegółową kontrolą dostępu",
+				"Rozwój MVP z szybkimi cyklami informacji zwrotnej",
+				"Architektura cloud-native wdrożona na AWS"
 			]
 		},
 		{
 			"slug": "wdrazanie-rozwiazan-ai",
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"text": "Integracja AI w Twoich procesach — chatboty, inteligentna automatyzacja i funkcje oparte na danych.",
+			"text": "Aplikacje webowe z AI i integracja LLM — chatboty, agenci AI i doświadczenia użytkownika oparte na AI, które transformują Twoje procesy.",
 			"title": "Wdrażanie Rozwiązań AI",
-			"longDescription": "Sztuczna inteligencja przestała być futurystyczną obietnicą, a stała się realną przewagą konkurencyjną — gdy jest stosowana z celem. Pomagam firmom integrować AI w ich istniejących przepływach pracy w praktyczny i mierzalny sposób, bez niepotrzebnej złożoności.\n\nNiezależnie od tego, czy jest to inteligentny chatbot redukujący liczbę zgłoszeń wsparcia o 40%, silnik rekomendacji zwiększający średnią wartość zamówienia, czy potoki przetwarzania dokumentów eliminujące godziny ręcznej pracy — uwaga zawsze skupia się na wyniku biznesowym, a nie technologii dla samej technologii.\n\nPracuję z API takimi jak OpenAI, wektorowymi bazami danych do wyszukiwania semantycznego i architekturami RAG (Retrieval-Augmented Generation), aby tworzyć rozwiązania AI rozumiejące unikalny kontekst Twojego biznesu.",
+			"longDescription": "Sztuczna inteligencja przestała być futurystyczną obietnicą, a stała się realną przewagą konkurencyjną — gdy jest stosowana z celem. Buduję aplikacje webowe z AI, które integrują Wielkie Modele Językowe (LLM) w istniejących przepływach pracy w praktyczny i mierzalny sposób, bez niepotrzebnej złożoności.\n\nNiezależnie od tego, czy jest to inteligentny chatbot redukujący liczbę zgłoszeń wsparcia o 40%, silnik rekomendacji zwiększający średnią wartość zamówienia, czy orkiestracja agentów AI automatyzująca złożone, wieloetapowe procesy biznesowe — uwaga zawsze skupia się na wyniku biznesowym, a nie technologii dla samej technologii. Każde rozwiązanie jest projektowane z myślą o doświadczeniu użytkownika opartym na AI, które wydaje się naturalne i intuicyjne dla Twojego zespołu i klientów.\n\nPracuję z API takimi jak OpenAI, open-source'owymi LLM-ami, wektorowymi bazami danych do wyszukiwania semantycznego i architekturami RAG (Retrieval-Augmented Generation), aby tworzyć rozwiązania AI rozumiejące unikalny kontekst Twojego biznesu.",
 			"features": [
+				"Rozwój aplikacji webowych z AI",
+				"Integracja LLM z OpenAI i modelami open-source",
+				"Orkiestracja agentów AI do złożonych procesów biznesowych",
 				"Inteligentne chatboty do obsługi klienta i sprzedaży",
 				"Automatyczne przetwarzanie i klasyfikacja dokumentów",
 				"Systemy wyszukiwania semantycznego i odkrywania wiedzy",
@@ -360,9 +365,9 @@
 			"slug": "tworzenie-stron-internetowych",
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"text": "Szybkie, responsywne strony i aplikacje internetowe, które ładują się natychmiastowo, działają na każdym urządzeniu i zamieniają odwiedzających w klientów.",
+			"text": "Wysokowydajne aplikacje webowe — szybkie, responsywne strony z modularnymi komponentami, które ładują się natychmiastowo, działają na każdym urządzeniu i zamieniają odwiedzających w klientów.",
 			"title": "Tworzenie Stron Internetowych",
-			"longDescription": "Strona internetowa to nie tylko cyfrowa wizytówka — to Twój najważniejszy zasób marketingowy. Buduję nowoczesne strony i aplikacje internetowe, które ładują się natychmiastowo, działają na każdym urządzeniu i naturalnie prowadzą odwiedzających do działania, które chcesz, aby podjęli.\n\nKażdy projekt jest budowany z wydajnością jako priorytetem — optymalizowany pod kątem Core Web Vitals od pierwszej linii kodu. Oznacza to, że Twoja strona nie tylko będzie świetnie wyglądać — będzie faworyzowana przez Google w wynikach wyszukiwania i zapewni płynne doświadczenie użytkownikom.\n\nOd wysokokonwertujących stron docelowych po pełnofunkcyjne aplikacje internetowe z uwierzytelnianiem, płatnościami i pulpitami nawigacyjnymi — podchodzę do każdego projektu jak do własnego, ze skrupulatną uwagą na szczegóły i absolutnym skupieniem na wydajności.",
+			"longDescription": "Strona internetowa to nie tylko cyfrowa wizytówka — to Twój najważniejszy zasób marketingowy. Buduję wysokowydajne aplikacje webowe, które ładują się natychmiastowo, działają na każdym urządzeniu i naturalnie prowadzą odwiedzających do działania, które chcesz, aby podjęli. Używając modularnych komponentów i czystej logiki frontendowej, każdy projekt jest architektonicznie zaprojektowany do łatwego utrzymania od pierwszego dnia.\n\nKażdy projekt jest budowany z wydajnością jako priorytetem — optymalizowany pod kątem Core Web Vitals od pierwszej linii kodu. Oznacza to, że Twoja strona nie tylko będzie świetnie wyglądać — będzie faworyzowana przez Google w wynikach wyszukiwania i zapewni płynne doświadczenie użytkownikom. Stosuję zwinne praktyki dostarczania produktów, zaczynając od MVP, aby uzyskać szybką informację zwrotną i iterując na podstawie rzeczywistych danych użytkowników.\n\nOd wysokokonwertujących stron docelowych po pełnofunkcyjne aplikacje internetowe z uwierzytelnianiem, płatnościami i pulpitami nawigacyjnymi — wdrażane na AWS ze skalowalną architekturą chmurową — podchodzę do każdego projektu jak do własnego, ze skrupulatną uwagą na szczegóły i absolutnym skupieniem na wydajności.",
 			"features": [
 				"Strony firmowe i wysokokonwertujące strony docelowe",
 				"Progresywne aplikacje internetowe (PWA) z obsługą offline",
@@ -370,16 +375,19 @@
 				"Migracja i modernizacja starszych stron internetowych",
 				"Optymalizacja Core Web Vitals i SEO technicznego",
 				"Responsywny design testowany na wszystkich urządzeniach",
-				"Systemy uwierzytelniania, płatności i portale klienta"
+				"Systemy uwierzytelniania, płatności i portale klienta",
+				"Szybkie tworzenie MVP do walidacji rynkowej",
+				"Wdrażanie w chmurze AWS ze skalowalną architekturą",
+				"Modularne, wielokrotnego użytku biblioteki komponentów do łatwej w utrzymaniu logiki frontendu"
 			]
 		},
 		{
 			"slug": "seo-doradztwo-techniczne",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"text": "Audyty oparte na danych, optymalizacja wydajności i strategia, które pomogą Twojej firmie zostać znalezioną.",
+			"text": "Audyty oparte na danych, wysokowydajna optymalizacja i strategia, które pomogą Twojej firmie zostać znalezioną i konwertować.",
 			"title": "SEO i Doradztwo Techniczne",
-			"longDescription": "Posiadanie świetnej strony internetowej to tylko połowa równania — druga połowa to upewnienie się, że znajdują ją właściwi ludzie. Moje doświadczenie w marketingu cyfrowym, połączone z głęboką wiedzą techniczną, pozwala mi zaoferować unikalną perspektywę wykraczającą poza konwencjonalne audyty SEO.\n\nKażdy audyt zaczyna się od danych: analizuję architekturę techniczną Twojej strony, sygnały doświadczenia użytkownika (Core Web Vitals), strukturę treści i pozycjonowanie konkurencyjne. Rezultatem jest priorytetyzowany plan działania, który łączy każde zalecenie techniczne z konkretnym wpływem biznesowym.\n\nNie sprzedaję magicznych formuł SEO. Oferuję rygorystyczną analizę, przejrzyste rekomendacje i wdrożenia respektujące wytyczne wyszukiwarek przy jednoczesnej maksymalizacji Twojej widoczności organicznej.",
+			"longDescription": "Posiadanie świetnej strony internetowej to tylko połowa równania — druga połowa to upewnienie się, że znajdują ją właściwi ludzie. Moje doświadczenie w marketingu cyfrowym, połączone z głęboką wiedzą techniczną, pozwala mi zaoferować unikalną perspektywę wykraczającą poza konwencjonalne audyty SEO.\n\nKażdy audyt zaczyna się od danych: analizuję architekturę techniczną Twojej strony, sygnały doświadczenia użytkownika (Core Web Vitals), strukturę treści i pozycjonowanie konkurencyjne. Dla wysokowydajnych aplikacji webowych zapewniam, że każda milisekunda czasu ładowania jest uwzględniona, ponieważ prędkość bezpośrednio wpływa zarówno na pozycje, jak i konwersje. Rezultatem jest priorytetyzowany plan działania, który łączy każde zalecenie techniczne z konkretnym wpływem biznesowym.\n\nNie sprzedaję magicznych formuł SEO. Oferuję rygorystyczną analizę, przejrzyste rekomendacje i wdrożenia respektujące wytyczne wyszukiwarek przy jednoczesnej maksymalizacji Twojej widoczności organicznej.",
 			"features": [
 				"Pełny audyt technicznego SEO (indeksowanie, architektura)",
 				"Optymalizacja Core Web Vitals i szybkości ładowania",

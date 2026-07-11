@@ -4,9 +4,9 @@
 		"paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspetiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
 		"paragraph2": "Entrei neste campo vindo do marketing, embora não da vertente que possas imaginar. O meu mundo era menos sobre campanhas e mais sobre padrões: analisar dados de mercado, decifrar o comportamento dos utilizadores e compreender os mecanismos precisos de como as pessoas encontram e usam um produto online. SEO e SEM, no seu cerne, são apenas psicologia aplicada e resolução de problemas. Aprende-se a ouvir o que os dados gritam, e, mais importante, o que sussurram.",
 		"paragraph3": "É esse o background que trago para cada projeto de desenvolvimento. A maioria dos desenvolvedores consegue escrever código elegante; o meu foco está em construir soluções elegantes. Há uma diferença crucial.",
-		"paragraph4": "Quando arquiteto uma aplicação com React ou Next.js, não estou apenas a pensar em gestão de estado ou estrutura de componentes. Estou a pensar na jornada do utilizador que o trouxe até ali. Estou a considerar a marcação semântica que dá significado ao nosso conteúdo para além do ecrã. Construo com uma compreensão inata do desempenho, porque sei, em primeira mão, que um atraso de apenas meio segundo é uma decisão que o utilizador toma para sair.",
+		"paragraph4": "Quando arquiteto uma aplicação com React ou Next.js, não estou apenas a pensar em gestão de estado ou estrutura de componentes. Estou a pensar na jornada do utilizador que o trouxe até ali. Estou a considerar a marcação semântica que dá significado ao nosso conteúdo para além do ecrã. Construo aplicações web de alto desempenho com uma compreensão inata do desempenho, porque sei, em primeira mão, que um atraso de apenas meio segundo é uma decisão que o utilizador toma para sair.",
 		"paragraph5": "Aqui está onde muitos programadors com talento erram: constroem para o dispositivo. Constroem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
-		"paragraph6": "Seja um front-end elegante, um robusto admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
+		"paragraph6": "Seja uma aplicação web com IA, um front-end elegante, um admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
 		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
 		"title1": "Construir para o Humano por Trás do Ecrã"
 	},
@@ -196,13 +196,13 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Sabe mais sobre o Daniel",
+			"about": "Conhece o Daniel Freire — um programador web especializado em aplicações com IA, integração de LLMs e soluções web de alto desempenho.",
 			"contact": "Este é o melhor local para contactares o Daniel",
 			"home": "Introdução do Daniel",
 			"impressum": "",
 			"portfolio": "Este é o local onde o Daniel publicará o seu trabalho favorito",
 			"privacyPolicy": "Fica a saber mais sobre os teus direitos.",
-			"services": "Conhece os serviços de desenvolvimento web, IA, software personalizado e consultoria técnica de Daniel Freire."
+			"services": "Aplicações web com IA, integração de LLMs e desenvolvimento web de alto desempenho por Daniel Freire. Software personalizado, agentes de IA e consultoria técnica com entrega ágil."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -328,26 +328,31 @@
 			"slug": "software-personalizado-empresarial",
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"text": "Aplicações web à medida — CRMs, dashboards e ferramentas internas que se adaptam à forma como o seu negócio realmente funciona.",
+			"text": "Aplicações web à medida — CRMs, dashboards e ferramentas internas construídas com componentes modulares e entrega ágil, adaptando-se à forma como o seu negócio realmente funciona.",
 			"title": "Software Personalizado Empresarial",
-			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos — e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar — porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL, crio soluções que são simultaneamente robustas, escaláveis e fáceis de manter à medida que o seu negócio cresce.",
+			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos — e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico. Entrego com métodos ágeis, focando-me em MVP e ciclos de feedback rápido para que veja valor desde cedo e itere com base na utilização real.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar — porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL — implementadas na AWS com arquitetura cloud-native — construo componentes modulares e reutilizáveis que tornam a sua solução robusta, escalável e fácil de manter à medida que o seu negócio cresce.",
 			"features": [
 				"Sistemas CRM adaptados ao seu pipeline de vendas",
 				"Dashboards analíticos e relatórios personalizados",
 				"Portais internos e ferramentas de gestão de equipas",
 				"Automatização de fluxos de trabalho e processos manuais",
 				"Integração com APIs e serviços externos existentes",
-				"Painéis de administração com controlo de acesso granular"
+				"Painéis de administração com controlo de acesso granular",
+				"Desenvolvimento de MVP com ciclos de feedback rápido",
+				"Arquitetura cloud-native implementada na AWS"
 			]
 		},
 		{
 			"slug": "implementacao-solucoes-ia",
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"text": "Integração de IA nos seus fluxos de trabalho — chatbots, automação inteligente e funcionalidades baseadas em dados.",
+			"text": "Aplicações web com IA e integração de LLMs — chatbots, agentes de IA e experiências de utilizador orientadas por IA que transformam os seus fluxos de trabalho.",
 			"title": "Implementação de Soluções de IA",
-			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real — quando aplicada com propósito. Ajudo empresas a integrar IA nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou pipelines de processamento de documentos que eliminam horas de trabalho manual — o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia.\n\nTrabalho com APIs como as da OpenAI, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
+			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real — quando aplicada com propósito. Construo aplicações web com IA que integram Modelos de Linguagem de Grande Escala (LLMs) nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou a orquestração de agentes de IA que automatiza processos de negócio complexos com vários passos — o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia. Cada solução é projetada com uma experiência de utilizador orientada por IA, que parece natural e intuitiva para a sua equipa e clientes.\n\nTrabalho com APIs como as da OpenAI, LLMs open-source, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
 			"features": [
+				"Desenvolvimento de aplicações web com IA",
+				"Integração de LLMs com OpenAI e modelos open-source",
+				"Orquestração de agentes de IA para fluxos de trabalho complexos",
 				"Chatbots inteligentes para apoio ao cliente e vendas",
 				"Automatização de processamento e classificação de documentos",
 				"Sistemas de pesquisa semântica e descoberta de conhecimento",
@@ -360,9 +365,9 @@
 			"slug": "desenvolvimento-web",
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"text": "Websites e aplicações web rápidas e responsivas que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
+			"text": "Aplicações web de alto desempenho — websites rápidos e responsivos com componentes modulares que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
 			"title": "Desenvolvimento Web",
-			"longDescription": "Um website não é apenas um cartão de visita digital — é o seu ativo de marketing mais importante. Construo websites e aplicações web modernas que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem.\n\nCada projeto é construído com o desempenho no centro — otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards — abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
+			"longDescription": "Um website não é apenas um cartão de visita digital — é o seu ativo de marketing mais importante. Construo aplicações web de alto desempenho que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem. Utilizando componentes modulares e lógica de frontend limpa, cada projeto é arquitetado para manutenibilidade desde o primeiro dia.\n\nCada projeto é construído com o desempenho no centro — otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores. Sigo práticas de entrega ágil de produto, começando com um MVP para obter feedback rápido e iterando com base em dados reais de utilização.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards — implementadas na AWS com arquitetura de cloud escalável — abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
 			"features": [
 				"Websites empresariais e landing pages de alta conversão",
 				"Aplicações web progressivas (PWA) com funcionamento offline",
@@ -370,16 +375,19 @@
 				"Migração e modernização de websites legados",
 				"Otimização para Core Web Vitals e SEO técnico",
 				"Design responsivo testado em todos os dispositivos",
-				"Sistemas de autenticação, pagamentos e áreas de cliente"
+				"Sistemas de autenticação, pagamentos e áreas de cliente",
+				"Desenvolvimento rápido de MVP para validação de mercado",
+				"Implementação na cloud AWS com arquitetura escalável",
+				"Bibliotecas de componentes modulares e reutilizáveis para lógica de frontend"
 			]
 		},
 		{
 			"slug": "seo-consultoria-tecnica",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"text": "Auditorias baseadas em dados, otimização de desempenho e estratégia para ajudar o seu negócio a ser encontrado.",
+			"text": "Auditorias baseadas em dados, otimização de alto desempenho e estratégia para ajudar o seu negócio a ser encontrado e a converter.",
 			"title": "SEO e Consultoria Técnica",
-			"longDescription": "Ter um website excelente é apenas metade da equação — a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
+			"longDescription": "Ter um website excelente é apenas metade da equação — a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. Para aplicações web de alto desempenho, garanto que cada milissegundo de tempo de carregamento é contabilizado, porque a velocidade impacta diretamente tanto os rankings como as conversões. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
 			"features": [
 				"Auditoria técnica de SEO completa (rastreabilidade, indexação, arquitetura)",
 				"Otimização de Core Web Vitals e velocidade de carregamento",
