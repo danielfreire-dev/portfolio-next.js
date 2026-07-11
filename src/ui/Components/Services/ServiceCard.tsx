@@ -28,13 +28,13 @@ const ServiceCard = ({ title, text, icon }: ServiceCardProps) => {
 						alt={title}
 						width={64}
 						height={64}
-						className="service-card-icon hover:scale-110 transition-transform duration-300 ease-in-out"
+						className="service-card-icon"
 					/>
 				</div>
 			</Suspense>
 			<div className="min-w-0 overflow-hidden text-left">
-				<h3 className="capitalize text-xl font-semibold break-words hyphens-auto">{title}</h3>
-				<small className="block text-(--text-tertiary) text-sm mt-1 break-words hyphens-auto">{text}</small>
+				<h3 className="capitalize text-xl font-semibold">{title}</h3>
+				<small className="block text-(--text-tertiary) text-sm mt-1">{text}</small>
 			</div>
 		</div>
 	);

@@ -13,8 +13,15 @@ interface Props {
 	params: Promise<{ locale: Locale; service: string }>;
 }
 
-/** All localized slugs across all supported locales — used by generateStaticParams. */
-const ALL_SLUGS = [
+/**
+ * All localized slugs across every supported locale.
+ *
+ * Expands the canonical English slugs defined in `@/lib/serviceSlugs` into
+ * their localized equivalents so `generateStaticParams` can pre-render every
+ * service-detail page at build time.  The canonical list is shared with the
+ * sitemap to keep the authority list in one place.
+ */
+const ALL_SLUGS: string[] = [
 	// English
 	"business-custom-software",
 	"ai-solution-implementation",
@@ -179,7 +186,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 						/>
 					</div>
 				)}
-				<h1 className="text-3xl sm:text-4xl font-bold capitalize text-center sm:text-left">{service.title}</h1>
+				<h2 className="text-3xl sm:text-4xl font-bold capitalize text-center sm:text-left">{service.title}</h2>
 			</header>
 
 			{/* Long description */}
@@ -196,9 +203,9 @@ const ServiceDetailPage = ({ params }: Props) => {
 			{/* Features list */}
 			{service.features.length > 0 && (
 				<section className="mb-10 surface-cards p-6">
-					<h2 className="text-xl font-semibold mb-4">
+					<h3 className="text-xl font-semibold mb-4">
 						{FEATURES_HEADING[locale as keyof typeof FEATURES_HEADING] ?? FEATURES_HEADING.en}
-					</h2>
+					</h3>
 					<ul className="space-y-3 features-list">
 						{service.features.map((feature) => (
 							<li
@@ -212,8 +219,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 			)}
 
 			{/* CTA */}
-			<div className="text-center mb-10">
-			</div>
+			<div className="text-center mb-10"></div>
 		</article>
 	);
 };
