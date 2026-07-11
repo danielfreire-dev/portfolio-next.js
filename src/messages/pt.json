@@ -77,6 +77,16 @@
 		"btn": "enviar mensagem",
 		"sending": "a enviar…",
 		"email": "email",
+		"errors": {
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
+			"sendFailed": "Failed to send message. Please try again.",
+			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"turnstileExpired": "Security check expired. Please verify again.",
+			"turnstileFailed": "Security check failed. Please try again.",
+			"turnstileNotVerified": "Please verify you are not a robot",
+			"turnstileRequired": "Complete the security check above to enable the submit button."
+		},
 		"farewell": {
 			"text": "Agradeço o voto de confiança. Deve esperar uma resposta durante os próximos dias úteis.",
 			"title": "Obrigado"
@@ -228,10 +238,7 @@
 	},
 	"portfolio": {
 		"all": "Todos",
-		"cta": [
-			"confira",
-			"veja o projeto ao vivo →"
-		],
+		"cta": ["confira", "veja o projeto ao vivo →"],
 		"pageTitle": "portfólio",
 		"projects": [
 			{
@@ -314,12 +321,7 @@
 		"paragraph10": "Podemos atualizar esta política de privacidade periodicamente. Notificá-lo-emos de quaisquer alterações através da publicação da nova política de privacidade nesta página.",
 		"paragraph11": "Se tiver alguma questão sobre esta política de privacidade, por favor contacte-nos através de",
 		"paragraph2": "Recolhemos informações pessoais que nos fornece voluntariamente quando preenche um formulário no nosso website. As informações pessoais que recolhemos incluem:",
-		"paragraph2li": [
-			"Primeiro nome",
-			"Último nome",
-			"Endereço de email",
-			"Número de telefone"
-		],
+		"paragraph2li": ["Primeiro nome", "Último nome", "Endereço de email", "Número de telefone"],
 		"paragraph3": "As informações recolhidas serão utilizadas para o contactar no futuro. Utilizaremos os seus dados pessoais apenas para esta finalidade específica.",
 		"paragraph4": "Tratamos os seus dados pessoais com base no seu consentimento, que nos concede ao preencher o formulário no nosso website.",
 		"paragraph5": "Não partilhamos os seus dados pessoais com terceiros, exceto se exigido por lei.",

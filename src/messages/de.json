@@ -77,6 +77,16 @@
 		"btn": "Nachricht senden",
 		"sending": "sende…",
 		"email": "E-Mail",
+		"errors": {
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
+			"sendFailed": "Failed to send message. Please try again.",
+			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"turnstileExpired": "Security check expired. Please verify again.",
+			"turnstileFailed": "Security check failed. Please try again.",
+			"turnstileNotVerified": "Please verify you are not a robot",
+			"turnstileRequired": "Complete the security check above to enable the submit button."
+		},
 		"farewell": {
 			"text": "Ich schätze Ihr Vertrauen. Sie können eine Antwort innerhalb der nächsten Werktage erwarten.",
 			"title": "danke"
@@ -228,10 +238,7 @@
 	},
 	"portfolio": {
 		"all": "Alle",
-		"cta": [
-			"ansehen",
-			"zum Live-Projekt →"
-		],
+		"cta": ["ansehen", "zum Live-Projekt →"],
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -307,12 +314,7 @@
 		"paragraph10": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über etwaige Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.",
 		"paragraph11": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter",
 		"paragraph2": "Wir sammeln persönliche Informationen, die Sie uns freiwillig zur Verfügung stellen, wenn Sie ein Formular auf unserer Website ausfüllen. Die von uns gesammelten persönlichen Informationen umfassen:",
-		"paragraph2li": [
-			"Vorname",
-			"Nachname",
-			"E-Mail-Adresse",
-			"Telefonnummer"
-		],
+		"paragraph2li": ["Vorname", "Nachname", "E-Mail-Adresse", "Telefonnummer"],
 		"paragraph3": "Die von uns gesammelten Informationen werden verwendet, um Sie in Zukunft zu kontaktieren. Wir werden Ihre personenbezogenen Daten nur für diesen spezifischen Zweck verwenden.",
 		"paragraph4": "Wir verarbeiten Ihre personenbezogenen Daten auf der Grundlage Ihrer Einwilligung, die Sie durch das Ausfüllen des Formulars auf unserer Website erteilen.",
 		"paragraph5": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.",

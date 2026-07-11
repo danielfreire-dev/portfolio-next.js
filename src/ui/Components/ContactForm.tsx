@@ -82,7 +82,7 @@ const ContactForm = () => {
 		setError(null);
 
 		if (turnstileStatus !== "success" || !turnstileToken) {
-			setError("Please verify you are not a robot");
+			setError(t("errors.turnstileNotVerified"));
 			setLoading("error");
 			return;
 		}
@@ -243,12 +243,12 @@ const ContactForm = () => {
 							theme={isDarkStore ? "dark" : "light"}
 							onError={() => {
 								setTurnstileStatus("error");
-								setError("Security check failed. Please try again.");
+								setError(t("errors.turnstileFailed"));
 								setLoading("error");
 							}}
 							onExpire={() => {
 								setTurnstileStatus("expired");
-								setError("Security check expired. Please verify again.");
+								setError(t("errors.turnstileExpired"));
 								setLoading("error");
 							}}
 							onLoad={() => {
@@ -273,11 +273,11 @@ const ContactForm = () => {
 										setError(null);
 									} else {
 										setTurnstileStatus("error");
-										setError("Security check failed. Please try again.");
+										setError(t("errors.turnstileFailed"));
 									}
 								} catch {
 									setTurnstileStatus("error");
-									setError("Security check failed. Please try again.");
+									setError(t("errors.turnstileFailed"));
 								}
 							}}
 						/>
@@ -297,7 +297,7 @@ const ContactForm = () => {
 						<p
 							className="text-(--secondary) text-xs mt-1 text-center"
 							role="status">
-							Complete the security check above to enable the submit button.
+							{t("errors.turnstileRequired")}
 						</p>
 					)}
 

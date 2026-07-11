@@ -30,7 +30,7 @@ const Sidenav = () => {
 		<>
 			<nav
 				id="sidenav"
-				className={`fixed lg:sticky top-0 left-0 h-screen w-64 max-w-[100vw] z-50 flex-shrink-0 flex-grow-0 p-4 flex flex-col justify-between items-center
+				className={`fixed lg:sticky top-0 left-0 h-screen w-64 max-w-[100vw] z-50 shrink-0 grow-0 p-4 flex flex-col justify-between items-center
 				bg-background lg:bg-transparent overflow-y-auto
 				transform transition-transform duration-500 ease-in-out
 				${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
