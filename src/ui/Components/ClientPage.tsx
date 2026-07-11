@@ -20,13 +20,15 @@ const ClientSideAbout = () => {
 	return (
 		<>
 			<div className="px-20 lg:grid lg:grid-cols-2 gap-6 focus-in-expand">
-				<Image
-					src={t("image")}
-					alt={t("imageAlt")}
-					width={900}
-					height={900}
-					className="hidden lg:block mt-4"
-				/>
+				<div className="hidden lg:block relative aspect-square mt-4">
+					<Image
+						src={t("image")}
+						alt={t("imageAlt")}
+						fill
+						sizes="(max-width: 1280px) 50vw, 40vw"
+						className="object-contain"
+					/>
+				</div>
 				<div className="">
 					<h2 className="text-justify">{t("title1")}</h2>
 
