@@ -48,9 +48,6 @@ This portfolio is built with a modern tech stack prioritizing performance, acces
 
 ### Planned
 
-- **Edge Runtime**: Migrate to Vercel Edge Functions for faster response times
-- **GraphQL API**: Replace REST endpoints with GraphQL for more efficient data fetching
-- **PWA Features**: Add service worker for offline functionality
 - **Performance Monitoring**: Integrate real user monitoring (RUM) for performance insights
 
 ## Lessons Learned:

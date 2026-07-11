@@ -77,6 +77,16 @@
 		"btn": "wyślij wiadomość",
 		"sending": "wysyłanie…",
 		"email": "e-mail",
+		"errors": {
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
+			"sendFailed": "Failed to send message. Please try again.",
+			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"turnstileExpired": "Security check expired. Please verify again.",
+			"turnstileFailed": "Security check failed. Please try again.",
+			"turnstileNotVerified": "Please verify you are not a robot",
+			"turnstileRequired": "Complete the security check above to enable the submit button."
+		},
 		"farewell": {
 			"text": "Doceniam Twoje zaufanie. Możesz spodziewać się odpowiedzi w ciągu najbliższych dni roboczych.",
 			"title": "dziękuję"
@@ -228,10 +238,7 @@
 	},
 	"portfolio": {
 		"all": "Wszystkie",
-		"cta": [
-			"sprawdź to",
-			"zobacz żywy projekt →"
-		],
+		"cta": ["sprawdź to", "zobacz żywy projekt →"],
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -314,12 +321,7 @@
 		"paragraph10": "Możemy aktualizować niniejszą politykę prywatności od czasu do czasu. Poinformujemy Cię o wszelkich zmianach, publikując nową politykę prywatności na tej stronie.",
 		"paragraph11": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej polityki prywatności, skontaktuj się z nami pod adresem",
 		"paragraph2": "Zbieramy informacje osobiste, które dobrowolnie nam podajesz, kiedy wypełniasz formularz na naszej stronie internetowej. Informacje osobiste, które zbieramy, obejmują:",
-		"paragraph2li": [
-			"Imię",
-			"Nazwisko",
-			"Adres e-mail",
-			"Numer telefonu"
-		],
+		"paragraph2li": ["Imię", "Nazwisko", "Adres e-mail", "Numer telefonu"],
 		"paragraph3": "Zebrane informacje będą wykorzystywane do kontaktu z Tobą w przyszłości. Będziemy używać Twoich danych osobowych wyłącznie w tym konkretnym celu.",
 		"paragraph4": "Przetwarzamy Twoje dane osobowe w oparciu o Twoją zgodę, którą wyrażasz, wypełniając formularz na naszej stronie internetowej.",
 		"paragraph5": "Nie udostępniamy Twoich danych osobowych stronom trzecim, z wyjątkiem przypadków wymaganych przez prawo.",

@@ -77,6 +77,16 @@
 		"btn": "send message",
 		"sending": "sending…",
 		"email": "email",
+		"errors": {
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
+			"sendFailed": "Failed to send message. Please try again.",
+			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"turnstileExpired": "Security check expired. Please verify again.",
+			"turnstileFailed": "Security check failed. Please try again.",
+			"turnstileNotVerified": "Please verify you are not a robot",
+			"turnstileRequired": "Complete the security check above to enable the submit button."
+		},
 		"farewell": {
 			"text": "I appreciate your vote of confidence. You should expect a reply over the next business days.",
 			"title": "thank you"
@@ -228,10 +238,7 @@
 	},
 	"portfolio": {
 		"all": "All",
-		"cta": [
-			"check it out",
-			"view the live project →"
-		],
+		"cta": ["check it out", "view the live project →"],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -314,12 +321,7 @@
 		"paragraph10": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.",
 		"paragraph11": "If you have any questions about this privacy policy, please contact us at",
 		"paragraph2": "We collect personal information that you voluntarily provide to us when you fill out a form on our website. The personal information we collect includes:",
-		"paragraph2li": [
-			"First name",
-			"Last name",
-			"Email address",
-			"Phone number"
-		],
+		"paragraph2li": ["First name", "Last name", "Email address", "Phone number"],
 		"paragraph3": "The information we collect will be used to contact you in the future. We will only use your personal data for this specific purpose.",
 		"paragraph4": "We process your personal data based on your consent, which you provide by filling out the form on our website.",
 		"paragraph5": "We do not share your personal data with third parties except as required by law.",
