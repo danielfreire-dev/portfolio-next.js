@@ -1,12 +1,13 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
+		"imageAlt": "oil painting of Daniel",
 		"paragraph1": "For the last two years, I’ve been building things on the web. But my perspective on what to build, and why, was shaped long before I wrote my first line of code.",
 		"paragraph2": "I came into this field from marketing, though not the side you might imagine. My world was less about campaigns and more about patterns: analyzing market data, deciphering user behavior, and understanding the precise mechanics of how people find and use a product online. SEO and SEM, at their core, are just applied psychology and problem-solving. You learn to listen to what the data is screaming, and more importantly, to what it’s whispering.",
 		"paragraph3": "That’s the background I bring to every development project. Most developers can write elegant code; my focus is on building elegant solutions. There’s a crucial difference.",
-		"paragraph4": "When I architect an application with React or Next.js, I’m not just thinking about state management or component structure. I’m thinking about the user’s journey that brought them there. I’m considering the semantic markup that gives our content meaning beyond the screen. I’m building with an innate understanding of performance because I know firsthand that a delay of even a half-second is a decision a user makes to leave.",
+		"paragraph4": "When I architect an application with React or Next.js, I'm not just thinking about state management or component structure. I'm thinking about the user's journey that brought them there. I'm considering the semantic markup that gives our content meaning beyond the screen. I'm building high-performance web applications with an innate understanding of performance because I know firsthand that a delay of even a half-second is a decision a user makes to leave.",
 		"paragraph5": "Here’s what a lot of talented developers get wrong: they build for the device. They build for the spec. But they forget to build for the human on the other side, and for the business objective that makes the project worthwhile. My experience allows me to sit at that intersection. I can translate a business need into a technical requirement not as an abstract concept, but as a lived experience. I’ve been the person asking for the data, and now I’m the person building the systems that provide it.",
-		"paragraph6": "Whether it’s a sleek front-end, a robust Django admin, or a full-stack Node.js application, the question I always start with is: \"What are we actually solving for?\" The technology is a means to an end. The real craft is in choosing the right tool for the job and wielding it with the wisdom of knowing what that job truly is.",
+		"paragraph6": "Whether it's an AI-powered web application, a sleek front-end, a Django admin, or a full-stack Node.js application, the question I always start with is: \"What are we actually solving for?\" The technology is a means to an end. The real craft is in choosing the right tool for the job and wielding it with the wisdom of knowing what that job truly is.",
 		"paragraph7": "I don’t just build things right. I build the right things.",
 		"title1": "Building for the Human Behind the Screen"
 	},
@@ -81,6 +82,7 @@
 			"title": "thank you"
 		},
 		"firstName": "first name",
+		"formAriaLabel": "Contact form",
 		"label": "I have read and agree with ",
 		"lastName": "last name",
 		"message": "message",
@@ -100,6 +102,7 @@
 		"privacyPolicyUrlAriaLabel": "Privacy Policy",
 		"privacyPolicyUrlTitle": "Privacy Policy",
 		"required": "required",
+		"requiredIndicator": "required",
 		"title": "get in touch"
 	},
 	"cookies": {
@@ -181,12 +184,16 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides",
 		"leftarrow": {
 			"alt": "left arrow",
+			"label": "Previous slide",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "right arrow",
+			"label": "Next slide",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
@@ -196,13 +203,13 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Learn more about Daniel",
+			"about": "Learn about Daniel Freire — a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
 			"contact": "This is the best place to contact Daniel",
 			"home": "Daniel's Introduction",
 			"impressum": "",
 			"portfolio": "This is where Daniel will publish his favourite work",
 			"privacyPolicy": "Find out more about your rights.",
-			"services": "Explore Daniel Freire's web development, AI, custom software, and technical consulting services."
+			"services": "AI-powered web applications, LLM integration, and high-performance web development by Daniel Freire. Custom software, AI agents, and technical consulting with agile product delivery."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -221,8 +228,11 @@
 	},
 	"portfolio": {
 		"all": "All",
-
-		"cta": ["check it out", "view the live project →"],
+		"cta": [
+			"check it out",
+			"view the live project →"
+		],
+		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -241,7 +251,6 @@
 				"summary": "Translation app with AI.",
 				"title": "pollyGlot"
 			},
-
 			{
 				"demo": "Demo",
 				"github": "",
@@ -305,7 +314,12 @@
 		"paragraph10": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.",
 		"paragraph11": "If you have any questions about this privacy policy, please contact us at",
 		"paragraph2": "We collect personal information that you voluntarily provide to us when you fill out a form on our website. The personal information we collect includes:",
-		"paragraph2li": ["First name", "Last name", "Email address", "Phone number"],
+		"paragraph2li": [
+			"First name",
+			"Last name",
+			"Email address",
+			"Phone number"
+		],
 		"paragraph3": "The information we collect will be used to contact you in the future. We will only use your personal data for this specific purpose.",
 		"paragraph4": "We process your personal data based on your consent, which you provide by filling out the form on our website.",
 		"paragraph5": "We do not share your personal data with third parties except as required by law.",
@@ -329,26 +343,31 @@
 			"slug": "business-custom-software",
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"text": "Tailored web applications — CRMs, dashboards, and internal tools that fit how your business actually works.",
+			"text": "Tailored web applications — CRMs, dashboards, and internal tools built with modular components and agile product delivery, fitting how your business actually works.",
 			"title": "Business Custom Software",
-			"longDescription": "Every business has unique processes, workflows, and challenges — and the software you use should reflect that. I specialise in developing custom web applications that adapt to how your company actually operates, rather than forcing your team to adapt to off-the-shelf software.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use — because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL, I build solutions that are robust, scalable, and easy to maintain as your business grows.",
+			"longDescription": "Every business has unique processes, workflows, and challenges — and the software you use should reflect that. I specialise in developing custom web applications that adapt to how your company actually operates, rather than forcing your team to adapt to off-the-shelf software. I deliver with agile product delivery, focusing on MVP and rapid feedback cycles so you see value early and iterate based on real usage.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use — because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL — deployed on AWS with cloud-native architecture — I build modular, reusable components that make your solution robust, scalable, and easy to maintain as your business grows.",
 			"features": [
 				"CRM systems tailored to your sales pipeline",
 				"Custom analytics dashboards and reports",
 				"Internal portals and team management tools",
 				"Workflow automation for manual processes",
 				"Integration with existing third-party APIs and services",
-				"Admin panels with granular access control"
+				"Admin panels with granular access control",
+				"MVP development with rapid feedback cycles",
+				"Cloud-native architecture deployed on AWS"
 			]
 		},
 		{
 			"slug": "ai-solution-implementation",
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"text": "Integrating AI into your workflows — chatbots, intelligent automation, and data-driven features.",
+			"text": "AI-powered web applications and LLM integration — chatbots, AI agents, and AI-driven user experiences that transform your workflows.",
 			"title": "AI Solution Implementation",
-			"longDescription": "Artificial Intelligence has moved beyond futurist hype and become a genuine competitive advantage — when applied with purpose. I help businesses integrate AI into their existing workflows in a practical, measurable way, without unnecessary complexity.\n\nWhether it's an intelligent chatbot that reduces support ticket volume by 40%, a recommendation engine that increases average order value, or document processing pipelines that eliminate hours of manual work — the focus is always on the business outcome, not the technology for its own sake.\n\nI work with APIs like OpenAI, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
+			"longDescription": "Artificial Intelligence has moved beyond futurist hype and become a genuine competitive advantage — when applied with purpose. I build AI-powered web applications that integrate Large Language Models (LLMs) into your existing workflows in a practical, measurable way, without unnecessary complexity.\n\nWhether it's an intelligent chatbot that reduces support ticket volume by 40%, a recommendation engine that increases average order value, or AI agent orchestration that automates complex multi-step business processes — the focus is always on the business outcome, not the technology for its own sake. Every solution is designed with an AI-driven user experience that feels natural and intuitive to your team and customers.\n\nI work with APIs like OpenAI, open-source LLMs, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
 			"features": [
+				"AI-powered web application development",
+				"LLM integration with OpenAI and open-source models",
+				"AI agent orchestration for complex business workflows",
 				"Intelligent chatbots for customer support and sales",
 				"Automated document processing and classification",
 				"Semantic search and knowledge discovery systems",
@@ -361,9 +380,9 @@
 			"slug": "web-development",
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"text": "Fast, responsive websites and web applications that load instantly, work on every device, and turn visitors into customers.",
+			"text": "High-performance web applications — fast, responsive websites with modular components that load instantly, work on every device, and turn visitors into customers.",
 			"title": "Web Development",
-			"longDescription": "A website isn't just a digital business card — it's your most important marketing asset. I build modern websites and web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take.\n\nEvery project is built with performance at its core — optimised for Core Web Vitals from the first line of code. This means your site won't just look great — it will be favoured by Google in search results and provide a fluid experience for your users.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards — I approach every project as if it were my own, with meticulous attention to detail and an absolute focus on performance.",
+			"longDescription": "A website isn't just a digital business card — it's your most important marketing asset. I build high-performance web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take. Using modular components and clean frontend logic, every project is architected for maintainability from day one.\n\nEvery project is built with performance at its core — optimised for Core Web Vitals from the first line of code. This means your site won't just look great — it will be favoured by Google in search results and provide a fluid experience for your users. I follow agile product delivery practices, starting with an MVP to get rapid feedback and iterating based on real user data.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards — deployed on AWS with scalable cloud architecture — I approach every project as if it were my own, with meticulous attention to detail and an absolute focus on performance.",
 			"features": [
 				"Business websites and high-conversion landing pages",
 				"Progressive Web Apps (PWA) with offline support",
@@ -371,16 +390,19 @@
 				"Legacy website migration and modernisation",
 				"Core Web Vitals and technical SEO optimisation",
 				"Responsive design tested across all devices",
-				"Authentication, payments, and customer portal systems"
+				"Authentication, payments, and customer portal systems",
+				"Rapid MVP development for quick market validation",
+				"Cloud deployment on AWS with scalable architecture",
+				"Modular, reusable component libraries for maintainable frontend logic"
 			]
 		},
 		{
 			"slug": "seo-technical-consulting",
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"text": "Data-backed audits, performance optimization, and strategy to help your business get found.",
+			"text": "Data-backed audits, high-performance optimisation, and strategy to help your business get found and convert.",
 			"title": "SEO & Technical Consulting",
-			"longDescription": "Having a great website is only half the equation — the other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, allows me to offer a unique perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
+			"longDescription": "Having a great website is only half the equation — the other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, allows me to offer a unique perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. For high-performance web applications, I ensure every millisecond of load time is accounted for, because speed directly impacts both rankings and conversions. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
 			"features": [
 				"Full technical SEO audit (crawlability, indexation, architecture)",
 				"Core Web Vitals and page speed optimisation",
@@ -397,19 +419,19 @@
 			"icons": {
 				"github": {
 					"alt": "GitHub",
-					"ariaDetails": "Daniel Freire's GitHub",
-					"ariaLAbel": "Daniel Freire's GitHub",
+					"ariaDetails": "Daniel Freire's GitHub - opens in new tab",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
 					"title": "Daniel Freire's GitHub"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
-					"ariaDetails": "Daniel Freire's Linkedin",
-					"ariaLAbel": "Daniel Freire's Linkedin",
+					"ariaDetails": "Daniel Freire's LinkedIn - opens in new tab",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "Daniel Freire's Linkedin"
+					"title": "Daniel Freire's LinkedIn"
 				}
 			}
 		},
@@ -427,11 +449,26 @@
 			"privacyName": "privacy policy"
 		},
 		"links": [
-			{ "link": "/", "name": "home" },
-			{ "link": "/about", "name": "about" },
-			{ "link": "/portfolio", "name": "portfolio" },
-			{ "link": "/services", "name": "services" },
-			{ "link": "/contact", "name": "contact" }
+			{
+				"link": "/",
+				"name": "home"
+			},
+			{
+				"link": "/about",
+				"name": "about"
+			},
+			{
+				"link": "/portfolio",
+				"name": "portfolio"
+			},
+			{
+				"link": "/services",
+				"name": "services"
+			},
+			{
+				"link": "/contact",
+				"name": "contact"
+			}
 		],
 		"privacy": "privacy policy",
 		"rights": "Daniel Freire ® all rights reserved",
@@ -575,6 +612,7 @@
 		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications—like CRM systems, project trackers, and data dashboards—that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let's discuss what you're trying to achieve."
 	},
 	"svgTitles": {
+		"opensInNewTab": "opens in new tab",
 		"Bash": "Bash shell logo",
 		"CSS3": "CSS Logo",
 		"Cypress": "Cypress testing framework logo",
