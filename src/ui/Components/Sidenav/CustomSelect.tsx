@@ -75,7 +75,8 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 			className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
 			fill="none"
 			stroke="currentColor"
-			viewBox="0 0 24 24">
+			viewBox="0 0 24 24"
+			aria-hidden="true">
 			<path
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -89,7 +90,8 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 		<svg
 			className="w-4 h-4 animate-spin text-(--primary)"
 			fill="none"
-			viewBox="0 0 24 24">
+			viewBox="0 0 24 24"
+			aria-hidden="true">
 			<circle
 				className="opacity-25"
 				cx="12"

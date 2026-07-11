@@ -8,7 +8,8 @@
 		"paragraph5": "Zde dělá chybu mnoho talentovaných vývojářů: budují pro zařízení. Budují pro specifikaci. Ale zapomínají budovat pro člověka na druhé straně a pro obchodní cíl, který projekt opravdu odůvodňuje. Díky mé zkušenosti se dokážu postavit právě na toto průsečík. Umím převést obchodní potřebu na technický požadavek ne jako abstraktní koncept, ale jako žijící zkušenost. Byl jsem člověk, který žádal o data, a teď jsem ten, kdo systémy pro jejich poskytování vytváří.",
 		"paragraph6": "Ať už jde o webovou aplikaci s AI, moderní frontend, Django admin nebo full-stack Node.js aplikaci, otázkou, od které vždy začínám, je: „Na co vlastně hledáme řešení?“ Technologie jsou prostředkem. Skutečné umění tkví ve výběru správného nástroje pro danou práci a v jeho schopnosti jej použít s moudrostí, abych pochopil, co je ta práce skutečně zač.",
 		"paragraph7": "Nestavím jen správně. Stavím správné věci.",
-		"title1": "Stavíme pro člověka za obrazovkou"
+		"title1": "Stavíme pro člověka za obrazovkou",
+		"imageAlt": "oil painting of Daniel"
 	},
 	"carousel": [
 		{
@@ -100,7 +101,9 @@
 		"privacyPolicyUrlAriaLabel": "Zásady ochrany osobních údajů",
 		"privacyPolicyUrlTitle": "Zásady ochrany osobních údajů",
 		"required": "povinné",
-		"title": "kontaktujte mě"
+		"title": "kontaktujte mě",
+		"formAriaLabel": "Contact form",
+		"requiredIndicator": "required"
 	},
 	"cookies": {
 		"buttonText": "Přijmout vše",
@@ -183,12 +186,16 @@
 	"icons": {
 		"leftarrow": {
 			"alt": "šipka vlevo",
-			"src": "/images/icons/chevron-left.svg"
+			"src": "/images/icons/chevron-left.svg",
+			"label": "Previous slide"
 		},
 		"rightarrow": {
 			"alt": "šipka vpravo",
-			"src": "/images/icons/chevron-right.svg"
-		}
+			"src": "/images/icons/chevron-right.svg",
+			"label": "Next slide"
+		},
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides"
 	},
 	"localeSwitcher": {
 		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
@@ -221,7 +228,10 @@
 	},
 	"portfolio": {
 		"all": "Vše",
-		"cta": ["podívejte se", "zobrazit živý projekt →"],
+		"cta": [
+			"podívejte se",
+			"zobrazit živý projekt →"
+		],
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -270,7 +280,8 @@
 				"title": "insurbia"
 			}
 		],
-		"websites-title": "Weby"
+		"websites-title": "Weby",
+		"opensInNewTab": "opens in new tab"
 	},
 	"privacyPolicy": {
 		"contactEmail": "gdpr@daniel-freire.com",
@@ -289,7 +300,12 @@
 		"paragraph10": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O jakýchkoli změnách vás budeme informovat zveřejněním nových zásad na této stránce.",
 		"paragraph11": "Pokud máte jakékoli otázky týkající se těchto zásad ochrany osobních údajů, kontaktujte nás na",
 		"paragraph2": "Sbíráme osobní údaje, které nám dobrovolně poskytnete při vyplňování formuláře na našich webových stránkách. Osobní údaje, které sbíráme, zahrnují:",
-		"paragraph2li": ["Jméno", "Příjmení", "Emailová adresa", "Telefonní číslo"],
+		"paragraph2li": [
+			"Jméno",
+			"Příjmení",
+			"Emailová adresa",
+			"Telefonní číslo"
+		],
 		"paragraph3": "Informace, které sbíráme, budou použity k tomu, abychom vás v budoucnu kontaktovali. Vaše osobní údaje budeme používat pouze pro tento konkrétní účel.",
 		"paragraph4": "Zpracování vašich osobních údajů je založeno na vašem souhlasu, který udělujete vyplněním formuláře na našich webových stránkách.",
 		"paragraph5": "Vaše osobní údaje nesdílíme s třetími stranami, kromě případů požadovaných zákonem.",
@@ -390,18 +406,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Danielův GitHub",
-					"ariaLAbel": "Danielův GitHub",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
-					"title": "Danielův GitHub"
+					"title": "Danielův GitHub",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "Danielův LinkedIn",
-					"ariaLAbel": "Danielův LinkedIn",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "Danielův LinkedIn"
+					"title": "Danielův LinkedIn",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab"
 				}
 			}
 		},
@@ -622,6 +638,7 @@
 		"menuToClose": "Ikona přechodu menu-na-zavřít",
 		"moonToSun": "Animovaná ikona přechodu měsíc-slunce",
 		"nextjsTsx": "Logotyp frameworku Next.js",
-		"sunToMoon": "Animovaná ikona přechodu slunce-měsíc"
+		"sunToMoon": "Animovaná ikona přechodu slunce-měsíc",
+		"opensInNewTab": "opens in new tab"
 	}
 }

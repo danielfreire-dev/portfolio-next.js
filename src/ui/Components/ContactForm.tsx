@@ -105,6 +105,7 @@ const ContactForm = () => {
 		<>
 			<form
 				onSubmit={sendContactForm}
+				aria-label={t("formAriaLabel")}
 				className={`mx-5 flex flex-col flex-nowrap items-center ${loading === "submitted" && "hidden"}`}>
 				<div className="name-div flex flex-col lg:flex-row">
 					<section className="flex flex-col">
@@ -112,7 +113,11 @@ const ContactForm = () => {
 							htmlFor="firstName"
 							className="capitalize">
 							{t("firstName")}
-							<span className="text-(--error) required" />
+							<span
+								className="text-(--error) required"
+								aria-hidden="true"
+							/>
+							<span className="sr-only">({t("requiredIndicator")})</span>
 						</label>
 						<input
 							type="text"
@@ -146,7 +151,11 @@ const ContactForm = () => {
 							htmlFor="email"
 							className="capitalize">
 							{t("email")}
-							<span className="text-(--error) required" />
+							<span
+								className="text-(--error) required"
+								aria-hidden="true"
+							/>
+							<span className="sr-only">({t("requiredIndicator")})</span>
 						</label>
 						<input
 							type="email"
@@ -169,8 +178,7 @@ const ContactForm = () => {
 							name="telephone"
 							id="telephone"
 							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
-							aria-autocomplete="both"
+						    peer invalid:border-(--error) valid:border-(--success)"
 							aria-required="false"
 						/>
 					</section>
@@ -180,7 +188,11 @@ const ContactForm = () => {
 						htmlFor="message"
 						className="capitalize">
 						{t("message")}
-						<span className="text-(--error) required" />
+						<span
+							className="text-(--error) required"
+							aria-hidden="true"
+						/>
+						<span className="sr-only">({t("requiredIndicator")})</span>
 					</label>
 					<textarea
 						name="message"
@@ -196,7 +208,7 @@ const ContactForm = () => {
 				</section>
 				<div className="privacy-policy-req mt-1.5">
 					<p className="align-start">
-						<span className="text-(--error)">*</span>
+						<span className="text-(--error)">* </span>
 						<span className="capitalize">{t("required")}</span>
 					</p>
 					<label htmlFor="privacy-policy-check">
@@ -282,7 +294,9 @@ const ContactForm = () => {
 					)}
 
 					{turnstileStatus === "required" && turnstileLoaded && !error && (
-						<p className="text-(--secondary) text-xs mt-1 text-center">
+						<p
+							className="text-(--secondary) text-xs mt-1 text-center"
+							role="status">
 							Complete the security check above to enable the submit button.
 						</p>
 					)}

@@ -1,6 +1,7 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
+		"imageAlt": "oil painting of Daniel",
 		"paragraph1": "For the last two years, I’ve been building things on the web. But my perspective on what to build, and why, was shaped long before I wrote my first line of code.",
 		"paragraph2": "I came into this field from marketing, though not the side you might imagine. My world was less about campaigns and more about patterns: analyzing market data, deciphering user behavior, and understanding the precise mechanics of how people find and use a product online. SEO and SEM, at their core, are just applied psychology and problem-solving. You learn to listen to what the data is screaming, and more importantly, to what it’s whispering.",
 		"paragraph3": "That’s the background I bring to every development project. Most developers can write elegant code; my focus is on building elegant solutions. There’s a crucial difference.",
@@ -81,6 +82,7 @@
 			"title": "thank you"
 		},
 		"firstName": "first name",
+		"formAriaLabel": "Contact form",
 		"label": "I have read and agree with ",
 		"lastName": "last name",
 		"message": "message",
@@ -100,6 +102,7 @@
 		"privacyPolicyUrlAriaLabel": "Privacy Policy",
 		"privacyPolicyUrlTitle": "Privacy Policy",
 		"required": "required",
+		"requiredIndicator": "required",
 		"title": "get in touch"
 	},
 	"cookies": {
@@ -181,12 +184,16 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides",
 		"leftarrow": {
 			"alt": "left arrow",
+			"label": "Previous slide",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "right arrow",
+			"label": "Next slide",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
@@ -221,8 +228,11 @@
 	},
 	"portfolio": {
 		"all": "All",
-
-		"cta": ["check it out", "view the live project →"],
+		"cta": [
+			"check it out",
+			"view the live project →"
+		],
+		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -241,7 +251,6 @@
 				"summary": "Translation app with AI.",
 				"title": "pollyGlot"
 			},
-
 			{
 				"demo": "Demo",
 				"github": "",
@@ -305,7 +314,12 @@
 		"paragraph10": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.",
 		"paragraph11": "If you have any questions about this privacy policy, please contact us at",
 		"paragraph2": "We collect personal information that you voluntarily provide to us when you fill out a form on our website. The personal information we collect includes:",
-		"paragraph2li": ["First name", "Last name", "Email address", "Phone number"],
+		"paragraph2li": [
+			"First name",
+			"Last name",
+			"Email address",
+			"Phone number"
+		],
 		"paragraph3": "The information we collect will be used to contact you in the future. We will only use your personal data for this specific purpose.",
 		"paragraph4": "We process your personal data based on your consent, which you provide by filling out the form on our website.",
 		"paragraph5": "We do not share your personal data with third parties except as required by law.",
@@ -405,19 +419,19 @@
 			"icons": {
 				"github": {
 					"alt": "GitHub",
-					"ariaDetails": "Daniel Freire's GitHub",
-					"ariaLAbel": "Daniel Freire's GitHub",
+					"ariaDetails": "Daniel Freire's GitHub - opens in new tab",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
 					"title": "Daniel Freire's GitHub"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
-					"ariaDetails": "Daniel Freire's Linkedin",
-					"ariaLAbel": "Daniel Freire's Linkedin",
+					"ariaDetails": "Daniel Freire's LinkedIn - opens in new tab",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "Daniel Freire's Linkedin"
+					"title": "Daniel Freire's LinkedIn"
 				}
 			}
 		},
@@ -435,11 +449,26 @@
 			"privacyName": "privacy policy"
 		},
 		"links": [
-			{ "link": "/", "name": "home" },
-			{ "link": "/about", "name": "about" },
-			{ "link": "/portfolio", "name": "portfolio" },
-			{ "link": "/services", "name": "services" },
-			{ "link": "/contact", "name": "contact" }
+			{
+				"link": "/",
+				"name": "home"
+			},
+			{
+				"link": "/about",
+				"name": "about"
+			},
+			{
+				"link": "/portfolio",
+				"name": "portfolio"
+			},
+			{
+				"link": "/services",
+				"name": "services"
+			},
+			{
+				"link": "/contact",
+				"name": "contact"
+			}
 		],
 		"privacy": "privacy policy",
 		"rights": "Daniel Freire ® all rights reserved",
@@ -583,6 +612,7 @@
 		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications—like CRM systems, project trackers, and data dashboards—that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let's discuss what you're trying to achieve."
 	},
 	"svgTitles": {
+		"opensInNewTab": "opens in new tab",
 		"Bash": "Bash shell logo",
 		"CSS3": "CSS Logo",
 		"Cypress": "Cypress testing framework logo",

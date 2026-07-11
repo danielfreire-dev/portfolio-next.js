@@ -518,7 +518,7 @@ footer a {
 	padding: 10px 0;
 }
 .required::after {
-	content: "*" / "Required";
+	content: " *" / "Required";
 }
 
 /* Features list bullet via ::before */

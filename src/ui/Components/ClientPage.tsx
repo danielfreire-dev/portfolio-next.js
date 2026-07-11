@@ -22,7 +22,7 @@ const ClientSideAbout = () => {
 			<div className="px-20 lg:grid lg:grid-cols-2 gap-6 focus-in-expand">
 				<Image
 					src={t("image")}
-					alt="oil painting of Daniel"
+					alt={t("imageAlt")}
 					width={900}
 					height={900}
 					className="hidden lg:block mt-4"

@@ -8,7 +8,8 @@
 		"paragraph5": "Her er hvad mange talentfulde udviklere tager fejl af: de bygger til enheden. De bygger efter specifikationen. Men de glemmer at bygge for mennesket på den anden side, og for den forretningsmæssige objektiv der gør projektet værd at lave. Min erfaring gør mig i stand til at sidde i det krydsfelt. Jeg kan oversætte et forretningsbehov til et teknisk krav ikke som et abstrakt koncept, men som en erfaret virkelighed. Jeg har været personen som bad om dataen, og nu er jeg personen som bygger systemerne der leverer den.",
 		"paragraph6": "Uanset om det er en AI-drevet webapplikation, en sleek front-end, en Django admin, eller en fuldstack Node.js applikation, er det spørgsmål jeg altid starter med: \"Hvad løser vi egentlig?\" Teknologien er et middel til et mål. Det virkelige håndværk ligger i at vælge det rigtige værktøj til opgaven og bruge det med visdommen af at vide hvad opgaven virkelig går ud på.",
 		"paragraph7": "Jeg bygger ikke kun tingene rigtigt. Jeg bygger de rigtige ting.",
-		"title1": "Bygger til mennesket bag skærmen"
+		"title1": "Bygger til mennesket bag skærmen",
+		"imageAlt": "oil painting of Daniel"
 	},
 	"carousel": [
 		{
@@ -100,7 +101,9 @@
 		"privacyPolicyUrlAriaLabel": "Privatlivspolitik",
 		"privacyPolicyUrlTitle": "Privatlivspolitik",
 		"required": "påkrævet",
-		"title": "kom i kontakt"
+		"title": "kom i kontakt",
+		"formAriaLabel": "Contact form",
+		"requiredIndicator": "required"
 	},
 	"cookies": {
 		"buttonText": "Acceptér Alle",
@@ -183,12 +186,16 @@
 	"icons": {
 		"leftarrow": {
 			"alt": "venstre pil",
-			"src": "/images/icons/chevron-left.svg"
+			"src": "/images/icons/chevron-left.svg",
+			"label": "Previous slide"
 		},
 		"rightarrow": {
 			"alt": "højre pil",
-			"src": "/images/icons/chevron-right.svg"
-		}
+			"src": "/images/icons/chevron-right.svg",
+			"label": "Next slide"
+		},
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides"
 	},
 	"localeSwitcher": {
 		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
@@ -221,7 +228,10 @@
 	},
 	"portfolio": {
 		"all": "Alle",
-		"cta": ["tjek det ud", "se det live projekt →"],
+		"cta": [
+			"tjek det ud",
+			"se det live projekt →"
+		],
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -240,7 +250,6 @@
 				"summary": "Translation app with AI.",
 				"title": "pollyGlot"
 			},
-
 			{
 				"demo": "Demo",
 				"github": "",
@@ -285,7 +294,8 @@
 				"title": "insurbia"
 			}
 		],
-		"websites-title": "Hjemmesider"
+		"websites-title": "Hjemmesider",
+		"opensInNewTab": "opens in new tab"
 	},
 	"privacyPolicy": {
 		"contactEmail": "gdpr@daniel-freire.com",
@@ -304,7 +314,12 @@
 		"paragraph10": "Vi kan opdatere denne privatlivspolitik fra tid til anden. Vi vil underrette dig om eventuelle ændringer ved at offentliggøre den nye privatlivspolitik på denne side.",
 		"paragraph11": "Hvis du har spørgsmål om denne privatlivspolitik, kontakt os venligst på",
 		"paragraph2": "Vi indsamler personlige oplysninger som du frivilligt giver os når du udfylder en formular på vores hjemmeside. De personlige oplysninger vi indsamler inkluderer:",
-		"paragraph2li": ["Fornavn", "Efternavn", "E-mail adresse", "Telefonnummer"],
+		"paragraph2li": [
+			"Fornavn",
+			"Efternavn",
+			"E-mail adresse",
+			"Telefonnummer"
+		],
 		"paragraph3": "De oplysninger vi indsamler vil blive brugt til at kontakte dig i fremtiden. Vi vil kun bruge dine personlige data til dette specifikke formål.",
 		"paragraph4": "Vi behandler dine personlige data baseret på dit samtykke, som du giver ved at udfylde formularen på vores hjemmeside.",
 		"paragraph5": "Vi deler ikke dine personlige data med tredjeparter medmindre det er påkrævet af loven.",
@@ -405,18 +420,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Daniel Freires GitHub",
-					"ariaLAbel": "Daniel Freires GitHub",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
-					"title": "Daniel Freires GitHub"
+					"title": "Daniel Freires GitHub",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "Daniel Freires Linkedin",
-					"ariaLAbel": "Daniel Freires Linkedin",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "Daniel Freires Linkedin"
+					"title": "Daniel Freires Linkedin",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab"
 				}
 			}
 		},
@@ -596,7 +611,6 @@
 		"p1": "Haben Sie es satt, dass Software Ihr Geschäft ausbremst?",
 		"p2": "Die meisten Geschäftsanwendungen sind entweder zu starr oder zu komplex. Ich spezialisiere mich auf die Entwicklung maßgeschneiderter Webanwendungen – wie CRM-Systeme, Projekt-Tracker und Daten-Dashboards – die genau zu Ihrer tatsächlichen Arbeitsweise passen. Wenn Sie ein Werkzeug benötigen, das ein bestimmtes Problem ohne überflüssige Funktionen löst, sprechen wir darüber, was Sie erreichen möchten."
 	},
-
 	"svgTitles": {
 		"Bash": "Bash shell-logo",
 		"CSS3": "CSS-logo",
@@ -638,6 +652,7 @@
 		"menuToClose": "Menu-til-luk-overgangsikon",
 		"moonToSun": "Animeret måne-til-sol-overgangsikon",
 		"nextjsTsx": "Next.js framework-logotype",
-		"sunToMoon": "Animeret sol-til-måne-overgangsikon"
+		"sunToMoon": "Animeret sol-til-måne-overgangsikon",
+		"opensInNewTab": "opens in new tab"
 	}
 }

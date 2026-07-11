@@ -40,14 +40,16 @@ const WebsiteCards = () => {
 							href={item.link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-block">
+							className="inline-block"
+							aria-label={`${item.title} - ${t("opensInNewTab")}`}>
 							<h3 className="capitalize text-xl mb-1 hover:underline font-semibold size-fit">{item.title}</h3>
 						</a>
 
 						<a
 							href={item.link}
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+							aria-label={`${item.title} - ${t("opensInNewTab")}`}>
 							<Image
 								src={item.src}
 								alt={item.title}
@@ -65,7 +67,8 @@ const WebsiteCards = () => {
 								href={item.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className={`${item.link ? "" : "hidden"} demo hover:underline`}>
+								className={`${item.link ? "" : "hidden"} demo hover:underline`}
+								aria-label={`${item.demo} - ${t("opensInNewTab")}`}>
 								{item.demo}
 							</a>
 							<a
@@ -73,6 +76,7 @@ const WebsiteCards = () => {
 								target="_blank"
 								rel="noopener noreferrer"
 								className={`${item.github ? "" : "hidden"} github hover:underline`}
+								aria-label={`GitHub - ${t("opensInNewTab")}`}
 								// eslint-disable-next-line i18next/no-literal-string
 							>
 								GitHub
