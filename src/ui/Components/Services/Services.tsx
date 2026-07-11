@@ -20,7 +20,7 @@ const Services = () => {
 
 	return (
 		<>
-			<h2 className="mt-7 text-3xl font-bold text-center">{t("metadata.title.services")}</h2>
+			<h2 className="text-3xl font-bold text-center">{t("metadata.title.services")}</h2>
 
 			<section className="m-4 sm:mx-15 mb-6">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch justify-items-center">
