@@ -77,6 +77,16 @@
 		"btn": "odeslat zprávu",
 		"sending": "odesílání…",
 		"email": "email",
+		"errors": {
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
+			"sendFailed": "Failed to send message. Please try again.",
+			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"turnstileExpired": "Security check expired. Please verify again.",
+			"turnstileFailed": "Security check failed. Please try again.",
+			"turnstileNotVerified": "Please verify you are not a robot",
+			"turnstileRequired": "Complete the security check above to enable the submit button."
+		},
 		"farewell": {
 			"text": "Děkujeme za vaši důvěru. Můžete očekávat odpověď během několika pracovních dní.",
 			"title": "děkujeme"
@@ -228,10 +238,7 @@
 	},
 	"portfolio": {
 		"all": "Vše",
-		"cta": [
-			"podívejte se",
-			"zobrazit živý projekt →"
-		],
+		"cta": ["podívejte se", "zobrazit živý projekt →"],
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -300,12 +307,7 @@
 		"paragraph10": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O jakýchkoli změnách vás budeme informovat zveřejněním nových zásad na této stránce.",
 		"paragraph11": "Pokud máte jakékoli otázky týkající se těchto zásad ochrany osobních údajů, kontaktujte nás na",
 		"paragraph2": "Sbíráme osobní údaje, které nám dobrovolně poskytnete při vyplňování formuláře na našich webových stránkách. Osobní údaje, které sbíráme, zahrnují:",
-		"paragraph2li": [
-			"Jméno",
-			"Příjmení",
-			"Emailová adresa",
-			"Telefonní číslo"
-		],
+		"paragraph2li": ["Jméno", "Příjmení", "Emailová adresa", "Telefonní číslo"],
 		"paragraph3": "Informace, které sbíráme, budou použity k tomu, abychom vás v budoucnu kontaktovali. Vaše osobní údaje budeme používat pouze pro tento konkrétní účel.",
 		"paragraph4": "Zpracování vašich osobních údajů je založeno na vašem souhlasu, který udělujete vyplněním formuláře na našich webových stránkách.",
 		"paragraph5": "Vaše osobní údaje nesdílíme s třetími stranami, kromě případů požadovaných zákonem.",

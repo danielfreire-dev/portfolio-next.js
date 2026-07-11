@@ -46,10 +46,10 @@ type SubmitResult = { success: true } | { success: false; error: string };
  * Re-validating the same single-use token here would always fail in
  * production because Turnstile tokens are one-shot.
  *
- * Validation happens in three phases: environment variables first (fail
- * fast with a clear error), then Resend client initialisation, then
- * translation loading. Each phase returns a sanitised error message to
- * the client while logging full details server-side for debugging.
+ * Contact locale translations are loaded first so error messages returned
+ * to the client match the user's language. The only untranslated fallback
+ * is the translation-loading failure itself (a hardcoded English string),
+ * since by definition the locale cannot be resolved at that point.
  *
  * @param _token - The Turnstile token from the client widget (pre-validated).
  * @param data   - The submitted form fields as FormData entry values.
@@ -63,16 +63,25 @@ export const submitContact = async (
 	_token: string,
 	data: Record<string, FormDataEntryValue>,
 ): Promise<SubmitResult> => {
+	// Load contact translations first so all error paths can use them.
+	let c: ReturnType<typeof getTranslations> extends Promise<infer T> ? T : never;
+	try {
+		c = await getTranslations("contact");
+	} catch (err) {
+		console.error("[submitContact] Failed to load contact translations:", err);
+		return { success: false, error: "Server error. Please try again later." };
+	}
+
 	const resendApiKey = process.env.RESEND_API_KEY;
 	const dataEmail = process.env.DATA_EMAIL;
 
 	if (!resendApiKey) {
 		console.error("[submitContact] Missing RESEND_API_KEY environment variable.");
-		return { success: false, error: "Server configuration error. Please try again later." };
+		return { success: false, error: c("errors.serverConfig") };
 	}
 	if (!dataEmail) {
 		console.error("[submitContact] Missing DATA_EMAIL environment variable.");
-		return { success: false, error: "Server configuration error. Please try again later." };
+		return { success: false, error: c("errors.serverConfig") };
 	}
 
 	let resend: Resend;
@@ -80,7 +89,7 @@ export const submitContact = async (
 		resend = new Resend(resendApiKey);
 	} catch (err) {
 		console.error("[submitContact] Failed to initialise Resend client:", err);
-		return { success: false, error: "Server configuration error. Please try again later." };
+		return { success: false, error: c("errors.serverConfig") };
 	}
 
 	let t: ReturnType<typeof getTranslations> extends Promise<infer T> ? T : never;
@@ -89,8 +98,8 @@ export const submitContact = async (
 		t = await getTranslations("email");
 		e = await getTranslations("email.welcome");
 	} catch (err) {
-		console.error("[submitContact] Failed to load translations:", err);
-		return { success: false, error: "Server error. Please try again later." };
+		console.error("[submitContact] Failed to load email translations:", err);
+		return { success: false, error: c("errors.serverError") };
 	}
 
 	try {
@@ -106,7 +115,7 @@ export const submitContact = async (
 		});
 	} catch (err) {
 		console.error("[submitContact] Failed to send notification email:", err);
-		return { success: false, error: "Failed to send message. Please try again." };
+		return { success: false, error: c("errors.sendFailed") };
 	}
 
 	try {
@@ -118,7 +127,7 @@ export const submitContact = async (
 		});
 	} catch (err) {
 		console.error("[submitContact] Failed to send welcome email:", err);
-		return { success: false, error: "Failed to send confirmation. Your message was received." };
+		return { success: false, error: c("errors.sendPartial") };
 	}
 
 	return { success: true };

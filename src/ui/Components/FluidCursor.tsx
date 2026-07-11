@@ -1318,8 +1318,6 @@ export default function FluidCursor({
 			<canvas
 				ref={canvasRef}
 				id="fluid"
-				aria-hidden="true"
-				role="presentation"
 				style={{
 					width: "100vw",
 					height: "100vh",

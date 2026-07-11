@@ -82,7 +82,7 @@ const WebsiteCards = () => {
 								GitHub
 							</a>
 						</div>
-						<small className="block text-(--text-tertiary) text-sm break-words mt-1">{item.summary}</small>
+						<small className="block text-(--text-tertiary) text-sm wrap-break-words mt-1">{item.summary}</small>
 					</div>
 				</div>
 			</Suspense>
