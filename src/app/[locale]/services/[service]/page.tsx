@@ -114,6 +114,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: service.title,
 		description: service.text,
+		keywords: [
+			"web development",
+			"AI solutions",
+			"custom software",
+			"LLM integration",
+			"technical consulting",
+			"business software",
+			"SEO audit",
+		],
 		robots: { index: true, follow: true },
 		alternates: {
 			canonical: pagePath,

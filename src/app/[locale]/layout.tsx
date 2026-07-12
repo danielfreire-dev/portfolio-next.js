@@ -27,7 +27,26 @@ export const metadata: Metadata = {
 	},
 	authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
 	creator: "Daniel Freire",
-	keywords: ["Daniel Freire", "Portfolio", "Next.js", "React", "TypeScript", "JavaScript", "Digital Marketing"],
+	keywords: [
+		"Daniel Freire",
+		"web developer",
+		"AI applications",
+		"LLM integration",
+		"custom software",
+		"high-performance websites",
+		"Next.js",
+		"React",
+		"TypeScript",
+		"frontend developer",
+		"full-stack developer",
+		"Portugal",
+	],
+	verification: {
+		google: process.env.GOOGLE_SITE_VERIFICATION,
+		other: {
+			"msvalidate.01": process.env.BING_SITE_VERIFICATION as string,
+		},
+	},
 	formatDetection: {
 		email: false,
 		address: false,

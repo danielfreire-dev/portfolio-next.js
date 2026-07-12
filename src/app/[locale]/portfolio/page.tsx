@@ -25,6 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.portfolio"),
 		description: t("description.portfolio"),
+		keywords: [
+			"web development portfolio",
+			"React projects",
+			"AI tools",
+			"business software",
+			"Next.js projects",
+			"full-stack portfolio",
+		],
 		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/portfolio",

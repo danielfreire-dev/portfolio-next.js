@@ -3,7 +3,7 @@ import { Locale, useTranslations } from "next-intl";
 import ContactForm from "@/ui/Components/ContactForm";
 import { Metadata } from "next";
 import { use } from "react";
-import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { generateBreadcrumbSchema, generateContactPointSchema } from "@/ui/Components/StructuredData";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -25,9 +25,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.contact"),
 		description: t("description.contact"),
+		keywords: [
+			"contact web developer",
+			"hire developer",
+			"freelance web developer Portugal",
+			"get in touch",
+			"web development inquiry",
+		],
 		robots: { index: true, follow: true },
 		alternates: {
-			canonical: "https://daniel-freire.com/contact",
+			canonical: "/contact",
 			languages: {
 				en: "https://daniel-freire.com/en/contact",
 				pt: "https://daniel-freire.com/pt/contactos",
@@ -66,12 +73,13 @@ const Contact = ({ params }: Props) => {
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(
+					__html: JSON.stringify([
 						generateBreadcrumbSchema([
 							{ name: "Home", href: `/${locale}` },
 							{ name: "Contact", href: `/${locale}/contact` },
 						]),
-					),
+						generateContactPointSchema(),
+					]),
 				}}
 			/>
 			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}</h2>
