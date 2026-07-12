@@ -3,6 +3,7 @@ import { Locale, useTranslations } from "next-intl";
 import ContactForm from "@/ui/Components/ContactForm";
 import { Metadata } from "next";
 import { use } from "react";
+import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -24,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.contact"),
 		description: t("description.contact"),
+		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "https://daniel-freire.com/contact",
 			languages: {
@@ -32,13 +34,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			},
 		},
 		openGraph: {
-			title: t("opengraphImageAlt"),
-			description: t("description.contact"),
-			url: "https://daniel-freire.com",
-			siteName: t("title.contact"),
-			images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` }],
-			locale: locale,
 			type: "website",
+			title: t("title.contact"),
+			description: t("description.contact"),
+			url: "https://daniel-freire.com/contact",
+			siteName: t("title.contact"),
+			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
+			locale: locale,
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title.contact"),
+			description: t("description.contact"),
+			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
 		},
 	};
 }
@@ -55,6 +63,17 @@ const Contact = ({ params }: Props) => {
 	const t = useTranslations("contact");
 	return (
 		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(
+						generateBreadcrumbSchema([
+							{ name: "Home", href: `/${locale}` },
+							{ name: "Contact", href: `/${locale}/contact` },
+						]),
+					),
+				}}
+			/>
 			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}</h2>
 
 			<ContactForm />

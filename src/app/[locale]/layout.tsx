@@ -11,6 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/providers/CookieBanner";
 import GoogleAnalytics from "@/providers/GoogleAnalytics";
 import { Suspense } from "react";
+import { generatePersonSchema, generateWebSiteSchema } from "@/ui/Components/StructuredData";
 
 /**
  * Static metadata for the root layout.
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
 		address: false,
 		telephone: false,
 	},
-	metadataBase: new URL("https://www.daniel-freire.com/"),
+	metadataBase: new URL("https://daniel-freire.com/"),
 
 	openGraph: {
 		type: "website",
@@ -132,6 +133,14 @@ export default async function RootLayout({
 		<html
 			lang={locale}
 			suppressHydrationWarning>
+			<head>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify([generatePersonSchema(), generateWebSiteSchema()]),
+					}}
+				/>
+			</head>
 			<SpeedInsights />
 			<Suspense fallback={null}>
 				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />

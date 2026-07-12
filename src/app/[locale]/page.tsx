@@ -6,6 +6,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import TopMainPage from "@/ui/Components/TopMainPage";
 import Services from "@/ui/Components/Services";
+import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.home"),
 		description: t("description.home"),
+		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/",
 			languages: {
@@ -36,18 +38,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		},
 		openGraph: {
 			type: "website",
-			title: t("opengraphImageAlt"),
+			title: t("title.home"),
 			description: t("description.home"),
 			url: "https://daniel-freire.com",
 			siteName: t("title.home"),
 			locale: locale,
+			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title.home"),
+			description: t("description.home"),
+			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
 		},
 	};
 }
-
-/* interface Props {
-	params: Promise<{ locale: Locale }>;
-} */
 
 /**
  * Home page — the main landing route for the application.
@@ -65,6 +70,12 @@ export default function HomePage({ params }: Props) {
 
 	return (
 		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(generateBreadcrumbSchema([{ name: "Home", href: `/${locale}` }])),
+				}}
+			/>
 			<TopMainPage />
 			<Suspense>
 				<Services />
