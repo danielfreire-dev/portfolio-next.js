@@ -6,8 +6,10 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Suspense } from "react";
 import { Locale } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, getPathname } from "@/i18n/navigation";
 import { TransitionLink } from "@/ui/Components/Sidenav/TransitionLink";
+import { generateBreadcrumbSchema, generateServiceSchema } from "@/ui/Components/StructuredData";
+import { routing } from "@/i18n/routing";
 
 interface Props {
 	params: Promise<{ locale: Locale; service: string }>;
@@ -103,18 +105,51 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	}
 
 	const metaT = await getTranslations({ locale, namespace: "metadata" });
+	const pagePath = getPathname({
+		locale,
+		href: { pathname: "/services/[slug]", params: { slug } },
+	} as Parameters<typeof getPathname>[0]);
+	const pageUrl = `https://daniel-freire.com${pagePath}`;
 
 	return {
 		title: service.title,
 		description: service.text,
+		keywords: [
+			"web development",
+			"AI solutions",
+			"custom software",
+			"LLM integration",
+			"technical consulting",
+			"business software",
+			"SEO audit",
+		],
+		robots: { index: true, follow: true },
+		alternates: {
+			canonical: pagePath,
+			languages: Object.fromEntries(
+				routing.locales.map((cur) => {
+					const curPath = getPathname({
+						locale: cur,
+						href: { pathname: "/services/[slug]", params: { slug } },
+					} as Parameters<typeof getPathname>[0]);
+					return [cur, `https://daniel-freire.com${curPath}`];
+				}),
+			),
+		},
 		openGraph: {
-			title: `${service.title} | ${metaT("opengraphImageAlt")}`,
-			description: service.text,
-			url: "https://daniel-freire.com",
-			siteName: `${service.title} | Daniel Freire`,
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png" }],
-			locale: locale,
 			type: "website",
+			title: `${service.title} | ${metaT("name")}`,
+			description: service.text,
+			url: pageUrl,
+			siteName: `${service.title} | Daniel Freire`,
+			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
+			locale: locale,
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: `${service.title} | ${metaT("name")}`,
+			description: service.text,
+			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
 		},
 	};
 }
@@ -152,76 +187,96 @@ const ServiceDetailPage = ({ params }: Props) => {
 	const descriptionParagraphs = service.longDescription.split("\n\n").filter(Boolean);
 
 	return (
-		<article className="mx-auto max-w-3xl px-4 sm:px-6">
-			{/* Back link */}
-			<TransitionLink
-				href="/services"
-				className="inline-flex items-center gap-1 text-sm text-(--text-tertiary) hover:text-(--text-primary) transition-colors mb-8 whitespace-nowrap">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					className="h-4 w-4"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					strokeWidth={2}
-					aria-hidden="true">
-					<path
-						strokeLinecap="round"
-						strokeLinejoin="round"
-						d="M15 19l-7-7 7-7"
-					/>
-				</svg>
-				{t("metadata.title.services")}
-			</TransitionLink>
-
-			{/* Hero section */}
-			<header className="flex flex-col sm:flex-row items-center gap-6 mb-10">
-				{service.iconLarge && (
-					<div className="shrink-0">
-						<Image
-							src={service.iconLarge}
-							alt={service.title}
-							width={96}
-							height={96}
-							className="service-card-icon"
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(
+						generateBreadcrumbSchema([
+							{ name: "Home", href: `/${locale}` },
+							{ name: "Services", href: `/${locale}/services` },
+							{ name: service.title, href: `/${locale}/services/${slug}` },
+						]),
+					),
+				}}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(generateServiceSchema(service.title, service.text, service.features, slug)),
+				}}
+			/>
+			<article className="mx-auto max-w-3xl px-4 sm:px-6">
+				{/* Back link */}
+				<TransitionLink
+					href="/services"
+					className="inline-flex items-center gap-1 text-sm text-(--text-tertiary) hover:text-(--text-primary) transition-colors mb-8 whitespace-nowrap">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						className="h-4 w-4"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						strokeWidth={2}
+						aria-hidden="true">
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M15 19l-7-7 7-7"
 						/>
-					</div>
+					</svg>
+					{t("metadata.title.services")}
+				</TransitionLink>
+
+				{/* Hero section */}
+				<header className="flex flex-col sm:flex-row items-center gap-6 mb-10">
+					{service.iconLarge && (
+						<div className="shrink-0">
+							<Image
+								src={service.iconLarge}
+								alt={service.title}
+								width={96}
+								height={96}
+								className="service-card-icon"
+							/>
+						</div>
+					)}
+					<h2 className="text-3xl sm:text-4xl font-bold capitalize text-center sm:text-left">{service.title}</h2>
+				</header>
+
+				{/* Long description */}
+				<div className="space-y-4 mb-10">
+					{descriptionParagraphs.map((paragraph) => (
+						<p
+							key={`${slug}-${paragraph.slice(0, 40)}`}
+							className="text-base leading-relaxed text-(--text-secondary)">
+							{paragraph}
+						</p>
+					))}
+				</div>
+
+				{/* Features list */}
+				{service.features.length > 0 && (
+					<section className="mb-10 surface-cards p-6">
+						<h3 className="text-xl font-semibold mb-4">
+							{FEATURES_HEADING[locale as keyof typeof FEATURES_HEADING] ?? FEATURES_HEADING.en}
+						</h3>
+						<ul className="space-y-3 features-list">
+							{service.features.map((feature) => (
+								<li
+									key={`${slug}-${feature}`}
+									className="flex gap-3">
+									<span className="text-base text-(--text-secondary)">{feature}</span>
+								</li>
+							))}
+						</ul>
+					</section>
 				)}
-				<h2 className="text-3xl sm:text-4xl font-bold capitalize text-center sm:text-left">{service.title}</h2>
-			</header>
 
-			{/* Long description */}
-			<div className="space-y-4 mb-10">
-				{descriptionParagraphs.map((paragraph) => (
-					<p
-						key={`${slug}-${paragraph.slice(0, 40)}`}
-						className="text-base leading-relaxed text-(--text-secondary)">
-						{paragraph}
-					</p>
-				))}
-			</div>
-
-			{/* Features list */}
-			{service.features.length > 0 && (
-				<section className="mb-10 surface-cards p-6">
-					<h3 className="text-xl font-semibold mb-4">
-						{FEATURES_HEADING[locale as keyof typeof FEATURES_HEADING] ?? FEATURES_HEADING.en}
-					</h3>
-					<ul className="space-y-3 features-list">
-						{service.features.map((feature) => (
-							<li
-								key={`${slug}-${feature}`}
-								className="flex gap-3">
-								<span className="text-base text-(--text-secondary)">{feature}</span>
-							</li>
-						))}
-					</ul>
-				</section>
-			)}
-
-			{/* CTA */}
-			<div className="text-center mb-10"></div>
-		</article>
+				{/* CTA */}
+				<div className="text-center mb-10"></div>
+			</article>
+		</>
 	);
 };
 

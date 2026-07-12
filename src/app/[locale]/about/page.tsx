@@ -3,6 +3,7 @@ import { use } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { Locale } from "next-intl";
+import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
 
 /** Props for the About page, receiving locale and search params from Next.js. */
 interface Props {
@@ -28,6 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.about"),
 		description: t("description.about"),
+		keywords: ["about Daniel Freire", "web developer background", "marketing to development", "SEO expert developer", "AI developer Portugal"],
+		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/about",
 			languages: {
@@ -36,13 +39,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			},
 		},
 		openGraph: {
-			title: t("opengraphImageAlt"),
-			description: t("description.about"),
-			url: "https://daniel-freire.com",
-			siteName: t("title.about"),
-			images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` }],
-			locale: locale,
 			type: "website",
+			title: t("title.about"),
+			description: t("description.about"),
+			url: "https://daniel-freire.com/about",
+			siteName: t("title.about"),
+			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
+			locale: locale,
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title.about"),
+			description: t("description.about"),
+			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
 		},
 	};
 }
@@ -61,5 +70,20 @@ export default function About({ params }: Props) {
 	const { locale } = use(params);
 	setRequestLocale(locale);
 
-	return <ClientSideAbout />;
+	return (
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(
+						generateBreadcrumbSchema([
+							{ name: "Home", href: `/${locale}` },
+							{ name: "About", href: `/${locale}/about` },
+						]),
+					),
+				}}
+			/>
+			<ClientSideAbout />
+		</>
+	);
 }

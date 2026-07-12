@@ -21,14 +21,23 @@ export default async function manifest({
 
 	return {
 		name: t("name"),
+		short_name: t("name"),
+		description: t("description.home"),
 		start_url: `/${locale}`,
 		theme_color: "#ff7f00",
+		background_color: "#ffffff",
 		display: "standalone",
+		categories: ["portfolio", "web development", "technology"],
 		icons: [
 			{
 				src: "/favicon.ico",
 				sizes: "any",
 				type: "image/x-icon",
+			},
+			{
+				src: "/metadata/apple-icon.png",
+				sizes: "180x180",
+				type: "image/png",
 			},
 		],
 	};

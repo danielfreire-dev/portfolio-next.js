@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { use } from "react";
 import { Locale } from "next-intl";
 import Services from "@/ui/Components/Services";
+import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -24,6 +25,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.services"),
 		description: t("description.services"),
+		keywords: [
+			"web development services",
+			"AI solutions",
+			"custom software",
+			"LLM integration",
+			"technical consulting",
+			"custom CRM",
+			"AI agents",
+		],
+		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/services",
 			languages: {
@@ -32,13 +43,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			},
 		},
 		openGraph: {
-			title: t("opengraphImageAlt"),
-			description: t("description.services"),
-			url: "https://daniel-freire.com",
-			siteName: `${t("title.services")} | Daniel Freire`,
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png" }],
-			locale: locale,
 			type: "website",
+			title: t("title.services"),
+			description: t("description.services"),
+			url: "https://daniel-freire.com/services",
+			siteName: `${t("title.services")} | Daniel Freire`,
+			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
+			locale: locale,
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title.services"),
+			description: t("description.services"),
+			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
 		},
 	};
 }
@@ -53,7 +70,22 @@ const ServicesPage = ({ params }: Props) => {
 	const { locale } = use(params);
 	setRequestLocale(locale);
 
-	return <Services />;
+	return (
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(
+						generateBreadcrumbSchema([
+							{ name: "Home", href: `/${locale}` },
+							{ name: "Services", href: `/${locale}/services` },
+						]),
+					),
+				}}
+			/>
+			<Services />
+		</>
+	);
 };
 
 export default ServicesPage;

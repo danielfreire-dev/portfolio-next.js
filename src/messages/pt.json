@@ -63,7 +63,7 @@
 			"url": "/contact"
 		},
 		{
-			"alt": "lápis",
+			"alt": "Lápis coloridos representando cuidado e manutenção contínua para ativos digitais",
 			"cta": "cuide dos seus ativos digitais",
 			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
 			"id": 6,
@@ -214,11 +214,11 @@
 	"metadata": {
 		"description": {
 			"about": "Conhece o Daniel Freire — um programador web especializado em aplicações com IA, integração de LLMs e soluções web de alto desempenho.",
-			"contact": "Este é o melhor local para contactares o Daniel",
-			"home": "Introdução do Daniel",
+			"contact": "Entra em contacto com o Daniel Freire para desenvolvimento web, soluções de IA e consultoria técnica. Resposta rápida garantida.",
+			"home": "Daniel Freire — Programador Web especializado em aplicações com IA, software personalizado e websites de alto desempenho. Baseado em Portugal, ao serviço de clientes em todo o mundo.",
 			"impressum": "",
-			"portfolio": "Este é o local onde o Daniel publicará o seu trabalho favorito",
-			"privacyPolicy": "Fica a saber mais sobre os teus direitos.",
+			"portfolio": "Explora o portfólio de projetos de desenvolvimento web do Daniel Freire, incluindo apps React, ferramentas com IA e soluções de software empresarial personalizadas.",
+			"privacyPolicy": "Fica a saber como o Daniel Freire recolhe, utiliza e protege os teus dados pessoais. Práticas de privacidade transparentes em conformidade com o RGPD.",
 			"services": "Aplicações web com IA, integração de LLMs e desenvolvimento web de alto desempenho por Daniel Freire. Software personalizado, agentes de IA e consultoria técnica com entrega ágil."
 		},
 		"name": "Daniel Freire",

@@ -3,6 +3,7 @@ import WebsiteCards from "../../../ui/Components/WebsiteCards";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
+import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -24,6 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.portfolio"),
 		description: t("description.portfolio"),
+		keywords: [
+			"web development portfolio",
+			"React projects",
+			"AI tools",
+			"business software",
+			"Next.js projects",
+			"full-stack portfolio",
+		],
+		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/portfolio",
 			languages: {
@@ -32,13 +42,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			},
 		},
 		openGraph: {
-			title: t("opengraphImageAlt"),
-			description: t("description.portfolio"),
-			url: "https://daniel-freire.com",
-			siteName: `${t("title.portfolio")} | Daniel Freire`,
-			images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` }],
-			locale: locale,
 			type: "website",
+			title: t("title.portfolio"),
+			description: t("description.portfolio"),
+			url: "https://daniel-freire.com/portfolio",
+			siteName: `${t("title.portfolio")} | Daniel Freire`,
+			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
+			locale: locale,
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title.portfolio"),
+			description: t("description.portfolio"),
+			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
 		},
 	};
 }
@@ -56,6 +72,17 @@ const Portfolio = ({ params }: Props) => {
 
 	return (
 		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(
+						generateBreadcrumbSchema([
+							{ name: "Home", href: `/${locale}` },
+							{ name: "Portfolio", href: `/${locale}/portfolio` },
+						]),
+					),
+				}}
+			/>
 			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}!</h2>
 
 			<WebsiteCards />

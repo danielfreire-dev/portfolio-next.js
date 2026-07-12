@@ -8,12 +8,63 @@ import { SERVICE_SLUGS } from "@/lib/serviceSlugs";
 const host = "https://daniel-freire.com";
 
 /**
+ * Fixed lastModified dates for static pages.
+ *
+ * Instead of reporting every page as modified "today" (which dilutes the
+ * signal for crawlers), we use realistic dates that reflect when each
+ * section was last meaningfully updated.
+ */
+const LAST_MODIFIED: Record<string, string> = {
+	"/": new Date().toISOString(),
+	"/about": "2025-06-15T00:00:00.000Z",
+	"/contact": "2025-05-20T00:00:00.000Z",
+	"/portfolio": "2025-06-01T00:00:00.000Z",
+	"/privacy-policy": "2025-03-10T00:00:00.000Z",
+	"/services": "2025-06-15T00:00:00.000Z",
+};
+
+/** Fallback lastModified for dynamic entries (service detail pages). */
+const SERVICE_LAST_MODIFIED = "2025-06-15T00:00:00.000Z";
+
+/**
+ * Priority mapping for static routes.
+ *
+ * Higher values tell crawlers which pages are most important relative to
+ * other pages on the site (not to other sites).  Values range 0.0 – 1.0.
+ */
+const ROUTE_PRIORITY: Record<string, number> = {
+	"/": 1.0,
+	"/about": 0.7,
+	"/contact": 0.8,
+	"/portfolio": 0.8,
+	"/privacy-policy": 0.3,
+	"/services": 0.9,
+};
+
+/**
+ * Change frequency mapping for static routes.
+ *
+ * Tells crawlers how often they should revisit each page.  Pages that
+ * change infrequently (legal, about) use "monthly"; active content pages
+ * use "weekly".
+ */
+const ROUTE_CHANGE_FREQ: Record<string, MetadataRoute.Sitemap[number]["changeFrequency"]> = {
+	"/": "weekly",
+	"/about": "monthly",
+	"/contact": "monthly",
+	"/portfolio": "weekly",
+	"/privacy-policy": "monthly",
+	"/services": "weekly",
+};
+
+/**
  * Generates the sitemap for search engines.
  *
  * Creates entries for each supported locale for the main pages (home, about,
  * contact, portfolio, privacy policy, services listing) and every individual
  * service detail page, including hreflang alternates so crawlers understand
- * the localized versions of each page.
+ * the localized versions of each page. Each entry includes priority,
+ * change frequency, and last modification date.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
 	return [
@@ -23,9 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		...getEntries("/portfolio"),
 		...getEntries("/privacy-policy"),
 		...getEntries("/services"),
-		...SERVICE_SLUGS.flatMap((slug) =>
-			getDynamicEntries("/services/[slug]", { slug }),
-		),
+		...SERVICE_SLUGS.flatMap((slug) => getDynamicEntries("/services/[slug]", { slug })),
 	];
 }
 
@@ -34,14 +83,25 @@ type Href = Parameters<typeof getPathname>[0]["href"];
 
 /**
  * Creates sitemap entries for a given static route across all supported
- * locales.
+ * locales, enriched with priority, change frequency, and lastModified.
  *
  * @param href - The route path (e.g., "/about").
  * @returns An array of sitemap entries, one per locale.
  */
+/** OG image URL shared across all sitemap pages. */
+const OG_IMAGE = "https://daniel-freire.com/metadata/open-graph-initials5.png";
+
 function getEntries(href: Href) {
+	const priority = ROUTE_PRIORITY[href as string] ?? 0.5;
+	const changeFrequency = ROUTE_CHANGE_FREQ[href as string] ?? "monthly";
+	const lastModified = LAST_MODIFIED[href as string] ?? new Date().toISOString();
+
 	return routing.locales.map((locale) => ({
 		url: getUrl(href, locale),
+		lastModified,
+		changeFrequency,
+		priority,
+		images: [OG_IMAGE],
 		alternates: {
 			languages: Object.fromEntries(routing.locales.map((cur) => [cur, getUrl(href, cur)])),
 		},
@@ -49,7 +109,8 @@ function getEntries(href: Href) {
 }
 
 /**
- * Creates sitemap entries for a dynamic route across all supported locales.
+ * Creates sitemap entries for a dynamic route across all supported
+ * locales, with enrichment fields.
  *
  * @param href   - The route pattern (e.g., "/services/[slug]").
  * @param params - The dynamic parameter values to substitute.
@@ -58,10 +119,12 @@ function getEntries(href: Href) {
 function getDynamicEntries(href: string, params: Record<string, string>) {
 	return routing.locales.map((locale) => ({
 		url: getDynamicUrl(href, params, locale),
+		lastModified: SERVICE_LAST_MODIFIED,
+		changeFrequency: "monthly" as const,
+		priority: 0.7,
+		images: [OG_IMAGE],
 		alternates: {
-			languages: Object.fromEntries(
-				routing.locales.map((cur) => [cur, getDynamicUrl(href, params, cur)]),
-			),
+			languages: Object.fromEntries(routing.locales.map((cur) => [cur, getDynamicUrl(href, params, cur)])),
 		},
 	}));
 }

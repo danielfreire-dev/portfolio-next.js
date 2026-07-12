@@ -11,6 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/providers/CookieBanner";
 import GoogleAnalytics from "@/providers/GoogleAnalytics";
 import { Suspense } from "react";
+import { generatePersonSchema, generateWebSiteSchema } from "@/ui/Components/StructuredData";
 
 /**
  * Static metadata for the root layout.
@@ -26,18 +27,38 @@ export const metadata: Metadata = {
 	},
 	authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
 	creator: "Daniel Freire",
-	keywords: ["Daniel Freire", "Portfolio", "Next.js", "React", "TypeScript", "JavaScript", "Digital Marketing"],
+	keywords: [
+		"Daniel Freire",
+		"web developer",
+		"AI applications",
+		"LLM integration",
+		"custom software",
+		"high-performance websites",
+		"Next.js",
+		"React",
+		"TypeScript",
+		"frontend developer",
+		"full-stack developer",
+		"Portugal",
+	],
+	verification: {
+		google: process.env.GOOGLE_SITE_VERIFICATION,
+		other: {
+			"msvalidate.01": process.env.BING_SITE_VERIFICATION as string,
+		},
+	},
 	formatDetection: {
 		email: false,
 		address: false,
 		telephone: false,
 	},
-	metadataBase: new URL("https://www.daniel-freire.com/"),
+	metadataBase: new URL("https://daniel-freire.com/"),
 
 	openGraph: {
 		type: "website",
-
-		images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` }],
+		siteName: "Daniel Freire",
+		locale: "en_US",
+		images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png`, width: 1200, height: 630 }],
 	},
 };
 
@@ -132,6 +153,14 @@ export default async function RootLayout({
 		<html
 			lang={locale}
 			suppressHydrationWarning>
+			<head>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify([generatePersonSchema(), generateWebSiteSchema()]),
+					}}
+				/>
+			</head>
 			<SpeedInsights />
 			<Suspense fallback={null}>
 				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
