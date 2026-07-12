@@ -63,7 +63,7 @@
 			"url": "/contact"
 		},
 		{
-			"alt": "pencils",
+			"alt": "Colorful pencils representing ongoing care and maintenance for digital assets",
 			"cta": "care for your digital assets",
 			"description": "Websites require consistent care to remain secure, functional, and competitive. Our comprehensive maintenance packages provide proactive monitoring, immediate issue resolution, and continuous technological updates.",
 			"id": 6,
@@ -214,11 +214,11 @@
 	"metadata": {
 		"description": {
 			"about": "Learn about Daniel Freire — a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
-			"contact": "This is the best place to contact Daniel",
-			"home": "Daniel's Introduction",
+			"contact": "Get in touch with Daniel Freire for web development, AI solutions, and technical consulting. Fast, responsive communication guaranteed.",
+			"home": "Daniel Freire — Web Developer specializing in AI-powered applications, custom software, and high-performance websites. Based in Portugal, serving clients worldwide.",
 			"impressum": "",
-			"portfolio": "This is where Daniel will publish his favourite work",
-			"privacyPolicy": "Find out more about your rights.",
+			"portfolio": "Explore Daniel Freire's portfolio of web development projects, including React apps, AI-powered tools, and custom business software solutions.",
+			"privacyPolicy": "Learn how Daniel Freire collects, uses, and protects your personal data. Transparent privacy practices in compliance with GDPR.",
 			"services": "AI-powered web applications, LLM integration, and high-performance web development by Daniel Freire. Custom software, AI agents, and technical consulting with agile product delivery."
 		},
 		"name": "Daniel Freire",
