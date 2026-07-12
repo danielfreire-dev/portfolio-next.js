@@ -7,8 +7,24 @@ import { SERVICE_SLUGS } from "@/lib/serviceSlugs";
 /** Base URL for all sitemap entries. */
 const host = "https://daniel-freire.com";
 
-/** Today's date in ISO format — used as the default lastModified for all sitemap entries. */
-const TODAY = new Date().toISOString();
+/**
+ * Fixed lastModified dates for static pages.
+ *
+ * Instead of reporting every page as modified "today" (which dilutes the
+ * signal for crawlers), we use realistic dates that reflect when each
+ * section was last meaningfully updated.
+ */
+const LAST_MODIFIED: Record<string, string> = {
+	"/": new Date().toISOString(),
+	"/about": "2025-06-15T00:00:00.000Z",
+	"/contact": "2025-05-20T00:00:00.000Z",
+	"/portfolio": "2025-06-01T00:00:00.000Z",
+	"/privacy-policy": "2025-03-10T00:00:00.000Z",
+	"/services": "2025-06-15T00:00:00.000Z",
+};
+
+/** Fallback lastModified for dynamic entries (service detail pages). */
+const SERVICE_LAST_MODIFIED = "2025-06-15T00:00:00.000Z";
 
 /**
  * Priority mapping for static routes.
@@ -72,15 +88,20 @@ type Href = Parameters<typeof getPathname>[0]["href"];
  * @param href - The route path (e.g., "/about").
  * @returns An array of sitemap entries, one per locale.
  */
+/** OG image URL shared across all sitemap pages. */
+const OG_IMAGE = "https://daniel-freire.com/metadata/open-graph-initials5.png";
+
 function getEntries(href: Href) {
 	const priority = ROUTE_PRIORITY[href as string] ?? 0.5;
 	const changeFrequency = ROUTE_CHANGE_FREQ[href as string] ?? "monthly";
+	const lastModified = LAST_MODIFIED[href as string] ?? new Date().toISOString();
 
 	return routing.locales.map((locale) => ({
 		url: getUrl(href, locale),
-		lastModified: TODAY,
+		lastModified,
 		changeFrequency,
 		priority,
+		images: [OG_IMAGE],
 		alternates: {
 			languages: Object.fromEntries(routing.locales.map((cur) => [cur, getUrl(href, cur)])),
 		},
@@ -98,9 +119,10 @@ function getEntries(href: Href) {
 function getDynamicEntries(href: string, params: Record<string, string>) {
 	return routing.locales.map((locale) => ({
 		url: getDynamicUrl(href, params, locale),
-		lastModified: TODAY,
+		lastModified: SERVICE_LAST_MODIFIED,
 		changeFrequency: "monthly" as const,
 		priority: 0.7,
+		images: [OG_IMAGE],
 		alternates: {
 			languages: Object.fromEntries(routing.locales.map((cur) => [cur, getDynamicUrl(href, params, cur)])),
 		},
