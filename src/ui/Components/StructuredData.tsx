@@ -74,6 +74,16 @@ interface ServiceSchema {
 	};
 }
 
+/** Schema.org ContactPoint — how to reach the person/business. */
+interface ContactPointSchema {
+	"@context": "https://schema.org";
+	"@type": "ContactPoint";
+	contactType: string;
+	email: string;
+	url: string;
+	availableLanguage: string[];
+}
+
 // ---------------------------------------------------------------------------
 // Shared constants
 // ---------------------------------------------------------------------------
@@ -196,5 +206,24 @@ export function generateServiceSchema(
 					})),
 				}
 			:	undefined,
+	};
+}
+
+/**
+ * Generates the ContactPoint schema for the contact page.
+ *
+ * Signals to search engines the preferred method of contact (email),
+ * supported languages, and the contact page URL.
+ *
+ * @returns A ContactPoint schema.
+ */
+export function generateContactPointSchema(): ContactPointSchema {
+	return {
+		"@context": "https://schema.org",
+		"@type": "ContactPoint",
+		contactType: "customer service",
+		email: "hello@daniel-freire.com",
+		url: `${BASE_URL}/contact`,
+		availableLanguage: ["English", "Portuguese", "Danish", "Polish", "German", "Czech"],
 	};
 }

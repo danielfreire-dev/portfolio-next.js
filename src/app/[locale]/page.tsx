@@ -28,6 +28,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.home"),
 		description: t("description.home"),
+		keywords: [
+			"web developer",
+			"AI applications",
+			"custom software",
+			"high-performance websites",
+			"Daniel Freire",
+			"full-stack developer",
+			"Portugal",
+		],
 		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/",

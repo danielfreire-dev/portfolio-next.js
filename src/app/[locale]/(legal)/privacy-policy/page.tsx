@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.privacyPolicy"),
 		description: t("description.privacyPolicy"),
-		robots: { index: true, follow: true },
+		robots: { index: false, follow: true },
 		alternates: {
-			canonical: "https://daniel-freire.com/privacy-policy",
+			canonical: "/privacy-policy",
 			languages: {
 				en: "https://daniel-freire.com/en/privacy-policy",
 				pt: "https://daniel-freire.com/pt/privacy-policy",

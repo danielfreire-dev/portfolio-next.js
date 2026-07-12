@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.about"),
 		description: t("description.about"),
+		keywords: ["about Daniel Freire", "web developer background", "marketing to development", "SEO expert developer", "AI developer Portugal"],
 		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/about",

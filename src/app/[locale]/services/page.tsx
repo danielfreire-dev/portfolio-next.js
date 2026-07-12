@@ -25,6 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.services"),
 		description: t("description.services"),
+		keywords: [
+			"web development services",
+			"AI solutions",
+			"custom software",
+			"LLM integration",
+			"technical consulting",
+			"custom CRM",
+			"AI agents",
+		],
 		robots: { index: true, follow: true },
 		alternates: {
 			canonical: "/services",
