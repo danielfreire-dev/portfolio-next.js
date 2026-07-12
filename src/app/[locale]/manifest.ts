@@ -27,6 +27,7 @@ export default async function manifest({
 		theme_color: "#ff7f00",
 		background_color: "#ffffff",
 		display: "standalone",
+		categories: ["portfolio", "web development", "technology"],
 		icons: [
 			{
 				src: "/favicon.ico",

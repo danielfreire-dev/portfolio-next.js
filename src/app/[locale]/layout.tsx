@@ -56,8 +56,9 @@ export const metadata: Metadata = {
 
 	openGraph: {
 		type: "website",
-
-		images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` }],
+		siteName: "Daniel Freire",
+		locale: "en_US",
+		images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png`, width: 1200, height: 630 }],
 	},
 };
 
