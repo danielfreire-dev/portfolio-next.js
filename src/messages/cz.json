@@ -242,45 +242,67 @@
 		"pageTitle": "portfolio",
 		"projects": [
 			{
+				"demo": "Živě",
+				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
 				"summary": "Hra na otázky s více než 4 000 otázkami.",
 				"title": "quizzical"
 			},
 			{
+				"demo": "Živě",
+				"github": "https://github.com/danielfreire-dev/PollyGlot",
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.webp",
 				"summary": "Překladová aplikace s AI.",
 				"title": "pollyGlot"
 			},
 			{
-				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
+				"demo": "Živě",
+				"github": "",
+				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
 				"summary": "Zábavný projekt na simulaci bicích nástrojů na počítači.",
 				"title": "aplikace bicích"
 			},
 			{
+				"demo": "Živě",
+				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
 				"summary": "Nejpopulárnější kostková hra na světě, nyní ve vašem prohlížeči.",
 				"title": "tenzi"
+			},
+			{
+				"demo": "Živě",
+				"github": "",
+				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
+				"src": "/images/screenshots/dodgy-daniel.webp",
+				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"title": "dodgy Daniel"
 			}
 		],
 		"projects-title": "Projekty",
 		"websites": [
 			{
+				"demo": "Živě",
+				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
 				"summary": "MuraRyu je nová společnost v Portugalsku pro správu bytových domů.",
 				"title": "muraRyu"
 			},
 			{
+				"demo": "Živě",
+				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
 				"summary": "Galerie vytvořená pro prezentaci děl známého portugalského umělce Victóa.",
 				"title": "galerie Victóa"
 			},
 			{
+				"demo": "Živě",
+				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
 				"summary": "Webové stránky vytvořené jako kontaktní místo pro architektonické kolektiv Insurbia.",

@@ -242,6 +242,7 @@
 		"pageTitle": "portfolio",
 		"projects": [
 			{
+				"demo": "Live",
 				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
@@ -249,6 +250,7 @@
 				"title": "quizzical"
 			},
 			{
+				"demo": "Live",
 				"github": "https://github.com/danielfreire-dev/PollyGlot",
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.webp",
@@ -256,23 +258,34 @@
 				"title": "pollyGlot"
 			},
 			{
+				"demo": "Live",
 				"github": "",
-				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
+				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
 				"summary": "Fun project to reproduce a Drum Kit in your PC.",
 				"title": "drum kit app"
 			},
 			{
+				"demo": "Live",
 				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
 				"summary": "The world's most popular dice game, now in your browser.",
 				"title": "tenzi"
+			},
+			{
+				"demo": "Live",
+				"github": "",
+				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
+				"src": "/images/screenshots/dodgy-daniel.webp",
+				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"title": "dodgy Daniel"
 			}
 		],
 		"projects-title": "Projects",
 		"websites": [
 			{
+				"demo": "Live",
 				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
@@ -280,6 +293,7 @@
 				"title": "muraRyu"
 			},
 			{
+				"demo": "Live",
 				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
@@ -287,6 +301,7 @@
 				"title": "victó's art gallery"
 			},
 			{
+				"demo": "Live",
 				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",

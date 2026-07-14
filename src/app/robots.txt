@@ -1,4 +1,0 @@
-# Allow all crawlers full access and point them to the sitemap.
-User-Agent: *
-Allow: /*
-Sitemap: https://daniel-freire.com/sitemap.xml
