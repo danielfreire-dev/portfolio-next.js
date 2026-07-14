@@ -12,7 +12,7 @@
 - [src/i18n/navigation.ts](src/i18n/navigation.ts): i18n-aware navigation primitives (Link, redirect, usePathname, useRouter, getPathname)
 - [src/app/sitemap.ts](src/app/sitemap.ts): Sitemap generation with hreflang alternates for all locales
 - [src/app/manifest.ts](src/app/manifest.ts): Web App Manifest for PWA support (standalone display, theme colour)
-- [src/app/robots.txt](src/app/robots.txt): Robots.txt — allows all crawlers, points to sitemap
+- [src/app/robots.ts](src/app/robots.ts): Robots.txt — allows all crawlers, points to sitemap (programmatic generation)
 - [envConfig.ts](envConfig.ts): Environment variable loader using @next/env
 - [postcss.config.mjs](postcss.config.mjs): PostCSS configuration with Tailwind CSS v4 plugin and custom fade-in-up animation
 - [eslint.config.mjs](eslint.config.mjs): ESLint flat config — TypeScript, React, JSX-a11y, i18n, CSS, Markdown, JSON linting
