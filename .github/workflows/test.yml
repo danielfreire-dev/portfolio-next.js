@@ -1,18 +1,18 @@
-name: Tests for Next.js app
+name: Test & Build
 
 on:
   pull_request:
-    branches: ["dev"]
+    branches: ["dev", "main"]
+  push:
+    branches: ["dev", "main"]
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
-  tests:
-    name: Tests for Next.js app
+  # ── Static analysis + type checking + unit tests ──────────────────────
+  check:
+    name: Lint, TypeCheck & Unit Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -29,16 +29,147 @@ jobs:
         with:
           version: 10
 
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      - name: Run lint tests
-        run: pnpm run lint || true
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Type check
+        run: pnpm exec tsc --noEmit
+
+      - name: Unit tests with coverage
+        run: pnpm run test:coverage
+
+      - name: Upload coverage to Codecov
+        if: github.event_name == 'pull_request'
+        uses: codecov/codecov-action@v5
+        with:
+          files: ./coverage/coverage-final.json
+          flags: unittests
         continue-on-error: true
 
-      - name: Fix lint
-        run: pnpm run lint-fix || true
-        continue-on-error: true
+  # ── Build verification ────────────────────────────────────────────────
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: check
 
-      - name: Run tests
-        run: pnpm run test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('pnpm-lock.yaml') }}-
+            ${{ runner.os }}-nextjs-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+        env:
+          # Supply dummy values so next build doesn't fail on missing env vars
+          RESEND_API_KEY: "re_test_dummy"
+          DATA_EMAIL: "test@example.com"
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: "1x00000000000000000000AA"
+          TURNSTILE_SECRET_KEY: "1x0000000000000000000000000000000AA"
+          NEXT_PUBLIC_POSTHOG_KEY: "phc_dummy"
+          NEXT_PUBLIC_POSTHOG_HOST: "https://app.posthog.com"
+          NEXT_PUBLIC_GA4: "G-XXXXXXXXXX"
+
+  # ── E2E tests (Cypress) ───────────────────────────────────────────────
+  e2e:
+    name: E2E Tests (Cypress)
+    runs-on: ubuntu-latest
+    needs: build
+    # Only run on PRs (skip on push to keep CI fast)
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/pnpm/store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          start: pnpm run dev
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 60
+          browser: chrome
+        env:
+          RESEND_API_KEY: "re_test_dummy"
+          DATA_EMAIL: "test@example.com"
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: "1x00000000000000000000AA"
+          TURNSTILE_SECRET_KEY: "1x0000000000000000000000000000000AA"
+          NEXT_PUBLIC_POSTHOG_KEY: "phc_dummy"
+          NEXT_PUBLIC_POSTHOG_HOST: "https://app.posthog.com"
+          NEXT_PUBLIC_GA4: "G-XXXXXXXXXX"
+
+      - name: Upload E2E screenshots (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          retention-days: 7
+
+      - name: Upload E2E videos
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          retention-days: 7

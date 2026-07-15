@@ -1,6 +1,7 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
+		"imageAlt": "oil painting of Daniel",
 		"paragraph1": "Od dwóch lat tworzę rzeczy w sieci. Ale moja perspektywa na to, co budować i dlaczego, ukształtowała się na długo przed napisaniem pierwszej linijki kodu.",
 		"paragraph2": "Wszedłem do tej branży z marketingu, ale nie z tej strony, którą możesz sobie wyobrażać. Mój świat był mniej o kampaniach, a więcej o wzorcach: analizowaniu danych rynkowych, rozszyfrowywaniu zachowań użytkowników i zrozumieniu precyzyjnych mechanizmów, w jaki sposób ludzie znajdują i korzystają z produktu online. SEO i SEM, w swojej istocie, to po prostu zastosowana psychologia i rozwiązywanie problemów. Uczysz się słuchać, co dane krzyczą, a co ważniejsze, co szepczą.",
 		"paragraph3": "To jest tło, które wniosę do każdego projektu developerskiego. Większość developerów potrafi pisać elegancki kod; moim skupieniem jest budowanie eleganckich rozwiązań. Jest tu kluczowa różnica.",
@@ -8,8 +9,7 @@
 		"paragraph5": "Oto, w czym błądzi wielu utalentowanych developerów: budują dla urządzenia. Budują zgodnie ze specyfikacją. Ale zapominają budować dla człowieka po drugiej stronie i dla celu biznesowego, który czyni projekt wartym zachodu. Moje doświadczenie pozwala mi funkcjonować na tym przecięciu. Potrafię przetłumaczyć potrzebę biznesową na wymaganie techniczne nie jako abstrakcyjny koncept, lecz jako przeżyte doświadczenie. Byłem osobą proszącą o dane, a teraz jestem osobą budującą systemy, które je dostarczają.",
 		"paragraph6": "Niezależnie od tego, czy to aplikacja webowa z AI, elegancki front-end, solidny panel admina Django czy pełna aplikacja full-stack w Node.js, pytanie, od którego zawsze zaczynam, brzmi: \"Co tak naprawdę rozwiązujemy?\" Technologia jest środkiem do celu. Prawdziwe kunszt polega na wyborze właściwego narzędzia do pracy i używaniu go z mądrością płynącą ze zrozumienia, na czym ta praca tak naprawdę polega.",
 		"paragraph7": "Nie tylko buduję rzeczy poprawnie. Buduję właściwe rzeczy.",
-		"title1": "Budowanie dla Człowieka Za Ekranem",
-		"imageAlt": "oil painting of Daniel"
+		"title1": "Budowanie dla Człowieka Za Ekranem"
 	},
 	"carousel": [
 		{
@@ -75,13 +75,12 @@
 	],
 	"contact": {
 		"btn": "wyślij wiadomość",
-		"sending": "wysyłanie…",
 		"email": "e-mail",
 		"errors": {
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
 			"sendFailed": "Failed to send message. Please try again.",
 			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
 			"turnstileExpired": "Security check expired. Please verify again.",
 			"turnstileFailed": "Security check failed. Please try again.",
 			"turnstileNotVerified": "Please verify you are not a robot",
@@ -92,6 +91,7 @@
 			"title": "dziękuję"
 		},
 		"firstName": "imię",
+		"formAriaLabel": "Contact form",
 		"label": "Przeczytałem/am i zgadzam się z ",
 		"lastName": "nazwisko",
 		"message": "wiadomość",
@@ -111,9 +111,9 @@
 		"privacyPolicyUrlAriaLabel": "Polityka Prywatności",
 		"privacyPolicyUrlTitle": "Polityka Prywatności",
 		"required": "wymagane",
-		"title": "skontaktuj się",
-		"formAriaLabel": "Contact form",
-		"requiredIndicator": "required"
+		"requiredIndicator": "required",
+		"sending": "wysyłanie…",
+		"title": "skontaktuj się"
 	},
 	"cookies": {
 		"buttonText": "Zaakceptuj Wszystkie",
@@ -194,18 +194,18 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides",
 		"leftarrow": {
 			"alt": "strzałka w lewo",
-			"src": "/images/icons/chevron-left.svg",
-			"label": "Previous slide"
+			"label": "Previous slide",
+			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "strzałka w prawo",
-			"src": "/images/icons/chevron-right.svg",
-			"label": "Next slide"
-		},
-		"carouselLabel": "Portfolio carousel",
-		"carouselSlidesLabel": "Carousel slides"
+			"label": "Next slide",
+			"src": "/images/icons/chevron-right.svg"
+		}
 	},
 	"localeSwitcher": {
 		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
@@ -239,6 +239,7 @@
 	"portfolio": {
 		"all": "Wszystkie",
 		"cta": ["sprawdź to", "zobacz żywy projekt →"],
+		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -309,8 +310,7 @@
 				"title": "insurbia"
 			}
 		],
-		"websites-title": "Strony Internetowe",
-		"opensInNewTab": "opens in new tab"
+		"websites-title": "Strony Internetowe"
 	},
 	"privacyPolicy": {
 		"contactEmail": "gdpr@daniel-freire.com",
@@ -350,12 +350,6 @@
 	},
 	"services": [
 		{
-			"slug": "dedykowane-oprogramowanie-biznesowe",
-			"icon": "/images/icons/business-processes.svg",
-			"iconLarge": "/images/icons/business-processes.svg",
-			"text": "Aplikacje internetowe szyte na miarę — systemy CRM, pulpity nawigacyjne i narzędzia wewnętrzne zbudowane z modularnych komponentów i zwinnego dostarczania, dopasowane do sposobu działania Twojej firmy.",
-			"title": "Dedykowane Oprogramowanie Biznesowe",
-			"longDescription": "Każda firma ma unikalne procesy, przepływy pracy i wyzwania — a oprogramowanie, którego używasz, powinno to odzwierciedlać. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych, które dostosowują się do rzeczywistego sposobu działania Twojej firmy, zamiast zmuszać Twój zespół do dostosowywania się do gotowego oprogramowania. Dostarczam w metodyce zwinnej, koncentrując się na MVP i szybkich cyklach informacji zwrotnej, abyś widział wartość wcześnie i iterował na podstawie rzeczywistego użytkowania.\n\nOd systemów CRM zaprojektowanych dla Twojego konkretnego cyklu sprzedaży po pulpity nawigacyjne pokazujące dokładnie te wskaźniki, których potrzebujesz — każdy projekt zaczyna się od dogłębnej analizy Twoich procesów biznesowych. Rezultatem jest narzędzie, którego Twój zespół będzie faktycznie chciał używać — ponieważ zostało zbudowane dla niego.\n\nKorzystając z technologii takich jak React, Next.js i PostgreSQL — wdrażanych na AWS z architekturą cloud-native — buduję modularne, wielokrotnego użytku komponenty, które czynią Twoje rozwiązanie solidnym, skalowalnym i łatwym w utrzymaniu wraz z rozwojem Twojej firmy.",
 			"features": [
 				"Systemy CRM dostosowane do Twojego procesu sprzedaży",
 				"Niestandardowe pulpity analityczne i raporty",
@@ -365,15 +359,15 @@
 				"Panele administracyjne ze szczegółową kontrolą dostępu",
 				"Rozwój MVP z szybkimi cyklami informacji zwrotnej",
 				"Architektura cloud-native wdrożona na AWS"
-			]
+			],
+			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
+			"longDescription": "Każda firma ma unikalne procesy, przepływy pracy i wyzwania — a oprogramowanie, którego używasz, powinno to odzwierciedlać. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych, które dostosowują się do rzeczywistego sposobu działania Twojej firmy, zamiast zmuszać Twój zespół do dostosowywania się do gotowego oprogramowania. Dostarczam w metodyce zwinnej, koncentrując się na MVP i szybkich cyklach informacji zwrotnej, abyś widział wartość wcześnie i iterował na podstawie rzeczywistego użytkowania.\n\nOd systemów CRM zaprojektowanych dla Twojego konkretnego cyklu sprzedaży po pulpity nawigacyjne pokazujące dokładnie te wskaźniki, których potrzebujesz — każdy projekt zaczyna się od dogłębnej analizy Twoich procesów biznesowych. Rezultatem jest narzędzie, którego Twój zespół będzie faktycznie chciał używać — ponieważ zostało zbudowane dla niego.\n\nKorzystając z technologii takich jak React, Next.js i PostgreSQL — wdrażanych na AWS z architekturą cloud-native — buduję modularne, wielokrotnego użytku komponenty, które czynią Twoje rozwiązanie solidnym, skalowalnym i łatwym w utrzymaniu wraz z rozwojem Twojej firmy.",
+			"slug": "dedykowane-oprogramowanie-biznesowe",
+			"text": "Aplikacje internetowe szyte na miarę — systemy CRM, pulpity nawigacyjne i narzędzia wewnętrzne zbudowane z modularnych komponentów i zwinnego dostarczania, dopasowane do sposobu działania Twojej firmy.",
+			"title": "Dedykowane Oprogramowanie Biznesowe"
 		},
 		{
-			"slug": "wdrazanie-rozwiazan-ai",
-			"icon": "/images/icons/ai-recommend.svg",
-			"iconLarge": "/images/icons/ai-recommend.svg",
-			"text": "Aplikacje webowe z AI i integracja LLM — chatboty, agenci AI i doświadczenia użytkownika oparte na AI, które transformują Twoje procesy.",
-			"title": "Wdrażanie Rozwiązań AI",
-			"longDescription": "Sztuczna inteligencja przestała być futurystyczną obietnicą, a stała się realną przewagą konkurencyjną — gdy jest stosowana z celem. Buduję aplikacje webowe z AI, które integrują Wielkie Modele Językowe (LLM) w istniejących przepływach pracy w praktyczny i mierzalny sposób, bez niepotrzebnej złożoności.\n\nNiezależnie od tego, czy jest to inteligentny chatbot redukujący liczbę zgłoszeń wsparcia o 40%, silnik rekomendacji zwiększający średnią wartość zamówienia, czy orkiestracja agentów AI automatyzująca złożone, wieloetapowe procesy biznesowe — uwaga zawsze skupia się na wyniku biznesowym, a nie technologii dla samej technologii. Każde rozwiązanie jest projektowane z myślą o doświadczeniu użytkownika opartym na AI, które wydaje się naturalne i intuicyjne dla Twojego zespołu i klientów.\n\nPracuję z API takimi jak OpenAI, open-source'owymi LLM-ami, wektorowymi bazami danych do wyszukiwania semantycznego i architekturami RAG (Retrieval-Augmented Generation), aby tworzyć rozwiązania AI rozumiejące unikalny kontekst Twojego biznesu.",
 			"features": [
 				"Rozwój aplikacji webowych z AI",
 				"Integracja LLM z OpenAI i modelami open-source",
@@ -384,15 +378,15 @@
 				"Asystenci AI dostosowani do specyfiki Twojego biznesu (RAG)",
 				"Automatyczne generowanie i podsumowywanie treści",
 				"Analityka predykcyjna i pulpity oparte na AI"
-			]
+			],
+			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
+			"longDescription": "Sztuczna inteligencja przestała być futurystyczną obietnicą, a stała się realną przewagą konkurencyjną — gdy jest stosowana z celem. Buduję aplikacje webowe z AI, które integrują Wielkie Modele Językowe (LLM) w istniejących przepływach pracy w praktyczny i mierzalny sposób, bez niepotrzebnej złożoności.\n\nNiezależnie od tego, czy jest to inteligentny chatbot redukujący liczbę zgłoszeń wsparcia o 40%, silnik rekomendacji zwiększający średnią wartość zamówienia, czy orkiestracja agentów AI automatyzująca złożone, wieloetapowe procesy biznesowe — uwaga zawsze skupia się na wyniku biznesowym, a nie technologii dla samej technologii. Każde rozwiązanie jest projektowane z myślą o doświadczeniu użytkownika opartym na AI, które wydaje się naturalne i intuicyjne dla Twojego zespołu i klientów.\n\nPracuję z API takimi jak OpenAI, open-source'owymi LLM-ami, wektorowymi bazami danych do wyszukiwania semantycznego i architekturami RAG (Retrieval-Augmented Generation), aby tworzyć rozwiązania AI rozumiejące unikalny kontekst Twojego biznesu.",
+			"slug": "wdrazanie-rozwiazan-ai",
+			"text": "Aplikacje webowe z AI i integracja LLM — chatboty, agenci AI i doświadczenia użytkownika oparte na AI, które transformują Twoje procesy.",
+			"title": "Wdrażanie Rozwiązań AI"
 		},
 		{
-			"slug": "tworzenie-stron-internetowych",
-			"icon": "/images/icons/dns-services.svg",
-			"iconLarge": "/images/icons/dns-services.svg",
-			"text": "Wysokowydajne aplikacje webowe — szybkie, responsywne strony z modularnymi komponentami, które ładują się natychmiastowo, działają na każdym urządzeniu i zamieniają odwiedzających w klientów.",
-			"title": "Tworzenie Stron Internetowych",
-			"longDescription": "Strona internetowa to nie tylko cyfrowa wizytówka — to Twój najważniejszy zasób marketingowy. Buduję wysokowydajne aplikacje webowe, które ładują się natychmiastowo, działają na każdym urządzeniu i naturalnie prowadzą odwiedzających do działania, które chcesz, aby podjęli. Używając modularnych komponentów i czystej logiki frontendowej, każdy projekt jest architektonicznie zaprojektowany do łatwego utrzymania od pierwszego dnia.\n\nKażdy projekt jest budowany z wydajnością jako priorytetem — optymalizowany pod kątem Core Web Vitals od pierwszej linii kodu. Oznacza to, że Twoja strona nie tylko będzie świetnie wyglądać — będzie faworyzowana przez Google w wynikach wyszukiwania i zapewni płynne doświadczenie użytkownikom. Stosuję zwinne praktyki dostarczania produktów, zaczynając od MVP, aby uzyskać szybką informację zwrotną i iterując na podstawie rzeczywistych danych użytkowników.\n\nOd wysokokonwertujących stron docelowych po pełnofunkcyjne aplikacje internetowe z uwierzytelnianiem, płatnościami i pulpitami nawigacyjnymi — wdrażane na AWS ze skalowalną architekturą chmurową — podchodzę do każdego projektu jak do własnego, ze skrupulatną uwagą na szczegóły i absolutnym skupieniem na wydajności.",
 			"features": [
 				"Strony firmowe i wysokokonwertujące strony docelowe",
 				"Progresywne aplikacje internetowe (PWA) z obsługą offline",
@@ -404,15 +398,15 @@
 				"Szybkie tworzenie MVP do walidacji rynkowej",
 				"Wdrażanie w chmurze AWS ze skalowalną architekturą",
 				"Modularne, wielokrotnego użytku biblioteki komponentów do łatwej w utrzymaniu logiki frontendu"
-			]
+			],
+			"icon": "/images/icons/dns-services.svg",
+			"iconLarge": "/images/icons/dns-services.svg",
+			"longDescription": "Strona internetowa to nie tylko cyfrowa wizytówka — to Twój najważniejszy zasób marketingowy. Buduję wysokowydajne aplikacje webowe, które ładują się natychmiastowo, działają na każdym urządzeniu i naturalnie prowadzą odwiedzających do działania, które chcesz, aby podjęli. Używając modularnych komponentów i czystej logiki frontendowej, każdy projekt jest architektonicznie zaprojektowany do łatwego utrzymania od pierwszego dnia.\n\nKażdy projekt jest budowany z wydajnością jako priorytetem — optymalizowany pod kątem Core Web Vitals od pierwszej linii kodu. Oznacza to, że Twoja strona nie tylko będzie świetnie wyglądać — będzie faworyzowana przez Google w wynikach wyszukiwania i zapewni płynne doświadczenie użytkownikom. Stosuję zwinne praktyki dostarczania produktów, zaczynając od MVP, aby uzyskać szybką informację zwrotną i iterując na podstawie rzeczywistych danych użytkowników.\n\nOd wysokokonwertujących stron docelowych po pełnofunkcyjne aplikacje internetowe z uwierzytelnianiem, płatnościami i pulpitami nawigacyjnymi — wdrażane na AWS ze skalowalną architekturą chmurową — podchodzę do każdego projektu jak do własnego, ze skrupulatną uwagą na szczegóły i absolutnym skupieniem na wydajności.",
+			"slug": "tworzenie-stron-internetowych",
+			"text": "Wysokowydajne aplikacje webowe — szybkie, responsywne strony z modularnymi komponentami, które ładują się natychmiastowo, działają na każdym urządzeniu i zamieniają odwiedzających w klientów.",
+			"title": "Tworzenie Stron Internetowych"
 		},
 		{
-			"slug": "seo-doradztwo-techniczne",
-			"icon": "/images/icons/ibm-watson--machine-learning.svg",
-			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"text": "Audyty oparte na danych, wysokowydajna optymalizacja i strategia, które pomogą Twojej firmie zostać znalezioną i konwertować.",
-			"title": "SEO i Doradztwo Techniczne",
-			"longDescription": "Posiadanie świetnej strony internetowej to tylko połowa równania — druga połowa to upewnienie się, że znajdują ją właściwi ludzie. Moje doświadczenie w marketingu cyfrowym, połączone z głęboką wiedzą techniczną, pozwala mi zaoferować unikalną perspektywę wykraczającą poza konwencjonalne audyty SEO.\n\nKażdy audyt zaczyna się od danych: analizuję architekturę techniczną Twojej strony, sygnały doświadczenia użytkownika (Core Web Vitals), strukturę treści i pozycjonowanie konkurencyjne. Dla wysokowydajnych aplikacji webowych zapewniam, że każda milisekunda czasu ładowania jest uwzględniona, ponieważ prędkość bezpośrednio wpływa zarówno na pozycje, jak i konwersje. Rezultatem jest priorytetyzowany plan działania, który łączy każde zalecenie techniczne z konkretnym wpływem biznesowym.\n\nNie sprzedaję magicznych formuł SEO. Oferuję rygorystyczną analizę, przejrzyste rekomendacje i wdrożenia respektujące wytyczne wyszukiwarek przy jednoczesnej maksymalizacji Twojej widoczności organicznej.",
 			"features": [
 				"Pełny audyt technicznego SEO (indeksowanie, architektura)",
 				"Optymalizacja Core Web Vitals i szybkości ładowania",
@@ -420,7 +414,13 @@
 				"Strategia treści i optymalizacja on-page",
 				"Doradztwo przy migracji i redesignie z zachowaniem SEO",
 				"Konfiguracja i audyt analityki (GA4, Search Console)"
-			]
+			],
+			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
+			"longDescription": "Posiadanie świetnej strony internetowej to tylko połowa równania — druga połowa to upewnienie się, że znajdują ją właściwi ludzie. Moje doświadczenie w marketingu cyfrowym, połączone z głęboką wiedzą techniczną, pozwala mi zaoferować unikalną perspektywę wykraczającą poza konwencjonalne audyty SEO.\n\nKażdy audyt zaczyna się od danych: analizuję architekturę techniczną Twojej strony, sygnały doświadczenia użytkownika (Core Web Vitals), strukturę treści i pozycjonowanie konkurencyjne. Dla wysokowydajnych aplikacji webowych zapewniam, że każda milisekunda czasu ładowania jest uwzględniona, ponieważ prędkość bezpośrednio wpływa zarówno na pozycje, jak i konwersje. Rezultatem jest priorytetyzowany plan działania, który łączy każde zalecenie techniczne z konkretnym wpływem biznesowym.\n\nNie sprzedaję magicznych formuł SEO. Oferuję rygorystyczną analizę, przejrzyste rekomendacje i wdrożenia respektujące wytyczne wyszukiwarek przy jednoczesnej maksymalizacji Twojej widoczności organicznej.",
+			"slug": "seo-doradztwo-techniczne",
+			"text": "Audyty oparte na danych, wysokowydajna optymalizacja i strategia, które pomogą Twojej firmie zostać znalezioną i konwertować.",
+			"title": "SEO i Doradztwo Techniczne"
 		}
 	],
 	"sidenav": {
@@ -430,18 +430,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "GitHub Daniela Freire",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
-					"title": "GitHub Daniela Freire",
-					"ariaLabel": "Daniel Freire's GitHub - opens in new tab"
+					"title": "GitHub Daniela Freire"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "LinkedIn Daniela Freire",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "LinkedIn Daniela Freire",
-					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab"
+					"title": "LinkedIn Daniela Freire"
 				}
 			}
 		},
@@ -486,6 +486,50 @@
 			"languageSelectAriaLabel": "Menu Wyboru Języka",
 			"languageSelectTitle": "Menu Wyboru Języka"
 		}
+	},
+	"svgTitles": {
+		"Bash": "Logo powłoki Bash",
+		"CSS3": "Logo CSS",
+		"Cypress": "Logo frameworku testowego Cypress",
+		"Expressjs": "Logo frameworku webowego Express.js",
+		"ExternalLinkSvg": "Ikona SVG linku zewnętrznego",
+		"Git": "Logo kontroli wersji Git",
+		"GitHubIcon": "Ikona linku profilu GitHub",
+		"Github": "Logo GitHub",
+		"HTML5": "Logo HTML5",
+		"JavaScript": "Logo JavaScript",
+		"Jest": "Logo frameworku testowego Jest",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animowana ikona przejścia księżyc-słońce w pętli",
+		"LinkedInIcon": "Ikona linku profilu LinkedIn",
+		"Linux": "Logo systemu operacyjnego Linux",
+		"Moon": "Ikona księżyca dla przełącznika trybu ciemnego",
+		"Nextjs": "Logo frameworku Next.js",
+		"Nodejs": "Logo środowiska uruchomieniowego Node.js",
+		"PostgreSQL": "Logo bazy danych PostgreSQL",
+		"Python": "Logo języka programowania Python",
+		"Reactjs": "Logo biblioteki React",
+		"Redux": "Logo zarządzania stanem Redux",
+		"Selenium": "Selenium WebDriver",
+		"Sun": "Ikona słońca dla przełącznika trybu jasnego",
+		"Sun1": "Ikona słońca",
+		"TypeScript": "Logo języka programowania TypeScript",
+		"Vitejs": "Logo narzędzia budowania Vite",
+		"Vitest": "Logo frameworku testowego Vitest",
+		"Webpack": "Logo bundlera modułów Webpack",
+		"Zsh": "Logo powłoki Zsh",
+		"alertAnimation": "Animowany trójkąt ostrzegawczy z wykrzyknikiem",
+		"blocksShuffle": "Animowany spinner ładowania z przemieszczaniem bloków",
+		"blocksWave": "Animowany spinner ładowania z falą bloków",
+		"closeToMenu": "Ikona przejścia zamknij-do-menu",
+		"compass": "Animowany kompas z obrotową igłą kierunkową",
+		"computerAnimation": "Animowany monitor komputerowy z szufladą klawiatury",
+		"djangoRocket": "Ilustracja rakiety Django",
+		"externalLink": "Ikona linku zewnętrznego",
+		"menuToClose": "Ikona przejścia menu-do-zamknij",
+		"moonToSun": "Animowana ikona przejścia księżyc-słońce",
+		"nextjsTsx": "Logotyp frameworku Next.js",
+		"opensInNewTab": "opens in new tab",
+		"sunToMoon": "Animowana ikona przejścia słońce-księżyc"
 	},
 	"tech": [
 		{
@@ -620,49 +664,5 @@
 		],
 		"p1": "Masz dość oprogramowania, które hamuje rozwój Twojej firmy?",
 		"p2": "Większość oprogramowania biznesowego jest albo zbyt sztywna, albo zbyt złożona. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych – takich jak systemy CRM, trackery projektów i pulpity danych – które pasują do tego, jak Twoja firma faktycznie działa. Jeśli potrzebujesz narzędzia, które rozwiązuje konkretny problem bez zbędnych funkcji, porozmawiajmy o tym, co chcesz osiągnąć."
-	},
-	"svgTitles": {
-		"Bash": "Logo powłoki Bash",
-		"CSS3": "Logo CSS",
-		"Cypress": "Logo frameworku testowego Cypress",
-		"Expressjs": "Logo frameworku webowego Express.js",
-		"ExternalLinkSvg": "Ikona SVG linku zewnętrznego",
-		"Git": "Logo kontroli wersji Git",
-		"GitHubIcon": "Ikona linku profilu GitHub",
-		"Github": "Logo GitHub",
-		"HTML5": "Logo HTML5",
-		"JavaScript": "Logo JavaScript",
-		"Jest": "Logo frameworku testowego Jest",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animowana ikona przejścia księżyc-słońce w pętli",
-		"LinkedInIcon": "Ikona linku profilu LinkedIn",
-		"Linux": "Logo systemu operacyjnego Linux",
-		"Moon": "Ikona księżyca dla przełącznika trybu ciemnego",
-		"Nextjs": "Logo frameworku Next.js",
-		"Nodejs": "Logo środowiska uruchomieniowego Node.js",
-		"PostgreSQL": "Logo bazy danych PostgreSQL",
-		"Python": "Logo języka programowania Python",
-		"Reactjs": "Logo biblioteki React",
-		"Redux": "Logo zarządzania stanem Redux",
-		"Selenium": "Selenium WebDriver",
-		"Sun": "Ikona słońca dla przełącznika trybu jasnego",
-		"Sun1": "Ikona słońca",
-		"TypeScript": "Logo języka programowania TypeScript",
-		"Vitejs": "Logo narzędzia budowania Vite",
-		"Vitest": "Logo frameworku testowego Vitest",
-		"Webpack": "Logo bundlera modułów Webpack",
-		"Zsh": "Logo powłoki Zsh",
-		"alertAnimation": "Animowany trójkąt ostrzegawczy z wykrzyknikiem",
-		"blocksShuffle": "Animowany spinner ładowania z przemieszczaniem bloków",
-		"blocksWave": "Animowany spinner ładowania z falą bloków",
-		"closeToMenu": "Ikona przejścia zamknij-do-menu",
-		"compass": "Animowany kompas z obrotową igłą kierunkową",
-		"computerAnimation": "Animowany monitor komputerowy z szufladą klawiatury",
-		"djangoRocket": "Ilustracja rakiety Django",
-		"externalLink": "Ikona linku zewnętrznego",
-		"menuToClose": "Ikona przejścia menu-do-zamknij",
-		"moonToSun": "Animowana ikona przejścia księżyc-słońce",
-		"nextjsTsx": "Logotyp frameworku Next.js",
-		"sunToMoon": "Animowana ikona przejścia słońce-księżyc",
-		"opensInNewTab": "opens in new tab"
 	}
 }

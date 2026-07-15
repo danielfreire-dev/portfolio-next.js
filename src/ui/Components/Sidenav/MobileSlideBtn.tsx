@@ -42,9 +42,9 @@ const MobileSlideBtn = ({
 			<label
 				htmlFor="slide-menu"
 				aria-label={isOpen ? "Close menu" : "Open menu"}
-				className={`lg:hidden fixed top-2 z-50 p-1.5 hover:bg-(--surface) text-(--text-hover)
-				transform transition-transform duration-550 ease-in-out
-				${isOpen ? "translate-x-56" : "translate-x-4"}`}>
+				className={`lg:hidden fixed top-2 z-50 m-2 hover:bg-(--surface) text-(--text-hover)
+  transition-all duration-550 ease-in-out
+  ${isOpen ? "left-56" : "left-4"}`}>
 				{icon}
 			</label>
 		</>

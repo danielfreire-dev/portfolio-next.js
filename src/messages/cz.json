@@ -1,6 +1,7 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
+		"imageAlt": "oil painting of Daniel",
 		"paragraph1": "Během posledních dvou let jsem na webu budoval různé věci. Ale můj pohled na to, co a proč budovat, byl formován mnohem dříve, než jsem napsal svůj první řádek kódu.",
 		"paragraph2": "Do tohoto oboru jsem přišel z marketingu, i když ne z té strany, kterou si mnozí představují. Můj svět byl spíše o analýze dat než o kampaních – sledování tržních trendů, rozbor chování uživatelů a porozumění přesnému mechanismu, jak lidé online nachází a používají produkty. SEO a SEM jsou ve svém jádru aplikovaná psychologie a řešení problémů. Naučil jsem se poslouchat, co data křičí, a co ještě důležitější – co šeptají.",
 		"paragraph3": "To je přínos, který přináším do každého vývojářského projektu. Mnoho vývojářů umí psát elegantní kód; já se zaměřuji na vytváření elegantních řešení. A v tom je ten rozdíl.",
@@ -8,8 +9,7 @@
 		"paragraph5": "Zde dělá chybu mnoho talentovaných vývojářů: budují pro zařízení. Budují pro specifikaci. Ale zapomínají budovat pro člověka na druhé straně a pro obchodní cíl, který projekt opravdu odůvodňuje. Díky mé zkušenosti se dokážu postavit právě na toto průsečík. Umím převést obchodní potřebu na technický požadavek ne jako abstraktní koncept, ale jako žijící zkušenost. Byl jsem člověk, který žádal o data, a teď jsem ten, kdo systémy pro jejich poskytování vytváří.",
 		"paragraph6": "Ať už jde o webovou aplikaci s AI, moderní frontend, Django admin nebo full-stack Node.js aplikaci, otázkou, od které vždy začínám, je: „Na co vlastně hledáme řešení?“ Technologie jsou prostředkem. Skutečné umění tkví ve výběru správného nástroje pro danou práci a v jeho schopnosti jej použít s moudrostí, abych pochopil, co je ta práce skutečně zač.",
 		"paragraph7": "Nestavím jen správně. Stavím správné věci.",
-		"title1": "Stavíme pro člověka za obrazovkou",
-		"imageAlt": "oil painting of Daniel"
+		"title1": "Stavíme pro člověka za obrazovkou"
 	},
 	"carousel": [
 		{
@@ -75,13 +75,12 @@
 	],
 	"contact": {
 		"btn": "odeslat zprávu",
-		"sending": "odesílání…",
 		"email": "email",
 		"errors": {
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
 			"sendFailed": "Failed to send message. Please try again.",
 			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
 			"turnstileExpired": "Security check expired. Please verify again.",
 			"turnstileFailed": "Security check failed. Please try again.",
 			"turnstileNotVerified": "Please verify you are not a robot",
@@ -92,6 +91,7 @@
 			"title": "děkujeme"
 		},
 		"firstName": "jméno",
+		"formAriaLabel": "Contact form",
 		"label": "Přečetl jsem si a souhlasím s ",
 		"lastName": "příjmení",
 		"message": "zpráva",
@@ -111,9 +111,9 @@
 		"privacyPolicyUrlAriaLabel": "Zásady ochrany osobních údajů",
 		"privacyPolicyUrlTitle": "Zásady ochrany osobních údajů",
 		"required": "povinné",
-		"title": "kontaktujte mě",
-		"formAriaLabel": "Contact form",
-		"requiredIndicator": "required"
+		"requiredIndicator": "required",
+		"sending": "odesílání…",
+		"title": "kontaktujte mě"
 	},
 	"cookies": {
 		"buttonText": "Přijmout vše",
@@ -194,18 +194,18 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides",
 		"leftarrow": {
 			"alt": "šipka vlevo",
-			"src": "/images/icons/chevron-left.svg",
-			"label": "Previous slide"
+			"label": "Previous slide",
+			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "šipka vpravo",
-			"src": "/images/icons/chevron-right.svg",
-			"label": "Next slide"
-		},
-		"carouselLabel": "Portfolio carousel",
-		"carouselSlidesLabel": "Carousel slides"
+			"label": "Next slide",
+			"src": "/images/icons/chevron-right.svg"
+		}
 	},
 	"localeSwitcher": {
 		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
@@ -239,6 +239,7 @@
 	"portfolio": {
 		"all": "Vše",
 		"cta": ["podívejte se", "zobrazit živý projekt →"],
+		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -309,8 +310,7 @@
 				"title": "insurbia"
 			}
 		],
-		"websites-title": "Weby",
-		"opensInNewTab": "opens in new tab"
+		"websites-title": "Weby"
 	},
 	"privacyPolicy": {
 		"contactEmail": "gdpr@daniel-freire.com",
@@ -350,12 +350,6 @@
 	},
 	"services": [
 		{
-			"slug": "zakazkovy-firemni-software",
-			"icon": "/images/icons/business-processes.svg",
-			"iconLarge": "/images/icons/business-processes.svg",
-			"text": "Webové aplikace na míru — CRM systémy, dashboardy a interní nástroje postavené s modulárními komponentami a agilním doručováním, odpovídající tomu, jak vaše firma skutečně funguje.",
-			"title": "Zakázkový firemní software",
-			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy — a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru. Dodávám agilními metodami, se zaměřením na MVP a rychlé zpětnovazební cykly, abyste viděli hodnotu brzy a iterovali na základě reálného používání.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete — každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat — protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL — nasazených na AWS s cloud-nativní architekturou — vytvářím modulární, znovupoužitelné komponenty, které činí vaše řešení robustním, škálovatelným a snadno udržovatelným s růstem vašeho podnikání.",
 			"features": [
 				"CRM systémy přizpůsobené vašemu prodejnímu procesu",
 				"Vlastní analytické dashboardy a reporty",
@@ -365,15 +359,15 @@
 				"Administrátorské panely s podrobnou kontrolou přístupu",
 				"Vývoj MVP s rychlými cykly zpětné vazby",
 				"Cloud-nativní architektura nasazená na AWS"
-			]
+			],
+			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
+			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy — a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru. Dodávám agilními metodami, se zaměřením na MVP a rychlé zpětnovazební cykly, abyste viděli hodnotu brzy a iterovali na základě reálného používání.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete — každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat — protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL — nasazených na AWS s cloud-nativní architekturou — vytvářím modulární, znovupoužitelné komponenty, které činí vaše řešení robustním, škálovatelným a snadno udržovatelným s růstem vašeho podnikání.",
+			"slug": "zakazkovy-firemni-software",
+			"text": "Webové aplikace na míru — CRM systémy, dashboardy a interní nástroje postavené s modulárními komponentami a agilním doručováním, odpovídající tomu, jak vaše firma skutečně funguje.",
+			"title": "Zakázkový firemní software"
 		},
 		{
-			"slug": "implementace-ai-reseni",
-			"icon": "/images/icons/ai-recommend.svg",
-			"iconLarge": "/images/icons/ai-recommend.svg",
-			"text": "Webové aplikace s AI a integrací LLM — chatboti, AI agenti a uživatelské zkušenosti řízené AI, které transformují vaše pracovní postupy.",
-			"title": "Implementace AI řešení",
-			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou — pokud je aplikována s účelem. Vytvářím webové aplikace s AI, které integrují Velké jazykové modely (LLM) do vašich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo orchestraci AI agentů, která automatizuje složité vícestupňové obchodní procesy — zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou. Každé řešení je navrženo s uživatelskou zkušeností řízenou AI, která působí přirozeně a intuitivně pro váš tým a zákazníky.\n\nPracuji s API jako OpenAI, open-source LLM, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
 			"features": [
 				"Vývoj webových aplikací s AI",
 				"Integrace LLM s OpenAI a open-source modely",
@@ -384,15 +378,15 @@
 				"Obchodně specifické AI asistenty (RAG)",
 				"Automatické generování a sumarizace obsahu",
 				"Prediktivní analytika a dashboardy poháněné AI"
-			]
+			],
+			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
+			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou — pokud je aplikována s účelem. Vytvářím webové aplikace s AI, které integrují Velké jazykové modely (LLM) do vašich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo orchestraci AI agentů, která automatizuje složité vícestupňové obchodní procesy — zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou. Každé řešení je navrženo s uživatelskou zkušeností řízenou AI, která působí přirozeně a intuitivně pro váš tým a zákazníky.\n\nPracuji s API jako OpenAI, open-source LLM, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
+			"slug": "implementace-ai-reseni",
+			"text": "Webové aplikace s AI a integrací LLM — chatboti, AI agenti a uživatelské zkušenosti řízené AI, které transformují vaše pracovní postupy.",
+			"title": "Implementace AI řešení"
 		},
 		{
-			"slug": "vyvoj-webovych-stranek",
-			"icon": "/images/icons/dns-services.svg",
-			"iconLarge": "/images/icons/dns-services.svg",
-			"text": "Vysoce výkonné webové aplikace — rychlé, responzivní weby s modulárními komponentami, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
-			"title": "Vývoj webových stránek",
-			"longDescription": "Webová stránka není jen digitální vizitka — je to váš nejdůležitější marketingový nástroj. Vytvářím vysoce výkonné webové aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli. S modulárními komponentami a čistou frontendovou logikou je každý projekt od prvního dne architektonicky navržen pro snadnou udržovatelnost.\n\nKaždý projekt je stavěn s výkonem v jádru — optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat — bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům. Dodržuji agilní postupy doručování produktů, začínám s MVP pro rychlou zpětnou vazbu a iteruji na základě reálných uživatelských dat.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy — nasazené na AWS se škálovatelnou cloudovou architekturou — ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
 			"features": [
 				"Firemní weby a vysoce konverzní landing pages",
 				"Progresivní webové aplikace (PWA) s offline podporou",
@@ -404,15 +398,15 @@
 				"Rychlý vývoj MVP pro validaci trhu",
 				"Nasazení v cloudu AWS se škálovatelnou architekturou",
 				"Modulární, znovupoužitelné knihovny komponent pro udržovatelnou frontendovou logiku"
-			]
+			],
+			"icon": "/images/icons/dns-services.svg",
+			"iconLarge": "/images/icons/dns-services.svg",
+			"longDescription": "Webová stránka není jen digitální vizitka — je to váš nejdůležitější marketingový nástroj. Vytvářím vysoce výkonné webové aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli. S modulárními komponentami a čistou frontendovou logikou je každý projekt od prvního dne architektonicky navržen pro snadnou udržovatelnost.\n\nKaždý projekt je stavěn s výkonem v jádru — optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat — bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům. Dodržuji agilní postupy doručování produktů, začínám s MVP pro rychlou zpětnou vazbu a iteruji na základě reálných uživatelských dat.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy — nasazené na AWS se škálovatelnou cloudovou architekturou — ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
+			"slug": "vyvoj-webovych-stranek",
+			"text": "Vysoce výkonné webové aplikace — rychlé, responzivní weby s modulárními komponentami, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
+			"title": "Vývoj webových stránek"
 		},
 		{
-			"slug": "seo-technicke-poradenstvi",
-			"icon": "/images/icons/ibm-watson--machine-learning.svg",
-			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"text": "Audity založené na datech, vysoce výkonná optimalizace a strategie, která pomůže vaší firmě být vidět a konvertovat.",
-			"title": "SEO a technické poradenství",
-			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice — druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Pro vysoce výkonné webové aplikace zajišťuji, že každá milisekunda načítání je zohledněna, protože rychlost přímo ovlivňuje jak pozice ve vyhledávání, tak konverze. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
 			"features": [
 				"Kompletní technický SEO audit (procházení, indexace, architektura)",
 				"Optimalizace Core Web Vitals a rychlosti načítání",
@@ -420,7 +414,13 @@
 				"Obsahová strategie a on-page optimalizace",
 				"Konzultace migrace a redesignu se zachováním SEO",
 				"Nastavení a audit analytiky (GA4, Search Console)"
-			]
+			],
+			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
+			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice — druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Pro vysoce výkonné webové aplikace zajišťuji, že každá milisekunda načítání je zohledněna, protože rychlost přímo ovlivňuje jak pozice ve vyhledávání, tak konverze. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
+			"slug": "seo-technicke-poradenstvi",
+			"text": "Audity založené na datech, vysoce výkonná optimalizace a strategie, která pomůže vaší firmě být vidět a konvertovat.",
+			"title": "SEO a technické poradenství"
 		}
 	],
 	"sidenav": {
@@ -430,18 +430,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Danielův GitHub",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
-					"title": "Danielův GitHub",
-					"ariaLabel": "Daniel Freire's GitHub - opens in new tab"
+					"title": "Danielův GitHub"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "Danielův LinkedIn",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "Danielův LinkedIn",
-					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab"
+					"title": "Danielův LinkedIn"
 				}
 			}
 		},
@@ -486,6 +486,50 @@
 			"languageSelectAriaLabel": "Menu pro výběr jazyka",
 			"languageSelectTitle": "Menu pro výběr jazyka"
 		}
+	},
+	"svgTitles": {
+		"Bash": "Logo shellu Bash",
+		"CSS3": "Logo CSS",
+		"Cypress": "Logo testovacího frameworku Cypress",
+		"Expressjs": "Logo webového frameworku Express.js",
+		"ExternalLinkSvg": "SVG ikona externího odkazu",
+		"Git": "Logo správy verzí Git",
+		"GitHubIcon": "Ikona odkazu na profil GitHub",
+		"Github": "Logo GitHub",
+		"HTML5": "Logo HTML5",
+		"JavaScript": "Logo JavaScript",
+		"Jest": "Logo testovacího frameworku Jest",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animovaná ikona přechodu měsíc-slunce",
+		"LinkedInIcon": "Ikona odkazu na profil LinkedIn",
+		"Linux": "Logo operačního systému Linux",
+		"Moon": "Ikona měsíce pro přepínač tmavého režimu",
+		"Nextjs": "Logo frameworku Next.js",
+		"Nodejs": "Logo runtime Node.js",
+		"PostgreSQL": "Logo databáze PostgreSQL",
+		"Python": "Logo programovacího jazyka Python",
+		"Reactjs": "Logo knihovny React",
+		"Redux": "Logo správy stavu Redux",
+		"Selenium": "Selenium WebDriver",
+		"Sun": "Ikona slunce pro přepínač světlého režimu",
+		"Sun1": "Ikona slunce",
+		"TypeScript": "Logo programovacího jazyka TypeScript",
+		"Vitejs": "Logo build nástroje Vite",
+		"Vitest": "Logo testovacího frameworku Vitest",
+		"Webpack": "Logo modulového bundleru Webpack",
+		"Zsh": "Logo shellu Zsh",
+		"alertAnimation": "Animovaný výstražný trojúhelník s vykřičníkem",
+		"blocksShuffle": "Animovaný načítací spinner s přeskupováním bloků",
+		"blocksWave": "Animovaný načítací spinner s vlnou bloků",
+		"closeToMenu": "Ikona přechodu zavřít-na-menu",
+		"compass": "Animovaný kompas s rotující směrovou střelkou",
+		"computerAnimation": "Animovaný počítačový monitor s přihrádkou klávesnice",
+		"djangoRocket": "Ilustrace rakety Django",
+		"externalLink": "Ikona externího odkazu",
+		"menuToClose": "Ikona přechodu menu-na-zavřít",
+		"moonToSun": "Animovaná ikona přechodu měsíc-slunce",
+		"nextjsTsx": "Logotyp frameworku Next.js",
+		"opensInNewTab": "opens in new tab",
+		"sunToMoon": "Animovaná ikona přechodu slunce-měsíc"
 	},
 	"tech": [
 		{
@@ -620,49 +664,5 @@
 		],
 		"p1": "Už vás nebaví software, který vás ve vašem podnikání brzdí?",
 		"p2": "Většina podnikového softwaru je buď příliš rigidní, nebo příliš složitá. Specializuji se na vývoj vlastních webových aplikací – jako jsou CRM systémy, sledování projektů a datové přehledy – které přesně odpovídají tomu, jak vaše firma skutečně funguje. Pokud potřebujete nástroj, který řeší konkrétní problém bez zbytečných funkcí, pojďme probrat, čeho chcete dosáhnout."
-	},
-	"svgTitles": {
-		"Bash": "Logo shellu Bash",
-		"CSS3": "Logo CSS",
-		"Cypress": "Logo testovacího frameworku Cypress",
-		"Expressjs": "Logo webového frameworku Express.js",
-		"ExternalLinkSvg": "SVG ikona externího odkazu",
-		"Git": "Logo správy verzí Git",
-		"GitHubIcon": "Ikona odkazu na profil GitHub",
-		"Github": "Logo GitHub",
-		"HTML5": "Logo HTML5",
-		"JavaScript": "Logo JavaScript",
-		"Jest": "Logo testovacího frameworku Jest",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animovaná ikona přechodu měsíc-slunce",
-		"LinkedInIcon": "Ikona odkazu na profil LinkedIn",
-		"Linux": "Logo operačního systému Linux",
-		"Moon": "Ikona měsíce pro přepínač tmavého režimu",
-		"Nextjs": "Logo frameworku Next.js",
-		"Nodejs": "Logo runtime Node.js",
-		"PostgreSQL": "Logo databáze PostgreSQL",
-		"Python": "Logo programovacího jazyka Python",
-		"Reactjs": "Logo knihovny React",
-		"Redux": "Logo správy stavu Redux",
-		"Selenium": "Selenium WebDriver",
-		"Sun": "Ikona slunce pro přepínač světlého režimu",
-		"Sun1": "Ikona slunce",
-		"TypeScript": "Logo programovacího jazyka TypeScript",
-		"Vitejs": "Logo build nástroje Vite",
-		"Vitest": "Logo testovacího frameworku Vitest",
-		"Webpack": "Logo modulového bundleru Webpack",
-		"Zsh": "Logo shellu Zsh",
-		"alertAnimation": "Animovaný výstražný trojúhelník s vykřičníkem",
-		"blocksShuffle": "Animovaný načítací spinner s přeskupováním bloků",
-		"blocksWave": "Animovaný načítací spinner s vlnou bloků",
-		"closeToMenu": "Ikona přechodu zavřít-na-menu",
-		"compass": "Animovaný kompas s rotující směrovou střelkou",
-		"computerAnimation": "Animovaný počítačový monitor s přihrádkou klávesnice",
-		"djangoRocket": "Ilustrace rakety Django",
-		"externalLink": "Ikona externího odkazu",
-		"menuToClose": "Ikona přechodu menu-na-zavřít",
-		"moonToSun": "Animovaná ikona přechodu měsíc-slunce",
-		"nextjsTsx": "Logotyp frameworku Next.js",
-		"sunToMoon": "Animovaná ikona přechodu slunce-měsíc",
-		"opensInNewTab": "opens in new tab"
 	}
 }

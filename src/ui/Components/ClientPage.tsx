@@ -19,7 +19,7 @@ const ClientSideAbout = () => {
 
 	return (
 		<>
-			<div className="px-20 lg:grid lg:grid-cols-2 gap-6 focus-in-expand">
+			<div className="px-10 lg:grid lg:grid-cols-2 gap-6 focus-in-expand">
 				<div className="hidden lg:block relative aspect-square mt-4">
 					<Image
 						src={t("image")}

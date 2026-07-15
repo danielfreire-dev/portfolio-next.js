@@ -75,13 +75,12 @@
 	],
 	"contact": {
 		"btn": "send message",
-		"sending": "sending…",
 		"email": "email",
 		"errors": {
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
 			"sendFailed": "Failed to send message. Please try again.",
 			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
 			"turnstileExpired": "Security check expired. Please verify again.",
 			"turnstileFailed": "Security check failed. Please try again.",
 			"turnstileNotVerified": "Please verify you are not a robot",
@@ -113,6 +112,7 @@
 		"privacyPolicyUrlTitle": "Privacy Policy",
 		"required": "required",
 		"requiredIndicator": "required",
+		"sending": "sending…",
 		"title": "get in touch"
 	},
 	"cookies": {
@@ -350,12 +350,6 @@
 	},
 	"services": [
 		{
-			"slug": "business-custom-software",
-			"icon": "/images/icons/business-processes.svg",
-			"iconLarge": "/images/icons/business-processes.svg",
-			"text": "Tailored web applications — CRMs, dashboards, and internal tools built with modular components and agile product delivery, fitting how your business actually works.",
-			"title": "Business Custom Software",
-			"longDescription": "Every business has unique processes, workflows, and challenges — and the software you use should reflect that. I specialise in developing custom web applications that adapt to how your company actually operates, rather than forcing your team to adapt to off-the-shelf software. I deliver with agile product delivery, focusing on MVP and rapid feedback cycles so you see value early and iterate based on real usage.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use — because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL — deployed on AWS with cloud-native architecture — I build modular, reusable components that make your solution robust, scalable, and easy to maintain as your business grows.",
 			"features": [
 				"CRM systems tailored to your sales pipeline",
 				"Custom analytics dashboards and reports",
@@ -365,15 +359,15 @@
 				"Admin panels with granular access control",
 				"MVP development with rapid feedback cycles",
 				"Cloud-native architecture deployed on AWS"
-			]
+			],
+			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
+			"longDescription": "Every business has unique processes, workflows, and challenges — and the software you use should reflect that. I specialise in developing custom web applications that adapt to how your company actually operates, rather than forcing your team to adapt to off-the-shelf software. I deliver with agile product delivery, focusing on MVP and rapid feedback cycles so you see value early and iterate based on real usage.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use — because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL — deployed on AWS with cloud-native architecture — I build modular, reusable components that make your solution robust, scalable, and easy to maintain as your business grows.",
+			"slug": "business-custom-software",
+			"text": "Tailored web applications — CRMs, dashboards, and internal tools built with modular components and agile product delivery, fitting how your business actually works.",
+			"title": "Business Custom Software"
 		},
 		{
-			"slug": "ai-solution-implementation",
-			"icon": "/images/icons/ai-recommend.svg",
-			"iconLarge": "/images/icons/ai-recommend.svg",
-			"text": "AI-powered web applications and LLM integration — chatbots, AI agents, and AI-driven user experiences that transform your workflows.",
-			"title": "AI Solution Implementation",
-			"longDescription": "Artificial Intelligence has moved beyond futurist hype and become a genuine competitive advantage — when applied with purpose. I build AI-powered web applications that integrate Large Language Models (LLMs) into your existing workflows in a practical, measurable way, without unnecessary complexity.\n\nWhether it's an intelligent chatbot that reduces support ticket volume by 40%, a recommendation engine that increases average order value, or AI agent orchestration that automates complex multi-step business processes — the focus is always on the business outcome, not the technology for its own sake. Every solution is designed with an AI-driven user experience that feels natural and intuitive to your team and customers.\n\nI work with APIs like OpenAI, open-source LLMs, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
 			"features": [
 				"AI-powered web application development",
 				"LLM integration with OpenAI and open-source models",
@@ -384,15 +378,15 @@
 				"Business-specific AI assistants (RAG)",
 				"Automated content generation and summarisation",
 				"Predictive analytics and AI-powered dashboards"
-			]
+			],
+			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
+			"longDescription": "Artificial Intelligence has moved beyond futurist hype and become a genuine competitive advantage — when applied with purpose. I build AI-powered web applications that integrate Large Language Models (LLMs) into your existing workflows in a practical, measurable way, without unnecessary complexity.\n\nWhether it's an intelligent chatbot that reduces support ticket volume by 40%, a recommendation engine that increases average order value, or AI agent orchestration that automates complex multi-step business processes — the focus is always on the business outcome, not the technology for its own sake. Every solution is designed with an AI-driven user experience that feels natural and intuitive to your team and customers.\n\nI work with APIs like OpenAI, open-source LLMs, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
+			"slug": "ai-solution-implementation",
+			"text": "AI-powered web applications and LLM integration — chatbots, AI agents, and AI-driven user experiences that transform your workflows.",
+			"title": "AI Solution Implementation"
 		},
 		{
-			"slug": "web-development",
-			"icon": "/images/icons/dns-services.svg",
-			"iconLarge": "/images/icons/dns-services.svg",
-			"text": "High-performance web applications — fast, responsive websites with modular components that load instantly, work on every device, and turn visitors into customers.",
-			"title": "Web Development",
-			"longDescription": "A website isn't just a digital business card — it's your most important marketing asset. I build high-performance web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take. Using modular components and clean frontend logic, every project is architected for maintainability from day one.\n\nEvery project is built with performance at its core — optimised for Core Web Vitals from the first line of code. This means your site won't just look great — it will be favoured by Google in search results and provide a fluid experience for your users. I follow agile product delivery practices, starting with an MVP to get rapid feedback and iterating based on real user data.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards — deployed on AWS with scalable cloud architecture — I approach every project as if it were my own, with meticulous attention to detail and an absolute focus on performance.",
 			"features": [
 				"Business websites and high-conversion landing pages",
 				"Progressive Web Apps (PWA) with offline support",
@@ -404,15 +398,15 @@
 				"Rapid MVP development for quick market validation",
 				"Cloud deployment on AWS with scalable architecture",
 				"Modular, reusable component libraries for maintainable frontend logic"
-			]
+			],
+			"icon": "/images/icons/dns-services.svg",
+			"iconLarge": "/images/icons/dns-services.svg",
+			"longDescription": "A website isn't just a digital business card — it's your most important marketing asset. I build high-performance web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take. Using modular components and clean frontend logic, every project is architected for maintainability from day one.\n\nEvery project is built with performance at its core — optimised for Core Web Vitals from the first line of code. This means your site won't just look great — it will be favoured by Google in search results and provide a fluid experience for your users. I follow agile product delivery practices, starting with an MVP to get rapid feedback and iterating based on real user data.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards — deployed on AWS with scalable cloud architecture — I approach every project as if it were my own, with meticulous attention to detail and an absolute focus on performance.",
+			"slug": "web-development",
+			"text": "High-performance web applications — fast, responsive websites with modular components that load instantly, work on every device, and turn visitors into customers.",
+			"title": "Web Development"
 		},
 		{
-			"slug": "seo-technical-consulting",
-			"icon": "/images/icons/ibm-watson--machine-learning.svg",
-			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"text": "Data-backed audits, high-performance optimisation, and strategy to help your business get found and convert.",
-			"title": "SEO & Technical Consulting",
-			"longDescription": "Having a great website is only half the equation — the other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, allows me to offer a unique perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. For high-performance web applications, I ensure every millisecond of load time is accounted for, because speed directly impacts both rankings and conversions. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
 			"features": [
 				"Full technical SEO audit (crawlability, indexation, architecture)",
 				"Core Web Vitals and page speed optimisation",
@@ -420,7 +414,13 @@
 				"Content strategy and on-page optimisation",
 				"Migration and redesign consulting with SEO preservation",
 				"Analytics setup and auditing (GA4, Search Console)"
-			]
+			],
+			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
+			"longDescription": "Having a great website is only half the equation — the other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, allows me to offer a unique perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. For high-performance web applications, I ensure every millisecond of load time is accounted for, because speed directly impacts both rankings and conversions. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
+			"slug": "seo-technical-consulting",
+			"text": "Data-backed audits, high-performance optimisation, and strategy to help your business get found and convert.",
+			"title": "SEO & Technical Consulting"
 		}
 	],
 	"sidenav": {
@@ -486,6 +486,50 @@
 			"languageSelectAriaLabel": "Select Language Menu",
 			"languageSelectTitle": "Select Language Menu"
 		}
+	},
+	"svgTitles": {
+		"Bash": "Bash shell logo",
+		"CSS3": "CSS Logo",
+		"Cypress": "Cypress testing framework logo",
+		"Expressjs": "Express.js web framework logo",
+		"ExternalLinkSvg": "External-link SVG Icon",
+		"Git": "Git version control logo",
+		"GitHubIcon": "GitHub profile link icon",
+		"Github": "GitHub logo",
+		"HTML5": "HTML5 logo",
+		"JavaScript": "JavaScript logo",
+		"Jest": "Jest testing framework logo",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animated moon to sun loop transition icon",
+		"LinkedInIcon": "LinkedIn profile link icon",
+		"Linux": "Linux operating system logo",
+		"Moon": "Moon icon for dark mode toggle",
+		"Nextjs": "Next.js framework logo",
+		"Nodejs": "Node.js runtime logo",
+		"PostgreSQL": "PostgreSQL database logo",
+		"Python": "Python programming language logo",
+		"Reactjs": "React library logo",
+		"Redux": "Redux state management logo",
+		"Selenium": "Selenium WebDriver",
+		"Sun": "Sun icon for light mode toggle",
+		"Sun1": "Sun icon",
+		"TypeScript": "TypeScript programming language logo",
+		"Vitejs": "Vite build tool logo",
+		"Vitest": "Vitest testing framework logo",
+		"Webpack": "Webpack module bundler logo",
+		"Zsh": "Zsh shell logo",
+		"alertAnimation": "Animated alert triangle with exclamation mark",
+		"blocksShuffle": "Animated blocks shuffle loading spinner",
+		"blocksWave": "Animated blocks wave loading spinner",
+		"closeToMenu": "Close to menu transition icon",
+		"compass": "Animated compass with rotating directional needle",
+		"computerAnimation": "Animated computer monitor with keyboard tray",
+		"djangoRocket": "Django rocket illustration",
+		"externalLink": "External link icon",
+		"menuToClose": "Menu to close transition icon",
+		"moonToSun": "Animated moon to sun transition icon",
+		"nextjsTsx": "Next.js framework logotype",
+		"opensInNewTab": "opens in new tab",
+		"sunToMoon": "Animated sun to moon transition icon"
 	},
 	"tech": [
 		{
@@ -620,49 +664,5 @@
 		],
 		"p1": "Tired of software that holds your business back?",
 		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications—like CRM systems, project trackers, and data dashboards—that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let's discuss what you're trying to achieve."
-	},
-	"svgTitles": {
-		"opensInNewTab": "opens in new tab",
-		"Bash": "Bash shell logo",
-		"CSS3": "CSS Logo",
-		"Cypress": "Cypress testing framework logo",
-		"Expressjs": "Express.js web framework logo",
-		"ExternalLinkSvg": "External-link SVG Icon",
-		"Git": "Git version control logo",
-		"GitHubIcon": "GitHub profile link icon",
-		"Github": "GitHub logo",
-		"HTML5": "HTML5 logo",
-		"JavaScript": "JavaScript logo",
-		"Jest": "Jest testing framework logo",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animated moon to sun loop transition icon",
-		"LinkedInIcon": "LinkedIn profile link icon",
-		"Linux": "Linux operating system logo",
-		"Moon": "Moon icon for dark mode toggle",
-		"Nextjs": "Next.js framework logo",
-		"Nodejs": "Node.js runtime logo",
-		"PostgreSQL": "PostgreSQL database logo",
-		"Python": "Python programming language logo",
-		"Reactjs": "React library logo",
-		"Redux": "Redux state management logo",
-		"Selenium": "Selenium WebDriver",
-		"Sun": "Sun icon for light mode toggle",
-		"Sun1": "Sun icon",
-		"TypeScript": "TypeScript programming language logo",
-		"Vitejs": "Vite build tool logo",
-		"Vitest": "Vitest testing framework logo",
-		"Webpack": "Webpack module bundler logo",
-		"Zsh": "Zsh shell logo",
-		"alertAnimation": "Animated alert triangle with exclamation mark",
-		"blocksShuffle": "Animated blocks shuffle loading spinner",
-		"blocksWave": "Animated blocks wave loading spinner",
-		"closeToMenu": "Close to menu transition icon",
-		"compass": "Animated compass with rotating directional needle",
-		"computerAnimation": "Animated computer monitor with keyboard tray",
-		"djangoRocket": "Django rocket illustration",
-		"externalLink": "External link icon",
-		"menuToClose": "Menu to close transition icon",
-		"moonToSun": "Animated moon to sun transition icon",
-		"nextjsTsx": "Next.js framework logotype",
-		"sunToMoon": "Animated sun to moon transition icon"
 	}
 }
