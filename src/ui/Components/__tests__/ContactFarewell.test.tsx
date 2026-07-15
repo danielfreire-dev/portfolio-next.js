@@ -43,7 +43,7 @@ describe("ContactFarewell", () => {
 
   describe("when submitted is true", () => {
     beforeEach(() => {
-      renderWithProviders(<ContactFarewell submitted={true} />);
+      renderWithProviders(<ContactFarewell submitted />);
     });
 
     it("should render the container without 'hidden' CSS class", () => {
@@ -62,7 +62,7 @@ describe("ContactFarewell", () => {
 
   describe("accessibility", () => {
     it("should render heading and paragraph semantic elements", () => {
-      renderWithProviders(<ContactFarewell submitted={true} />);
+      renderWithProviders(<ContactFarewell submitted />);
       expect(screen.getByRole("heading", { level: 2 })).toBeInTheDocument();
     });
   });

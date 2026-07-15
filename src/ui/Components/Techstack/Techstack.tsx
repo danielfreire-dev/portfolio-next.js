@@ -15,7 +15,7 @@ const Techstack = () => {
 		<>
 			<h2 className="mt-7 text-3xl font-bold text-center">{title("techstack")}</h2>
 			<div
-				className="flex flex-wrap flex-row justify-center"
+				className="flex flex-wrap flex-row justify-center gap-8 mx-1"
 				id="stack-container">
 				<TechCards tech={tech.raw("tech")} />
 			</div>
