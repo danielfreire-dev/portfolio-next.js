@@ -31,13 +31,13 @@ export function LineMdCompassFilled(props: SVGProps<SVGSVGElement> & { title?: s
 							fill="freeze"
 							attributeName="stroke-dashoffset"
 							dur="0.6s"
-							values="60;0"></animate>
+							values="60;0" />
 						<animate
 							fill="freeze"
 							attributeName="fill-opacity"
 							begin="0.6s"
 							dur="0.4s"
-							to={1}></animate>
+							to={1} />
 					</path>
 					<path
 						d="M11 11l1 1l1 1l-1 -1Z"
@@ -47,21 +47,21 @@ export function LineMdCompassFilled(props: SVGProps<SVGSVGElement> & { title?: s
 							attributeName="d"
 							begin="1.1s"
 							dur="0.3s"
-							to="M10.2 10.2l6.8 -3.2l-3.2 6.8l-6.8 3.2Z"></animate>
+							to="M10.2 10.2l6.8 -3.2l-3.2 6.8l-6.8 3.2Z" />
 						<animateTransform
 							fill="freeze"
 							attributeName="transform"
 							begin="1.1s"
 							dur="0.5s"
 							type="rotate"
-							values="-180 12 12;0 12 12"></animateTransform>
+							values="-180 12 12;0 12 12" />
 					</path>
 				</mask>
 			</defs>
 			<g fill="currentColor">
 				<path
 					d="M0 0h24v24H0z"
-					mask="url(#SVGpETNgGRc)"></path>
+					mask="url(#SVGpETNgGRc)" />
 				<circle
 					cx={12}
 					cy={12}>
@@ -70,7 +70,7 @@ export function LineMdCompassFilled(props: SVGProps<SVGSVGElement> & { title?: s
 						attributeName="r"
 						begin="1.1s"
 						dur="0.3s"
-						to={1}></animate>
+						to={1} />
 				</circle>
 			</g>
 		</svg>

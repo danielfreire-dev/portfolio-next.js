@@ -173,8 +173,10 @@ export default async function RootLayout({
 						<header className="flex flex-row">
 							<Sidenav />
 						</header>
-						<main className="flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
-							<div id="main">
+						<main className="flex flex-1 justify-center flex-col  overflow-hidden pb-5 mt-9">
+							<div
+								id="main "
+								className="flex flex-col gap-4">
 								{children}
 								<Cta />
 							</div>

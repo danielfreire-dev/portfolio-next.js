@@ -1,6 +1,7 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
+		"imageAlt": "oil painting of Daniel",
 		"paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspetiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
 		"paragraph2": "Entrei neste campo vindo do marketing, embora não da vertente que possas imaginar. O meu mundo era menos sobre campanhas e mais sobre padrões: analisar dados de mercado, decifrar o comportamento dos utilizadores e compreender os mecanismos precisos de como as pessoas encontram e usam um produto online. SEO e SEM, no seu cerne, são apenas psicologia aplicada e resolução de problemas. Aprende-se a ouvir o que os dados gritam, e, mais importante, o que sussurram.",
 		"paragraph3": "É esse o background que trago para cada projeto de desenvolvimento. A maioria dos desenvolvedores consegue escrever código elegante; o meu foco está em construir soluções elegantes. Há uma diferença crucial.",
@@ -8,8 +9,7 @@
 		"paragraph5": "Aqui está onde muitos programadors com talento erram: constroem para o dispositivo. Constroem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
 		"paragraph6": "Seja uma aplicação web com IA, um front-end elegante, um admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
 		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
-		"title1": "Construir para o Humano por Trás do Ecrã",
-		"imageAlt": "oil painting of Daniel"
+		"title1": "Construir para o Humano por Trás do Ecrã"
 	},
 	"carousel": [
 		{
@@ -75,13 +75,12 @@
 	],
 	"contact": {
 		"btn": "enviar mensagem",
-		"sending": "a enviar…",
 		"email": "email",
 		"errors": {
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
 			"sendFailed": "Failed to send message. Please try again.",
 			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
 			"turnstileExpired": "Security check expired. Please verify again.",
 			"turnstileFailed": "Security check failed. Please try again.",
 			"turnstileNotVerified": "Please verify you are not a robot",
@@ -92,6 +91,7 @@
 			"title": "Obrigado"
 		},
 		"firstName": "primeiro nome",
+		"formAriaLabel": "Contact form",
 		"label": "Li e concordo com a",
 		"lastName": "último nome",
 		"message": "mensagem",
@@ -111,9 +111,9 @@
 		"privacyPolicyUrlAriaLabel": "Política de Privacidade",
 		"privacyPolicyUrlTitle": "Política de Privacidade",
 		"required": "necessário",
-		"title": "entre em contacto",
-		"formAriaLabel": "Contact form",
-		"requiredIndicator": "required"
+		"requiredIndicator": "required",
+		"sending": "a enviar…",
+		"title": "entre em contacto"
 	},
 	"cookies": {
 		"buttonText": "Aceitar Tudo",
@@ -194,18 +194,18 @@
 		"trending": "Portfólio"
 	},
 	"icons": {
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides",
 		"leftarrow": {
 			"alt": "seta para a esquerda",
-			"src": "/images/icons/chevron-left.svg",
-			"label": "Previous slide"
+			"label": "Previous slide",
+			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "seta para a direita",
-			"src": "/images/icons/chevron-right.svg",
-			"label": "Next slide"
-		},
-		"carouselLabel": "Portfolio carousel",
-		"carouselSlidesLabel": "Carousel slides"
+			"label": "Next slide",
+			"src": "/images/icons/chevron-right.svg"
+		}
 	},
 	"localeSwitcher": {
 		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
@@ -239,6 +239,7 @@
 	"portfolio": {
 		"all": "Todos",
 		"cta": ["confira", "veja o projeto ao vivo →"],
+		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfólio",
 		"projects": [
 			{
@@ -309,8 +310,7 @@
 				"title": "insurbia"
 			}
 		],
-		"websites-title": "Websites",
-		"opensInNewTab": "opens in new tab"
+		"websites-title": "Websites"
 	},
 	"privacyPolicy": {
 		"contactEmail": "rgpd@daniel-freire.com",
@@ -350,12 +350,6 @@
 	},
 	"services": [
 		{
-			"slug": "software-personalizado-empresarial",
-			"icon": "/images/icons/business-processes.svg",
-			"iconLarge": "/images/icons/business-processes.svg",
-			"text": "Aplicações web à medida — CRMs, dashboards e ferramentas internas construídas com componentes modulares e entrega ágil, adaptando-se à forma como o seu negócio realmente funciona.",
-			"title": "Software Personalizado Empresarial",
-			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos — e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico. Entrego com métodos ágeis, focando-me em MVP e ciclos de feedback rápido para que veja valor desde cedo e itere com base na utilização real.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar — porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL — implementadas na AWS com arquitetura cloud-native — construo componentes modulares e reutilizáveis que tornam a sua solução robusta, escalável e fácil de manter à medida que o seu negócio cresce.",
 			"features": [
 				"Sistemas CRM adaptados ao seu pipeline de vendas",
 				"Dashboards analíticos e relatórios personalizados",
@@ -365,15 +359,15 @@
 				"Painéis de administração com controlo de acesso granular",
 				"Desenvolvimento de MVP com ciclos de feedback rápido",
 				"Arquitetura cloud-native implementada na AWS"
-			]
+			],
+			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
+			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos — e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico. Entrego com métodos ágeis, focando-me em MVP e ciclos de feedback rápido para que veja valor desde cedo e itere com base na utilização real.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar — porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL — implementadas na AWS com arquitetura cloud-native — construo componentes modulares e reutilizáveis que tornam a sua solução robusta, escalável e fácil de manter à medida que o seu negócio cresce.",
+			"slug": "software-personalizado-empresarial",
+			"text": "Aplicações web à medida — CRMs, dashboards e ferramentas internas construídas com componentes modulares e entrega ágil, adaptando-se à forma como o seu negócio realmente funciona.",
+			"title": "Software Personalizado Empresarial"
 		},
 		{
-			"slug": "implementacao-solucoes-ia",
-			"icon": "/images/icons/ai-recommend.svg",
-			"iconLarge": "/images/icons/ai-recommend.svg",
-			"text": "Aplicações web com IA e integração de LLMs — chatbots, agentes de IA e experiências de utilizador orientadas por IA que transformam os seus fluxos de trabalho.",
-			"title": "Implementação de Soluções de IA",
-			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real — quando aplicada com propósito. Construo aplicações web com IA que integram Modelos de Linguagem de Grande Escala (LLMs) nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou a orquestração de agentes de IA que automatiza processos de negócio complexos com vários passos — o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia. Cada solução é projetada com uma experiência de utilizador orientada por IA, que parece natural e intuitiva para a sua equipa e clientes.\n\nTrabalho com APIs como as da OpenAI, LLMs open-source, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
 			"features": [
 				"Desenvolvimento de aplicações web com IA",
 				"Integração de LLMs com OpenAI e modelos open-source",
@@ -384,15 +378,15 @@
 				"Assistentes de IA com conhecimento específico do seu negócio (RAG)",
 				"Geração e sumarização automática de conteúdos",
 				"Análise preditiva e dashboards de indicadores com IA"
-			]
+			],
+			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
+			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real — quando aplicada com propósito. Construo aplicações web com IA que integram Modelos de Linguagem de Grande Escala (LLMs) nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou a orquestração de agentes de IA que automatiza processos de negócio complexos com vários passos — o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia. Cada solução é projetada com uma experiência de utilizador orientada por IA, que parece natural e intuitiva para a sua equipa e clientes.\n\nTrabalho com APIs como as da OpenAI, LLMs open-source, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
+			"slug": "implementacao-solucoes-ia",
+			"text": "Aplicações web com IA e integração de LLMs — chatbots, agentes de IA e experiências de utilizador orientadas por IA que transformam os seus fluxos de trabalho.",
+			"title": "Implementação de Soluções de IA"
 		},
 		{
-			"slug": "desenvolvimento-web",
-			"icon": "/images/icons/dns-services.svg",
-			"iconLarge": "/images/icons/dns-services.svg",
-			"text": "Aplicações web de alto desempenho — websites rápidos e responsivos com componentes modulares que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
-			"title": "Desenvolvimento Web",
-			"longDescription": "Um website não é apenas um cartão de visita digital — é o seu ativo de marketing mais importante. Construo aplicações web de alto desempenho que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem. Utilizando componentes modulares e lógica de frontend limpa, cada projeto é arquitetado para manutenibilidade desde o primeiro dia.\n\nCada projeto é construído com o desempenho no centro — otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores. Sigo práticas de entrega ágil de produto, começando com um MVP para obter feedback rápido e iterando com base em dados reais de utilização.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards — implementadas na AWS com arquitetura de cloud escalável — abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
 			"features": [
 				"Websites empresariais e landing pages de alta conversão",
 				"Aplicações web progressivas (PWA) com funcionamento offline",
@@ -404,15 +398,15 @@
 				"Desenvolvimento rápido de MVP para validação de mercado",
 				"Implementação na cloud AWS com arquitetura escalável",
 				"Bibliotecas de componentes modulares e reutilizáveis para lógica de frontend"
-			]
+			],
+			"icon": "/images/icons/dns-services.svg",
+			"iconLarge": "/images/icons/dns-services.svg",
+			"longDescription": "Um website não é apenas um cartão de visita digital — é o seu ativo de marketing mais importante. Construo aplicações web de alto desempenho que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem. Utilizando componentes modulares e lógica de frontend limpa, cada projeto é arquitetado para manutenibilidade desde o primeiro dia.\n\nCada projeto é construído com o desempenho no centro — otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores. Sigo práticas de entrega ágil de produto, começando com um MVP para obter feedback rápido e iterando com base em dados reais de utilização.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards — implementadas na AWS com arquitetura de cloud escalável — abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
+			"slug": "desenvolvimento-web",
+			"text": "Aplicações web de alto desempenho — websites rápidos e responsivos com componentes modulares que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
+			"title": "Desenvolvimento Web"
 		},
 		{
-			"slug": "seo-consultoria-tecnica",
-			"icon": "/images/icons/ibm-watson--machine-learning.svg",
-			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"text": "Auditorias baseadas em dados, otimização de alto desempenho e estratégia para ajudar o seu negócio a ser encontrado e a converter.",
-			"title": "SEO e Consultoria Técnica",
-			"longDescription": "Ter um website excelente é apenas metade da equação — a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. Para aplicações web de alto desempenho, garanto que cada milissegundo de tempo de carregamento é contabilizado, porque a velocidade impacta diretamente tanto os rankings como as conversões. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
 			"features": [
 				"Auditoria técnica de SEO completa (rastreabilidade, indexação, arquitetura)",
 				"Otimização de Core Web Vitals e velocidade de carregamento",
@@ -420,7 +414,13 @@
 				"Estratégia de conteúdo e otimização on-page",
 				"Consultoria de migração e redesenho com preservação de SEO",
 				"Configuração e auditoria de analytics (GA4, Search Console)"
-			]
+			],
+			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
+			"longDescription": "Ter um website excelente é apenas metade da equação — a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. Para aplicações web de alto desempenho, garanto que cada milissegundo de tempo de carregamento é contabilizado, porque a velocidade impacta diretamente tanto os rankings como as conversões. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
+			"slug": "seo-consultoria-tecnica",
+			"text": "Auditorias baseadas em dados, otimização de alto desempenho e estratégia para ajudar o seu negócio a ser encontrado e a converter.",
+			"title": "SEO e Consultoria Técnica"
 		}
 	],
 	"sidenav": {
@@ -430,18 +430,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "GitHub de Daniel Freire",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
-					"title": "GitHub de Daniel Freire",
-					"ariaLabel": "Daniel Freire's GitHub - opens in new tab"
+					"title": "GitHub de Daniel Freire"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "LinkedIn de Daniel Freire",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "LinkedIn de Daniel Freire",
-					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab"
+					"title": "LinkedIn de Daniel Freire"
 				}
 			}
 		},
@@ -486,6 +486,50 @@
 			"languageSelectAriaLabel": "Menú para selecionar língua",
 			"languageSelectTitle": "Menú para selecionar língua"
 		}
+	},
+	"svgTitles": {
+		"Bash": "Logótipo da shell Bash",
+		"CSS3": "Logótipo CSS",
+		"Cypress": "Logótipo do framework de testes Cypress",
+		"Expressjs": "Logótipo do framework web Express.js",
+		"ExternalLinkSvg": "Ícone SVG de link externo",
+		"Git": "Logótipo do controlo de versões Git",
+		"GitHubIcon": "Ícone do link de perfil GitHub",
+		"Github": "Logótipo do GitHub",
+		"HTML5": "Logótipo HTML5",
+		"JavaScript": "Logótipo do JavaScript",
+		"Jest": "Logótipo do framework de testes Jest",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Ícone animado de transição lua-sol em ciclo",
+		"LinkedInIcon": "Ícone do link de perfil LinkedIn",
+		"Linux": "Logótipo do sistema operativo Linux",
+		"Moon": "Ícone de lua para alternador de modo escuro",
+		"Nextjs": "Logótipo do framework Next.js",
+		"Nodejs": "Logótipo do runtime Node.js",
+		"PostgreSQL": "Logótipo da base de dados PostgreSQL",
+		"Python": "Logótipo da linguagem de programação Python",
+		"Reactjs": "Logótipo da biblioteca React",
+		"Redux": "Logótipo de gestão de estado Redux",
+		"Selenium": "Selenium WebDriver",
+		"Sun": "Ícone de sol para alternador de modo claro",
+		"Sun1": "Ícone de sol",
+		"TypeScript": "Logótipo da linguagem de programação TypeScript",
+		"Vitejs": "Logótipo da ferramenta de build Vite",
+		"Vitest": "Logótipo do framework de testes Vitest",
+		"Webpack": "Logótipo do empacotador de módulos Webpack",
+		"Zsh": "Logótipo da shell Zsh",
+		"alertAnimation": "Triângulo de alerta animado com ponto de exclamação",
+		"blocksShuffle": "Spinner de carregamento animado com blocos em movimento",
+		"blocksWave": "Spinner de carregamento animado com blocos em onda",
+		"closeToMenu": "Ícone de transição fechar-para-menu",
+		"compass": "Bússola animada com agulha direcional rotativa",
+		"computerAnimation": "Monitor de computador animado com tabuleiro de teclado",
+		"djangoRocket": "Ilustração do foguetão Django",
+		"externalLink": "Ícone de link externo",
+		"menuToClose": "Ícone de transição menu-para-fechar",
+		"moonToSun": "Ícone animado de transição lua-sol",
+		"nextjsTsx": "Logótipo do framework Next.js",
+		"opensInNewTab": "opens in new tab",
+		"sunToMoon": "Ícone animado de transição sol-lua"
 	},
 	"tech": [
 		{
@@ -620,49 +664,5 @@
 		],
 		"p1": "Cansado de software que atrasa o seu negócio?",
 		"p2": "A maioria do software empresarial é demasiado rígido ou demasiado complexo. Especializo-me no desenvolvimento de aplicações web personalizadas – como sistemas CRM, rastreadores de projetos e painéis de dados – que se adequam à forma como o seu negócio realmente funciona. Se precisa de uma ferramenta que resolva um problema específico sem funcionalidades desnecessárias, vamos discutir o que pretende alcançar."
-	},
-	"svgTitles": {
-		"Bash": "Logótipo da shell Bash",
-		"CSS3": "Logótipo CSS",
-		"Cypress": "Logótipo do framework de testes Cypress",
-		"Expressjs": "Logótipo do framework web Express.js",
-		"ExternalLinkSvg": "Ícone SVG de link externo",
-		"Git": "Logótipo do controlo de versões Git",
-		"GitHubIcon": "Ícone do link de perfil GitHub",
-		"Github": "Logótipo do GitHub",
-		"HTML5": "Logótipo HTML5",
-		"JavaScript": "Logótipo do JavaScript",
-		"Jest": "Logótipo do framework de testes Jest",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Ícone animado de transição lua-sol em ciclo",
-		"LinkedInIcon": "Ícone do link de perfil LinkedIn",
-		"Linux": "Logótipo do sistema operativo Linux",
-		"Moon": "Ícone de lua para alternador de modo escuro",
-		"Nextjs": "Logótipo do framework Next.js",
-		"Nodejs": "Logótipo do runtime Node.js",
-		"PostgreSQL": "Logótipo da base de dados PostgreSQL",
-		"Python": "Logótipo da linguagem de programação Python",
-		"Reactjs": "Logótipo da biblioteca React",
-		"Redux": "Logótipo de gestão de estado Redux",
-		"Selenium": "Selenium WebDriver",
-		"Sun": "Ícone de sol para alternador de modo claro",
-		"Sun1": "Ícone de sol",
-		"TypeScript": "Logótipo da linguagem de programação TypeScript",
-		"Vitejs": "Logótipo da ferramenta de build Vite",
-		"Vitest": "Logótipo do framework de testes Vitest",
-		"Webpack": "Logótipo do empacotador de módulos Webpack",
-		"Zsh": "Logótipo da shell Zsh",
-		"alertAnimation": "Triângulo de alerta animado com ponto de exclamação",
-		"blocksShuffle": "Spinner de carregamento animado com blocos em movimento",
-		"blocksWave": "Spinner de carregamento animado com blocos em onda",
-		"closeToMenu": "Ícone de transição fechar-para-menu",
-		"compass": "Bússola animada com agulha direcional rotativa",
-		"computerAnimation": "Monitor de computador animado com tabuleiro de teclado",
-		"djangoRocket": "Ilustração do foguetão Django",
-		"externalLink": "Ícone de link externo",
-		"menuToClose": "Ícone de transição menu-para-fechar",
-		"moonToSun": "Ícone animado de transição lua-sol",
-		"nextjsTsx": "Logótipo do framework Next.js",
-		"sunToMoon": "Ícone animado de transição sol-lua",
-		"opensInNewTab": "opens in new tab"
 	}
 }

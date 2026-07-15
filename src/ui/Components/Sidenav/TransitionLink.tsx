@@ -78,6 +78,7 @@ export const TransitionLink = ({
 
 			router.push(href as string);
 		}
+		setIsOpen && isOpen && setIsOpen((prev) => !prev);
 	};
 
 	return (

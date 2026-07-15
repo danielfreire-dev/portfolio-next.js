@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Suspense } from "react";
 import { WebsiteCardSkeleton } from "./Skeletons";
-import { LineMdCompassFilled } from "./svgs/LineMdCompassFilled";
 
 /**
  * Portfolio cards section.

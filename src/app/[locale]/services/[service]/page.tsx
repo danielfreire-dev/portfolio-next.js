@@ -274,7 +274,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 				)}
 
 				{/* CTA */}
-				<div className="text-center mb-10"></div>
+				<div className="text-center mb-10" />
 			</article>
 		</>
 	);

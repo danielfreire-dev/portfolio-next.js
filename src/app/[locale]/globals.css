@@ -451,7 +451,7 @@ footer a {
 }
 
 /* Tech Stack icons */
-#stack-container > div > a > svg {
+#stack-container > a > div > svg {
 	width: 7em;
 	height: 7em;
 }

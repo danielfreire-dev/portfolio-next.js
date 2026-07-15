@@ -37,23 +37,22 @@ const TechCards = ({ tech }: TechCardsProps) => {
 		}
 
 		return (
-			<div
-				className="py-7 px-9 m-4 surface-cards"
-				key={data.name}>
-				<a
-					href={data.link}
-					className="flex flex-col flex-nowrap justify-items-center hover:scale-140 delay-150 ease-in duration-400"
-					target="_blank"
-					rel="noopener noreferrer"
-					aria-label={`${data.name} - ${t("opensInNewTab")}`}>
+			<a
+				href={data.link}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label={`${data.name} - ${t("opensInNewTab")}`}
+				key={data.name}
+				className="block hover:scale-133 delay-150 ease-in duration-400 ">
+				<div className="py-7 px-9 surface-cards flex flex-col flex-nowrap justify-items-center">
 					<SvgComponent
 						alt={`${data.name} logo`}
-						title={t(data.svgr as never) ?? undefined}
+						title={t(data.svgr) ?? undefined}
 					/>
 
 					<p className="capitalize mt-1.5 self-center">{data.name}</p>
-				</a>
-			</div>
+				</div>
+			</a>
 		);
 	});
 
