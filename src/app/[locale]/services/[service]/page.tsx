@@ -82,11 +82,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const metaT = await getTranslations({ locale, namespace: "metadata" });
 
 	const alternates = getAlternates({
-		href: { pathname: "/services/[slug]", params: { slug } },
+		href: { pathname: "/services/[service]", params: { service: slug } },
 		locale,
 		hrefForLocale: (cur) => ({
-			pathname: "/services/[slug]",
-			params: { slug: getLocalizedSlug(englishSlug, cur) },
+			pathname: "/services/[service]",
+			params: { service: getLocalizedSlug(englishSlug, cur) },
 		}),
 	});
 

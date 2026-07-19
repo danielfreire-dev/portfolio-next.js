@@ -1,27 +1,122 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { NextRequest, NextResponse } from "next/server";
 
 /**
- * Tests for the middleware matcher pattern used in src/middleware.ts.
+ * Tests for the middleware (src/middleware.ts).
  *
- * The matcher is a regex pattern that excludes API routes, static assets,
- * and common file types from being processed by the i18n middleware.
+ * Covers two responsibilities:
+ * 1. The www → non-www redirect (hostname-based).
+ * 2. The matcher pattern that controls which paths the middleware processes.
  */
+
+// ---------------------------------------------------------------------------
+// Mock next-intl/middleware — returns a pass-through that calls next().
+// This isolates the www-redirect logic from locale negotiation.
+// ---------------------------------------------------------------------------
+vi.mock("next-intl/middleware", () => ({
+	default: vi.fn(() => (_req: NextRequest) => NextResponse.next()),
+}));
+
+// Mock the routing module imported by middleware.ts.
+// The middleware uses `import { routing } from "./i18n/routing"`, so we mock
+// the same relative path (resolved from src/middleware.ts).
+vi.mock("./i18n/routing", () => ({
+	routing: {
+		locales: ["en", "pt"],
+		defaultLocale: "en",
+	},
+}));
+
+// ---------------------------------------------------------------------------
+// Dynamic import — after mocks are registered, import the middleware.
+// ---------------------------------------------------------------------------
+let middleware: (req: NextRequest) => NextResponse;
+
+beforeEach(async () => {
+	const mod = await import("../middleware");
+	middleware = mod.default;
+});
+
+// ---------------------------------------------------------------------------
+// Helper: build a NextRequest with a specific host header and path.
+// ---------------------------------------------------------------------------
+function buildReq(hostname: string, path = "/"): NextRequest {
+	const url = `https://${hostname}${path}`;
+	return new NextRequest(url, {
+		headers: { host: hostname },
+	});
+}
+
+// ===========================================================================
+describe("middleware", () => {
+	describe("www → non-www redirect", () => {
+		it("redirects www.daniel-freire.com to daniel-freire.com", () => {
+			const req = buildReq("www.daniel-freire.com", "/en/about");
+			const res = middleware(req);
+
+			expect(res).toBeInstanceOf(NextResponse);
+			expect(res.status).toBe(308);
+			expect(res.headers.get("location")).toBe("https://daniel-freire.com/en/about");
+		});
+
+		it("redirects www root to non-www root", () => {
+			const req = buildReq("www.daniel-freire.com", "/");
+			const res = middleware(req);
+
+			expect(res).toBeInstanceOf(NextResponse);
+			expect(res.status).toBe(308);
+			expect(res.headers.get("location")).toBe("https://daniel-freire.com/");
+		});
+
+		it("preserves query parameters in the redirect", () => {
+			const req = buildReq("www.daniel-freire.com", "/en/contact?utm_source=google");
+			const res = middleware(req);
+
+			expect(res.status).toBe(308);
+			expect(res.headers.get("location")).toBe("https://daniel-freire.com/en/contact?utm_source=google");
+		});
+
+		it("does NOT redirect when hostname is already non-www", () => {
+			const req = buildReq("daniel-freire.com", "/en/about");
+			const res = middleware(req);
+
+			expect(res.status).not.toBe(308);
+		});
+
+		it("redirects any www-prefixed hostname", () => {
+			const req = buildReq("www.example.com", "/some/path");
+			const res = middleware(req);
+
+			expect(res.status).toBe(308);
+			expect(res.headers.get("location")).toBe("https://example.com/some/path");
+		});
+
+		it("does NOT redirect non-www subdomains like api", () => {
+			const req = buildReq("api.daniel-freire.com", "/v1/users");
+			const res = middleware(req);
+
+			expect(res.status).not.toBe(308);
+		});
+
+		it("preserves pathname and hash in redirect", () => {
+			const req = buildReq("www.daniel-freire.com", "/pt/servicos/web-development#pricing");
+			const res = middleware(req);
+
+			expect(res.status).toBe(308);
+			expect(res.headers.get("location")).toBe("https://daniel-freire.com/pt/servicos/web-development#pricing");
+		});
+	});
+});
+
+// ===========================================================================
+// Matcher pattern tests (legacy — kept intact)
+// ===========================================================================
 describe("middleware matcher", () => {
-	// Extract the matcher pattern from the config
 	const matcherPatterns = [
 		"/((?!api|_next/static|_next/image|trpc|_next|_vercel|favicon.ico|.*/opengraph-image|sitemap.xml|.*\\.svg$|.*\\.png$|.*\\.webp$|.*\\.gif$|.*\\.txt$).*)",
 	];
 
-	/**
-	 * Builds a RegExp from a Next.js matcher glob pattern.
-	 * Next.js uses path-to-regexp internally, but we approximate with
-	 * simple string matching for test validation.
-	 */
 	function matchesPattern(path: string): boolean {
-		// The matcher is a "match all except" pattern
-		// Excluded: api, _next/static, _next/image, trpc, _next, _vercel,
-		//           favicon.ico, opengraph-image, sitemap.xml,
-		//           .svg, .png, .webp, .gif, .txt files
 		const excludedPrefixes = [
 			"/api/",
 			"/_next/static/",
@@ -34,18 +129,14 @@ describe("middleware matcher", () => {
 
 		const excludedSuffixes = [".svg", ".png", ".webp", ".gif", ".txt"];
 
-		// Check prefixes
 		for (const prefix of excludedPrefixes) {
 			if (path.startsWith(prefix)) return false;
 		}
 
-		// Also exclude exact matches for _next without trailing slash
 		if (path === "/_next" || path.startsWith("/_next/data")) return false;
 
-		// Check opengraph-image anywhere
 		if (path.includes("opengraph-image")) return false;
 
-		// Check suffixes
 		for (const suffix of excludedSuffixes) {
 			if (path.endsWith(suffix)) return false;
 		}
@@ -132,13 +223,11 @@ describe("middleware matcher", () => {
 		});
 
 		it("should include paths with query parameters (middleware sees path only)", () => {
-			// Middleware receives the pathname without query string
 			expect(matchesPattern("/en/contact")).toBe(true);
 		});
 
 		it("should include paths with .json extension (not excluded)", () => {
-			// .json is NOT in the exclusion list — only specific files like sitemap.xml
-			expect(matchesPattern("/api/data.json")).toBe(false); // starts with /api/
+			expect(matchesPattern("/api/data.json")).toBe(false);
 			expect(matchesPattern("/en/data.json")).toBe(true);
 		});
 	});

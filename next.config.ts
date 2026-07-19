@@ -20,9 +20,10 @@ export const nextConfig: NextConfig = {
 	 *
 	 * - Old locale codes (dk→da, cz→cs) — ISO 3166 country codes replaced
 	 *   with correct BCP 47 language codes.
-	 * - www→non-www redirect is handled at the DNS / Vercel project level
-	 *   (domain redirect), NOT here, to avoid redirect loops with the
-	 *   next-intl locale middleware.
+	 * - www→non-www redirect is handled in the middleware (src/middleware.ts)
+	 *   and at the Vercel project level (domain redirect).  The middleware
+	 *   redirect runs first (before the next-intl locale negotiator) so there
+	 *   is no risk of redirect loops.
 	 * - HTTP→HTTPS is enforced via the Strict-Transport-Security header below.
 	 */
 	async redirects() {

@@ -10,7 +10,7 @@ const BASE_URL = "https://daniel-freire.com";
  *
  * Can be a simple string for static routes (e.g., `"/about"`) or an object
  * with `pathname` and `params` for dynamic routes (e.g.,
- * `{ pathname: "/services/[slug]", params: { slug: "web-development" } }`).
+ * `{ pathname: "/services/[service]", params: { service: "web-development" } }`).
  */
 type Href = Parameters<typeof getPathname>[0]["href"];
 
@@ -31,8 +31,8 @@ interface GetAlternatesOptions {
 	 * @example
 	 * // Dynamic route with translated slugs
 	 * hrefForLocale: (cur) => ({
-	 *   pathname: "/services/[slug]",
-	 *   params: { slug: getLocalizedSlug(englishSlug, cur) },
+	 *   pathname: "/services/[service]",
+	 *   params: { service: getLocalizedSlug(englishSlug, cur) },
 	 * })
 	 */
 	hrefForLocale?: (locale: string) => Href;
@@ -58,7 +58,7 @@ interface GetAlternatesOptions {
  * @example
  * // Dynamic route
  * getAlternates({
- *   href: { pathname: "/services/[slug]", params: { slug: "web-development" } },
+ *   href: { pathname: "/services/[service]", params: { service: "web-development" } },
  *   locale: "pt",
  * });
  *

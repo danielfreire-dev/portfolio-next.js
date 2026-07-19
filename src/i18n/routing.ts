@@ -51,12 +51,12 @@ export const routing = defineRouting({
 			de: "/dienstleistungen",
 			cs: "/sluzby",
 		},
-		"/services/[slug]": {
-			pt: "/servicos/[slug]",
-			da: "/ydelser/[slug]",
-			pl: "/uslugi/[slug]",
-			de: "/dienstleistungen/[slug]",
-			cs: "/sluzby/[slug]",
+		"/services/[service]": {
+			pt: "/servicos/[service]",
+			da: "/ydelser/[service]",
+			pl: "/uslugi/[service]",
+			de: "/dienstleistungen/[service]",
+			cs: "/sluzby/[service]",
 		},
 		"/terms-of-service": {
 			pt: "/termos-servico",
