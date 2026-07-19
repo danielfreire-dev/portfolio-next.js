@@ -215,11 +215,11 @@
 		"description": {
 			"about": "Learn about Daniel Freire — a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
 			"contact": "Get in touch with Daniel Freire for web development, AI solutions, and technical consulting. Fast, responsive communication guaranteed.",
-			"home": "Daniel Freire — Web Developer specializing in AI-powered applications, custom software, and high-performance websites. Based in Portugal, serving clients worldwide.",
+			"home": "Daniel Freire — Web Developer specializing in AI-powered applications, custom software, and high-performance websites. Based in Portugal, serving globally.",
 			"impressum": "",
 			"portfolio": "Explore Daniel Freire's portfolio of web development projects, including React apps, AI-powered tools, and custom business software solutions.",
 			"privacyPolicy": "Learn how Daniel Freire collects, uses, and protects your personal data. Transparent privacy practices in compliance with GDPR.",
-			"services": "AI-powered web applications, LLM integration, and high-performance web development by Daniel Freire. Custom software, AI agents, and technical consulting with agile product delivery."
+			"services": "AI-powered web apps, LLM integration, and high-performance web development by Daniel Freire. Custom software, AI agents, and technical consulting."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -238,7 +238,10 @@
 	},
 	"portfolio": {
 		"all": "All",
-		"cta": ["check it out", "view the live project →"],
+		"cta": [
+			"check it out",
+			"view the live project →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -329,7 +332,12 @@
 		"paragraph10": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.",
 		"paragraph11": "If you have any questions about this privacy policy, please contact us at",
 		"paragraph2": "We collect personal information that you voluntarily provide to us when you fill out a form on our website. The personal information we collect includes:",
-		"paragraph2li": ["First name", "Last name", "Email address", "Phone number"],
+		"paragraph2li": [
+			"First name",
+			"Last name",
+			"Email address",
+			"Phone number"
+		],
 		"paragraph3": "The information we collect will be used to contact you in the future. We will only use your personal data for this specific purpose.",
 		"paragraph4": "We process your personal data based on your consent, which you provide by filling out the form on our website.",
 		"paragraph5": "We do not share your personal data with third parties except as required by law.",

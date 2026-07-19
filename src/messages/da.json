@@ -219,7 +219,7 @@
 			"impressum": "",
 			"portfolio": "Udforsk Daniel Freires portefølje af webudviklingsprojekter, herunder React-apps, AI-drevne værktøjer og skræddersyede forretningssoftwareløsninger.",
 			"privacyPolicy": "Lær hvordan Daniel Freire indsamler, bruger og beskytter dine personlige data. Gennemsigtige privatlivspraksisser i overensstemmelse med GDPR.",
-			"services": "AI-drevne webapplikationer, LLM-integration og højtydende webudvikling af Daniel Freire. Skræddersyet software, AI-agenter og teknisk rådgivning med agil produktlevering."
+			"services": "AI-drevne webapps, LLM-integration og webudvikling af Daniel Freire. Skræddersyet software, AI-agenter og teknisk rådgivning med agil levering."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -238,7 +238,10 @@
 	},
 	"portfolio": {
 		"all": "Alle",
-		"cta": ["tjek det ud", "se det live projekt →"],
+		"cta": [
+			"tjek det ud",
+			"se det live projekt →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -329,7 +332,12 @@
 		"paragraph10": "Vi kan opdatere denne privatlivspolitik fra tid til anden. Vi vil underrette dig om eventuelle ændringer ved at offentliggøre den nye privatlivspolitik på denne side.",
 		"paragraph11": "Hvis du har spørgsmål om denne privatlivspolitik, kontakt os venligst på",
 		"paragraph2": "Vi indsamler personlige oplysninger som du frivilligt giver os når du udfylder en formular på vores hjemmeside. De personlige oplysninger vi indsamler inkluderer:",
-		"paragraph2li": ["Fornavn", "Efternavn", "E-mail adresse", "Telefonnummer"],
+		"paragraph2li": [
+			"Fornavn",
+			"Efternavn",
+			"E-mail adresse",
+			"Telefonnummer"
+		],
 		"paragraph3": "De oplysninger vi indsamler vil blive brugt til at kontakte dig i fremtiden. Vi vil kun bruge dine personlige data til dette specifikke formål.",
 		"paragraph4": "Vi behandler dine personlige data baseret på dit samtykke, som du giver ved at udfylde formularen på vores hjemmeside.",
 		"paragraph5": "Vi deler ikke dine personlige data med tredjeparter medmindre det er påkrævet af loven.",

@@ -215,11 +215,11 @@
 		"description": {
 			"about": "Conhece o Daniel Freire — um programador web especializado em aplicações com IA, integração de LLMs e soluções web de alto desempenho.",
 			"contact": "Entra em contacto com o Daniel Freire para desenvolvimento web, soluções de IA e consultoria técnica. Resposta rápida garantida.",
-			"home": "Daniel Freire — Programador Web especializado em aplicações com IA, software personalizado e websites de alto desempenho. Baseado em Portugal, ao serviço de clientes em todo o mundo.",
+			"home": "Daniel Freire — Programador Web: apps com IA, software personalizado, sites de alto desempenho. Em Portugal, servindo clientes globais.",
 			"impressum": "",
-			"portfolio": "Explora o portfólio de projetos de desenvolvimento web do Daniel Freire, incluindo apps React, ferramentas com IA e soluções de software empresarial personalizadas.",
+			"portfolio": "Explora o portfólio de projetos web do Daniel Freire: apps React, ferramentas com IA e soluções de software empresarial personalizadas.",
 			"privacyPolicy": "Fica a saber como o Daniel Freire recolhe, utiliza e protege os teus dados pessoais. Práticas de privacidade transparentes em conformidade com o RGPD.",
-			"services": "Aplicações web com IA, integração de LLMs e desenvolvimento web de alto desempenho por Daniel Freire. Software personalizado, agentes de IA e consultoria técnica com entrega ágil."
+			"services": "Apps web com IA, integração de LLMs e desenvolvimento de alto desempenho por Daniel Freire. Software personalizado, agentes de IA e consultoria técnica."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -238,7 +238,10 @@
 	},
 	"portfolio": {
 		"all": "Todos",
-		"cta": ["confira", "veja o projeto ao vivo →"],
+		"cta": [
+			"confira",
+			"veja o projeto ao vivo →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfólio",
 		"projects": [
@@ -329,7 +332,12 @@
 		"paragraph10": "Podemos atualizar esta política de privacidade periodicamente. Notificá-lo-emos de quaisquer alterações através da publicação da nova política de privacidade nesta página.",
 		"paragraph11": "Se tiver alguma questão sobre esta política de privacidade, por favor contacte-nos através de",
 		"paragraph2": "Recolhemos informações pessoais que nos fornece voluntariamente quando preenche um formulário no nosso website. As informações pessoais que recolhemos incluem:",
-		"paragraph2li": ["Primeiro nome", "Último nome", "Endereço de email", "Número de telefone"],
+		"paragraph2li": [
+			"Primeiro nome",
+			"Último nome",
+			"Endereço de email",
+			"Número de telefone"
+		],
 		"paragraph3": "As informações recolhidas serão utilizadas para o contactar no futuro. Utilizaremos os seus dados pessoais apenas para esta finalidade específica.",
 		"paragraph4": "Tratamos os seus dados pessoais com base no seu consentimento, que nos concede ao preencher o formulário no nosso website.",
 		"paragraph5": "Não partilhamos os seus dados pessoais com terceiros, exceto se exigido por lei.",

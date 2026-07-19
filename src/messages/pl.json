@@ -215,11 +215,11 @@
 		"description": {
 			"about": "Poznaj Daniela Freire — web developera specjalizującego się w aplikacjach z AI, integracji LLM i wysokowydajnych rozwiązaniach webowych.",
 			"contact": "Skontaktuj się z Danielem Freire w sprawie tworzenia stron internetowych, rozwiązań AI i doradztwa technicznego. Szybka i responsywna komunikacja gwarantowana.",
-			"home": "Daniel Freire — Web Developer specjalizujący się w aplikacjach z AI, oprogramowaniu na zamówienie i wysokowydajnych stronach internetowych. Siedziba w Portugalii, obsługa klientów na całym świecie.",
+			"home": "Daniel Freire — Web Developer: aplikacje AI, oprogramowanie na zamówienie, wydajne strony www. Z Portugalii, dla klientów na całym świecie.",
 			"impressum": "",
-			"portfolio": "Przeglądaj portfolio projektów webowych Daniela Freire, w tym aplikacje React, narzędzia oparte na AI i rozwiązania z zakresu oprogramowania biznesowego na zamówienie.",
+			"portfolio": "Portfolio projektów webowych Daniela Freire: aplikacje React, narzędzia AI i rozwiązania z zakresu oprogramowania biznesowego na zamówienie.",
 			"privacyPolicy": "Dowiedz się, jak Daniel Freire gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przejrzyste praktyki ochrony prywatności zgodne z RODO.",
-			"services": "Aplikacje webowe z AI, integracja LLM i wysokowydajne tworzenie stron internetowych przez Daniela Freire. Oprogramowanie dedykowane, agenci AI i doradztwo techniczne z zwinnym dostarczaniem produktów."
+			"services": "Aplikacje webowe AI, integracja LLM i wydajne strony www od Daniela Freire. Oprogramowanie dedykowane, agenci AI i doradztwo techniczne."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -238,7 +238,10 @@
 	},
 	"portfolio": {
 		"all": "Wszystkie",
-		"cta": ["sprawdź to", "zobacz żywy projekt →"],
+		"cta": [
+			"sprawdź to",
+			"zobacz żywy projekt →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -329,7 +332,12 @@
 		"paragraph10": "Możemy aktualizować niniejszą politykę prywatności od czasu do czasu. Poinformujemy Cię o wszelkich zmianach, publikując nową politykę prywatności na tej stronie.",
 		"paragraph11": "Jeśli masz jakiekolwiek pytania dotyczące niniejszej polityki prywatności, skontaktuj się z nami pod adresem",
 		"paragraph2": "Zbieramy informacje osobiste, które dobrowolnie nam podajesz, kiedy wypełniasz formularz na naszej stronie internetowej. Informacje osobiste, które zbieramy, obejmują:",
-		"paragraph2li": ["Imię", "Nazwisko", "Adres e-mail", "Numer telefonu"],
+		"paragraph2li": [
+			"Imię",
+			"Nazwisko",
+			"Adres e-mail",
+			"Numer telefonu"
+		],
 		"paragraph3": "Zebrane informacje będą wykorzystywane do kontaktu z Tobą w przyszłości. Będziemy używać Twoich danych osobowych wyłącznie w tym konkretnym celu.",
 		"paragraph4": "Przetwarzamy Twoje dane osobowe w oparciu o Twoją zgodę, którą wyrażasz, wypełniając formularz na naszej stronie internetowej.",
 		"paragraph5": "Nie udostępniamy Twoich danych osobowych stronom trzecim, z wyjątkiem przypadków wymaganych przez prawo.",
