@@ -23,7 +23,7 @@ import MobileSlideBtn from "./MobileSlideBtn";
  * On mobile the sidenav slides in/out via `MobileSlideBtn`.
  */
 const Sidenav = () => {
-	const [isOpen, setIsOpen] = useState<boolean>(true);
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const t = useTranslations("sidenav");
 
 	return (
