@@ -4,6 +4,7 @@ import { use } from "react";
 import { Locale } from "next-intl";
 import Services from "@/ui/Components/Services";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { getAlternates } from "@/i18n/alternates";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -35,13 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"AI agents",
 		],
 		robots: { index: true, follow: true },
-		alternates: {
-			canonical: "/services",
-			languages: {
-				en: "https://daniel-freire.com/en/services",
-				pt: "https://daniel-freire.com/pt/servicos",
-			},
-		},
+		alternates: getAlternates({ href: "/services", locale }),
 		openGraph: {
 			type: "website",
 			title: t("title.services"),

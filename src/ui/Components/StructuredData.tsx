@@ -1,4 +1,4 @@
-import { SERVICE_SLUGS } from "@/lib/serviceSlugs";
+import { SERVICE_SLUGS } from "@/i18n/serviceSlugs";
 
 // ---------------------------------------------------------------------------
 // Base types for each supported schema.org type

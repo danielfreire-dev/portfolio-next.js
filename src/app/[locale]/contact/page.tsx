@@ -4,6 +4,7 @@ import ContactForm from "@/ui/Components/ContactForm";
 import { Metadata } from "next";
 import { use } from "react";
 import { generateBreadcrumbSchema, generateContactPointSchema } from "@/ui/Components/StructuredData";
+import { getAlternates } from "@/i18n/alternates";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -33,13 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"web development inquiry",
 		],
 		robots: { index: true, follow: true },
-		alternates: {
-			canonical: "/contact",
-			languages: {
-				en: "https://daniel-freire.com/en/contact",
-				pt: "https://daniel-freire.com/pt/contactos",
-			},
-		},
+		alternates: getAlternates({ href: "/contact", locale }),
 		openGraph: {
 			type: "website",
 			title: t("title.contact"),

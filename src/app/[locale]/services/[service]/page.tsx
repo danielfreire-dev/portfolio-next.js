@@ -6,10 +6,11 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Suspense } from "react";
 import { Locale } from "next-intl";
-import { Link, getPathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { TransitionLink } from "@/ui/Components/Sidenav/TransitionLink";
 import { generateBreadcrumbSchema, generateServiceSchema } from "@/ui/Components/StructuredData";
-import { routing } from "@/i18n/routing";
+import { getAllLocalizedSlugs, getLocalizedSlug, toEnglishSlug } from "@/i18n/serviceSlugs";
+import { getAlternates } from "@/i18n/alternates";
 
 interface Props {
 	params: Promise<{ locale: Locale; service: string }>;
@@ -23,38 +24,7 @@ interface Props {
  * service-detail page at build time.  The canonical list is shared with the
  * sitemap to keep the authority list in one place.
  */
-const ALL_SLUGS: string[] = [
-	// English
-	"business-custom-software",
-	"ai-solution-implementation",
-	"web-development",
-	"seo-technical-consulting",
-	// Portuguese
-	"software-personalizado-empresarial",
-	"implementacao-solucoes-ia",
-	"desenvolvimento-web",
-	"seo-consultoria-tecnica",
-	// Danish
-	"skraeddersyet-forretningssoftware",
-	"implementering-af-ai-losninger",
-	"webudvikling",
-	"seo-teknisk-radgivning",
-	// Polish
-	"dedykowane-oprogramowanie-biznesowe",
-	"wdrazanie-rozwiazan-ai",
-	"tworzenie-stron-internetowych",
-	"seo-doradztwo-techniczne",
-	// German
-	"massgeschneiderte-unternehmenssoftware",
-	"implementierung-von-ki-losungen",
-	"webentwicklung",
-	"seo-technische-beratung",
-	// Czech
-	"zakazkovy-firemni-software",
-	"implementace-ai-reseni",
-	"vyvoj-webovych-stranek",
-	"seo-technicke-poradenstvi",
-];
+const ALL_SLUGS: string[] = getAllLocalizedSlugs();
 
 /**
  * Localized heading for the features/included section on service detail pages.
@@ -104,12 +74,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		return { title: "Service Not Found" };
 	}
 
+	// Resolve the canonical English slug so we can produce correct
+	// per-locale hreflang alternates (each locale needs its own translation
+	// of the slug, not the slug from the current locale).
+	const englishSlug = toEnglishSlug(slug);
+
 	const metaT = await getTranslations({ locale, namespace: "metadata" });
-	const pagePath = getPathname({
-		locale,
+
+	const alternates = getAlternates({
 		href: { pathname: "/services/[slug]", params: { slug } },
-	} as Parameters<typeof getPathname>[0]);
-	const pageUrl = `https://daniel-freire.com${pagePath}`;
+		locale,
+		hrefForLocale: (cur) => ({
+			pathname: "/services/[slug]",
+			params: { slug: getLocalizedSlug(englishSlug, cur) },
+		}),
+	});
 
 	return {
 		title: service.title,
@@ -124,23 +103,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"SEO audit",
 		],
 		robots: { index: true, follow: true },
-		alternates: {
-			canonical: pagePath,
-			languages: Object.fromEntries(
-				routing.locales.map((cur) => {
-					const curPath = getPathname({
-						locale: cur,
-						href: { pathname: "/services/[slug]", params: { slug } },
-					} as Parameters<typeof getPathname>[0]);
-					return [cur, `https://daniel-freire.com${curPath}`];
-				}),
-			),
-		},
+		alternates,
 		openGraph: {
 			type: "website",
 			title: `${service.title} | ${metaT("name")}`,
 			description: service.text,
-			url: pageUrl,
+			url: `https://daniel-freire.com${alternates.canonical}`,
 			siteName: `${service.title} | Daniel Freire`,
 			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
 			locale: locale,

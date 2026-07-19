@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { getAlternates } from "@/i18n/alternates";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -34,13 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"full-stack portfolio",
 		],
 		robots: { index: true, follow: true },
-		alternates: {
-			canonical: "/portfolio",
-			languages: {
-				en: "https://daniel-freire.com/en/portfolio",
-				pt: "https://daniel-freire.com/pt/portfolio",
-			},
-		},
+		alternates: getAlternates({ href: "/portfolio", locale }),
 		openGraph: {
 			type: "website",
 			title: t("title.portfolio"),
