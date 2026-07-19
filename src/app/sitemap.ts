@@ -75,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		...getEntries("/portfolio"),
 		...getEntries("/privacy-policy"),
 		...getEntries("/services"),
-		...SERVICE_SLUGS.flatMap((englishSlug) => getDynamicEntries("/services/[slug]", englishSlug)),
+		...SERVICE_SLUGS.flatMap((englishSlug) => getDynamicEntries("/services/[service]", englishSlug)),
 	];
 }
 
@@ -117,20 +117,20 @@ function getEntries(href: Href) {
  * the service-detail page's `generateMetadata`) so that sitemap URLs are
  * always consistent with the canonical & hreflang tags served on each page.
  *
- * @param href        - The route pattern (e.g., "/services/[slug]").
+ * @param href        - The route pattern (e.g., "/services/[service]").
  * @param englishSlug - The canonical English slug for the service.
  * @returns An array of sitemap entries, one per locale.
  */
-function getDynamicEntries(href: "/services/[slug]", englishSlug: string) {
+function getDynamicEntries(href: "/services/[service]", englishSlug: string) {
 	return routing.locales.map((locale) => {
 		const localizedSlug = getLocalizedSlug(englishSlug, locale);
 
 		const alternates = getAlternates({
-			href: { pathname: href, params: { slug: localizedSlug } },
+			href: { pathname: href, params: { service: localizedSlug } },
 			locale,
 			hrefForLocale: (cur) => ({
 				pathname: href,
-				params: { slug: getLocalizedSlug(englishSlug, cur) },
+				params: { service: getLocalizedSlug(englishSlug, cur) },
 			}),
 		});
 
