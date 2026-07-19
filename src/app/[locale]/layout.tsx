@@ -154,6 +154,7 @@ export default async function RootLayout({
 			lang={locale}
 			suppressHydrationWarning>
 			<head>
+				<script dangerouslySetInnerHTML={{ __html: themeScript }} />
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -167,7 +168,6 @@ export default async function RootLayout({
 			</Suspense>
 			<body
 				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}>
-				<script dangerouslySetInnerHTML={{ __html: themeScript }} />
 				<NextIntlClientProvider messages={messages}>
 					<Providers>
 						<header className="flex flex-row max-w-dvw">
