@@ -132,74 +132,75 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			{children}
 
 			{/* ---- Cookie Consent Banner ---- */}
-			{showBanner && (
-				<div
-					className={`fixed bottom-4 left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 z-99999 w-auto sm:w-full sm:max-w-5xl rounded-xl sm:rounded-none ${styles?.banner ?? ""}`}
-					style={{
-						borderTop: "3px solid var(--primary)",
-						boxShadow: "0 -4px 24px rgba(0, 0, 0, 0.18)",
-					}}
-					role="region"
-					aria-label={t("title")}>
+			{showBanner  && (
 					<div
-						className="px-4 py-3 sm:px-6 sm:py-4 mx-auto max-w-5xl flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4"
-						style={{ backgroundColor: "var(--surface)", color: "var(--text)" }}>
-						{/* Message */}
-						<div className="flex-1 min-w-0">
-							<h3
-								className="text-sm sm:text-base font-semibold mb-0.5"
-								style={{ color: "var(--text)" }}>
-								{t("title")}
-							</h3>
-							<p
-								className="text-xs sm:text-sm leading-relaxed"
-								style={{ color: "var(--text)" }}>
-								{t("message")}
-							</p>
-						</div>
+						className={`fixed bottom-4 left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 z-99999 w-auto sm:w-full sm:max-w-5xl rounded-xl sm:rounded-none ${styles?.banner ?? ""}`}
+						style={{
+							borderTop: "3px solid var(--primary)",
+							boxShadow: "0 -4px 24px rgba(0, 0, 0, 0.18)",
+						}}
+						role="region"
+						aria-label={t("title")}>
+						<div
+							className="px-4 py-3 sm:px-6 sm:py-4 mx-auto max-w-5xl flex flex-col gap-3 sm:gap-4"
+							style={{ backgroundColor: "var(--surface)", color: "var(--text)" }}>
+							{/* Message */}
+							<div className="flex-1 min-w-0">
+								<h3
+									className="text-sm sm:text-base font-semibold mb-0.5"
+									style={{ color: "var(--text)" }}>
+									{t("title")}
+								</h3>
+								<p
+									className="text-xs sm:text-sm leading-relaxed"
+									style={{ color: "var(--text)" }}>
+									{t("message")}
+								</p>
+							</div>
 
-						{/* Buttons */}
-						<div className="flex flex-wrap items-center gap-2 shrink-0">
-							<button
-								onClick={grantAll}
-								type="button"
-								className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
-								style={{
-									backgroundColor: "var(--primary)",
-									color: "#fff",
-								}}>
-								{t("buttonText")}
-							</button>
-							<button
-								onClick={declineAll}
-								type="button"
-								className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
-								style={{
-									backgroundColor: "var(--surface-hover)",
-									color: "var(--text)",
-								}}>
-								{t("declineButtonText")}
-							</button>
-							<button
-								onClick={() => setShowManage(true)}
-								type="button"
-								className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
-								style={{
-									backgroundColor: "var(--surface-hover)",
-									color: "var(--text)",
-								}}>
-								{t("manageButtonText")}
-							</button>
-							<a
-								href={t("privacyurl")}
-								className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary) underline underline-offset-2"
-								style={{ color: "var(--primary)" }}>
-								{t("privacyPolicyText")}
-							</a>
+							{/* Buttons */}
+							<div className="flex flex-wrap items-center gap-2 shrink-0">
+								<button
+									onClick={grantAll}
+									type="button"
+									className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
+									style={{
+										backgroundColor: "var(--primary)",
+										color: "#fff",
+									}}>
+									{t("buttonText")}
+								</button>
+								<button
+									onClick={declineAll}
+									type="button"
+									className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
+									style={{
+										backgroundColor: "var(--surface-hover)",
+										color: "var(--text)",
+									}}>
+									{t("declineButtonText")}
+								</button>
+								<button
+									onClick={() => setShowManage(true)}
+									type="button"
+									className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
+									style={{
+										backgroundColor: "var(--surface-hover)",
+										color: "var(--text)",
+									}}>
+									{t("manageButtonText")}
+								</button>
+								<a
+									href={t("privacyurl")}
+									className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary) underline underline-offset-2"
+									style={{ color: "var(--primary)" }}>
+									{t("privacyPolicyText")}
+								</a>
+							</div>
 						</div>
 					</div>
-				</div>
-			)}
+				)
+			}
 
 			{/* ---- Manage Preferences Modal ---- */}
 			{showManage && (
