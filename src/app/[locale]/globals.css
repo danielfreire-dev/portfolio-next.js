@@ -118,7 +118,7 @@ html {
 	scrollbar-color: var(--accent1) var(--surface-hover);
 	scrollbar-width: auto;
 	scroll-behavior: smooth;
-	scrollbar-gutter: stable;
+	scrollbar-gutter: auto;
 	background: var(--background);
 	color: var(--text);
 	padding-bottom: env(safe-area-inset-bottom);

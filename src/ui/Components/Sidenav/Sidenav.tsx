@@ -30,8 +30,8 @@ const Sidenav = () => {
 		<>
 			<nav
 				id="sidenav"
-				className={`fixed lg:sticky top-0 left-0 h-screen w-64 max-w z-50 shrink-0 grow-0 p-4 flex flex-col justify-between items-center
-				bg-background lg:bg-transparent overflow-y-auto
+				className={`fixed lg:sticky top-0 left-0 h-screen w-64 max-w-[100dvw] z-50 shrink-0 grow-0 p-4 flex flex-col justify-between items-center
+				bg-background lg:bg-transparent overflow-y-auto overflow-x-hidden
 				transform transition-transform duration-500 ease-in-out
 				${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
 				<div>
@@ -41,7 +41,7 @@ const Sidenav = () => {
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}>
 						<h1
-							className="text-5xl capitalize flex justify-center text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
+							className="text-5xl capitalize flex justify-center max-w-full truncate text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
 							id="logo">
 							{t("header.title")}
 						</h1>
