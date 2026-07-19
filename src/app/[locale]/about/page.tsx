@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { Locale } from "next-intl";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { getAlternates } from "@/i18n/alternates";
 
 /** Props for the About page, receiving locale and search params from Next.js. */
 interface Props {
@@ -29,15 +30,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	return {
 		title: t("title.about"),
 		description: t("description.about"),
-		keywords: ["about Daniel Freire", "web developer background", "marketing to development", "SEO expert developer", "AI developer Portugal"],
+		keywords: [
+			"about Daniel Freire",
+			"web developer background",
+			"marketing to development",
+			"SEO expert developer",
+			"AI developer Portugal",
+		],
 		robots: { index: true, follow: true },
-		alternates: {
-			canonical: "/about",
-			languages: {
-				en: "https://daniel-freire.com/en/about",
-				pt: "https://daniel-freire.com/pt/sobre",
-			},
-		},
+		alternates: getAlternates({ href: "/about", locale }),
 		openGraph: {
 			type: "website",
 			title: t("title.about"),

@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { getAlternates } from "@/i18n/alternates";
 
 /** Props for the Privacy Policy page, receiving locale from Next.js. */
 interface Props {
@@ -31,13 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		title: t("title.privacyPolicy"),
 		description: t("description.privacyPolicy"),
 		robots: { index: false, follow: true },
-		alternates: {
-			canonical: "/privacy-policy",
-			languages: {
-				en: "https://daniel-freire.com/en/privacy-policy",
-				pt: "https://daniel-freire.com/pt/privacy-policy",
-			},
-		},
+		alternates: getAlternates({ href: "/privacy-policy", locale }),
 		openGraph: {
 			type: "website",
 			title: t("title.privacyPolicy"),

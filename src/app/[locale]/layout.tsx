@@ -170,7 +170,7 @@ export default async function RootLayout({
 				<script dangerouslySetInnerHTML={{ __html: themeScript }} />
 				<NextIntlClientProvider messages={messages}>
 					<Providers>
-						<header className="flex flex-row max-w-full">
+						<header className="flex flex-row w-dvw">
 							<Sidenav />
 						</header>
 						<main className="flex flex-1 justify-center flex-col  overflow-hidden pb-5 mt-9">
