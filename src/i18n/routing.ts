@@ -79,6 +79,13 @@ export const routing = defineRouting({
 			de: "/barrierefreiheitserklaerung",
 			cs: "/prohlaseni-o-pristupnosti",
 		},
+		"/llms.txt": {
+			pt: "/llms.txt",
+			dk: "/llms.txt",
+			pl: "/llms.txt",
+			de: "/llms.txt",
+			cs: "/llms.txt",
+		},
 		"/sitemap.xml": {
 			pt: "/sitemap.xml",
 			dk: "/sitemap.xml",
