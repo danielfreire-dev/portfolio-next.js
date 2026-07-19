@@ -215,11 +215,11 @@
 		"description": {
 			"about": "Erfahren Sie mehr über Daniel Freire — einen Webentwickler spezialisiert auf KI-gestützte Anwendungen, LLM-Integration und leistungsstarke Web-Lösungen.",
 			"contact": "Kontaktieren Sie Daniel Freire für Webentwicklung, KI-Lösungen und technische Beratung. Schnelle und zuverlässige Kommunikation garantiert.",
-			"home": "Daniel Freire — Webentwickler spezialisiert auf KI-gestützte Anwendungen, maßgeschneiderte Software und leistungsstarke Websites. Mit Sitz in Portugal, weltweit für Kunden tätig.",
+			"home": "Daniel Freire — Webentwickler für KI-Anwendungen, maßgeschneiderte Software und leistungsstarke Websites. Aus Portugal, weltweit tätig.",
 			"impressum": "",
 			"portfolio": "Entdecken Sie Daniel Freires Portfolio an Webentwicklungsprojekten, darunter React-Apps, KI-gestützte Tools und maßgeschneiderte Unternehmenssoftware-Lösungen.",
 			"privacyPolicy": "Erfahren Sie, wie Daniel Freire Ihre personenbezogenen Daten erhebt, verwendet und schützt. Transparente Datenschutzpraktiken in Übereinstimmung mit der DSGVO.",
-			"services": "KI-gestützte Webanwendungen, LLM-Integration und leistungsstarke Webentwicklung von Daniel Freire. Maßgeschneiderte Software, KI-Agenten und technische Beratung mit agiler Produktlieferung."
+			"services": "KI-Webanwendungen, LLM-Integration und leistungsstarke Webentwicklung von Daniel Freire. Maßgeschneiderte Software, KI-Agenten und technische Beratung."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -238,7 +238,10 @@
 	},
 	"portfolio": {
 		"all": "Alle",
-		"cta": ["ansehen", "zum Live-Projekt →"],
+		"cta": [
+			"ansehen",
+			"zum Live-Projekt →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -329,7 +332,12 @@
 		"paragraph10": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über etwaige Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.",
 		"paragraph11": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter",
 		"paragraph2": "Wir sammeln persönliche Informationen, die Sie uns freiwillig zur Verfügung stellen, wenn Sie ein Formular auf unserer Website ausfüllen. Die von uns gesammelten persönlichen Informationen umfassen:",
-		"paragraph2li": ["Vorname", "Nachname", "E-Mail-Adresse", "Telefonnummer"],
+		"paragraph2li": [
+			"Vorname",
+			"Nachname",
+			"E-Mail-Adresse",
+			"Telefonnummer"
+		],
 		"paragraph3": "Die von uns gesammelten Informationen werden verwendet, um Sie in Zukunft zu kontaktieren. Wir werden Ihre personenbezogenen Daten nur für diesen spezifischen Zweck verwenden.",
 		"paragraph4": "Wir verarbeiten Ihre personenbezogenen Daten auf der Grundlage Ihrer Einwilligung, die Sie durch das Ausfüllen des Formulars auf unserer Website erteilen.",
 		"paragraph5": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.",

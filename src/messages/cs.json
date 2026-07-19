@@ -215,11 +215,11 @@
 		"description": {
 			"about": "Poznejte Daniela Freire — webového vývojáře specializujícího se na aplikace s AI, integraci LLM a vysoce výkonná webová řešení.",
 			"contact": "Kontaktujte Daniela Freire pro vývoj webových stránek, AI řešení a technické poradenství. Rychlá a spolehlivá komunikace zaručena.",
-			"home": "Daniel Freire — Webový vývojář specializující se na aplikace s AI, zakázkový software a vysoce výkonné webové stránky. Sídlí v Portugalsku, poskytuje služby klientům po celém světě.",
+			"home": "Daniel Freire — Webový vývojář: aplikace s AI, zakázkový software a výkonné weby. Sídlí v Portugalsku, služby klientům po celém světě.",
 			"impressum": "",
 			"portfolio": "Prozkoumejte portfolio webových projektů Daniela Freire, včetně React aplikací, nástrojů s AI a zakázkových obchodních softwarových řešení.",
 			"privacyPolicy": "Zjistěte, jak Daniel Freire shromažďuje, používá a chrání vaše osobní údaje. Transparentní postupy ochrany soukromí v souladu s GDPR.",
-			"services": "Webové aplikace s AI, integrace LLM a vysoce výkonný vývoj webu od Daniela Freire. Zakázkový software, AI agenti a technické poradenství s agilním doručováním produktů."
+			"services": "Webové aplikace s AI, integrace LLM a vývoj webu od Daniela Freire. Zakázkový software, AI agenti a technické poradenství s agilním přístupem."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -238,7 +238,10 @@
 	},
 	"portfolio": {
 		"all": "Vše",
-		"cta": ["podívejte se", "zobrazit živý projekt →"],
+		"cta": [
+			"podívejte se",
+			"zobrazit živý projekt →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -329,7 +332,12 @@
 		"paragraph10": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O jakýchkoli změnách vás budeme informovat zveřejněním nových zásad na této stránce.",
 		"paragraph11": "Pokud máte jakékoli otázky týkající se těchto zásad ochrany osobních údajů, kontaktujte nás na",
 		"paragraph2": "Sbíráme osobní údaje, které nám dobrovolně poskytnete při vyplňování formuláře na našich webových stránkách. Osobní údaje, které sbíráme, zahrnují:",
-		"paragraph2li": ["Jméno", "Příjmení", "Emailová adresa", "Telefonní číslo"],
+		"paragraph2li": [
+			"Jméno",
+			"Příjmení",
+			"Emailová adresa",
+			"Telefonní číslo"
+		],
 		"paragraph3": "Informace, které sbíráme, budou použity k tomu, abychom vás v budoucnu kontaktovali. Vaše osobní údaje budeme používat pouze pro tento konkrétní účel.",
 		"paragraph4": "Zpracování vašich osobních údajů je založeno na vašem souhlasu, který udělujete vyplněním formuláře na našich webových stránkách.",
 		"paragraph5": "Vaše osobní údaje nesdílíme s třetími stranami, kromě případů požadovaných zákonem.",
