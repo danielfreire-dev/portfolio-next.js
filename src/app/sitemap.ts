@@ -3,6 +3,7 @@ import { Locale } from "next-intl";
 import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { SERVICE_SLUGS, getLocalizedSlug } from "@/i18n/serviceSlugs";
+import { getAlternates } from "@/i18n/alternates";
 
 /** Base URL for all sitemap entries. */
 const host = "https://daniel-freire.com";
@@ -112,24 +113,35 @@ function getEntries(href: Href) {
  * Creates sitemap entries for a dynamic route across all supported
  * locales, with enrichment fields.
  *
- * @param href   - The route pattern (e.g., "/services/[slug]").
- * @param params - The dynamic parameter values to substitute.
+ * Uses the shared {@link getAlternates} helper (the same one relied on by
+ * the service-detail page's `generateMetadata`) so that sitemap URLs are
+ * always consistent with the canonical & hreflang tags served on each page.
+ *
+ * @param href        - The route pattern (e.g., "/services/[slug]").
+ * @param englishSlug - The canonical English slug for the service.
  * @returns An array of sitemap entries, one per locale.
  */
-function getDynamicEntries(href: string, englishSlug: string) {
+function getDynamicEntries(href: "/services/[slug]", englishSlug: string) {
 	return routing.locales.map((locale) => {
 		const localizedSlug = getLocalizedSlug(englishSlug, locale);
 
+		const alternates = getAlternates({
+			href: { pathname: href, params: { slug: localizedSlug } },
+			locale,
+			hrefForLocale: (cur) => ({
+				pathname: href,
+				params: { slug: getLocalizedSlug(englishSlug, cur) },
+			}),
+		});
+
 		return {
-			url: getDynamicUrl(href, { slug: localizedSlug }, locale),
+			url: String(alternates.canonical),
 			lastModified: SERVICE_LAST_MODIFIED,
 			changeFrequency: "monthly" as const,
 			priority: 0.7,
 			images: [OG_IMAGE],
 			alternates: {
-				languages: Object.fromEntries(
-					routing.locales.map((cur) => [cur, getDynamicUrl(href, { slug: getLocalizedSlug(englishSlug, cur) }, cur)]),
-				),
+				languages: alternates.languages as Record<string, string>,
 			},
 		};
 	});
@@ -144,25 +156,5 @@ function getDynamicEntries(href: string, englishSlug: string) {
  */
 function getUrl(href: Href, locale: Locale) {
 	const pathname = getPathname({ locale, href });
-	return host + pathname;
-}
-
-/**
- * Builds the full URL for a dynamic route pattern with parameter values.
- *
- * Uses `getPathname` with an object-form `href` so that next-intl can
- * substitute the dynamic segment (e.g., `[slug]`) before applying the
- * locale-specific pathname mapping.
- *
- * @param href   - The route pattern (e.g., "/services/[slug]").
- * @param params - The dynamic parameter values to substitute.
- * @param locale - The target locale.
- * @returns The absolute URL (e.g., "https://daniel-freire.com/pt/servicos/software-personalizado-empresarial").
- */
-function getDynamicUrl(href: string, params: Record<string, string>, locale: Locale) {
-	const pathname = getPathname({
-		locale,
-		href: { pathname: href, params },
-	} as Parameters<typeof getPathname>[0]);
 	return host + pathname;
 }
