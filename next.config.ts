@@ -20,7 +20,9 @@ export const nextConfig: NextConfig = {
 	 *
 	 * - Old locale codes (dk→da, cz→cs) — ISO 3166 country codes replaced
 	 *   with correct BCP 47 language codes.
-	 * - www→non-www — canonical domain is daniel-freire.com.
+	 * - www→non-www redirect is handled at the DNS / Vercel project level
+	 *   (domain redirect), NOT here, to avoid redirect loops with the
+	 *   next-intl locale middleware.
 	 * - HTTP→HTTPS is enforced via the Strict-Transport-Security header below.
 	 */
 	async redirects() {
@@ -29,13 +31,6 @@ export const nextConfig: NextConfig = {
 			{ source: "/dk/:path*", destination: "/da/:path*", permanent: true },
 			// Old Czech locale (cz → cs)
 			{ source: "/cz/:path*", destination: "/cs/:path*", permanent: true },
-			// www → non-www (canonical domain)
-			{
-				source: "/:path*",
-				has: [{ type: "host", value: "www.daniel-freire.com" }],
-				destination: "https://daniel-freire.com/:path*",
-				permanent: true,
-			},
 		];
 	},
 
