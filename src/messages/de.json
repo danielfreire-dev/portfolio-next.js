@@ -208,8 +208,8 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} da {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cs {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} da {🇩🇰} pl {🇵🇱} de {🇩🇪} cs {🇨🇿} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {

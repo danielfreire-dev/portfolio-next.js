@@ -29,7 +29,7 @@ export const SERVICE_SLUGS_BY_LOCALE: Record<string, readonly string[]> = {
 		"desenvolvimento-web",
 		"seo-consultoria-tecnica",
 	],
-	dk: ["skraeddersyet-forretningssoftware", "implementering-af-ai-losninger", "webudvikling", "seo-teknisk-radgivning"],
+	da: ["skraeddersyet-forretningssoftware", "implementering-af-ai-losninger", "webudvikling", "seo-teknisk-radgivning"],
 	pl: [
 		"dedykowane-oprogramowanie-biznesowe",
 		"wdrazanie-rozwiazan-ai",
@@ -42,7 +42,7 @@ export const SERVICE_SLUGS_BY_LOCALE: Record<string, readonly string[]> = {
 		"webentwicklung",
 		"seo-technische-beratung",
 	],
-	cz: ["zakazkovy-firemni-software", "implementace-ai-reseni", "vyvoj-webovych-stranek", "seo-technicke-poradenstvi"],
+	cs: ["zakazkovy-firemni-software", "implementace-ai-reseni", "vyvoj-webovych-stranek", "seo-technicke-poradenstvi"],
 };
 
 /**
@@ -63,7 +63,7 @@ export function getAllLocalizedSlugs(): string[] {
  * the English slug isn't found in the canonical list.
  *
  * @param englishSlug - The canonical English slug (e.g. "business-custom-software").
- * @param locale       - The target locale (e.g. "cz").
+ * @param locale       - The target locale (e.g. "cs").
  * @returns The localized slug (e.g. "zakazkovy-firemni-software").
  */
 export function getLocalizedSlug(englishSlug: string, locale: string): string {
@@ -92,5 +92,6 @@ export function toEnglishSlug(localizedSlug: string): string {
 			return (SERVICE_SLUGS as readonly string[])[index];
 		}
 	}
+	console.warn(`[toEnglishSlug] Could not resolve English slug for "${localizedSlug}" — returning as-is.`);
 	return localizedSlug;
 }

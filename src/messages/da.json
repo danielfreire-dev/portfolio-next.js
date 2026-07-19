@@ -138,7 +138,7 @@
 		"manageTitle": "Cookie Præferencer",
 		"message": "Vi værdsætter dit privatliv. Vælg hvilke cookies du vil tillade. Essentielle cookies er altid aktiveret da de er nødvendige for at hjemmesiden skal fungere korrekt.",
 		"privacyPolicyText": "Privatlivspolitik",
-		"privacyurl": "/dk/privacy-policy",
+		"privacyurl": "/da/privacy-policy",
 		"title": "Kunne Du Tænke Dig En Småkage? 🍪"
 	},
 	"cta": {
@@ -170,7 +170,7 @@
 			"name": "Daniel Freire",
 			"preview": "Daniel Freires Velkomst-e-mail",
 			"privacyPolicy": "privatlivspolitik",
-			"privacyPolicyUrl": "dk/privacy-policy/",
+			"privacyPolicyUrl": "da/privacy-policy/",
 			"signature": "Ser frem til at arbejde sammen med dig,",
 			"view": "Se",
 			"webLink": "daniel-freire.com",
@@ -208,8 +208,8 @@
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} da {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cs {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} da {🇩🇰} pl {🇵🇱} de {🇩🇪} cs {🇨🇿} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {
