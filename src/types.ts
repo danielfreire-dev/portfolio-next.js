@@ -13,7 +13,7 @@ export interface TechCardProps {
 }
 
 /** Supported locale codes for internationalization. */
-export type UserLanguageType = "pt" | "en" | "dk" | "pl" | "de" | "cz";
+export type UserLanguageType = "pt" | "en" | "da" | "pl" | "de" | "cs";
 
 /** Props for the sidenav component, providing language selection controls. */
 export interface SidenavProps {
