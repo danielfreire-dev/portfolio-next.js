@@ -86,7 +86,7 @@ export function getAlternates({
 		`${BASE_URL}${getPathname({ locale: "en", href: defaultHref } as Parameters<typeof getPathname>[0])}`;
 
 	return {
-		canonical: canonicalPath,
+		canonical: `${BASE_URL}${canonicalPath}`,
 		languages,
 	};
 }

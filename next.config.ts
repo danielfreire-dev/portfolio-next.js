@@ -12,6 +12,33 @@ export const nextConfig: NextConfig = {
 	// Enable React strict mode to catch potential issues in development
 	reactStrictMode: true,
 
+	/** Enforce no trailing slash for consistent canonical URLs. */
+	trailingSlash: false,
+
+	/**
+	 * Permanent redirects for legacy/incorrect URLs.
+	 *
+	 * - Old locale codes (dk→da, cz→cs) — ISO 3166 country codes replaced
+	 *   with correct BCP 47 language codes.
+	 * - www→non-www — canonical domain is daniel-freire.com.
+	 * - HTTP→HTTPS is enforced via the Strict-Transport-Security header below.
+	 */
+	async redirects() {
+		return [
+			// Old Danish locale (dk → da)
+			{ source: "/dk/:path*", destination: "/da/:path*", permanent: true },
+			// Old Czech locale (cz → cs)
+			{ source: "/cz/:path*", destination: "/cs/:path*", permanent: true },
+			// www → non-www (canonical domain)
+			{
+				source: "/:path*",
+				has: [{ type: "host", value: "www.daniel-freire.com" }],
+				destination: "https://daniel-freire.com/:path*",
+				permanent: true,
+			},
+		];
+	},
+
 	/**
 	 * Security headers applied to all routes.
 	 *

@@ -36,10 +36,10 @@ const ALL_SLUGS: string[] = getAllLocalizedSlugs();
 const FEATURES_HEADING: Record<string, string> = {
 	en: "What's Included",
 	pt: "O Que Está Incluído",
-	dk: "Hvad Er Inkluderet",
+	da: "Hvad Er Inkluderet",
 	pl: "Co Zawiera",
 	de: "Was Enthalten Ist",
-	cz: "Co Je Zahrnuto",
+	cs: "Co Je Zahrnuto",
 };
 
 /**

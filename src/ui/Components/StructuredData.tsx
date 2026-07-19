@@ -25,10 +25,7 @@ interface WebSiteSchema {
 	description: string;
 	potentialAction: {
 		"@type": "SearchAction";
-		target: {
-			"@type": "EntryPoint";
-			urlTemplate: string;
-		};
+		target: string;
 		"query-input": string;
 	};
 }
@@ -48,12 +45,6 @@ interface BreadcrumbListSchema {
 	itemListElement: BreadcrumbItem[];
 }
 
-/** A single feature bullet for a Service. */
-interface ServiceFeature {
-	"@type": "ServiceFeature";
-	name: string;
-}
-
 /** Schema.org Service for a service detail page. */
 interface ServiceSchema {
 	"@context": "https://schema.org";
@@ -68,8 +59,11 @@ interface ServiceSchema {
 		"@type": "OfferCatalog";
 		name: string;
 		itemListElement: Array<{
-			"@type": "ServiceFeature";
-			name: string;
+			"@type": "Offer";
+			itemOffered: {
+				"@type": "Service";
+				name: string;
+			};
 		}>;
 	};
 }
@@ -135,10 +129,7 @@ export function generateWebSiteSchema(): WebSiteSchema {
 			"Portfolio of Daniel Freire — web developer building AI-powered applications, custom software, and high-performance websites.",
 		potentialAction: {
 			"@type": "SearchAction",
-			target: {
-				"@type": "EntryPoint",
-				urlTemplate: `https://www.google.com/search?q=site%3Adaniel-freire.com+{search_term_string}`,
-			},
+			target: `https://www.google.com/search?q=site%3Adaniel-freire.com+{search_term_string}`,
 			"query-input": "required name=search_term_string",
 		},
 	};
@@ -194,15 +185,18 @@ export function generateServiceSchema(
 		description,
 		serviceType: title,
 		areaServed: "Worldwide",
-		category: (SERVICE_SLUGS as readonly string[]).includes(slug) ? slug : "Web Development",
+		category: (SERVICE_SLUGS as readonly string[]).includes(slug) ? title : "Web Development",
 		hasOfferCatalog:
 			features.length ?
 				{
 					"@type": "OfferCatalog",
 					name: `${title} Features`,
 					itemListElement: features.map((feature) => ({
-						"@type": "ServiceFeature" as const,
-						name: feature,
+						"@type": "Offer" as const,
+						itemOffered: {
+							"@type": "Service" as const,
+							name: feature,
+						},
 					})),
 				}
 			:	undefined,

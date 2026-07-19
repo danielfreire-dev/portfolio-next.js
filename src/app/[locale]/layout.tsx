@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 		address: false,
 		telephone: false,
 	},
-	metadataBase: new URL("https://daniel-freire.com/"),
+	metadataBase: new URL("https://daniel-freire.com"),
 
 	openGraph: {
 		type: "website",
