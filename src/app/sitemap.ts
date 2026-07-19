@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { Locale } from "next-intl";
 import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { SERVICE_SLUGS } from "@/lib/serviceSlugs";
+import { SERVICE_SLUGS, getLocalizedSlug } from "@/i18n/serviceSlugs";
 
 /** Base URL for all sitemap entries. */
 const host = "https://daniel-freire.com";
@@ -74,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		...getEntries("/portfolio"),
 		...getEntries("/privacy-policy"),
 		...getEntries("/services"),
-		...SERVICE_SLUGS.flatMap((slug) => getDynamicEntries("/services/[slug]", { slug })),
+		...SERVICE_SLUGS.flatMap((englishSlug) => getDynamicEntries("/services/[slug]", englishSlug)),
 	];
 }
 
@@ -116,17 +116,23 @@ function getEntries(href: Href) {
  * @param params - The dynamic parameter values to substitute.
  * @returns An array of sitemap entries, one per locale.
  */
-function getDynamicEntries(href: string, params: Record<string, string>) {
-	return routing.locales.map((locale) => ({
-		url: getDynamicUrl(href, params, locale),
-		lastModified: SERVICE_LAST_MODIFIED,
-		changeFrequency: "monthly" as const,
-		priority: 0.7,
-		images: [OG_IMAGE],
-		alternates: {
-			languages: Object.fromEntries(routing.locales.map((cur) => [cur, getDynamicUrl(href, params, cur)])),
-		},
-	}));
+function getDynamicEntries(href: string, englishSlug: string) {
+	return routing.locales.map((locale) => {
+		const localizedSlug = getLocalizedSlug(englishSlug, locale);
+
+		return {
+			url: getDynamicUrl(href, { slug: localizedSlug }, locale),
+			lastModified: SERVICE_LAST_MODIFIED,
+			changeFrequency: "monthly" as const,
+			priority: 0.7,
+			images: [OG_IMAGE],
+			alternates: {
+				languages: Object.fromEntries(
+					routing.locales.map((cur) => [cur, getDynamicUrl(href, { slug: getLocalizedSlug(englishSlug, cur) }, cur)]),
+				),
+			},
+		};
+	});
 }
 
 /**

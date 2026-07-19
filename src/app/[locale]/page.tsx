@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import TopMainPage from "@/ui/Components/TopMainPage";
 import Services from "@/ui/Components/Services";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { getAlternates } from "@/i18n/alternates";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -38,13 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"Portugal",
 		],
 		robots: { index: true, follow: true },
-		alternates: {
-			canonical: "/",
-			languages: {
-				en: "https://daniel-freire.com/en",
-				pt: "https://daniel-freire.com/pt",
-			},
-		},
+		alternates: getAlternates({ href: "/", locale }),
 		openGraph: {
 			type: "website",
 			title: t("title.home"),
