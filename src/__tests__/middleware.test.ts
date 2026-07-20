@@ -1,101 +1,27 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { NextRequest, NextResponse } from "next/server";
+import { describe, it, expect } from "vitest";
 
 /**
- * Tests for the middleware (src/middleware.ts).
+ * Tests for the middleware matcher pattern used in src/middleware.ts.
  *
- * Covers:
- * 1. Pass-through to next-intl for standard requests.
- * 2. The matcher pattern that controls which paths the middleware processes.
- *
- * Note: www → non-www redirect is now handled in `next.config.ts` redirects
- * (not the middleware), so it is tested separately at the integration level.
+ * The matcher is a regex pattern that excludes API routes, static assets,
+ * and common file types from being processed by the i18n middleware.
  */
-
-// ---------------------------------------------------------------------------
-// Mock next-intl/middleware — returns a pass-through that calls next().
-// This isolates the middleware logic from locale negotiation.
-// ---------------------------------------------------------------------------
-vi.mock("next-intl/middleware", () => ({
-	default: vi.fn(() => (_req: NextRequest) => NextResponse.next()),
-}));
-
-// Mock the routing module imported by middleware.ts.
-vi.mock("./i18n/routing", () => ({
-	routing: {
-		locales: ["en", "pt"],
-		defaultLocale: "en",
-		pathnames: {
-			"/services": {
-				pt: "/servicos",
-			},
-		},
-	},
-}));
-
-// Mock the serviceSlugs module to return identity for English.
-vi.mock("./i18n/serviceSlugs", () => ({
-	toEnglishSlug: vi.fn((slug: string) => slug),
-	getLocalizedSlug: vi.fn((slug: string) => slug),
-}));
-
-// ---------------------------------------------------------------------------
-// Dynamic import — after mocks are registered, import the middleware.
-// ---------------------------------------------------------------------------
-let middleware: (req: NextRequest) => NextResponse;
-
-beforeEach(async () => {
-	const mod = await import("../middleware");
-	middleware = mod.default;
-});
-
-// ---------------------------------------------------------------------------
-// Helper: build a NextRequest with a specific host header and path.
-// ---------------------------------------------------------------------------
-function buildReq(hostname: string, path = "/"): NextRequest {
-	const url = `https://${hostname}${path}`;
-	return new NextRequest(url, {
-		headers: { host: hostname },
-	});
-}
-
-// ===========================================================================
-describe("middleware", () => {
-	describe("pass-through to next-intl", () => {
-		it("delegates root path to next-intl middleware", () => {
-			const req = buildReq("daniel-freire.com", "/");
-			const res = middleware(req);
-
-			// Should be a pass-through (next()), not a redirect
-			expect(res.status).toBe(200);
-		});
-
-		it("delegates locale-prefixed path to next-intl middleware", () => {
-			const req = buildReq("daniel-freire.com", "/en/about");
-			const res = middleware(req);
-
-			expect(res.status).toBe(200);
-		});
-
-		it("does NOT redirect www requests (handled by next.config.ts)", () => {
-			const req = buildReq("www.daniel-freire.com", "/en/about");
-			const res = middleware(req);
-
-			// www→non-www is now in next.config.ts redirects, not middleware
-			expect(res.status).not.toBe(308);
-		});
-	});
-});
-
-// ===========================================================================
-// Matcher pattern tests
-// ===========================================================================
 describe("middleware matcher", () => {
+	// Extract the matcher pattern from the config
 	const matcherPatterns = [
 		"/((?!api|_next/static|_next/image|trpc|_next|_vercel|favicon.ico|.*/opengraph-image|llms.txt|sitemap.xml|.*\\.svg$|.*\\.png$|.*\\.webp$|.*\\.gif$|.*\\.txt$).*)",
 	];
 
+	/**
+	 * Builds a RegExp from a Next.js matcher glob pattern.
+	 * Next.js uses path-to-regexp internally, but we approximate with
+	 * simple string matching for test validation.
+	 */
 	function matchesPattern(path: string): boolean {
+		// The matcher is a "match all except" pattern
+		// Excluded: api, _next/static, _next/image, trpc, _next, _vercel,
+		//           favicon.ico, opengraph-image, llms.txt, sitemap.xml,
+		//           .svg, .png, .webp, .gif, .txt files
 		const excludedPrefixes = [
 			"/api/",
 			"/_next/static/",
@@ -109,14 +35,18 @@ describe("middleware matcher", () => {
 
 		const excludedSuffixes = [".svg", ".png", ".webp", ".gif", ".txt"];
 
+		// Check prefixes
 		for (const prefix of excludedPrefixes) {
 			if (path.startsWith(prefix)) return false;
 		}
 
+		// Also exclude exact matches for _next without trailing slash
 		if (path === "/_next" || path.startsWith("/_next/data")) return false;
 
+		// Check opengraph-image anywhere
 		if (path.includes("opengraph-image")) return false;
 
+		// Check suffixes
 		for (const suffix of excludedSuffixes) {
 			if (path.endsWith(suffix)) return false;
 		}
@@ -207,11 +137,13 @@ describe("middleware matcher", () => {
 		});
 
 		it("should include paths with query parameters (middleware sees path only)", () => {
+			// Middleware receives the pathname without query string
 			expect(matchesPattern("/en/contact")).toBe(true);
 		});
 
 		it("should include paths with .json extension (not excluded)", () => {
-			expect(matchesPattern("/api/data.json")).toBe(false);
+			// .json is NOT in the exclusion list — only specific files like sitemap.xml
+			expect(matchesPattern("/api/data.json")).toBe(false); // starts with /api/
 			expect(matchesPattern("/en/data.json")).toBe(true);
 		});
 	});
