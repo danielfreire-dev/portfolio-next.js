@@ -1,8 +1,9 @@
 "use client";
 
 import React, { ComponentProps, useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
+import { useTransitionStore } from "@/stores/transition-store";
 
 /** Identifies the origin of the click for analytics / transition handling. */
 type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink" | "Logo";
@@ -34,15 +35,19 @@ function sleep(ms: number): Promise<void> {
 /**
  * TransitionLink - A navigation link with a page-transition animation.
  *
- * On click, the component adds a `page-transition` CSS class to `<main>`,
- * waits 333 ms for the CSS fade-out animation to complete, then navigates
- * via `router.push()`. This delay is the minimum needed for the CSS
- * transition to be perceptible while keeping navigation feeling responsive.
+ * On click, the component signals the transition store to apply the
+ * `page-transition` CSS class to `<main>` via React state (not direct DOM
+ * manipulation), waits 333 ms for the CSS fade-out animation to start,
+ * then navigates via the locale-aware `router.push()`.
  *
- * On route change (pathname update), the transition class is removed and
- * the mobile sidenav is closed if it was open. Same-page clicks (where the
- * target path matches the current path) are ignored to avoid unnecessary
- * animation cycles.
+ * Because the class is managed through React state, it survives React
+ * reconciliation during client-side navigation — the layout component
+ * re-renders with `page-transition` still present, so the fade-out
+ * animation completes and the new page fades in when the class is removed.
+ *
+ * On route change (pathname update), the transition class is removed via
+ * the store and the mobile sidenav is closed if it was open. Same-page
+ * clicks are ignored to avoid unnecessary animation cycles.
  */
 export const TransitionLink = ({
 	children,
@@ -58,25 +63,35 @@ export const TransitionLink = ({
 }: TransitionLinkProps) => {
 	const router = useRouter();
 	const pathname = usePathname();
+	const startTransition = useTransitionStore((s) => s.startTransition);
+	const endTransition = useTransitionStore((s) => s.endTransition);
 
 	useEffect(() => {
-		const mainElement = document.getElementById("main");
 		if (setIsOpen && isOpen) {
 			setIsOpen((prev) => !prev);
 		}
-		mainElement?.classList.remove("page-transition");
+		// Remove the page-transition class via React state (survives reconciliation).
+		endTransition();
 	}, [pathname]);
 
 	const HandleTransition = async (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
-		const mainElement = document.getElementById("main");
 
-		if ((href === "/" && pathname.slice(0, -2) !== href) || (href !== "/" && pathname.slice(3) !== href)) {
-			mainElement?.classList.add("page-transition");
+		// Both `usePathname()` from next-intl and `href` from the Link
+		// component use the same unprefixed pathname keys (e.g. "/portfolio"),
+		// so a direct comparison is correct without locale wrangling.
+		const hrefPath = typeof href === "string" ? href : href.pathname;
+
+		if (pathname !== hrefPath) {
+			// Apply the page-transition class via React state so it survives
+			// reconciliation when the layout re-renders on navigation.
+			startTransition();
 
 			await sleep(333);
 
-			router.push(href as string);
+			// The next-intl router automatically prefixes the href with the
+			// current locale, keeping navigation client-side (no full reload).
+			router.push(hrefPath as Parameters<typeof router.push>[0]);
 		}
 		setIsOpen && isOpen && setIsOpen((prev) => !prev);
 	};
