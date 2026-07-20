@@ -1,9 +1,8 @@
 "use client";
 
-import React, { ComponentProps, useEffect } from "react";
+import React, { ComponentProps, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
-import { useTransitionStore } from "@/stores/transition-store";
 
 /** Identifies the origin of the click for analytics / transition handling. */
 type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink" | "Logo";
@@ -25,34 +24,29 @@ interface TransitionLinkProps extends ComponentProps<typeof Link> {
 }
 
 /**
- * Sleeps for the given number of milliseconds.
- * Used to delay navigation so the page-transition CSS animation can play.
- */
-function sleep(ms: number): Promise<void> {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-/**
- * TransitionLink - A navigation link with a page-transition animation.
+ * TransitionLink — A navigation link with a page-transition animation.
  *
- * On click, the component signals the transition store to apply the
- * `page-transition` CSS class to `<main>` via React state (not direct DOM
- * manipulation), waits 333 ms for the CSS fade-out animation to start,
- * then navigates via the locale-aware `router.push()`.
+ * ## Curtain transition flow (event-driven, no timer, no store)
  *
- * Because the class is managed through React state, it survives React
- * reconciliation during client-side navigation — the layout component
- * re-renders with `page-transition` still present, so the fade-out
- * animation completes and the new page fades in when the class is removed.
+ * 1. **Click** → dispatches `transition:start` so the overlay slides IN
+ *    (covering the old `<main>` content).
+ * 2. **Wait for `transition:covered`** → the overlay has finished sliding in;
+ *    it's safe to navigate underneath the curtain.
+ * 3. **`router.push()`** → URL changes, React renders the new page behind
+ *    the overlay.
+ * 4. **`useEffect` on `pathname`** → dispatches `transition:reveal` so the
+ *    overlay slides OUT, revealing the new page.  Also closes the mobile
+ *    sidenav.
  *
- * On route change (pathname update), the transition class is removed via
- * the store and the mobile sidenav is closed if it was open. Same-page
- * clicks are ignored to avoid unnecessary animation cycles.
+ * No timer (`sleep`) is used — timing is driven by CSS `animationend` events.
+ * No Zustand store.  `<main>` stays a server component.  Only the thin
+ * `TransitionOverlay` is client-side.
+ *
+ * Same-page clicks are ignored to avoid unnecessary animation cycles.
  */
 export const TransitionLink = ({
 	children,
 	href,
-	inputData,
 	isOpen,
 	setIsOpen,
 	ariaLabel,
@@ -63,16 +57,28 @@ export const TransitionLink = ({
 }: TransitionLinkProps) => {
 	const router = useRouter();
 	const pathname = usePathname();
-	const startTransition = useTransitionStore((s) => s.startTransition);
-	const endTransition = useTransitionStore((s) => s.endTransition);
 
+	/** Tracks whether *this* link instance initiated the current transition. */
+	const triggeredByUs = useRef(false);
+
+	/**
+	 * Listens for URL changes.
+	 *
+	 * When the pathname updates after a navigation triggered by this link,
+	 * dispatches `transition:reveal` so the overlay slides out and closes the
+	 * mobile sidenav.
+	 */
 	useEffect(() => {
+		if (!triggeredByUs.current) return;
+		triggeredByUs.current = false;
+
+		// Reveal the new page behind the overlay.
+		document.dispatchEvent(new CustomEvent("transition:reveal"));
+
 		if (setIsOpen && isOpen) {
 			setIsOpen((prev) => !prev);
 		}
-		// Remove the page-transition class via React state (survives reconciliation).
-		endTransition();
-	}, [pathname]);
+	}, [pathname, isOpen, setIsOpen]);
 
 	const HandleTransition = async (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
@@ -83,14 +89,20 @@ export const TransitionLink = ({
 		const hrefPath = typeof href === "string" ? href : href.pathname;
 
 		if (pathname !== hrefPath) {
-			// Apply the page-transition class via React state so it survives
-			// reconciliation when the layout re-renders on navigation.
-			startTransition();
+			// 1. Start the curtain sliding in.
+			document.dispatchEvent(new CustomEvent("transition:start"));
 
-			await sleep(333);
+			// 2. Wait for the curtain to fully cover the old content.
+			await new Promise<void>((resolve) => {
+				const onCovered = () => {
+					document.removeEventListener("transition:covered", onCovered);
+					resolve();
+				};
+				document.addEventListener("transition:covered", onCovered);
+			});
 
-			// The next-intl router automatically prefixes the href with the
-			// current locale, keeping navigation client-side (no full reload).
+			// 3. Navigate while the page is hidden behind the overlay.
+			triggeredByUs.current = true;
 			router.push(hrefPath as Parameters<typeof router.push>[0]);
 		}
 		setIsOpen && isOpen && setIsOpen((prev) => !prev);
