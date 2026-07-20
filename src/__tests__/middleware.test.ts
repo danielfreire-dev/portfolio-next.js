@@ -4,27 +4,39 @@ import { NextRequest, NextResponse } from "next/server";
 /**
  * Tests for the middleware (src/middleware.ts).
  *
- * Covers two responsibilities:
- * 1. The www → non-www redirect (hostname-based).
+ * Covers:
+ * 1. Pass-through to next-intl for standard requests.
  * 2. The matcher pattern that controls which paths the middleware processes.
+ *
+ * Note: www → non-www redirect is now handled in `next.config.ts` redirects
+ * (not the middleware), so it is tested separately at the integration level.
  */
 
 // ---------------------------------------------------------------------------
 // Mock next-intl/middleware — returns a pass-through that calls next().
-// This isolates the www-redirect logic from locale negotiation.
+// This isolates the middleware logic from locale negotiation.
 // ---------------------------------------------------------------------------
 vi.mock("next-intl/middleware", () => ({
 	default: vi.fn(() => (_req: NextRequest) => NextResponse.next()),
 }));
 
 // Mock the routing module imported by middleware.ts.
-// The middleware uses `import { routing } from "./i18n/routing"`, so we mock
-// the same relative path (resolved from src/middleware.ts).
 vi.mock("./i18n/routing", () => ({
 	routing: {
 		locales: ["en", "pt"],
 		defaultLocale: "en",
+		pathnames: {
+			"/services": {
+				pt: "/servicos",
+			},
+		},
 	},
+}));
+
+// Mock the serviceSlugs module to return identity for English.
+vi.mock("./i18n/serviceSlugs", () => ({
+	toEnglishSlug: vi.fn((slug: string) => slug),
+	getLocalizedSlug: vi.fn((slug: string) => slug),
 }));
 
 // ---------------------------------------------------------------------------
@@ -49,71 +61,38 @@ function buildReq(hostname: string, path = "/"): NextRequest {
 
 // ===========================================================================
 describe("middleware", () => {
-	describe("www → non-www redirect", () => {
-		it("redirects www.daniel-freire.com to daniel-freire.com", () => {
-			const req = buildReq("www.daniel-freire.com", "/en/about");
+	describe("pass-through to next-intl", () => {
+		it("delegates root path to next-intl middleware", () => {
+			const req = buildReq("daniel-freire.com", "/");
 			const res = middleware(req);
 
-			expect(res).toBeInstanceOf(NextResponse);
-			expect(res.status).toBe(308);
-			expect(res.headers.get("location")).toBe("https://daniel-freire.com/en/about");
+			// Should be a pass-through (next()), not a redirect
+			expect(res.status).toBe(200);
 		});
 
-		it("redirects www root to non-www root", () => {
-			const req = buildReq("www.daniel-freire.com", "/");
-			const res = middleware(req);
-
-			expect(res).toBeInstanceOf(NextResponse);
-			expect(res.status).toBe(308);
-			expect(res.headers.get("location")).toBe("https://daniel-freire.com/");
-		});
-
-		it("preserves query parameters in the redirect", () => {
-			const req = buildReq("www.daniel-freire.com", "/en/contact?utm_source=google");
-			const res = middleware(req);
-
-			expect(res.status).toBe(308);
-			expect(res.headers.get("location")).toBe("https://daniel-freire.com/en/contact?utm_source=google");
-		});
-
-		it("does NOT redirect when hostname is already non-www", () => {
+		it("delegates locale-prefixed path to next-intl middleware", () => {
 			const req = buildReq("daniel-freire.com", "/en/about");
 			const res = middleware(req);
 
+			expect(res.status).toBe(200);
+		});
+
+		it("does NOT redirect www requests (handled by next.config.ts)", () => {
+			const req = buildReq("www.daniel-freire.com", "/en/about");
+			const res = middleware(req);
+
+			// www→non-www is now in next.config.ts redirects, not middleware
 			expect(res.status).not.toBe(308);
-		});
-
-		it("redirects any www-prefixed hostname", () => {
-			const req = buildReq("www.example.com", "/some/path");
-			const res = middleware(req);
-
-			expect(res.status).toBe(308);
-			expect(res.headers.get("location")).toBe("https://example.com/some/path");
-		});
-
-		it("does NOT redirect non-www subdomains like api", () => {
-			const req = buildReq("api.daniel-freire.com", "/v1/users");
-			const res = middleware(req);
-
-			expect(res.status).not.toBe(308);
-		});
-
-		it("preserves pathname and hash in redirect", () => {
-			const req = buildReq("www.daniel-freire.com", "/pt/servicos/web-development#pricing");
-			const res = middleware(req);
-
-			expect(res.status).toBe(308);
-			expect(res.headers.get("location")).toBe("https://daniel-freire.com/pt/servicos/web-development#pricing");
 		});
 	});
 });
 
 // ===========================================================================
-// Matcher pattern tests (legacy — kept intact)
+// Matcher pattern tests
 // ===========================================================================
 describe("middleware matcher", () => {
 	const matcherPatterns = [
-		"/((?!api|_next/static|_next/image|trpc|_next|_vercel|favicon.ico|.*/opengraph-image|sitemap.xml|.*\\.svg$|.*\\.png$|.*\\.webp$|.*\\.gif$|.*\\.txt$).*)",
+		"/((?!api|_next/static|_next/image|trpc|_next|_vercel|favicon.ico|.*/opengraph-image|llms.txt|sitemap.xml|.*\\.svg$|.*\\.png$|.*\\.webp$|.*\\.gif$|.*\\.txt$).*)",
 	];
 
 	function matchesPattern(path: string): boolean {
@@ -124,6 +103,7 @@ describe("middleware matcher", () => {
 			"/trpc/",
 			"/_vercel/",
 			"/favicon.ico",
+			"/llms.txt",
 			"/sitemap.xml",
 		];
 
@@ -174,6 +154,10 @@ describe("middleware matcher", () => {
 
 		it("should exclude sitemap.xml", () => {
 			expect(matchesPattern("/sitemap.xml")).toBe(false);
+		});
+
+		it("should exclude llms.txt", () => {
+			expect(matchesPattern("/llms.txt")).toBe(false);
 		});
 
 		it("should exclude .svg files", () => {
