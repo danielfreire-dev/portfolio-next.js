@@ -18,14 +18,10 @@ export const nextConfig: NextConfig = {
 	/**
 	 * Permanent redirects for legacy/incorrect URLs.
 	 *
-	 * These run **after** the i18n middleware, so locale negotiation is
-	 * already complete by the time they execute.
-	 *
 	 * - Old locale codes (dk→da, cz→cs) — ISO 3166 country codes replaced
 	 *   with correct BCP 47 language codes.
-	 * - www→non-www — canonical domain is daniel-freire.com.  Kept here
-	 *   (not in middleware) to avoid redirect loops with Vercel's
-	 *   edge-level domain redirect.
+	 * - www→non-www redirect is handled externally (Vercel domain redirect
+	 *   or DNS provider).  Not included here to avoid redirect loops.
 	 * - HTTP→HTTPS is enforced via the Strict-Transport-Security header below.
 	 */
 	async redirects() {
@@ -34,13 +30,6 @@ export const nextConfig: NextConfig = {
 			{ source: "/dk/:path*", destination: "/da/:path*", permanent: true },
 			// Old Czech locale (cz → cs)
 			{ source: "/cz/:path*", destination: "/cs/:path*", permanent: true },
-			// www → non-www (canonical domain)
-			{
-				source: "/:path*",
-				has: [{ type: "host", value: "www.daniel-freire.com" }],
-				destination: "https://daniel-freire.com/:path*",
-				permanent: true,
-			},
 		];
 	},
 
