@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Sidenav from "@/ui/Components/Sidenav/Sidenav";
-import { MainContent } from "@/ui/Components/MainContent";
+import Cta from "@/ui/Components/CtA/Cta";
+import { TransitionOverlay } from "@/ui/Components/TransitionOverlay";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
@@ -173,7 +174,15 @@ export default async function RootLayout({
 						<header className="flex flex-row max-w-dvw">
 							<Sidenav />
 						</header>
-						<MainContent>{children}</MainContent>
+						<main className="relative flex flex-1 justify-center flex-col overflow-hidden pb-5 mt-9">
+							<TransitionOverlay />
+							<div
+								id="main"
+								className="flex flex-col gap-4">
+								{children}
+								<Cta />
+							</div>
+						</main>
 					</Providers>
 				</NextIntlClientProvider>
 			</body>
