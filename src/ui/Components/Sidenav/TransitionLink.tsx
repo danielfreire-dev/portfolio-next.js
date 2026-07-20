@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ComponentProps, useEffect, useRef } from "react";
+import React, { ComponentProps, useEffect } from "react";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 
@@ -34,13 +34,14 @@ interface TransitionLinkProps extends ComponentProps<typeof Link> {
  *    it's safe to navigate underneath the curtain.
  * 3. **`router.push()`** → URL changes, React renders the new page behind
  *    the overlay.
- * 4. **`useEffect` on `pathname`** → dispatches `transition:reveal` so the
- *    overlay slides OUT, revealing the new page.  Also closes the mobile
- *    sidenav.
+ * 4. **TransitionOverlay detects pathname change** → curtain slides OUT
+ *    automatically, revealing the new page.
+ * 5. **`useEffect` on `pathname`** → closes the mobile sidenav.
  *
  * No timer (`sleep`) is used — timing is driven by CSS `animationend` events.
- * No Zustand store.  `<main>` stays a server component.  Only the thin
- * `TransitionOverlay` is client-side.
+ * The reveal is handled by `TransitionOverlay` watching `pathname` directly
+ * (it persists in the layout and survives React reconciliation).
+ * No Zustand store.  `<main>` stays a server component.
  *
  * Same-page clicks are ignored to avoid unnecessary animation cycles.
  */
@@ -58,23 +59,15 @@ export const TransitionLink = ({
 	const router = useRouter();
 	const pathname = usePathname();
 
-	/** Tracks whether *this* link instance initiated the current transition. */
-	const triggeredByUs = useRef(false);
-
 	/**
-	 * Listens for URL changes.
+	 * Closes the mobile sidenav when the URL changes after navigation.
 	 *
-	 * When the pathname updates after a navigation triggered by this link,
-	 * dispatches `transition:reveal` so the overlay slides out and closes the
-	 * mobile sidenav.
+	 * The curtain reveal itself is handled by `TransitionOverlay` watching
+	 * `pathname` — that component persists in the layout and survives
+	 * React reconciliation, unlike TransitionLink instances which may
+	 * unmount during route changes (e.g. dynamic routes like `/services/[slug]`).
 	 */
 	useEffect(() => {
-		if (!triggeredByUs.current) return;
-		triggeredByUs.current = false;
-
-		// Reveal the new page behind the overlay.
-		document.dispatchEvent(new CustomEvent("transition:reveal"));
-
 		if (setIsOpen && isOpen) {
 			setIsOpen((prev) => !prev);
 		}
@@ -102,7 +95,6 @@ export const TransitionLink = ({
 			});
 
 			// 3. Navigate while the page is hidden behind the overlay.
-			triggeredByUs.current = true;
 			router.push(hrefPath as Parameters<typeof router.push>[0]);
 		}
 		setIsOpen && isOpen && setIsOpen((prev) => !prev);
