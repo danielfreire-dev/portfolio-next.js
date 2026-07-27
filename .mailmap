@@ -1,4 +1,5 @@
 # Map known bot authors to the human maintainer for git log/shortlog clarity.
 # This does NOT affect GitHub's contributors graph, but helps local git tools.
+
 Daniel Freire <20461343+danielfreire-dev@users.noreply.github.com> <136622811+coderabbitai[bot]@users.noreply.github.com>
 Daniel Freire <20461343+danielfreire-dev@users.noreply.github.com> <73139402+cloudflare-workers-and-pages[bot]@users.noreply.github.com>
