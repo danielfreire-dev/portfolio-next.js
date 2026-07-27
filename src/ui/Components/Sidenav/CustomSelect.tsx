@@ -11,6 +11,18 @@ interface CustomLocaleSelectProps {
 	locales: Array<{ value: string; label: string }>;
 }
 
+/**
+ * CustomSelect - A styled dropdown for selecting a locale/language.
+ *
+ * Features click-outside-to-close behavior (via a `mousedown` listener on
+ * `document`), keyboard navigation (Enter/Space to toggle, Escape to close),
+ * and a loading indicator that replaces the chevron during locale transitions.
+ * Navigation uses `router.replace` inside `startTransition` so the UI stays
+ * responsive while the new locale's messages are loaded.
+ *
+ * @param props.defaultValue - The currently active locale code.
+ * @param props.locales      - Array of available locale options.
+ */
 const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 	const [isPending, startTransition] = useTransition();
 	const [isOpen, setIsOpen] = useState(false);
@@ -18,16 +30,12 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 	const dropdownRef = useRef<HTMLDivElement>(null);
 	const t = useTranslations("sidenav");
 	const pathname = usePathname();
-	const router = useRouter(); // Initialize the router
+	const router = useRouter();
 	const params = useParams();
 
-	// Close dropdown when clicking outside
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
-			if (
-				dropdownRef.current &&
-				!dropdownRef.current.contains(event.target as Node)
-			) {
+			if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
 				setIsOpen(false);
 			}
 		};
@@ -36,6 +44,15 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, []);
 
+	/**
+	 * Handles locale selection by updating the URL pathname with the new locale.
+	 *
+	 * Uses `router.replace` inside `startTransition` to avoid blocking the UI
+	 * while the new locale's message bundle is loaded. The `@ts-expect-error`
+	 * directive suppresses a TypeScript mismatch between the dynamic `params`
+	 * shape and the typed route path — at runtime these always align because
+	 * the current route's params and pathname come from the same URL.
+	 */
 	const handleLocaleChange = (nextLocale: string) => {
 		setSelectedLocale(nextLocale);
 		setIsOpen(false);
@@ -51,9 +68,7 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 		});
 	};
 
-	const selectedOption = locales.find(
-		(locale) => locale.value === selectedLocale,
-	);
+	const selectedOption = locales.find((locale) => locale.value === selectedLocale);
 
 	const chevron = (
 		<svg
@@ -61,7 +76,7 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 			fill="none"
 			stroke="currentColor"
 			viewBox="0 0 24 24"
-		>
+			aria-hidden="true">
 			<path
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -76,7 +91,7 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 			className="w-4 h-4 animate-spin text-(--primary)"
 			fill="none"
 			viewBox="0 0 24 24"
-		>
+			aria-hidden="true">
 			<circle
 				className="opacity-25"
 				cx="12"
@@ -93,8 +108,9 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 		</svg>
 	);
 	return (
-		<div className="relative text-center flex items-center" ref={dropdownRef}>
-			{/* Custom Select Button */}
+		<div
+			className="relative text-center flex items-center"
+			ref={dropdownRef}>
 			<button
 				type="button"
 				className="inline-flex justify-center w-full px-3 py-2 text-sm font-medium text-(--text) border-none hover:bg-(--surface) focus:outline-none focus:bg-(--surface) focus:ring-2 focus:ring-(--primary) focus:border-(--primary) hover:text-(--text) transition-colors duration-200"
@@ -103,31 +119,28 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 				aria-haspopup="listbox"
 				aria-expanded={isOpen}
 				aria-label={t("select.languageSelectAriaLabel")}
-				title={t("select.languageSelectTitle")}
-			>
+				title={t("select.languageSelectTitle")}>
 				<span className="flex items-center">
 					<span className="mr-2">{selectedOption?.label}</span>
 					{isPending ? loadingIndicator : chevron}
 				</span>
 			</button>
 
-			{/* Dropdown Menu */}
 			{isOpen && (
 				<div className="absolute right-0 z-50 w-full mb-1 origin-bottom-right bg-(--surface) border border-(--border) shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bottom-full">
 					<ul
 						className=""
 						role="listbox"
-						aria-label={t("select.languageSelectAriaLabel")}
-					>
+						aria-label={t("select.languageSelectAriaLabel")}>
 						{locales.map((locale) => (
 							<li
 								key={locale.value}
 								role="option"
 								aria-selected={locale.value === selectedLocale}
 								className={`locale-option block w-full px-4 text-center transition-colors duration-150 cursor-pointer ${
-									locale.value === selectedLocale
-										? "bg-(--primary) text-(--primary-text)"
-										: "text-(--text) hover:bg-(--surface-hover)"
+									locale.value === selectedLocale ?
+										"bg-(--primary) text-(--primary-text)"
+									:	"text-(--text) hover:bg-(--surface-hover)"
 								}`}
 								onClick={() => handleLocaleChange(locale.value)}
 								onKeyDown={(e) => {
@@ -136,8 +149,7 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 										handleLocaleChange(locale.value);
 									}
 								}}
-								tabIndex={0}
-							>
+								tabIndex={0}>
 								{locale.label}
 							</li>
 						))}

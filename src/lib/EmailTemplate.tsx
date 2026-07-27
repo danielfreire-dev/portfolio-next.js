@@ -13,11 +13,14 @@ import {
 	Text,
 } from "@react-email/components";
 
-export default function WelcomeEmail(
-	t: any,
-	firstName: string,
-	lastName: string,
-) {
+/**
+ * Welcome email template sent after a user submits the contact form.
+ *
+ * Renders a multi-language email using the `next-intl` translation object
+ * and the recipient's first/last name. Styled with Tailwind and inline
+ * styles via `@react-email/components`.
+ */
+export default function WelcomeEmail(t: any, firstName: string, lastName: string) {
 	return (
 		<Html>
 			<Head>
@@ -72,27 +75,31 @@ export default function WelcomeEmail(
 								<Text style={mainText}>{t("conclusion")}</Text>
 							</Section>
 							<Hr />
-							<Text className="signature" style={footerText}>
+							<Text
+								className="signature"
+								style={footerText}>
 								{t("signature")}
 							</Text>
-							<Text className="signature" style={footerText}>
+							<Text
+								className="signature"
+								style={footerText}>
 								<Link
 									href="https://daniel-freire.com"
 									target="_blank"
-									style={link}
-								>
+									style={link}>
 									{t("name")}
 								</Link>
 							</Text>
 						</Section>
 
-						<Text className="signature whitespace-pre-wrap" style={footerText}>
+						<Text
+							className="signature whitespace-pre-wrap"
+							style={footerText}>
 							{t("view")}{" "}
 							<Link
 								href={`https://daniel-freire.com/${t("privacyPolicyUrl")}`}
 								target="_blank"
-								style={link}
-							>
+								style={link}>
 								{t("privacyPolicy")}
 							</Link>
 							.
@@ -104,17 +111,36 @@ export default function WelcomeEmail(
 	);
 }
 
+/**
+ * Email body background and text colour.
+ *
+ * Sets a white background and dark grey text as the base canvas for the
+ * entire email. These values cascade through all child elements unless
+ * overridden by more specific style objects.
+ */
 const main = {
 	backgroundColor: "#fff",
 	color: "#212121",
 };
 
+/**
+ * Outer container with a light grey background.
+ *
+ * Provides a subtle visual boundary around the email content so it stands out
+ * from the email client's default white canvas. Centered with auto margins.
+ */
 const container = {
 	padding: "20px",
 	margin: "0 auto",
 	backgroundColor: "#eee",
 };
 
+/**
+ * Heading style for the recipient's name.
+ *
+ * Uses the Mozilla Headline typeface for a distinctive brand look, falling
+ * back to Arial and Verdana on clients that don't support web fonts.
+ */
 const h1 = {
 	color: "#333",
 	fontFamily: "Mozilla Headline, Arial, Verdana",
@@ -123,6 +149,13 @@ const h1 = {
 	marginBottom: "15px",
 };
 
+/**
+ * Link style used for the signature and privacy-policy link.
+ *
+ * Applies a blue colour with underline and a system font stack that matches
+ * the sender's brand palette. The `fontStyle: "capitalize"` ensures link text
+ * renders in title case regardless of the translation value.
+ */
 const link = {
 	color: "#2754C5",
 	fontFamily:
@@ -132,6 +165,12 @@ const link = {
 	fontStyle: "capitalize",
 };
 
+/**
+ * Base text style used throughout the email body.
+ *
+ * Defines the shared typography properties (colour, font stack, size, margin)
+ * that are inherited or spread into more specific text-style objects below.
+ */
 const text = {
 	color: "#333",
 	fontFamily:
@@ -140,14 +179,40 @@ const text = {
 	margin: "24px 0",
 };
 
+/**
+ * White background cover section.
+ *
+ * Creates a clean white card surface inside the grey container so the text
+ * content has maximum contrast and readability.
+ */
 const coverSection = { backgroundColor: "#fff" };
 
+/**
+ * Padding for the upper content section.
+ *
+ * Adds consistent horizontal and vertical spacing around the greeting and
+ * body paragraphs inside the white cover card.
+ */
 const upperSection = { padding: "25px 35px" };
 
+/**
+ * Smaller text style used in the footer.
+ *
+ * Spreads the base text style and reduces the font size to 12px with
+ * horizontal padding, producing the compact legal/attribution text at the
+ * bottom of the email.
+ */
 const footerText = {
 	...text,
 	fontSize: "12px",
 	padding: "0 20px",
 };
 
+/**
+ * Main body text with reduced bottom margin.
+ *
+ * Spreads the base text style and tightens the bottom margin to 14px so
+ * paragraphs sit closer together, improving scannability of the multi-
+ * paragraph welcome message.
+ */
 const mainText = { ...text, marginBottom: "14px" };

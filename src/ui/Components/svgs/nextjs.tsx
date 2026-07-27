@@ -1,14 +1,20 @@
 import { SVGProps } from "react";
 
-export function nextjs(props: SVGProps<SVGSVGElement>) {
+/**
+ * nextjs - Next.js logotype SVG icon.
+ *
+ * Renders the official Next.js wordmark with the "N" letterform and
+ * "ext.js" text, suitable for use in tech stack displays.
+ */
+export function nextjs(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			viewBox="0 0 394 78.810124"
 			fill="var(--nextjs-fill)"
 			version="1.1"
 			id="nextjs"
-			{...props}
-		>
+			{...props}>
+			<title>{props.title ?? "Next.js framework logotype"}</title>
 			<path
 				d="m 261.919,0.033 h 68.628 v 12.667 h -27.224 v 66.639 h -13.613 v -66.639 h -27.791 z m -112.867,0 v 12.667 h -55.01 v 20.377 h 44.239 v 12.667 h -44.239 v 20.928 h 55.01 v 12.668 h -68.622 v -66.64 h -0.006 v -12.667 z m 34.268,0.033 h -17.814 l 63.806,79.306 h 17.866 l -31.907,-39.626 31.856,-39.62 -17.815,0.028 -22.96,28.516 z m 18.28,56.649 -8.921,-11.092 -27.224,33.81 h 17.865 z"
 				id="path1"

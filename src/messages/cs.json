@@ -1,0 +1,676 @@
+{
+	"about": {
+		"image": "/images/Lensa/Lensa2.webp",
+		"imageAlt": "oil painting of Daniel",
+		"paragraph1": "Během posledních dvou let jsem na webu budoval různé věci. Ale můj pohled na to, co a proč budovat, byl formován mnohem dříve, než jsem napsal svůj první řádek kódu.",
+		"paragraph2": "Do tohoto oboru jsem přišel z marketingu, i když ne z té strany, kterou si mnozí představují. Můj svět byl spíše o analýze dat než o kampaních – sledování tržních trendů, rozbor chování uživatelů a porozumění přesnému mechanismu, jak lidé online nachází a používají produkty. SEO a SEM jsou ve svém jádru aplikovaná psychologie a řešení problémů. Naučil jsem se poslouchat, co data křičí, a co ještě důležitější – co šeptají.",
+		"paragraph3": "To je přínos, který přináším do každého vývojářského projektu. Mnoho vývojářů umí psát elegantní kód; já se zaměřuji na vytváření elegantních řešení. A v tom je ten rozdíl.",
+		"paragraph4": "Když navrhuji aplikaci v Reactu nebo Next.js, nemyslím jen na správu stavu nebo strukturu komponent. Myslím na cestu uživatele, která ho sem přivedla. Uvažuji o sémantickém značkování, které dává našemu obsahu význam i mimo obrazovku. Buduji vysoce výkonné webové aplikace s přirozeným porozuměním výkonu, protože vím, že zpoždění i o půl vteřiny může znamenat rozhodnutí uživatele odejít.",
+		"paragraph5": "Zde dělá chybu mnoho talentovaných vývojářů: budují pro zařízení. Budují pro specifikaci. Ale zapomínají budovat pro člověka na druhé straně a pro obchodní cíl, který projekt opravdu odůvodňuje. Díky mé zkušenosti se dokážu postavit právě na toto průsečík. Umím převést obchodní potřebu na technický požadavek ne jako abstraktní koncept, ale jako žijící zkušenost. Byl jsem člověk, který žádal o data, a teď jsem ten, kdo systémy pro jejich poskytování vytváří.",
+		"paragraph6": "Ať už jde o webovou aplikaci s AI, moderní frontend, Django admin nebo full-stack Node.js aplikaci, otázkou, od které vždy začínám, je: „Na co vlastně hledáme řešení?“ Technologie jsou prostředkem. Skutečné umění tkví ve výběru správného nástroje pro danou práci a v jeho schopnosti jej použít s moudrostí, abych pochopil, co je ta práce skutečně zač.",
+		"paragraph7": "Nestavím jen správně. Stavím správné věci.",
+		"title1": "Stavíme pro člověka za obrazovkou"
+	},
+	"carousel": [
+		{
+			"alt": "Revolutionizujte svou digitální prezentaci!",
+			"cta": "Revolutionizujte svou digitální prezentaci!",
+			"description": "Drží vaše webové stránky váš podnik zpět? Náš komplexní audit výkonu hloubkově analyzuje technickou infrastrukturu, uživatelský zážitek a konverzní potenciál vašich stránek. Poskytneme vám detailní zprávu s klíčovými návrhy na zlepšení, které dramaticky zvýší vaši online výkonnost.",
+			"id": 1,
+			"imageUrl": "/images/Carousel/white.webp",
+			"loading": "lazy",
+			"title": "revolučně zlepšete svou digitální prezentaci!",
+			"url": "/contact"
+		},
+		{
+			"alt": "Uvolněte plný potenciál vašich webových stránek",
+			"cta": "Uvolněte plný potenciál vašich webových stránek",
+			"description": "Weby potřebují pravidelnou péči, aby zůstaly bezpečné, funkční a konkurenceschopné. Naše komplexní balíčky údržby zahrnují proaktivní sledování, okamžité řešení problémů a kontinuální technologické aktualizace.",
+			"id": 2,
+			"imageUrl": "/images/Carousel/umbrellas.webp",
+			"loading": "eager",
+			"title": "uvolněte plný potenciál vašich webových stránek",
+			"url": "/contact"
+		},
+		{
+			"alt": "Vytvořte svůj sen dnes",
+			"cta": "Vytvořte svůj sen dnes",
+			"description": "Přestaňte se spokojit s generickými šablonami. Naše individuální služby vývoje webu vytvářejí plně přizpůsobené digitální zkušenosti, které dokonale ladí s unikátní identitou vaší značky a obchodními cíli. Proměníme váš koncept ve výkonný, responzivní a moderní web.",
+			"id": 3,
+			"imageUrl": "/images/Carousel/estatuas.webp",
+			"loading": "eager",
+			"title": "vytvořte svůj sen dnes",
+			"url": "/contact"
+		},
+		{
+			"alt": "Udělejte první krok směrem k digitální excelenci",
+			"cta": "Udělejte první krok",
+			"description": "Rychlost není jen funkce – je to konkurenční výhoda. Naše optimalizace výkonu zajistí, že váš web bude načítán bleskurychle a poskytne výjimečný uživatelský zážitek, který udrží návštěvníky a zvýší konverze.",
+			"id": 4,
+			"imageUrl": "/images/Carousel/building-orange.webp",
+			"loading": "eager",
+			"title": "urychlete potenciál vašich stránek",
+			"url": "/contact"
+		},
+		{
+			"alt": "Modernizujte svou digitální infrastrukturu",
+			"cta": "Modernizujte svou digitální infrastrukturu",
+			"description": "Technologie se rychle vyvíjejí. Naše expertní migrační služby vám pomohou hladce přejít na moderní a efektivní webové technologie bez narušení stávajících operací. Zajistíme hladkou a bezrizikovou cestu k modernizaci.",
+			"id": 5,
+			"imageUrl": "/images/Carousel/building-yellow.webp",
+			"loading": "eager",
+			"title": "modernizujte svou digitální infrastrukturu",
+			"url": "/contact"
+		},
+		{
+			"alt": "tužky",
+			"cta": "pečujte o své digitální aktiva",
+			"description": "Weby potřebují pravidelnou péči, aby zůstaly bezpečné, funkční a konkurenceschopné. Naše komplexní balíčky údržby zahrnují proaktivní sledování, okamžité řešení problémů a kontinuální technologické aktualizace.",
+			"id": 6,
+			"imageUrl": "/images/Carousel/pencils.webp",
+			"loading": "lazy",
+			"title": "průběžná péče o vaše digitální aktiva",
+			"url": "/contact"
+		}
+	],
+	"contact": {
+		"btn": "odeslat zprávu",
+		"email": "email",
+		"errors": {
+			"sendFailed": "Failed to send message. Please try again.",
+			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
+			"turnstileExpired": "Security check expired. Please verify again.",
+			"turnstileFailed": "Security check failed. Please try again.",
+			"turnstileNotVerified": "Please verify you are not a robot",
+			"turnstileRequired": "Complete the security check above to enable the submit button."
+		},
+		"farewell": {
+			"text": "Děkujeme za vaši důvěru. Můžete očekávat odpověď během několika pracovních dní.",
+			"title": "děkujeme"
+		},
+		"firstName": "jméno",
+		"formAriaLabel": "Contact form",
+		"label": "Přečetl jsem si a souhlasím s ",
+		"lastName": "příjmení",
+		"message": "zpráva",
+		"pageTitle": "Kontakt",
+		"phone": "telefonní číslo",
+		"placeholder": {
+			"email": "Zadejte svůj email",
+			"firstName": "Zadejte své jméno",
+			"lastName": "Zadejte své příjmení",
+			"message": "Zadejte zprávu",
+			"phone": "Zadejte své telefonní číslo"
+		},
+		"privacy": "zásady ochrany osobních údajů",
+		"privacyPolicyCheck": "Potvrzuji, že jsem si přečetl(a) a souhlasím s",
+		"privacyPolicyUrl": "privacy-policy/",
+		"privacyPolicyUrlAriaDetails": "Zásady ochrany osobních údajů",
+		"privacyPolicyUrlAriaLabel": "Zásady ochrany osobních údajů",
+		"privacyPolicyUrlTitle": "Zásady ochrany osobních údajů",
+		"required": "povinné",
+		"requiredIndicator": "required",
+		"sending": "odesílání…",
+		"title": "kontaktujte mě"
+	},
+	"cookies": {
+		"buttonText": "Přijmout vše",
+		"declineButtonText": "Přijmout pouze nezbytné",
+		"manageAdvertSubtitle": "Přizpůsobit reklamy a měřit jejich výkon",
+		"manageAdvertTitle": "Reklamy",
+		"manageAnalyticsSubtitle": "Pomozte nám pochopit, jak návštěvníci interagují s naším webem",
+		"manageAnalyticsTitle": "Analytika",
+		"manageButtonText": "Spravovat cookies",
+		"manageCancelButtonText": "Zrušit",
+		"manageCookiesStatus": "Stav: {{status}} dne {{date}}",
+		"manageCookiesStatusConsented": "Souhlas",
+		"manageCookiesStatusDeclined": "Odmítnuto",
+		"manageEssentialStatus": "Stav: Vždy povoleno",
+		"manageEssentialStatusButtonText": "Analytika",
+		"manageEssentialSubtitle": "Nutné pro správné fungování webu",
+		"manageEssentialTitle": "Základní",
+		"manageMessage": "Spravujte své nastavení cookies níže. Základní cookies jsou vždy povoleny, protože jsou nezbytné pro fungování webu.",
+		"manageSaveButtonText": "Uložit nastavení",
+		"manageSocialSubtitle": "Povolit funkce sociálních médií a sdílení",
+		"manageSocialTitle": "Sociální sítě",
+		"manageTitle": "Nastavení cookies",
+		"message": "Vážíme si vašeho soukromí. Vyberte si, které cookies chcete povolit. Základní cookies jsou vždy povoleny, protože jsou nezbytné pro fungování webu.",
+		"privacyPolicyText": "Zásady ochrany osobních údajů",
+		"privacyurl": "/en/privacy-policy",
+		"title": "Chcete sušenku? 🍪"
+	},
+	"cta": {
+		"blurb": "Máte projekt v hlavě? Pojďme si promluvit.",
+		"button": [
+			"Pojďme si promluvit o vašem podnikání",
+			"Máte projekt v hlavě? Pojďme si promluvit.",
+			"Hledáte frontend vývojáře? Našli jste ho!",
+			"Pozdravujte – nekoušu 👋",
+			"Udělejme z vašeho webu něco nezapomenutelného →",
+			"Potřebujete vývojáře, který doručí? Promluvme si.",
+			"Pojďme spolu něco skvělého vytvořit →"
+		],
+		"title": "kontaktujte mě"
+	},
+	"email": {
+		"email": "hello@daniel-freire.com",
+		"message": "náhodná zpráva",
+		"title": "💻🚀 Ahoj",
+		"welcome": {
+			"conclusion": "Tohle není jen web – je to váš digitální úsměv, první dojem a příležitost vyniknout ve světě plném konkurence. Udělejme z něj něco nezapomenutelného.",
+			"happensNext0": "Co bude dál:",
+			"happensNext1": "Osobně si projdu váš dotaz a odpovím vám do 2–3 pracovních dní s přizpůsobeným plánem (nebo otázkami, pokud bude potřeba upřesnit rozsah).",
+			"happensNext2": "Během několika pracovních dní se vám ozvu s jasnými dalšími kroky, časovým harmonogramem a tím, jak spolu budeme spolupracovat na přivedení vašeho nápadu k životu.",
+			"happensNext3": "Pokud do té doby neuvidíte můj email, neváhejte mi napsat znovu – buď se ponořím do kódu, nebo budu bojovat s poštou (a vždycky si udělám čas pro váš projekt).",
+			"heading": "Ahoj",
+			"intro": "Začněme jednoduchou pravdou: vytvořit online přítomnost, která skutečně reprezentuje vaše služby nebo dovednosti, vyžaduje odvahu a vizi. Fakt, že jste tady – a podnikáte konkrétní kroky ke zlepšení – říká mnoho o vašem odhodlání růst. To si zaslouží oslavu.",
+			"introduction": "Jsem Daniel Freire a specializuji se na vytváření silných, klientům přizpůsobených webů, které nejen ukazují projekty, ale vypráví příběh o tom, co do toho vkládáte. Ať už si přejete přilákat špičkové klienty, získat svou vysněnou práci nebo jen jasně a stylově prezentovat své schopnosti – váš web je nejsilnější nástroj. A já vám pomohu ho vyleštit.",
+			"name": "Daniel Freire",
+			"preview": "Daniel Freire – uvítací email",
+			"privacyPolicy": "zásady ochrany osobních údajů",
+			"privacyPolicyUrl": "en/privacy-policy/",
+			"signature": "Těším se na spolupráci,",
+			"view": "Zobrazit",
+			"webLink": "daniel-freire.com",
+			"whileWait0": "Zatímco čekáte, můžete:",
+			"whileWait1": "✅ Odpovědět na tento email s dalšími myšlenkami – třeba konkrétní projekty, které vás baví, designové preference nebo cíle pro váš web (např. „Chci, aby recruiteři hned viděli mou full-stack expertízu“).",
+			"whileWait2": "✅ Shromáždit materiály (odkazy na GitHub, case study nebo i hrubé náčrty), abychom urychlili proces, až začneme."
+		}
+	},
+	"error": {
+		"404": "404 – stránka nenalezena",
+		"back": "Zpět na domovskou stránku",
+		"description": "Vypadá to, že jste se ztratil. Nebojte se, stává se to i těm nejlepším.",
+		"errorLoading": {
+			"contact": "<p>Pokud si myslíte, že zde nějaká stránka být měla, kontaktujte <a>webmaster@daniel-freire.com</a></p>",
+			"description": "<p>Bohužel jsme narazili na chybu.</p><p>Můžete zkusit <retry>znovu načíst stránku</retry>, kterou jste navštívili.</p>",
+			"title": "něco se pokazilo!"
+		}
+	},
+	"home": {
+		"techstack": "Dovednosti a nástroje",
+		"trending": "Portfolio"
+	},
+	"icons": {
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides",
+		"leftarrow": {
+			"alt": "šipka vlevo",
+			"label": "Previous slide",
+			"src": "/images/icons/chevron-left.svg"
+		},
+		"rightarrow": {
+			"alt": "šipka vpravo",
+			"label": "Next slide",
+			"src": "/images/icons/chevron-right.svg"
+		}
+	},
+	"localeSwitcher": {
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} da {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cs {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} da {🇩🇰} pl {🇵🇱} de {🇩🇪} cs {🇨🇿} other {Unknown}}"
+	},
+	"metadata": {
+		"description": {
+			"about": "Poznejte Daniela Freire — webového vývojáře specializujícího se na aplikace s AI, integraci LLM a vysoce výkonná webová řešení.",
+			"contact": "Kontaktujte Daniela Freire pro vývoj webových stránek, AI řešení a technické poradenství. Rychlá a spolehlivá komunikace zaručena.",
+			"home": "Daniel Freire — Webový vývojář: aplikace s AI, zakázkový software a výkonné weby. Sídlí v Portugalsku, služby klientům po celém světě.",
+			"impressum": "",
+			"portfolio": "Prozkoumejte portfolio webových projektů Daniela Freire, včetně React aplikací, nástrojů s AI a zakázkových obchodních softwarových řešení.",
+			"privacyPolicy": "Zjistěte, jak Daniel Freire shromažďuje, používá a chrání vaše osobní údaje. Transparentní postupy ochrany soukromí v souladu s GDPR.",
+			"services": "Webové aplikace s AI, integrace LLM a vývoj webu od Daniela Freire. Zakázkový software, AI agenti a technické poradenství s agilním přístupem."
+		},
+		"name": "Daniel Freire",
+		"opengraphImage": "metadata/open-graph.png",
+		"opengraphImageAlt": "Daniel Freire",
+		"title": {
+			"about": "O mně",
+			"contact": "Kontakt",
+			"home": "Domovská stránka | Daniel Freire",
+			"impressum": "Impressum",
+			"portfolio": "Portfolio",
+			"privacyPolicy": "Zásady ochrany osobních údajů",
+			"services": "Služby"
+		},
+		"twitterImage": "metadata/open-graph.png",
+		"twitterImageAlt": "Daniel Freire"
+	},
+	"portfolio": {
+		"all": "Vše",
+		"cta": [
+			"podívejte se",
+			"zobrazit živý projekt →"
+		],
+		"opensInNewTab": "opens in new tab",
+		"pageTitle": "portfolio",
+		"projects": [
+			{
+				"demo": "Živě",
+				"github": "https://github.com/danielfreire-dev/Quizzical",
+				"link": "https://quizzicall-bydainelli.netlify.app/",
+				"src": "/images/screenshots/quizzical.webp",
+				"summary": "Hra na otázky s více než 4 000 otázkami.",
+				"title": "quizzical"
+			},
+			{
+				"demo": "Živě",
+				"github": "https://github.com/danielfreire-dev/PollyGlot",
+				"link": "https://pollyglot-bydainelli.netlify.app/",
+				"src": "/images/screenshots/pollyglot.webp",
+				"summary": "Překladová aplikace s AI.",
+				"title": "pollyGlot"
+			},
+			{
+				"demo": "Živě",
+				"github": "",
+				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
+				"src": "/images/screenshots/drumsVeryBig1920.webp",
+				"summary": "Zábavný projekt na simulaci bicích nástrojů na počítači.",
+				"title": "aplikace bicích"
+			},
+			{
+				"demo": "Živě",
+				"github": "",
+				"link": "https://tenzi-bydaniel.netlify.app/",
+				"src": "/images/screenshots/Tenzi.webp",
+				"summary": "Nejpopulárnější kostková hra na světě, nyní ve vašem prohlížeči.",
+				"title": "tenzi"
+			},
+			{
+				"demo": "Živě",
+				"github": "",
+				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
+				"src": "/images/screenshots/dodgy-daniel.webp",
+				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"title": "dodgy Daniel"
+			}
+		],
+		"projects-title": "Projekty",
+		"websites": [
+			{
+				"demo": "Živě",
+				"github": "",
+				"link": "https://muraryu.com",
+				"src": "/images/screenshots/muraryu.webp",
+				"summary": "MuraRyu je nová společnost v Portugalsku pro správu bytových domů.",
+				"title": "muraRyu"
+			},
+			{
+				"demo": "Živě",
+				"github": "",
+				"link": "https://victo.pages.dev",
+				"src": "/images/screenshots/victo.webp",
+				"summary": "Galerie vytvořená pro prezentaci děl známého portugalského umělce Victóa.",
+				"title": "galerie Victóa"
+			},
+			{
+				"demo": "Živě",
+				"github": "",
+				"link": "https://insurbia.com",
+				"src": "/images/screenshots/insurbia2.webp",
+				"summary": "Webové stránky vytvořené jako kontaktní místo pro architektonické kolektiv Insurbia.",
+				"title": "insurbia"
+			}
+		],
+		"websites-title": "Weby"
+	},
+	"privacyPolicy": {
+		"contactEmail": "gdpr@daniel-freire.com",
+		"header1": "1. Úvod",
+		"header10": "10. Změny v těchto zásadách ochrany osobních údajů",
+		"header11": "11. Kontaktujte nás",
+		"header2": "2. Jaké informace sbíráme",
+		"header3": "3. Účel sběru dat",
+		"header4": "4. Právní základ zpracování",
+		"header5": "5. Sdílení osobních údajů",
+		"header6": "6. Uchovávání dat",
+		"header7": "7. Vaše práva",
+		"header8": "8. Bezpečnost dat",
+		"header9": "9. Stížnosti",
+		"paragraph1": "Vítejte na webových stránkách Daniela Freire. Jsme odhodláni chránit vaše osobní údaje a vaše právo na soukromí. Pokud máte jakékoli otázky nebo obavy ohledně těchto zásad ochrany osobních údajů nebo našich postupů při zpracování vašich osobních údajů, kontaktujte nás na",
+		"paragraph10": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O jakýchkoli změnách vás budeme informovat zveřejněním nových zásad na této stránce.",
+		"paragraph11": "Pokud máte jakékoli otázky týkající se těchto zásad ochrany osobních údajů, kontaktujte nás na",
+		"paragraph2": "Sbíráme osobní údaje, které nám dobrovolně poskytnete při vyplňování formuláře na našich webových stránkách. Osobní údaje, které sbíráme, zahrnují:",
+		"paragraph2li": [
+			"Jméno",
+			"Příjmení",
+			"Emailová adresa",
+			"Telefonní číslo"
+		],
+		"paragraph3": "Informace, které sbíráme, budou použity k tomu, abychom vás v budoucnu kontaktovali. Vaše osobní údaje budeme používat pouze pro tento konkrétní účel.",
+		"paragraph4": "Zpracování vašich osobních údajů je založeno na vašem souhlasu, který udělujete vyplněním formuláře na našich webových stránkách.",
+		"paragraph5": "Vaše osobní údaje nesdílíme s třetími stranami, kromě případů požadovaných zákonem.",
+		"paragraph6": "Vaše osobní údaje budeme uchovávat pouze po dobu nezbytnou k naplnění účelu, pro který byly shromážděny, včetně splnění právních požadavků.",
+		"paragraph7": "Máte právo:",
+		"paragraph7li": [
+			"Přístup k vašim osobním údajům",
+			"Požadavek na opravu vašich osobních údajů",
+			"Požadavek na výmaz vašich osobních údajů",
+			"Námitka proti zpracování vašich osobních údajů",
+			"Požadavek na omezení zpracování vašich osobních údajů",
+			"Požadavek na přenos vašich osobních údajů",
+			"Kdykoli odvolat souhlas"
+		],
+		"paragraph8": "Implementujeme přiměřená technická a organizační opatření k zajištění úrovně zabezpečení odpovídající riziku zpracování vašich osobních údajů.",
+		"paragraph9": "Pokud se domníváte, že jsme nepostupovali v souladu se zákony o ochraně osobních údajů, máte právo podat stížnost u příslušného dozorového orgánu.",
+		"title": "Zásady ochrany osobních údajů pro webové stránky Daniela Freire"
+	},
+	"services": [
+		{
+			"features": [
+				"CRM systémy přizpůsobené vašemu prodejnímu procesu",
+				"Vlastní analytické dashboardy a reporty",
+				"Interní portály a nástroje pro správu týmů",
+				"Automatizace pracovních postupů a manuálních procesů",
+				"Integrace se stávajícími API a službami třetích stran",
+				"Administrátorské panely s podrobnou kontrolou přístupu",
+				"Vývoj MVP s rychlými cykly zpětné vazby",
+				"Cloud-nativní architektura nasazená na AWS"
+			],
+			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
+			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy — a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru. Dodávám agilními metodami, se zaměřením na MVP a rychlé zpětnovazební cykly, abyste viděli hodnotu brzy a iterovali na základě reálného používání.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete — každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat — protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL — nasazených na AWS s cloud-nativní architekturou — vytvářím modulární, znovupoužitelné komponenty, které činí vaše řešení robustním, škálovatelným a snadno udržovatelným s růstem vašeho podnikání.",
+			"slug": "zakazkovy-firemni-software",
+			"text": "Webové aplikace na míru — CRM systémy, dashboardy a interní nástroje postavené s modulárními komponentami a agilním doručováním, odpovídající tomu, jak vaše firma skutečně funguje.",
+			"title": "Zakázkový firemní software"
+		},
+		{
+			"features": [
+				"Vývoj webových aplikací s AI",
+				"Integrace LLM s OpenAI a open-source modely",
+				"Orchestrace AI agentů pro složité obchodní workflow",
+				"Inteligentní chatboti pro zákaznickou podporu a prodej",
+				"Automatizované zpracování a klasifikace dokumentů",
+				"Sémantické vyhledávání a systémy pro objevování znalostí",
+				"Obchodně specifické AI asistenty (RAG)",
+				"Automatické generování a sumarizace obsahu",
+				"Prediktivní analytika a dashboardy poháněné AI"
+			],
+			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
+			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou — pokud je aplikována s účelem. Vytvářím webové aplikace s AI, které integrují Velké jazykové modely (LLM) do vašich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo orchestraci AI agentů, která automatizuje složité vícestupňové obchodní procesy — zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou. Každé řešení je navrženo s uživatelskou zkušeností řízenou AI, která působí přirozeně a intuitivně pro váš tým a zákazníky.\n\nPracuji s API jako OpenAI, open-source LLM, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
+			"slug": "implementace-ai-reseni",
+			"text": "Webové aplikace s AI a integrací LLM — chatboti, AI agenti a uživatelské zkušenosti řízené AI, které transformují vaše pracovní postupy.",
+			"title": "Implementace AI řešení"
+		},
+		{
+			"features": [
+				"Firemní weby a vysoce konverzní landing pages",
+				"Progresivní webové aplikace (PWA) s offline podporou",
+				"E-commerce platformy a produktové katalogy",
+				"Migrace a modernizace starších webových stránek",
+				"Optimalizace Core Web Vitals a technického SEO",
+				"Responzivní design testovaný na všech zařízeních",
+				"Autentizační, platební a zákaznické portálové systémy",
+				"Rychlý vývoj MVP pro validaci trhu",
+				"Nasazení v cloudu AWS se škálovatelnou architekturou",
+				"Modulární, znovupoužitelné knihovny komponent pro udržovatelnou frontendovou logiku"
+			],
+			"icon": "/images/icons/dns-services.svg",
+			"iconLarge": "/images/icons/dns-services.svg",
+			"longDescription": "Webová stránka není jen digitální vizitka — je to váš nejdůležitější marketingový nástroj. Vytvářím vysoce výkonné webové aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli. S modulárními komponentami a čistou frontendovou logikou je každý projekt od prvního dne architektonicky navržen pro snadnou udržovatelnost.\n\nKaždý projekt je stavěn s výkonem v jádru — optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat — bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům. Dodržuji agilní postupy doručování produktů, začínám s MVP pro rychlou zpětnou vazbu a iteruji na základě reálných uživatelských dat.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy — nasazené na AWS se škálovatelnou cloudovou architekturou — ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
+			"slug": "vyvoj-webovych-stranek",
+			"text": "Vysoce výkonné webové aplikace — rychlé, responzivní weby s modulárními komponentami, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
+			"title": "Vývoj webových stránek"
+		},
+		{
+			"features": [
+				"Kompletní technický SEO audit (procházení, indexace, architektura)",
+				"Optimalizace Core Web Vitals a rychlosti načítání",
+				"Analýza konkurence a strategický výzkum klíčových slov",
+				"Obsahová strategie a on-page optimalizace",
+				"Konzultace migrace a redesignu se zachováním SEO",
+				"Nastavení a audit analytiky (GA4, Search Console)"
+			],
+			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
+			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice — druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Pro vysoce výkonné webové aplikace zajišťuji, že každá milisekunda načítání je zohledněna, protože rychlost přímo ovlivňuje jak pozice ve vyhledávání, tak konverze. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
+			"slug": "seo-technicke-poradenstvi",
+			"text": "Audity založené na datech, vysoce výkonná optimalizace a strategie, která pomůže vaší firmě být vidět a konvertovat.",
+			"title": "SEO a technické poradenství"
+		}
+	],
+	"sidenav": {
+		"footer": {
+			"blurb": "Vytvořeno s 🐞",
+			"icons": {
+				"github": {
+					"alt": "GitHub",
+					"ariaDetails": "Danielův GitHub",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
+					"link": "https://github.com/danielfreire-dev/",
+					"src": "/images/icons/github-square.svg",
+					"title": "Danielův GitHub"
+				},
+				"linkedin": {
+					"alt": "LinkedIn",
+					"ariaDetails": "Danielův LinkedIn",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
+					"link": "https://www.linkedin.com/in/danielfreire-swe/",
+					"src": "/images/icons/linkedin.svg",
+					"title": "Danielův LinkedIn"
+				}
+			}
+		},
+		"header": {
+			"role": "webový vývojář",
+			"title": "daniel freire"
+		},
+		"legal": {
+			"impressumLink": "/impressum",
+			"impressumName": "impressum",
+			"privacyLink": "/privacy-policy",
+			"privacyLinkAriaDetails": "Zásady ochrany osobních údajů",
+			"privacyLinkAriaLabel": "Zásady ochrany osobních údajů",
+			"privacyLinkTitle": "Zásady ochrany osobních údajů",
+			"privacyName": "zásady ochrany osobních údajů"
+		},
+		"links": [
+			{
+				"link": "/",
+				"name": "domů"
+			},
+			{
+				"link": "/about",
+				"name": "o mně"
+			},
+			{
+				"link": "/portfolio",
+				"name": "portfolio"
+			},
+			{
+				"link": "/services",
+				"name": "služby"
+			},
+			{
+				"link": "/contact",
+				"name": "kontakt"
+			}
+		],
+		"privacy": "zásady ochrany osobních údajů",
+		"rights": "Daniel Freire ® všechna práva vyhrazena",
+		"select": {
+			"languageSelectAriaLabel": "Menu pro výběr jazyka",
+			"languageSelectTitle": "Menu pro výběr jazyka"
+		}
+	},
+	"svgTitles": {
+		"Bash": "Logo shellu Bash",
+		"CSS3": "Logo CSS",
+		"Cypress": "Logo testovacího frameworku Cypress",
+		"Expressjs": "Logo webového frameworku Express.js",
+		"ExternalLinkSvg": "SVG ikona externího odkazu",
+		"Git": "Logo správy verzí Git",
+		"GitHubIcon": "Ikona odkazu na profil GitHub",
+		"Github": "Logo GitHub",
+		"HTML5": "Logo HTML5",
+		"JavaScript": "Logo JavaScript",
+		"Jest": "Logo testovacího frameworku Jest",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animovaná ikona přechodu měsíc-slunce",
+		"LinkedInIcon": "Ikona odkazu na profil LinkedIn",
+		"Linux": "Logo operačního systému Linux",
+		"Moon": "Ikona měsíce pro přepínač tmavého režimu",
+		"Nextjs": "Logo frameworku Next.js",
+		"Nodejs": "Logo runtime Node.js",
+		"PostgreSQL": "Logo databáze PostgreSQL",
+		"Python": "Logo programovacího jazyka Python",
+		"Reactjs": "Logo knihovny React",
+		"Redux": "Logo správy stavu Redux",
+		"Selenium": "Selenium WebDriver",
+		"Sun": "Ikona slunce pro přepínač světlého režimu",
+		"Sun1": "Ikona slunce",
+		"TypeScript": "Logo programovacího jazyka TypeScript",
+		"Vitejs": "Logo build nástroje Vite",
+		"Vitest": "Logo testovacího frameworku Vitest",
+		"Webpack": "Logo modulového bundleru Webpack",
+		"Zsh": "Logo shellu Zsh",
+		"alertAnimation": "Animovaný výstražný trojúhelník s vykřičníkem",
+		"blocksShuffle": "Animovaný načítací spinner s přeskupováním bloků",
+		"blocksWave": "Animovaný načítací spinner s vlnou bloků",
+		"closeToMenu": "Ikona přechodu zavřít-na-menu",
+		"compass": "Animovaný kompas s rotující směrovou střelkou",
+		"computerAnimation": "Animovaný počítačový monitor s přihrádkou klávesnice",
+		"djangoRocket": "Ilustrace rakety Django",
+		"externalLink": "Ikona externího odkazu",
+		"menuToClose": "Ikona přechodu menu-na-zavřít",
+		"moonToSun": "Animovaná ikona přechodu měsíc-slunce",
+		"nextjsTsx": "Logotyp frameworku Next.js",
+		"opensInNewTab": "opens in new tab",
+		"sunToMoon": "Animovaná ikona přechodu slunce-měsíc"
+	},
+	"tech": [
+		{
+			"link": "https://nextjs.org",
+			"logo": "/images/icons/nextjs-13.svg",
+			"name": "next.js",
+			"svgr": "Nextjs"
+		},
+		{
+			"link": "https://react.dev",
+			"logo": "/images/icons/react2.svg",
+			"name": "react.js",
+			"svgr": "Reactjs"
+		},
+		{
+			"link": "https://nodejs.org/en",
+			"logo": "/images/icons/node-js.svg",
+			"name": "node.js",
+			"svgr": "Nodejs"
+		},
+		{
+			"link": "https://www.typescriptlang.org",
+			"logo": "/images/icons/Typescript.svg",
+			"name": "typeScript",
+			"svgr": "TypeScript"
+		},
+		{
+			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+			"logo": "/images/icons/javascript-original.svg",
+			"name": "javaScript",
+			"svgr": "JavaScript"
+		},
+		{
+			"link": "https://www.w3.org/html/",
+			"logo": "/images/icons/html5-original-wordmark.svg",
+			"name": "HTML5",
+			"svgr": "HTML5"
+		},
+		{
+			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+			"logo": "/images/icons/Official_CSS_Logo.svg",
+			"name": "CSS3",
+			"svgr": "CSS3"
+		},
+		{
+			"link": "https://www.postgresql.org",
+			"logo": "/images/icons/postgresql.svg",
+			"name": "postgreSQL",
+			"svgr": "PostgreSQL"
+		},
+		{
+			"link": "https://vite.dev",
+			"logo": "/images/icons/vitejs.svg",
+			"name": "vite.js",
+			"svgr": "Vitejs"
+		},
+		{
+			"link": "https://webpack.js.org/",
+			"logo": "/images/icons/webpack.svg",
+			"name": "webpack",
+			"svgr": "Webpack"
+		},
+		{
+			"link": "https://github.com/",
+			"logo": "/images/icons/github.svg",
+			"name": "gitHub",
+			"svgr": "Github"
+		},
+		{
+			"link": "https://git-scm.com/",
+			"logo": "/images/icons/git-scm-icon.svg",
+			"name": "git",
+			"svgr": "Git"
+		},
+		{
+			"link": "https://vitest.dev/",
+			"logo": "/images/icons/vitest.svg",
+			"name": "vitest",
+			"svgr": "Vitest"
+		},
+		{
+			"link": "https://jestjs.io/",
+			"logo": "/images/icons/jestjsio-icon.svg",
+			"name": "jest",
+			"svgr": "Jest"
+		},
+		{
+			"link": "https://selenium-python.readthedocs.io/",
+			"logo": "/images/icons/selenium.svg",
+			"name": "selenium",
+			"svgr": "Selenium"
+		},
+		{
+			"link": "https://www.python.org/",
+			"logo": "/images/icons/python-original.svg",
+			"name": "python",
+			"svgr": "Python"
+		},
+		{
+			"link": "https://www.linux.org/",
+			"logo": "/images/icons/linux-original.svg",
+			"name": "linux",
+			"svgr": "Linux"
+		}
+	],
+	"topMainPage": {
+		"blurbsArray": [
+			{
+				"description": "Brzdí váš web růst vašeho podnikání? Náš komplexní audit výkonnosti důkladně analyzuje vaši technickou infrastrukturu, uživatelskou zkušenost a konverzní potenciál. Poskytneme vám podrobnou zprávu s klíčovými vylepšeními, která mohou dramaticky zvýšit váš online výkon.",
+				"title": "Revolucionizujte svou digitální přítomnost hned teď!"
+			},
+			{
+				"description": "Webové stránky vyžadují neustálou péči, aby zůstaly bezpečné, funkční a konkurenceschopné. Naše komplexní balíčky údržby nabízejí proaktivní monitorování, okamžité řešení problémů a průběžné technologické aktualizace.",
+				"title": "Odemkněte plný potenciál svého webu"
+			},
+			{
+				"description": "Přestaňte se spokojovat s obecnými šablonami. Naše služby vývoje webu na míru vytvářejí plně přizpůsobená digitální prostředí, která dokonale odpovídají jedinečné identitě vaší značky a vašim obchodním cílům. Proměníme váš koncept ve výkonné, responzivní a moderní webové řešení.",
+				"title": "Postavte si svůj vysněný projekt ještě dnes"
+			},
+			{
+				"description": "Rychlost není jen funkce – je to konkurenční výhoda. Naše služba optimalizace výkonu zajišťuje extrémně rychlé načítání vašeho webu, což přináší výjimečnou uživatelskou zkušenost, která udrží návštěvníky a efektivněji je konvertuje.",
+				"title": "Zrychlete potenciál svého webu"
+			},
+			{
+				"description": "Technologie se vyvíjejí rychle. Naše specializované migrační služby vám pomohou plynule přejít na moderní, efektivní webové technologie bez narušení vašich stávajících operací. Zajišťujeme hladký a řízený upgrade s minimem rizik.",
+				"title": "Modernizujte svou digitální infrastrukturu"
+			},
+			{
+				"description": "Webové stránky vyžadují neustálou péči, aby zůstaly bezpečné, funkční a konkurenceschopné. Naše komplexní balíčky údržby nabízejí proaktivní monitorování, okamžité řešení problémů a průběžné technologické aktualizace.",
+				"title": "Průběžná péče o vaše digitální aktiva"
+			}
+		],
+		"p1": "Už vás nebaví software, který vás ve vašem podnikání brzdí?",
+		"p2": "Většina podnikového softwaru je buď příliš rigidní, nebo příliš složitá. Specializuji se na vývoj vlastních webových aplikací – jako jsou CRM systémy, sledování projektů a datové přehledy – které přesně odpovídají tomu, jak vaše firma skutečně funguje. Pokud potřebujete nástroj, který řeší konkrétní problém bez zbytečných funkcí, pojďme probrat, čeho chcete dosáhnout."
+	}
+}

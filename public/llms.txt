@@ -1,0 +1,42 @@
+# Daniel Freire — Web Developer
+
+> Daniel Freire builds high-performance web applications, AI-powered solutions, and custom business software from Portugal, serving clients globally.
+
+## Who Daniel Freire Is
+
+Daniel is a web developer who came to the field through marketing. Before writing code, he analyzed market data, deciphered user behavior, and mastered SEO and SEM. That background shapes every project he takes on.
+
+He understands what makes users stay, what makes them convert, and what makes them leave. A half-second delay isn't a technical metric to him — it's a decision a user makes to abandon your site.
+
+## What He Builds
+
+**Web Development.** High-performance websites and applications. Responsive, accessible, and optimized for Core Web Vitals from the first line of code.
+
+**AI Solution Implementation.** LLM-powered applications, AI agents, intelligent chatbots, and semantic search systems. Practical AI that delivers measurable business outcomes.
+
+**Business Custom Software.** Tailored CRMs, dashboards, internal tools, and workflow automation. Software that fits how your business actually operates.
+
+**SEO & Technical Consulting.** Data-backed audits, competitor analysis, Core Web Vitals optimization, and analytics setup. He doesn't sell SEO magic — he delivers rigorous analysis and transparent recommendations.
+
+## Why Daniel Freire
+
+Most developers build for the device. Daniel builds for the human on the other side, and for the business objective that makes the project worthwhile. He translates business needs into technical requirements from lived experience — he's been the person asking for the data, and now he's the person building the systems that provide it.
+
+Every project is approached as if it were his own. The technology is a means to an end; the real craft is choosing the right tool and wielding it with the wisdom of knowing what the job truly is.
+
+## Pages
+
+- **Home.** Landing page with carousel, tech stack showcase, services overview, and call-to-action.
+- **About.** Daniel's story — from marketing analyst to full-stack developer.
+- **Services.** Four service lines with detailed feature breakdowns. Each links to an in-depth detail page.
+- **Portfolio.** Projects and client websites with filtering, live demos, and source links.
+- **Contact.** Contact form with Cloudflare Turnstile spam protection. Messages deliver via Resend.
+- **Privacy Policy.** GDPR-compliant privacy practices with granular consent.
+- **404.** Catch-all not-found page with navigation back to home.
+
+## Contact
+
+- **Email:** daniel@daniel-freire.com
+- **GitHub:** github.com/danielfreire-dev
+- **LinkedIn:** linkedin.com/in/danielfreire-swe
+- **Website:** daniel-freire.com

@@ -1,81 +1,128 @@
+/** Props for rendering a single technology card in the tech stack section. */
 export interface TechCardProps {
+	/** Mapping of tech names to their display values. */
 	techstackMap: Record<string, string>;
+	/** The technology name identifier. */
 	tech: string;
+	/** URL or path to the technology logo image. */
 	logo: string;
+	/** External link to the technology's official site. */
 	link: string;
+	/** Alt text for the logo image. */
 	alt: string;
 }
 
-// userLanguage Types
-export type UserLanguageType = "pt" | "en" | "dk" | "pl" | "de" | "cz";
+/** Supported locale codes for internationalization. */
+export type UserLanguageType = "pt" | "en" | "da" | "pl" | "de" | "cs";
+
+/** Props for the sidenav component, providing language selection controls. */
 export interface SidenavProps {
+	/** The currently active user language/locale. */
 	userLanguage: UserLanguageType;
+	/** Callback invoked when the user selects a different language. */
 	onLanguageChange: (lang: UserLanguageType) => void;
 }
 
-// data JSON types
+/** A single navigation link entry in the sidenav. */
 interface SidenavLinks {
+	/** Display name of the link. */
 	name: string;
+	/** Route path the link points to. */
 	link: string;
 }
 
+/** Footer content displayed at the bottom of the sidenav. */
 interface SidenavFooter {
+	/** Privacy policy text or link. */
 	privacy: string;
+	/** Rights/reserved text. */
 	rights: string;
+	/** Short blurb or tagline. */
 	blurb: string;
 }
 
+/** Data structure for the sidenav section. */
 interface SidenavData {
+	/** Array of navigation links. */
 	links: SidenavLinks[];
+	/** Footer content. */
 	footer: SidenavFooter;
 }
 
+/** Call-to-action section data. */
 interface CTA {
+	/** Title text for the CTA section. */
 	title: string;
+	/** Array of button label options (one is randomly selected). */
 	button: string[];
 }
 
+/** Home page section data. */
 interface Home {
+	/** First carousel image identifier. */
 	carousel1: string;
+	/** Second carousel image identifier. */
 	carousel2: string;
+	/** Third carousel image identifier. */
 	carousel3: string;
+	/** Tech stack section heading. */
 	techstack: string;
+	/** Trending section heading. */
 	trending: string;
 }
 
+/** Root data structure for a single locale's content. */
 interface Data {
 	sidenav: SidenavData;
 	cta: CTA;
 	home: Home;
 }
 
+/** Map of locale codes to their localized data objects. */
 export type LocalizedData = Record<string, Data>;
 
-// App Context
+/** Application-wide context type providing language state to the component tree. */
 export interface AppContextType {
+	/** The currently selected user language. */
 	userLanguage: UserLanguageType;
+	/** Setter to update the active language across the app. */
 	setUserLanguage: (language: UserLanguageType) => void;
 }
 
-// Carousel DS
+/** A single slide in the carousel. */
 export interface Slide {
+	/** Text content displayed on the slide. */
 	carouselTxt: string;
+	/** Alt text for the slide image. */
 	carouselAlt: string;
+	/** Image source URL for the slide. */
 	carouselImg: string;
 }
 
+/** Props for the carousel component. */
 export interface CarouselProps {
+	/** Array of slides to render. */
 	slides: Slide[];
 }
 
+/** A single item in the carousel with full metadata. */
 export interface CarouselItem {
+	/** Unique identifier for the item. */
 	id: number;
+	/** Title displayed on the slide. */
 	title: string;
+	/** Description text for the slide. */
 	description: string;
+	/** Background image URL. */
 	imageUrl: string;
+	/** Alt text for the image. */
 	alt: string;
 }
 
+/**
+ * Complete shape of the i18n message JSON files.
+ * Each property maps to a namespace in the translation files.
+ */
 export interface Dictionary {
 	about: {
 		image: string;
@@ -146,6 +193,8 @@ export interface Dictionary {
 			src: string;
 			summary: string;
 			title: string;
+			github: string;
+			demo: string;
 		}[];
 		"projects-title": string;
 		websites: {
@@ -153,6 +202,8 @@ export interface Dictionary {
 			src: string;
 			summary: string;
 			title: string;
+			github: string;
+			demo: string;
 		}[];
 		"websites-title": string;
 	};
@@ -187,9 +238,12 @@ export interface Dictionary {
 		logo: string;
 		name: string;
 	}[];
+	services: Service[];
 }
 
+/** A navigation link with a typed route path and display name. */
 export interface NavLink {
+	/** The route path — restricted to known application routes. */
 	link:
 		| "/"
 		| "/about"
@@ -203,5 +257,24 @@ export interface NavLink {
 		| "/robots.txt"
 		| "/404"
 		| "/prices";
+	/** Display name for the navigation link. */
 	name: string;
+}
+
+/** A service offering displayed on the services section and detail pages. */
+export interface Service {
+	/** URL-friendly identifier for routing to the detail page (localized per locale). */
+	slug: string;
+	/** URL or path to the service icon (used on listing cards). */
+	icon: string;
+	/** URL or path to a larger icon variant for the detail page hero. */
+	iconLarge?: string;
+	/** Title of the service. */
+	title: string;
+	/** Short description text for the service (used on listing cards). */
+	text: string;
+	/** Detailed multi-paragraph description for the service detail page. */
+	longDescription: string;
+	/** Feature / benefit bullet points for the service detail page. */
+	features: string[];
 }

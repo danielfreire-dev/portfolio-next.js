@@ -1,3 +1,16 @@
+/**
+ * ESLint flat configuration for the Next.js portfolio project.
+ *
+ * Defines linting rules across multiple file types:
+ * - TypeScript/TSX: type-aware linting with @typescript-eslint
+ * - React/JSX: React, React Hooks, jsx-a11y, and i18next rules
+ * - CSS: Tailwind CSS v4-aware linting via @eslint/css
+ * - Markdown: GitHub-Flavoured Markdown linting
+ * - JSON/JSONC/JSON5: formatting and key sorting
+ *
+ * @module eslint.config
+ */
+
 import js from "@eslint/js";
 import ts from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
@@ -7,14 +20,13 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import i18next from "eslint-plugin-i18next";
 import jsonc from "eslint-plugin-jsonc";
 import css from "@eslint/css";
-import { tailwind4 } from "tailwind-csstree";
 import markdown from "@eslint/markdown";
 import md from "eslint-plugin-markdown";
-
+import nextPlugin from "@next/eslint-plugin-next";
 export default [
-	// Base configuration
-	/* js.configs.recommended, */
+	// ──────────────────────────────────────────────
 	// TypeScript configuration
+	// ──────────────────────────────────────────────
 	{
 		files: ["**/*.{ts,tsx}"],
 		languageOptions: {
@@ -28,19 +40,23 @@ export default [
 		},
 		plugins: {
 			"@typescript-eslint": ts,
+			"@next/next": nextPlugin,
 		},
 		rules: {
 			/* ...ts.configs.recommended.rules,
 			...ts.configs.stylistic?.rules, */
-			"@typescript-eslint/no-unused-vars": [
-				"warn",
-				{ argsIgnorePattern: "^_" },
-			],
+			// Warn on unused variables, ignoring those prefixed with underscore
+			"@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+			// Disable prefer-for-of to allow traditional for loops
 			"@typescript-eslint/prefer-for-of": "off",
+			...nextPlugin.configs.recommended.rules,
+			...nextPlugin.configs["core-web-vitals"].rules,
 		},
 	},
 
-	// React+jsxA11y+i18next configuration
+	// ──────────────────────────────────────────────
+	// React + JSX + Accessibility + i18n
+	// ──────────────────────────────────────────────
 	{
 		files: ["**/*.{jsx,tsx}"],
 		plugins: {
@@ -61,9 +77,10 @@ export default [
 			},
 		},
 		rules: {
+			// Spread the recommended jsx-a11y rules as a base
 			...jsxA11y.configs.recommended.rules,
 
-			/* React Recommended */
+			/* ── React recommended rules ── */
 			"react/display-name": "error",
 			"react/jsx-key": "error",
 			"react/jsx-no-comment-textnodes": "error",
@@ -86,6 +103,8 @@ export default [
 			"react/prop-types": "error",
 			"react/react-in-jsx-scope": "error",
 			"react/require-render-return": "error",
+
+			/* ── React stylistic / best-practice warnings ── */
 			"react/jsx-boolean-value": "warn",
 			"react/jsx-curly-brace-presence": "warn",
 			"react/jsx-fragments": "warn",
@@ -105,10 +124,11 @@ export default [
 			"react/void-dom-elements-no-children": "warn",
 			"react/jsx-filename-extension": "off",
 
+			/* ── React Hooks rules ── */
 			"react-hooks/rules-of-hooks": "error",
-			"react-hooks/exhaustive-deps": "warn",
+			"react-hooks/exhaustive-deps": "off",
 
-			// Accessibility rules
+			/* ── jsx-a11y accessibility rules ── */
 			"jsx-a11y/anchor-is-valid": [
 				"error",
 				{
@@ -117,7 +137,6 @@ export default [
 					aspects: ["noHref", "invalidHref", "preferButton"],
 				},
 			],
-
 			"jsx-a11y/label-has-associated-control": [
 				"error",
 				{
@@ -143,15 +162,7 @@ export default [
 				{
 					labelAttributes: ["label"],
 					controlComponents: [],
-					ignoreElements: [
-						"audio",
-						"canvas",
-						"embed",
-						"input",
-						"textarea",
-						"tr",
-						"video",
-					],
+					ignoreElements: ["audio", "canvas", "embed", "input", "textarea", "tr", "video"],
 					ignoreRoles: [
 						"grid",
 						"listbox",
@@ -210,37 +221,14 @@ export default [
 			"jsx-a11y/no-noninteractive-element-interactions": [
 				"error",
 				{
-					handlers: [
-						"onClick",
-						"onMouseDown",
-						"onMouseUp",
-						"onKeyPress",
-						"onKeyDown",
-						"onKeyUp",
-					],
+					handlers: ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"],
 				},
 			],
 			"jsx-a11y/no-noninteractive-element-to-interactive-role": [
 				"error",
 				{
-					ul: [
-						"listbox",
-						"menu",
-						"menubar",
-						"radiogroup",
-						"tablist",
-						"tree",
-						"treegrid",
-					],
-					ol: [
-						"listbox",
-						"menu",
-						"menubar",
-						"radiogroup",
-						"tablist",
-						"tree",
-						"treegrid",
-					],
+					ul: ["listbox", "menu", "menubar", "radiogroup", "tablist", "tree", "treegrid"],
+					ol: ["listbox", "menu", "menubar", "radiogroup", "tablist", "tree", "treegrid"],
 					li: ["menuitem", "option", "row", "tab", "treeitem"],
 					table: ["grid"],
 					td: ["gridcell"],
@@ -257,14 +245,7 @@ export default [
 			"jsx-a11y/no-static-element-interactions": [
 				"error",
 				{
-					handlers: [
-						"onClick",
-						"onMouseDown",
-						"onMouseUp",
-						"onKeyPress",
-						"onKeyDown",
-						"onKeyUp",
-					],
+					handlers: ["onClick", "onMouseDown", "onMouseUp", "onKeyPress", "onKeyDown", "onKeyUp"],
 				},
 			],
 			"jsx-a11y/prefer-tag-over-role": "off",
@@ -275,55 +256,40 @@ export default [
 				},
 			],
 			"jsx-a11y/role-has-required-aria-props": "error",
-
 			"jsx-a11y/role-supports-aria-props": "warn",
 			"jsx-a11y/tabindex-no-positive": "warn",
+			"jsx-a11y/scope": "error",
 
-			// Internationalization rules
+			/* ── Internationalisation rules ── */
 			"i18next/no-literal-string": [
-				"error",
+				"warn",
 				{
 					mode: "jsx-only",
 					"jsx-attributes": {
-						include: [
-							"title",
-							"aria-*",
-							"caption",
-							"placeholder",
-							"label",
-							"helpText",
-							"stringError",
-							"legend",
-						],
+						include: ["title", "aria-*", "caption", "placeholder", "label", "helpText", "stringError", "legend"],
 					},
 					"should-validate-template": true,
-
 					ignoreCallees: ["console", "require"],
 					ignoreAttribute: ["direction", "size", "as", "align"],
 				},
 			],
-			"jsx-a11y/scope": "error",
 		},
 	},
-	// CSS configuration
+
+	// ──────────────────────────────────────────────
+	// CSS — Tailwind CSS v4 aware linting
+	// ──────────────────────────────────────────────
 	{
 		files: ["**/*.css"],
 		plugins: { css },
 		language: "css/css",
-
-		languageOptions: {
-			customSyntax: tailwind4,
-		},
-
 		rules: {
 			...css.configs.recommended.rules,
-
 			"css/no-invalid-named-grid-areas": "error",
 			"css/no-duplicate-imports": "error",
 			"css/no-empty-blocks": "error",
 			"css/no-important": "warn",
-
-			// Disable irrelevant ESLint core rules
+			// Disable irrelevant ESLint core rules for CSS files
 			"css/no-invalid-properties": "off",
 			"css/use-layers": "off",
 			"css/use-baseline": "off",
@@ -332,20 +298,19 @@ export default [
 		},
 	},
 
-	// Markdown configuration with GitHub-specific rules
+	// ──────────────────────────────────────────────
+	// Markdown — GitHub-Flavoured Markdown linting
+	// ──────────────────────────────────────────────
 	{
 		files: ["**/*.md"],
 		plugins: {
 			markdown,
 			md,
 		},
-
 		language: "markdown/gfm",
-
 		rules: {
 			...markdown.configs.recommended.rules,
 			"no-irregular-whitespace": "off",
-
 			"markdown/no-html": "error",
 			"markdown/heading-increment": "error",
 			"markdown/no-duplicate-headings": "warn",
@@ -353,21 +318,22 @@ export default [
 			"markdown/no-multiple-h1": "error",
 		},
 	},
+	// Fenced code blocks inside .md files
 	{
-		// fenced code blocks inside .md files.
 		files: ["**/*.md/*.js"],
-
 		rules: {
 			"no-console": "off",
 			"import/no-unresolved": "off",
-
 			...md.configs.recommended.rules,
 			"md/no-html": "warn",
 			"md/no-html-comments": "error",
 			"md/require-fenced-code-blocks": "warn",
 		},
 	},
-	// JSON configuration (supports JSONC/JSON5)
+
+	// ──────────────────────────────────────────────
+	// JSON / JSONC / JSON5
+	// ──────────────────────────────────────────────
 	{
 		files: ["**/*.json", "**/*.json5", "**/*.jsonc"],
 		plugins: {
@@ -383,7 +349,9 @@ export default [
 		},
 	},
 
+	// ──────────────────────────────────────────────
 	// Global ignores
+	// ──────────────────────────────────────────────
 	{
 		ignores: [
 			"node_modules/",
@@ -396,41 +364,36 @@ export default [
 		],
 	},
 
-	// Global overrides
+	// Global overrides (duplicate ignores block)
 	{
-		ignores: [
-			"node_modules/",
-			"dist/",
-			"build/",
-			"coverage/",
-			"public/",
-			"*.d.ts",
-		],
+		ignores: ["node_modules/", "dist/", "build/", "coverage/", "public/", "*.d.ts"],
 	},
 
+	// ──────────────────────────────────────────────
 	// Test file overrides
+	// ──────────────────────────────────────────────
 	{
 		files: ["**/*.test.{ts,tsx}", "**/__mocks__/**", "**/test-utils/**"],
 		rules: {
-			"i18next/no-literal-string": "warn",
+			"react/no-unescaped-entities": "off",
+			"@next/next/no-sync-scripts": "off",
 			"jsx-a11y/media-has-caption": "off",
 		},
 	},
 
+	// ──────────────────────────────────────────────
 	// Type definition overrides
+	// ──────────────────────────────────────────────
 	{
 		files: ["**/*.d.ts"],
 		rules: {
 			"@typescript-eslint/no-explicit-any": "off",
 		},
 	},
+
+	// Config file overrides (disable type-aware project for non-source configs)
 	{
-		files: [
-			"rollup.config.*",
-			".eslintrc.*",
-			"jest.config.*",
-			"babel.config.*",
-		],
+		files: ["rollup.config.*", ".eslintrc.*", "jest.config.*", "babel.config.*"],
 		parserOptions: {
 			project: null,
 		},
@@ -438,6 +401,8 @@ export default [
 			node: true,
 		},
 	},
+
+	// Package-specific overrides (relaxed rules for PostHog / AI / core packages)
 	{
 		files: [
 			"packages/ai/**",

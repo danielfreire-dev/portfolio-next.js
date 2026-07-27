@@ -1,62 +1,132 @@
- 
- 
 "use client";
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import "./ProfileCard.css";
 
+/** Props for the interactive profile card component. */
 interface ProfileCardProps {
+	/** URL for the main avatar image. */
 	avatarUrl: string;
+	/** Optional URL for an icon overlay. */
 	iconUrl?: string;
+	/** Optional URL for a grain/noise texture overlay. */
 	grainUrl?: string;
+	/** Custom CSS gradient for the behind-card background. */
 	behindGradient?: string;
+	/** Custom CSS gradient for the inner card surface. */
 	innerGradient?: string;
+	/** Whether to show the behind-card gradient. */
 	showBehindGradient?: boolean;
+	/** Additional CSS class names. */
 	className?: string;
+	/** Enable pointer-tracking tilt effect. */
 	enableTilt?: boolean;
+	/** Enable device-orientation tilt on mobile. */
 	enableMobileTilt?: boolean;
+	/** Sensitivity multiplier for mobile tilt. */
 	mobileTiltSensitivity?: number;
+	/** URL for the mini avatar shown in the user-info section. */
 	miniAvatarUrl?: string;
+	/** Display name. */
 	name?: string;
+	/** Job title or tagline. */
 	title?: string;
+	/** Social handle (displayed with @ prefix). */
 	handle?: string;
+	/** Status text (e.g. "Online"). */
 	status?: string;
+	/** Label for the contact button. */
 	contactText?: string;
+	/** Whether to show the user-info overlay. */
 	showUserInfo?: boolean;
+	/** Callback when the contact button is clicked. */
 	onContactClick?: () => void;
 }
 
+/** Default behind-card gradient used when no custom gradient is provided. */
 const DEFAULT_BEHIND_GRADIENT =
 	"radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y),hsla(266,100%,90%,var(--card-opacity)) 4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75)) 10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5)) 50%,hsla(266,0%,60%,0) 100%),radial-gradient(35% 52% at 55% 20%,#00ffaac4 0%,#073aff00 100%),radial-gradient(100% 100% at 50% 50%,#00c1ffff 1%,#073aff00 76%),conic-gradient(from 124deg at 50% 50%,#c137ffff 0%,#07c6ffff 40%,#07c6ffff 60%,#c137ffff 100%)";
 
-const DEFAULT_INNER_GRADIENT =
-	"linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)";
+/** Default inner-card gradient. */
+const DEFAULT_INNER_GRADIENT = "linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)";
 
+/** Animation timing constants. */
 const ANIMATION_CONFIG = {
+	/** Duration (ms) for smooth pointer-leave animation. */
 	SMOOTH_DURATION: 600,
+	/** Duration (ms) for the initial entrance animation. */
 	INITIAL_DURATION: 1500,
+	/** Initial X offset (px) from the right edge. */
 	INITIAL_X_OFFSET: 70,
+	/** Initial Y offset (px) from the top. */
 	INITIAL_Y_OFFSET: 60,
+	/** Beta-angle offset for device-orientation tilt. */
 	DEVICE_BETA_OFFSET: 20,
 } as const;
 
-const clamp = (value: number, min = 0, max = 100): number =>
-	Math.min(Math.max(value, min), max);
+/**
+ * Clamps a numeric value between a minimum and maximum bound.
+ *
+ * Prevents the pointer-tracking calculations from producing CSS custom
+ * property values outside the valid 0–100% range, which would cause the
+ * gradient and tilt effects to break visually.
+ *
+ * @param value - The value to clamp.
+ * @param min   - Lower bound (default 0).
+ * @param max   - Upper bound (default 100).
+ * @returns The clamped value.
+ */
+const clamp = (value: number, min = 0, max = 100): number => Math.min(Math.max(value, min), max);
 
-const round = (value: number, precision = 3): number =>
-	parseFloat(value.toFixed(precision));
+/**
+ * Rounds a number to a given decimal precision.
+ *
+ * Used to limit the precision of CSS transform values (e.g., rotation
+ * angles) so the DOM doesn't receive excessively long floating-point
+ * strings that add noise to the computed style without visual benefit.
+ *
+ * @param value     - The number to round.
+ * @param precision - Number of decimal places (default 3).
+ * @returns The rounded number.
+ */
+const round = (value: number, precision = 3): number => parseFloat(value.toFixed(precision));
 
-const adjust = (
-	value: number,
-	fromMin: number,
-	fromMax: number,
-	toMin: number,
-	toMax: number,
-): number =>
+/**
+ * Linearly maps a value from one numeric range to another.
+ *
+ * Converts pointer coordinates or device-orientation angles into percentage
+ * values that CSS custom properties can consume directly. The source and
+ * target ranges are fully parameterised so the same function handles both
+ * X and Y axis remapping without duplication.
+ *
+ * @param value   - The value in the source range.
+ * @param fromMin - Lower bound of the source range.
+ * @param fromMax - Upper bound of the source range.
+ * @param toMin   - Lower bound of the target range.
+ * @param toMax   - Upper bound of the target range.
+ * @returns The remapped value, rounded to 3 decimal places.
+ */
+const adjust = (value: number, fromMin: number, fromMax: number, toMin: number, toMax: number): number =>
 	round(toMin + ((toMax - toMin) * (value - fromMin)) / (fromMax - fromMin));
 
-const easeInOutCubic = (x: number): number =>
-	x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+/**
+ * Cubic ease-in-out interpolation.
+ *
+ * Produces a smooth acceleration-then-deceleration curve used by the
+ * pointer-leave animation so the card glides back to its resting position
+ * instead of snapping abruptly.
+ *
+ * @param x - Progress value between 0 and 1.
+ * @returns The eased progress value.
+ */
+const easeInOutCubic = (x: number): number => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 
+/**
+ * Interactive profile card with parallax tilt effect.
+ *
+ * Tracks pointer position to apply CSS custom properties for a 3D tilt
+ * effect. Supports desktop (pointer) and mobile (device-orientation)
+ * interaction modes. Renders avatar, user info, and a contact button.
+ */
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 	avatarUrl = "<Placeholder for avatar URL>",
 	iconUrl = "<Placeholder for icon URL>",
@@ -85,12 +155,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
 		let rafId: number | null = null;
 
-		const updateCardTransform = (
-			offsetX: number,
-			offsetY: number,
-			card: HTMLElement,
-			wrap: HTMLElement,
-		) => {
+		const updateCardTransform = (offsetX: number, offsetY: number, card: HTMLElement, wrap: HTMLElement) => {
 			const width = card.clientWidth;
 			const height = card.clientHeight;
 
@@ -105,11 +170,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 				"--pointer-y": `${percentY}%`,
 				"--background-x": `${adjust(percentX, 0, 100, 35, 65)}%`,
 				"--background-y": `${adjust(percentY, 0, 100, 35, 65)}%`,
-				"--pointer-from-center": `${clamp(
-					Math.hypot(percentY - 50, percentX - 50) / 50,
-					0,
-					1,
-				)}`,
+				"--pointer-from-center": `${clamp(Math.hypot(percentY - 50, percentX - 50) / 50, 0, 1)}`,
 				"--pointer-from-top": `${percentY / 100}`,
 				"--pointer-from-left": `${percentX / 100}`,
 				"--rotate-x": `${round(-(centerX / 5))}deg`,
@@ -170,12 +231,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 			if (!card || !wrap || !animationHandlers) return;
 
 			const rect = card.getBoundingClientRect();
-			animationHandlers.updateCardTransform(
-				event.clientX - rect.left,
-				event.clientY - rect.top,
-				card,
-				wrap,
-			);
+			animationHandlers.updateCardTransform(event.clientX - rect.left, event.clientY - rect.top, card, wrap);
 		},
 		[animationHandlers],
 	);
@@ -223,8 +279,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
 			animationHandlers.updateCardTransform(
 				card.clientHeight / 2 + gamma * mobileTiltSensitivity,
-				card.clientWidth / 2 +
-					(beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
+				card.clientWidth / 2 + (beta - ANIMATION_CONFIG.DEVICE_BETA_OFFSET) * mobileTiltSensitivity,
 				card,
 				wrap,
 			);
@@ -247,18 +302,12 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 
 		const handleClick = () => {
 			if (!enableMobileTilt || location.protocol !== "https:") return;
-			if (
-				typeof (window.DeviceMotionEvent as any).requestPermission ===
-				"function"
-			) {
+			if (typeof (window.DeviceMotionEvent as any).requestPermission === "function") {
 				(window.DeviceMotionEvent as any)
 					.requestPermission()
 					.then((state: string) => {
 						if (state === "granted") {
-							window.addEventListener(
-								"deviceorientation",
-								deviceOrientationHandler,
-							);
+							window.addEventListener("deviceorientation", deviceOrientationHandler);
 						}
 					})
 					.catch((err: any) => console.error(err));
@@ -276,13 +325,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 		const initialY = ANIMATION_CONFIG.INITIAL_Y_OFFSET;
 
 		animationHandlers.updateCardTransform(initialX, initialY, card, wrap);
-		animationHandlers.createSmoothAnimation(
-			ANIMATION_CONFIG.INITIAL_DURATION,
-			initialX,
-			initialY,
-			card,
-			wrap,
-		);
+		animationHandlers.createSmoothAnimation(ANIMATION_CONFIG.INITIAL_DURATION, initialX, initialY, card, wrap);
 
 		return () => {
 			card.removeEventListener("pointerenter", pointerEnterHandler);
@@ -307,11 +350,9 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 			({
 				"--icon": iconUrl ? `url(${iconUrl})` : "none",
 				"--grain": grainUrl ? `url(${grainUrl})` : "none",
-				"--behind-gradient": showBehindGradient
-					? behindGradient ?? DEFAULT_BEHIND_GRADIENT
-					: "none",
+				"--behind-gradient": showBehindGradient ? (behindGradient ?? DEFAULT_BEHIND_GRADIENT) : "none",
 				"--inner-gradient": innerGradient ?? DEFAULT_INNER_GRADIENT,
-			} as React.CSSProperties),
+			}) as React.CSSProperties,
 		[iconUrl, grainUrl, showBehindGradient, behindGradient, innerGradient],
 	);
 
@@ -323,9 +364,10 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 		<div
 			ref={wrapRef}
 			className={`pc-card-wrapper ${className}`.trim()}
-			style={cardStyle}
-		>
-			<section ref={cardRef} className="pc-card">
+			style={cardStyle}>
+			<section
+				ref={cardRef}
+				className="pc-card">
 				<div className="pc-inside">
 					<div className="pc-shine" />
 					<div className="pc-glare" />
@@ -365,8 +407,7 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
 									onClick={handleContactClick}
 									style={{ pointerEvents: "auto" }}
 									type="button"
-									aria-label={`Contact ${name || "user"}`}
-								>
+									aria-label={`Contact ${name || "user"}`}>
 									{contactText}
 								</button>
 							</div>

@@ -1,12 +1,13 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
+		"imageAlt": "oil painting of Daniel",
 		"paragraph1": "In den letzten zwei Jahren habe ich Dinge im Web gebaut. Aber meine Perspektive darauf, was gebaut werden sollte und warum, wurde lange vor meiner ersten Codezeile geprägt.",
 		"paragraph2": "Ich bin über das Marketing zu diesem Feld gekommen, aber nicht von der Seite, die Sie sich vielleicht vorstellen. Meine Welt drehte sich weniger um Kampagnen und mehr um Muster: die Analyse von Marktdaten, die Entschlüsselung von Nutzerverhalten und das Verständnis der genauen Mechanismen, wie Menschen ein Produkt online finden und nutzen. SEO und SEM sind im Kern nichts anderes als angewandte Psychologie und Problemlösung. Man lernt, auf das zu hören, was die Daten schreien, und noch wichtiger, auf das, was sie flüstern.",
 		"paragraph3": "Das ist der Hintergrund, den ich in jedes Entwicklungsprojekt einbringe. Die meisten Entwickler können eleganten Code schreiben; mein Fokus liegt darauf, elegante Lösungen zu bauen. Das ist ein entscheidender Unterschied.",
-		"paragraph4": "Wenn ich eine Anwendung mit React oder Next.js architekturiere, denke ich nicht nur an State-Management oder Komponentenstruktur. Ich denke an die Reise des Nutzers, die ihn dorthin geführt hat. Ich berücksichtige das semantische Markup, das unserem Inhalte eine Bedeutung jenseits des Bildschirms verleiht. Ich baue mit einem angeborenen Verständnis für Performance, weil ich aus erster Hand weiß, dass eine Verzögerung von nur einer halben Sekunde eine Entscheidung des Nutzers ist, die Seite zu verlassen.",
+		"paragraph4": "Wenn ich eine Anwendung mit React oder Next.js architekturiere, denke ich nicht nur an State-Management oder Komponentenstruktur. Ich denke an die Reise des Nutzers, die ihn dorthin geführt hat. Ich berücksichtige das semantische Markup, das unserem Inhalte eine Bedeutung jenseits des Bildschirms verleiht. Ich baue leistungsstarke Webanwendungen mit einem angeborenen Verständnis für Performance, weil ich aus erster Hand weiß, dass eine Verzögerung von nur einer halben Sekunde eine Entscheidung des Nutzers ist, die Seite zu verlassen.",
 		"paragraph5": "Hier liegt der Fehler, den viele talentierte Entwickler machen: Sie bauen für das Gerät. Sie bauen für die Spezifikation. Aber sie vergessen, für den Menschen auf der anderen Seite und für das Geschäftsziel zu bauen, das das Projekt überhaupt lohnenswert macht. Meine Erfahrung erlaubt es mir, an dieser Schnittstelle zu sitzen. Ich kann ein Geschäftsbedürfnis in eine technische Anforderung übersetzen, nicht als abstraktes Konzept, sondern als gelebte Erfahrung. Ich war die Person, die nach den Daten fragt, und jetzt bin die Person, die die Systeme baut, die sie liefern.",
-		"paragraph6": "Egal ob ein elegantes Frontend, ein robustes Django-Admin oder eine Full-Stack-Node.js-Anwendung – die Frage, mit der ich immer beginne, lautet: \"Was lösen wir eigentlich?\" Die Technologie ist ein Mittel zum Zweck. Die wahre Kunst liegt darin, das richtige Werkzeug für die Aufgabe zu wählen und es mit der Weisheit einzusetzen, zu wissen, was diese Aufgabe wirklich ist.",
+		"paragraph6": "Egal ob eine KI-gestützte Webanwendung, ein elegantes Frontend, ein Django-Admin oder eine Full-Stack-Node.js-Anwendung – die Frage, mit der ich immer beginne, lautet: \"Was lösen wir eigentlich?\" Die Technologie ist ein Mittel zum Zweck. Die wahre Kunst liegt darin, das richtige Werkzeug für die Aufgabe zu wählen und es mit der Weisheit einzusetzen, zu wissen, was diese Aufgabe wirklich ist.",
 		"paragraph7": "Ich baue Dinge nicht nur richtig. Ich baue die richtigen Dinge.",
 		"title1": "Bauen für den Menschen hinter dem Bildschirm"
 	},
@@ -75,11 +76,22 @@
 	"contact": {
 		"btn": "Nachricht senden",
 		"email": "E-Mail",
+		"errors": {
+			"sendFailed": "Failed to send message. Please try again.",
+			"sendPartial": "Failed to send confirmation. Your message was received.",
+			"serverConfig": "Server configuration error. Please try again later.",
+			"serverError": "Server error. Please try again later.",
+			"turnstileExpired": "Security check expired. Please verify again.",
+			"turnstileFailed": "Security check failed. Please try again.",
+			"turnstileNotVerified": "Please verify you are not a robot",
+			"turnstileRequired": "Complete the security check above to enable the submit button."
+		},
 		"farewell": {
 			"text": "Ich schätze Ihr Vertrauen. Sie können eine Antwort innerhalb der nächsten Werktage erwarten.",
 			"title": "danke"
 		},
 		"firstName": "Vorname",
+		"formAriaLabel": "Contact form",
 		"label": "Ich habe gelesen und stimme zu mit ",
 		"lastName": "Nachname",
 		"message": "Nachricht",
@@ -99,11 +111,13 @@
 		"privacyPolicyUrlAriaLabel": "Datenschutzerklärung",
 		"privacyPolicyUrlTitle": "Datenschutzerklärung",
 		"required": "erforderlich",
+		"requiredIndicator": "required",
+		"sending": "sende…",
 		"title": "Kontakt aufnehmen"
 	},
 	"cookies": {
 		"buttonText": "Alle akzeptieren",
-		"declineButtonText": "Alle ablehnen",
+		"declineButtonText": "Nur notwendige akzeptieren",
 		"manageAdvertSubtitle": "Personalisieren Sie Werbung und messen Sie deren Leistung",
 		"manageAdvertTitle": "Werbung",
 		"manageAnalyticsSubtitle": "Helfen Sie uns zu verstehen, wie Besucher mit unserer Website interagieren",
@@ -180,27 +194,32 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
+		"carouselLabel": "Portfolio carousel",
+		"carouselSlidesLabel": "Carousel slides",
 		"leftarrow": {
 			"alt": "Pfeil links",
+			"label": "Previous slide",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "Pfeil rechts",
+			"label": "Next slide",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
 	"localeSwitcher": {
-		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} dk {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cz {🇨🇿 Český} other {Unknown}}",
-		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} dk {🇩🇰} pl {🇵🇱} de {🇩🇪} cz {🇨🇿} other {Unknown}}"
+		"locale": "{locale, select, pt {🇵🇹 Português} en {🇺🇸 English} da {🇩🇰 Dansk} pl {🇵🇱 Polski} de {🇩🇪 Deutsch} cs {🇨🇿 Český} other {Unknown}}",
+		"localeMobile": "{locale, select, pt {🇵🇹} en {🇺🇸} da {🇩🇰} pl {🇵🇱} de {🇩🇪} cs {🇨🇿} other {Unknown}}"
 	},
 	"metadata": {
 		"description": {
-			"about": "Erfahren Sie mehr über Daniel",
-			"contact": "Dies ist der beste Ort, um Daniel zu kontaktieren",
-			"home": "Daniels Vorstellung",
+			"about": "Erfahren Sie mehr über Daniel Freire — einen Webentwickler spezialisiert auf KI-gestützte Anwendungen, LLM-Integration und leistungsstarke Web-Lösungen.",
+			"contact": "Kontaktieren Sie Daniel Freire für Webentwicklung, KI-Lösungen und technische Beratung. Schnelle und zuverlässige Kommunikation garantiert.",
+			"home": "Daniel Freire — Webentwickler für KI-Anwendungen, maßgeschneiderte Software und leistungsstarke Websites. Aus Portugal, weltweit tätig.",
 			"impressum": "",
-			"portfolio": "Hier wird Daniel seine Lieblingsarbeiten veröffentlichen",
-			"privacyPolicy": "Erfahren Sie mehr über Ihre Rechte."
+			"portfolio": "Entdecken Sie Daniel Freires Portfolio an Webentwicklungsprojekten, darunter React-Apps, KI-gestützte Tools und maßgeschneiderte Unternehmenssoftware-Lösungen.",
+			"privacyPolicy": "Erfahren Sie, wie Daniel Freire Ihre personenbezogenen Daten erhebt, verwendet und schützt. Transparente Datenschutzpraktiken in Übereinstimmung mit der DSGVO.",
+			"services": "KI-Webanwendungen, LLM-Integration und leistungsstarke Webentwicklung von Daniel Freire. Maßgeschneiderte Software, KI-Agenten und technische Beratung."
 		},
 		"name": "Daniel Freire",
 		"opengraphImage": "metadata/open-graph.png",
@@ -211,65 +230,86 @@
 			"home": "Startseite | Daniel Freire",
 			"impressum": "Impressum",
 			"portfolio": "Portfolio",
-			"privacyPolicy": "Datenschutzerklärung"
+			"privacyPolicy": "Datenschutzerklärung",
+			"services": "Dienstleistungen"
 		},
 		"twitterImage": "metadata/open-graph.png",
 		"twitterImageAlt": "Daniel Freire"
 	},
 	"portfolio": {
 		"all": "Alle",
-		"cta": ["ansehen", "zum Live-Projekt →"],
+		"cta": [
+			"ansehen",
+			"zum Live-Projekt →"
+		],
+		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
+				"demo": "Live",
+				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
-				"summary": "Quiz-Spiel mit über 4.000 Fragen.",
+				"summary": "Trivia game with 4.000+ questions.",
 				"title": "quizzical"
 			},
 			{
+				"demo": "Live",
+				"github": "https://github.com/danielfreire-dev/PollyGlot",
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.webp",
-				"summary": "Übersetzungs-App mit KI.",
+				"summary": "Translation app with AI.",
 				"title": "pollyGlot"
 			},
 			{
-				"link": "https://danielfreire.pages.dev",
-				"src": "/images/screenshots/oldPortfolio.webp",
-				"summary": "Daniels altes Portfolio.",
-				"title": "altes portfolio"
-			},
-			{
-				"link": "https://danielfreire.pages.dev/Miscellanea/DrumKit/",
+				"demo": "Live",
+				"github": "",
+				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
-				"summary": "Spaßprojekt zur Reproduktion eines Schlagzeugs auf Ihrem PC.",
-				"title": "schlagzeug-app"
+				"summary": "Fun project to reproduce a Drum Kit in your PC.",
+				"title": "drum kit app"
 			},
 			{
+				"demo": "Live",
+				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
-				"summary": "Das beliebteste Würfelspiel der Welt, jetzt in Ihrem Browser.",
+				"summary": "The world's most popular dice game, now in your browser.",
 				"title": "tenzi"
+			},
+			{
+				"demo": "Live",
+				"github": "",
+				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
+				"src": "/images/screenshots/dodgy-daniel.webp",
+				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"title": "dodgy Daniel"
 			}
 		],
-		"projects-title": "Projekte",
+		"projects-title": "Projects",
 		"websites": [
 			{
+				"demo": "Live",
+				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
-				"summary": "MuraRyu ist eine neue Hausverwaltungsfirma in Portugal.",
+				"summary": "MuraRyu is a new Condominium Management company in Portugal.",
 				"title": "muraRyu"
 			},
 			{
+				"demo": "Live",
+				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Galerie-Website zur Präsentation der Werke des berühmten portugiesischen Künstlers Victó.",
-				"title": "victós kunstgalerie"
+				"summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+				"title": "victó's art gallery"
 			},
 			{
+				"demo": "Live",
+				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
-				"summary": "Website, die als Kontaktpunkt für das Architekturkollektiv Insurbia entwickelt wurde.",
+				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -292,7 +332,12 @@
 		"paragraph10": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über etwaige Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.",
 		"paragraph11": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter",
 		"paragraph2": "Wir sammeln persönliche Informationen, die Sie uns freiwillig zur Verfügung stellen, wenn Sie ein Formular auf unserer Website ausfüllen. Die von uns gesammelten persönlichen Informationen umfassen:",
-		"paragraph2li": ["Vorname", "Nachname", "E-Mail-Adresse", "Telefonnummer"],
+		"paragraph2li": [
+			"Vorname",
+			"Nachname",
+			"E-Mail-Adresse",
+			"Telefonnummer"
+		],
 		"paragraph3": "Die von uns gesammelten Informationen werden verwendet, um Sie in Zukunft zu kontaktieren. Wir werden Ihre personenbezogenen Daten nur für diesen spezifischen Zweck verwenden.",
 		"paragraph4": "Wir verarbeiten Ihre personenbezogenen Daten auf der Grundlage Ihrer Einwilligung, die Sie durch das Ausfüllen des Formulars auf unserer Website erteilen.",
 		"paragraph5": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.",
@@ -311,14 +356,81 @@
 		"paragraph9": "Wenn Sie der Ansicht sind, dass wir die Datenschutzgesetze nicht eingehalten haben, haben Sie das Recht, Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.",
 		"title": "Datenschutzerklärung für die Website von Daniel Freire"
 	},
-	"services": {
-		"numberFive": "",
-		"numberFour": "",
-		"numberOne": "",
-		"numberSix": "",
-		"numberThree": "",
-		"numberTwo": ""
-	},
+	"services": [
+		{
+			"features": [
+				"CRM-Systeme, zugeschnitten auf Ihre Vertriebspipeline",
+				"Maßgeschneiderte Analyse-Dashboards und Berichte",
+				"Interne Portale und Teammanagement-Tools",
+				"Workflow-Automatisierung für manuelle Prozesse",
+				"Integration mit bestehenden Drittanbieter-APIs und -Diensten",
+				"Admin-Panels mit granularer Zugriffskontrolle",
+				"MVP-Entwicklung mit schnellen Feedback-Zyklen",
+				"Cloud-native Architektur, bereitgestellt auf AWS"
+			],
+			"icon": "/images/icons/business-processes.svg",
+			"iconLarge": "/images/icons/business-processes.svg",
+			"longDescription": "Jedes Unternehmen hat einzigartige Prozesse, Arbeitsabläufe und Herausforderungen — und die Software, die Sie verwenden, sollte das widerspiegeln. Ich bin spezialisiert auf die Entwicklung maßgeschneiderter Webanwendungen, die sich an die tatsächliche Arbeitsweise Ihres Unternehmens anpassen, anstatt Ihr Team zu zwingen, sich an Standardsoftware anzupassen. Ich liefere mit agilen Methoden, mit Fokus auf MVP und schnellen Feedback-Zyklen, sodass Sie früh Wert sehen und auf Basis echter Nutzung iterieren können.\n\nVon CRM-Systemen, die auf Ihren spezifischen Verkaufszyklus zugeschnitten sind, bis hin zu Dashboards, die genau die Kennzahlen anzeigen, die Sie benötigen — jedes Projekt beginnt mit einer gründlichen Analyse Ihrer Geschäftsprozesse. Das Ergebnis ist ein Werkzeug, das Ihr Team tatsächlich nutzen möchte — weil es für sie gebaut wurde.\n\nMit Technologien wie React, Next.js und PostgreSQL — bereitgestellt auf AWS mit Cloud-nativer Architektur — baue ich modulare, wiederverwendbare Komponenten, die Ihre Lösung robust, skalierbar und mit dem Wachstum Ihres Unternehmens leicht zu warten machen.",
+			"slug": "massgeschneiderte-unternehmenssoftware",
+			"text": "Maßgeschneiderte Webanwendungen — CRMs, Dashboards und interne Tools, gebaut mit modularen Komponenten und agiler Lieferung, passend zu Ihren Geschäftsprozessen.",
+			"title": "Maßgeschneiderte Unternehmenssoftware"
+		},
+		{
+			"features": [
+				"Entwicklung KI-gestützter Webanwendungen",
+				"LLM-Integration mit OpenAI und Open-Source-Modellen",
+				"KI-Agenten-Orchestrierung für komplexe Geschäftsabläufe",
+				"Intelligente Chatbots für Kundensupport und Vertrieb",
+				"Automatisierte Dokumentenverarbeitung und -klassifikation",
+				"Semantische Suche und Wissensentdeckungssysteme",
+				"Geschäftsspezifische KI-Assistenten (RAG)",
+				"Automatische Inhaltsgenerierung und Zusammenfassung",
+				"Prädiktive Analytik und KI-gestützte Dashboards"
+			],
+			"icon": "/images/icons/ai-recommend.svg",
+			"iconLarge": "/images/icons/ai-recommend.svg",
+			"longDescription": "Künstliche Intelligenz hat sich von einem futuristischen Versprechen zu einem echten Wettbewerbsvorteil entwickelt — wenn sie zweckgerichtet eingesetzt wird. Ich baue KI-gestützte Webanwendungen, die Large Language Models (LLMs) auf praktische und messbare Weise in Ihre bestehenden Arbeitsabläufe integrieren, ohne unnötige Komplexität.\n\nOb es ein intelligenter Chatbot ist, der das Support-Ticket-Volumen um 40 % reduziert, eine Empfehlungsmaschine, die den durchschnittlichen Bestellwert erhöht, oder KI-Agenten-Orchestrierung, die komplexe mehrstufige Geschäftsprozesse automatisiert — der Fokus liegt immer auf dem Geschäftsergebnis, nicht auf der Technologie um ihrer selbst willen. Jede Lösung ist mit einer KI-gesteuerten Benutzererfahrung gestaltet, die sich für Ihr Team und Ihre Kunden natürlich und intuitiv anfühlt.\n\nIch arbeite mit APIs wie OpenAI, Open-Source-LLMs, Vektordatenbanken für semantische Suche und RAG-Architekturen (Retrieval-Augmented Generation), um KI-Lösungen zu schaffen, die Ihren einzigartigen Geschäftskontext verstehen.",
+			"slug": "implementierung-von-ki-losungen",
+			"text": "KI-gestützte Webanwendungen und LLM-Integration — Chatbots, KI-Agenten und KI-gesteuerte Benutzererlebnisse, die Ihre Arbeitsabläufe transformieren.",
+			"title": "Implementierung von KI-Lösungen"
+		},
+		{
+			"features": [
+				"Unternehmenswebsites und konversionsstarke Landingpages",
+				"Progressive Web Apps (PWA) mit Offline-Unterstützung",
+				"E-Commerce-Plattformen und Produktkataloge",
+				"Migration und Modernisierung von Legacy-Websites",
+				"Core Web Vitals und technische SEO-Optimierung",
+				"Responsive Design, getestet auf allen Geräten",
+				"Authentifizierungs-, Zahlungs- und Kundenportalsysteme",
+				"Schnelle MVP-Entwicklung zur Marktvalidierung",
+				"Cloud-Bereitstellung auf AWS mit skalierbarer Architektur",
+				"Modulare, wiederverwendbare Komponentenbibliotheken für wartbare Frontend-Logik"
+			],
+			"icon": "/images/icons/dns-services.svg",
+			"iconLarge": "/images/icons/dns-services.svg",
+			"longDescription": "Eine Website ist nicht nur eine digitale Visitenkarte — sie ist Ihr wichtigstes Marketinginstrument. Ich erstelle leistungsstarke Webanwendungen, die sofort laden, auf jedem Gerät funktionieren und Ihre Besucher auf natürliche Weise zu der gewünschten Aktion führen. Mit modularen Komponenten und sauberer Frontend-Logik ist jedes Projekt von Anfang an auf Wartbarkeit ausgelegt.\n\nJedes Projekt wird mit Leistung als Kern gebaut — von der ersten Codezeile an für Core Web Vitals optimiert. Das bedeutet, dass Ihre Seite nicht nur gut aussieht — sie wird von Google in den Suchergebnissen bevorzugt und bietet Ihren Nutzern ein flüssiges Erlebnis. Ich folge agilen Produktlieferungsmethoden, beginnend mit einem MVP für schnelles Feedback und iteriere basierend auf echten Nutzerdaten.\n\nVon konversionsstarken Landingpages bis hin zu voll ausgestatteten Webanwendungen mit Authentifizierung, Zahlungen und Dashboards — bereitgestellt auf AWS mit skalierbarer Cloud-Architektur — ich gehe jedes Projekt an, als wäre es mein eigenes, mit akribischer Liebe zum Detail und absolutem Fokus auf Leistung.",
+			"slug": "webentwicklung",
+			"text": "Leistungsstarke Webanwendungen — schnelle, responsive Websites mit modularen Komponenten, die sofort laden, auf allen Geräten funktionieren und Besucher zu Kunden machen.",
+			"title": "Webentwicklung"
+		},
+		{
+			"features": [
+				"Vollständiges technisches SEO-Audit (Crawling, Indexierung, Architektur)",
+				"Core Web Vitals und Optimierung der Ladegeschwindigkeit",
+				"Wettbewerbsanalyse und strategische Keyword-Recherche",
+				"Content-Strategie und On-Page-Optimierung",
+				"Migrations- und Redesign-Beratung mit SEO-Erhalt",
+				"Analyse-Einrichtung und -Audit (GA4, Search Console)"
+			],
+			"icon": "/images/icons/ibm-watson--machine-learning.svg",
+			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
+			"longDescription": "Eine großartige Website zu haben ist nur die Hälfte der Gleichung — die andere Hälfte besteht darin, sicherzustellen, dass die richtigen Leute sie finden. Mein Hintergrund im digitalen Marketing, kombiniert mit tiefem technischem Wissen, ermöglicht es mir, eine einzigartige Perspektive anzubieten, die über konventionelle SEO-Audits hinausgeht.\n\nJedes Audit beginnt mit Daten: Ich analysiere die technische Architektur Ihrer Website, die Nutzererfahrungssignale (Core Web Vitals), die Inhaltsstruktur und die Wettbewerbspositionierung. Für leistungsstarke Webanwendungen stelle ich sicher, dass jede Millisekunde Ladezeit berücksichtigt wird, denn Geschwindigkeit wirkt sich direkt auf Rankings und Konversionen aus. Das Ergebnis ist ein priorisierter Aktionsplan, der jede technische Empfehlung mit einer konkreten geschäftlichen Auswirkung verknüpft.\n\nIch verkaufe keine magischen SEO-Formeln. Ich biete gründliche Analysen, transparente Empfehlungen und Implementierungen, die die Richtlinien der Suchmaschinen respektieren und gleichzeitig Ihre organische Sichtbarkeit maximieren.",
+			"slug": "seo-technische-beratung",
+			"text": "Datengestützte Audits, leistungsstarke Optimierung und Strategie, damit Ihr Unternehmen gefunden wird und konvertiert.",
+			"title": "SEO & Technische Beratung"
+		}
+	],
 	"sidenav": {
 		"footer": {
 			"blurb": "Gemacht mit 🐞 von",
@@ -326,7 +438,7 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Daniel Freires GitHub",
-					"ariaLAbel": "Daniel Freires GitHub",
+					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
 					"title": "Daniel Freires GitHub"
@@ -334,7 +446,7 @@
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "Daniel Freires LinkedIn",
-					"ariaLAbel": "Daniel Freires LinkedIn",
+					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
 					"title": "Daniel Freires LinkedIn"
@@ -355,10 +467,26 @@
 			"privacyName": "datenschutzerklärung"
 		},
 		"links": [
-			{ "link": "/", "name": "startseite" },
-			{ "link": "/ueber-mich", "name": "über mich" },
-			{ "link": "/portfolio", "name": "portfolio" },
-			{ "link": "/kontakt", "name": "kontakt" }
+			{
+				"link": "/",
+				"name": "startseite"
+			},
+			{
+				"link": "/ueber-mich",
+				"name": "über mich"
+			},
+			{
+				"link": "/portfolio",
+				"name": "portfolio"
+			},
+			{
+				"link": "/dienstleistungen",
+				"name": "dienstleistungen"
+			},
+			{
+				"link": "/kontakt",
+				"name": "kontakt"
+			}
 		],
 		"privacy": "datenschutzerklärung",
 		"rights": "Daniel Freire ® alle Rechte vorbehalten",
@@ -366,6 +494,50 @@
 			"languageSelectAriaLabel": "Sprachauswahlmenü",
 			"languageSelectTitle": "Sprachauswahlmenü"
 		}
+	},
+	"svgTitles": {
+		"Bash": "Bash Shell-Logo",
+		"CSS3": "CSS-Logo",
+		"Cypress": "Cypress Test-Framework-Logo",
+		"Expressjs": "Express.js Web-Framework-Logo",
+		"ExternalLinkSvg": "Externer Link SVG-Symbol",
+		"Git": "Git Versionskontroll-Logo",
+		"GitHubIcon": "GitHub Profil-Link-Symbol",
+		"Github": "GitHub-Logo",
+		"HTML5": "HTML5-Logo",
+		"JavaScript": "JavaScript-Logo",
+		"Jest": "Jest Test-Framework-Logo",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animiertes Mond-zu-Sonne-Übergangssymbol",
+		"LinkedInIcon": "LinkedIn Profil-Link-Symbol",
+		"Linux": "Linux Betriebssystem-Logo",
+		"Moon": "Mond-Symbol für Dark-Mode-Umschalter",
+		"Nextjs": "Next.js Framework-Logo",
+		"Nodejs": "Node.js Runtime-Logo",
+		"PostgreSQL": "PostgreSQL Datenbank-Logo",
+		"Python": "Python Programmiersprachen-Logo",
+		"Reactjs": "React Bibliotheks-Logo",
+		"Redux": "Redux State-Management-Logo",
+		"Selenium": "Selenium WebDriver",
+		"Sun": "Sonnen-Symbol für Light-Mode-Umschalter",
+		"Sun1": "Sonnen-Symbol",
+		"TypeScript": "TypeScript Programmiersprachen-Logo",
+		"Vitejs": "Vite Build-Tool-Logo",
+		"Vitest": "Vitest Test-Framework-Logo",
+		"Webpack": "Webpack Modul-Bundler-Logo",
+		"Zsh": "Zsh Shell-Logo",
+		"alertAnimation": "Animiertes Warndreieck mit Ausrufezeichen",
+		"blocksShuffle": "Animierter Block-Shuffle-Ladespinner",
+		"blocksWave": "Animierter Block-Wellen-Ladespinner",
+		"closeToMenu": "Schließen-zu-Menü-Übergangssymbol",
+		"compass": "Animierter Kompass mit rotierender Richtungsnadel",
+		"computerAnimation": "Animierter Computermonitor mit Tastaturablage",
+		"djangoRocket": "Django-Raketen-Illustration",
+		"externalLink": "Externer Link Symbol",
+		"menuToClose": "Menü-zu-Schließen-Übergangssymbol",
+		"moonToSun": "Animiertes Mond-zu-Sonne-Übergangssymbol",
+		"nextjsTsx": "Next.js Framework-Schriftzug",
+		"opensInNewTab": "opens in new tab",
+		"sunToMoon": "Animiertes Sonne-zu-Mond-Übergangssymbol"
 	},
 	"tech": [
 		{
@@ -471,34 +643,34 @@
 			"svgr": "Linux"
 		}
 	],
-	"topMainPage": [
-		{
-			"description": "Hält Ihre Website das Wachstum Ihres Unternehmens zurück? Unser umfassender Performance-Audit analysiert tiefgehend Ihre technische Infrastruktur, die Nutzererfahrung und das Conversion-Potenzial. Wir liefern einen detaillierten Bericht, der kritische Verbesserungen aufzeigt, die Ihre Online-Leistung dramatisch steigern können.",
-			"title": "Revolutionieren Sie jetzt Ihre digitale Präsenz!"
-		},
-		{
-			"description": "Websites benötigen ständige Pflege, um sicher, funktional und wettbewerbsfähig zu bleiben. Unsere umfassenden Wartungspakete bieten proaktives Monitoring, sofortige Problembehebung und kontinuierliche Technologie-Updates.",
-			"title": "Entfalten Sie das volle Potenzial Ihrer Website"
-		},
-		{
-			"description": "Hören Sie auf, sich mit generischen Vorlagen zufriedenzugeben. Unsere individuellen Webentwicklungsdienste erstellen vollständig maßgeschneiderte digitale Erlebnisse, die perfekt auf die einzigartige Identität Ihrer Marke und Ihre Geschäftsziele abgestimmt sind. Wir verwandeln Ihr Konzept in eine leistungsstarke, responsive und zukunftsweisende Web-Lösung.",
-			"title": "Bauen Sie Ihr Traumprojekt noch heute"
-		},
-		{
-			"description": "Geschwindigkeit ist nicht nur ein Feature – sie ist ein Wettbewerbsvorteil. Unser Performance-Optimierungsservice sorgt dafür, dass Ihre Website extrem schnell lädt und ein außergewöhnliches Nutzererlebnis bietet, das Besucher bindet und effektiver konvertiert.",
-			"title": "Beschleunigen Sie das Potenzial Ihrer Website"
-		},
-		{
-			"description": "Die Technologie entwickelt sich rasant. Unsere spezialisierten Migrationsdienste helfen Ihnen, nahtlos auf moderne, effiziente Webtechnologien umzusteigen, ohne Ihren bestehenden Betrieb zu stören. Wir gewährleisten einen reibungslosen, risikomanagierten Upgrade-Pfad.",
-			"title": "Modernisieren Sie Ihre digitale Infrastruktur"
-		},
-		{
-			"description": "Websites benötigen ständige Pflege, um sicher, funktional und wettbewerbsfähig zu bleiben. Unsere umfassenden Wartungspakete bieten proaktives Monitoring, sofortige Problembehebung und kontinuierliche Technologie-Updates.",
-			"title": "Laufende Pflege für Ihre digitalen Assets"
-		}
-	],
-	"topMainPageBlurb": {
-		"p1": "Sind Sie es leid, Software zu nutzen, die Ihr Unternehmen zurückhält?",
-		"p2": "Die meiste Geschäftssoftware ist entweder zu starr oder zu komplex. Ich spezialisiere mich auf die Entwicklung individueller Webanwendungen – wie CRM-Systeme, Projekt-Tracker und Daten-Dashboards –, die zu der Art und Weise passen, wie Ihr Unternehmen tatsächlich arbeitet. Wenn Sie ein Tool benötigen, das ein spezifisches Problem ohne unnötige Funktionen löst, lassen Sie uns besprechen, was Sie erreichen möchten."
+	"topMainPage": {
+		"blurbsArray": [
+			{
+				"description": "Bremst Ihre Website Ihr Geschäftswachstum aus? Unser umfassender Performance-Audit analysiert tiefgehend Ihre technische Infrastruktur, Benutzererfahrung und Ihr Conversion-Potenzial. Wir liefern Ihnen einen detaillierten Bericht mit entscheidenden Verbesserungen, die Ihre Online-Performance dramatisch steigern können.",
+				"title": "Revolutionieren Sie jetzt Ihre digitale Präsenz!"
+			},
+			{
+				"description": "Websites benötigen ständige Pflege, um sicher, funktional und wettbewerbsfähig zu bleiben. Unsere umfassenden Wartungspakete bieten proaktives Monitoring, sofortige Problemlösung und kontinuierliche technologische Updates.",
+				"title": "Schöpfen Sie das volle Potenzial Ihrer Website aus"
+			},
+			{
+				"description": "Geben Sie sich nicht länger mit generischen Vorlagen zufrieden. Unsere maßgeschneiderten Webentwicklungsdienste schaffen vollständig angepasste digitale Erlebnisse, die perfekt mit der einzigartigen Identität Ihrer Marke und Ihren Geschäftszielen übereinstimmen. Wir verwandeln Ihr Konzept in eine leistungsstarke, responsive und zukunftsweisende Weblösung.",
+				"title": "Verwirklichen Sie noch heute Ihr Traumprojekt"
+			},
+			{
+				"description": "Geschwindigkeit ist nicht nur ein Feature – sie ist ein Wettbewerbsvorteil. Unser Service zur Leistungsoptimierung sorgt für extrem schnelles Laden Ihrer Website und bietet eine außergewöhnliche Benutzererfahrung, die Besucher bindet und effektiver zu Konversionen führt.",
+				"title": "Beschleunigen Sie das Potenzial Ihrer Website"
+			},
+			{
+				"description": "Die Technologie entwickelt sich rasant weiter. Unsere spezialisierten Migrationsdienste helfen Ihnen beim nahtlosen Übergang zu modernen, effizienten Webtechnologien, ohne Ihren laufenden Betrieb zu stören. Wir gewährleisten einen reibungslosen, risikomanagerten Upgrade-Pfad.",
+				"title": "Modernisieren Sie Ihre digitale Infrastruktur"
+			},
+			{
+				"description": "Websites benötigen ständige Pflege, um sicher, funktional und wettbewerbsfähig zu bleiben. Unsere umfassenden Wartungspakete bieten proaktives Monitoring, sofortige Problemlösung und kontinuierliche technologische Updates.",
+				"title": "Laufende Betreuung Ihrer digitalen Assets"
+			}
+		],
+		"p1": "Haben Sie es satt, dass Software Ihr Geschäft ausbremst?",
+		"p2": "Die meisten Geschäftsanwendungen sind entweder zu starr oder zu komplex. Ich spezialisiere mich auf die Entwicklung maßgeschneiderter Webanwendungen – wie CRM-Systeme, Projekt-Tracker und Daten-Dashboards – die genau zu Ihrer tatsächlichen Arbeitsweise passen. Wenn Sie ein Werkzeug benötigen, das ein bestimmtes Problem ohne überflüssige Funktionen löst, sprechen wir darüber, was Sie erreichen möchten."
 	}
 }

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { TransitionLink } from "./Sidenav/TransitionLink";
 import { NavLink } from "../../types";
 
+/** A single slide item in the carousel. */
 interface SliderItem {
 	alt: string;
 	cta: string;
@@ -17,10 +18,12 @@ interface SliderItem {
 	loading: "eager" | "lazy" | undefined;
 }
 
+/** Props for the carousel component. */
 interface SliderProps {
 	items: SliderItem[];
 }
 
+/** Props for an individual carousel item (mirrors SliderItem). */
 interface CarouselItemProps {
 	alt: string;
 	cta: string;
@@ -32,10 +35,14 @@ interface CarouselItemProps {
 	loading: "eager" | "lazy" | undefined;
 }
 
+/**
+ * Image carousel component.
+ *
+ * Displays a horizontal sliding carousel with previous/next navigation.
+ * Supports infinite looping by rotating the item order in state.
+ */
 export default function Slider({ items }: SliderProps) {
-	const [slideOrder, setSlideOrder] = useState<number[]>(
-		Array.from({ length: items.length }, (_, i) => i),
-	);
+	const [slideOrder, setSlideOrder] = useState<number[]>(Array.from({ length: items.length }, (_, i) => i));
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [isPaused, setIsPaused] = useState(false);
 	const [itemVersions, setItemVersions] = useState<Record<string, number>>({});
@@ -83,19 +90,23 @@ export default function Slider({ items }: SliderProps) {
 	return (
 		<section
 			className="slider-container"
+			aria-roledescription="carousel"
+			aria-label={i("carouselLabel")}
 			onMouseEnter={() => setIsPaused(true)}
-			onMouseLeave={() => setIsPaused(false)}
-		>
-			<ul className="slider">
+			onMouseLeave={() => setIsPaused(false)}>
+			<ul
+				className="slider"
+				aria-live="polite"
+				aria-label={i("carouselSlidesLabel")}>
 				{slideOrder.map((itemIndex) => {
 					const itemSlice: CarouselItemProps = items[itemIndex];
 					/* Create unique key with version number */
-					const uniqueKey = `${itemSlice.imageUrl}-${
-						itemVersions[itemSlice.imageUrl] || 0
-					}`;
+					const uniqueKey = `${itemSlice.imageUrl}-${itemVersions[itemSlice.imageUrl] || 0}`;
 
 					return (
-						<li className="item" key={uniqueKey}>
+						<li
+							className="item"
+							key={uniqueKey}>
 							<Image
 								src={itemSlice.imageUrl}
 								alt={itemSlice.alt}
@@ -112,7 +123,9 @@ export default function Slider({ items }: SliderProps) {
 							<div className="content">
 								<h2 className="capitalize">{itemSlice.title}</h2>
 								<p>{itemSlice.description}</p>
-								<TransitionLink href={itemSlice.url} className="size-min">
+								<TransitionLink
+									href={itemSlice.url}
+									className="size-min">
 									<button className="content-btn offset overflow-hidden text-ellipsis whitespace-nowrap hover:cursor-pointer">
 										{itemSlice.cta}
 									</button>
@@ -124,20 +137,28 @@ export default function Slider({ items }: SliderProps) {
 			</ul>
 
 			<div className="nav">
-				<button onClick={goPrev} className="btn prev">
+				<button
+					onClick={goPrev}
+					className="btn prev"
+					aria-label={i("leftarrow.label")}>
 					<Image
 						src={i("leftarrow.src")}
-						alt={i("leftarrow.alt")}
+						alt=""
 						width={24}
 						height={24}
+						aria-hidden="true"
 					/>
 				</button>
-				<button onClick={goNext} className="btn next">
+				<button
+					onClick={goNext}
+					className="btn next"
+					aria-label={i("rightarrow.label")}>
 					<Image
 						src={i("rightarrow.src")}
-						alt={i("rightarrow.alt")}
+						alt=""
 						width={24}
 						height={24}
+						aria-hidden="true"
 					/>
 				</button>
 			</div>

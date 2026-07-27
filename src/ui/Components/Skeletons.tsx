@@ -1,12 +1,25 @@
 /* eslint-disable react/no-multi-comp */
+
+/**
+ * Shimmer animation utility class for skeleton loading states.
+ *
+ * Applies a CSS `before` pseudo-element with a translate + shimmer keyframe
+ * animation that creates a glossy sweep effect across placeholder blocks.
+ * Reused by every skeleton component to maintain visual consistency.
+ */
 const shimmer =
 	"before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent";
 
+/**
+ * Skeleton placeholder for a single card.
+ *
+ * Renders a low-fidelity placeholder matching the card layout dimensions
+ * (icon + title row, content block) so the page doesn't visibly jump when
+ * real content loads in. Uses the shimmer animation to signal loading state.
+ */
 export function CardSkeleton() {
 	return (
-		<div
-			className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}
-		>
+		<div className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm`}>
 			<div className="flex p-4">
 				<div className="h-5 w-5 rounded-md bg-gray-200" />
 				<div className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-sm font-medium" />
@@ -18,6 +31,12 @@ export function CardSkeleton() {
 	);
 }
 
+/**
+ * Skeleton grid of four card placeholders.
+ *
+ * Renders a row of four `CardSkeleton` instances to fill a card-grid layout
+ * while the actual card data is being fetched or suspended.
+ */
 export function CardsSkeleton() {
 	return (
 		<>
@@ -29,6 +48,12 @@ export function CardsSkeleton() {
 	);
 }
 
+/**
+ * Skeleton placeholder for a revenue chart panel.
+ *
+ * Renders placeholder bars (via CSS grid rows) and a legend dot to mirror the
+ * shape of the revenue chart component while data loads.
+ */
 export function RevenueChartSkeleton() {
 	return (
 		<div className={`${shimmer} relative w-full overflow-hidden md:col-span-4`}>
@@ -44,6 +69,12 @@ export function RevenueChartSkeleton() {
 	);
 }
 
+/**
+ * Skeleton placeholder for a single invoice row.
+ *
+ * Mimics the layout of an invoice list item (avatar circle, title, subtitle,
+ * amount) to prevent layout shifts during data fetching.
+ */
 export function InvoiceSkeleton() {
 	return (
 		<div className="flex flex-row items-center justify-between border-b border-gray-100 py-4">
@@ -59,11 +90,15 @@ export function InvoiceSkeleton() {
 	);
 }
 
+/**
+ * Skeleton placeholder for the latest invoices panel.
+ *
+ * Renders a panel header and five `InvoiceSkeleton` rows to fill the
+ * "latest invoices" section while invoice data is being resolved.
+ */
 export function LatestInvoicesSkeleton() {
 	return (
-		<div
-			className={`${shimmer} relative flex w-full flex-col overflow-hidden md:col-span-4`}
-		>
+		<div className={`${shimmer} relative flex w-full flex-col overflow-hidden md:col-span-4`}>
 			<div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
 			<div className="flex grow flex-col justify-between rounded-xl bg-gray-100 p-4">
 				<div className="bg-white px-6">
@@ -82,11 +117,39 @@ export function LatestInvoicesSkeleton() {
 	);
 }
 
-export function ContactFormSkeleton() {
+/**
+ * Skeleton placeholder for the Cloudflare Turnstile widget.
+ *
+ * Renders a shimmer-animated rectangle mimicking the Turnstile checkbox
+ * (checkbox square + label bar + attribution text) so the contact form
+ * doesn't collapse while the Turnstile script loads asynchronously.
+ */
+export function TurnstileSkeleton() {
 	return (
 		<div
-			className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-4 shadow-sm`}
-		>
+			className={`${shimmer} relative overflow-hidden rounded border border-(--surface-hover) bg-(--surface) p-3 mx-auto w-[300px]`}
+			data-testid="turnstile-skeleton">
+			<div className="flex items-center gap-3">
+				<div className="h-6 w-6 rounded-sm bg-(--surface-hover) flex-shrink-0" />
+				<div className="h-4 w-36 rounded-md bg-(--surface-hover)" />
+			</div>
+			<div className="mt-2 flex justify-center">
+				<div className="h-3 w-44 rounded-md bg-(--surface-hover)" />
+			</div>
+		</div>
+	);
+}
+
+/**
+ * Skeleton placeholder for the entire contact form.
+ *
+ * Renders placeholder blocks for all form fields (name, email, phone,
+ * message, privacy checkbox, Turnstile widget, submit button) to prevent
+ * cumulative layout shift while the form hydrates or loads dynamically.
+ */
+export function ContactFormSkeleton() {
+	return (
+		<div className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-4 shadow-sm`}>
 			<div className="name-div flex flex-col lg:flex-row">
 				<section className="flex flex-col lg:mr-4">
 					<div className="h-6 w-24 rounded-md bg-gray-200 mb-2" />
@@ -114,6 +177,7 @@ export function ContactFormSkeleton() {
 			<div className="mt-4">
 				<div className="h-6 w-48 rounded-md bg-gray-200 mb-2" />
 			</div>
+			<TurnstileSkeleton />
 			<section className="flex justify-center mx-auto my-1.5">
 				<div className="h-10 w-24 rounded-md bg-gray-200" />
 			</section>
@@ -121,6 +185,12 @@ export function ContactFormSkeleton() {
 	);
 }
 
+/**
+ * Skeleton placeholder for a single portfolio website card.
+ *
+ * Renders a placeholder image block and text bars matching the dimensions of
+ * the `WebsiteCards` card layout to avoid layout shift during image loading.
+ */
 export function WebsiteCardSkeleton() {
 	return (
 		<div className="max-w-lg last:mr-0 mb-6 p-3 bg-gray-100">
@@ -135,6 +205,13 @@ export function WebsiteCardSkeleton() {
 	);
 }
 
+/**
+ * Skeleton placeholder for the portfolio website cards grid.
+ *
+ * Renders two section headings and six `WebsiteCardSkeleton` instances (three
+ * per section) to fill both the "websites" and "projects" card grids while
+ * portfolio data is being fetched or suspended.
+ */
 export function WebsiteCardsSkeleton() {
 	return (
 		<div className="mx-15 text-center flex flex-wrap flex-col justify-center">
@@ -154,12 +231,17 @@ export function WebsiteCardsSkeleton() {
 	);
 }
 
+/**
+ * Skeleton placeholder for the full dashboard page.
+ *
+ * Renders a composite skeleton comprising a title bar, four `CardSkeleton`
+ * cards, a `RevenueChartSkeleton`, and a `LatestInvoicesSkeleton` to fill
+ * the entire dashboard layout while all data sources are loading.
+ */
 export default function DashboardSkeleton() {
 	return (
 		<>
-			<div
-				className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-gray-100`}
-			/>
+			<div className={`${shimmer} relative mb-4 h-8 w-36 overflow-hidden rounded-md bg-gray-100`} />
 			<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 				<CardSkeleton />
 				<CardSkeleton />
@@ -174,6 +256,13 @@ export default function DashboardSkeleton() {
 	);
 }
 
+/**
+ * Skeleton placeholder for a mobile invoice list item.
+ *
+ * Renders a compact placeholder matching the mobile invoice row layout
+ * (avatar, title, amount, action buttons) to prevent layout shift on
+ * smaller viewports during data fetching.
+ */
 export function InvoicesMobileSkeleton() {
 	return (
 		<div className="mb-2 w-full rounded-md bg-white p-4">

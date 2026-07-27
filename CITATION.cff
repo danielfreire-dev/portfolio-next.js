@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this template, please cite it using these metadata."
+title: "Daniel Freire's Portfolio Template"
+type: template
+authors:
+  - family-names: "Freire"
+    given-names: "Daniel"
+    website: "https://daniel-freire.com"
+url: "https://daniel-freire.com"
+repository-code: "https://github.com/danielfreire-dev/portfolio-next.js"
+license: GNU
+keywords:
+  - template
+  - job-search
+  - portfolio
+  - personal-website

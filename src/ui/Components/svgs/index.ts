@@ -1,3 +1,13 @@
+/**
+ * SVG icon barrel export.
+ *
+ * Aggregates all SVG icon components from individual files into a single
+ * namespace (`SVGs`). Consumers can import from this module and dynamically
+ * resolve icon components by key (e.g., `SVGs[data.svgr]`), which powers the
+ * tech-stack card grid where icons are driven by translation data. This
+ * pattern avoids a long chain of conditional imports in the consumer.
+ */
+
 export { default as Nextjs } from "./nextjs.svg";
 export { default as Reactjs } from "./react.svg";
 export { default as Nodejs } from "./node-js.svg";

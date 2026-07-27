@@ -10,13 +10,15 @@ declare global {
 	}
 }
 
-export default function GoogleAnalytics({
-	GA_MEASUREMENT_ID,
-}: {
-	GA_MEASUREMENT_ID: string;
-}) {
+/**
+ * Google Analytics 4 integration component.
+ *
+ * Injects the GA4 script tag and initialises gtag with consent defaults set
+ * to `denied`. Tracks page views on route changes via the `usePathname` and
+ * `useSearchParams` hooks.
+ */
+export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: { GA_MEASUREMENT_ID: string }) {
 	const pathname = usePathname();
-	// SearchParams is a client side function.
 	const searchParams = useSearchParams();
 
 	useEffect(() => {
@@ -29,14 +31,15 @@ export default function GoogleAnalytics({
 		}
 	}, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
-	// Script is added to the head of the document. To Begin, consent is denied.
 	return (
 		<>
+			{/* GA4 library script loaded asynchronously after page becomes interactive */}
 			<Script
 				strategy="afterInteractive"
 				src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
 			/>
 
+			{/* Initialisation script: sets up dataLayer, consent default (denied), and initial page view */}
 			<Script
 				id="google-analytics"
 				strategy="afterInteractive"

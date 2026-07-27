@@ -1,56 +1,90 @@
 import ClientSideAbout from "../../../ui/Components/ClientPage";
-import { Suspense } from "react";
-import { getTranslations } from "next-intl/server";
+import { use } from "react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { Locale } from "next-intl";
+import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { getAlternates } from "@/i18n/alternates";
 
+/** Props for the About page, receiving locale and search params from Next.js. */
 interface Props {
+	/** Promise resolving to an object with the locale. */
 	params: Promise<{ locale: Locale }>;
-	searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export async function generateMetadata({
-	params,
-	searchParams,
-}: Props): Promise<Metadata> {
-	// Await the params Promise to get the actual locale value
+/**
+ * Generates localized metadata for the About page.
+ *
+ * @param props - Component props containing locale and search params.
+ * @param props.params - Promise resolving to an object with the locale.
+ * @param props.searchParams - Promise resolving to search parameters (unused but required by Next.js).
+ * @returns Metadata object with localized title, description, canonical URL, and Open Graph data.
+ */
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: locale,
 		namespace: "metadata",
 	});
-	// optionally access and extend (rather than replace) parent metadata
 
 	return {
 		title: t("title.about"),
 		description: t("description.about"),
-		alternates: {
-			canonical: "/about",
-			languages: {
-				en: "https://daniel-freire.com/en/about",
-				pt: "https://daniel-freire.com/pt/sobre",
-			},
-		},
+		keywords: [
+			"about Daniel Freire",
+			"web developer background",
+			"marketing to development",
+			"SEO expert developer",
+			"AI developer Portugal",
+		],
+		robots: { index: true, follow: true },
+		alternates: getAlternates({ href: "/about", locale }),
 		openGraph: {
-			title: t("opengraphImageAlt"),
-			description: t("description.about"),
-			url: "https://daniel-freire.com",
-			siteName: t("title.about"),
-			images: [
-				{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png` },
-			],
-			locale: locale,
 			type: "website",
+			title: t("title.about"),
+			description: t("description.about"),
+			url: "https://daniel-freire.com/about",
+			siteName: t("title.about"),
+			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
+			locale: locale,
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title.about"),
+			description: t("description.about"),
+			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
 		},
 	};
 }
 
-const About = async () => {
-	return (
-		<Suspense fallback={<div>Loading...</div>}>
-			<ClientSideAbout />
-		</Suspense>
-	);
-};
+/**
+ * About page server component.
+ *
+ * Renders the client-side About content wrapped in a server component
+ * for metadata generation and SEO purposes. Uses `setRequestLocale` to
+ * enable static rendering per locale.
+ *
+ * @param params - Route params containing the resolved locale.
+ * @returns The client-side About component.
+ */
+export default function About({ params }: Props) {
+	const { locale } = use(params);
+	setRequestLocale(locale);
 
-export default About;
+	return (
+		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(
+						generateBreadcrumbSchema([
+							{ name: "Home", href: `/${locale}` },
+							{ name: "About", href: `/${locale}/about` },
+						]),
+					),
+				}}
+			/>
+			<ClientSideAbout />
+		</>
+	);
+}

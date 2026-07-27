@@ -1,29 +1,30 @@
 import { SVGProps } from "react";
 
-export function LineMdMoonFilledToSunnyFilledLoopTransition(
-	props: SVGProps<SVGSVGElement>,
-) {
+/**
+ * LineMdMoonFilledToSunnyFilledLoopTransition - Animated moon-to-sun transition.
+ *
+ * Animates from a moon (crescent) icon to a sunny (sun) icon using SVG path
+ * morphing and mask animations, creating a looping night/day toggle effect.
+ */
+export function LineMdMoonFilledToSunnyFilledLoopTransition(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
 			viewBox="0 0 24 24"
-			{...props}
-		>
-			{/* Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt */}
+			{...props}>
+			<title>{props.title ?? "Animated moon to sun transition icon"}</title>
 			<g
 				fill="none"
 				stroke="#ff8000"
 				strokeLinecap="round"
 				strokeLinejoin="round"
-				strokeWidth="2"
-			>
+				strokeWidth="2">
 				<path
 					strokeDasharray="2"
 					strokeDashoffset="2"
-					d="M12 19v1M19 12h1M12 5v-1M5 12h-1"
-				>
+					d="M12 19v1M19 12h1M12 5v-1M5 12h-1">
 					<animate
 						fill="freeze"
 						attributeName="d"
@@ -42,8 +43,7 @@ export function LineMdMoonFilledToSunnyFilledLoopTransition(
 				<path
 					strokeDasharray="2"
 					strokeDashoffset="2"
-					d="M17 17l0.5 0.5M17 7l0.5 -0.5M7 7l-0.5 -0.5M7 17l-0.5 0.5"
-				>
+					d="M17 17l0.5 0.5M17 7l0.5 -0.5M7 7l-0.5 -0.5M7 17l-0.5 0.5">
 					<animate
 						fill="freeze"
 						attributeName="d"
@@ -92,13 +92,26 @@ export function LineMdMoonFilledToSunnyFilledLoopTransition(
 				strokeLinecap="round"
 				strokeLinejoin="round"
 				strokeWidth="2"
-				d="M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z"
-			>
-				<set fill="freeze" attributeName="opacity" begin="0.6s" to="0" />
+				d="M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z">
+				<set
+					fill="freeze"
+					attributeName="opacity"
+					begin="0.6s"
+					to="0"
+				/>
 			</path>
 			<mask id="lineMdMoonFilledToSunnyFilledLoopTransition0">
-				<circle cx="12" cy="12" r="12" fill="#fff" />
-				<circle cx="18" cy="6" r="12" fill="#fff">
+				<circle
+					cx="12"
+					cy="12"
+					r="12"
+					fill="#fff"
+				/>
+				<circle
+					cx="18"
+					cy="6"
+					r="12"
+					fill="#fff">
 					<animate
 						fill="freeze"
 						attributeName="cx"
@@ -121,7 +134,10 @@ export function LineMdMoonFilledToSunnyFilledLoopTransition(
 						values="12;3"
 					/>
 				</circle>
-				<circle cx="18" cy="6" r="10">
+				<circle
+					cx="18"
+					cy="6"
+					r="10">
 					<animate
 						fill="freeze"
 						attributeName="cx"
@@ -151,8 +167,7 @@ export function LineMdMoonFilledToSunnyFilledLoopTransition(
 				r="10"
 				mask="url(#lineMdMoonFilledToSunnyFilledLoopTransition0)"
 				opacity="0"
-				fill="#ff8000"
-			>
+				fill="#ff8000">
 				<animate
 					fill="freeze"
 					attributeName="r"
@@ -160,7 +175,12 @@ export function LineMdMoonFilledToSunnyFilledLoopTransition(
 					dur="0.4s"
 					values="10;6"
 				/>
-				<set fill="freeze" attributeName="opacity" begin="0.6s" to="1" />
+				<set
+					fill="freeze"
+					attributeName="opacity"
+					begin="0.6s"
+					to="1"
+				/>
 			</circle>
 		</svg>
 	);

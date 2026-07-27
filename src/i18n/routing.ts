@@ -1,93 +1,122 @@
 import { defineRouting } from "next-intl/routing";
 
+/**
+ * Internationalization routing configuration for the portfolio.
+ *
+ * Defines supported locales, the default fallback locale, and localized
+ * pathname mappings for every route in the application.
+ */
 export const routing = defineRouting({
-	// A list of all locales that are supported
-	locales: ["pt", "en", "dk", "pl", "de", "cz"],
+	/** All locales the application supports. */
+	locales: ["pt", "en", "da", "pl", "de", "cs"],
 
-	// Used when no locale matches
+	/** Default locale used when no locale matches the request. */
 	defaultLocale: "en",
+
+	/** Pathname-based routing with per-locale overrides. */
 	pathnames: {
 		"/": "/",
 		"/about": {
 			pt: "/sobre",
-			dk: "/om",
+			da: "/om",
 			pl: "/o-mnie",
 			de: "/ueber-mich",
 			cs: "/o-mne",
 		},
 		"/portfolio": {
 			pt: "/portfolio",
-			dk: "/portfolio",
+			da: "/portfolio",
 			pl: "/portfolio",
 			de: "/portfolio",
 			cs: "/portfolio",
 		},
 		"/contact": {
 			pt: "/contactos",
-			dk: "/kontakt",
+			da: "/kontakt",
 			pl: "/kontakt",
 			de: "/kontakt",
 			cs: "/kontakt",
 		},
 		"/privacy-policy": {
 			pt: "/politica-privacidade",
-			dk: "/privatlivspolitik",
+			da: "/privatlivspolitik",
 			pl: "/polityka-prywatnosci",
 			de: "/datenschutz",
 			cs: "/ochrana-osobnich-udaju",
 		},
+		"/services": {
+			pt: "/servicos",
+			da: "/ydelser",
+			pl: "/uslugi",
+			de: "/dienstleistungen",
+			cs: "/sluzby",
+		},
+		"/services/[service]": {
+			pt: "/servicos/[service]",
+			da: "/ydelser/[service]",
+			pl: "/uslugi/[service]",
+			de: "/dienstleistungen/[service]",
+			cs: "/sluzby/[service]",
+		},
 		"/terms-of-service": {
 			pt: "/termos-servico",
-			dk: "/servicevilkår",
+			da: "/servicevilkår",
 			pl: "/regulamin",
 			de: "/nutzungsbedingungen",
 			cs: "/podminky-sluzby",
 		},
 		"/cookies-policy": {
 			pt: "/politica-cookies",
-			dk: "/cookiepolitik",
+			da: "/cookiepolitik",
 			pl: "/polityka-cookies",
 			de: "/cookie-richtlinie",
 			cs: "/politika-cookies",
 		},
 		"/accessibility-statement": {
 			pt: "/declaracao-acessibilidade",
-			dk: "/tilgængelighedserklæring",
+			da: "/tilgængelighedserklæring",
 			pl: "/deklaracja-dostepnosci",
 			de: "/barrierefreiheitserklaerung",
 			cs: "/prohlaseni-o-pristupnosti",
 		},
+		"/llms.txt": {
+			pt: "/llms.txt",
+			da: "/llms.txt",
+			pl: "/llms.txt",
+			de: "/llms.txt",
+			cs: "/llms.txt",
+		},
 		"/sitemap.xml": {
 			pt: "/sitemap.xml",
-			dk: "/sitemap.xml",
+			da: "/sitemap.xml",
 			pl: "/sitemap.xml",
 			de: "/sitemap.xml",
 			cs: "/sitemap.xml",
 		},
 		"/robots.txt": {
 			pt: "/robots.txt",
-			dk: "/robots.txt",
+			da: "/robots.txt",
 			pl: "/robots.txt",
 			de: "/robots.txt",
 			cs: "/robots.txt",
 		},
 		"/404": {
 			pt: "/404",
-			dk: "/404",
+			da: "/404",
 			pl: "/404",
 			de: "/404",
 			cs: "/404",
 		},
 		"/resume": {
 			pt: "/curriculo",
-			dk: "/cv",
+			da: "/cv",
 			pl: "/cv",
 			de: "/lebenslauf",
 			cs: "/zivotopis",
 		},
 		"/prices": {
 			pt: "/precos",
-			dk: "/priser",
+			da: "/priser",
 			pl: "/cennik",
 			de: "/preise",
 			cs: "/ceny",

@@ -1,22 +1,27 @@
 import React from "react";
 import type { SVGProps } from "react";
 
-export function LineMdCloseToMenuAltTransition(props: SVGProps<SVGSVGElement>) {
+/**
+ * LineMdCloseToMenuAltTransition - Animated close (X) to hamburger menu transition.
+ *
+ * Animates from a close icon (two diagonal lines) to a hamburger menu icon
+ * (three horizontal lines) using SVG path morphing.
+ */
+export function LineMdCloseToMenuAltTransition(props: SVGProps<SVGSVGElement> & { title?: string }) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1.5em"
 			height="1.5em"
 			viewBox="0 0 24 24"
-			{...props}
-		>
+			{...props}>
+			<title>{props.title ?? "Close to menu transition icon"}</title>
 			<g
 				fill="none"
 				stroke="currentColor"
 				strokeLinecap="round"
 				strokeLinejoin="round"
-				strokeWidth={2}
-			>
+				strokeWidth={2}>
 				<path d="M5 5L19 19M5 19L19 5">
 					<animate
 						fill="freeze"
@@ -25,7 +30,9 @@ export function LineMdCloseToMenuAltTransition(props: SVGProps<SVGSVGElement>) {
 						values="M5 5L19 19M5 19L19 5;M5 5L19 5M5 19L19 19"
 					/>
 				</path>
-				<path d="M12 12H12" opacity={0}>
+				<path
+					d="M12 12H12"
+					opacity={0}>
 					<animate
 						fill="freeze"
 						attributeName="d"
@@ -33,7 +40,12 @@ export function LineMdCloseToMenuAltTransition(props: SVGProps<SVGSVGElement>) {
 						dur="0.4s"
 						values="M12 12H12;M5 12H19"
 					/>
-					<set fill="freeze" attributeName="opacity" begin="0.2s" to={1} />
+					<set
+						fill="freeze"
+						attributeName="opacity"
+						begin="0.2s"
+						to={1}
+					/>
 				</path>
 			</g>
 		</svg>
