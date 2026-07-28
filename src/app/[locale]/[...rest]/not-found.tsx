@@ -1,6 +1,21 @@
+import { type Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import NotFoundPage from "@/ui/Components/NotFoundPage";
+
+/**
+ * Generates metadata for the 404 page.
+ *
+ * Sets a descriptive title and instructs search engines not to index
+ * this page, preventing soft-404s from appearing in search results.
+ */
+export async function generateMetadata(): Promise<Metadata> {
+	return {
+		title: "Page Not Found",
+		description: "The page you are looking for does not exist.",
+		robots: { index: false, follow: true },
+	};
+}
 
 /**
  * Global 404 page rendered for unmatched routes within a locale segment.

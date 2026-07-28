@@ -8,6 +8,7 @@ import { SERVICE_SLUGS } from "@/i18n/serviceSlugs";
 interface PersonSchema {
 	"@context": "https://schema.org";
 	"@type": "Person";
+	"@id": string;
 	name: string;
 	url: string;
 	sameAs: string[];
@@ -20,6 +21,7 @@ interface PersonSchema {
 interface WebSiteSchema {
 	"@context": "https://schema.org";
 	"@type": "WebSite";
+	"@id": string;
 	name: string;
 	url: string;
 	description: string;
@@ -102,6 +104,7 @@ export function generatePersonSchema(): PersonSchema {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Person",
+		"@id": `${BASE_URL}/#person`,
 		name: "Daniel Freire",
 		url: BASE_URL,
 		sameAs: ["https://github.com/danielfreire-dev/", "https://www.linkedin.com/in/danielfreire-swe/"],
@@ -123,6 +126,7 @@ export function generateWebSiteSchema(): WebSiteSchema {
 	return {
 		"@context": "https://schema.org",
 		"@type": "WebSite",
+		"@id": `${BASE_URL}/#website`,
 		name: "Daniel Freire",
 		url: BASE_URL,
 		description:

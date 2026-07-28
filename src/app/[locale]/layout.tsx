@@ -26,6 +26,8 @@ export const metadata: Metadata = {
 		template: "%s | Daniel Freire",
 		default: "Daniel Freire",
 	},
+	description:
+		"Daniel Freire — Web Developer specializing in AI-powered applications, custom software, and high-performance websites. Based in Portugal, serving globally.",
 	authors: { name: "Daniel Freire", url: "https://daniel-freire.com/" },
 	creator: "Daniel Freire",
 	keywords: [
@@ -60,6 +62,12 @@ export const metadata: Metadata = {
 		siteName: "Daniel Freire",
 		locale: "en_US",
 		images: [{ url: `https://daniel-freire.com/metadata/open-graph-initials5.png`, width: 1200, height: 630 }],
+	},
+
+	twitter: {
+		card: "summary_large_image",
+		site: "@daniel_freire",
+		creator: "@daniel_freire",
 	},
 };
 

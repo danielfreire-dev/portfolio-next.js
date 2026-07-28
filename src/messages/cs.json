@@ -213,17 +213,15 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Poznejte Daniela Freire — webového vývojáře specializujícího se na aplikace s AI, integraci LLM a vysoce výkonná webová řešení.",
+			"about": "Poznejte Daniela Freire ,  webového vývojáře specializujícího se na aplikace s AI, integraci LLM a vysoce výkonná webová řešení.",
 			"contact": "Kontaktujte Daniela Freire pro vývoj webových stránek, AI řešení a technické poradenství. Rychlá a spolehlivá komunikace zaručena.",
-			"home": "Daniel Freire — Webový vývojář: aplikace s AI, zakázkový software a výkonné weby. Sídlí v Portugalsku, služby klientům po celém světě.",
+			"home": "Daniel Freire ,  Webový vývojář: aplikace s AI, zakázkový software a výkonné weby. Sídlí v Portugalsku, služby klientům po celém světě.",
 			"impressum": "",
 			"portfolio": "Prozkoumejte portfolio webových projektů Daniela Freire, včetně React aplikací, nástrojů s AI a zakázkových obchodních softwarových řešení.",
 			"privacyPolicy": "Zjistěte, jak Daniel Freire shromažďuje, používá a chrání vaše osobní údaje. Transparentní postupy ochrany soukromí v souladu s GDPR.",
 			"services": "Webové aplikace s AI, integrace LLM a vývoj webu od Daniela Freire. Zakázkový software, AI agenti a technické poradenství s agilním přístupem."
 		},
 		"name": "Daniel Freire",
-		"opengraphImage": "metadata/open-graph.png",
-		"opengraphImageAlt": "Daniel Freire",
 		"title": {
 			"about": "O mně",
 			"contact": "Kontakt",
@@ -232,16 +230,11 @@
 			"portfolio": "Portfolio",
 			"privacyPolicy": "Zásady ochrany osobních údajů",
 			"services": "Služby"
-		},
-		"twitterImage": "metadata/open-graph.png",
-		"twitterImageAlt": "Daniel Freire"
+		}
 	},
 	"portfolio": {
 		"all": "Vše",
-		"cta": [
-			"podívejte se",
-			"zobrazit živý projekt →"
-		],
+		"cta": ["podívejte se", "zobrazit živý projekt →"],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -332,12 +325,7 @@
 		"paragraph10": "Tyto zásady ochrany osobních údajů můžeme čas od času aktualizovat. O jakýchkoli změnách vás budeme informovat zveřejněním nových zásad na této stránce.",
 		"paragraph11": "Pokud máte jakékoli otázky týkající se těchto zásad ochrany osobních údajů, kontaktujte nás na",
 		"paragraph2": "Sbíráme osobní údaje, které nám dobrovolně poskytnete při vyplňování formuláře na našich webových stránkách. Osobní údaje, které sbíráme, zahrnují:",
-		"paragraph2li": [
-			"Jméno",
-			"Příjmení",
-			"Emailová adresa",
-			"Telefonní číslo"
-		],
+		"paragraph2li": ["Jméno", "Příjmení", "Emailová adresa", "Telefonní číslo"],
 		"paragraph3": "Informace, které sbíráme, budou použity k tomu, abychom vás v budoucnu kontaktovali. Vaše osobní údaje budeme používat pouze pro tento konkrétní účel.",
 		"paragraph4": "Zpracování vašich osobních údajů je založeno na vašem souhlasu, který udělujete vyplněním formuláře na našich webových stránkách.",
 		"paragraph5": "Vaše osobní údaje nesdílíme s třetími stranami, kromě případů požadovaných zákonem.",
@@ -370,9 +358,9 @@
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy — a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru. Dodávám agilními metodami, se zaměřením na MVP a rychlé zpětnovazební cykly, abyste viděli hodnotu brzy a iterovali na základě reálného používání.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete — každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat — protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL — nasazených na AWS s cloud-nativní architekturou — vytvářím modulární, znovupoužitelné komponenty, které činí vaše řešení robustním, škálovatelným a snadno udržovatelným s růstem vašeho podnikání.",
+			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy ,  a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru. Dodávám agilními metodami, se zaměřením na MVP a rychlé zpětnovazební cykly, abyste viděli hodnotu brzy a iterovali na základě reálného používání.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete ,  každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat ,  protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL ,  nasazených na AWS s cloud-nativní architekturou ,  vytvářím modulární, znovupoužitelné komponenty, které činí vaše řešení robustním, škálovatelným a snadno udržovatelným s růstem vašeho podnikání.",
 			"slug": "zakazkovy-firemni-software",
-			"text": "Webové aplikace na míru — CRM systémy, dashboardy a interní nástroje postavené s modulárními komponentami a agilním doručováním, odpovídající tomu, jak vaše firma skutečně funguje.",
+			"text": "Webové aplikace na míru ,  CRM systémy, dashboardy a interní nástroje postavené s modulárními komponentami a agilním doručováním, odpovídající tomu, jak vaše firma skutečně funguje.",
 			"title": "Zakázkový firemní software"
 		},
 		{
@@ -389,9 +377,9 @@
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou — pokud je aplikována s účelem. Vytvářím webové aplikace s AI, které integrují Velké jazykové modely (LLM) do vašich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo orchestraci AI agentů, která automatizuje složité vícestupňové obchodní procesy — zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou. Každé řešení je navrženo s uživatelskou zkušeností řízenou AI, která působí přirozeně a intuitivně pro váš tým a zákazníky.\n\nPracuji s API jako OpenAI, open-source LLM, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
+			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou ,  pokud je aplikována s účelem. Vytvářím webové aplikace s AI, které integrují Velké jazykové modely (LLM) do vašich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo orchestraci AI agentů, která automatizuje složité vícestupňové obchodní procesy ,  zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou. Každé řešení je navrženo s uživatelskou zkušeností řízenou AI, která působí přirozeně a intuitivně pro váš tým a zákazníky.\n\nPracuji s API jako OpenAI, open-source LLM, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
 			"slug": "implementace-ai-reseni",
-			"text": "Webové aplikace s AI a integrací LLM — chatboti, AI agenti a uživatelské zkušenosti řízené AI, které transformují vaše pracovní postupy.",
+			"text": "Webové aplikace s AI a integrací LLM ,  chatboti, AI agenti a uživatelské zkušenosti řízené AI, které transformují vaše pracovní postupy.",
 			"title": "Implementace AI řešení"
 		},
 		{
@@ -409,9 +397,9 @@
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "Webová stránka není jen digitální vizitka — je to váš nejdůležitější marketingový nástroj. Vytvářím vysoce výkonné webové aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli. S modulárními komponentami a čistou frontendovou logikou je každý projekt od prvního dne architektonicky navržen pro snadnou udržovatelnost.\n\nKaždý projekt je stavěn s výkonem v jádru — optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat — bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům. Dodržuji agilní postupy doručování produktů, začínám s MVP pro rychlou zpětnou vazbu a iteruji na základě reálných uživatelských dat.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy — nasazené na AWS se škálovatelnou cloudovou architekturou — ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
+			"longDescription": "Webová stránka není jen digitální vizitka ,  je to váš nejdůležitější marketingový nástroj. Vytvářím vysoce výkonné webové aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli. S modulárními komponentami a čistou frontendovou logikou je každý projekt od prvního dne architektonicky navržen pro snadnou udržovatelnost.\n\nKaždý projekt je stavěn s výkonem v jádru ,  optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat ,  bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům. Dodržuji agilní postupy doručování produktů, začínám s MVP pro rychlou zpětnou vazbu a iteruji na základě reálných uživatelských dat.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy ,  nasazené na AWS se škálovatelnou cloudovou architekturou ,  ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
 			"slug": "vyvoj-webovych-stranek",
-			"text": "Vysoce výkonné webové aplikace — rychlé, responzivní weby s modulárními komponentami, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
+			"text": "Vysoce výkonné webové aplikace ,  rychlé, responzivní weby s modulárními komponentami, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
 			"title": "Vývoj webových stránek"
 		},
 		{
@@ -425,7 +413,7 @@
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice — druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Pro vysoce výkonné webové aplikace zajišťuji, že každá milisekunda načítání je zohledněna, protože rychlost přímo ovlivňuje jak pozice ve vyhledávání, tak konverze. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
+			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice ,  druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Pro vysoce výkonné webové aplikace zajišťuji, že každá milisekunda načítání je zohledněna, protože rychlost přímo ovlivňuje jak pozice ve vyhledávání, tak konverze. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
 			"slug": "seo-technicke-poradenstvi",
 			"text": "Audity založené na datech, vysoce výkonná optimalizace a strategie, která pomůže vaší firmě být vidět a konvertovat.",
 			"title": "SEO a technické poradenství"
