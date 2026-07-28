@@ -102,7 +102,6 @@ function getEntries(href: Href) {
 		lastModified,
 		changeFrequency,
 		priority,
-		images: [OG_IMAGE],
 		alternates: {
 			languages: Object.fromEntries(routing.locales.map((cur) => [cur, getUrl(href, cur)])),
 		},
@@ -139,7 +138,6 @@ function getDynamicEntries(href: "/services/[service]", englishSlug: string) {
 			lastModified: SERVICE_LAST_MODIFIED,
 			changeFrequency: "monthly" as const,
 			priority: 0.7,
-			images: [OG_IMAGE],
 			alternates: {
 				languages: alternates.languages as Record<string, string>,
 			},

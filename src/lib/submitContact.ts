@@ -110,7 +110,7 @@ export const submitContact = async (
 			html: `<p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
 		<p><strong>Phone #:</strong> ${data.telephone}</p>
 		<p><strong>Email:</strong> ${data.email}</p>
-		<p><strong>Message:</strong> ${data.message}</p>
+		<pre><strong>Message:</strong> ${data.message}</pre>
 		<p><strong>date:</strong> ${getCurrentWESTDateTime()}</p>`,
 		});
 	} catch (err) {

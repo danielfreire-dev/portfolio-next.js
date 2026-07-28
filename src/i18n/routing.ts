@@ -58,34 +58,6 @@ export const routing = defineRouting({
 			de: "/dienstleistungen/[service]",
 			cs: "/sluzby/[service]",
 		},
-		"/terms-of-service": {
-			pt: "/termos-servico",
-			da: "/servicevilkår",
-			pl: "/regulamin",
-			de: "/nutzungsbedingungen",
-			cs: "/podminky-sluzby",
-		},
-		"/cookies-policy": {
-			pt: "/politica-cookies",
-			da: "/cookiepolitik",
-			pl: "/polityka-cookies",
-			de: "/cookie-richtlinie",
-			cs: "/politika-cookies",
-		},
-		"/accessibility-statement": {
-			pt: "/declaracao-acessibilidade",
-			da: "/tilgængelighedserklæring",
-			pl: "/deklaracja-dostepnosci",
-			de: "/barrierefreiheitserklaerung",
-			cs: "/prohlaseni-o-pristupnosti",
-		},
-		"/llms.txt": {
-			pt: "/llms.txt",
-			da: "/llms.txt",
-			pl: "/llms.txt",
-			de: "/llms.txt",
-			cs: "/llms.txt",
-		},
 		"/sitemap.xml": {
 			pt: "/sitemap.xml",
 			da: "/sitemap.xml",
@@ -106,13 +78,6 @@ export const routing = defineRouting({
 			pl: "/404",
 			de: "/404",
 			cs: "/404",
-		},
-		"/resume": {
-			pt: "/curriculo",
-			da: "/cv",
-			pl: "/cv",
-			de: "/lebenslauf",
-			cs: "/zivotopis",
 		},
 		"/prices": {
 			pt: "/precos",

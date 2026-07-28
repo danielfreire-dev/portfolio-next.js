@@ -3,29 +3,29 @@
 		"image": "/images/Lensa/Lensa2.webp",
 		"imageAlt": "oil painting of Daniel",
 		"paragraph1": "For the last two years, I’ve been building things on the web. But my perspective on what to build, and why, was shaped long before I wrote my first line of code.",
-		"paragraph2": "I came into this field from marketing, though not the side you might imagine. My world was less about campaigns and more about patterns: analyzing market data, deciphering user behavior, and understanding the precise mechanics of how people find and use a product online. SEO and SEM, at their core, are just applied psychology and problem-solving. You learn to listen to what the data is screaming, and more importantly, to what it’s whispering.",
-		"paragraph3": "That’s the background I bring to every development project. Most developers can write elegant code; my focus is on building elegant solutions. There’s a crucial difference.",
-		"paragraph4": "When I architect an application with React or Next.js, I'm not just thinking about state management or component structure. I'm thinking about the user's journey that brought them there. I'm considering the semantic markup that gives our content meaning beyond the screen. I'm building high-performance web applications with an innate understanding of performance because I know firsthand that a delay of even a half-second is a decision a user makes to leave.",
-		"paragraph5": "Here’s what a lot of talented developers get wrong: they build for the device. They build for the spec. But they forget to build for the human on the other side, and for the business objective that makes the project worthwhile. My experience allows me to sit at that intersection. I can translate a business need into a technical requirement not as an abstract concept, but as a lived experience. I’ve been the person asking for the data, and now I’m the person building the systems that provide it.",
-		"paragraph6": "Whether it's an AI-powered web application, a sleek front-end, a Django admin, or a full-stack Node.js application, the question I always start with is: \"What are we actually solving for?\" The technology is a means to an end. The real craft is in choosing the right tool for the job and wielding it with the wisdom of knowing what that job truly is.",
+		"paragraph2": "I came into this field from marketing, though not the side you might imagine. My world was less about campaigns and more about patterns: analyzing market data, deciphering user behavior, and understanding the precise mechanics of how people find and use a product online. SEO and SEM are just applied psychology and problem-solving. You learn to listen to what the data is screaming, and more importantly, to what it's whispering.",
+		"paragraph3": "That's the background I bring to every development project. Most developers can write elegant code; my focus is on building elegant solutions. There's a real difference.",
+		"paragraph4": "When I architect an application with React or Next.js, I'm not just thinking about state management or component structure. I think about the user's journey that brought them there. I consider the semantic markup that gives our content meaning beyond the screen. I build high-performance web applications with an innate understanding of performance, because I know firsthand that a delay of even a half-second is a decision a user makes to leave.",
+		"paragraph5": "A lot of talented developers get stuck on the tech: they build for the device. They build for the spec. But they forget to build for the human on the other side, and for the business objective that makes the project worthwhile. My experience allows me to sit at that intersection. I can translate a business need into a technical requirement not as an abstract concept, but as a lived experience. I've been the person asking for the data, and now I'm the person building the systems that provide it.",
+		"paragraph6": "AI-powered web app, sleek front-end, Django admin, full-stack Node.js application — the question I always start with is the same: \"What are we actually solving for?\" The technology is a means to an end. The real skill is in choosing the right tool for the job and using it wisely, knowing what that job actually is.",
 		"paragraph7": "I don’t just build things right. I build the right things.",
 		"title1": "Building for the Human Behind the Screen"
 	},
 	"carousel": [
 		{
-			"alt": "Revolutionize Your Digital Presence Now!",
-			"cta": "Revolutionize Your Digital Presence!",
-			"description": "Is your website holding your business back? Our comprehensive performance audit digs deep into your site's technical infrastructure, user experience, and conversion potential. We'll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
+			"alt": "Transform Your Digital Presence Now!",
+			"cta": "Transform Your Digital Presence!",
+			"description": "Is your website holding your business back? I'll perform a full audit of your site's technical infrastructure, user experience, and conversion potential. You'll get a detailed report with specific improvements that boost your online performance.",
 			"id": 1,
 			"imageUrl": "/images/Carousel/white.webp",
 			"loading": "lazy",
-			"title": "revolutionize your digital presence now!",
+			"title": "transform your digital presence now!",
 			"url": "/contact"
 		},
 		{
 			"alt": "Unlock Your Website's Full Potential",
 			"cta": "Unlock Your Website's Full Potential",
-			"description": "Websites require consistent care to remain secure, functional, and competitive. Our comprehensive maintenance packages provide proactive monitoring, immediate issue resolution, and continuous technological updates.",
+			"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
 			"id": 2,
 			"imageUrl": "/images/Carousel/umbrellas.webp",
 			"loading": "eager",
@@ -35,7 +35,7 @@
 		{
 			"alt": "Build Your Dream Project Today",
 			"cta": "Build Your Dream Project Today",
-			"description": "Stop settling for generic templates. Our bespoke web development services create fully customized digital experiences that perfectly align with your brand's unique identity and business objectives. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
+			"description": "Stop settling for generic templates. I build fully customized digital experiences that match your brand's identity and business goals. Your concept becomes a powerful, responsive, modern web solution.",
 			"id": 3,
 			"imageUrl": "/images/Carousel/estatuas.webp",
 			"loading": "eager",
@@ -43,9 +43,9 @@
 			"url": "/contact"
 		},
 		{
-			"alt": "Take the First Step Towards Digital Excellence",
-			"cta": "Take the First Step",
-			"description": "Speed isn't just a feature—it's a competitive advantage. Our performance optimization service ensures your website loads lightning-fast, providing an exceptional user experience that keeps visitors engaged and converts more effectively.",
+			"alt": "Speed Wins Business",
+			"cta": "Speed Wins Business",
+			"description": "A fast website is a competitive advantage. I'll optimize your site to load quickly, giving visitors a smooth experience that keeps them engaged and converts more effectively.",
 			"id": 4,
 			"imageUrl": "/images/Carousel/building-orange.webp",
 			"loading": "eager",
@@ -55,7 +55,7 @@
 		{
 			"alt": "Modernize Your Digital Infrastructure",
 			"cta": "Modernize Your Digital Infrastructure",
-			"description": "Technology evolves rapidly. Our expert migration services help you seamlessly transition to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
+			"description": "Technology evolves fast. I'll help you move to modern, efficient web technologies without disrupting your existing operations. A smooth upgrade with managed risk.",
 			"id": 5,
 			"imageUrl": "/images/Carousel/building-yellow.webp",
 			"loading": "eager",
@@ -65,7 +65,7 @@
 		{
 			"alt": "Colorful pencils representing ongoing care and maintenance for digital assets",
 			"cta": "care for your digital assets",
-			"description": "Websites require consistent care to remain secure, functional, and competitive. Our comprehensive maintenance packages provide proactive monitoring, immediate issue resolution, and continuous technological updates.",
+			"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
 			"id": 6,
 			"imageUrl": "/images/Carousel/pencils.webp",
 			"loading": "lazy",
@@ -87,7 +87,7 @@
 			"turnstileRequired": "Complete the security check above to enable the submit button."
 		},
 		"farewell": {
-			"text": "I appreciate your vote of confidence. You should expect a reply over the next business days.",
+			"text": "Thanks for reaching out. You'll hear back from me within a few business days.",
 			"title": "thank you"
 		},
 		"firstName": "first name",
@@ -142,15 +142,15 @@
 		"title": "Would You Like A Cookie? 🍪"
 	},
 	"cta": {
-		"blurb": "Got a Project in Mind? Let’s Chat.",
+		"blurb": "Got a Project in Mind? Let's Chat.",
 		"button": [
 			"Let's talk about your business",
-			"Got a Project in Mind? Let’s Chat.",
+			"Got a Project in Mind? Let's Chat.",
 			"Looking for a Web Developer? You Found One!",
-			"Say Hello — I Don’t Byte 👋",
-			"Let’s Make Your Website Unforgetable →",
-			"Need a Developer Who Delivers? Let's Talk.",
-			"Let’s Build Something Great Together →"
+			"Say Hello — I Don't Byte 👋",
+			"Your Website, Unforgettable →",
+			"Need a Developer Who Ships? Let's Talk.",
+			"Idea Worth Building? Let's Make It Happen →"
 		],
 		"title": "get in touch"
 	},
@@ -159,14 +159,14 @@
 		"message": "random message",
 		"title": "💻🚀 Hello",
 		"welcome": {
-			"conclusion": "This is more than a website—it’s your digital handshake, your first impression, and your opportunity to stand out in a crowded field. Let’s make it unforgettable.",
-			"happensNext0": "Here’s what happens next:",
-			"happensNext1": "I’ll personally review your submission and respond with a customized plan (or any questions to refine the scope) within 2–3 business days.",
-			"happensNext2": "Over the next business days, you’ll hear from me with clear next steps, timelines, and how we’ll collaborate to bring your vision to life.",
-			"happensNext3": "If you don’t see my email by then, don’t hesitate to follow up—I’m either deep in code or battling my inbox (and I’ll always prioritize your project).",
+			"conclusion": "This is your digital handshake, your first impression, your chance to stand out. Let's make it unforgettable.",
+			"happensNext0": "What happens next:",
+			"happensNext1": "I'll personally review your submission and respond with a customized plan (or any questions to refine the scope) within 2–3 business days.",
+			"happensNext2": "Over the next business days, you'll hear from me with clear next steps, timelines, and how we'll collaborate to bring your vision to life.",
+			"happensNext3": "If you don't see my email by then, send a follow-up. I'm either deep in code or fighting my inbox. Either way, your project comes first.",
 			"heading": "Hello",
-			"intro": "Let’s start with a simple truth: building an online presence that truly represents your services/skills as a professional takes courage and vision. The fact that you’re here—taking concrete steps to elevate your work—speaks volumes about your commitment to growth. That’s worth celebrating.",
-			"introduction": "I am Daniel Freire, and I specialize in crafting high-impact, client-focused websites that don’t just display projects but tell a compelling story about what you bring to the table. Whether you’re aiming to attract top-tier clients, land your dream job, or simply showcase your expertise with clarity and style, your website is your most powerful tool. And I’m here to help you sharpen it.",
+			"intro": "Building an online presence that represents your skills as a professional takes courage and vision. You're here, taking concrete steps to improve your work. That says a lot about your commitment. And that matters.",
+			"introduction": "I'm Daniel Freire. I build websites that tell the story of what you do. Not just a portfolio listing projects, but a site that shows clients and employers exactly why they should work with you. Your website is how the world sees you. My job is to make sure it shows you at your best.",
 			"name": "Daniel Freire",
 			"preview": "Daniel Freire's Welcome Email",
 			"privacyPolicy": "privacy policy",
@@ -175,8 +175,8 @@
 			"view": "View the",
 			"webLink": "daniel-freire.com",
 			"whileWait0": "While you wait, feel free to:",
-			"whileWait1": "✅ Reply to this email with any additional thoughts—like specific projects you’re proud of, design preferences, or goals for your website (e.g., “I want recruiters to immediately see my full-stack expertise”). ",
-			"whileWait2": "✅ Gather assets (GitHub links, case studies, or even rough sketches) to streamline the process once we begin."
+			"whileWait1": "✅ Reply to this email with any additional thoughts: specific projects you're proud of, design preferences, or goals for your website (e.g., \"I want recruiters to immediately see my full-stack expertise\"). ",
+			"whileWait2": "✅ Gather assets (GitHub links, case studies, or even rough sketches) to speed up the process once we begin."
 		}
 	},
 	"error": {
@@ -213,7 +213,7 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Learn about Daniel Freire — a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
+			"about": "Learn about Daniel Freire, a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
 			"contact": "Get in touch with Daniel Freire for web development, AI solutions, and technical consulting. Fast, responsive communication guaranteed.",
 			"home": "Daniel Freire — Web Developer specializing in AI-powered applications, custom software, and high-performance websites. Based in Portugal, serving globally.",
 			"impressum": "",
@@ -222,8 +222,6 @@
 			"services": "AI-powered web apps, LLM integration, and high-performance web development by Daniel Freire. Custom software, AI agents, and technical consulting."
 		},
 		"name": "Daniel Freire",
-		"opengraphImage": "metadata/open-graph.png",
-		"opengraphImageAlt": "Daniel Freire",
 		"title": {
 			"about": "About",
 			"contact": "Contact",
@@ -232,16 +230,11 @@
 			"portfolio": "Portfolio",
 			"privacyPolicy": "Privacy Policy",
 			"services": "Services"
-		},
-		"twitterImage": "metadata/open-graph.png",
-		"twitterImageAlt": "Daniel Freire"
+		}
 	},
 	"portfolio": {
 		"all": "All",
-		"cta": [
-			"check it out",
-			"view the live project →"
-		],
+		"cta": ["check it out", "view the live project →"],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -332,12 +325,7 @@
 		"paragraph10": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.",
 		"paragraph11": "If you have any questions about this privacy policy, please contact us at",
 		"paragraph2": "We collect personal information that you voluntarily provide to us when you fill out a form on our website. The personal information we collect includes:",
-		"paragraph2li": [
-			"First name",
-			"Last name",
-			"Email address",
-			"Phone number"
-		],
+		"paragraph2li": ["First name", "Last name", "Email address", "Phone number"],
 		"paragraph3": "The information we collect will be used to contact you in the future. We will only use your personal data for this specific purpose.",
 		"paragraph4": "We process your personal data based on your consent, which you provide by filling out the form on our website.",
 		"paragraph5": "We do not share your personal data with third parties except as required by law.",
@@ -370,9 +358,9 @@
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Every business has unique processes, workflows, and challenges — and the software you use should reflect that. I specialise in developing custom web applications that adapt to how your company actually operates, rather than forcing your team to adapt to off-the-shelf software. I deliver with agile product delivery, focusing on MVP and rapid feedback cycles so you see value early and iterate based on real usage.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use — because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL — deployed on AWS with cloud-native architecture — I build modular, reusable components that make your solution robust, scalable, and easy to maintain as your business grows.",
+			"longDescription": "Every business has unique processes, workflows, and challenges. The software you use should reflect that. I build custom web applications that adapt to how your company actually operates, instead of forcing your team into off-the-shelf software. I work with agile methods, focusing on MVP and rapid feedback cycles, so you see value early and iterate based on real usage.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use, because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL, deployed on AWS with cloud-native architecture, I build modular, reusable components that make your solution reliable, scalable, and easy to maintain as your business grows.",
 			"slug": "business-custom-software",
-			"text": "Tailored web applications — CRMs, dashboards, and internal tools built with modular components and agile product delivery, fitting how your business actually works.",
+			"text": "Tailored web applications: CRMs, dashboards, and internal tools built with modular components and agile product delivery, fitting how your business actually works.",
 			"title": "Business Custom Software"
 		},
 		{
@@ -389,9 +377,9 @@
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "Artificial Intelligence has moved beyond futurist hype and become a genuine competitive advantage — when applied with purpose. I build AI-powered web applications that integrate Large Language Models (LLMs) into your existing workflows in a practical, measurable way, without unnecessary complexity.\n\nWhether it's an intelligent chatbot that reduces support ticket volume by 40%, a recommendation engine that increases average order value, or AI agent orchestration that automates complex multi-step business processes — the focus is always on the business outcome, not the technology for its own sake. Every solution is designed with an AI-driven user experience that feels natural and intuitive to your team and customers.\n\nI work with APIs like OpenAI, open-source LLMs, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
+			"longDescription": "Artificial Intelligence is a competitive advantage when applied with purpose. I build AI-powered web applications that integrate Large Language Models (LLMs) into your existing workflows in a practical, measurable way, without unnecessary complexity.\n\nAn intelligent chatbot that cuts support tickets by 40%. A recommendation engine that increases average order value. AI agents that automate complex, multi-step business processes. The focus is always on the business outcome, not the technology for its own sake. Every solution is designed with an AI-driven user experience that feels natural and intuitive to your team and customers.\n\nI work with APIs like OpenAI, open-source LLMs, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
 			"slug": "ai-solution-implementation",
-			"text": "AI-powered web applications and LLM integration — chatbots, AI agents, and AI-driven user experiences that transform your workflows.",
+			"text": "AI-powered web applications and LLM integration: chatbots, AI agents, and AI-driven user experiences that transform your workflows.",
 			"title": "AI Solution Implementation"
 		},
 		{
@@ -409,9 +397,9 @@
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "A website isn't just a digital business card — it's your most important marketing asset. I build high-performance web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take. Using modular components and clean frontend logic, every project is architected for maintainability from day one.\n\nEvery project is built with performance at its core — optimised for Core Web Vitals from the first line of code. This means your site won't just look great — it will be favoured by Google in search results and provide a fluid experience for your users. I follow agile product delivery practices, starting with an MVP to get rapid feedback and iterating based on real user data.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards — deployed on AWS with scalable cloud architecture — I approach every project as if it were my own, with meticulous attention to detail and an absolute focus on performance.",
+			"longDescription": "A website is your most important marketing asset, not just a digital business card. I build web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take. Using modular components and clean frontend logic, every project is architected for maintainability from day one.\n\nEvery project is built around performance, optimised for Core Web Vitals from the first line of code. This means your site won't just look great. It will rank higher on Google and provide a fluid experience for your users. I follow agile delivery practices, starting with an MVP to get rapid feedback and iterating based on real user data.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards, deployed on AWS with scalable cloud architecture, I approach every project as if it were my own, with careful attention to detail and an absolute focus on performance.",
 			"slug": "web-development",
-			"text": "High-performance web applications — fast, responsive websites with modular components that load instantly, work on every device, and turn visitors into customers.",
+			"text": "High-performance web applications: fast, responsive websites with modular components that load instantly, work on every device, and turn visitors into customers.",
 			"title": "Web Development"
 		},
 		{
@@ -425,7 +413,7 @@
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "Having a great website is only half the equation — the other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, allows me to offer a unique perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. For high-performance web applications, I ensure every millisecond of load time is accounted for, because speed directly impacts both rankings and conversions. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
+			"longDescription": "Having a great website is only half the equation. The other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, lets me offer a perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. For web applications, I ensure every millisecond of load time is accounted for, because speed directly impacts both rankings and conversions. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
 			"slug": "seo-technical-consulting",
 			"text": "Data-backed audits, high-performance optimisation, and strategy to help your business get found and convert.",
 			"title": "SEO & Technical Consulting"
@@ -646,31 +634,31 @@
 	"topMainPage": {
 		"blurbsArray": [
 			{
-				"description": "Is your website holding back your business growth? Our comprehensive performance audit deeply analyzes your technical infrastructure, user experience, and conversion potential. We’ll provide a detailed report highlighting critical improvements that can dramatically boost your online performance.",
-				"title": "Revolutionize Your Digital Presence Now!"
+				"description": "Is your website holding back your business growth? I'll perform a full audit of your technical infrastructure, user experience, and conversion potential. You'll get a detailed report with specific improvements that boost your online performance.",
+				"title": "Transform Your Digital Presence Now!"
 			},
 			{
-				"description": "Websites require constant care to stay secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
-				"title": "Unlock Your Website’s Full Potential"
+				"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
+				"title": "Unlock Your Website's Full Potential"
 			},
 			{
-				"description": "Stop settling for generic templates. Our custom web development services create fully tailored digital experiences that align perfectly with your brand’s unique identity and business goals. We transform your concept into a powerful, responsive, and cutting-edge web solution.",
+				"description": "Stop settling for generic templates. I build fully tailored digital experiences that match your brand's identity and business goals. Your concept becomes a powerful, responsive, modern web solution.",
 				"title": "Build Your Dream Project Today"
 			},
 			{
-				"description": "Speed isn’t just a feature—it’s a competitive advantage. Our performance optimization service ensures your website loads extremely fast, delivering an exceptional user experience that keeps visitors engaged and converts more effectively.",
-				"title": "Accelerate Your Website’s Potential"
+				"description": "A fast website is a competitive advantage. I'll optimize your site to load quickly, giving visitors a smooth experience that keeps them engaged and converts more effectively.",
+				"title": "Accelerate Your Website's Potential"
 			},
 			{
-				"description": "Technology evolves rapidly. Our specialized migration services help you transition seamlessly to modern, efficient web technologies without disrupting your existing operations. We ensure a smooth, risk-managed upgrade path.",
+				"description": "Technology evolves fast. I'll help you move to modern, efficient web technologies without disrupting your existing operations. A smooth upgrade with managed risk.",
 				"title": "Modernize Your Digital Infrastructure"
 			},
 			{
-				"description": "Websites require constant care to remain secure, functional, and competitive. Our comprehensive maintenance packages offer proactive monitoring, immediate issue resolution, and continuous technological updates.",
+				"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
 				"title": "Ongoing Care for Your Digital Assets"
 			}
 		],
 		"p1": "Tired of software that holds your business back?",
-		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications—like CRM systems, project trackers, and data dashboards—that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let's discuss what you're trying to achieve."
+		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications like CRM systems, project trackers, and data dashboards that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let's discuss what you're trying to achieve."
 	}
 }
