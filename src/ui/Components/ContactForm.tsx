@@ -202,7 +202,7 @@ const ContactForm = () => {
 						required
 						aria-autocomplete="none"
 						aria-required="true"
-						className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
+						className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 field-sizing-content valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
 						spellCheck
 					/>
 				</section>

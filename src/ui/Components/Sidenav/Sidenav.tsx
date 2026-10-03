@@ -37,7 +37,6 @@ const Sidenav = () => {
 				<div>
 					<TransitionLink
 						href="/"
-						inputData="Logo"
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}>
 						<h1

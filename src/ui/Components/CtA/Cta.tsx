@@ -55,7 +55,7 @@ const Cta = () => {
 			<Suspense>
 				<TransitionLink
 					href="/contact"
-					inputData="CtA">
+					inputdata="CtA">
 					<button className="button-class offset overflow-hidden text-ellipsis whitespace-nowrap hover:cursor-pointer">
 						{getRandomItem(t.raw("button"))}
 					</button>
