@@ -10,7 +10,7 @@ type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink" | "Logo";
 /** Props for the TransitionLink component. */
 interface TransitionLinkProps extends ComponentProps<typeof Link> {
 	/** Optional identifier for the click origin (analytics / transition type). */
-	inputData?: onClickCmdProps;
+	inputdata?: onClickCmdProps;
 	/** Whether the mobile sidenav is open (to close it after navigation). */
 	isOpen?: boolean;
 	/** State setter to close the mobile sidenav after navigation. */

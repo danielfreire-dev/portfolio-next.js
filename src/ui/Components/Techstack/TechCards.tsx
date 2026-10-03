@@ -3,13 +3,10 @@ import * as SVGs from "../svgs";
 
 /** A single technology item displayed in the tech stack. */
 interface TechItem {
-	/** URL to the technology's website. */
+	id: string;
 	link: string;
-	/** Path to a fallback logo image. */
 	logo: string;
-	/** Display name of the technology. */
 	name: string;
-	/** Key referencing an SVG component in the `svgs` barrel export. */
 	svgr: string;
 }
 

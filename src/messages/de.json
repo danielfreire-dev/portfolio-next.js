@@ -234,7 +234,10 @@
 	},
 	"portfolio": {
 		"all": "Alle",
-		"cta": ["ansehen", "zum Live-Projekt →"],
+		"cta": [
+			"ansehen",
+			"zum Live-Projekt →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -325,7 +328,12 @@
 		"paragraph10": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über etwaige Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen.",
 		"paragraph11": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter",
 		"paragraph2": "Wir sammeln persönliche Informationen, die Sie uns freiwillig zur Verfügung stellen, wenn Sie ein Formular auf unserer Website ausfüllen. Die von uns gesammelten persönlichen Informationen umfassen:",
-		"paragraph2li": ["Vorname", "Nachname", "E-Mail-Adresse", "Telefonnummer"],
+		"paragraph2li": [
+			"Vorname",
+			"Nachname",
+			"E-Mail-Adresse",
+			"Telefonnummer"
+		],
 		"paragraph3": "Die von uns gesammelten Informationen werden verwendet, um Sie in Zukunft zu kontaktieren. Wir werden Ihre personenbezogenen Daten nur für diesen spezifischen Zweck verwenden.",
 		"paragraph4": "Wir verarbeiten Ihre personenbezogenen Daten auf der Grundlage Ihrer Einwilligung, die Sie durch das Ausfüllen des Formulars auf unserer Website erteilen.",
 		"paragraph5": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter, es sei denn, dies ist gesetzlich vorgeschrieben.",
@@ -484,151 +492,428 @@
 		}
 	},
 	"svgTitles": {
-		"Bash": "Bash Shell-Logo",
-		"CSS3": "CSS-Logo",
-		"Cypress": "Cypress Test-Framework-Logo",
-		"Expressjs": "Express.js Web-Framework-Logo",
-		"ExternalLinkSvg": "Externer Link SVG-Symbol",
-		"Git": "Git Versionskontroll-Logo",
-		"GitHubIcon": "GitHub Profil-Link-Symbol",
-		"Github": "GitHub-Logo",
-		"HTML5": "HTML5-Logo",
-		"JavaScript": "JavaScript-Logo",
-		"Jest": "Jest Test-Framework-Logo",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animiertes Mond-zu-Sonne-Übergangssymbol",
-		"LinkedInIcon": "LinkedIn Profil-Link-Symbol",
-		"Linux": "Linux Betriebssystem-Logo",
-		"Moon": "Mond-Symbol für Dark-Mode-Umschalter",
-		"Nextjs": "Next.js Framework-Logo",
-		"Nodejs": "Node.js Runtime-Logo",
-		"PostgreSQL": "PostgreSQL Datenbank-Logo",
-		"Python": "Python Programmiersprachen-Logo",
-		"Reactjs": "React Bibliotheks-Logo",
-		"Redux": "Redux State-Management-Logo",
+		"Bash": "Bash shell logo",
+		"CSS3": "CSS Logo",
+		"Cloudflare": "Cloudflare logo",
+		"Cypress": "Cypress testing framework logo",
+		"D3js": "D3.js logo",
+		"Django": "Django logo",
+		"ESLint": "ESLint logo",
+		"Expressjs": "Express.js web framework logo",
+		"ExternalLinkSvg": "External-link SVG Icon",
+		"Figma": "Figma logo",
+		"Git": "Git version control logo",
+		"GitHubIcon": "GitHub profile link icon",
+		"Github": "GitHub logo",
+		"GithubActions": "GitHub Actions logo",
+		"GithubPages": "GitHub Pages logo",
+		"HTML5": "HTML5 logo",
+		"JSON": "JSON logo",
+		"JavaScript": "JavaScript logo",
+		"Jest": "Jest testing framework logo",
+		"LangChain": "LangChain logo",
+		"LaTeX": "LaTeX logo",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animated moon to sun loop transition icon",
+		"LinkedInIcon": "LinkedIn profile link icon",
+		"Linux": "Linux operating system logo",
+		"Markdown": "Markdown logo",
+		"Moon": "Moon icon for dark mode toggle",
+		"MongoDB": "MongoDB logo",
+		"Netlify": "Netlify logo",
+		"Nextjs": "Next.js framework logo",
+		"Nodejs": "Node.js runtime logo",
+		"Playwright": "Playwright logo",
+		"PostgreSQL": "PostgreSQL database logo",
+		"Postman": "Postman logo",
+		"Python": "Python programming language logo",
+		"Reactjs": "React library logo",
+		"Redux": "Redux state management logo",
+		"SELENIUM": "Selenium WebDriver",
 		"Selenium": "Selenium WebDriver",
-		"Sun": "Sonnen-Symbol für Light-Mode-Umschalter",
-		"Sun1": "Sonnen-Symbol",
-		"TypeScript": "TypeScript Programmiersprachen-Logo",
-		"Vitejs": "Vite Build-Tool-Logo",
-		"Vitest": "Vitest Test-Framework-Logo",
-		"Webpack": "Webpack Modul-Bundler-Logo",
-		"Zsh": "Zsh Shell-Logo",
-		"alertAnimation": "Animiertes Warndreieck mit Ausrufezeichen",
-		"blocksShuffle": "Animierter Block-Shuffle-Ladespinner",
-		"blocksWave": "Animierter Block-Wellen-Ladespinner",
-		"closeToMenu": "Schließen-zu-Menü-Übergangssymbol",
-		"compass": "Animierter Kompass mit rotierender Richtungsnadel",
-		"computerAnimation": "Animierter Computermonitor mit Tastaturablage",
-		"djangoRocket": "Django-Raketen-Illustration",
-		"externalLink": "Externer Link Symbol",
-		"menuToClose": "Menü-zu-Schließen-Übergangssymbol",
-		"moonToSun": "Animiertes Mond-zu-Sonne-Übergangssymbol",
-		"nextjsTsx": "Next.js Framework-Schriftzug",
+		"Sun": "Sun icon for light mode toggle",
+		"Sun1": "Sun icon",
+		"TailwindCSS": "Tailwind CSS logo",
+		"TypeScript": "TypeScript programming language logo",
+		"VSCode": "Visual Studio Code logo",
+		"Vitejs": "Vite build tool logo",
+		"Vitest": "Vitest testing framework logo",
+		"Webpack": "Webpack module bundler logo",
+		"Zsh": "Zsh shell logo",
+		"Zustand": "Zustand logo",
+		"alertAnimation": "Animated alert triangle with exclamation mark",
+		"blocksShuffle": "Animated blocks shuffle loading spinner",
+		"blocksWave": "Animated blocks wave loading spinner",
+		"closeToMenu": "Close to menu transition icon",
+		"compass": "Animated compass with rotating directional needle",
+		"computerAnimation": "Animated computer monitor with keyboard tray",
+		"djangoRocket": "Django rocket illustration",
+		"externalLink": "External link icon",
+		"menuToClose": "Menu to close transition icon",
+		"moonToSun": "Animated moon to sun transition icon",
+		"nextjsTsx": "Next.js framework logotype",
 		"opensInNewTab": "opens in new tab",
-		"sunToMoon": "Animiertes Sonne-zu-Mond-Übergangssymbol"
+		"sunToMoon": "Animated sun to moon transition icon"
 	},
 	"tech": [
 		{
-			"link": "https://nextjs.org",
-			"logo": "/images/icons/nextjs-13.svg",
-			"name": "next.js",
-			"svgr": "Nextjs"
-		},
-		{
-			"link": "https://react.dev",
-			"logo": "/images/icons/react2.svg",
-			"name": "react.js",
-			"svgr": "Reactjs"
-		},
-		{
-			"link": "https://nodejs.org/en",
-			"logo": "/images/icons/node-js.svg",
-			"name": "node.js",
-			"svgr": "Nodejs"
-		},
-		{
+			"id": "typescript",
 			"link": "https://www.typescriptlang.org",
 			"logo": "/images/icons/Typescript.svg",
 			"name": "typeScript",
-			"svgr": "TypeScript"
+			"svgr": "TypeScript",
+			"categories": [
+				"Languages"
+			]
 		},
 		{
+			"id": "javascript",
 			"link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-			"logo": "/images/icons/javascript-original.svg",
+			"logo": "/images/icons/javascript.svg",
 			"name": "javaScript",
-			"svgr": "JavaScript"
+			"svgr": "JavaScript",
+			"categories": [
+				"Languages"
+			]
 		},
 		{
+			"id": "python",
+			"link": "https://www.python.org/",
+			"logo": "/images/icons/python.svg",
+			"name": "python",
+			"svgr": "Python",
+			"categories": [
+				"Languages"
+			]
+		},
+		{
+			"id": "html5",
 			"link": "https://www.w3.org/html/",
 			"logo": "/images/icons/html5-original-wordmark.svg",
 			"name": "HTML5",
-			"svgr": "HTML5"
+			"svgr": "HTML5",
+			"categories": [
+				"Front End"
+			]
 		},
 		{
+			"id": "css3",
 			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
 			"logo": "/images/icons/Official_CSS_Logo.svg",
 			"name": "CSS3",
-			"svgr": "CSS3"
+			"svgr": "CSS3",
+			"categories": [
+				"Front End"
+			]
 		},
 		{
+			"id": "tailwindcss",
+			"link": "https://tailwindcss.com/",
+			"logo": "/images/icons/tailwindcss.svg",
+			"name": "tailwind CSS",
+			"svgr": "TailwindCSS",
+			"categories": [
+				"Front End"
+			]
+		},
+		{
+			"id": "react",
+			"link": "https://react.dev",
+			"logo": "/images/icons/react2.svg",
+			"name": "react.js",
+			"svgr": "Reactjs",
+			"categories": [
+				"Front End"
+			]
+		},
+		{
+			"id": "nextjs",
+			"link": "https://nextjs.org",
+			"logo": "/images/icons/nextjs-13.svg",
+			"name": "next.js",
+			"svgr": "Nextjs",
+			"categories": [
+				"Front End"
+			]
+		},
+		{
+			"id": "django",
+			"link": "https://www.djangoproject.com/",
+			"logo": "/images/icons/django.svg",
+			"name": "django",
+			"svgr": "Django",
+			"categories": [
+				"Back End"
+			]
+		},
+		{
+			"id": "nodejs",
+			"link": "https://nodejs.org/en",
+			"logo": "/images/icons/node-js.svg",
+			"name": "node.js",
+			"svgr": "Nodejs",
+			"categories": [
+				"Back End"
+			]
+		},
+		{
+			"id": "zustand",
+			"link": "https://zustand.docs.pmnd.rs/",
+			"logo": "/images/icons/zustand.svg",
+			"name": "zustand",
+			"svgr": "Zustand",
+			"categories": [
+				"State Management"
+			]
+		},
+		{
+			"id": "redux",
+			"link": "https://redux.js.org",
+			"logo": "/images/icons/redux.svg",
+			"name": "redux",
+			"svgr": "Redux",
+			"categories": [
+				"State Management"
+			]
+		},
+		{
+			"id": "d3",
+			"link": "https://d3js.org/",
+			"logo": "/images/icons/d3.svg",
+			"name": "d3.js",
+			"svgr": "D3js",
+			"categories": [
+				"AI, Data and Visualization"
+			]
+		},
+		{
+			"id": "langchain",
+			"link": "https://www.langchain.com/",
+			"logo": "/images/icons/langchain-corporate.svg",
+			"name": "langChain",
+			"svgr": "LangChain",
+			"categories": [
+				"AI, Data and Visualization"
+			]
+		},
+		{
+			"id": "postgresql",
 			"link": "https://www.postgresql.org",
 			"logo": "/images/icons/postgresql.svg",
 			"name": "postgreSQL",
-			"svgr": "PostgreSQL"
+			"svgr": "PostgreSQL",
+			"categories": [
+				"Databases"
+			]
 		},
 		{
-			"link": "https://vite.dev",
-			"logo": "/images/icons/vitejs.svg",
-			"name": "vite.js",
-			"svgr": "Vitejs"
+			"id": "mongodb",
+			"link": "https://www.mongodb.com/",
+			"logo": "/images/icons/mongodb.svg",
+			"name": "mongoDB",
+			"svgr": "MongoDB",
+			"categories": [
+				"Databases"
+			]
 		},
 		{
-			"link": "https://webpack.js.org/",
-			"logo": "/images/icons/webpack.svg",
-			"name": "webpack",
-			"svgr": "Webpack"
-		},
-		{
-			"link": "https://github.com/",
-			"logo": "/images/icons/github.svg",
-			"name": "gitHub",
-			"svgr": "Github"
-		},
-		{
-			"link": "https://git-scm.com/",
-			"logo": "/images/icons/git-scm-icon.svg",
-			"name": "git",
-			"svgr": "Git"
-		},
-		{
-			"link": "https://vitest.dev/",
-			"logo": "/images/icons/vitest.svg",
-			"name": "vitest",
-			"svgr": "Vitest"
-		},
-		{
+			"id": "jest",
 			"link": "https://jestjs.io/",
 			"logo": "/images/icons/jestjsio-icon.svg",
 			"name": "jest",
-			"svgr": "Jest"
+			"svgr": "Jest",
+			"categories": [
+				"Testing"
+			]
 		},
 		{
+			"id": "vitest",
+			"link": "https://vitest.dev/",
+			"logo": "/images/icons/vitest.svg",
+			"name": "vitest",
+			"svgr": "Vitest",
+			"categories": [
+				"Testing"
+			]
+		},
+		{
+			"id": "playwright",
+			"link": "https://playwright.dev/",
+			"logo": "/images/icons/playwright.svg",
+			"name": "playwright",
+			"svgr": "Playwright",
+			"categories": [
+				"Testing"
+			]
+		},
+		{
+			"id": "webpack",
+			"link": "https://webpack.js.org/",
+			"logo": "/images/icons/webpack.svg",
+			"name": "webpack",
+			"svgr": "Webpack",
+			"categories": [
+				"CI / CD"
+			]
+		},
+		{
+			"id": "vite",
+			"link": "https://vite.dev",
+			"logo": "/images/icons/vitejs.svg",
+			"name": "vite.js",
+			"svgr": "Vitejs",
+			"categories": [
+				"CI / CD"
+			]
+		},
+		{
+			"id": "selenium",
 			"link": "https://selenium-python.readthedocs.io/",
 			"logo": "/images/icons/selenium.svg",
 			"name": "selenium",
-			"svgr": "Selenium"
+			"svgr": "Selenium",
+			"categories": [
+				"Testing"
+			]
 		},
 		{
-			"link": "https://www.python.org/",
-			"logo": "/images/icons/python-original.svg",
-			"name": "python",
-			"svgr": "Python"
+			"id": "githubactions",
+			"link": "https://github.com/features/actions/",
+			"logo": "/images/icons/githubactions.svg",
+			"name": "gitHub Actions",
+			"svgr": "GithubActions",
+			"categories": [
+				"CI / CD"
+			]
 		},
 		{
+			"id": "eslint",
+			"link": "https://eslint.org/",
+			"logo": "/images/icons/eslint-original.svg",
+			"name": "eSLint",
+			"svgr": "ESLint",
+			"categories": [
+				"CI / CD"
+			]
+		},
+		{
+			"id": "git",
+			"link": "https://git-scm.com/",
+			"logo": "/images/icons/git-scm-icon.svg",
+			"name": "git",
+			"svgr": "Git",
+			"categories": [
+				"Tools & DevOps"
+			]
+		},
+		{
+			"id": "github",
+			"link": "https://github.com/",
+			"logo": "/images/icons/github.svg",
+			"name": "gitHub",
+			"svgr": "Github",
+			"categories": [
+				"Tools & DevOps"
+			]
+		},
+		{
+			"id": "postman",
+			"link": "https://www.postman.com/",
+			"logo": "/images/icons/postman.svg",
+			"name": "postman",
+			"svgr": "Postman",
+			"categories": [
+				"Tools & DevOps"
+			]
+		},
+		{
+			"id": "linux",
 			"link": "https://www.linux.org/",
 			"logo": "/images/icons/linux-original.svg",
 			"name": "linux",
-			"svgr": "Linux"
+			"svgr": "Linux",
+			"categories": [
+				"Tools & DevOps"
+			]
+		},
+		{
+			"id": "vscode",
+			"link": "https://code.visualstudio.com",
+			"logo": "/images/icons/vscode.svg",
+			"name": "visual Studio Code",
+			"svgr": "VSCode",
+			"categories": [
+				"Tools & DevOps"
+			]
+		},
+		{
+			"id": "figma",
+			"link": "https://www.figma.com/",
+			"logo": "/images/icons/figma.svg",
+			"name": "figma",
+			"svgr": "Figma",
+			"categories": [
+				"Tools & DevOps"
+			]
+		},
+		{
+			"id": "cloudflare",
+			"link": "https://www.cloudflare.com/",
+			"logo": "/images/icons/cloudflare.svg",
+			"name": "cloudflare",
+			"svgr": "Cloudflare",
+			"categories": [
+				"Hosting"
+			]
+		},
+		{
+			"id": "githubpages",
+			"link": "https://pages.github.com/",
+			"logo": "/images/icons/github.svg",
+			"name": "gitHub Pages",
+			"svgr": "GithubPages",
+			"categories": [
+				"Hosting"
+			]
+		},
+		{
+			"id": "netlify",
+			"link": "https://www.netlify.com/",
+			"logo": "/images/icons/netlify.svg",
+			"name": "netlify",
+			"svgr": "Netlify",
+			"categories": [
+				"Hosting"
+			]
+		},
+		{
+			"id": "markdown",
+			"link": "https://www.markdownguide.org/",
+			"logo": "/images/icons/markdown.svg",
+			"name": "markdown",
+			"svgr": "Markdown",
+			"categories": [
+				"Data Formats"
+			]
+		},
+		{
+			"id": "json",
+			"link": "https://json.org/",
+			"logo": "/images/icons/json.svg",
+			"name": "JSON",
+			"svgr": "JSON",
+			"categories": [
+				"Data Formats"
+			]
+		},
+		{
+			"id": "latex",
+			"link": "https://www.latex-project.org/",
+			"logo": "/images/icons/latex-project-logo-no-text.svg",
+			"name": "LaTeX",
+			"svgr": "LaTeX",
+			"categories": [
+				"Data Formats"
+			]
 		}
 	],
 	"topMainPage": {
@@ -660,5 +945,62 @@
 		],
 		"p1": "Haben Sie es satt, dass Software Ihr Geschäft ausbremst?",
 		"p2": "Die meisten Geschäftsanwendungen sind entweder zu starr oder zu komplex. Ich spezialisiere mich auf die Entwicklung maßgeschneiderter Webanwendungen – wie CRM-Systeme, Projekt-Tracker und Daten-Dashboards – die genau zu Ihrer tatsächlichen Arbeitsweise passen. Wenn Sie ein Werkzeug benötigen, das ein bestimmtes Problem ohne überflüssige Funktionen löst, sprechen wir darüber, was Sie erreichen möchten."
-	}
+	},
+	"techCategories": [
+		{
+			"id": "languages",
+			"label": "Languages",
+			"order": 1
+		},
+		{
+			"id": "front-end",
+			"label": "Front End",
+			"order": 2
+		},
+		{
+			"id": "back-end",
+			"label": "Back End",
+			"order": 3
+		},
+		{
+			"id": "state-management",
+			"label": "State Management",
+			"order": 4
+		},
+		{
+			"id": "ai-data-viz",
+			"label": "AI, Data and Visualization",
+			"order": 5
+		},
+		{
+			"id": "databases",
+			"label": "Databases",
+			"order": 6
+		},
+		{
+			"id": "testing",
+			"label": "Testing",
+			"order": 7
+		},
+		{
+			"id": "ci-cd",
+			"label": "CI / CD",
+			"order": 8
+		},
+		{
+			"id": "tools-devops",
+			"label": "Tools & DevOps",
+			"order": 9
+		},
+		{
+			"id": "hosting",
+			"label": "Hosting",
+			"order": 10
+		},
+		{
+			"id": "data-formats",
+			"label": "Data Formats",
+			"order": 11
+		}
+	]
 }

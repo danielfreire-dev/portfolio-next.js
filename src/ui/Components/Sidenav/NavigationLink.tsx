@@ -30,7 +30,7 @@ const NavigationLink = ({ href, isOpen, setIsOpen, ...rest }: NavigationLinkProp
 			aria-current={isActive ? "page" : undefined}
 			href={href}
 			{...rest}
-			inputData="NavLink"
+			inputdata="NavLink"
 			isOpen={isOpen}
 			setIsOpen={setIsOpen}
 		/>
