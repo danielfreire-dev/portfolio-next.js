@@ -156,7 +156,7 @@ export default async function RootLayout({
 
 	const messages = await getMessages();
 
-	const themeScript = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");document.documentElement.classList.add("theme-ready")}catch(e){}})();`;
+	const themeScript = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d){document.documentElement.classList.add("dark");document.documentElement.style.background="#0f1624";document.documentElement.style.color="#e6f0ff"}else{document.documentElement.style.background="#fcfcfc";document.documentElement.style.color="#2a2a36"}requestAnimationFrame(function(){document.documentElement.classList.add("theme-ready");document.documentElement.style.background="";document.documentElement.style.color=""})}catch(e){document.documentElement.classList.add("theme-ready")}})();`;
 
 	return (
 		<html
