@@ -106,12 +106,19 @@ html:not(.theme-ready),
 html:not(.theme-ready) *,
 html:not(.theme-ready) *::before,
 html:not(.theme-ready) *::after {
-	transition: none;
-	animation: none;
-	-webkit-transition: none;
-	-moz-transition: none;
-	-ms-transition: none;
-	-o-transition: none;
+	transition: none !important;
+	-webkit-animation: none !important;
+	animation: none !important;
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
+/* Hide page until theme CSS variables are applied — prevents the
+   flash of default browser colors (white bg / black text) on load. */
+html:not(.theme-ready) body {
+	opacity: 0;
 }
 
 html {

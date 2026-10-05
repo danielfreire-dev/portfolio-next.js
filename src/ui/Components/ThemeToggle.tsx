@@ -49,7 +49,6 @@ const ThemeToggle = () => {
 	const t = useTranslations("svgTitles");
 
 	useEffect(() => {
-		document.documentElement.classList.add("theme-ready");
 
 		const savedTheme = getStoredTheme();
 		if (savedTheme) {
