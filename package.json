@@ -48,7 +48,7 @@
 		"@typescript-eslint/eslint-plugin": "^8.50.0",
 		"@typescript-eslint/parser": "^8.50.0",
 		"@vitejs/plugin-react": "^4.7.0",
-		"baseline-browser-mapping": "^2.9.8",
+		"baseline-browser-mapping": "^2.11.0",
 		"cypress": "^15.7.1",
 		"cypress-accessibility-checker": "^4.0.10",
 		"eslint": "^9.39.2",
