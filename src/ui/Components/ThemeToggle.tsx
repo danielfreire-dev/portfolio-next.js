@@ -29,6 +29,30 @@ function setStoredTheme(value: string): void {
 }
 
 /**
+ * Temporarily disables all CSS transitions across elements during theme changes,
+ * preventing color transition artifacts and flashing (inspired by next-themes).
+ */
+function disableTransitionsTemporarily(): void {
+	if (typeof document === "undefined") return;
+	const css = document.createElement("style");
+	css.appendChild(
+		document.createTextNode(
+			"*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}"
+		)
+	);
+	document.head.appendChild(css);
+	// Force reflow
+	(() => window.getComputedStyle(document.body))();
+	requestAnimationFrame(() => {
+		requestAnimationFrame(() => {
+			if (document.head.contains(css)) {
+				document.head.removeChild(css);
+			}
+		});
+	});
+}
+
+/**
  * Dark/light theme toggle component.
  *
  * Renders a hidden checkbox that controls the theme state via Zustand.
@@ -49,31 +73,45 @@ const ThemeToggle = () => {
 	const t = useTranslations("svgTitles");
 
 	useEffect(() => {
-
 		const savedTheme = getStoredTheme();
+		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
 		if (savedTheme) {
 			const isDark = savedTheme === "dark";
 			setValue(isDark);
 			document.documentElement.classList.toggle("dark", isDark);
-			return;
-		}
-
-		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-		if (!savedTheme) {
+		} else {
 			const isDark = mediaQuery.matches;
 			setValue(isDark);
 			document.documentElement.classList.toggle("dark", isDark);
 		}
+		document.documentElement.classList.add("theme-ready");
 
-		const handleChange = (e: MediaQueryListEvent) => {
+		const handleMediaChange = (e: MediaQueryListEvent) => {
 			if (!getStoredTheme()) {
 				setValue(e.matches);
+				document.documentElement.classList.toggle("dark", e.matches);
 			}
 		};
 
-		mediaQuery.addEventListener("change", handleChange);
-		return () => mediaQuery.removeEventListener("change", handleChange);
-	}, []);
+		const handleStorage = (e: StorageEvent) => {
+			if (e.key === THEME_KEY) {
+				const isDark =
+					e.newValue === "dark" ||
+					(!e.newValue && window.matchMedia("(prefers-color-scheme: dark)").matches);
+				setValue(isDark);
+				document.documentElement.classList.toggle("dark", isDark);
+			}
+		};
+
+		mediaQuery.addEventListener("change", handleMediaChange);
+		window.addEventListener("storage", handleStorage);
+
+		return () => {
+			mediaQuery.removeEventListener("change", handleMediaChange);
+			window.removeEventListener("storage", handleStorage);
+		};
+	}, [setValue]);
 
 	/**
 	 * Updates the theme from the toggle input and persists the user's
@@ -89,6 +127,7 @@ const ThemeToggle = () => {
 	 */
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const newTheme = e.target.checked;
+		disableTransitionsTemporarily();
 		setValue(newTheme);
 
 		document.documentElement.classList.toggle("dark", newTheme);
