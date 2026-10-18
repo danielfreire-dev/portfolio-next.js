@@ -73,4 +73,34 @@ describe("Error boundary page", () => {
 		expect(consoleSpy).toHaveBeenCalledWith(mockError);
 		consoleSpy.mockRestore();
 	});
+
+	it("should render the error heading with visible text", () => {
+		const mockError = new Error("Test error");
+		const mockReset = vi.fn();
+
+		renderWithProviders(
+			<ErrorBoundary
+				error={mockError}
+				reset={mockReset}
+			/>,
+		);
+
+		const heading = screen.getByRole("heading", { level: 2 });
+		expect(heading).toHaveTextContent("Something went wrong!");
+	});
+
+	it("should render error digest when provided", () => {
+		const mockError = Object.assign(new Error("Test error"), { digest: "error_digest_12345" });
+		const mockReset = vi.fn();
+
+		renderWithProviders(
+			<ErrorBoundary
+				error={mockError}
+				reset={mockReset}
+			/>,
+		);
+
+		expect(screen.getByText(/error_digest_12345/)).toBeInTheDocument();
+	});
 });
+

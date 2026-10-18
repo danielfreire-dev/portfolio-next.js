@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 /* Add truncate to all text elements */
 /* @layer base {
 	/* Or target specific elements */
@@ -115,10 +116,10 @@ html:not(.theme-ready) *::after {
 	-o-transition: none !important;
 }
 
-/* Hide page until theme CSS variables are applied — prevents the
-   flash of default browser colors (white bg / black text) on load. */
-html:not(.theme-ready) body {
-	opacity: 0;
+/* Hide call-to-action button on 404 / not-found page */
+#main:has(.not-found-page) a[inputdata="CtA"],
+#main:has([data-testid="not-found-page"]) a[inputdata="CtA"] {
+	display: none;
 }
 
 html {

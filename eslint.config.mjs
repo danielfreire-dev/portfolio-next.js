@@ -360,13 +360,14 @@ export default [
 			"coverage/",
 			"public/",
 			"*.d.ts",
+			"test/",
 			"!.github/", // Include .github directory for config files
 		],
 	},
 
 	// Global overrides (duplicate ignores block)
 	{
-		ignores: ["node_modules/", "dist/", "build/", "coverage/", "public/", "*.d.ts"],
+		ignores: ["node_modules/", "dist/", "build/", "coverage/", "public/", "*.d.ts", "test/"],
 	},
 
 	// ──────────────────────────────────────────────
