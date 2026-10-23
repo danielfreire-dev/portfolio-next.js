@@ -69,7 +69,7 @@
 		"tailwind-csstree": "^0.1.4",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.50.0",
-		"vite": "^7.3.5"
+		"vite": "^7.3.7"
 	},
 	"name": "Daniel Freire's Portfolio",
 	"private": true,
