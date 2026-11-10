@@ -66,14 +66,13 @@ const ContactForm = () => {
 	}
 
 	/**
-	 * Handles form submission by validating the Turnstile token and
-	 * delegating to the `submitContact` server action.
+	 * Handles form submission by delegating to the `submitContact` server
+	 * action, which validates the Turnstile token server-side.
 	 *
-	 * Guards against submission without a valid Turnstile token (bots
-	 * or expired challenges) by checking `turnstileStatus` before
-	 * calling the server action. On success the form is hidden and a
-	 * farewell message is shown; on failure the error is surfaced
-	 * via the `error` state so the user can retry.
+	 * Skips the round-trip when the widget hasn't produced a token yet.
+	 * On success the form is hidden and a farewell message is shown; on
+	 * failure the error is surfaced via the `error` state and the widget
+	 * is reset so the user can retry with a fresh token.
 	 */
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
@@ -98,6 +97,11 @@ const ContactForm = () => {
 			console.error("ContactForm submission failed:", result.error);
 			setError(result.error);
 			setLoading("error");
+			// Turnstile tokens are single-use and the server has consumed this
+			// one, so remount the widget to obtain a fresh token for a retry.
+			setTurnstileToken(null);
+			setTurnstileStatus("required");
+			setTurnstileKeyCounter((prev) => prev + 1);
 		}
 	}
 
@@ -260,25 +264,12 @@ const ContactForm = () => {
 								setError(null);
 								setTurnstileLoaded(true);
 							}}
-							onVerify={async (token) => {
-								try {
-									const res = await fetch("/api/turnstile", {
-										method: "POST",
-										headers: { "Content-Type": "application/json" },
-										body: JSON.stringify({ token }),
-									});
-									if (res.ok) {
-										setTurnstileToken(token);
-										setTurnstileStatus("success");
-										setError(null);
-									} else {
-										setTurnstileStatus("error");
-										setError(t("errors.turnstileFailed"));
-									}
-								} catch {
-									setTurnstileStatus("error");
-									setError(t("errors.turnstileFailed"));
-								}
+							onVerify={(token) => {
+								// The token is validated server-side inside the
+								// submitContact action (tokens are single-use).
+								setTurnstileToken(token);
+								setTurnstileStatus("success");
+								setError(null);
 							}}
 						/>
 					</div>

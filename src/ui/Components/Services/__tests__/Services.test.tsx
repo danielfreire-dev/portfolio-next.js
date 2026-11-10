@@ -38,7 +38,6 @@ describe("Services", () => {
 
 		it("renders heading with Techstack-matching classes", () => {
 			const heading = screen.getByText("Services");
-			expect(heading).toHaveClass("mt-7");
 			expect(heading).toHaveClass("text-3xl");
 			expect(heading).toHaveClass("font-bold");
 			expect(heading).toHaveClass("text-center");

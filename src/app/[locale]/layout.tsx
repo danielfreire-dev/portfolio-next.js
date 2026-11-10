@@ -13,6 +13,7 @@ import { Providers } from "@/providers/CookieBanner";
 import GoogleAnalytics from "@/providers/GoogleAnalytics";
 import { Suspense } from "react";
 import { generatePersonSchema, generateWebSiteSchema } from "@/ui/Components/StructuredData";
+import { themeScript } from "@/lib/themeScript";
 
 /**
  * Static metadata for the root layout.
@@ -156,8 +157,6 @@ export default async function RootLayout({
 
 	const messages = await getMessages();
 
-	const themeScript = `(function(){try{var d=document.documentElement;var t=localStorage.getItem("theme");var isDark=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(isDark){d.classList.add("dark")}else{d.classList.remove("dark")}d.classList.add("theme-ready")}catch(e){document.documentElement.classList.add("theme-ready")}})();`;
-
 	return (
 		<html
 			lang={locale}
@@ -171,12 +170,14 @@ export default async function RootLayout({
 					}}
 				/>
 			</head>
-			<SpeedInsights />
-			<Suspense fallback={null}>
-				<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics!} />
-			</Suspense>
 			<body
 				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}>
+				<SpeedInsights />
+				{googleAnalytics && (
+					<Suspense fallback={null}>
+						<GoogleAnalytics GA_MEASUREMENT_ID={googleAnalytics} />
+					</Suspense>
+				)}
 				<NextIntlClientProvider messages={messages}>
 					<Providers>
 						<header className="flex flex-row max-w-dvw">

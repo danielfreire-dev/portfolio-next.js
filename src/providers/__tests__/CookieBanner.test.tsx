@@ -152,7 +152,7 @@ describe("CookieBanner (Providers)", () => {
 			expectBannerHidden();
 		});
 
-		it("does NOT call gtag when declining", () => {
+		it("updates gtag consent to denied when declining", () => {
 			const gtag = window.gtag as ReturnType<typeof vi.fn>;
 			renderWithProviders(
 				<Providers>
@@ -162,7 +162,8 @@ describe("CookieBanner (Providers)", () => {
 			act(() => {
 				screen.getByRole("button", { name: "Decline" }).click();
 			});
-			expect(gtag).not.toHaveBeenCalled();
+			expect(gtag).toHaveBeenCalledWith("consent", "update", { analytics_storage: "denied" });
+			expect(gtag).not.toHaveBeenCalledWith("consent", "update", { analytics_storage: "granted" });
 		});
 	});
 
@@ -272,7 +273,7 @@ describe("CookieBanner (Providers)", () => {
 			expect(gtag).toHaveBeenCalledWith("consent", "update", { analytics_storage: "granted" });
 		});
 
-		it("does NOT call gtag when analytics is toggled off in manage modal", () => {
+		it("updates gtag consent to denied when analytics is off in manage modal", () => {
 			const gtag = window.gtag as ReturnType<typeof vi.fn>;
 			renderWithProviders(
 				<Providers>
@@ -286,7 +287,8 @@ describe("CookieBanner (Providers)", () => {
 			act(() => {
 				screen.getByRole("button", { name: "Save" }).click();
 			});
-			expect(gtag).not.toHaveBeenCalled();
+			expect(gtag).toHaveBeenCalledWith("consent", "update", { analytics_storage: "denied" });
+			expect(gtag).not.toHaveBeenCalledWith("consent", "update", { analytics_storage: "granted" });
 		});
 	});
 

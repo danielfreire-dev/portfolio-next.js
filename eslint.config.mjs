@@ -355,19 +355,17 @@ export default [
 	{
 		ignores: [
 			"node_modules/",
+			".next/",
+			"out/",
 			"dist/",
 			"build/",
 			"coverage/",
 			"public/",
+			"plans/",
 			"*.d.ts",
 			"test/",
 			"!.github/", // Include .github directory for config files
 		],
-	},
-
-	// Global overrides (duplicate ignores block)
-	{
-		ignores: ["node_modules/", "dist/", "build/", "coverage/", "public/", "*.d.ts", "test/"],
 	},
 
 	// ──────────────────────────────────────────────

@@ -15,7 +15,11 @@ const THEME_KEY = "theme";
  */
 function getStoredTheme(): string | null {
 	if (typeof window === "undefined") return null;
-	return localStorage.getItem(THEME_KEY);
+	try {
+		return localStorage.getItem(THEME_KEY);
+	} catch {
+		return null;
+	}
 }
 
 /**
@@ -25,7 +29,17 @@ function getStoredTheme(): string | null {
  */
 function setStoredTheme(value: string): void {
 	if (typeof window === "undefined") return;
-	localStorage.setItem(THEME_KEY, value);
+	try {
+		localStorage.setItem(THEME_KEY, value);
+	} catch {
+		/* Storage unavailable (private mode, quota) — theme still applies for this session. */
+	}
+}
+
+/** Applies the theme to both the Zustand store and the `<html>` class list. */
+function applyTheme(isDark: boolean, setValue: (value: boolean) => void): void {
+	setValue(isDark);
+	document.documentElement.classList.toggle("dark", isDark);
 }
 
 /**
@@ -49,31 +63,24 @@ const ThemeToggle = () => {
 	const t = useTranslations("svgTitles");
 
 	useEffect(() => {
-
 		const savedTheme = getStoredTheme();
 		if (savedTheme) {
-			const isDark = savedTheme === "dark";
-			setValue(isDark);
-			document.documentElement.classList.toggle("dark", isDark);
+			applyTheme(savedTheme === "dark", setValue);
 			return;
 		}
 
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-		if (!savedTheme) {
-			const isDark = mediaQuery.matches;
-			setValue(isDark);
-			document.documentElement.classList.toggle("dark", isDark);
-		}
+		applyTheme(mediaQuery.matches, setValue);
 
 		const handleChange = (e: MediaQueryListEvent) => {
 			if (!getStoredTheme()) {
-				setValue(e.matches);
+				applyTheme(e.matches, setValue);
 			}
 		};
 
 		mediaQuery.addEventListener("change", handleChange);
 		return () => mediaQuery.removeEventListener("change", handleChange);
-	}, []);
+	}, [setValue]);
 
 	/**
 	 * Updates the theme from the toggle input and persists the user's
@@ -89,9 +96,7 @@ const ThemeToggle = () => {
 	 */
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		const newTheme = e.target.checked;
-		setValue(newTheme);
-
-		document.documentElement.classList.toggle("dark", newTheme);
+		applyTheme(newTheme, setValue);
 
 		setStoredTheme(newTheme ? "dark" : "light");
 

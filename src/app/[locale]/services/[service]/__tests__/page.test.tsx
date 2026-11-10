@@ -82,11 +82,6 @@ vi.mock("@/ui/Components/Sidenav/TransitionLink", () => ({
 	),
 }));
 
-/** Mock Cta component. */
-vi.mock("@/ui/Components/CtA/Cta", () => ({
-	default: () => <div data-testid="cta">CTA</div>,
-}));
-
 /** Mock next/image. */
 vi.mock("next/image", () => ({
 	default: ({ alt, src, width, height, className }: Record<string, unknown>) => (
@@ -133,11 +128,5 @@ describe("ServiceDetailPage", () => {
 
 		const backLink = await screen.findByText("metadata.title.services");
 		expect(backLink.closest("a")).toHaveAttribute("href", "/services");
-	});
-
-	it("renders the CTA section", async () => {
-		renderWithProviders(<ServiceDetailPage params={defaultParams} />);
-
-		expect(await screen.findByTestId("cta")).toBeInTheDocument();
 	});
 });

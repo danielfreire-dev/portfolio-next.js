@@ -211,8 +211,7 @@ describe("ContactForm", () => {
 			const verifyBtn = screen.getByTestId("turnstile-verify-btn");
 			fireEvent.click(verifyBtn);
 
-			// onVerify is async (calls /api/turnstile) — wait for the
-			// state update to flush before asserting.
+			// Wait for the onVerify state update to flush before asserting.
 			await waitFor(() => {
 				const submitBtn = screen.getByRole("button", { name: "Send" });
 				expect(submitBtn).not.toBeDisabled();

@@ -77,6 +77,7 @@
 		"btn": "wyślij wiadomość",
 		"email": "e-mail",
 		"errors": {
+			"invalidInput": "Sprawdź swoje dane i spróbuj ponownie.",
 			"sendFailed": "Failed to send message. Please try again.",
 			"sendPartial": "Failed to send confirmation. Your message was received.",
 			"serverConfig": "Server configuration error. Please try again later.",

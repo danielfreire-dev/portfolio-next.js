@@ -34,13 +34,11 @@
     "test"
   ],
   "include": [
-    "svgr.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "next.config.js",
     ".next/types/**/*.ts",
-    ".",
     ".next/dev/types/**/*.ts"
   ]
 }
