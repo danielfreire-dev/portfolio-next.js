@@ -169,6 +169,10 @@ export default async function RootLayout({
 						__html: JSON.stringify([generatePersonSchema(), generateWebSiteSchema()]),
 					}}
 				/>
+				<meta
+					name="color-scheme"
+					content="light dark"
+				/>
 			</head>
 			<body
 				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}>
