@@ -378,6 +378,7 @@ textarea {
 		border-color: var(--error);
 	}
 }
+h1,
 h2 {
 	font-size: 2.5rem;
 	font-weight: 700;
@@ -510,13 +511,14 @@ footer a {
 	-o-transition: opacity 0.5s ease-in-out;
 }
 
+/* Blur-and-fade entrance.  Deliberately no letter-spacing animation: it
+   reflows the text while it plays, which caused a 2.3 CLS on the About page. */
 .focus-in-expand {
 	animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @-webkit-keyframes focus-in-expand {
 	0% {
-		letter-spacing: -0.5em;
 		-webkit-filter: blur(12px);
 		filter: blur(12px);
 		opacity: 0;
@@ -529,7 +531,6 @@ footer a {
 }
 @keyframes focus-in-expand {
 	0% {
-		letter-spacing: -0.5em;
 		-webkit-filter: blur(12px);
 		filter: blur(12px);
 		opacity: 0;

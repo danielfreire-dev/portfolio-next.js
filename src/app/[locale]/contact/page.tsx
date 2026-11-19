@@ -3,8 +3,9 @@ import { Locale, useTranslations } from "next-intl";
 import ContactForm from "@/ui/Components/ContactForm";
 import { Metadata } from "next";
 import { use } from "react";
-import { generateBreadcrumbSchema, generateContactPointSchema } from "@/ui/Components/StructuredData";
-import { getAlternates } from "@/i18n/alternates";
+import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
+import { getCanonicalUrl } from "@/i18n/alternates";
+import { buildPageMetadata } from "@/i18n/pageMetadata";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -23,39 +24,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		namespace: "metadata",
 	});
 
-	return {
-		title: t("title.contact"),
+	return buildPageMetadata({
+		href: "/contact",
+		locale,
+		title: t("seoTitle.contact"),
 		description: t("description.contact"),
 		keywords: [
 			"contact web developer",
 			"hire developer",
-			"freelance web developer Portugal",
+			"freelance web developer",
 			"get in touch",
 			"web development inquiry",
 		],
-		robots: { index: true, follow: true },
-		alternates: getAlternates({ href: "/contact", locale }),
-		openGraph: {
-			type: "website",
-			title: t("title.contact"),
-			description: t("description.contact"),
-			url: "https://daniel-freire.com/contact",
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
-			locale: locale,
-		},
-		twitter: {
-			card: "summary_large_image",
-			site: "@daniel_freire",
-			creator: "@daniel_freire",
-			title: t("title.contact"),
-			description: t("description.contact"),
-			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
-		},
-	};
+	});
 }
 
 /**
  * Contact page — renders the page title and the contact form.
+ *
+ * The ContactPoint structured data lives in the global Person schema
+ * (see `generatePersonSchema`), so only the breadcrumb is emitted here.
  *
  * Route: /[locale]/contact
  */
@@ -64,21 +52,22 @@ const Contact = ({ params }: Props) => {
 	setRequestLocale(locale);
 
 	const t = useTranslations("contact");
+	const m = useTranslations("metadata.title");
+	const b = useTranslations("breadcrumbs");
 	return (
 		<>
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{
-					__html: JSON.stringify([
+					__html: JSON.stringify(
 						generateBreadcrumbSchema([
-							{ name: "Home", href: `/${locale}` },
-							{ name: "Contact", href: `/${locale}/contact` },
+							{ name: b("home"), href: getCanonicalUrl("/", locale) },
+							{ name: m("contact"), href: getCanonicalUrl("/contact", locale) },
 						]),
-						generateContactPointSchema(),
-					]),
+					),
 				}}
 			/>
-			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}</h2>
+			<h1 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}</h1>
 
 			<ContactForm />
 		</>

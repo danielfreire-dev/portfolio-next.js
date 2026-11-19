@@ -1,16 +1,15 @@
 import { useTranslations } from "next-intl";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Suspense } from "react";
 import { Locale } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { TransitionLink } from "@/ui/Components/Sidenav/TransitionLink";
 import { generateBreadcrumbSchema, generateServiceSchema } from "@/ui/Components/StructuredData";
 import { getAllLocalizedSlugs, getLocalizedSlug, toEnglishSlug } from "@/i18n/serviceSlugs";
-import { getAlternates } from "@/i18n/alternates";
+import { getCanonicalUrl } from "@/i18n/alternates";
+import { buildPageMetadata } from "@/i18n/pageMetadata";
 
 interface Props {
 	params: Promise<{ locale: Locale; service: string }>;
@@ -79,18 +78,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	// of the slug, not the slug from the current locale).
 	const englishSlug = toEnglishSlug(slug);
 
-	const metaT = await getTranslations({ locale, namespace: "metadata" });
-
-	const alternates = getAlternates({
+	return buildPageMetadata({
 		href: { pathname: "/services/[service]", params: { service: slug } },
 		locale,
 		hrefForLocale: (cur) => ({
 			pathname: "/services/[service]",
 			params: { service: getLocalizedSlug(englishSlug, cur) },
 		}),
-	});
-
-	return {
 		title: service.title,
 		description: service.text,
 		keywords: [
@@ -102,33 +96,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"business software",
 			"SEO audit",
 		],
-		robots: { index: true, follow: true },
-		alternates,
-		openGraph: {
-			type: "website",
-			title: `${service.title} | ${metaT("name")}`,
-			description: service.text,
-			url: `https://daniel-freire.com${alternates.canonical}`,
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
-			locale: locale,
-		},
-		twitter: {
-			card: "summary_large_image",
-			site: "@daniel_freire",
-			creator: "@daniel_freire",
-			title: `${service.title} | ${metaT("name")}`,
-			description: service.text,
-			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
-		},
-	};
+	});
 }
 
 /**
  * Service detail page — elaborates on a single service offering.
  *
  * Displays a hero section with the service icon and title, the full
- * long-form description, a feature/benefit bullet list, a CTA button,
- * and a back-link to the services listing.
+ * long-form description, a feature/benefit bullet list, links to the
+ * other services, a contextual contact link, and a back-link to the
+ * services listing.
  *
  * Route: /[locale]/services/[service]
  */
@@ -153,6 +130,11 @@ const ServiceDetailPage = ({ params }: Props) => {
 		notFound();
 	}
 
+	const otherServices = services.filter((s) => s.slug !== slug);
+	const serviceHref = (serviceSlug: string) =>
+		({ pathname: "/services/[service]", params: { service: serviceSlug } }) as const;
+	const canonicalUrl = getCanonicalUrl(serviceHref(slug), locale);
+
 	const descriptionParagraphs = service.longDescription.split("\n\n").filter(Boolean);
 
 	return (
@@ -162,9 +144,9 @@ const ServiceDetailPage = ({ params }: Props) => {
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(
 						generateBreadcrumbSchema([
-							{ name: "Home", href: `/${locale}` },
-							{ name: "Services", href: `/${locale}/services` },
-							{ name: service.title, href: `/${locale}/services/${slug}` },
+							{ name: t("breadcrumbs.home"), href: getCanonicalUrl("/", locale) },
+							{ name: t("metadata.title.services"), href: getCanonicalUrl("/services", locale) },
+							{ name: service.title, href: canonicalUrl },
 						]),
 					),
 				}}
@@ -172,7 +154,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{
-					__html: JSON.stringify(generateServiceSchema(service.title, service.text, service.features, slug)),
+					__html: JSON.stringify(generateServiceSchema(service.title, service.text, service.features, toEnglishSlug(slug), canonicalUrl)),
 				}}
 			/>
 			<article className="mx-auto max-w-3xl px-4 sm:px-6">
@@ -210,7 +192,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 							/>
 						</div>
 					)}
-					<h2 className="text-3xl sm:text-4xl font-bold capitalize text-center sm:text-left">{service.title}</h2>
+					<h1 className="text-3xl sm:text-4xl font-bold capitalize text-center sm:text-left">{service.title}</h1>
 				</header>
 
 				{/* Long description */}
@@ -227,9 +209,9 @@ const ServiceDetailPage = ({ params }: Props) => {
 				{/* Features list */}
 				{service.features.length > 0 && (
 					<section className="mb-10 surface-cards p-6">
-						<h3 className="text-xl font-semibold mb-4">
+						<h2 className="text-xl! font-semibold mb-4">
 							{FEATURES_HEADING[locale as keyof typeof FEATURES_HEADING] ?? FEATURES_HEADING.en}
-						</h3>
+						</h2>
 						<ul className="space-y-3 features-list">
 							{service.features.map((feature) => (
 								<li
@@ -242,8 +224,40 @@ const ServiceDetailPage = ({ params }: Props) => {
 					</section>
 				)}
 
-				{/* CTA */}
-				<div className="text-center mb-10" />
+				{/* Contextual contact link */}
+				<p className="text-center text-base text-(--text-secondary) mb-10">
+					{t("serviceDetail.ctaPrompt")}{" "}
+					<TransitionLink
+						href="/contact"
+						className="underline font-semibold text-(--text-primary) hover:text-(--primary)">
+						{t("serviceDetail.ctaLink")}
+					</TransitionLink>
+				</p>
+
+				{/* Other services */}
+				{otherServices.length > 0 && (
+					<nav
+						className="mb-10"
+						aria-labelledby="other-services">
+						<h2
+							id="other-services"
+							className="text-xl! font-semibold mb-4">
+							{t("serviceDetail.otherServices")}
+						</h2>
+						<ul className="grid gap-4 sm:grid-cols-3">
+							{otherServices.map((other) => (
+								<li key={other.slug}>
+									<TransitionLink
+										href={serviceHref(other.slug)}
+										className="surface-cards block h-full p-4 hover:scale-[1.02] transition-transform duration-300">
+										<span className="block font-semibold capitalize mb-1">{other.title}</span>
+										<span className="block text-sm text-(--text-secondary)">{other.text}</span>
+									</TransitionLink>
+								</li>
+							))}
+						</ul>
+					</nav>
+				)}
 			</article>
 		</>
 	);

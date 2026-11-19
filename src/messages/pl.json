@@ -11,6 +11,9 @@
 		"paragraph7": "Nie tylko buduję rzeczy poprawnie. Buduję właściwe rzeczy.",
 		"title1": "Budowanie dla Człowieka Za Ekranem"
 	},
+	"breadcrumbs": {
+		"home": "Strona główna"
+	},
 	"carousel": [
 		{
 			"alt": "Zrewolucjonizuj Swoją Obecność Cyfrową Już Teraz!",
@@ -148,7 +151,7 @@
 			"Porozmawiajmy o Twoim biznesie",
 			"Masz Projekt Na Myśli? Porozmawiajmy.",
 			"Szukasz Front-End Developera? Znalazłeś!",
-			"Przywitaj Się ,  Nie Gryzę 👋",
+			"Przywitaj Się, Nie Gryzę 👋",
 			"Sprawmy, Że Twoja Strona Będzie Niezapomniana →",
 			"Potrzebujesz Developera, Który Działa? Porozmawiajmy.",
 			"Zbudujmy Razem Coś Wspaniałego →"
@@ -214,15 +217,22 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Poznaj Daniela Freire ,  web developera specjalizującego się w aplikacjach z AI, integracji LLM i wysokowydajnych rozwiązaniach webowych.",
+			"about": "Poznaj Daniela Freire, web developera specjalizującego się w aplikacjach z AI, integracji LLM i wysokowydajnych rozwiązaniach webowych.",
 			"contact": "Skontaktuj się z Danielem Freire w sprawie tworzenia stron internetowych, rozwiązań AI i doradztwa technicznego. Szybka i responsywna komunikacja gwarantowana.",
-			"home": "Daniel Freire ,  Web Developer: aplikacje AI, oprogramowanie na zamówienie, wydajne strony www. Z Portugalii, dla klientów na całym świecie.",
+			"home": "Daniel Freire, web developer: oprogramowanie na zamówienie, aplikacje AI i wydajne strony internetowe dla klientów z całego świata.",
 			"impressum": "",
 			"portfolio": "Portfolio projektów webowych Daniela Freire: aplikacje React, narzędzia AI i rozwiązania z zakresu oprogramowania biznesowego na zamówienie.",
 			"privacyPolicy": "Dowiedz się, jak Daniel Freire gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przejrzyste praktyki ochrony prywatności zgodne z RODO.",
 			"services": "Aplikacje webowe AI, integracja LLM i wydajne strony www od Daniela Freire. Oprogramowanie dedykowane, agenci AI i doradztwo techniczne."
 		},
 		"name": "Daniel Freire",
+		"seoTitle": {
+			"about": "O mnie: web developer, który tworzy dla ludzi",
+			"contact": "Rozpocznij swój projekt oprogramowania lub AI",
+			"home": "Daniel Freire | Oprogramowanie na zamówienie i aplikacje AI",
+			"portfolio": "Aplikacje webowe, narzędzia AI i strony klientów",
+			"services": "Oprogramowanie na zamówienie, AI i strony www"
+		},
 		"title": {
 			"about": "O Mnie",
 			"contact": "Kontakt",
@@ -353,6 +363,11 @@
 		"paragraph9": "Jeśli uważasz, że nie przestrzegamy przepisów o ochronie danych, masz prawo wnieść skargę do właściwego organu nadzorczego.",
 		"title": "Polityka Prywatności Strony Internetowej Daniela Freire"
 	},
+	"serviceDetail": {
+		"ctaLink": "Porozmawiajmy",
+		"ctaPrompt": "Masz w głowie podobny projekt?",
+		"otherServices": "Pozostałe usługi"
+	},
 	"services": [
 		{
 			"features": [
@@ -367,9 +382,9 @@
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Każda firma ma unikalne procesy, przepływy pracy i wyzwania ,  a oprogramowanie, którego używasz, powinno to odzwierciedlać. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych, które dostosowują się do rzeczywistego sposobu działania Twojej firmy, zamiast zmuszać Twój zespół do dostosowywania się do gotowego oprogramowania. Dostarczam w metodyce zwinnej, koncentrując się na MVP i szybkich cyklach informacji zwrotnej, abyś widział wartość wcześnie i iterował na podstawie rzeczywistego użytkowania.\n\nOd systemów CRM zaprojektowanych dla Twojego konkretnego cyklu sprzedaży po pulpity nawigacyjne pokazujące dokładnie te wskaźniki, których potrzebujesz ,  każdy projekt zaczyna się od dogłębnej analizy Twoich procesów biznesowych. Rezultatem jest narzędzie, którego Twój zespół będzie faktycznie chciał używać ,  ponieważ zostało zbudowane dla niego.\n\nKorzystając z technologii takich jak React, Next.js i PostgreSQL ,  wdrażanych na AWS z architekturą cloud-native ,  buduję modularne, wielokrotnego użytku komponenty, które czynią Twoje rozwiązanie solidnym, skalowalnym i łatwym w utrzymaniu wraz z rozwojem Twojej firmy.",
+			"longDescription": "Każda firma ma unikalne procesy, przepływy pracy i wyzwania, a oprogramowanie, którego używasz, powinno to odzwierciedlać. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych, które dostosowują się do rzeczywistego sposobu działania Twojej firmy, zamiast zmuszać Twój zespół do dostosowywania się do gotowego oprogramowania. Dostarczam w metodyce zwinnej, koncentrując się na MVP i szybkich cyklach informacji zwrotnej, abyś widział wartość wcześnie i iterował na podstawie rzeczywistego użytkowania.\n\nOd systemów CRM zaprojektowanych dla Twojego konkretnego cyklu sprzedaży po pulpity nawigacyjne pokazujące dokładnie te wskaźniki, których potrzebujesz, każdy projekt zaczyna się od dogłębnej analizy Twoich procesów biznesowych. Rezultatem jest narzędzie, którego Twój zespół będzie faktycznie chciał używać, ponieważ zostało zbudowane dla niego.\n\nKorzystając z technologii takich jak React, Next.js i PostgreSQL, wdrażanych na AWS z architekturą cloud-native, buduję modularne, wielokrotnego użytku komponenty, które czynią Twoje rozwiązanie solidnym, skalowalnym i łatwym w utrzymaniu wraz z rozwojem Twojej firmy.",
 			"slug": "dedykowane-oprogramowanie-biznesowe",
-			"text": "Aplikacje internetowe szyte na miarę ,  systemy CRM, pulpity nawigacyjne i narzędzia wewnętrzne zbudowane z modularnych komponentów i zwinnego dostarczania, dopasowane do sposobu działania Twojej firmy.",
+			"text": "Aplikacje internetowe szyte na miarę: systemy CRM, pulpity nawigacyjne i narzędzia wewnętrzne zbudowane z modularnych komponentów i zwinnego dostarczania, dopasowane do sposobu działania Twojej firmy.",
 			"title": "Dedykowane Oprogramowanie Biznesowe"
 		},
 		{
@@ -386,9 +401,9 @@
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "Sztuczna inteligencja przestała być futurystyczną obietnicą, a stała się realną przewagą konkurencyjną ,  gdy jest stosowana z celem. Buduję aplikacje webowe z AI, które integrują Wielkie Modele Językowe (LLM) w istniejących przepływach pracy w praktyczny i mierzalny sposób, bez niepotrzebnej złożoności.\n\nNiezależnie od tego, czy jest to inteligentny chatbot redukujący liczbę zgłoszeń wsparcia o 40%, silnik rekomendacji zwiększający średnią wartość zamówienia, czy orkiestracja agentów AI automatyzująca złożone, wieloetapowe procesy biznesowe ,  uwaga zawsze skupia się na wyniku biznesowym, a nie technologii dla samej technologii. Każde rozwiązanie jest projektowane z myślą o doświadczeniu użytkownika opartym na AI, które wydaje się naturalne i intuicyjne dla Twojego zespołu i klientów.\n\nPracuję z API takimi jak OpenAI, open-source'owymi LLM-ami, wektorowymi bazami danych do wyszukiwania semantycznego i architekturami RAG (Retrieval-Augmented Generation), aby tworzyć rozwiązania AI rozumiejące unikalny kontekst Twojego biznesu.",
+			"longDescription": "Sztuczna inteligencja przestała być futurystyczną obietnicą, a stała się realną przewagą konkurencyjną, gdy jest stosowana z celem. Buduję aplikacje webowe z AI, które integrują Wielkie Modele Językowe (LLM) w istniejących przepływach pracy w praktyczny i mierzalny sposób, bez niepotrzebnej złożoności.\n\nNiezależnie od tego, czy jest to inteligentny chatbot redukujący liczbę zgłoszeń wsparcia o 40%, silnik rekomendacji zwiększający średnią wartość zamówienia, czy orkiestracja agentów AI automatyzująca złożone, wieloetapowe procesy biznesowe, uwaga zawsze skupia się na wyniku biznesowym, a nie technologii dla samej technologii. Każde rozwiązanie jest projektowane z myślą o doświadczeniu użytkownika opartym na AI, które wydaje się naturalne i intuicyjne dla Twojego zespołu i klientów.\n\nPracuję z API takimi jak OpenAI, open-source'owymi LLM-ami, wektorowymi bazami danych do wyszukiwania semantycznego i architekturami RAG (Retrieval-Augmented Generation), aby tworzyć rozwiązania AI rozumiejące unikalny kontekst Twojego biznesu.",
 			"slug": "wdrazanie-rozwiazan-ai",
-			"text": "Aplikacje webowe z AI i integracja LLM ,  chatboty, agenci AI i doświadczenia użytkownika oparte na AI, które transformują Twoje procesy.",
+			"text": "Aplikacje webowe z AI i integracja LLM: chatboty, agenci AI i doświadczenia użytkownika oparte na AI, które transformują Twoje procesy.",
 			"title": "Wdrażanie Rozwiązań AI"
 		},
 		{
@@ -406,9 +421,9 @@
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "Strona internetowa to nie tylko cyfrowa wizytówka ,  to Twój najważniejszy zasób marketingowy. Buduję wysokowydajne aplikacje webowe, które ładują się natychmiastowo, działają na każdym urządzeniu i naturalnie prowadzą odwiedzających do działania, które chcesz, aby podjęli. Używając modularnych komponentów i czystej logiki frontendowej, każdy projekt jest architektonicznie zaprojektowany do łatwego utrzymania od pierwszego dnia.\n\nKażdy projekt jest budowany z wydajnością jako priorytetem ,  optymalizowany pod kątem Core Web Vitals od pierwszej linii kodu. Oznacza to, że Twoja strona nie tylko będzie świetnie wyglądać ,  będzie faworyzowana przez Google w wynikach wyszukiwania i zapewni płynne doświadczenie użytkownikom. Stosuję zwinne praktyki dostarczania produktów, zaczynając od MVP, aby uzyskać szybką informację zwrotną i iterując na podstawie rzeczywistych danych użytkowników.\n\nOd wysokokonwertujących stron docelowych po pełnofunkcyjne aplikacje internetowe z uwierzytelnianiem, płatnościami i pulpitami nawigacyjnymi ,  wdrażane na AWS ze skalowalną architekturą chmurową ,  podchodzę do każdego projektu jak do własnego, ze skrupulatną uwagą na szczegóły i absolutnym skupieniem na wydajności.",
+			"longDescription": "Strona internetowa to nie tylko cyfrowa wizytówka, to Twój najważniejszy zasób marketingowy. Buduję wysokowydajne aplikacje webowe, które ładują się natychmiastowo, działają na każdym urządzeniu i naturalnie prowadzą odwiedzających do działania, które chcesz, aby podjęli. Używając modularnych komponentów i czystej logiki frontendowej, każdy projekt jest architektonicznie zaprojektowany do łatwego utrzymania od pierwszego dnia.\n\nKażdy projekt jest budowany z wydajnością jako priorytetem, optymalizowany pod kątem Core Web Vitals od pierwszej linii kodu. Oznacza to, że Twoja strona nie tylko będzie świetnie wyglądać, będzie faworyzowana przez Google w wynikach wyszukiwania i zapewni płynne doświadczenie użytkownikom. Stosuję zwinne praktyki dostarczania produktów, zaczynając od MVP, aby uzyskać szybką informację zwrotną i iterując na podstawie rzeczywistych danych użytkowników.\n\nOd wysokokonwertujących stron docelowych po pełnofunkcyjne aplikacje internetowe z uwierzytelnianiem, płatnościami i pulpitami nawigacyjnymi, wdrażane na AWS ze skalowalną architekturą chmurową, podchodzę do każdego projektu jak do własnego, ze skrupulatną uwagą na szczegóły i absolutnym skupieniem na wydajności.",
 			"slug": "tworzenie-stron-internetowych",
-			"text": "Wysokowydajne aplikacje webowe ,  szybkie, responsywne strony z modularnymi komponentami, które ładują się natychmiastowo, działają na każdym urządzeniu i zamieniają odwiedzających w klientów.",
+			"text": "Wysokowydajne aplikacje webowe: szybkie, responsywne strony z modularnymi komponentami, które ładują się natychmiastowo, działają na każdym urządzeniu i zamieniają odwiedzających w klientów.",
 			"title": "Tworzenie Stron Internetowych"
 		},
 		{
@@ -422,12 +437,38 @@
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "Posiadanie świetnej strony internetowej to tylko połowa równania ,  druga połowa to upewnienie się, że znajdują ją właściwi ludzie. Moje doświadczenie w marketingu cyfrowym, połączone z głęboką wiedzą techniczną, pozwala mi zaoferować unikalną perspektywę wykraczającą poza konwencjonalne audyty SEO.\n\nKażdy audyt zaczyna się od danych: analizuję architekturę techniczną Twojej strony, sygnały doświadczenia użytkownika (Core Web Vitals), strukturę treści i pozycjonowanie konkurencyjne. Dla wysokowydajnych aplikacji webowych zapewniam, że każda milisekunda czasu ładowania jest uwzględniona, ponieważ prędkość bezpośrednio wpływa zarówno na pozycje, jak i konwersje. Rezultatem jest priorytetyzowany plan działania, który łączy każde zalecenie techniczne z konkretnym wpływem biznesowym.\n\nNie sprzedaję magicznych formuł SEO. Oferuję rygorystyczną analizę, przejrzyste rekomendacje i wdrożenia respektujące wytyczne wyszukiwarek przy jednoczesnej maksymalizacji Twojej widoczności organicznej.",
+			"longDescription": "Posiadanie świetnej strony internetowej to tylko połowa równania; druga połowa to upewnienie się, że znajdują ją właściwi ludzie. Moje doświadczenie w marketingu cyfrowym, połączone z głęboką wiedzą techniczną, pozwala mi zaoferować unikalną perspektywę wykraczającą poza konwencjonalne audyty SEO.\n\nKażdy audyt zaczyna się od danych: analizuję architekturę techniczną Twojej strony, sygnały doświadczenia użytkownika (Core Web Vitals), strukturę treści i pozycjonowanie konkurencyjne. Dla wysokowydajnych aplikacji webowych zapewniam, że każda milisekunda czasu ładowania jest uwzględniona, ponieważ prędkość bezpośrednio wpływa zarówno na pozycje, jak i konwersje. Rezultatem jest priorytetyzowany plan działania, który łączy każde zalecenie techniczne z konkretnym wpływem biznesowym.\n\nNie sprzedaję magicznych formuł SEO. Oferuję rygorystyczną analizę, przejrzyste rekomendacje i wdrożenia respektujące wytyczne wyszukiwarek przy jednoczesnej maksymalizacji Twojej widoczności organicznej.",
 			"slug": "seo-doradztwo-techniczne",
 			"text": "Audyty oparte na danych, wysokowydajna optymalizacja i strategia, które pomogą Twojej firmie zostać znalezioną i konwertować.",
 			"title": "SEO i Doradztwo Techniczne"
 		}
 	],
+	"servicesPage": {
+		"intro": [
+			"Współpracuję z małymi i średnimi firmami, startupami oraz niezależnymi specjalistami, którzy potrzebują oprogramowania dobrze wykonującego konkretne zadanie: strony, która przyciąga klientów, narzędzia wewnętrznego, które eliminuje ręczną pracę, albo funkcji AI, która oszczędza realne godziny.",
+			"Dzięki doświadczeniu w marketingu i analizie danych każdy projekt zaczynam od celu biznesowego, a nie od technologii. Zanim napiszę pierwszą linijkę kodu, pytam, jak wygląda sukces, jak będziesz go mierzyć i czego naprawdę potrzebują Twoi użytkownicy.",
+			"Od pierwszej rozmowy do wdrożenia pracujesz bezpośrednio ze mną. Bez opiekunów klienta i przekazywania projektu dalej, za to z jasną komunikacją na temat zakresu, terminów i kompromisów."
+		],
+		"steps": [
+			{
+				"text": "Rozmawiamy o Twoich celach, użytkownikach i problemie do rozwiązania. Wracam z pytaniami i propozycją zakresu.",
+				"title": "Analiza"
+			},
+			{
+				"text": "Otrzymujesz pisemny plan z zakresem prac, harmonogramem i kosztem, więc nie ma niespodzianek.",
+				"title": "Oferta"
+			},
+			{
+				"text": "Pracuję w krótkich iteracjach i regularnie pokazuję postępy, dzięki czemu możesz zgłaszać uwagi, póki zmiany są jeszcze tanie.",
+				"title": "Realizacja"
+			},
+			{
+				"text": "Zajmuję się wdrożeniem, sprawdzam wydajność i SEO, a po starcie pozostaję dostępny do poprawek i ulepszeń.",
+				"title": "Wdrożenie i wsparcie"
+			}
+		],
+		"stepsTitle": "Jak przebiega projekt"
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Stworzone z 🐞 przez",
@@ -659,9 +700,9 @@
 		{
 			"id": "zustand",
 			"link": "https://zustand.docs.pmnd.rs/",
-			"logo": "/images/icons/zustand.svg",
+			"logo": "/images/icons/tech/zustand.webp",
 			"name": "zustand",
-			"svgr": "Zustand",
+			"svgr": "",
 			"categories": [
 				"State Management"
 			]
@@ -829,9 +870,9 @@
 		{
 			"id": "linux",
 			"link": "https://www.linux.org/",
-			"logo": "/images/icons/linux-original.svg",
+			"logo": "/images/icons/tech/linux.webp",
 			"name": "linux",
-			"svgr": "Linux",
+			"svgr": "",
 			"categories": [
 				"Tools & DevOps"
 			]

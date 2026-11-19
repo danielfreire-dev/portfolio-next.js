@@ -9,23 +9,23 @@ import { getAlternates } from "@/i18n/alternates";
 const host = "https://daniel-freire.com";
 
 /**
- * Fixed lastModified dates for static pages.
+ * Last *meaningful* content change for each page.
  *
- * Instead of reporting every page as modified "today" (which dilutes the
- * signal for crawlers), we use realistic dates that reflect when each
- * section was last meaningfully updated.
+ * Google only trusts `lastmod` when it is consistently accurate, so these
+ * are fixed dates — never the build time.  **Update the date when a page's
+ * visible content changes** (copy, sections, projects), not for refactors,
+ * styling or metadata-only changes.
  */
 const LAST_MODIFIED: Record<string, string> = {
-	"/": new Date().toISOString(),
-	"/about": "2025-06-15T00:00:00.000Z",
-	"/contact": "2025-05-20T00:00:00.000Z",
-	"/portfolio": "2025-06-01T00:00:00.000Z",
-	"/privacy-policy": "2025-03-10T00:00:00.000Z",
-	"/services": "2025-06-15T00:00:00.000Z",
+	"/": "2026-11-19T00:00:00.000Z", // tech stack moved to About, new H1
+	"/about": "2026-11-19T00:00:00.000Z", // tech stack section added
+	"/contact": "2026-11-10T00:00:00.000Z", // contact form update
+	"/portfolio": "2026-07-15T00:00:00.000Z", // project list update
+	"/services": "2026-11-19T00:00:00.000Z", // intro + process section added
 };
 
-/** Fallback lastModified for dynamic entries (service detail pages). */
-const SERVICE_LAST_MODIFIED = "2025-06-15T00:00:00.000Z";
+/** Last meaningful change for the service detail pages (cross-links added). */
+const SERVICE_LAST_MODIFIED = "2026-11-19T00:00:00.000Z";
 
 /**
  * Priority mapping for static routes.
@@ -38,7 +38,6 @@ const ROUTE_PRIORITY: Record<string, number> = {
 	"/about": 0.7,
 	"/contact": 0.8,
 	"/portfolio": 0.8,
-	"/privacy-policy": 0.3,
 	"/services": 0.9,
 };
 
@@ -54,7 +53,6 @@ const ROUTE_CHANGE_FREQ: Record<string, MetadataRoute.Sitemap[number]["changeFre
 	"/about": "monthly",
 	"/contact": "monthly",
 	"/portfolio": "weekly",
-	"/privacy-policy": "monthly",
 	"/services": "weekly",
 };
 
@@ -62,10 +60,13 @@ const ROUTE_CHANGE_FREQ: Record<string, MetadataRoute.Sitemap[number]["changeFre
  * Generates the sitemap for search engines.
  *
  * Creates entries for each supported locale for the main pages (home, about,
- * contact, portfolio, privacy policy, services listing) and every individual
- * service detail page, including hreflang alternates so crawlers understand
- * the localized versions of each page. Each entry includes priority,
- * change frequency, and last modification date.
+ * contact, portfolio, services listing) and every individual service detail
+ * page, including hreflang alternates so crawlers understand the localized
+ * versions of each page. Each entry includes priority, change frequency, and
+ * last modification date.
+ *
+ * Only indexable URLs belong here: the privacy policy is `noindex`, so it is
+ * deliberately left out.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
 	return [
@@ -73,7 +74,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		...getEntries("/about"),
 		...getEntries("/contact"),
 		...getEntries("/portfolio"),
-		...getEntries("/privacy-policy"),
 		...getEntries("/services"),
 		...SERVICE_SLUGS.flatMap((englishSlug) => getDynamicEntries("/services/[service]", englishSlug)),
 	];
@@ -95,7 +95,7 @@ const OG_IMAGE = "https://daniel-freire.com/metadata/open-graph-initials5.png";
 function getEntries(href: Href) {
 	const priority = ROUTE_PRIORITY[href as string] ?? 0.5;
 	const changeFrequency = ROUTE_CHANGE_FREQ[href as string] ?? "monthly";
-	const lastModified = LAST_MODIFIED[href as string] ?? new Date().toISOString();
+	const lastModified = LAST_MODIFIED[href as string] ?? SERVICE_LAST_MODIFIED;
 
 	return routing.locales.map((locale) => ({
 		url: getUrl(href, locale),

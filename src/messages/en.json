@@ -11,6 +11,9 @@
 		"paragraph7": "I don’t just build things right. I build the right things.",
 		"title1": "Building for the Human Behind the Screen"
 	},
+	"breadcrumbs": {
+		"home": "Home"
+	},
 	"carousel": [
 		{
 			"alt": "Transform Your Digital Presence Now!",
@@ -216,13 +219,20 @@
 		"description": {
 			"about": "Learn about Daniel Freire, a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
 			"contact": "Get in touch with Daniel Freire for web development, AI solutions, and technical consulting. Fast, responsive communication guaranteed.",
-			"home": "Daniel Freire — Web Developer specializing in AI-powered applications, custom software, and high-performance websites. Based in Portugal, serving globally.",
+			"home": "Daniel Freire, web developer building custom software, AI-powered applications, and high-performance websites for clients worldwide.",
 			"impressum": "",
 			"portfolio": "Explore Daniel Freire's portfolio of web development projects, including React apps, AI-powered tools, and custom business software solutions.",
 			"privacyPolicy": "Learn how Daniel Freire collects, uses, and protects your personal data. Transparent privacy practices in compliance with GDPR.",
 			"services": "AI-powered web apps, LLM integration, and high-performance web development by Daniel Freire. Custom software, AI agents, and technical consulting."
 		},
 		"name": "Daniel Freire",
+		"seoTitle": {
+			"about": "About Me: Web Developer Building for People",
+			"contact": "Start Your Software or AI Project",
+			"home": "Daniel Freire | Web Developer for Custom Software & AI Apps",
+			"portfolio": "Web Apps, AI Tools & Client Websites",
+			"services": "Custom Software, AI & Web Development Services"
+		},
 		"title": {
 			"about": "About",
 			"contact": "Contact",
@@ -345,6 +355,11 @@
 		"paragraph9": "If you believe that we have not complied with data protection laws, you have the right to lodge a complaint with the relevant supervisory authority.",
 		"title": "Privacy Policy for Daniel Freire's Website"
 	},
+	"serviceDetail": {
+		"ctaLink": "Let's talk about it",
+		"ctaPrompt": "Have a project like this in mind?",
+		"otherServices": "Other services"
+	},
 	"services": [
 		{
 			"features": [
@@ -420,6 +435,32 @@
 			"title": "SEO & Technical Consulting"
 		}
 	],
+	"servicesPage": {
+		"intro": [
+			"I work with small and mid-sized businesses, startups, and independent professionals who need software that does a specific job well: a website that brings in customers, an internal tool that removes manual work, or an AI feature that saves real hours.",
+			"My background in marketing and analytics means every project starts with the business goal, not the technology. Before writing any code, I ask what success looks like, how you will measure it, and what your users actually need.",
+			"You work directly with me from the first call to launch. No account managers, no handoffs, and clear communication about scope, timelines, and trade-offs."
+		],
+		"steps": [
+			{
+				"text": "We talk through your goals, your users, and the problem to solve. I come back with questions and a proposed scope.",
+				"title": "Discovery"
+			},
+			{
+				"text": "You get a written plan with deliverables, timeline, and cost, so there are no surprises.",
+				"title": "Proposal"
+			},
+			{
+				"text": "I work in short iterations and share progress regularly, so you can give feedback while changes are still cheap.",
+				"title": "Build"
+			},
+			{
+				"text": "I handle deployment, check performance and SEO, and stay available for fixes and improvements after go-live.",
+				"title": "Launch and support"
+			}
+		],
+		"stepsTitle": "How a project works"
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Made with 🐞 by",
@@ -631,9 +672,9 @@
 		{
 			"id": "zustand",
 			"link": "https://zustand.docs.pmnd.rs/",
-			"logo": "/images/icons/zustand.svg",
+			"logo": "/images/icons/tech/zustand.webp",
 			"name": "zustand",
-			"svgr": "Zustand",
+			"svgr": "",
 			"categories": ["State Management"]
 		},
 		{
@@ -767,9 +808,9 @@
 		{
 			"id": "linux",
 			"link": "https://www.linux.org/",
-			"logo": "/images/icons/linux-original.svg",
+			"logo": "/images/icons/tech/linux.webp",
 			"name": "linux",
-			"svgr": "Linux",
+			"svgr": "",
 			"categories": ["Tools & DevOps"]
 		},
 		{

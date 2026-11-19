@@ -37,7 +37,7 @@ describe("PortfolioPage", () => {
 	it("renders the page title and website cards", () => {
 		renderWithProviders(<PortfolioPage params={params} />);
 
-		expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("pageTitle!");
+		expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("pageTitle!");
 		expect(screen.getByTestId("website-cards")).toBeInTheDocument();
 	});
 

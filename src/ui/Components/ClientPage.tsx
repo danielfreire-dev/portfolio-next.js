@@ -30,7 +30,7 @@ const ClientSideAbout = () => {
 					/>
 				</div>
 				<div className="">
-					<h2 className="text-justify">{t("title1")}</h2>
+					<h1 className="text-justify">{t("title1")}</h1>
 
 					<p className="mb-2">{t("paragraph1")}</p>
 					<p className="mb-2">{t("paragraph2")}</p>

@@ -3,7 +3,11 @@
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
 import NavigationList from "./NavigationList";
-import { GitHubIcon, LinkedInIcon } from "../svgs";
+// Import the icons directly — importing from the `../svgs` barrel pulls every
+// tech-stack SVG into the layout bundle shipped on every page.
+import GitHubIcon from "../svgs/github-square.svg";
+import LinkedInIcon from "../svgs/linkedin-square.svg";
+import { usePathname } from "@/i18n/navigation";
 import { TransitionLink } from "./TransitionLink";
 import LegalLinks from "./LegalLinks";
 import ThemeToggle from "../ThemeToggle";
@@ -25,6 +29,9 @@ import MobileSlideBtn from "./MobileSlideBtn";
 const Sidenav = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const t = useTranslations("sidenav");
+	// The name is the page's main heading only on the home page; every other
+	// page provides its own <h1>, so the logo must not compete with it.
+	const LogoTag = usePathname() === "/" ? "h1" : "p";
 
 	return (
 		<>
@@ -39,11 +46,11 @@ const Sidenav = () => {
 						href="/"
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}>
-						<h1
+						<LogoTag
 							className="text-5xl capitalize flex justify-center max-w-full truncate text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
 							id="logo">
 							{t("header.title")}
-						</h1>
+						</LogoTag>
 					</TransitionLink>
 					<p
 						className="flex justify-center mb-2 capitalize text-lg font-semibold"

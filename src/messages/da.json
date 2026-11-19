@@ -11,6 +11,9 @@
 		"paragraph7": "Jeg bygger ikke kun tingene rigtigt. Jeg bygger de rigtige ting.",
 		"title1": "Bygger til mennesket bag skærmen"
 	},
+	"breadcrumbs": {
+		"home": "Hjem"
+	},
 	"carousel": [
 		{
 			"alt": "Revolutioner Dit Digitale Nærvær Nu!",
@@ -148,7 +151,7 @@
 			"Lad os tale om din virksomhed",
 			"Har du et projekt i tankerne? Lad os snakke.",
 			"Leder du efter en Front-End Udvikler? Du Har Fundet En!",
-			"Sig Hej ,  Jeg Bider Ikke 👋",
+			"Sig Hej, Jeg Bider Ikke 👋",
 			"Lad Os Gøre Din Hjemmeside Uglemnelig →",
 			"Har du brug for en udvikler der leverer? Lad os tale sammen.",
 			"Lad Os Bygge Noget Fantastisk Sammen →"
@@ -214,15 +217,22 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Lær om Daniel Freire ,  en webudvikler med speciale i AI-drevne applikationer, LLM-integration og højtydende web-løsninger.",
+			"about": "Lær om Daniel Freire, en webudvikler med speciale i AI-drevne applikationer, LLM-integration og højtydende web-løsninger.",
 			"contact": "Kontakt Daniel Freire for webudvikling, AI-løsninger og teknisk rådgivning. Hurtig og responsiv kommunikation garanteret.",
-			"home": "Daniel Freire ,  Webudvikler med speciale i AI-drevne applikationer, skræddersyet software og højtydende websites. Baseret i Portugal, betjener kunder globalt.",
+			"home": "Daniel Freire, webudvikler, der bygger skræddersyet software, AI-drevne applikationer og højtydende websites for kunder over hele verden.",
 			"impressum": "",
 			"portfolio": "Udforsk Daniel Freires portefølje af webudviklingsprojekter, herunder React-apps, AI-drevne værktøjer og skræddersyede forretningssoftwareløsninger.",
 			"privacyPolicy": "Lær hvordan Daniel Freire indsamler, bruger og beskytter dine personlige data. Gennemsigtige privatlivspraksisser i overensstemmelse med GDPR.",
 			"services": "AI-drevne webapps, LLM-integration og webudvikling af Daniel Freire. Skræddersyet software, AI-agenter og teknisk rådgivning med agil levering."
 		},
 		"name": "Daniel Freire",
+		"seoTitle": {
+			"about": "Om mig: webudvikler, der bygger til mennesker",
+			"contact": "Start dit software- eller AI-projekt",
+			"home": "Daniel Freire | Webudvikler af skræddersyet software og AI-apps",
+			"portfolio": "Webapps, AI-værktøjer og kundewebsites",
+			"services": "Skræddersyet software, AI og webudvikling"
+		},
 		"title": {
 			"about": "Om",
 			"contact": "Kontakt",
@@ -353,6 +363,11 @@
 		"paragraph9": "Hvis du mener at vi ikke har overholdt databeskyttelseslovene, har du ret til at indgive en klage til den relevante tilsynsmyndighed.",
 		"title": "Privatlivspolitik for Daniel Freires Hjemmeside"
 	},
+	"serviceDetail": {
+		"ctaLink": "Lad os tale om det",
+		"ctaPrompt": "Har du et lignende projekt i tankerne?",
+		"otherServices": "Andre ydelser"
+	},
 	"services": [
 		{
 			"features": [
@@ -367,9 +382,9 @@
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Enhver virksomhed har unikke processer, arbejdsgange og udfordringer ,  og den software, du bruger, bør afspejle det. Jeg specialiserer mig i at udvikle skræddersyede webapplikationer, der tilpasser sig, hvordan din virksomhed rent faktisk fungerer, i stedet for at tvinge dit team til at tilpasse sig standardsoftware. Jeg leverer med agile metoder, med fokus på MVP og hurtige feedback-cyklusser, så du ser værdi tidligt og itererer baseret på reel brug.\n\nFra CRM-systemer designet til din specifikke salgscyklus til dashboards, der viser præcis de målinger, du har brug for ,  hvert projekt begynder med en dybdegående analyse af dine forretningsprocesser. Resultatet er et værktøj, dit team faktisk vil bruge ,  fordi det blev bygget til dem.\n\nVed hjælp af teknologier som React, Next.js og PostgreSQL ,  implementeret på AWS med cloud-native arkitektur ,  bygger jeg modulære, genanvendelige komponenter, der gør din løsning robust, skalerbar og nem at vedligeholde, efterhånden som din virksomhed vokser.",
+			"longDescription": "Enhver virksomhed har unikke processer, arbejdsgange og udfordringer, og den software, du bruger, bør afspejle det. Jeg specialiserer mig i at udvikle skræddersyede webapplikationer, der tilpasser sig, hvordan din virksomhed rent faktisk fungerer, i stedet for at tvinge dit team til at tilpasse sig standardsoftware. Jeg leverer med agile metoder, med fokus på MVP og hurtige feedback-cyklusser, så du ser værdi tidligt og itererer baseret på reel brug.\n\nFra CRM-systemer designet til din specifikke salgscyklus til dashboards, der viser præcis de målinger, du har brug for, hvert projekt begynder med en dybdegående analyse af dine forretningsprocesser. Resultatet er et værktøj, dit team faktisk vil bruge, fordi det blev bygget til dem.\n\nVed hjælp af teknologier som React, Next.js og PostgreSQL, implementeret på AWS med cloud-native arkitektur, bygger jeg modulære, genanvendelige komponenter, der gør din løsning robust, skalerbar og nem at vedligeholde, efterhånden som din virksomhed vokser.",
 			"slug": "skraeddersyet-forretningssoftware",
-			"text": "Skræddersyede webapplikationer ,  CRM-systemer, dashboards og interne værktøjer bygget med modulære komponenter og agil levering, der passer til din virksomheds måde at arbejde på.",
+			"text": "Skræddersyede webapplikationer: CRM-systemer, dashboards og interne værktøjer bygget med modulære komponenter og agil levering, der passer til din virksomheds måde at arbejde på.",
 			"title": "Skræddersyet Forretningssoftware"
 		},
 		{
@@ -386,9 +401,9 @@
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "Kunstig intelligens er gået fra at være en futuristisk hype til at blive en ægte konkurrencefordel ,  når den anvendes med formål. Jeg bygger AI-drevne webapplikationer, der integrerer Large Language Models (LLM'er) i dine eksisterende arbejdsgange på en praktisk og målbar måde uden unødvendig kompleksitet.\n\nUanset om det er en intelligent chatbot, der reducerer supportticket-volumen med 40%, en anbefalingsmotor, der øger den gennemsnitlige ordreværdi, eller AI-agent-orkestrering, der automatiserer komplekse forretningsprocesser i flere trin ,  fokus er altid på forretningsresultatet, ikke teknologien for dens egen skyld. Hver løsning er designet med en AI-drevet brugeroplevelse, der føles naturlig og intuitiv for dit team og dine kunder.\n\nJeg arbejder med API'er som OpenAI, open-source LLM'er, vektordatabaser til semantisk søgning og RAG-arkitekturer (Retrieval-Augmented Generation) for at skabe AI-løsninger, der forstår din unikke forretningskontekst.",
+			"longDescription": "Kunstig intelligens er gået fra at være en futuristisk hype til at blive en ægte konkurrencefordel, når den anvendes med formål. Jeg bygger AI-drevne webapplikationer, der integrerer Large Language Models (LLM'er) i dine eksisterende arbejdsgange på en praktisk og målbar måde uden unødvendig kompleksitet.\n\nUanset om det er en intelligent chatbot, der reducerer supportticket-volumen med 40%, en anbefalingsmotor, der øger den gennemsnitlige ordreværdi, eller AI-agent-orkestrering, der automatiserer komplekse forretningsprocesser i flere trin, fokus er altid på forretningsresultatet, ikke teknologien for dens egen skyld. Hver løsning er designet med en AI-drevet brugeroplevelse, der føles naturlig og intuitiv for dit team og dine kunder.\n\nJeg arbejder med API'er som OpenAI, open-source LLM'er, vektordatabaser til semantisk søgning og RAG-arkitekturer (Retrieval-Augmented Generation) for at skabe AI-løsninger, der forstår din unikke forretningskontekst.",
 			"slug": "implementering-af-ai-losninger",
-			"text": "AI-drevne webapplikationer og LLM-integration ,  chatbots, AI-agenter og AI-drevne brugeroplevelser, der transformerer dine arbejdsgange.",
+			"text": "AI-drevne webapplikationer og LLM-integration: chatbots, AI-agenter og AI-drevne brugeroplevelser, der transformerer dine arbejdsgange.",
 			"title": "Implementering af AI-løsninger"
 		},
 		{
@@ -406,9 +421,9 @@
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "Et website er ikke bare et digitalt visitkort ,  det er dit vigtigste marketingaktiv. Jeg bygger højtydende webapplikationer, der indlæses øjeblikkeligt, fungerer på enhver enhed og naturligt guider dine besøgende mod den handling, du ønsker, de skal tage. Ved hjælp af modulære komponenter og ren frontend-logik er hvert projekt arkitektonisk designet til vedligeholdelse fra dag ét.\n\nHvert projekt er bygget med ydeevne i centrum ,  optimeret til Core Web Vitals fra den første linje kode. Det betyder, at dit site ikke bare ser godt ud ,  det vil blive prioriteret af Google i søgeresultater og give en flydende oplevelse for dine brugere. Jeg følger agile produktleveringsmetoder, starter med en MVP for at få hurtig feedback og itererer baseret på reelle brugerdata.\n\nFra højtkonverterende landingssider til fuldt udstyrede webapplikationer med autentificering, betalinger og dashboards ,  implementeret på AWS med skalerbar cloud-arkitektur ,  jeg går til hvert projekt, som om det var mit eget, med omhyggelig opmærksomhed på detaljer og absolut fokus på ydeevne.",
+			"longDescription": "Et website er ikke bare et digitalt visitkort, det er dit vigtigste marketingaktiv. Jeg bygger højtydende webapplikationer, der indlæses øjeblikkeligt, fungerer på enhver enhed og naturligt guider dine besøgende mod den handling, du ønsker, de skal tage. Ved hjælp af modulære komponenter og ren frontend-logik er hvert projekt arkitektonisk designet til vedligeholdelse fra dag ét.\n\nHvert projekt er bygget med ydeevne i centrum, optimeret til Core Web Vitals fra den første linje kode. Det betyder, at dit site ikke bare ser godt ud, det vil blive prioriteret af Google i søgeresultater og give en flydende oplevelse for dine brugere. Jeg følger agile produktleveringsmetoder, starter med en MVP for at få hurtig feedback og itererer baseret på reelle brugerdata.\n\nFra højtkonverterende landingssider til fuldt udstyrede webapplikationer med autentificering, betalinger og dashboards, implementeret på AWS med skalerbar cloud-arkitektur, jeg går til hvert projekt, som om det var mit eget, med omhyggelig opmærksomhed på detaljer og absolut fokus på ydeevne.",
 			"slug": "webudvikling",
-			"text": "Højtydende webapplikationer ,  hurtige, responsive websites med modulære komponenter, der indlæses øjeblikkeligt, fungerer på alle enheder og konverterer besøgende til kunder.",
+			"text": "Højtydende webapplikationer: hurtige, responsive websites med modulære komponenter, der indlæses øjeblikkeligt, fungerer på alle enheder og konverterer besøgende til kunder.",
 			"title": "Webudvikling"
 		},
 		{
@@ -422,12 +437,38 @@
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "At have et godt website er kun halvdelen af ligningen ,  den anden halvdel er at sikre, at de rette mennesker finder det. Min baggrund inden for digital marketing, kombineret med dyb teknisk viden, giver mig mulighed for at tilbyde et unikt perspektiv, der går ud over konventionelle SEO-audits.\n\nHver audit starter med data: Jeg analyserer dit sites tekniske arkitektur, brugeroplevelsessignaler (Core Web Vitals), indholdsstruktur og konkurrencemæssige positionering. For højtydende webapplikationer sikrer jeg, at hvert millisekund af indlæsningstid er redegjort for, fordi hastighed direkte påvirker både placeringer og konverteringer. Resultatet er en prioriteret handlingsplan, der forbinder hver teknisk anbefaling med en konkret forretningspåvirkning.\n\nJeg sælger ikke magiske SEO-formler. Jeg tilbyder grundig analyse, gennemsigtige anbefalinger og implementeringer, der respekterer søgemaskinernes retningslinjer, mens de maksimerer din organiske synlighed.",
+			"longDescription": "At have et godt website er kun halvdelen af ligningen; den anden halvdel er at sikre, at de rette mennesker finder det. Min baggrund inden for digital marketing, kombineret med dyb teknisk viden, giver mig mulighed for at tilbyde et unikt perspektiv, der går ud over konventionelle SEO-audits.\n\nHver audit starter med data: Jeg analyserer dit sites tekniske arkitektur, brugeroplevelsessignaler (Core Web Vitals), indholdsstruktur og konkurrencemæssige positionering. For højtydende webapplikationer sikrer jeg, at hvert millisekund af indlæsningstid er redegjort for, fordi hastighed direkte påvirker både placeringer og konverteringer. Resultatet er en prioriteret handlingsplan, der forbinder hver teknisk anbefaling med en konkret forretningspåvirkning.\n\nJeg sælger ikke magiske SEO-formler. Jeg tilbyder grundig analyse, gennemsigtige anbefalinger og implementeringer, der respekterer søgemaskinernes retningslinjer, mens de maksimerer din organiske synlighed.",
 			"slug": "seo-teknisk-radgivning",
 			"text": "Databaserede audits, højtydende optimering og strategi til at hjælpe din virksomhed med at blive fundet og konvertere.",
 			"title": "SEO & Teknisk Rådgivning"
 		}
 	],
+	"servicesPage": {
+		"intro": [
+			"Jeg arbejder med små og mellemstore virksomheder, startups og selvstændige, der har brug for software, som løser en bestemt opgave godt: et website, der skaffer kunder, et internt værktøj, der fjerner manuelt arbejde, eller en AI-funktion, der sparer rigtige timer.",
+			"Min baggrund inden for marketing og dataanalyse betyder, at hvert projekt starter med forretningsmålet, ikke teknologien. Før jeg skriver kode, spørger jeg, hvordan succes ser ud, hvordan du vil måle den, og hvad dine brugere faktisk har brug for.",
+			"Du arbejder direkte med mig fra første samtale til lancering. Ingen kundeansvarlige, ingen overdragelser, men klar kommunikation om omfang, tidsplan og prioriteringer."
+		],
+		"steps": [
+			{
+				"text": "Vi taler om dine mål, dine brugere og det problem, der skal løses. Jeg vender tilbage med spørgsmål og et forslag til omfang.",
+				"title": "Afklaring"
+			},
+			{
+				"text": "Du får en skriftlig plan med leverancer, tidsplan og pris, så der ikke kommer overraskelser.",
+				"title": "Tilbud"
+			},
+			{
+				"text": "Jeg arbejder i korte iterationer og viser løbende fremskridt, så du kan give feedback, mens ændringer stadig er billige.",
+				"title": "Udvikling"
+			},
+			{
+				"text": "Jeg står for udrulningen, tjekker ydeevne og SEO og er fortsat tilgængelig for rettelser og forbedringer efter lanceringen.",
+				"title": "Lancering og support"
+			}
+		],
+		"stepsTitle": "Sådan forløber et projekt"
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Lavet med 🐞 af",
@@ -659,9 +700,9 @@
 		{
 			"id": "zustand",
 			"link": "https://zustand.docs.pmnd.rs/",
-			"logo": "/images/icons/zustand.svg",
+			"logo": "/images/icons/tech/zustand.webp",
 			"name": "zustand",
-			"svgr": "Zustand",
+			"svgr": "",
 			"categories": [
 				"State Management"
 			]
@@ -829,9 +870,9 @@
 		{
 			"id": "linux",
 			"link": "https://www.linux.org/",
-			"logo": "/images/icons/linux-original.svg",
+			"logo": "/images/icons/tech/linux.webp",
 			"name": "linux",
-			"svgr": "Linux",
+			"svgr": "",
 			"categories": [
 				"Tools & DevOps"
 			]

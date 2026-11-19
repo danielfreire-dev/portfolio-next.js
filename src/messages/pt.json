@@ -11,6 +11,9 @@
 		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
 		"title1": "Construir para o Humano por Trás do Ecrã"
 	},
+	"breadcrumbs": {
+		"home": "Início"
+	},
 	"carousel": [
 		{
 			"alt": "Paisagem urbana futurista abstrata",
@@ -160,13 +163,13 @@
 		"message": "Mensagem aleatória",
 		"title": "💻🚀 Olá",
 		"welcome": {
-			"conclusion": "Estamos a falar de mais do que um website ,  é o seu aperto de mão digital, a sua primeira impressão e a oportunidade de se destacar num mercado cada vez mais competitivo. Vamos torná-lo inesquecível.",
+			"conclusion": "Estamos a falar de mais do que um website, é o seu aperto de mão digital, a sua primeira impressão e a oportunidade de se destacar num mercado cada vez mais competitivo. Vamos torná-lo inesquecível.",
 			"happensNext0": "Eis o que acontece a seguir:",
 			"happensNext1": "Analisarei pessoalmente a sua submissão e responderei com um plano personalizado (ou eventuais perguntas para refinar o projecto) em 2–3 dias úteis.",
 			"happensNext2": "Nos próximos dias úteis, receberá de mim os próximos passos claros, cronogramas e como colaboraremos para dar vida à sua visão.",
-			"happensNext3": "Se não receber o meu e-mail até lá, não hesite em contactar-me novamente ,  estarei ou mergulhado em código ou a combater a caixa de entrada (e darei sempre prioridade ao seu projeto).",
+			"happensNext3": "Se não receber o meu e-mail até lá, não hesite em contactar-me novamente, estarei ou mergulhado em código ou a combater a caixa de entrada (e darei sempre prioridade ao seu projeto).",
 			"heading": "Olá",
-			"intro": "Comecemos com uma verdade simples: construir uma presença online que represente verdadeiramente os seus serviços/competências enquanto profissional exige coragem e visão. O facto de estar aqui ,  a dar passos concretos para valorizar o seu trabalho ,  diz muito sobre o seu compromisso com o crescimento. Isso merece ser celebrado.",
+			"intro": "Comecemos com uma verdade simples: construir uma presença online que represente verdadeiramente os seus serviços/competências enquanto profissional exige coragem e visão. O facto de estar aqui, a dar passos concretos para valorizar o seu trabalho, diz muito sobre o seu compromisso com o crescimento. Isso merece ser celebrado.",
 			"introduction": "Sou o Daniel Freire e a minha especialidade é a criação de websites de alto impacto, focados no cliente, que não se limitam a exibir projetos, mas contam uma história convincente sobre o valor que traz para a mesa. Quer pretenda atrair clientes de topo, conquistar o emprego dos seus sonhos ou simplesmente exibir a sua experiência com clareza e estilo, o seu website é a sua ferramenta mais poderosa. E estou aqui para o ajudar a aperfeiçoá-la.",
 			"name": "Daniel Freire",
 			"preview": "Email de Boas-Vindas de Daniel Freire",
@@ -176,7 +179,7 @@
 			"view": "Veja a",
 			"webLink": "daniel-freire.com",
 			"whileWait0": "Enquanto aguarda, sinta-se à vontade para:",
-			"whileWait1": "✅ Responder a este e-mail com quaisquer ideias adicionais ,  como projetos específicos de que se orgulhe, preferências de design ou objetivos para o seu website.",
+			"whileWait1": "✅ Responder a este e-mail com quaisquer ideias adicionais: como projetos específicos de que se orgulhe, preferências de design ou objetivos para o seu website.",
 			"whileWait2": "✅ Reunir materiais (links, estudos de caso ou até rascunhos) para agilizar o processo quando começarmos."
 		}
 	},
@@ -214,15 +217,22 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Conhece o Daniel Freire ,  um programador web especializado em aplicações com IA, integração de LLMs e soluções web de alto desempenho.",
+			"about": "Conhece o Daniel Freire, um programador web especializado em aplicações com IA, integração de LLMs e soluções web de alto desempenho.",
 			"contact": "Entra em contacto com o Daniel Freire para desenvolvimento web, soluções de IA e consultoria técnica. Resposta rápida garantida.",
-			"home": "Daniel Freire ,  Programador Web: apps com IA, software personalizado, sites de alto desempenho. Em Portugal, servindo clientes globais.",
+			"home": "Daniel Freire, programador web: software à medida, aplicações com IA e websites de alto desempenho para clientes em todo o mundo.",
 			"impressum": "",
 			"portfolio": "Explora o portfólio de projetos web do Daniel Freire: apps React, ferramentas com IA e soluções de software empresarial personalizadas.",
 			"privacyPolicy": "Fica a saber como o Daniel Freire recolhe, utiliza e protege os teus dados pessoais. Práticas de privacidade transparentes em conformidade com o RGPD.",
 			"services": "Apps web com IA, integração de LLMs e desenvolvimento de alto desempenho por Daniel Freire. Software personalizado, agentes de IA e consultoria técnica."
 		},
 		"name": "Daniel Freire",
+		"seoTitle": {
+			"about": "Sobre Mim: Programador Web que Cria para Pessoas",
+			"contact": "Comece o Seu Projeto de Software ou IA",
+			"home": "Daniel Freire | Programador Web: Software à Medida e Apps com IA",
+			"portfolio": "Aplicações Web, Ferramentas de IA e Websites",
+			"services": "Software à Medida, IA e Desenvolvimento Web"
+		},
 		"title": {
 			"about": "Sobre",
 			"contact": "Contactos",
@@ -353,6 +363,11 @@
 		"paragraph9": "Se acredita que não cumprimos com as leis de proteção de dados, tem o direito de apresentar uma reclamação junto da autoridade de controlo competente.",
 		"title": "Política de Privacidade do Website de Daniel Freire"
 	},
+	"serviceDetail": {
+		"ctaLink": "Vamos conversar",
+		"ctaPrompt": "Tem um projeto assim em mente?",
+		"otherServices": "Outros serviços"
+	},
 	"services": [
 		{
 			"features": [
@@ -367,9 +382,9 @@
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos ,  e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico. Entrego com métodos ágeis, focando-me em MVP e ciclos de feedback rápido para que veja valor desde cedo e itere com base na utilização real.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar ,  porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL ,  implementadas na AWS com arquitetura cloud-native ,  construo componentes modulares e reutilizáveis que tornam a sua solução robusta, escalável e fácil de manter à medida que o seu negócio cresce.",
+			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos, e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico. Entrego com métodos ágeis, focando-me em MVP e ciclos de feedback rápido para que veja valor desde cedo e itere com base na utilização real.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar, porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL, implementadas na AWS com arquitetura cloud-native, construo componentes modulares e reutilizáveis que tornam a sua solução robusta, escalável e fácil de manter à medida que o seu negócio cresce.",
 			"slug": "software-personalizado-empresarial",
-			"text": "Aplicações web à medida ,  CRMs, dashboards e ferramentas internas construídas com componentes modulares e entrega ágil, adaptando-se à forma como o seu negócio realmente funciona.",
+			"text": "Aplicações web à medida: CRMs, dashboards e ferramentas internas construídas com componentes modulares e entrega ágil, adaptando-se à forma como o seu negócio realmente funciona.",
 			"title": "Software Personalizado Empresarial"
 		},
 		{
@@ -386,9 +401,9 @@
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real ,  quando aplicada com propósito. Construo aplicações web com IA que integram Modelos de Linguagem de Grande Escala (LLMs) nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou a orquestração de agentes de IA que automatiza processos de negócio complexos com vários passos ,  o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia. Cada solução é projetada com uma experiência de utilizador orientada por IA, que parece natural e intuitiva para a sua equipa e clientes.\n\nTrabalho com APIs como as da OpenAI, LLMs open-source, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
+			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real, quando aplicada com propósito. Construo aplicações web com IA que integram Modelos de Linguagem de Grande Escala (LLMs) nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou a orquestração de agentes de IA que automatiza processos de negócio complexos com vários passos, o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia. Cada solução é projetada com uma experiência de utilizador orientada por IA, que parece natural e intuitiva para a sua equipa e clientes.\n\nTrabalho com APIs como as da OpenAI, LLMs open-source, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
 			"slug": "implementacao-solucoes-ia",
-			"text": "Aplicações web com IA e integração de LLMs ,  chatbots, agentes de IA e experiências de utilizador orientadas por IA que transformam os seus fluxos de trabalho.",
+			"text": "Aplicações web com IA e integração de LLMs: chatbots, agentes de IA e experiências de utilizador orientadas por IA que transformam os seus fluxos de trabalho.",
 			"title": "Implementação de Soluções de IA"
 		},
 		{
@@ -406,9 +421,9 @@
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "Um website não é apenas um cartão de visita digital ,  é o seu ativo de marketing mais importante. Construo aplicações web de alto desempenho que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem. Utilizando componentes modulares e lógica de frontend limpa, cada projeto é arquitetado para manutenibilidade desde o primeiro dia.\n\nCada projeto é construído com o desempenho no centro ,  otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores. Sigo práticas de entrega ágil de produto, começando com um MVP para obter feedback rápido e iterando com base em dados reais de utilização.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards ,  implementadas na AWS com arquitetura de cloud escalável ,  abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
+			"longDescription": "Um website não é apenas um cartão de visita digital, é o seu ativo de marketing mais importante. Construo aplicações web de alto desempenho que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem. Utilizando componentes modulares e lógica de frontend limpa, cada projeto é arquitetado para manutenibilidade desde o primeiro dia.\n\nCada projeto é construído com o desempenho no centro, otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores. Sigo práticas de entrega ágil de produto, começando com um MVP para obter feedback rápido e iterando com base em dados reais de utilização.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards, implementadas na AWS com arquitetura de cloud escalável, abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
 			"slug": "desenvolvimento-web",
-			"text": "Aplicações web de alto desempenho ,  websites rápidos e responsivos com componentes modulares que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
+			"text": "Aplicações web de alto desempenho: websites rápidos e responsivos com componentes modulares que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
 			"title": "Desenvolvimento Web"
 		},
 		{
@@ -422,12 +437,38 @@
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "Ter um website excelente é apenas metade da equação ,  a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. Para aplicações web de alto desempenho, garanto que cada milissegundo de tempo de carregamento é contabilizado, porque a velocidade impacta diretamente tanto os rankings como as conversões. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
+			"longDescription": "Ter um website excelente é apenas metade da equação; a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. Para aplicações web de alto desempenho, garanto que cada milissegundo de tempo de carregamento é contabilizado, porque a velocidade impacta diretamente tanto os rankings como as conversões. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
 			"slug": "seo-consultoria-tecnica",
 			"text": "Auditorias baseadas em dados, otimização de alto desempenho e estratégia para ajudar o seu negócio a ser encontrado e a converter.",
 			"title": "SEO e Consultoria Técnica"
 		}
 	],
+	"servicesPage": {
+		"intro": [
+			"Trabalho com pequenas e médias empresas, startups e profissionais independentes que precisam de software que cumpra bem uma função específica: um website que traga clientes, uma ferramenta interna que elimine trabalho manual ou uma funcionalidade de IA que poupe horas reais.",
+			"A minha experiência em marketing e análise de dados faz com que cada projeto comece pelo objetivo de negócio e não pela tecnologia. Antes de escrever qualquer código, pergunto como é o sucesso, como o vai medir e do que os seus utilizadores realmente precisam.",
+			"Trabalha diretamente comigo, desde a primeira chamada até ao lançamento. Sem gestores de conta, sem intermediários e com comunicação clara sobre âmbito, prazos e compromissos."
+		],
+		"steps": [
+			{
+				"text": "Falamos sobre os seus objetivos, os seus utilizadores e o problema a resolver. Volto com perguntas e uma proposta de âmbito.",
+				"title": "Descoberta"
+			},
+			{
+				"text": "Recebe um plano escrito com entregáveis, calendário e custo, para que não haja surpresas.",
+				"title": "Proposta"
+			},
+			{
+				"text": "Trabalho em iterações curtas e partilho o progresso regularmente, para que possa dar feedback enquanto as alterações ainda são baratas.",
+				"title": "Desenvolvimento"
+			},
+			{
+				"text": "Trato da publicação, verifico o desempenho e o SEO e continuo disponível para correções e melhorias depois do lançamento.",
+				"title": "Lançamento e suporte"
+			}
+		],
+		"stepsTitle": "Como funciona um projeto"
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Feito com 🐞 por",
@@ -659,9 +700,9 @@
 		{
 			"id": "zustand",
 			"link": "https://zustand.docs.pmnd.rs/",
-			"logo": "/images/icons/zustand.svg",
+			"logo": "/images/icons/tech/zustand.webp",
 			"name": "zustand",
-			"svgr": "Zustand",
+			"svgr": "",
 			"categories": [
 				"State Management"
 			]
@@ -829,9 +870,9 @@
 		{
 			"id": "linux",
 			"link": "https://www.linux.org/",
-			"logo": "/images/icons/linux-original.svg",
+			"logo": "/images/icons/tech/linux.webp",
 			"name": "linux",
-			"svgr": "Linux",
+			"svgr": "",
 			"categories": [
 				"Tools & DevOps"
 			]

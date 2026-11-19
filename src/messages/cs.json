@@ -11,6 +11,9 @@
 		"paragraph7": "Nestavím jen správně. Stavím správné věci.",
 		"title1": "Stavíme pro člověka za obrazovkou"
 	},
+	"breadcrumbs": {
+		"home": "Domů"
+	},
 	"carousel": [
 		{
 			"alt": "Revolutionizujte svou digitální prezentaci!",
@@ -214,15 +217,22 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Poznejte Daniela Freire ,  webového vývojáře specializujícího se na aplikace s AI, integraci LLM a vysoce výkonná webová řešení.",
+			"about": "Poznejte Daniela Freire, webového vývojáře specializujícího se na aplikace s AI, integraci LLM a vysoce výkonná webová řešení.",
 			"contact": "Kontaktujte Daniela Freire pro vývoj webových stránek, AI řešení a technické poradenství. Rychlá a spolehlivá komunikace zaručena.",
-			"home": "Daniel Freire ,  Webový vývojář: aplikace s AI, zakázkový software a výkonné weby. Sídlí v Portugalsku, služby klientům po celém světě.",
+			"home": "Daniel Freire, webový vývojář: software na míru, aplikace s AI a výkonné weby pro klienty po celém světě.",
 			"impressum": "",
 			"portfolio": "Prozkoumejte portfolio webových projektů Daniela Freire, včetně React aplikací, nástrojů s AI a zakázkových obchodních softwarových řešení.",
 			"privacyPolicy": "Zjistěte, jak Daniel Freire shromažďuje, používá a chrání vaše osobní údaje. Transparentní postupy ochrany soukromí v souladu s GDPR.",
 			"services": "Webové aplikace s AI, integrace LLM a vývoj webu od Daniela Freire. Zakázkový software, AI agenti a technické poradenství s agilním přístupem."
 		},
 		"name": "Daniel Freire",
+		"seoTitle": {
+			"about": "O mně: webový vývojář, který tvoří pro lidi",
+			"contact": "Začněte svůj softwarový nebo AI projekt",
+			"home": "Daniel Freire | Software na míru a aplikace s AI",
+			"portfolio": "Webové aplikace, AI nástroje a weby klientů",
+			"services": "Software na míru, AI a vývoj webů"
+		},
 		"title": {
 			"about": "O mně",
 			"contact": "Kontakt",
@@ -353,6 +363,11 @@
 		"paragraph9": "Pokud se domníváte, že jsme nepostupovali v souladu se zákony o ochraně osobních údajů, máte právo podat stížnost u příslušného dozorového orgánu.",
 		"title": "Zásady ochrany osobních údajů pro webové stránky Daniela Freire"
 	},
+	"serviceDetail": {
+		"ctaLink": "Pojďme si o tom promluvit",
+		"ctaPrompt": "Máte na mysli podobný projekt?",
+		"otherServices": "Další služby"
+	},
 	"services": [
 		{
 			"features": [
@@ -367,9 +382,9 @@
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy ,  a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru. Dodávám agilními metodami, se zaměřením na MVP a rychlé zpětnovazební cykly, abyste viděli hodnotu brzy a iterovali na základě reálného používání.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete ,  každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat ,  protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL ,  nasazených na AWS s cloud-nativní architekturou ,  vytvářím modulární, znovupoužitelné komponenty, které činí vaše řešení robustním, škálovatelným a snadno udržovatelným s růstem vašeho podnikání.",
+			"longDescription": "Každá firma má jedinečné procesy, pracovní postupy a výzvy, a software, který používáte, by to měl odrážet. Specializuji se na vývoj webových aplikací na míru, které se přizpůsobí tomu, jak vaše společnost skutečně funguje, místo aby nutily váš tým přizpůsobit se standardnímu softwaru. Dodávám agilními metodami, se zaměřením na MVP a rychlé zpětnovazební cykly, abyste viděli hodnotu brzy a iterovali na základě reálného používání.\n\nOd CRM systémů navržených pro váš specifický prodejní cyklus až po dashboardy zobrazující přesně ty metriky, které potřebujete, každý projekt začíná důkladnou analýzou vašich obchodních procesů. Výsledkem je nástroj, který váš tým bude skutečně chtít používat, protože byl postaven pro ně.\n\nS využitím technologií jako React, Next.js a PostgreSQL, nasazených na AWS s cloud-nativní architekturou, vytvářím modulární, znovupoužitelné komponenty, které činí vaše řešení robustním, škálovatelným a snadno udržovatelným s růstem vašeho podnikání.",
 			"slug": "zakazkovy-firemni-software",
-			"text": "Webové aplikace na míru ,  CRM systémy, dashboardy a interní nástroje postavené s modulárními komponentami a agilním doručováním, odpovídající tomu, jak vaše firma skutečně funguje.",
+			"text": "Webové aplikace na míru: CRM systémy, dashboardy a interní nástroje postavené s modulárními komponentami a agilním doručováním, odpovídající tomu, jak vaše firma skutečně funguje.",
 			"title": "Zakázkový firemní software"
 		},
 		{
@@ -386,9 +401,9 @@
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou ,  pokud je aplikována s účelem. Vytvářím webové aplikace s AI, které integrují Velké jazykové modely (LLM) do vašich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo orchestraci AI agentů, která automatizuje složité vícestupňové obchodní procesy ,  zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou. Každé řešení je navrženo s uživatelskou zkušeností řízenou AI, která působí přirozeně a intuitivně pro váš tým a zákazníky.\n\nPracuji s API jako OpenAI, open-source LLM, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
+			"longDescription": "Umělá inteligence se z futuristického slibu stala skutečnou konkurenční výhodou, pokud je aplikována s účelem. Vytvářím webové aplikace s AI, které integrují Velké jazykové modely (LLM) do vašich stávajících pracovních postupů praktickým a měřitelným způsobem, bez zbytečné složitosti.\n\nAť už jde o inteligentního chatbota, který snižuje objem ticketů podpory o 40 %, doporučovací engine, který zvyšuje průměrnou hodnotu objednávky, nebo orchestraci AI agentů, která automatizuje složité vícestupňové obchodní procesy, zaměření je vždy na obchodní výsledek, nikoli na technologii pro technologii samotnou. Každé řešení je navrženo s uživatelskou zkušeností řízenou AI, která působí přirozeně a intuitivně pro váš tým a zákazníky.\n\nPracuji s API jako OpenAI, open-source LLM, vektorovými databázemi pro sémantické vyhledávání a RAG architekturami (Retrieval-Augmented Generation) pro vytváření AI řešení, která rozumí jedinečnému kontextu vašeho podnikání.",
 			"slug": "implementace-ai-reseni",
-			"text": "Webové aplikace s AI a integrací LLM ,  chatboti, AI agenti a uživatelské zkušenosti řízené AI, které transformují vaše pracovní postupy.",
+			"text": "Webové aplikace s AI a integrací LLM: chatboti, AI agenti a uživatelské zkušenosti řízené AI, které transformují vaše pracovní postupy.",
 			"title": "Implementace AI řešení"
 		},
 		{
@@ -406,9 +421,9 @@
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "Webová stránka není jen digitální vizitka ,  je to váš nejdůležitější marketingový nástroj. Vytvářím vysoce výkonné webové aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli. S modulárními komponentami a čistou frontendovou logikou je každý projekt od prvního dne architektonicky navržen pro snadnou udržovatelnost.\n\nKaždý projekt je stavěn s výkonem v jádru ,  optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat ,  bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům. Dodržuji agilní postupy doručování produktů, začínám s MVP pro rychlou zpětnou vazbu a iteruji na základě reálných uživatelských dat.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy ,  nasazené na AWS se škálovatelnou cloudovou architekturou ,  ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
+			"longDescription": "Webová stránka není jen digitální vizitka, je to váš nejdůležitější marketingový nástroj. Vytvářím vysoce výkonné webové aplikace, které se načítají okamžitě, fungují na každém zařízení a přirozeně vedou vaše návštěvníky k akci, kterou chcete, aby provedli. S modulárními komponentami a čistou frontendovou logikou je každý projekt od prvního dne architektonicky navržen pro snadnou udržovatelnost.\n\nKaždý projekt je stavěn s výkonem v jádru, optimalizován pro Core Web Vitals od prvního řádku kódu. To znamená, že vaše stránka nebude jen skvěle vypadat, bude upřednostňována Googlem ve výsledcích vyhledávání a poskytne plynulý zážitek vašim uživatelům. Dodržuji agilní postupy doručování produktů, začínám s MVP pro rychlou zpětnou vazbu a iteruji na základě reálných uživatelských dat.\n\nOd vysoce konverzních landing pages po plnohodnotné webové aplikace s autentizací, platbami a dashboardy, nasazené na AWS se škálovatelnou cloudovou architekturou, ke každému projektu přistupuji, jako by byl můj vlastní, s pečlivou pozorností k detailu a absolutním zaměřením na výkon.",
 			"slug": "vyvoj-webovych-stranek",
-			"text": "Vysoce výkonné webové aplikace ,  rychlé, responzivní weby s modulárními komponentami, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
+			"text": "Vysoce výkonné webové aplikace: rychlé, responzivní weby s modulárními komponentami, které se načítají okamžitě, fungují na všech zařízeních a mění návštěvníky na zákazníky.",
 			"title": "Vývoj webových stránek"
 		},
 		{
@@ -422,12 +437,38 @@
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice ,  druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Pro vysoce výkonné webové aplikace zajišťuji, že každá milisekunda načítání je zohledněna, protože rychlost přímo ovlivňuje jak pozice ve vyhledávání, tak konverze. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
+			"longDescription": "Mít skvělou webovou stránku je jen polovina rovnice; druhá polovina je zajistit, aby ji našli ti správní lidé. Mé zázemí v digitálním marketingu, kombinované s hlubokými technickými znalostmi, mi umožňuje nabídnout jedinečnou perspektivu, která jde nad rámec konvenčních SEO auditů.\n\nKaždý audit začíná daty: analyzuji technickou architekturu vašeho webu, signály uživatelské zkušenosti (Core Web Vitals), strukturu obsahu a konkurenční pozici. Pro vysoce výkonné webové aplikace zajišťuji, že každá milisekunda načítání je zohledněna, protože rychlost přímo ovlivňuje jak pozice ve vyhledávání, tak konverze. Výsledkem je prioritizovaný akční plán, který spojuje každé technické doporučení s konkrétním obchodním dopadem.\n\nNeprodávám magické SEO formule. Nabízím důkladnou analýzu, transparentní doporučení a implementace, které respektují pokyny vyhledávačů a zároveň maximalizují vaši organickou viditelnost.",
 			"slug": "seo-technicke-poradenstvi",
 			"text": "Audity založené na datech, vysoce výkonná optimalizace a strategie, která pomůže vaší firmě být vidět a konvertovat.",
 			"title": "SEO a technické poradenství"
 		}
 	],
+	"servicesPage": {
+		"intro": [
+			"Spolupracuji s malými a středními firmami, startupy a nezávislými profesionály, kteří potřebují software, jenž dobře plní konkrétní úkol: web, který přivádí zákazníky, interní nástroj, který odstraní ruční práci, nebo funkci s AI, která ušetří skutečné hodiny.",
+			"Díky zkušenostem z marketingu a analýzy dat začíná každý projekt obchodním cílem, ne technologií. Než napíšu jakýkoli kód, ptám se, jak vypadá úspěch, jak ho budete měřit a co vaši uživatelé skutečně potřebují.",
+			"Od prvního hovoru až po spuštění spolupracujete přímo se mnou. Žádní account manažeři ani předávání práce, ale jasná komunikace o rozsahu, termínech a kompromisech."
+		],
+		"steps": [
+			{
+				"text": "Probereme vaše cíle, uživatele a problém, který je třeba vyřešit. Ozvu se s otázkami a návrhem rozsahu.",
+				"title": "Analýza"
+			},
+			{
+				"text": "Dostanete písemný plán s výstupy, harmonogramem a cenou, takže vás nečekají žádná překvapení.",
+				"title": "Nabídka"
+			},
+			{
+				"text": "Pracuji v krátkých iteracích a pravidelně ukazuji pokrok, abyste mohli dávat zpětnou vazbu, dokud jsou změny ještě levné.",
+				"title": "Vývoj"
+			},
+			{
+				"text": "Postarám se o nasazení, zkontroluji výkon a SEO a po spuštění zůstávám k dispozici pro opravy a vylepšení.",
+				"title": "Spuštění a podpora"
+			}
+		],
+		"stepsTitle": "Jak probíhá projekt"
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Vytvořeno s 🐞",
@@ -659,9 +700,9 @@
 		{
 			"id": "zustand",
 			"link": "https://zustand.docs.pmnd.rs/",
-			"logo": "/images/icons/zustand.svg",
+			"logo": "/images/icons/tech/zustand.webp",
 			"name": "zustand",
-			"svgr": "Zustand",
+			"svgr": "",
 			"categories": [
 				"State Management"
 			]
@@ -829,9 +870,9 @@
 		{
 			"id": "linux",
 			"link": "https://www.linux.org/",
-			"logo": "/images/icons/linux-original.svg",
+			"logo": "/images/icons/tech/linux.webp",
 			"name": "linux",
-			"svgr": "Linux",
+			"svgr": "",
 			"categories": [
 				"Tools & DevOps"
 			]

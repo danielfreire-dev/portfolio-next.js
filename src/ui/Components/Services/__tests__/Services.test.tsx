@@ -16,15 +16,44 @@ vi.mock("next/image", () => ({
 
 /** Mock TransitionLink to render a plain anchor in tests. */
 vi.mock("@/ui/Components/Sidenav/TransitionLink", () => ({
-	TransitionLink: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => (
+	TransitionLink: ({
+		children,
+		href,
+		className,
+	}: {
+		children: React.ReactNode;
+		href: string | { pathname: string; params?: Record<string, string> };
+		className?: string;
+	}) => (
 		<a
-			href={href}
+			href={
+				typeof href === "string" ? href : (
+					Object.entries(href.params ?? {}).reduce((path, [key, value]) => path.replace(`[${key}]`, value), href.pathname)
+				)
+			}
 			className={className}
 			data-testid="transition-link">
 			{children}
 		</a>
 	),
 }));
+
+describe("Services heading level", () => {
+	it("renders an h2 by default", () => {
+		renderWithProviders(<Services />);
+		expect(screen.getByRole("heading", { level: 2, name: "Services" })).toBeInTheDocument();
+	});
+
+	it("renders an h1 and intro content when used as the page's main section", () => {
+		renderWithProviders(
+			<Services headingLevel="h1">
+				<p>Intro copy</p>
+			</Services>,
+		);
+		expect(screen.getByRole("heading", { level: 1, name: "Services" })).toBeInTheDocument();
+		expect(screen.getByText("Intro copy")).toBeInTheDocument();
+	});
+});
 
 describe("Services", () => {
 	beforeEach(() => {
