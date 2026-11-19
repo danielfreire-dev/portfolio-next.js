@@ -26,22 +26,6 @@ interface Props {
 const ALL_SLUGS: string[] = getAllLocalizedSlugs();
 
 /**
- * Localized heading for the features/included section on service detail pages.
- *
- * Provides a hardcoded fallback for the "What's Included" heading in every
- * supported locale, ensuring the features section label is always visible even
- * when the main translation files haven't been updated for a new locale.
- */
-const FEATURES_HEADING: Record<string, string> = {
-	en: "What's Included",
-	pt: "O Que Está Incluído",
-	da: "Hvad Er Inkluderet",
-	pl: "Co Zawiera",
-	de: "Was Enthalten Ist",
-	cs: "Co Je Zahrnuto",
-};
-
-/**
  * Generates static route params for every known service slug,
  * enabling static site generation (SSG) for all detail pages.
  */
@@ -210,7 +194,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 				{service.features.length > 0 && (
 					<section className="mb-10 surface-cards p-6">
 						<h2 className="text-xl! font-semibold mb-4">
-							{FEATURES_HEADING[locale as keyof typeof FEATURES_HEADING] ?? FEATURES_HEADING.en}
+							{t("serviceDetail.featuresHeading")}
 						</h2>
 						<ul className="space-y-3 features-list">
 							{service.features.map((feature) => (
@@ -244,14 +228,43 @@ const ServiceDetailPage = ({ params }: Props) => {
 							className="text-xl! font-semibold mb-4">
 							{t("serviceDetail.otherServices")}
 						</h2>
-						<ul className="grid gap-4 sm:grid-cols-3">
+						<ul className="flex flex-col gap-3">
 							{otherServices.map((other) => (
 								<li key={other.slug}>
 									<TransitionLink
 										href={serviceHref(other.slug)}
-										className="surface-cards block h-full p-4 hover:scale-[1.02] transition-transform duration-300">
-										<span className="block font-semibold capitalize mb-1">{other.title}</span>
-										<span className="block text-sm text-(--text-secondary)">{other.text}</span>
+										className="related-service group">
+										<span
+											className="related-service__icon"
+											aria-hidden="true">
+											<Image
+												src={other.icon}
+												alt=""
+												width={28}
+												height={28}
+												className="service-card-icon"
+											/>
+										</span>
+										<span className="min-w-0 flex-1">
+											<span className="block text-base font-semibold capitalize leading-snug text-(--text)">
+												{other.title}
+											</span>
+											<span className="related-service__text">{other.text}</span>
+										</span>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											className="related-service__arrow"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+											strokeWidth={2}
+											aria-hidden="true">
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												d="M5 12h14M13 6l6 6-6 6"
+											/>
+										</svg>
 									</TransitionLink>
 								</li>
 							))}

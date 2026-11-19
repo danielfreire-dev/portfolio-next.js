@@ -1,7 +1,7 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
-		"imageAlt": "oil painting of Daniel",
+		"imageAlt": "olejomalba Daniela",
 		"paragraph1": "Během posledních dvou let jsem na webu budoval různé věci. Ale můj pohled na to, co a proč budovat, byl formován mnohem dříve, než jsem napsal svůj první řádek kódu.",
 		"paragraph2": "Do tohoto oboru jsem přišel z marketingu, i když ne z té strany, kterou si mnozí představují. Můj svět byl spíše o analýze dat než o kampaních – sledování tržních trendů, rozbor chování uživatelů a porozumění přesnému mechanismu, jak lidé online nachází a používají produkty. SEO a SEM jsou ve svém jádru aplikovaná psychologie a řešení problémů. Naučil jsem se poslouchat, co data křičí, a co ještě důležitější – co šeptají.",
 		"paragraph3": "To je přínos, který přináším do každého vývojářského projektu. Mnoho vývojářů umí psát elegantní kód; já se zaměřuji na vytváření elegantních řešení. A v tom je ten rozdíl.",
@@ -81,21 +81,21 @@
 		"email": "email",
 		"errors": {
 			"invalidInput": "Zkontrolujte prosím své údaje a zkuste to znovu.",
-			"sendFailed": "Failed to send message. Please try again.",
-			"sendPartial": "Failed to send confirmation. Your message was received.",
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
-			"turnstileExpired": "Security check expired. Please verify again.",
-			"turnstileFailed": "Security check failed. Please try again.",
-			"turnstileNotVerified": "Please verify you are not a robot",
-			"turnstileRequired": "Complete the security check above to enable the submit button."
+			"sendFailed": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu.",
+			"sendPartial": "Potvrzení se nepodařilo odeslat. Vaše zpráva však byla přijata.",
+			"serverConfig": "Chyba konfigurace serveru. Zkuste to prosím později.",
+			"serverError": "Chyba serveru. Zkuste to prosím později.",
+			"turnstileExpired": "Bezpečnostní ověření vypršelo. Ověřte se prosím znovu.",
+			"turnstileFailed": "Bezpečnostní ověření selhalo. Zkuste to prosím znovu.",
+			"turnstileNotVerified": "Potvrďte prosím, že nejste robot",
+			"turnstileRequired": "Dokončete bezpečnostní ověření výše, aby se aktivovalo tlačítko pro odeslání."
 		},
 		"farewell": {
 			"text": "Děkujeme za vaši důvěru. Můžete očekávat odpověď během několika pracovních dní.",
 			"title": "děkujeme"
 		},
 		"firstName": "jméno",
-		"formAriaLabel": "Contact form",
+		"formAriaLabel": "Kontaktní formulář",
 		"label": "Přečetl jsem si a souhlasím s ",
 		"lastName": "příjmení",
 		"message": "zpráva",
@@ -110,12 +110,11 @@
 		},
 		"privacy": "zásady ochrany osobních údajů",
 		"privacyPolicyCheck": "Potvrzuji, že jsem si přečetl(a) a souhlasím s",
-		"privacyPolicyUrl": "privacy-policy/",
 		"privacyPolicyUrlAriaDetails": "Zásady ochrany osobních údajů",
 		"privacyPolicyUrlAriaLabel": "Zásady ochrany osobních údajů",
 		"privacyPolicyUrlTitle": "Zásady ochrany osobních údajů",
 		"required": "povinné",
-		"requiredIndicator": "required",
+		"requiredIndicator": "povinné",
 		"sending": "odesílání…",
 		"title": "kontaktujte mě"
 	},
@@ -174,7 +173,7 @@
 			"name": "Daniel Freire",
 			"preview": "Daniel Freire – uvítací email",
 			"privacyPolicy": "zásady ochrany osobních údajů",
-			"privacyPolicyUrl": "en/privacy-policy/",
+			"privacyPolicyUrl": "cs/ochrana-osobnich-udaju",
 			"signature": "Těším se na spolupráci,",
 			"view": "Zobrazit",
 			"webLink": "daniel-freire.com",
@@ -198,16 +197,16 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
-		"carouselLabel": "Portfolio carousel",
-		"carouselSlidesLabel": "Carousel slides",
+		"carouselLabel": "Karusel portfolia",
+		"carouselSlidesLabel": "Snímky karuselu",
 		"leftarrow": {
 			"alt": "šipka vlevo",
-			"label": "Previous slide",
+			"label": "Předchozí snímek",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "šipka vpravo",
-			"label": "Next slide",
+			"label": "Další snímek",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
@@ -249,7 +248,7 @@
 			"podívejte se",
 			"zobrazit živý projekt →"
 		],
-		"opensInNewTab": "opens in new tab",
+		"opensInNewTab": "otevře se v nové kartě",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -289,7 +288,7 @@
 				"github": "",
 				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
 				"src": "/images/screenshots/dodgy-daniel.webp",
-				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"summary": "Napadlo vás někdy, co by se stalo, kdyby vám tipy na akcie dával tradingový guru s energií dražebníka na kofeinu a přesností kouzelné koule Magic 8-Ball? To je Dodgy Daniel.",
 				"title": "dodgy Daniel"
 			}
 		],
@@ -316,7 +315,7 @@
 				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
-				"summary": "Webové stránky vytvořené jako kontaktní místo pro architektonické kolektiv Insurbia.",
+				"summary": "Webové stránky vytvořené jako kontaktní místo architektonického kolektivu Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -366,6 +365,7 @@
 	"serviceDetail": {
 		"ctaLink": "Pojďme si o tom promluvit",
 		"ctaPrompt": "Máte na mysli podobný projekt?",
+		"featuresHeading": "Co služba zahrnuje",
 		"otherServices": "Další služby"
 	},
 	"services": [
@@ -476,7 +476,7 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Danielův GitHub",
-					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
+					"ariaLabel": "GitHub Daniela Freire - otevře se v nové kartě",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
 					"title": "Danielův GitHub"
@@ -484,7 +484,7 @@
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "Danielův LinkedIn",
-					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
+					"ariaLabel": "LinkedIn Daniela Freire - otevře se v nové kartě",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
 					"title": "Danielův LinkedIn"
@@ -534,67 +534,67 @@
 		}
 	},
 	"svgTitles": {
-		"Bash": "Bash shell logo",
-		"CSS3": "CSS Logo",
-		"Cloudflare": "Cloudflare logo",
-		"Cypress": "Cypress testing framework logo",
-		"D3js": "D3.js logo",
-		"Django": "Django logo",
-		"ESLint": "ESLint logo",
-		"Expressjs": "Express.js web framework logo",
-		"ExternalLinkSvg": "External-link SVG Icon",
-		"Figma": "Figma logo",
-		"Git": "Git version control logo",
-		"GitHubIcon": "GitHub profile link icon",
-		"Github": "GitHub logo",
-		"GithubActions": "GitHub Actions logo",
-		"GithubPages": "GitHub Pages logo",
-		"HTML5": "HTML5 logo",
-		"JSON": "JSON logo",
-		"JavaScript": "JavaScript logo",
-		"Jest": "Jest testing framework logo",
-		"LangChain": "LangChain logo",
-		"LaTeX": "LaTeX logo",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animated moon to sun loop transition icon",
-		"LinkedInIcon": "LinkedIn profile link icon",
-		"Linux": "Linux operating system logo",
-		"Markdown": "Markdown logo",
-		"Moon": "Moon icon for dark mode toggle",
-		"MongoDB": "MongoDB logo",
-		"Netlify": "Netlify logo",
-		"Nextjs": "Next.js framework logo",
-		"Nodejs": "Node.js runtime logo",
-		"Playwright": "Playwright logo",
-		"PostgreSQL": "PostgreSQL database logo",
-		"Postman": "Postman logo",
-		"Python": "Python programming language logo",
-		"Reactjs": "React library logo",
-		"Redux": "Redux state management logo",
+		"Bash": "Logo shellu Bash",
+		"CSS3": "Logo CSS",
+		"Cloudflare": "Logo Cloudflare",
+		"Cypress": "Logo testovacího frameworku Cypress",
+		"D3js": "Logo D3.js",
+		"Django": "Logo Django",
+		"ESLint": "Logo ESLint",
+		"Expressjs": "Logo webového frameworku Express.js",
+		"ExternalLinkSvg": "SVG ikona externího odkazu",
+		"Figma": "Logo Figma",
+		"Git": "Logo systému pro správu verzí Git",
+		"GitHubIcon": "Ikona odkazu na profil GitHub",
+		"Github": "Logo GitHub",
+		"GithubActions": "Logo GitHub Actions",
+		"GithubPages": "Logo GitHub Pages",
+		"HTML5": "Logo HTML5",
+		"JSON": "Logo JSON",
+		"JavaScript": "Logo JavaScript",
+		"Jest": "Logo testovacího frameworku Jest",
+		"LangChain": "Logo LangChain",
+		"LaTeX": "Logo LaTeX",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animovaná ikona smyčkového přechodu z měsíce na slunce",
+		"LinkedInIcon": "Ikona odkazu na profil LinkedIn",
+		"Linux": "Logo operačního systému Linux",
+		"Markdown": "Logo Markdown",
+		"Moon": "Ikona měsíce pro tmavý režim",
+		"MongoDB": "Logo MongoDB",
+		"Netlify": "Logo Netlify",
+		"Nextjs": "Logo frameworku Next.js",
+		"Nodejs": "Logo běhového prostředí Node.js",
+		"Playwright": "Logo Playwright",
+		"PostgreSQL": "Logo databáze PostgreSQL",
+		"Postman": "Logo Postman",
+		"Python": "Logo programovacího jazyka Python",
+		"Reactjs": "Logo knihovny React",
+		"Redux": "Logo knihovny pro správu stavu Redux",
 		"SELENIUM": "Selenium WebDriver",
 		"Selenium": "Selenium WebDriver",
-		"Sun": "Sun icon for light mode toggle",
-		"Sun1": "Sun icon",
-		"TailwindCSS": "Tailwind CSS logo",
-		"TypeScript": "TypeScript programming language logo",
-		"VSCode": "Visual Studio Code logo",
-		"Vitejs": "Vite build tool logo",
-		"Vitest": "Vitest testing framework logo",
-		"Webpack": "Webpack module bundler logo",
-		"Zsh": "Zsh shell logo",
-		"Zustand": "Zustand logo",
-		"alertAnimation": "Animated alert triangle with exclamation mark",
-		"blocksShuffle": "Animated blocks shuffle loading spinner",
-		"blocksWave": "Animated blocks wave loading spinner",
-		"closeToMenu": "Close to menu transition icon",
-		"compass": "Animated compass with rotating directional needle",
-		"computerAnimation": "Animated computer monitor with keyboard tray",
-		"djangoRocket": "Django rocket illustration",
-		"externalLink": "External link icon",
-		"menuToClose": "Menu to close transition icon",
-		"moonToSun": "Animated moon to sun transition icon",
-		"nextjsTsx": "Next.js framework logotype",
-		"opensInNewTab": "opens in new tab",
-		"sunToMoon": "Animated sun to moon transition icon"
+		"Sun": "Ikona slunce pro světlý režim",
+		"Sun1": "Ikona slunce",
+		"TailwindCSS": "Logo Tailwind CSS",
+		"TypeScript": "Logo programovacího jazyka TypeScript",
+		"VSCode": "Logo Visual Studio Code",
+		"Vitejs": "Logo nástroje pro sestavení Vite",
+		"Vitest": "Logo testovacího frameworku Vitest",
+		"Webpack": "Logo bundleru modulů Webpack",
+		"Zsh": "Logo shellu Zsh",
+		"Zustand": "Logo Zustand",
+		"alertAnimation": "Animovaný výstražný trojúhelník s vykřičníkem",
+		"blocksShuffle": "Animovaný indikátor načítání s přeskupujícími se bloky",
+		"blocksWave": "Animovaný indikátor načítání s bloky ve vlně",
+		"closeToMenu": "Ikona přechodu ze zavření na menu",
+		"compass": "Animovaný kompas s otáčející se střelkou",
+		"computerAnimation": "Animovaný počítačový monitor s klávesnicí",
+		"djangoRocket": "Ilustrace rakety Django",
+		"externalLink": "Ikona externího odkazu",
+		"menuToClose": "Ikona přechodu z menu na zavření",
+		"moonToSun": "Animovaná ikona přechodu z měsíce na slunce",
+		"nextjsTsx": "Logotyp Next.js",
+		"opensInNewTab": "otevře se v nové kartě",
+		"sunToMoon": "Animovaná ikona přechodu ze slunce na měsíc"
 	},
 	"tech": [
 		{
@@ -991,37 +991,37 @@
 	"techCategories": [
 		{
 			"id": "languages",
-			"label": "Languages",
+			"label": "Jazyky",
 			"order": 1
 		},
 		{
 			"id": "front-end",
-			"label": "Front End",
+			"label": "Frontend",
 			"order": 2
 		},
 		{
 			"id": "back-end",
-			"label": "Back End",
+			"label": "Backend",
 			"order": 3
 		},
 		{
 			"id": "state-management",
-			"label": "State Management",
+			"label": "Správa stavu",
 			"order": 4
 		},
 		{
 			"id": "ai-data-viz",
-			"label": "AI, Data and Visualization",
+			"label": "AI, data a vizualizace",
 			"order": 5
 		},
 		{
 			"id": "databases",
-			"label": "Databases",
+			"label": "Databáze",
 			"order": 6
 		},
 		{
 			"id": "testing",
-			"label": "Testing",
+			"label": "Testování",
 			"order": 7
 		},
 		{
@@ -1031,7 +1031,7 @@
 		},
 		{
 			"id": "tools-devops",
-			"label": "Tools & DevOps",
+			"label": "Nástroje a DevOps",
 			"order": 9
 		},
 		{
@@ -1041,7 +1041,7 @@
 		},
 		{
 			"id": "data-formats",
-			"label": "Data Formats",
+			"label": "Datové formáty",
 			"order": 11
 		}
 	]

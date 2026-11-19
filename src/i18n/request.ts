@@ -3,6 +3,13 @@ import { hasLocale } from "next-intl";
 import { routing } from "./routing";
 
 /**
+ * Explicit time zone for date formatting.  Without it next-intl falls back to
+ * the build machine's zone and serialises it into every page, which would
+ * expose wherever the site happens to be built.
+ */
+const TIME_ZONE = "UTC";
+
+/**
  * next-intl request configuration.
  *
  * Resolves the active locale from the request, validates it against the
@@ -34,6 +41,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     return {
       locale,
       messages,
+      timeZone: TIME_ZONE,
     };
   } catch (error) {
     console.error("Error in getRequestConfig:", error);
@@ -41,6 +49,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
       locale: routing.defaultLocale,
       messages: (await import(`@/messages/${routing.defaultLocale}.json`))
         .default,
+      timeZone: TIME_ZONE,
     };
   }
 });

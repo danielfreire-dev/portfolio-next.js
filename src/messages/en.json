@@ -110,7 +110,6 @@
 		},
 		"privacy": "privacy policy",
 		"privacyPolicyCheck": "I confirm that I read and agree with the",
-		"privacyPolicyUrl": "privacy-policy/",
 		"privacyPolicyUrlAriaDetails": "Privacy Policy",
 		"privacyPolicyUrlAriaLabel": "Privacy Policy",
 		"privacyPolicyUrlTitle": "Privacy Policy",
@@ -174,7 +173,7 @@
 			"name": "Daniel Freire",
 			"preview": "Daniel Freire's Welcome Email",
 			"privacyPolicy": "privacy policy",
-			"privacyPolicyUrl": "en/privacy-policy/",
+			"privacyPolicyUrl": "en/privacy-policy",
 			"signature": "Looking forward to working with you,",
 			"view": "View the",
 			"webLink": "daniel-freire.com",
@@ -254,7 +253,7 @@
 				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
-				"summary": "Trivia game with 4.000+ questions.",
+				"summary": "Trivia game with 4,000+ questions.",
 				"title": "quizzical"
 			},
 			{
@@ -313,7 +312,7 @@
 				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
-				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
+				"summary": "Website developed as the contact point for the architecture collective Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -358,6 +357,7 @@
 	"serviceDetail": {
 		"ctaLink": "Let's talk about it",
 		"ctaPrompt": "Have a project like this in mind?",
+		"featuresHeading": "What's Included",
 		"otherServices": "Other services"
 	},
 	"services": [

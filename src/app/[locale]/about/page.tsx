@@ -3,7 +3,8 @@ import Techstack from "@/ui/Components/Techstack/Techstack";
 import { Suspense, use } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
-import { Locale, useTranslations } from "next-intl";
+import { Locale, NextIntlClientProvider, useMessages, useTranslations } from "next-intl";
+import { TECHSTACK_CLIENT_MESSAGES, pickMessages } from "@/i18n/clientMessages";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
 import { getCanonicalUrl } from "@/i18n/alternates";
 import { buildPageMetadata } from "@/i18n/pageMetadata";
@@ -58,6 +59,7 @@ export default function About({ params }: Props) {
 	setRequestLocale(locale);
 	const t = useTranslations("metadata.title");
 	const b = useTranslations("breadcrumbs");
+	const messages = useMessages();
 
 	return (
 		<>
@@ -73,9 +75,11 @@ export default function About({ params }: Props) {
 				}}
 			/>
 			<ClientSideAbout />
-			<Suspense>
-				<Techstack />
-			</Suspense>
+			<NextIntlClientProvider messages={pickMessages(messages, TECHSTACK_CLIENT_MESSAGES)}>
+				<Suspense>
+					<Techstack />
+				</Suspense>
+			</NextIntlClientProvider>
 		</>
 	);
 }

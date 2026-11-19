@@ -27,7 +27,14 @@ export type TechCategory =
 	| "Hosting"
 	| "Data Formats";
 
-export function TechGroups({ tech, category }: { tech: Tech[]; category: TechCategory }) {
+/**
+ * One tech-stack category: a heading and the technologies tagged with it.
+ *
+ * @param tech     - All technologies.
+ * @param category - English category key used to filter `tech[].categories`.
+ * @param label    - Translated heading (falls back to the key).
+ */
+export function TechGroups({ tech, category, label }: { tech: Tech[]; category: TechCategory; label?: string }) {
 	const filteredTech = tech.filter((item) => item.categories.includes(category));
 
 	if (filteredTech.length === 0) {
@@ -37,7 +44,7 @@ export function TechGroups({ tech, category }: { tech: Tech[]; category: TechCat
 	return (
 		<div className="group bg-(--surface-hover) w-full alternating-row items-center justify-between gap-4 lg:gap-0">
 			<h3 className="px-max py-1.5 text-2xl font-semibold mx-3 text-center lg:group-even:text-right lg:group-odd:text-left lg:whitespace-nowrap">
-				{category}
+				{label ?? category}
 			</h3>
 			<ul className="flex flex-wrap justify-center lg:group-odd:justify-end lg:group-even:justify-start gap-4 bg-(--surface) p-4  w-full">
 				{filteredTech.map((item) => (

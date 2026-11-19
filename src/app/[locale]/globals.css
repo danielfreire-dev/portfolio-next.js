@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /* Add truncate to all text elements */
 /* @layer base {
 	/* Or target specific elements */
@@ -294,6 +293,12 @@ button {
 
 #logo {
 	font-family: var(--font-logo), serif;
+	/* The logo is an <h1> on the home page and a <p> elsewhere.  Pin its size
+	   and weight here (ID specificity) so the element-level h1/p rules don't
+	   override the text-5xl class or request a bold the font doesn't have. */
+	font-size: 3rem;
+	line-height: 1;
+	font-weight: 500;
 }
 
 h1,
@@ -559,6 +564,81 @@ footer a {
 	font-size: 1.125rem;
 	line-height: 1;
 }
+/* "Other services" link rows on the service detail page */
+.related-service {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 1.25rem;
+	border: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
+	background: var(--surface);
+	color: var(--text);
+	cursor: pointer;
+	touch-action: manipulation;
+	transition:
+		border-color 200ms ease-out,
+		background-color 200ms ease-out,
+		box-shadow 200ms ease-out;
+}
+.related-service:hover {
+	border-color: color-mix(in srgb, var(--primary) 55%, transparent);
+	background: var(--surface-hover);
+	/* box-shadow: 0 6px 20px -12px color-mix(in srgb, var(--primary) 60%, transparent); */
+}
+.related-service:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 3px;
+}
+.related-service__icon {
+	display: grid;
+	place-items: center;
+	flex-shrink: 0;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 0.75rem;
+	/* background: color-mix(in srgb, var(--primary) 12%, transparent); */
+	transition: background-color 200ms ease-out;
+}
+.related-service:hover .related-service__icon {
+	/* background: color-mix(in srgb, var(--primary) 20%, transparent); */
+}
+.related-service__text {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	overflow: hidden;
+	margin-top: 0.25rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: var(--text-tertiary);
+}
+.related-service__arrow {
+	flex-shrink: 0;
+	width: 1.25rem;
+	height: 1.25rem;
+	color: var(--text-tertiary);
+	transition:
+		transform 200ms ease-out,
+		color 200ms ease-out;
+}
+.related-service:hover .related-service__arrow,
+.related-service:focus-visible .related-service__arrow {
+	color: var(--primary);
+	transform: translateX(4px);
+}
+@media (prefers-reduced-motion: reduce) {
+	.related-service,
+	.related-service__icon,
+	.related-service__arrow {
+		transition: none;
+	}
+	.related-service:hover .related-service__arrow,
+	.related-service:focus-visible .related-service__arrow {
+		transform: none;
+	}
+}
+
 .optional::after {
 	content: "Optional" / "Optional";
 }

@@ -15,6 +15,7 @@ import { Suspense } from "react";
 import { generatePersonSchema, generateWebSiteSchema } from "@/ui/Components/StructuredData";
 import { themeScript } from "@/lib/themeScript";
 import { OG_IMAGE } from "@/i18n/pageMetadata";
+import { GLOBAL_CLIENT_MESSAGES, pickMessages } from "@/i18n/clientMessages";
 
 /**
  * Static metadata for the root layout.
@@ -81,8 +82,7 @@ export const metadata: Metadata = {
  * Latin + Latin Extended-A (all six site languages) and common punctuation.
  * Unused variation axes were pinned (width everywhere; weight 500 for the
  * logo font), which cuts total font weight from ~810 KB to ~165 KB.
- * Regenerate them with `pyftsubset` + `fontTools.varLib.instancer` if new
- * characters or weights are needed.
+ * Sources and regeneration steps: `ui/fonts/sources/README.md`.
  */
 
 /** Logo / display font — Mozilla Headline variable weight. */
@@ -108,7 +108,9 @@ const Text = localFont({
 	// connections may show the fallback; later page views use the cached font.
 	display: "optional",
 	variable: "--font-text",
-	weight: "400",
+	// Full range of the variable font, so semibold/bold text uses real glyphs
+	// instead of browser-synthesized ("fake") bold.
+	weight: "100 700",
 });
 
 /** Small / secondary text font — IBM Plex Sans variable weight (light). */
@@ -169,7 +171,9 @@ export default async function RootLayout({
 
 	setRequestLocale(locale);
 
-	const messages = await getMessages();
+	// Only the messages that global Client Components need are serialised
+	// into the page; Server Components read the full set on the server.
+	const messages = pickMessages(await getMessages(), GLOBAL_CLIENT_MESSAGES);
 
 	return (
 		<html

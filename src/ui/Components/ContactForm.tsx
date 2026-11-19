@@ -5,7 +5,7 @@ import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
-import { TransitionLink } from "./Sidenav/TransitionLink";
+import { Link } from "@/i18n/navigation";
 import { Turnstile } from "next-turnstile";
 import { useThemeStore } from "@/stores/theme-store";
 import { TurnstileSkeleton } from "./Skeletons";
@@ -224,12 +224,16 @@ const ContactForm = () => {
 							required
 						/>{" "}
 						{t("privacyPolicyCheck")}{" "}
-						<TransitionLink
-							href={t("privacyPolicyUrl") as "/privacy-policy"}
+						{/* Plain Link (not TransitionLink): it must open in a new tab so the
+						    visitor doesn't lose what they've typed.  The internal route key
+						    is localized by next-intl (e.g. /de/datenschutz). */}
+						<Link
+							href="/privacy-policy"
 							target="_blank"
+							rel="noopener"
 							className="underline">
 							<span className="underline">{t("privacy")}</span>
-						</TransitionLink>
+						</Link>
 						.
 					</label>
 				</div>

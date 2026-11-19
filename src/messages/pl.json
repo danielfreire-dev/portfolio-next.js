@@ -1,7 +1,7 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
-		"imageAlt": "oil painting of Daniel",
+		"imageAlt": "obraz olejny przedstawiający Daniela",
 		"paragraph1": "Od dwóch lat tworzę rzeczy w sieci. Ale moja perspektywa na to, co budować i dlaczego, ukształtowała się na długo przed napisaniem pierwszej linijki kodu.",
 		"paragraph2": "Wszedłem do tej branży z marketingu, ale nie z tej strony, którą możesz sobie wyobrażać. Mój świat był mniej o kampaniach, a więcej o wzorcach: analizowaniu danych rynkowych, rozszyfrowywaniu zachowań użytkowników i zrozumieniu precyzyjnych mechanizmów, w jaki sposób ludzie znajdują i korzystają z produktu online. SEO i SEM, w swojej istocie, to po prostu zastosowana psychologia i rozwiązywanie problemów. Uczysz się słuchać, co dane krzyczą, a co ważniejsze, co szepczą.",
 		"paragraph3": "To jest tło, które wniosę do każdego projektu developerskiego. Większość developerów potrafi pisać elegancki kod; moim skupieniem jest budowanie eleganckich rozwiązań. Jest tu kluczowa różnica.",
@@ -81,21 +81,21 @@
 		"email": "e-mail",
 		"errors": {
 			"invalidInput": "Sprawdź swoje dane i spróbuj ponownie.",
-			"sendFailed": "Failed to send message. Please try again.",
-			"sendPartial": "Failed to send confirmation. Your message was received.",
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
-			"turnstileExpired": "Security check expired. Please verify again.",
-			"turnstileFailed": "Security check failed. Please try again.",
-			"turnstileNotVerified": "Please verify you are not a robot",
-			"turnstileRequired": "Complete the security check above to enable the submit button."
+			"sendFailed": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
+			"sendPartial": "Nie udało się wysłać potwierdzenia. Twoja wiadomość została odebrana.",
+			"serverConfig": "Błąd konfiguracji serwera. Spróbuj ponownie później.",
+			"serverError": "Błąd serwera. Spróbuj ponownie później.",
+			"turnstileExpired": "Weryfikacja bezpieczeństwa wygasła. Zweryfikuj ponownie.",
+			"turnstileFailed": "Weryfikacja bezpieczeństwa nie powiodła się. Spróbuj ponownie.",
+			"turnstileNotVerified": "Potwierdź, że nie jesteś robotem",
+			"turnstileRequired": "Ukończ weryfikację bezpieczeństwa powyżej, aby włączyć przycisk wysyłania."
 		},
 		"farewell": {
 			"text": "Doceniam Twoje zaufanie. Możesz spodziewać się odpowiedzi w ciągu najbliższych dni roboczych.",
 			"title": "dziękuję"
 		},
 		"firstName": "imię",
-		"formAriaLabel": "Contact form",
+		"formAriaLabel": "Formularz kontaktowy",
 		"label": "Przeczytałem/am i zgadzam się z ",
 		"lastName": "nazwisko",
 		"message": "wiadomość",
@@ -110,12 +110,11 @@
 		},
 		"privacy": "polityka prywatności",
 		"privacyPolicyCheck": "Potwierdzam, że przeczytałem/am i zgadzam się z",
-		"privacyPolicyUrl": "privacy-policy/",
 		"privacyPolicyUrlAriaDetails": "Polityka Prywatności",
 		"privacyPolicyUrlAriaLabel": "Polityka Prywatności",
 		"privacyPolicyUrlTitle": "Polityka Prywatności",
 		"required": "wymagane",
-		"requiredIndicator": "required",
+		"requiredIndicator": "wymagane",
 		"sending": "wysyłanie…",
 		"title": "skontaktuj się"
 	},
@@ -174,7 +173,7 @@
 			"name": "Daniel Freire",
 			"preview": "E-mail Powitalny Daniela Freire",
 			"privacyPolicy": "polityka prywatności",
-			"privacyPolicyUrl": "pl/privacy-policy/",
+			"privacyPolicyUrl": "pl/polityka-prywatnosci",
 			"signature": "Z niecierpliwością czekam na współpracę z Tobą,",
 			"view": "Zobacz",
 			"webLink": "daniel-freire.com",
@@ -198,16 +197,16 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
-		"carouselLabel": "Portfolio carousel",
-		"carouselSlidesLabel": "Carousel slides",
+		"carouselLabel": "Karuzela portfolio",
+		"carouselSlidesLabel": "Slajdy karuzeli",
 		"leftarrow": {
 			"alt": "strzałka w lewo",
-			"label": "Previous slide",
+			"label": "Poprzedni slajd",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "strzałka w prawo",
-			"label": "Next slide",
+			"label": "Następny slajd",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
@@ -249,7 +248,7 @@
 			"sprawdź to",
 			"zobacz żywy projekt →"
 		],
-		"opensInNewTab": "opens in new tab",
+		"opensInNewTab": "otwiera się w nowej karcie",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -257,7 +256,7 @@
 				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
-				"summary": "Trivia game with 4.000+ questions.",
+				"summary": "Gra quizowa z ponad 4000 pytań.",
 				"title": "quizzical"
 			},
 			{
@@ -265,7 +264,7 @@
 				"github": "https://github.com/danielfreire-dev/PollyGlot",
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.webp",
-				"summary": "Translation app with AI.",
+				"summary": "Aplikacja do tłumaczenia z AI.",
 				"title": "pollyGlot"
 			},
 			{
@@ -273,7 +272,7 @@
 				"github": "",
 				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
-				"summary": "Fun project to reproduce a Drum Kit in your PC.",
+				"summary": "Zabawny projekt odtwarzający perkusję na Twoim komputerze.",
 				"title": "drum kit app"
 			},
 			{
@@ -281,7 +280,7 @@
 				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
-				"summary": "The world's most popular dice game, now in your browser.",
+				"summary": "Najpopularniejsza gra w kości na świecie, teraz w Twojej przeglądarce.",
 				"title": "tenzi"
 			},
 			{
@@ -289,18 +288,18 @@
 				"github": "",
 				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
 				"src": "/images/screenshots/dodgy-daniel.webp",
-				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"summary": "Zastanawiałeś się kiedyś, co by było, gdyby porad giełdowych udzielał Ci guru tradingu z energią licytatora na kofeinie i trafnością Magicznej Kuli 8? Oto Dodgy Daniel.",
 				"title": "dodgy Daniel"
 			}
 		],
-		"projects-title": "Projects",
+		"projects-title": "Projekty",
 		"websites": [
 			{
 				"demo": "Na żywo",
 				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
-				"summary": "MuraRyu is a new Condominium Management company in Portugal.",
+				"summary": "MuraRyu to nowa firma zarządzająca wspólnotami mieszkaniowymi w Portugalii.",
 				"title": "muraRyu"
 			},
 			{
@@ -308,7 +307,7 @@
 				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+				"summary": "Strona galerii prezentująca prace znanego portugalskiego artysty Victó.",
 				"title": "victó's art gallery"
 			},
 			{
@@ -316,7 +315,7 @@
 				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
-				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
+				"summary": "Strona internetowa będąca punktem kontaktowym kolektywu architektonicznego Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -366,6 +365,7 @@
 	"serviceDetail": {
 		"ctaLink": "Porozmawiajmy",
 		"ctaPrompt": "Masz w głowie podobny projekt?",
+		"featuresHeading": "Co obejmuje usługa",
 		"otherServices": "Pozostałe usługi"
 	},
 	"services": [
@@ -476,7 +476,7 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "GitHub Daniela Freire",
-					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
+					"ariaLabel": "GitHub Daniela Freire - otwiera się w nowej karcie",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
 					"title": "GitHub Daniela Freire"
@@ -484,7 +484,7 @@
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "LinkedIn Daniela Freire",
-					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
+					"ariaLabel": "LinkedIn Daniela Freire - otwiera się w nowej karcie",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
 					"title": "LinkedIn Daniela Freire"
@@ -534,67 +534,67 @@
 		}
 	},
 	"svgTitles": {
-		"Bash": "Bash shell logo",
-		"CSS3": "CSS Logo",
-		"Cloudflare": "Cloudflare logo",
-		"Cypress": "Cypress testing framework logo",
-		"D3js": "D3.js logo",
-		"Django": "Django logo",
-		"ESLint": "ESLint logo",
-		"Expressjs": "Express.js web framework logo",
-		"ExternalLinkSvg": "External-link SVG Icon",
-		"Figma": "Figma logo",
-		"Git": "Git version control logo",
-		"GitHubIcon": "GitHub profile link icon",
-		"Github": "GitHub logo",
-		"GithubActions": "GitHub Actions logo",
-		"GithubPages": "GitHub Pages logo",
-		"HTML5": "HTML5 logo",
-		"JSON": "JSON logo",
-		"JavaScript": "JavaScript logo",
-		"Jest": "Jest testing framework logo",
-		"LangChain": "LangChain logo",
-		"LaTeX": "LaTeX logo",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animated moon to sun loop transition icon",
-		"LinkedInIcon": "LinkedIn profile link icon",
-		"Linux": "Linux operating system logo",
-		"Markdown": "Markdown logo",
-		"Moon": "Moon icon for dark mode toggle",
-		"MongoDB": "MongoDB logo",
-		"Netlify": "Netlify logo",
-		"Nextjs": "Next.js framework logo",
-		"Nodejs": "Node.js runtime logo",
-		"Playwright": "Playwright logo",
-		"PostgreSQL": "PostgreSQL database logo",
-		"Postman": "Postman logo",
-		"Python": "Python programming language logo",
-		"Reactjs": "React library logo",
-		"Redux": "Redux state management logo",
+		"Bash": "Logo powłoki Bash",
+		"CSS3": "Logo CSS",
+		"Cloudflare": "Logo Cloudflare",
+		"Cypress": "Logo frameworka testowego Cypress",
+		"D3js": "Logo D3.js",
+		"Django": "Logo Django",
+		"ESLint": "Logo ESLint",
+		"Expressjs": "Logo frameworka webowego Express.js",
+		"ExternalLinkSvg": "Ikona SVG linku zewnętrznego",
+		"Figma": "Logo Figma",
+		"Git": "Logo systemu kontroli wersji Git",
+		"GitHubIcon": "Ikona linku do profilu GitHub",
+		"Github": "Logo GitHub",
+		"GithubActions": "Logo GitHub Actions",
+		"GithubPages": "Logo GitHub Pages",
+		"HTML5": "Logo HTML5",
+		"JSON": "Logo JSON",
+		"JavaScript": "Logo JavaScript",
+		"Jest": "Logo frameworka testowego Jest",
+		"LangChain": "Logo LangChain",
+		"LaTeX": "Logo LaTeX",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animowana ikona zapętlonego przejścia z księżyca w słońce",
+		"LinkedInIcon": "Ikona linku do profilu LinkedIn",
+		"Linux": "Logo systemu operacyjnego Linux",
+		"Markdown": "Logo Markdown",
+		"Moon": "Ikona księżyca do włączania trybu ciemnego",
+		"MongoDB": "Logo MongoDB",
+		"Netlify": "Logo Netlify",
+		"Nextjs": "Logo frameworka Next.js",
+		"Nodejs": "Logo środowiska uruchomieniowego Node.js",
+		"Playwright": "Logo Playwright",
+		"PostgreSQL": "Logo bazy danych PostgreSQL",
+		"Postman": "Logo Postman",
+		"Python": "Logo języka programowania Python",
+		"Reactjs": "Logo biblioteki React",
+		"Redux": "Logo biblioteki do zarządzania stanem Redux",
 		"SELENIUM": "Selenium WebDriver",
 		"Selenium": "Selenium WebDriver",
-		"Sun": "Sun icon for light mode toggle",
-		"Sun1": "Sun icon",
-		"TailwindCSS": "Tailwind CSS logo",
-		"TypeScript": "TypeScript programming language logo",
-		"VSCode": "Visual Studio Code logo",
-		"Vitejs": "Vite build tool logo",
-		"Vitest": "Vitest testing framework logo",
-		"Webpack": "Webpack module bundler logo",
-		"Zsh": "Zsh shell logo",
-		"Zustand": "Zustand logo",
-		"alertAnimation": "Animated alert triangle with exclamation mark",
-		"blocksShuffle": "Animated blocks shuffle loading spinner",
-		"blocksWave": "Animated blocks wave loading spinner",
-		"closeToMenu": "Close to menu transition icon",
-		"compass": "Animated compass with rotating directional needle",
-		"computerAnimation": "Animated computer monitor with keyboard tray",
-		"djangoRocket": "Django rocket illustration",
-		"externalLink": "External link icon",
-		"menuToClose": "Menu to close transition icon",
-		"moonToSun": "Animated moon to sun transition icon",
-		"nextjsTsx": "Next.js framework logotype",
-		"opensInNewTab": "opens in new tab",
-		"sunToMoon": "Animated sun to moon transition icon"
+		"Sun": "Ikona słońca do włączania trybu jasnego",
+		"Sun1": "Ikona słońca",
+		"TailwindCSS": "Logo Tailwind CSS",
+		"TypeScript": "Logo języka programowania TypeScript",
+		"VSCode": "Logo Visual Studio Code",
+		"Vitejs": "Logo narzędzia do budowania Vite",
+		"Vitest": "Logo frameworka testowego Vitest",
+		"Webpack": "Logo bundlera modułów Webpack",
+		"Zsh": "Logo powłoki Zsh",
+		"Zustand": "Logo Zustand",
+		"alertAnimation": "Animowany trójkąt ostrzegawczy z wykrzyknikiem",
+		"blocksShuffle": "Animowany wskaźnik ładowania z przetasowującymi się blokami",
+		"blocksWave": "Animowany wskaźnik ładowania z blokami w fali",
+		"closeToMenu": "Ikona przejścia z zamknięcia do menu",
+		"compass": "Animowany kompas z obracającą się igłą",
+		"computerAnimation": "Animowany monitor komputera z półką na klawiaturę",
+		"djangoRocket": "Ilustracja rakiety Django",
+		"externalLink": "Ikona linku zewnętrznego",
+		"menuToClose": "Ikona przejścia z menu do zamknięcia",
+		"moonToSun": "Animowana ikona przejścia z księżyca w słońce",
+		"nextjsTsx": "Logotyp Next.js",
+		"opensInNewTab": "otwiera się w nowej karcie",
+		"sunToMoon": "Animowana ikona przejścia ze słońca w księżyc"
 	},
 	"tech": [
 		{
@@ -991,37 +991,37 @@
 	"techCategories": [
 		{
 			"id": "languages",
-			"label": "Languages",
+			"label": "Języki",
 			"order": 1
 		},
 		{
 			"id": "front-end",
-			"label": "Front End",
+			"label": "Frontend",
 			"order": 2
 		},
 		{
 			"id": "back-end",
-			"label": "Back End",
+			"label": "Backend",
 			"order": 3
 		},
 		{
 			"id": "state-management",
-			"label": "State Management",
+			"label": "Zarządzanie stanem",
 			"order": 4
 		},
 		{
 			"id": "ai-data-viz",
-			"label": "AI, Data and Visualization",
+			"label": "AI, dane i wizualizacja",
 			"order": 5
 		},
 		{
 			"id": "databases",
-			"label": "Databases",
+			"label": "Bazy danych",
 			"order": 6
 		},
 		{
 			"id": "testing",
-			"label": "Testing",
+			"label": "Testowanie",
 			"order": 7
 		},
 		{
@@ -1031,7 +1031,7 @@
 		},
 		{
 			"id": "tools-devops",
-			"label": "Tools & DevOps",
+			"label": "Narzędzia i DevOps",
 			"order": 9
 		},
 		{
@@ -1041,7 +1041,7 @@
 		},
 		{
 			"id": "data-formats",
-			"label": "Data Formats",
+			"label": "Formaty danych",
 			"order": 11
 		}
 	]

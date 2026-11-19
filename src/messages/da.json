@@ -1,7 +1,7 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
-		"imageAlt": "oil painting of Daniel",
+		"imageAlt": "oliemaleri af Daniel",
 		"paragraph1": "De sidste to år har jeg bygget ting på nettet. Men mit perspektiv på hvad der skal bygges, og hvorfor, blev formet længe før jeg skrev min første linje kode.",
 		"paragraph2": "Jeg kom ind i dette felt fra marketing, men ikke den side du måske forestiller dig. Min verden handlede mindre om kampagner og mere om mønstre: analysering af markedets data, afkodning af brugeradfærd og forståelse af de præcise mekanismer for hvordan folk finder og bruger et produkt online. SEO og SEM er i deres kerne blot anvendt psykologi og problemløsning. Du lærer at lytte til hvad dataen skriger, og endnu vigtigere, til hvad den hvisker.",
 		"paragraph3": "Det er den baggrund jeg bringer med til hvert udviklingsprojekt. De fleste udviklere kan skrive elegant kode; mit fokus er på at bygge elegante løsninger. Der er en afgørende forskel.",
@@ -81,21 +81,21 @@
 		"email": "e-mail",
 		"errors": {
 			"invalidInput": "Kontroller venligst dine oplysninger og prøv igen.",
-			"sendFailed": "Failed to send message. Please try again.",
-			"sendPartial": "Failed to send confirmation. Your message was received.",
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
-			"turnstileExpired": "Security check expired. Please verify again.",
-			"turnstileFailed": "Security check failed. Please try again.",
-			"turnstileNotVerified": "Please verify you are not a robot",
-			"turnstileRequired": "Complete the security check above to enable the submit button."
+			"sendFailed": "Beskeden kunne ikke sendes. Prøv igen.",
+			"sendPartial": "Bekræftelsen kunne ikke sendes. Din besked er modtaget.",
+			"serverConfig": "Fejl i serverkonfigurationen. Prøv igen senere.",
+			"serverError": "Serverfejl. Prøv igen senere.",
+			"turnstileExpired": "Sikkerhedstjekket er udløbet. Bekræft igen.",
+			"turnstileFailed": "Sikkerhedstjekket mislykkedes. Prøv igen.",
+			"turnstileNotVerified": "Bekræft, at du ikke er en robot",
+			"turnstileRequired": "Gennemfør sikkerhedstjekket ovenfor for at aktivere send-knappen."
 		},
 		"farewell": {
 			"text": "Jeg sætter pris på din tillid. Du kan forvente et svar inden for de næste hverdage.",
 			"title": "tak"
 		},
 		"firstName": "fornavn",
-		"formAriaLabel": "Contact form",
+		"formAriaLabel": "Kontaktformular",
 		"label": "Jeg har læst og accepterer ",
 		"lastName": "efternavn",
 		"message": "besked",
@@ -110,12 +110,11 @@
 		},
 		"privacy": "privatlivspolitik",
 		"privacyPolicyCheck": "Jeg bekræfter at jeg har læst og accepterer",
-		"privacyPolicyUrl": "privacy-policy/",
 		"privacyPolicyUrlAriaDetails": "Privatlivspolitik",
 		"privacyPolicyUrlAriaLabel": "Privatlivspolitik",
 		"privacyPolicyUrlTitle": "Privatlivspolitik",
 		"required": "påkrævet",
-		"requiredIndicator": "required",
+		"requiredIndicator": "påkrævet",
 		"sending": "sender…",
 		"title": "kom i kontakt"
 	},
@@ -174,7 +173,7 @@
 			"name": "Daniel Freire",
 			"preview": "Daniel Freires Velkomst-e-mail",
 			"privacyPolicy": "privatlivspolitik",
-			"privacyPolicyUrl": "da/privacy-policy/",
+			"privacyPolicyUrl": "da/privatlivspolitik",
 			"signature": "Ser frem til at arbejde sammen med dig,",
 			"view": "Se",
 			"webLink": "daniel-freire.com",
@@ -198,16 +197,16 @@
 		"trending": "Portfolio"
 	},
 	"icons": {
-		"carouselLabel": "Portfolio carousel",
-		"carouselSlidesLabel": "Carousel slides",
+		"carouselLabel": "Portfolio-karrusel",
+		"carouselSlidesLabel": "Karrusel-slides",
 		"leftarrow": {
 			"alt": "venstre pil",
-			"label": "Previous slide",
+			"label": "Forrige slide",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "højre pil",
-			"label": "Next slide",
+			"label": "Næste slide",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
@@ -249,7 +248,7 @@
 			"tjek det ud",
 			"se det live projekt →"
 		],
-		"opensInNewTab": "opens in new tab",
+		"opensInNewTab": "åbner i en ny fane",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -257,7 +256,7 @@
 				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
-				"summary": "Trivia game with 4.000+ questions.",
+				"summary": "Quizspil med over 4.000 spørgsmål.",
 				"title": "quizzical"
 			},
 			{
@@ -265,7 +264,7 @@
 				"github": "https://github.com/danielfreire-dev/PollyGlot",
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.webp",
-				"summary": "Translation app with AI.",
+				"summary": "Oversættelsesapp med AI.",
 				"title": "pollyGlot"
 			},
 			{
@@ -273,7 +272,7 @@
 				"github": "",
 				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
-				"summary": "Fun project to reproduce a Drum Kit in your PC.",
+				"summary": "Sjovt projekt, der genskaber et trommesæt på din computer.",
 				"title": "drum kit app"
 			},
 			{
@@ -281,7 +280,7 @@
 				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
-				"summary": "The world's most popular dice game, now in your browser.",
+				"summary": "Verdens mest populære terningspil, nu i din browser.",
 				"title": "tenzi"
 			},
 			{
@@ -289,18 +288,18 @@
 				"github": "",
 				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
 				"src": "/images/screenshots/dodgy-daniel.webp",
-				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"summary": "Har du nogensinde tænkt over, hvad der ville ske, hvis en tradingguru med energien fra en koffeinpåvirket auktionarius og præcisionen fra en Magic 8-Ball gav dig aktietips? Det er Dodgy Daniel.",
 				"title": "dodgy Daniel"
 			}
 		],
-		"projects-title": "Projects",
+		"projects-title": "Projekter",
 		"websites": [
 			{
 				"demo": "Live",
 				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
-				"summary": "MuraRyu is a new Condominium Management company in Portugal.",
+				"summary": "MuraRyu er en ny virksomhed inden for administration af ejerforeninger i Portugal.",
 				"title": "muraRyu"
 			},
 			{
@@ -308,7 +307,7 @@
 				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+				"summary": "Galleriwebsite, der viser værker af den kendte portugisiske kunstner Victó.",
 				"title": "victó's art gallery"
 			},
 			{
@@ -316,7 +315,7 @@
 				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
-				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
+				"summary": "Website, der fungerer som kontaktpunkt for arkitektkollektivet Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -366,6 +365,7 @@
 	"serviceDetail": {
 		"ctaLink": "Lad os tale om det",
 		"ctaPrompt": "Har du et lignende projekt i tankerne?",
+		"featuresHeading": "Det får du",
 		"otherServices": "Andre ydelser"
 	},
 	"services": [
@@ -476,7 +476,7 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Daniel Freires GitHub",
-					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
+					"ariaLabel": "Daniel Freires GitHub - åbner i en ny fane",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
 					"title": "Daniel Freires GitHub"
@@ -484,7 +484,7 @@
 				"linkedin": {
 					"alt": "LinkedIn",
 					"ariaDetails": "Daniel Freires Linkedin",
-					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
+					"ariaLabel": "Daniel Freires LinkedIn - åbner i en ny fane",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
 					"title": "Daniel Freires Linkedin"
@@ -534,67 +534,67 @@
 		}
 	},
 	"svgTitles": {
-		"Bash": "Bash shell logo",
-		"CSS3": "CSS Logo",
-		"Cloudflare": "Cloudflare logo",
-		"Cypress": "Cypress testing framework logo",
-		"D3js": "D3.js logo",
-		"Django": "Django logo",
-		"ESLint": "ESLint logo",
-		"Expressjs": "Express.js web framework logo",
-		"ExternalLinkSvg": "External-link SVG Icon",
-		"Figma": "Figma logo",
-		"Git": "Git version control logo",
-		"GitHubIcon": "GitHub profile link icon",
-		"Github": "GitHub logo",
-		"GithubActions": "GitHub Actions logo",
-		"GithubPages": "GitHub Pages logo",
-		"HTML5": "HTML5 logo",
-		"JSON": "JSON logo",
-		"JavaScript": "JavaScript logo",
-		"Jest": "Jest testing framework logo",
-		"LangChain": "LangChain logo",
-		"LaTeX": "LaTeX logo",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animated moon to sun loop transition icon",
-		"LinkedInIcon": "LinkedIn profile link icon",
-		"Linux": "Linux operating system logo",
-		"Markdown": "Markdown logo",
-		"Moon": "Moon icon for dark mode toggle",
-		"MongoDB": "MongoDB logo",
-		"Netlify": "Netlify logo",
-		"Nextjs": "Next.js framework logo",
-		"Nodejs": "Node.js runtime logo",
-		"Playwright": "Playwright logo",
-		"PostgreSQL": "PostgreSQL database logo",
-		"Postman": "Postman logo",
-		"Python": "Python programming language logo",
-		"Reactjs": "React library logo",
-		"Redux": "Redux state management logo",
+		"Bash": "Logo for Bash-shell",
+		"CSS3": "CSS-logo",
+		"Cloudflare": "Cloudflare-logo",
+		"Cypress": "Logo for testframeworket Cypress",
+		"D3js": "D3.js-logo",
+		"Django": "Django-logo",
+		"ESLint": "ESLint-logo",
+		"Expressjs": "Logo for webframeworket Express.js",
+		"ExternalLinkSvg": "SVG-ikon for eksternt link",
+		"Figma": "Figma-logo",
+		"Git": "Logo for versionsstyringssystemet Git",
+		"GitHubIcon": "Ikon med link til GitHub-profil",
+		"Github": "GitHub-logo",
+		"GithubActions": "GitHub Actions-logo",
+		"GithubPages": "GitHub Pages-logo",
+		"HTML5": "HTML5-logo",
+		"JSON": "JSON-logo",
+		"JavaScript": "JavaScript-logo",
+		"Jest": "Logo for testframeworket Jest",
+		"LangChain": "LangChain-logo",
+		"LaTeX": "LaTeX-logo",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animeret ikon med løkkeovergang fra måne til sol",
+		"LinkedInIcon": "Ikon med link til LinkedIn-profil",
+		"Linux": "Logo for styresystemet Linux",
+		"Markdown": "Markdown-logo",
+		"Moon": "Måneikon til mørk tilstand",
+		"MongoDB": "MongoDB-logo",
+		"Netlify": "Netlify-logo",
+		"Nextjs": "Logo for frameworket Next.js",
+		"Nodejs": "Logo for runtime-miljøet Node.js",
+		"Playwright": "Playwright-logo",
+		"PostgreSQL": "Logo for databasen PostgreSQL",
+		"Postman": "Postman-logo",
+		"Python": "Logo for programmeringssproget Python",
+		"Reactjs": "Logo for biblioteket React",
+		"Redux": "Logo for state management-biblioteket Redux",
 		"SELENIUM": "Selenium WebDriver",
 		"Selenium": "Selenium WebDriver",
-		"Sun": "Sun icon for light mode toggle",
-		"Sun1": "Sun icon",
-		"TailwindCSS": "Tailwind CSS logo",
-		"TypeScript": "TypeScript programming language logo",
-		"VSCode": "Visual Studio Code logo",
-		"Vitejs": "Vite build tool logo",
-		"Vitest": "Vitest testing framework logo",
-		"Webpack": "Webpack module bundler logo",
-		"Zsh": "Zsh shell logo",
-		"Zustand": "Zustand logo",
-		"alertAnimation": "Animated alert triangle with exclamation mark",
-		"blocksShuffle": "Animated blocks shuffle loading spinner",
-		"blocksWave": "Animated blocks wave loading spinner",
-		"closeToMenu": "Close to menu transition icon",
-		"compass": "Animated compass with rotating directional needle",
-		"computerAnimation": "Animated computer monitor with keyboard tray",
-		"djangoRocket": "Django rocket illustration",
-		"externalLink": "External link icon",
-		"menuToClose": "Menu to close transition icon",
-		"moonToSun": "Animated moon to sun transition icon",
-		"nextjsTsx": "Next.js framework logotype",
-		"opensInNewTab": "opens in new tab",
-		"sunToMoon": "Animated sun to moon transition icon"
+		"Sun": "Solikon til lys tilstand",
+		"Sun1": "Solikon",
+		"TailwindCSS": "Tailwind CSS-logo",
+		"TypeScript": "Logo for programmeringssproget TypeScript",
+		"VSCode": "Visual Studio Code-logo",
+		"Vitejs": "Logo for build-værktøjet Vite",
+		"Vitest": "Logo for testframeworket Vitest",
+		"Webpack": "Logo for modul-bundleren Webpack",
+		"Zsh": "Logo for Zsh-shell",
+		"Zustand": "Zustand-logo",
+		"alertAnimation": "Animeret advarselstrekant med udråbstegn",
+		"blocksShuffle": "Animeret indlæsningsindikator med blokke, der blandes",
+		"blocksWave": "Animeret indlæsningsindikator med blokke i en bølge",
+		"closeToMenu": "Overgangsikon fra luk til menu",
+		"compass": "Animeret kompas med roterende nål",
+		"computerAnimation": "Animeret computerskærm med tastaturbakke",
+		"djangoRocket": "Illustration af Django-raket",
+		"externalLink": "Ikon for eksternt link",
+		"menuToClose": "Overgangsikon fra menu til luk",
+		"moonToSun": "Animeret overgangsikon fra måne til sol",
+		"nextjsTsx": "Next.js-logotype",
+		"opensInNewTab": "åbner i en ny fane",
+		"sunToMoon": "Animeret overgangsikon fra sol til måne"
 	},
 	"tech": [
 		{
@@ -991,37 +991,37 @@
 	"techCategories": [
 		{
 			"id": "languages",
-			"label": "Languages",
+			"label": "Sprog",
 			"order": 1
 		},
 		{
 			"id": "front-end",
-			"label": "Front End",
+			"label": "Frontend",
 			"order": 2
 		},
 		{
 			"id": "back-end",
-			"label": "Back End",
+			"label": "Backend",
 			"order": 3
 		},
 		{
 			"id": "state-management",
-			"label": "State Management",
+			"label": "Tilstandsstyring",
 			"order": 4
 		},
 		{
 			"id": "ai-data-viz",
-			"label": "AI, Data and Visualization",
+			"label": "AI, data og visualisering",
 			"order": 5
 		},
 		{
 			"id": "databases",
-			"label": "Databases",
+			"label": "Databaser",
 			"order": 6
 		},
 		{
 			"id": "testing",
-			"label": "Testing",
+			"label": "Test",
 			"order": 7
 		},
 		{
@@ -1031,7 +1031,7 @@
 		},
 		{
 			"id": "tools-devops",
-			"label": "Tools & DevOps",
+			"label": "Værktøjer og DevOps",
 			"order": 9
 		},
 		{
@@ -1041,7 +1041,7 @@
 		},
 		{
 			"id": "data-formats",
-			"label": "Data Formats",
+			"label": "Dataformater",
 			"order": 11
 		}
 	]

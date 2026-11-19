@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Locale, useTranslations } from "next-intl";
+import { Locale, NextIntlClientProvider, useMessages, useTranslations } from "next-intl";
+import { CONTACT_CLIENT_MESSAGES, pickMessages } from "@/i18n/clientMessages";
 import ContactForm from "@/ui/Components/ContactForm";
 import { Metadata } from "next";
 import { use } from "react";
@@ -54,6 +55,7 @@ const Contact = ({ params }: Props) => {
 	const t = useTranslations("contact");
 	const m = useTranslations("metadata.title");
 	const b = useTranslations("breadcrumbs");
+	const messages = useMessages();
 	return (
 		<>
 			<script
@@ -69,7 +71,9 @@ const Contact = ({ params }: Props) => {
 			/>
 			<h1 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}</h1>
 
-			<ContactForm />
+			<NextIntlClientProvider messages={pickMessages(messages, CONTACT_CLIENT_MESSAGES)}>
+				<ContactForm />
+			</NextIntlClientProvider>
 		</>
 	);
 };
