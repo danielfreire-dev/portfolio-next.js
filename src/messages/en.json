@@ -2,81 +2,23 @@
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
 		"imageAlt": "oil painting of Daniel",
-		"paragraph1": "For the last two years, I’ve been building things on the web. But my perspective on what to build, and why, was shaped long before I wrote my first line of code.",
-		"paragraph2": "I came into this field from marketing, though not the side you might imagine. My world was less about campaigns and more about patterns: analyzing market data, deciphering user behavior, and understanding the precise mechanics of how people find and use a product online. SEO and SEM are just applied psychology and problem-solving. You learn to listen to what the data is screaming, and more importantly, to what it's whispering.",
-		"paragraph3": "That's the background I bring to every development project. Most developers can write elegant code; my focus is on building elegant solutions. There's a real difference.",
-		"paragraph4": "When I architect an application with React or Next.js, I'm not just thinking about state management or component structure. I think about the user's journey that brought them there. I consider the semantic markup that gives our content meaning beyond the screen. I build high-performance web applications with an innate understanding of performance, because I know firsthand that a delay of even a half-second is a decision a user makes to leave.",
-		"paragraph5": "A lot of talented developers get stuck on the tech: they build for the device. They build for the spec. But they forget to build for the human on the other side, and for the business objective that makes the project worthwhile. My experience allows me to sit at that intersection. I can translate a business need into a technical requirement not as an abstract concept, but as a lived experience. I've been the person asking for the data, and now I'm the person building the systems that provide it.",
-		"paragraph6": "AI-powered web app, sleek front-end, Django admin, full-stack Node.js application — the question I always start with is the same: \"What are we actually solving for?\" The technology is a means to an end. The real skill is in choosing the right tool for the job and using it wisely, knowing what that job actually is.",
+		"paragraph1": "I’ve been building for the web for the last three years, but my sense of what to build, and why, comes from the work I did before I wrote any code.",
+		"paragraph2": "Before development, I worked in marketing, mostly on the analytical side. I spent less time on campaigns and more on data: market numbers, user behavior, and how people find and use a product online. SEO and SEM are applied psychology. You learn to hear what the data is shouting, and to notice what it only hints at.",
+		"paragraph3": "I bring that background to every project. Clean code matters, but I judge my work by whether it solves the problem it was built for.",
+		"paragraph4": "When I build with React or Next.js, state management and component structure are only part of the job. I also think about how the user got to the page, and about semantic markup that gives the content meaning to search engines and screen readers. I treat speed as a requirement, because I’ve seen in the data that half a second of delay is enough for people to leave.",
+		"paragraph5": "Plenty of good developers build to the spec and stop there. They lose sight of the person using the product and the business goal that justifies building it. I’ve been on both sides. I used to be the one asking developers for data; now I build the systems that provide it.",
+		"paragraph6": "Whether it’s an AI web app, a front end, a Django admin or a full-stack Node.js application, I start with the same question: what problem are we solving? The technology follows from the answer.",
 		"paragraph7": "I don’t just build things right. I build the right things.",
-		"title1": "Building for the Human Behind the Screen"
+		"title1": "Building for the human behind the screen"
 	},
-	"carousel": [
-		{
-			"alt": "Transform Your Digital Presence Now!",
-			"cta": "Transform Your Digital Presence!",
-			"description": "Is your website holding your business back? I'll perform a full audit of your site's technical infrastructure, user experience, and conversion potential. You'll get a detailed report with specific improvements that boost your online performance.",
-			"id": 1,
-			"imageUrl": "/images/Carousel/white.webp",
-			"loading": "lazy",
-			"title": "transform your digital presence now!",
-			"url": "/contact"
-		},
-		{
-			"alt": "Unlock Your Website's Full Potential",
-			"cta": "Unlock Your Website's Full Potential",
-			"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
-			"id": 2,
-			"imageUrl": "/images/Carousel/umbrellas.webp",
-			"loading": "eager",
-			"title": "unlock your website's full potential",
-			"url": "/contact"
-		},
-		{
-			"alt": "Build Your Dream Project Today",
-			"cta": "Build Your Dream Project Today",
-			"description": "Stop settling for generic templates. I build fully customized digital experiences that match your brand's identity and business goals. Your concept becomes a powerful, responsive, modern web solution.",
-			"id": 3,
-			"imageUrl": "/images/Carousel/estatuas.webp",
-			"loading": "eager",
-			"title": "build your dream project today",
-			"url": "/contact"
-		},
-		{
-			"alt": "Speed Wins Business",
-			"cta": "Speed Wins Business",
-			"description": "A fast website is a competitive advantage. I'll optimize your site to load quickly, giving visitors a smooth experience that keeps them engaged and converts more effectively.",
-			"id": 4,
-			"imageUrl": "/images/Carousel/building-orange.webp",
-			"loading": "eager",
-			"title": "accelerate your website's potential",
-			"url": "/contact"
-		},
-		{
-			"alt": "Modernize Your Digital Infrastructure",
-			"cta": "Modernize Your Digital Infrastructure",
-			"description": "Technology evolves fast. I'll help you move to modern, efficient web technologies without disrupting your existing operations. A smooth upgrade with managed risk.",
-			"id": 5,
-			"imageUrl": "/images/Carousel/building-yellow.webp",
-			"loading": "eager",
-			"title": "modernize your digital infrastructure",
-			"url": "/contact"
-		},
-		{
-			"alt": "Colorful pencils representing ongoing care and maintenance for digital assets",
-			"cta": "care for your digital assets",
-			"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
-			"id": 6,
-			"imageUrl": "/images/Carousel/pencils.webp",
-			"loading": "lazy",
-			"title": "continuous care for your digital assets",
-			"url": "/contact"
-		}
-	],
+	"breadcrumbs": {
+		"home": "Home"
+	},
 	"contact": {
 		"btn": "send message",
 		"email": "email",
 		"errors": {
+			"invalidInput": "Please check your details and try again.",
 			"sendFailed": "Failed to send message. Please try again.",
 			"sendPartial": "Failed to send confirmation. Your message was received.",
 			"serverConfig": "Server configuration error. Please try again later.",
@@ -87,7 +29,7 @@
 			"turnstileRequired": "Complete the security check above to enable the submit button."
 		},
 		"farewell": {
-			"text": "Thanks for reaching out. You'll hear back from me within a few business days.",
+			"text": "Thanks for reaching out. You’ll hear back from me within 2–3 business days.",
 			"title": "thank you"
 		},
 		"firstName": "first name",
@@ -105,8 +47,7 @@
 			"phone": "Input your phone number"
 		},
 		"privacy": "privacy policy",
-		"privacyPolicyCheck": "I confirm that I read and agree with the",
-		"privacyPolicyUrl": "privacy-policy/",
+		"privacyPolicyCheck": "I have read and agree to the",
 		"privacyPolicyUrlAriaDetails": "Privacy Policy",
 		"privacyPolicyUrlAriaLabel": "Privacy Policy",
 		"privacyPolicyUrlTitle": "Privacy Policy",
@@ -116,82 +57,130 @@
 		"title": "get in touch"
 	},
 	"cookies": {
-		"buttonText": "Accept All",
-		"declineButtonText": "Accept Only Necessary",
+		"buttonText": "Accept all",
+		"declineButtonText": "Accept only necessary",
 		"manageAdvertSubtitle": "Personalize advertisements and measure their performance",
 		"manageAdvertTitle": "Advertising",
-		"manageAnalyticsSubtitle": "Help us understand how visitors interact with our website",
+		"manageAnalyticsSubtitle": "Show how visitors use the website",
 		"manageAnalyticsTitle": "Analytics",
-		"manageButtonText": "Manage Cookies",
+		"manageButtonText": "Manage cookies",
 		"manageCancelButtonText": "Cancel",
 		"manageCookiesStatus": "Status: {{status}} on {{date}}",
 		"manageCookiesStatusConsented": "Consented",
 		"manageCookiesStatusDeclined": "Declined",
 		"manageEssentialStatus": "Status: Always enabled",
 		"manageEssentialStatusButtonText": "Analytics",
-		"manageEssentialSubtitle": "Required for the website to function properly",
+		"manageEssentialSubtitle": "Required for the website to work",
 		"manageEssentialTitle": "Essential",
-		"manageMessage": "Manage your cookie preferences below. Essential cookies are always enabled as they are necessary for the website to function properly.",
-		"manageSaveButtonText": "Save Preferences",
+		"manageMessage": "Manage your cookie preferences below. Essential cookies are always on because the website needs them to work.",
+		"manageSaveButtonText": "Save preferences",
 		"manageSocialSubtitle": "Enable social media features and sharing",
 		"manageSocialTitle": "Social",
-		"manageTitle": "Cookie Preferences",
-		"message": "We value your privacy. Choose which cookies you want to allow. Essential cookies are always enabled as they are necessary for the website to function properly.",
+		"manageTitle": "Cookie preferences",
+		"message": "Your privacy is valued. Choose which cookies to allow. Essential cookies are always on because the website needs them to work.",
 		"privacyPolicyText": "Privacy Policy",
 		"privacyurl": "/en/privacy-policy",
-		"title": "Would You Like A Cookie? 🍪"
+		"title": "Would you like a cookie? 🍪"
 	},
 	"cta": {
-		"blurb": "Got a Project in Mind? Let's Chat.",
+		"blurb": "Got a project in mind? Let’s chat.",
 		"button": [
 			"Let's talk about your business",
-			"Got a Project in Mind? Let's Chat.",
-			"Looking for a Web Developer? You Found One!",
-			"Say Hello — I Don't Byte 👋",
-			"Your Website, Unforgettable →",
-			"Need a Developer Who Ships? Let's Talk.",
-			"Idea Worth Building? Let's Make It Happen →"
+			"Got a project in mind? Let’s chat.",
+			"Looking for a web developer? You found one!",
+			"Say hello (I don’t byte) 👋",
+			"Let’s talk about your website →",
+			"Need a developer who ships? Let’s talk.",
+			"Idea worth building? Let’s make it happen →"
 		],
 		"title": "get in touch"
 	},
 	"email": {
 		"email": "hello@daniel-freire.com",
 		"message": "random message",
-		"title": "💻🚀 Hello",
+		"title": "Thanks for your message,",
 		"welcome": {
-			"conclusion": "This is your digital handshake, your first impression, your chance to stand out. Let's make it unforgettable.",
+			"conclusion": "Thanks again for reaching out.",
 			"happensNext0": "What happens next:",
-			"happensNext1": "I'll personally review your submission and respond with a customized plan (or any questions to refine the scope) within 2–3 business days.",
-			"happensNext2": "Over the next business days, you'll hear from me with clear next steps, timelines, and how we'll collaborate to bring your vision to life.",
-			"happensNext3": "If you don't see my email by then, send a follow-up. I'm either deep in code or fighting my inbox. Either way, your project comes first.",
+			"happensNext1": "I’ll read your message and reply within 2–3 business days, either with a proposed plan or with questions to pin down the scope.",
+			"happensNext2": "Once we agree on the scope, you’ll get a written plan with deliverables, timeline and cost.",
+			"happensNext3": "If you haven’t heard from me by then, send a follow-up. Messages occasionally get buried, and I’d rather you nudge me than wait.",
 			"heading": "Hello",
-			"intro": "Building an online presence that represents your skills as a professional takes courage and vision. You're here, taking concrete steps to improve your work. That says a lot about your commitment. And that matters.",
-			"introduction": "I'm Daniel Freire. I build websites that tell the story of what you do. Not just a portfolio listing projects, but a site that shows clients and employers exactly why they should work with you. Your website is how the world sees you. My job is to make sure it shows you at your best.",
+			"intro": "Your message came through, and I have all the details you sent.",
+			"introduction": "I’m Daniel Freire. I build custom web applications, AI features and fast websites, and you’ll work with me directly from the first call to launch.",
 			"name": "Daniel Freire",
-			"preview": "Daniel Freire's Welcome Email",
+			"preview": "What happens next with your project",
 			"privacyPolicy": "privacy policy",
-			"privacyPolicyUrl": "en/privacy-policy/",
+			"privacyPolicyUrl": "en/privacy-policy",
 			"signature": "Looking forward to working with you,",
 			"view": "View the",
 			"webLink": "daniel-freire.com",
-			"whileWait0": "While you wait, feel free to:",
-			"whileWait1": "✅ Reply to this email with any additional thoughts: specific projects you're proud of, design preferences, or goals for your website (e.g., \"I want recruiters to immediately see my full-stack expertise\"). ",
-			"whileWait2": "✅ Gather assets (GitHub links, case studies, or even rough sketches) to speed up the process once we begin."
+			"whileWait0": "While you wait, you can:",
+			"whileWait1": "✅ Reply to this email with anything you didn’t include: sites or tools you like, systems you already use, or a deadline you’re working toward.",
+			"whileWait2": "✅ Gather anything that helps explain the project (your current site, documents, rough sketches) so we can start faster."
 		}
 	},
 	"error": {
 		"404": "404 - page not found",
 		"back": "Go back to homepage",
-		"description": "Looks like you got lost. Don't worry, it happens to the best of us.",
+		"description": "Looks like you got lost. Don’t worry, it happens to the best of us.",
 		"errorLoading": {
-			"contact": "<p>If you believe there should a page here, please contact <a>webmaster@daniel-freire.com</a></p>",
-			"description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+			"contact": "<p>If you believe there should be a page here, please contact <a>webmaster@daniel-freire.com</a></p>",
+			"description": "<p>This page ran into an error while loading.</p><p>You can try to <retry>reload the page</retry>.</p>",
 			"title": "something went wrong!"
 		}
 	},
 	"home": {
+		"marqueePause": "Pause animations",
+		"process": {
+			"steps": [
+				{
+					"title": "Discovery",
+					"text": "We map your goals, processes and users so we build the right thing from the start."
+				},
+				{
+					"title": "MVP",
+					"text": "You get a working first version early, focused on the features that matter most."
+				},
+				{
+					"title": "Feedback cycles",
+					"text": "We improve it in short cycles based on real usage, not assumptions."
+				},
+				{
+					"title": "Launch & care",
+					"text": "I deploy, monitor and keep your software secure, fast and up to date."
+				}
+			],
+			"title": "How I work"
+		},
+		"selectedWork": {
+			"link": "See all projects",
+			"title": "Selected work"
+		},
+		"techMarquee": {
+			"title": "Technologies I work with"
+		},
 		"techstack": "Skills & Tools",
-		"trending": "Portfolio"
+		"trending": "Portfolio",
+		"whyMe": {
+			"lead": "I came to development from marketing. Before writing code, I spent my days analyzing market data, user behavior and how people find and use a product online. That's still how I start every project.",
+			"link": "More about me",
+			"points": [
+				{
+					"title": "Business first",
+					"text": "Every project starts with your processes and goals, not with a framework."
+				},
+				{
+					"title": "Built to be found",
+					"text": "Semantic markup, speed and technical SEO are part of the build, not an afterthought."
+				},
+				{
+					"title": "Data over guesswork",
+					"text": "Decisions are based on how real users behave, before and after launch."
+				}
+			],
+			"title": "Why work with me"
+		}
 	},
 	"icons": {
 		"carouselLabel": "Portfolio carousel",
@@ -213,15 +202,22 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Learn about Daniel Freire, a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
-			"contact": "Get in touch with Daniel Freire for web development, AI solutions, and technical consulting. Fast, responsive communication guaranteed.",
-			"home": "Daniel Freire — Web Developer specializing in AI-powered applications, custom software, and high-performance websites. Based in Portugal, serving globally.",
+			"about": "Daniel Freire is a web developer who builds AI-powered applications, LLM integrations and fast websites, with a background in marketing and data.",
+			"contact": "Get in touch with Daniel Freire about web development, AI solutions or technical consulting. Replies within 2–3 business days.",
+			"home": "Daniel Freire, web developer building custom software, AI-powered applications, and high-performance websites for clients worldwide.",
 			"impressum": "",
-			"portfolio": "Explore Daniel Freire's portfolio of web development projects, including React apps, AI-powered tools, and custom business software solutions.",
-			"privacyPolicy": "Learn how Daniel Freire collects, uses, and protects your personal data. Transparent privacy practices in compliance with GDPR.",
+			"portfolio": "Daniel Freire’s portfolio: React apps, AI-powered tools, client websites and custom business software.",
+			"privacyPolicy": "How Daniel Freire collects, uses and protects the personal data you share through this website, in line with the GDPR.",
 			"services": "AI-powered web apps, LLM integration, and high-performance web development by Daniel Freire. Custom software, AI agents, and technical consulting."
 		},
 		"name": "Daniel Freire",
+		"seoTitle": {
+			"about": "About Me: Web Developer Building for People",
+			"contact": "Start Your Software or AI Project",
+			"home": "Daniel Freire | Web Developer for Custom Software & AI Apps",
+			"portfolio": "Web Apps, AI Tools & Client Websites",
+			"services": "Custom Software, AI & Web Development Services"
+		},
 		"title": {
 			"about": "About",
 			"contact": "Contact",
@@ -234,7 +230,10 @@
 	},
 	"portfolio": {
 		"all": "All",
-		"cta": ["check it out", "view the live project →"],
+		"cta": [
+			"check it out",
+			"view the live project →"
+		],
 		"opensInNewTab": "opens in new tab",
 		"pageTitle": "portfolio",
 		"projects": [
@@ -243,7 +242,7 @@
 				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
-				"summary": "Trivia game with 4.000+ questions.",
+				"summary": "Trivia game with 4,000+ questions.",
 				"title": "quizzical"
 			},
 			{
@@ -259,7 +258,7 @@
 				"github": "",
 				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
-				"summary": "Fun project to reproduce a Drum Kit in your PC.",
+				"summary": "A drum kit you can play in your browser.",
 				"title": "drum kit app"
 			},
 			{
@@ -267,7 +266,7 @@
 				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
-				"summary": "The world's most popular dice game, now in your browser.",
+				"summary": "The Tenzi dice game, playable in your browser.",
 				"title": "tenzi"
 			},
 			{
@@ -286,7 +285,7 @@
 				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
-				"summary": "MuraRyu is a new Condominium Management company in Portugal.",
+				"summary": "MuraRyu is a new condominium management company.",
 				"title": "muraRyu"
 			},
 			{
@@ -294,7 +293,7 @@
 				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+				"summary": "Gallery website showing the work of the artist Victó.",
 				"title": "victó's art gallery"
 			},
 			{
@@ -302,7 +301,7 @@
 				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
-				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
+				"summary": "Website developed as the contact point for the architecture collective Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -311,21 +310,26 @@
 	"privacyPolicy": {
 		"contactEmail": "gdpr@daniel-freire.com",
 		"header1": "1. Introduction",
-		"header10": "10. Updates to This Privacy Policy",
-		"header11": "11. Contact Us",
-		"header2": "2. Information We Collect",
-		"header3": "3. Purpose of Data Collection",
-		"header4": "4. Legal Basis for Processing",
-		"header5": "5. Sharing of Personal Data",
-		"header6": "6. Data Retention",
-		"header7": "7. Your Rights",
-		"header8": "8. Data Security",
+		"header10": "10. Updates to this privacy policy",
+		"header11": "11. Contact us",
+		"header2": "2. Information we collect",
+		"header3": "3. Purpose of data collection",
+		"header4": "4. Legal basis for processing",
+		"header5": "5. Sharing of personal data",
+		"header6": "6. Data retention",
+		"header7": "7. Your rights",
+		"header8": "8. Data security",
 		"header9": "9. Complaints",
-		"paragraph1": "Welcome to Daniel Freire's website. We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regard to your personal information, please contact us at",
+		"paragraph1": "This policy explains how personal information is collected and used on Daniel Freire’s website. If you have any questions or concerns about it, please contact us at",
 		"paragraph10": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.",
 		"paragraph11": "If you have any questions about this privacy policy, please contact us at",
 		"paragraph2": "We collect personal information that you voluntarily provide to us when you fill out a form on our website. The personal information we collect includes:",
-		"paragraph2li": ["First name", "Last name", "Email address", "Phone number"],
+		"paragraph2li": [
+			"First name",
+			"Last name",
+			"Email address",
+			"Phone number"
+		],
 		"paragraph3": "The information we collect will be used to contact you in the future. We will only use your personal data for this specific purpose.",
 		"paragraph4": "We process your personal data based on your consent, which you provide by filling out the form on our website.",
 		"paragraph5": "We do not share your personal data with third parties except as required by law.",
@@ -344,6 +348,12 @@
 		"paragraph9": "If you believe that we have not complied with data protection laws, you have the right to lodge a complaint with the relevant supervisory authority.",
 		"title": "Privacy Policy for Daniel Freire's Website"
 	},
+	"serviceDetail": {
+		"ctaLink": "Let's talk about it",
+		"ctaPrompt": "Have a project like this in mind?",
+		"featuresHeading": "What’s included",
+		"otherServices": "Other services"
+	},
 	"services": [
 		{
 			"features": [
@@ -354,71 +364,97 @@
 				"Integration with existing third-party APIs and services",
 				"Admin panels with granular access control",
 				"MVP development with rapid feedback cycles",
-				"Cloud-native architecture deployed on AWS"
+				"Hosting and deployment on AWS"
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Every business has unique processes, workflows, and challenges. The software you use should reflect that. I build custom web applications that adapt to how your company actually operates, instead of forcing your team into off-the-shelf software. I work with agile methods, focusing on MVP and rapid feedback cycles, so you see value early and iterate based on real usage.\n\nFrom CRM systems designed for your specific sales cycle to dashboards that surface exactly the metrics you care about, every project begins with a deep analysis of your business processes. The result is a tool your team will actually want to use, because it was built for them.\n\nUsing technologies like React, Next.js, and PostgreSQL, deployed on AWS with cloud-native architecture, I build modular, reusable components that make your solution reliable, scalable, and easy to maintain as your business grows.",
+			"longDescription": "Off-the-shelf software makes your team work the way the software wants. I build web applications around how your company already operates: its processes and the numbers you check every morning. I work in short iterations, starting with an MVP, so you see something usable early and we adjust it based on how people use it.\n\nEvery project starts with a look at the process the software will support. A CRM gets built around your sales pipeline; a dashboard shows the metrics you track, not a generic set. Your team is more likely to use a tool that was built for them.\n\nI use React, Next.js and PostgreSQL, deployed on AWS, and build with modular, reusable components so the application stays easy to maintain and extend as your business changes.",
 			"slug": "business-custom-software",
-			"text": "Tailored web applications: CRMs, dashboards, and internal tools built with modular components and agile product delivery, fitting how your business actually works.",
-			"title": "Business Custom Software"
+			"text": "Tailored web applications: CRMs, dashboards, and internal tools built with modular components and agile delivery, fitting how your business works.",
+			"title": "Custom business software"
 		},
 		{
 			"features": [
 				"AI-powered web application development",
 				"LLM integration with OpenAI and open-source models",
-				"AI agent orchestration for complex business workflows",
-				"Intelligent chatbots for customer support and sales",
+				"AI agents for multi-step business workflows",
+				"Chatbots for customer support and sales",
 				"Automated document processing and classification",
-				"Semantic search and knowledge discovery systems",
+				"Semantic search across your documents and data",
 				"Business-specific AI assistants (RAG)",
-				"Automated content generation and summarisation",
+				"Automated content generation and summarization",
 				"Predictive analytics and AI-powered dashboards"
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "Artificial Intelligence is a competitive advantage when applied with purpose. I build AI-powered web applications that integrate Large Language Models (LLMs) into your existing workflows in a practical, measurable way, without unnecessary complexity.\n\nAn intelligent chatbot that cuts support tickets by 40%. A recommendation engine that increases average order value. AI agents that automate complex, multi-step business processes. The focus is always on the business outcome, not the technology for its own sake. Every solution is designed with an AI-driven user experience that feels natural and intuitive to your team and customers.\n\nI work with APIs like OpenAI, open-source LLMs, vector databases for semantic search, and RAG (Retrieval-Augmented Generation) architectures to create AI solutions that understand your unique business context.",
+			"longDescription": "AI is useful when it solves a specific problem. I build web applications that connect Large Language Models (LLMs) to the workflows you already have, in ways you can measure, and I leave AI out where it doesn’t help.\n\nThat might be a support chatbot that answers routine questions so your team handles fewer tickets, a recommendation engine that suggests related products at checkout, or agents that sort and summarize incoming documents. Each one starts with the result you want and works back to the technology.\n\nI work with the OpenAI API, open-source LLMs, vector databases for semantic search, and RAG (Retrieval-Augmented Generation), so the system answers from your own documents and data instead of general knowledge.",
 			"slug": "ai-solution-implementation",
-			"text": "AI-powered web applications and LLM integration: chatbots, AI agents, and AI-driven user experiences that transform your workflows.",
-			"title": "AI Solution Implementation"
+			"text": "AI-powered web applications and LLM integration: chatbots, AI agents and assistants that take repetitive work off your team.",
+			"title": "AI solution implementation"
 		},
 		{
 			"features": [
 				"Business websites and high-conversion landing pages",
 				"Progressive Web Apps (PWA) with offline support",
-				"E-commerce platforms and product catalogues",
-				"Legacy website migration and modernisation",
-				"Core Web Vitals and technical SEO optimisation",
-				"Responsive design tested across all devices",
+				"E-commerce platforms and product catalogs",
+				"Legacy website migration and modernization",
+				"Core Web Vitals and technical SEO optimization",
+				"Responsive design tested on phones, tablets and desktops",
 				"Authentication, payments, and customer portal systems",
-				"Rapid MVP development for quick market validation",
-				"Cloud deployment on AWS with scalable architecture",
-				"Modular, reusable component libraries for maintainable frontend logic"
+				"Fast MVP development to test ideas with real users",
+				"Deployment on AWS, set up to handle growing traffic",
+				"Reusable component libraries that keep the front end maintainable"
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "A website is your most important marketing asset, not just a digital business card. I build web applications that load instantly, work on every device, and naturally guide your visitors toward the action you want them to take. Using modular components and clean frontend logic, every project is architected for maintainability from day one.\n\nEvery project is built around performance, optimised for Core Web Vitals from the first line of code. This means your site won't just look great. It will rank higher on Google and provide a fluid experience for your users. I follow agile delivery practices, starting with an MVP to get rapid feedback and iterating based on real user data.\n\nFrom high-conversion landing pages to full-featured web applications with authentication, payments, and dashboards, deployed on AWS with scalable cloud architecture, I approach every project as if it were my own, with careful attention to detail and an absolute focus on performance.",
+			"longDescription": "Your website is often the first place a customer judges your business. I build sites and web applications that load fast, work on phones and desktops, and lead visitors toward the action you want, whether that’s booking a call or buying a product.\n\nPerformance is part of the build from the start. I optimize for Core Web Vitals as I go, which helps search rankings and makes the site quicker to use. I start with an MVP, get feedback early, and iterate based on how people use it.\n\nProjects range from landing pages to full web applications with authentication, payments and dashboards, deployed on AWS. The code is built from modular components, so it stays maintainable after launch.",
 			"slug": "web-development",
-			"text": "High-performance web applications: fast, responsive websites with modular components that load instantly, work on every device, and turn visitors into customers.",
-			"title": "Web Development"
+			"text": "High-performance web applications: fast, responsive websites that work on any device and help turn visitors into customers.",
+			"title": "Web development"
 		},
 		{
 			"features": [
 				"Full technical SEO audit (crawlability, indexation, architecture)",
-				"Core Web Vitals and page speed optimisation",
-				"Competitor analysis and strategic keyword research",
-				"Content strategy and on-page optimisation",
+				"Core Web Vitals and page speed optimization",
+				"Competitor analysis and keyword research",
+				"Content strategy and on-page optimization",
 				"Migration and redesign consulting with SEO preservation",
 				"Analytics setup and auditing (GA4, Search Console)"
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "Having a great website is only half the equation. The other half is making sure the right people find it. My background in digital marketing, combined with deep technical knowledge, lets me offer a perspective that goes beyond conventional SEO audits.\n\nEvery audit starts with data: I analyse your site's technical architecture, user experience signals (Core Web Vitals), content structure, and competitive positioning. For web applications, I ensure every millisecond of load time is accounted for, because speed directly impacts both rankings and conversions. The result is a prioritised action plan that ties each technical recommendation to a concrete business impact.\n\nI don't sell SEO magic formulas. I offer rigorous analysis, transparent recommendations, and implementations that respect search engine guidelines while maximising your organic visibility.",
+			"longDescription": "A good website still needs the right people to find it. I worked in digital marketing before I became a developer, so I look at SEO from both sides: what search engines and users respond to, and what has to change in the code to get there.\n\nEvery audit starts with data. I review your site’s technical architecture, Core Web Vitals, content structure and how you compare with competitors in search. Load time gets particular attention, because it affects both rankings and conversions. You get a prioritized action plan where each recommendation is tied to the business result it should move.\n\nThere are no tricks here. The work follows search engine guidelines, and I’ll tell you plainly what I think will make a difference and what won’t.",
 			"slug": "seo-technical-consulting",
-			"text": "Data-backed audits, high-performance optimisation, and strategy to help your business get found and convert.",
-			"title": "SEO & Technical Consulting"
+			"text": "Technical SEO audits, speed optimization and search strategy to help your business get found and turn visits into customers.",
+			"title": "SEO & technical consulting"
 		}
 	],
+	"servicesPage": {
+		"intro": [
+			"I work with small and mid-sized businesses, startups, and independent professionals who need software that does a specific job well: a website that brings in customers, an internal tool that removes manual work, or an AI feature that saves your team hours.",
+			"My background in marketing and analytics means every project starts with the business goal, not the technology. Before writing any code, I ask what success looks like, how you will measure it, and what your users need.",
+			"You work directly with me from the first call to launch. No account managers, no handoffs, and clear communication about scope, timelines, and trade-offs."
+		],
+		"steps": [
+			{
+				"text": "We talk through your goals, your users, and the problem to solve. I come back with questions and a proposed scope.",
+				"title": "Discovery"
+			},
+			{
+				"text": "You get a written plan with deliverables, timeline, and cost, so there are no surprises.",
+				"title": "Proposal"
+			},
+			{
+				"text": "I work in short iterations and share progress regularly, so you can give feedback while changes are still cheap.",
+				"title": "Build"
+			},
+			{
+				"text": "I handle deployment, check performance and SEO, and stay available for fixes and improvements after go-live.",
+				"title": "Launch and support"
+			}
+		],
+		"stepsTitle": "How a project works"
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Made with 🐞 by",
@@ -477,10 +513,10 @@
 			}
 		],
 		"privacy": "privacy policy",
-		"rights": "Daniel Freire ® all rights reserved",
+		"rights": "© Daniel Freire. All rights reserved.",
 		"select": {
-			"languageSelectAriaLabel": "Select Language Menu",
-			"languageSelectTitle": "Select Language Menu"
+			"languageSelectAriaLabel": "Select language",
+			"languageSelectTitle": "Select language"
 		}
 	},
 	"svgTitles": {
@@ -553,7 +589,9 @@
 			"logo": "/images/icons/Typescript.svg",
 			"name": "typeScript",
 			"svgr": "TypeScript",
-			"categories": ["Languages"]
+			"categories": [
+				"Languages"
+			]
 		},
 		{
 			"id": "javascript",
@@ -561,7 +599,9 @@
 			"logo": "/images/icons/javascript.svg",
 			"name": "javaScript",
 			"svgr": "JavaScript",
-			"categories": ["Languages"]
+			"categories": [
+				"Languages"
+			]
 		},
 		{
 			"id": "python",
@@ -569,7 +609,9 @@
 			"logo": "/images/icons/python.svg",
 			"name": "python",
 			"svgr": "Python",
-			"categories": ["Languages"]
+			"categories": [
+				"Languages"
+			]
 		},
 		{
 			"id": "html5",
@@ -577,7 +619,9 @@
 			"logo": "/images/icons/html5-original-wordmark.svg",
 			"name": "HTML5",
 			"svgr": "HTML5",
-			"categories": ["Front End"]
+			"categories": [
+				"Front End"
+			]
 		},
 		{
 			"id": "css3",
@@ -585,7 +629,9 @@
 			"logo": "/images/icons/Official_CSS_Logo.svg",
 			"name": "CSS3",
 			"svgr": "CSS3",
-			"categories": ["Front End"]
+			"categories": [
+				"Front End"
+			]
 		},
 		{
 			"id": "tailwindcss",
@@ -593,7 +639,9 @@
 			"logo": "/images/icons/tailwindcss.svg",
 			"name": "tailwind CSS",
 			"svgr": "TailwindCSS",
-			"categories": ["Front End"]
+			"categories": [
+				"Front End"
+			]
 		},
 		{
 			"id": "react",
@@ -601,7 +649,9 @@
 			"logo": "/images/icons/react2.svg",
 			"name": "react.js",
 			"svgr": "Reactjs",
-			"categories": ["Front End"]
+			"categories": [
+				"Front End"
+			]
 		},
 		{
 			"id": "nextjs",
@@ -609,7 +659,9 @@
 			"logo": "/images/icons/nextjs-13.svg",
 			"name": "next.js",
 			"svgr": "Nextjs",
-			"categories": ["Front End"]
+			"categories": [
+				"Front End"
+			]
 		},
 		{
 			"id": "django",
@@ -617,7 +669,9 @@
 			"logo": "/images/icons/django.svg",
 			"name": "django",
 			"svgr": "Django",
-			"categories": ["Back End"]
+			"categories": [
+				"Back End"
+			]
 		},
 		{
 			"id": "nodejs",
@@ -625,15 +679,19 @@
 			"logo": "/images/icons/node-js.svg",
 			"name": "node.js",
 			"svgr": "Nodejs",
-			"categories": ["Back End"]
+			"categories": [
+				"Back End"
+			]
 		},
 		{
 			"id": "zustand",
 			"link": "https://zustand.docs.pmnd.rs/",
-			"logo": "/images/icons/zustand.svg",
+			"logo": "/images/icons/tech/zustand.webp",
 			"name": "zustand",
-			"svgr": "Zustand",
-			"categories": ["State Management"]
+			"svgr": "",
+			"categories": [
+				"State Management"
+			]
 		},
 		{
 			"id": "redux",
@@ -641,7 +699,9 @@
 			"logo": "/images/icons/redux.svg",
 			"name": "redux",
 			"svgr": "Redux",
-			"categories": ["State Management"]
+			"categories": [
+				"State Management"
+			]
 		},
 		{
 			"id": "d3",
@@ -649,7 +709,9 @@
 			"logo": "/images/icons/d3.svg",
 			"name": "d3.js",
 			"svgr": "D3js",
-			"categories": ["AI, Data and Visualization"]
+			"categories": [
+				"AI, Data and Visualization"
+			]
 		},
 		{
 			"id": "langchain",
@@ -657,7 +719,9 @@
 			"logo": "/images/icons/langchain-corporate.svg",
 			"name": "langChain",
 			"svgr": "LangChain",
-			"categories": ["AI, Data and Visualization"]
+			"categories": [
+				"AI, Data and Visualization"
+			]
 		},
 		{
 			"id": "postgresql",
@@ -665,7 +729,9 @@
 			"logo": "/images/icons/postgresql.svg",
 			"name": "postgreSQL",
 			"svgr": "PostgreSQL",
-			"categories": ["Databases"]
+			"categories": [
+				"Databases"
+			]
 		},
 		{
 			"id": "mongodb",
@@ -673,7 +739,9 @@
 			"logo": "/images/icons/mongodb.svg",
 			"name": "mongoDB",
 			"svgr": "MongoDB",
-			"categories": ["Databases"]
+			"categories": [
+				"Databases"
+			]
 		},
 		{
 			"id": "jest",
@@ -681,7 +749,9 @@
 			"logo": "/images/icons/jestjsio-icon.svg",
 			"name": "jest",
 			"svgr": "Jest",
-			"categories": ["Testing"]
+			"categories": [
+				"Testing"
+			]
 		},
 		{
 			"id": "vitest",
@@ -689,7 +759,9 @@
 			"logo": "/images/icons/vitest.svg",
 			"name": "vitest",
 			"svgr": "Vitest",
-			"categories": ["Testing"]
+			"categories": [
+				"Testing"
+			]
 		},
 		{
 			"id": "playwright",
@@ -697,7 +769,9 @@
 			"logo": "/images/icons/playwright.svg",
 			"name": "playwright",
 			"svgr": "Playwright",
-			"categories": ["Testing"]
+			"categories": [
+				"Testing"
+			]
 		},
 		{
 			"id": "webpack",
@@ -705,7 +779,9 @@
 			"logo": "/images/icons/webpack.svg",
 			"name": "webpack",
 			"svgr": "Webpack",
-			"categories": ["CI / CD"]
+			"categories": [
+				"CI / CD"
+			]
 		},
 		{
 			"id": "vite",
@@ -713,7 +789,9 @@
 			"logo": "/images/icons/vitejs.svg",
 			"name": "vite.js",
 			"svgr": "Vitejs",
-			"categories": ["CI / CD"]
+			"categories": [
+				"CI / CD"
+			]
 		},
 		{
 			"id": "selenium",
@@ -721,7 +799,9 @@
 			"logo": "/images/icons/selenium.svg",
 			"name": "selenium",
 			"svgr": "Selenium",
-			"categories": ["Testing"]
+			"categories": [
+				"Testing"
+			]
 		},
 		{
 			"id": "githubactions",
@@ -729,7 +809,9 @@
 			"logo": "/images/icons/githubactions.svg",
 			"name": "gitHub Actions",
 			"svgr": "GithubActions",
-			"categories": ["CI / CD"]
+			"categories": [
+				"CI / CD"
+			]
 		},
 		{
 			"id": "eslint",
@@ -737,7 +819,9 @@
 			"logo": "/images/icons/eslint-original.svg",
 			"name": "eSLint",
 			"svgr": "ESLint",
-			"categories": ["CI / CD"]
+			"categories": [
+				"CI / CD"
+			]
 		},
 		{
 			"id": "git",
@@ -745,7 +829,9 @@
 			"logo": "/images/icons/git-scm-icon.svg",
 			"name": "git",
 			"svgr": "Git",
-			"categories": ["Tools & DevOps"]
+			"categories": [
+				"Tools & DevOps"
+			]
 		},
 		{
 			"id": "github",
@@ -753,7 +839,9 @@
 			"logo": "/images/icons/github.svg",
 			"name": "gitHub",
 			"svgr": "Github",
-			"categories": ["Tools & DevOps"]
+			"categories": [
+				"Tools & DevOps"
+			]
 		},
 		{
 			"id": "postman",
@@ -761,15 +849,19 @@
 			"logo": "/images/icons/postman.svg",
 			"name": "postman",
 			"svgr": "Postman",
-			"categories": ["Tools & DevOps"]
+			"categories": [
+				"Tools & DevOps"
+			]
 		},
 		{
 			"id": "linux",
 			"link": "https://www.linux.org/",
-			"logo": "/images/icons/linux-original.svg",
+			"logo": "/images/icons/tech/linux.webp",
 			"name": "linux",
-			"svgr": "Linux",
-			"categories": ["Tools & DevOps"]
+			"svgr": "",
+			"categories": [
+				"Tools & DevOps"
+			]
 		},
 		{
 			"id": "vscode",
@@ -777,7 +869,9 @@
 			"logo": "/images/icons/vscode.svg",
 			"name": "visual Studio Code",
 			"svgr": "VSCode",
-			"categories": ["Tools & DevOps"]
+			"categories": [
+				"Tools & DevOps"
+			]
 		},
 		{
 			"id": "figma",
@@ -785,7 +879,9 @@
 			"logo": "/images/icons/figma.svg",
 			"name": "figma",
 			"svgr": "Figma",
-			"categories": ["Tools & DevOps"]
+			"categories": [
+				"Tools & DevOps"
+			]
 		},
 		{
 			"id": "cloudflare",
@@ -793,7 +889,9 @@
 			"logo": "/images/icons/cloudflare.svg",
 			"name": "cloudflare",
 			"svgr": "Cloudflare",
-			"categories": ["Hosting"]
+			"categories": [
+				"Hosting"
+			]
 		},
 		{
 			"id": "githubpages",
@@ -801,7 +899,9 @@
 			"logo": "/images/icons/github.svg",
 			"name": "gitHub Pages",
 			"svgr": "GithubPages",
-			"categories": ["Hosting"]
+			"categories": [
+				"Hosting"
+			]
 		},
 		{
 			"id": "netlify",
@@ -809,7 +909,9 @@
 			"logo": "/images/icons/netlify.svg",
 			"name": "netlify",
 			"svgr": "Netlify",
-			"categories": ["Hosting"]
+			"categories": [
+				"Hosting"
+			]
 		},
 		{
 			"id": "markdown",
@@ -817,7 +919,9 @@
 			"logo": "/images/icons/markdown.svg",
 			"name": "markdown",
 			"svgr": "Markdown",
-			"categories": ["Data Formats"]
+			"categories": [
+				"Data Formats"
+			]
 		},
 		{
 			"id": "json",
@@ -825,7 +929,9 @@
 			"logo": "/images/icons/json.svg",
 			"name": "JSON",
 			"svgr": "JSON",
-			"categories": ["Data Formats"]
+			"categories": [
+				"Data Formats"
+			]
 		},
 		{
 			"id": "latex",
@@ -833,50 +939,73 @@
 			"logo": "/images/icons/latex-project-logo-no-text.svg",
 			"name": "LaTeX",
 			"svgr": "LaTeX",
-			"categories": ["Data Formats"]
+			"categories": [
+				"Data Formats"
+			]
 		}
 	],
 	"techCategories": [
-		{ "id": "languages", "label": "Languages", "order": 1 },
-		{ "id": "front-end", "label": "Front End", "order": 2 },
-		{ "id": "back-end", "label": "Back End", "order": 3 },
-		{ "id": "state-management", "label": "State Management", "order": 4 },
-		{ "id": "ai-data-viz", "label": "AI, Data and Visualization", "order": 5 },
-		{ "id": "databases", "label": "Databases", "order": 6 },
-		{ "id": "testing", "label": "Testing", "order": 7 },
-		{ "id": "ci-cd", "label": "CI / CD", "order": 8 },
-		{ "id": "tools-devops", "label": "Tools & DevOps", "order": 9 },
-		{ "id": "hosting", "label": "Hosting", "order": 10 },
-		{ "id": "data-formats", "label": "Data Formats", "order": 11 }
+		{
+			"id": "languages",
+			"label": "Languages",
+			"order": 1
+		},
+		{
+			"id": "front-end",
+			"label": "Front End",
+			"order": 2
+		},
+		{
+			"id": "back-end",
+			"label": "Back End",
+			"order": 3
+		},
+		{
+			"id": "state-management",
+			"label": "State Management",
+			"order": 4
+		},
+		{
+			"id": "ai-data-viz",
+			"label": "AI, Data and Visualization",
+			"order": 5
+		},
+		{
+			"id": "databases",
+			"label": "Databases",
+			"order": 6
+		},
+		{
+			"id": "testing",
+			"label": "Testing",
+			"order": 7
+		},
+		{
+			"id": "ci-cd",
+			"label": "CI / CD",
+			"order": 8
+		},
+		{
+			"id": "tools-devops",
+			"label": "Tools & DevOps",
+			"order": 9
+		},
+		{
+			"id": "hosting",
+			"label": "Hosting",
+			"order": 10
+		},
+		{
+			"id": "data-formats",
+			"label": "Data Formats",
+			"order": 11
+		}
 	],
 	"topMainPage": {
-		"blurbsArray": [
-			{
-				"description": "Is your website holding back your business growth? I'll perform a full audit of your technical infrastructure, user experience, and conversion potential. You'll get a detailed report with specific improvements that boost your online performance.",
-				"title": "Transform Your Digital Presence Now!"
-			},
-			{
-				"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
-				"title": "Unlock Your Website's Full Potential"
-			},
-			{
-				"description": "Stop settling for generic templates. I build fully tailored digital experiences that match your brand's identity and business goals. Your concept becomes a powerful, responsive, modern web solution.",
-				"title": "Build Your Dream Project Today"
-			},
-			{
-				"description": "A fast website is a competitive advantage. I'll optimize your site to load quickly, giving visitors a smooth experience that keeps them engaged and converts more effectively.",
-				"title": "Accelerate Your Website's Potential"
-			},
-			{
-				"description": "Technology evolves fast. I'll help you move to modern, efficient web technologies without disrupting your existing operations. A smooth upgrade with managed risk.",
-				"title": "Modernize Your Digital Infrastructure"
-			},
-			{
-				"description": "Websites need regular care to stay secure, functional, and competitive. My maintenance packages include proactive monitoring, fast issue resolution, and continuous technology updates.",
-				"title": "Ongoing Care for Your Digital Assets"
-			}
-		],
-		"p1": "Tired of software that holds your business back?",
-		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications like CRM systems, project trackers, and data dashboards that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let's discuss what you're trying to achieve."
+		"description": "I build custom web applications like CRMs, project trackers and data dashboards, add AI where it saves your team time, and ship websites that load fast and get found. No unnecessary features, just tools that fit how you work.",
+		"eyebrow": "Daniel Freire · Web developer",
+		"primaryCta": "Let's talk about your project",
+		"secondaryCta": "See my work",
+		"title": "Custom software, AI apps and fast websites built around your business"
 	}
 }

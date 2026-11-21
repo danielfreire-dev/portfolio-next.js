@@ -1,10 +1,13 @@
 import ClientSideAbout from "../../../ui/Components/ClientPage";
-import { use } from "react";
+import Techstack from "@/ui/Components/Techstack/Techstack";
+import { Suspense, use } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
-import { Locale } from "next-intl";
+import { Locale, NextIntlClientProvider, useMessages, useTranslations } from "next-intl";
+import { TECHSTACK_CLIENT_MESSAGES, pickMessages } from "@/i18n/clientMessages";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
-import { getAlternates } from "@/i18n/alternates";
+import { getCanonicalUrl } from "@/i18n/alternates";
+import { buildPageMetadata } from "@/i18n/pageMetadata";
 
 /** Props for the About page, receiving locale and search params from Next.js. */
 interface Props {
@@ -17,7 +20,6 @@ interface Props {
  *
  * @param props - Component props containing locale and search params.
  * @param props.params - Promise resolving to an object with the locale.
- * @param props.searchParams - Promise resolving to search parameters (unused but required by Next.js).
  * @returns Metadata object with localized title, description, canonical URL, and Open Graph data.
  */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -27,50 +29,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		namespace: "metadata",
 	});
 
-	return {
-		title: t("title.about"),
+	return buildPageMetadata({
+		href: "/about",
+		locale,
+		title: t("seoTitle.about"),
 		description: t("description.about"),
 		keywords: [
 			"about Daniel Freire",
 			"web developer background",
 			"marketing to development",
 			"SEO expert developer",
-			"AI developer Portugal",
+			"AI developer",
 		],
-		robots: { index: true, follow: true },
-		alternates: getAlternates({ href: "/about", locale }),
-		openGraph: {
-			type: "website",
-			title: t("title.about"),
-			description: t("description.about"),
-			url: "https://daniel-freire.com/about",
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
-			locale: locale,
-		},
-		twitter: {
-			card: "summary_large_image",
-			site: "@daniel_freire",
-			creator: "@daniel_freire",
-			title: t("title.about"),
-			description: t("description.about"),
-			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
-		},
-	};
+	});
 }
 
 /**
  * About page server component.
  *
- * Renders the client-side About content wrapped in a server component
- * for metadata generation and SEO purposes. Uses `setRequestLocale` to
- * enable static rendering per locale.
+ * Renders the biography followed by the tech stack showcase.  The tech
+ * stack was moved here from the home page so the landing page stays light.
+ * Uses `setRequestLocale` to enable static rendering per locale.
  *
  * @param params - Route params containing the resolved locale.
- * @returns The client-side About component.
+ * @returns The About page content.
  */
 export default function About({ params }: Props) {
 	const { locale } = use(params);
 	setRequestLocale(locale);
+	const t = useTranslations("metadata.title");
+	const b = useTranslations("breadcrumbs");
+	const messages = useMessages();
 
 	return (
 		<>
@@ -79,13 +68,18 @@ export default function About({ params }: Props) {
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(
 						generateBreadcrumbSchema([
-							{ name: "Home", href: `/${locale}` },
-							{ name: "About", href: `/${locale}/about` },
+							{ name: b("home"), href: getCanonicalUrl("/", locale) },
+							{ name: t("about"), href: getCanonicalUrl("/about", locale) },
 						]),
 					),
 				}}
 			/>
 			<ClientSideAbout />
+			<NextIntlClientProvider messages={pickMessages(messages, TECHSTACK_CLIENT_MESSAGES)}>
+				<Suspense>
+					<Techstack />
+				</Suspense>
+			</NextIntlClientProvider>
 		</>
 	);
 }

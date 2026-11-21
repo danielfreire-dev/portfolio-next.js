@@ -1,18 +1,1 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<svg height='2500' preserveAspectRatio='xMidYMid' width='2500' viewBox='-1.871 -0.407 260.76406 257.849' version='1.1' id='svg6' sodipodi:docname='vitejs.svg' inkscape:version='1.4.2 (unknown)' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'>
-  <title>Vite build tool logo</title>
-  <defs id='defs6' />
-  <linearGradient id='a' x1='-2.0007203' x2='139.28905' y1='48.343502' y2='219.34656' gradientTransform='scale(1.0592958,0.94402338)' gradientUnits='userSpaceOnUse'>
-    <stop offset='0' stop-color='#41d1ff' id='stop1' />
-    <stop offset='1' stop-color='#bd34fe' id='stop2' />
-  </linearGradient>
-  <linearGradient id='b' x1='188.00648' x2='199.00609' y1='3.5533929' y2='141.10861' gradientTransform='scale(0.74063538,1.3501921)' gradientUnits='userSpaceOnUse'>
-    <stop offset='0' stop-color='#ffea83' id='stop3' />
-    <stop offset='.083' stop-color='#ffdd35' id='stop4' />
-    <stop offset='1' stop-color='#ffa800' id='stop5' />
-  </linearGradient>
-  <g id='g6' transform='translate(0.51087078,0.35665012)'>
-    <path d='m 255.153,37.938 -120.256,215.038 c -2.483,4.44 -8.862,4.466 -11.382,0.048 l -122.64,-215.066 c -2.746,-4.814 1.371,-10.646 6.827,-9.67 l 120.385,21.517 a 6.537,6.537 0 0 0 2.322,-0.004 l 117.867,-21.483 c 5.438,-0.991 9.574,4.796 6.877,9.62 z' fill='url(#a)' id='path5' style='fill:url(#a)' />
-    <path d='m 185.432,0.063 -88.992,17.438 a 3.268,3.268 0 0 0 -2.634,3.014 l -5.474,92.456 a 3.268,3.268 0 0 0 3.997,3.378 l 24.777,-5.718 c 2.318,-0.535 4.413,1.507 3.936,3.838 l -7.361,36.047 c -0.495,2.426 1.782,4.5 4.151,3.78 l 15.304,-4.649 c 2.372,-0.72 4.652,1.36 4.15,3.788 l -11.698,56.621 c -0.732,3.542 3.979,5.473 5.943,2.437 l 1.313,-2.028 72.516,-144.72 c 1.215,-2.423 -0.88,-5.186 -3.54,-4.672 l -25.505,4.922 c -2.396,0.462 -4.435,-1.77 -3.759,-4.114 l 16.646,-57.705 c 0.677,-2.35 -1.37,-4.583 -3.769,-4.113 z' fill='url(#b)' id='path6' style='fill:url(#b)' />
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="svg6" width="2500" height="2500" preserveAspectRatio="xMidYMid" version="1.1" viewBox="-1.87 -0.41 260.76 257.85"><title>Vite build tool logo</title><linearGradient id="a" x1="-2" x2="139.29" y1="48.34" y2="219.35" gradientTransform="scale(1.0593 .94402)" gradientUnits="userSpaceOnUse"><stop id="stop1" offset="0" stop-color="#41d1ff"/><stop id="stop2" offset="1" stop-color="#bd34fe"/></linearGradient><linearGradient id="b" x1="188.01" x2="199.01" y1="3.55" y2="141.11" gradientTransform="scale(.74064 1.3502)" gradientUnits="userSpaceOnUse"><stop id="stop3" offset="0" stop-color="#ffea83"/><stop id="stop4" offset=".08" stop-color="#ffdd35"/><stop id="stop5" offset="1" stop-color="#ffa800"/></linearGradient><g id="g6" transform="translate(.51 .36)"><path id="path5" fill="url(#a)" d="M255.15 37.94 134.9 252.98a6.54 6.54 0 0 1-11.39.04L.87 37.96a6.53 6.53 0 0 1 6.83-9.67L128.1 49.8a7 7 0 0 0 2.32 0l117.87-21.48c5.43-1 9.57 4.8 6.87 9.62" style="fill:url(#a)"/><path id="path6" fill="url(#b)" d="M185.43.06 96.44 17.5a3.3 3.3 0 0 0-2.63 3.01l-5.48 92.46a3.27 3.27 0 0 0 4 3.38l24.78-5.72a3.27 3.27 0 0 1 3.93 3.84l-7.36 36.05a3.27 3.27 0 0 0 4.15 3.78l15.3-4.65a3.27 3.27 0 0 1 4.16 3.78l-11.7 56.63c-.73 3.54 3.98 5.47 5.94 2.43l1.31-2.02 72.52-144.72a3.27 3.27 0 0 0-3.54-4.68L176.32 66a3.27 3.27 0 0 1-3.76-4.12l16.64-57.7a3.27 3.27 0 0 0-3.77-4.12" style="fill:url(#b)"/></g></svg>

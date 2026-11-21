@@ -139,14 +139,6 @@ export interface Dictionary {
 		title4: string;
 		title5: string;
 	};
-	carousel: {
-		alt: string;
-		description: string;
-		id: number;
-		imageUrl: string;
-		title: string;
-		cta: string;
-	}[];
 	contact: {
 		btn: string;
 		email: string;
@@ -171,8 +163,26 @@ export interface Dictionary {
 		title: string;
 	};
 	home: {
+		marqueePause: string;
+		process: {
+			steps: { title: string; text: string }[];
+			title: string;
+		};
+		selectedWork: {
+			link: string;
+			title: string;
+		};
+		techMarquee: {
+			title: string;
+		};
 		techstack: string;
 		trending: string;
+		whyMe: {
+			lead: string;
+			link: string;
+			points: { title: string; text: string }[];
+			title: string;
+		};
 	};
 	icons: {
 		leftarrow: {

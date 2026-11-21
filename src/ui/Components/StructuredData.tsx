@@ -1,8 +1,27 @@
 import { SERVICE_SLUGS } from "@/i18n/serviceSlugs";
+import { BASE_URL, getCanonicalUrl } from "@/i18n/alternates";
 
 // ---------------------------------------------------------------------------
 // Base types for each supported schema.org type
 // ---------------------------------------------------------------------------
+
+/** Schema.org ImageObject — one rendition of an image. */
+interface ImageObjectSchema {
+	"@type": "ImageObject";
+	url: string;
+	contentUrl: string;
+	width: number;
+	height: number;
+}
+
+/** Schema.org ContactPoint — how to reach the person (nested in Person). */
+interface ContactPointSchema {
+	"@type": "ContactPoint";
+	contactType: string;
+	email: string;
+	url: string;
+	availableLanguage: string[];
+}
 
 /** Schema.org Person — author / provider identity. */
 interface PersonSchema {
@@ -14,10 +33,11 @@ interface PersonSchema {
 	sameAs: string[];
 	jobTitle: string;
 	description: string;
-	image: string;
+	image: ImageObjectSchema[];
+	contactPoint: ContactPointSchema;
 }
 
-/** Schema.org WebSite with Sitelinks Searchbox. */
+/** Schema.org WebSite. */
 interface WebSiteSchema {
 	"@context": "https://schema.org";
 	"@type": "WebSite";
@@ -25,11 +45,7 @@ interface WebSiteSchema {
 	name: string;
 	url: string;
 	description: string;
-	potentialAction: {
-		"@type": "SearchAction";
-		target: string;
-		"query-input": string;
-	};
+	publisher: { "@id": string };
 }
 
 /** A single breadcrumb item. */
@@ -52,8 +68,9 @@ interface ServiceSchema {
 	"@context": "https://schema.org";
 	"@type": "Service";
 	name: string;
-	provider: { "@type": "Person"; name: string };
+	provider: { "@type": "Person"; "@id": string; name: string };
 	description: string;
+	url: string;
 	serviceType: string;
 	areaServed: string;
 	category: string;
@@ -70,25 +87,27 @@ interface ServiceSchema {
 	};
 }
 
-/** Schema.org ContactPoint — how to reach the person/business. */
-interface ContactPointSchema {
-	"@context": "https://schema.org";
-	"@type": "ContactPoint";
-	contactType: string;
-	email: string;
-	url: string;
-	availableLanguage: string[];
-}
-
 // ---------------------------------------------------------------------------
 // Shared constants
 // ---------------------------------------------------------------------------
 
-/** Canonical base URL (no www). */
-const BASE_URL = "https://daniel-freire.com";
+/** Stable identifier of the Person entity, referenced by other schemas. */
+const PERSON_ID = `${BASE_URL}/#person`;
 
-/** Canonical OG image used across the site. */
-const PERSON_IMAGE = `${BASE_URL}/metadata/open-graph-initials5.png`;
+/** Public contact address used in structured data. */
+const CONTACT_EMAIL = "hello@daniel-freire.com";
+
+/**
+ * Renditions of Daniel's portrait (the same image shown on the About page),
+ * generated from `/images/Lensa/Lensa2.webp`.  Listed largest first so
+ * consumers that pick the first image get the best quality.
+ */
+const PERSON_IMAGES: ReadonlyArray<{ path: string; size: number }> = [
+	{ path: "/images/person/daniel-freire-1024.jpg", size: 1024 },
+	{ path: "/images/person/daniel-freire-1024.webp", size: 1024 },
+	{ path: "/images/person/daniel-freire-512.webp", size: 512 },
+	{ path: "/images/person/daniel-freire-256.webp", size: 256 },
+];
 
 // ---------------------------------------------------------------------------
 // Schema generators
@@ -98,29 +117,41 @@ const PERSON_IMAGE = `${BASE_URL}/metadata/open-graph-initials5.png`;
  * Generates the Person schema for Daniel Freire.
  *
  * Used globally on every page as the author/provider identity signal
- * for search engines.
+ * for search engines.  The nested ContactPoint links to the contact page
+ * of the current locale so the URL never redirects.
+ *
+ * @param locale - The current page locale (defaults to English).
  */
-export function generatePersonSchema(): PersonSchema {
+export function generatePersonSchema(locale = "en"): PersonSchema {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Person",
-		"@id": `${BASE_URL}/#person`,
+		"@id": PERSON_ID,
 		name: "Daniel Freire",
 		url: BASE_URL,
 		sameAs: ["https://github.com/danielfreire-dev/", "https://www.linkedin.com/in/danielfreire-swe/"],
 		jobTitle: "Web Developer",
 		description:
 			"Daniel Freire is a web developer specializing in AI-powered applications, LLM integration, and high-performance web solutions.",
-		image: PERSON_IMAGE,
+		image: PERSON_IMAGES.map(({ path, size }) => ({
+			"@type": "ImageObject" as const,
+			url: `${BASE_URL}${path}`,
+			contentUrl: `${BASE_URL}${path}`,
+			width: size,
+			height: size,
+		})),
+		contactPoint: {
+			"@type": "ContactPoint",
+			contactType: "customer service",
+			email: CONTACT_EMAIL,
+			url: getCanonicalUrl("/contact", locale),
+			availableLanguage: ["English", "Portuguese", "Danish", "Polish", "German", "Czech"],
+		},
 	};
 }
 
 /**
- * Generates the WebSite schema with Sitelinks Searchbox.
- *
- * Enables the search box sitelink in Google SERPs.  The `urlTemplate`
- * points at Google's custom search endpoint; replace with your own
- * search route if you implement on-site search.
+ * Generates the WebSite schema, published by the Person entity.
  */
 export function generateWebSiteSchema(): WebSiteSchema {
 	return {
@@ -131,11 +162,7 @@ export function generateWebSiteSchema(): WebSiteSchema {
 		url: BASE_URL,
 		description:
 			"Portfolio of Daniel Freire — web developer building AI-powered applications, custom software, and high-performance websites.",
-		potentialAction: {
-			"@type": "SearchAction",
-			target: `https://www.google.com/search?q=site%3Adaniel-freire.com+{search_term_string}`,
-			"query-input": "required name=search_term_string",
-		},
+		publisher: { "@id": PERSON_ID },
 	};
 }
 
@@ -143,7 +170,9 @@ export function generateWebSiteSchema(): WebSiteSchema {
  * Generates a BreadcrumbList schema from a list of path segments.
  *
  * Each segment is paired with its full URL.  The first item is always
- * the home page; additional items build on that base.
+ * the home page; additional items build on that base.  Pass absolute,
+ * localized URLs (see `getCanonicalUrl`) so breadcrumbs never point at
+ * redirecting addresses.
  *
  * @param crumbs - Array of { name, href } pairs in display order.
  * @returns A BreadcrumbList schema or null if crumbs is empty.
@@ -173,6 +202,7 @@ export function generateBreadcrumbSchema(crumbs: Array<{ name: string; href: str
  * @param description - A short description of the service.
  * @param features    - The list of feature strings.
  * @param slug        - The canonical English slug for the service.
+ * @param url         - The absolute canonical URL of the service page.
  * @returns A Service schema.
  */
 export function generateServiceSchema(
@@ -180,13 +210,15 @@ export function generateServiceSchema(
 	description: string,
 	features: string[],
 	slug: string,
+	url: string,
 ): ServiceSchema {
 	return {
 		"@context": "https://schema.org",
 		"@type": "Service",
 		name: title,
-		provider: { "@type": "Person", name: "Daniel Freire" },
+		provider: { "@type": "Person", "@id": PERSON_ID, name: "Daniel Freire" },
 		description,
+		url,
 		serviceType: title,
 		areaServed: "Worldwide",
 		category: (SERVICE_SLUGS as readonly string[]).includes(slug) ? title : "Web Development",
@@ -204,24 +236,5 @@ export function generateServiceSchema(
 					})),
 				}
 			:	undefined,
-	};
-}
-
-/**
- * Generates the ContactPoint schema for the contact page.
- *
- * Signals to search engines the preferred method of contact (email),
- * supported languages, and the contact page URL.
- *
- * @returns A ContactPoint schema.
- */
-export function generateContactPointSchema(): ContactPointSchema {
-	return {
-		"@context": "https://schema.org",
-		"@type": "ContactPoint",
-		contactType: "customer service",
-		email: "hello@daniel-freire.com",
-		url: `${BASE_URL}/contact`,
-		availableLanguage: ["English", "Portuguese", "Danish", "Polish", "German", "Czech"],
 	};
 }

@@ -40,7 +40,7 @@ describe("Content verification", () => {
 		});
 
 		it("should load the about page successfully", () => {
-			cy.get("h2").should("exist");
+			cy.get("h1").should("have.length", 1);
 		});
 
 		it("should display paragraph content", () => {
@@ -54,7 +54,7 @@ describe("Content verification", () => {
 		});
 
 		it("should load the portfolio page successfully", () => {
-			cy.get("h2").should("contain.text", "portfolio");
+			cy.get("h1").should("contain.text", "portfolio");
 		});
 
 		it("should display website and project sections", () => {

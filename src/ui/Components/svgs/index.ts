@@ -6,6 +6,11 @@
  * resolve icon components by key (e.g., `SVGs[data.svgr]`), which powers the
  * tech-stack card grid where icons are driven by translation data. This
  * pattern avoids a long chain of conditional imports in the consumer.
+ *
+ * Only import this barrel where the whole set is needed (the tech stack):
+ * every export ends up in the importing bundle.  Very complex logos (Linux,
+ * Zustand) are served as small raster files from `/images/icons/tech/`
+ * instead of being inlined, via the `logo` field in the translation data.
  */
 
 export { default as Nextjs } from "./nextjs.svg";
@@ -24,7 +29,6 @@ export { default as Vitest } from "./vitest.svg";
 export { default as Jest } from "./jest.svg";
 export { default as Selenium } from "./selenium.svg";
 export { default as Python } from "./python.svg";
-export { default as Linux } from "./linux.svg";
 export { default as Bash } from "./bash.svg";
 export { default as Zsh } from "./zsh.svg";
 export { default as GitHubIcon } from "./github-square.svg";
@@ -33,7 +37,6 @@ export { default as Sun } from "./sun.svg";
 export { default as Moon } from "./moon1.svg";
 export { default as TailwindCSS } from "./tailwindcss.svg";
 export { default as Django } from "./django.svg";
-export { default as Zustand } from "./zustand.svg";
 export { default as Redux } from "./redux.svg";
 export { default as D3js } from "./d3.svg";
 export { default as LangChain } from "./langchain-corporate.svg";

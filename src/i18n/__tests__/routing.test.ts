@@ -5,7 +5,7 @@ describe("i18n routing configuration", () => {
 	describe("locales", () => {
 		it("should define all 6 supported locales", () => {
 			expect(routing.locales).toHaveLength(6);
-			expect(routing.locales).toEqual(expect.arrayContaining(["en", "pt", "dk", "pl", "de", "cz"]));
+			expect(routing.locales).toEqual(expect.arrayContaining(["en", "pt", "da", "pl", "de", "cs"]));
 		});
 
 		it("should have no duplicate locale codes", () => {
@@ -31,13 +31,11 @@ describe("i18n routing configuration", () => {
 			"/portfolio",
 			"/contact",
 			"/privacy-policy",
-			"/terms-of-service",
-			"/cookies-policy",
-			"/accessibility-statement",
+			"/services",
+			"/services/[service]",
 			"/sitemap.xml",
 			"/robots.txt",
 			"/404",
-			"/resume",
 			"/prices",
 		];
 
@@ -56,10 +54,10 @@ describe("i18n routing configuration", () => {
 				// If it's a string, no locale overrides; if object, check each
 				if (typeof about === "object") {
 					expect(about).toHaveProperty("pt");
-					expect(about).toHaveProperty("dk");
+					expect(about).toHaveProperty("da");
 					expect(about).toHaveProperty("pl");
 					expect(about).toHaveProperty("de");
-					// Note: cz/cs differences — routing.ts uses both
+					expect(about).toHaveProperty("cs");
 				}
 			});
 
@@ -67,9 +65,10 @@ describe("i18n routing configuration", () => {
 				const contact = routing.pathnames["/contact"];
 				if (typeof contact === "object") {
 					expect(contact).toHaveProperty("pt");
-					expect(contact).toHaveProperty("dk");
+					expect(contact).toHaveProperty("da");
 					expect(contact).toHaveProperty("pl");
 					expect(contact).toHaveProperty("de");
+					expect(contact).toHaveProperty("cs");
 				}
 			});
 
@@ -77,9 +76,10 @@ describe("i18n routing configuration", () => {
 				const pp = routing.pathnames["/privacy-policy"];
 				if (typeof pp === "object") {
 					expect(pp).toHaveProperty("pt");
-					expect(pp).toHaveProperty("dk");
+					expect(pp).toHaveProperty("da");
 					expect(pp).toHaveProperty("pl");
 					expect(pp).toHaveProperty("de");
+					expect(pp).toHaveProperty("cs");
 				}
 			});
 

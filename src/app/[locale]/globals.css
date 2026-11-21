@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /* Add truncate to all text elements */
 /* @layer base {
 	/* Or target specific elements */
@@ -294,6 +293,12 @@ button {
 
 #logo {
 	font-family: var(--font-logo), serif;
+	/* The logo is a <p> (each page's hero/title is its <h1>).  Pin its size
+	   and weight here (ID specificity) so the element-level p rules don't
+	   override the text-5xl class or request a bold the font doesn't have. */
+	font-size: 3rem;
+	line-height: 1;
+	font-weight: 500;
 }
 
 h1,
@@ -378,6 +383,7 @@ textarea {
 		border-color: var(--error);
 	}
 }
+h1,
 h2 {
 	font-size: 2.5rem;
 	font-weight: 700;
@@ -411,12 +417,12 @@ select option {
 	background-color: var(--background);
 }
 /* NavLinks underline */
-nav ul li {
+#sidenav ul li {
 	margin: 15px 0 15px 0;
 	padding: 0;
 	list-style: none;
 }
-nav ul li a {
+#sidenav ul li a {
 	font-weight: 600;
 	position: relative;
 	padding: 10px 10px;
@@ -427,7 +433,7 @@ nav ul li a {
 	-moz-transition: 0.3s;
 	-ms-transition: 0.3s;
 }
-nav ul li a:after {
+#sidenav ul li a:after {
 	content: "";
 	position: absolute;
 	height: 2px;
@@ -447,11 +453,11 @@ nav ul li a:after {
 	-o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-nav ul li a:hover {
+#sidenav ul li a:hover {
 	text-decoration: none;
 	color: var(--text);
 }
-nav ul li a:hover:after {
+#sidenav ul li a:hover:after {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	-moz-transform: scaleX(1);
@@ -459,10 +465,10 @@ nav ul li a:hover:after {
 	-o-transform: scaleX(1);
 	transform: scaleX(1);
 }
-nav ul li.active a {
+#sidenav ul li.active a {
 	color: var(--text);
 }
-nav ul li.active a:after {
+#sidenav ul li.active a:after {
 	visibility: visible;
 	-webkit-transform: scaleX(1);
 	-moz-transform: scaleX(1);
@@ -510,13 +516,14 @@ footer a {
 	-o-transition: opacity 0.5s ease-in-out;
 }
 
+/* Blur-and-fade entrance.  Deliberately no letter-spacing animation: it
+   reflows the text while it plays, which caused a 2.3 CLS on the About page. */
 .focus-in-expand {
 	animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @-webkit-keyframes focus-in-expand {
 	0% {
-		letter-spacing: -0.5em;
 		-webkit-filter: blur(12px);
 		filter: blur(12px);
 		opacity: 0;
@@ -529,7 +536,6 @@ footer a {
 }
 @keyframes focus-in-expand {
 	0% {
-		letter-spacing: -0.5em;
 		-webkit-filter: blur(12px);
 		filter: blur(12px);
 		opacity: 0;
@@ -558,6 +564,14 @@ footer a {
 	font-size: 1.125rem;
 	line-height: 1;
 }
+/* "Other services" link rows on the service detail page.
+   Visuals come from .surface-cards + Tailwind (matching ServiceCard);
+   only the keyboard focus ring lives here. */
+.related-service:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 3px;
+}
+
 .optional::after {
 	content: "Optional" / "Optional";
 }

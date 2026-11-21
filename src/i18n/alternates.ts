@@ -3,7 +3,7 @@ import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
 /** Base URL for all hreflang and canonical URLs. */
-const BASE_URL = "https://daniel-freire.com";
+export const BASE_URL = "https://daniel-freire.com";
 
 /**
  * A valid route href accepted by `getPathname`.
@@ -15,9 +15,23 @@ const BASE_URL = "https://daniel-freire.com";
 type Href = Parameters<typeof getPathname>[0]["href"];
 
 /**
+ * Returns the absolute, localized canonical URL for a route.
+ *
+ * Resolves localized pathnames (e.g. `/about` → `/pt/sobre`) so that every
+ * URL emitted in metadata or structured data points at the final,
+ * non-redirecting address.
+ *
+ * @example
+ * getCanonicalUrl("/about", "pt"); // → "https://daniel-freire.com/pt/sobre"
+ */
+export function getCanonicalUrl(href: Href, locale: string): string {
+	return `${BASE_URL}${getPathname({ locale, href } as Parameters<typeof getPathname>[0])}`;
+}
+
+/**
  * Options for {@link getAlternates}.
  */
-interface GetAlternatesOptions {
+export interface GetAlternatesOptions {
 	/** The canonical route href (static string or dynamic object with params). */
 	href: Href;
 	/** The current page locale. */
@@ -70,23 +84,16 @@ export function getAlternates({
 	locale,
 	hrefForLocale,
 }: GetAlternatesOptions): NonNullable<Metadata["alternates"]> {
-	const canonicalPath = getPathname({ locale, href } as Parameters<typeof getPathname>[0]);
-
 	const languages: Record<string, string> = Object.fromEntries(
-		routing.locales.map((cur) => {
-			const curHref = hrefForLocale ? hrefForLocale(cur) : href;
-			return [cur, `${BASE_URL}${getPathname({ locale: cur, href: curHref } as Parameters<typeof getPathname>[0])}`];
-		}),
+		routing.locales.map((cur) => [cur, getCanonicalUrl(hrefForLocale ? hrefForLocale(cur) : href, cur)]),
 	);
 
 	// x-default: for users whose language preference doesn't match any
 	// supported locale, fall back to the English version.
-	const defaultHref = hrefForLocale ? hrefForLocale("en") : href;
-	languages["x-default"] =
-		`${BASE_URL}${getPathname({ locale: "en", href: defaultHref } as Parameters<typeof getPathname>[0])}`;
+	languages["x-default"] = getCanonicalUrl(hrefForLocale ? hrefForLocale("en") : href, "en");
 
 	return {
-		canonical: `${BASE_URL}${canonicalPath}`,
+		canonical: getCanonicalUrl(href, locale),
 		languages,
 	};
 }

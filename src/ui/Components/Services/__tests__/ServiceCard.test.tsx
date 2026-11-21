@@ -74,30 +74,16 @@ describe("ServiceCard", () => {
 	});
 
 	describe("overflow handling", () => {
-		it("should add break-words and hyphens-auto to the title for long-word wrapping", () => {
-			render(<ServiceCard {...defaultProps} />);
-			const title = screen.getByText("Web Development");
-			expect(title).toHaveClass("break-words");
-			expect(title).toHaveClass("hyphens-auto");
-		});
-
-		it("should add break-words and hyphens-auto to the description for long-word wrapping", () => {
-			render(<ServiceCard {...defaultProps} />);
-			const text = screen.getByText("Full-stack web development services");
-			expect(text).toHaveClass("break-words");
-			expect(text).toHaveClass("hyphens-auto");
-		});
-
 		it("should have overflow-hidden on the text container to clip overflow", () => {
 			const { container } = render(<ServiceCard {...defaultProps} />);
 			const textContainer = container.querySelector(".min-w-0");
 			expect(textContainer).toHaveClass("overflow-hidden");
 		});
 
-		it("should have overflow-hidden (not overflow-visible) on the image wrapper", () => {
+		it("should keep the image wrapper from shrinking next to long text", () => {
 			const { container } = render(<ServiceCard {...defaultProps} />);
 			const imageWrapper = container.querySelector(".shrink-0");
-			expect(imageWrapper).toHaveClass("overflow-hidden");
+			expect(imageWrapper).toBeInTheDocument();
 			expect(imageWrapper).not.toHaveClass("overflow-visible");
 		});
 

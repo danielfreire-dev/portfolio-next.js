@@ -1,97 +1,39 @@
 {
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
-		"imageAlt": "oil painting of Daniel",
-		"paragraph1": "De sidste to år har jeg bygget ting på nettet. Men mit perspektiv på hvad der skal bygges, og hvorfor, blev formet længe før jeg skrev min første linje kode.",
-		"paragraph2": "Jeg kom ind i dette felt fra marketing, men ikke den side du måske forestiller dig. Min verden handlede mindre om kampagner og mere om mønstre: analysering af markedets data, afkodning af brugeradfærd og forståelse af de præcise mekanismer for hvordan folk finder og bruger et produkt online. SEO og SEM er i deres kerne blot anvendt psykologi og problemløsning. Du lærer at lytte til hvad dataen skriger, og endnu vigtigere, til hvad den hvisker.",
-		"paragraph3": "Det er den baggrund jeg bringer med til hvert udviklingsprojekt. De fleste udviklere kan skrive elegant kode; mit fokus er på at bygge elegante løsninger. Der er en afgørende forskel.",
-		"paragraph4": "Når jeg arkitektere en applikation med React eller Next.js, tænker jeg ikke kun på statushåndtering eller komponentstruktur. Jeg tænker på brugerens rejse der bragte dem dertil. Jeg overvejer den semantiske markup som giver vores indhold mening ud over skærmen. Jeg bygger højtydende webapplikationer med en indfødt forståelse af ydeevne fordi jeg ved af førstehåndserfaring, at en forsinkelse på bare et halvt sekund er en beslutning en bruger tager om at forlade siden.",
-		"paragraph5": "Her er hvad mange talentfulde udviklere tager fejl af: de bygger til enheden. De bygger efter specifikationen. Men de glemmer at bygge for mennesket på den anden side, og for den forretningsmæssige objektiv der gør projektet værd at lave. Min erfaring gør mig i stand til at sidde i det krydsfelt. Jeg kan oversætte et forretningsbehov til et teknisk krav ikke som et abstrakt koncept, men som en erfaret virkelighed. Jeg har været personen som bad om dataen, og nu er jeg personen som bygger systemerne der leverer den.",
-		"paragraph6": "Uanset om det er en AI-drevet webapplikation, en sleek front-end, en Django admin, eller en fuldstack Node.js applikation, er det spørgsmål jeg altid starter med: \"Hvad løser vi egentlig?\" Teknologien er et middel til et mål. Det virkelige håndværk ligger i at vælge det rigtige værktøj til opgaven og bruge det med visdommen af at vide hvad opgaven virkelig går ud på.",
+		"imageAlt": "oliemaleri af Daniel",
+		"paragraph1": "Jeg har bygget til nettet de sidste tre år, men min fornemmelse for, hvad der skal bygges, og hvorfor, kommer fra det arbejde, jeg lavede, før jeg skrev min første linje kode.",
+		"paragraph2": "Før udvikling arbejdede jeg med marketing, mest på den analytiske side. Jeg brugte mindre tid på kampagner og mere på data: markedstal, brugeradfærd og hvordan folk finder og bruger et produkt online. SEO og SEM er anvendt psykologi. Man lærer at høre, hvad dataene råber, og at lægge mærke til det, de kun antyder.",
+		"paragraph3": "Den baggrund tager jeg med ind i hvert projekt. Ren kode betyder noget, men jeg bedømmer mit arbejde på, om det løser det problem, det blev bygget til.",
+		"paragraph4": "Når jeg bygger med React eller Next.js, er state management og komponentstruktur kun en del af opgaven. Jeg tænker også på, hvordan brugeren kom til siden, og på semantisk markup, der giver indholdet mening for søgemaskiner og skærmlæsere. Jeg behandler hastighed som et krav, fordi jeg har set i dataene, at et halvt sekunds forsinkelse er nok til, at folk forlader siden.",
+		"paragraph5": "Mange dygtige udviklere bygger efter specifikationen og stopper der. De mister personen, der bruger produktet, af syne, og det forretningsmål, der begrunder at bygge det. Jeg har været på begge sider. Før var det mig, der bad udviklerne om data; nu bygger jeg de systemer, der leverer dem.",
+		"paragraph6": "Uanset om det er en AI-webapp, en frontend, en Django-admin eller en full-stack Node.js-applikation, starter jeg med det samme spørgsmål: hvilket problem løser vi? Teknologien følger af svaret.",
 		"paragraph7": "Jeg bygger ikke kun tingene rigtigt. Jeg bygger de rigtige ting.",
 		"title1": "Bygger til mennesket bag skærmen"
 	},
-	"carousel": [
-		{
-			"alt": "Revolutioner Dit Digitale Nærvær Nu!",
-			"cta": "Revolutioner Dit Digitale Nærvær!",
-			"description": "Holder din hjemmeside din virksomhed tilbage? Vores omfattende performanceaudit graver dybt ned i din sites tekniske infrastruktur, brugeroplevelse og konverteringspotentiale. Vi leverer en detaljeret rapport der fremhæver kritiske forbedringer som kan booste din online performance dramatisk.",
-			"id": 1,
-			"imageUrl": "/images/Carousel/white.webp",
-			"loading": "lazy",
-			"title": "revolutioner dit digitale nærvær nu!",
-			"url": "/contact"
-		},
-		{
-			"alt": "Lås Din Hjemmesides Fuld Potentiale Op",
-			"cta": "Lås Din Hjemmesides Fuld Potentiale Op",
-			"description": "Hjemmesider kræver konsekvent pleje for at forblive sikre, funktionelle og konkurrencedygtige. Vores omfattende vedligeholdelsespakker giver proaktiv overvågning, øjeblikkelig fejlretning og kontinuerlige teknologiopdateringer.",
-			"id": 2,
-			"imageUrl": "/images/Carousel/umbrellas.webp",
-			"loading": "eager",
-			"title": "lås din hjemmesides fulde potentiale op",
-			"url": "/contact"
-		},
-		{
-			"alt": "Byg Dit Drømmeprojekt I Dag",
-			"cta": "Byg Dit Drømmeprojekt I Dag",
-			"description": "Stop med at nøjes med generiske skabeloner. Vores skræddersyede webudviklingstjenester skaber fuldt tilpassede digitale oplevelser der perfekt matcher din brands unikke identitet og forretningsmål. Vi omdanner dit koncept til en kraftfuld, responsiv og banebrydende webløsning.",
-			"id": 3,
-			"imageUrl": "/images/Carousel/estatuas.webp",
-			"loading": "eager",
-			"title": "bygg dit drømmeprojekt i dag",
-			"url": "/contact"
-		},
-		{
-			"alt": "Tag Det Første Skridt Mod Digital Ekspertise",
-			"cta": "Tag Det Første Skridt",
-			"description": "Hastighed er ikke kun en funktion, det er en konkurrencefordel. Vores performanceoptimeringstjeneste sikrer at din hjemmeside load lynhurtigt, hvilket giver en enestående brugeroplevelse der fastholder besøgende og konverterer mere effektivt.",
-			"id": 4,
-			"imageUrl": "/images/Carousel/building-orange.webp",
-			"loading": "eager",
-			"title": "accellerer din hjemmesides potentiale",
-			"url": "/contact"
-		},
-		{
-			"alt": "Moderniser Din Digitale Infrastruktur",
-			"cta": "Moderniser Din Digitale Infrastruktur",
-			"description": "Teknologien udvikler sig hurtigt. Vores ekspertmigrationstjenester hjælper dig med at skifte problemfrit til moderne, effektive webteknologier uden at forstyrre din eksisterende drift. Vi sikrer en glat, risikostyret opgraderingsvej.",
-			"id": 5,
-			"imageUrl": "/images/Carousel/building-yellow.webp",
-			"loading": "eager",
-			"title": "moderniser din digitale infrastruktur",
-			"url": "/contact"
-		},
-		{
-			"alt": "blyanter",
-			"cta": "sørg for dine digitale aktiver",
-			"description": "Hjemmesider kræver konsekvent pleje for at forblive sikre, funktionelle og konkurrencedygtige. Vores omfattende vedligeholdelsespakker giver proaktiv overvågning, øjeblikkelig fejlretning og kontinuerlige teknologiopdateringer.",
-			"id": 6,
-			"imageUrl": "/images/Carousel/pencils.webp",
-			"loading": "lazy",
-			"title": "kontinuerlig pleje for dine digitale aktiver",
-			"url": "/contact"
-		}
-	],
+	"breadcrumbs": {
+		"home": "Hjem"
+	},
 	"contact": {
 		"btn": "send besked",
 		"email": "e-mail",
 		"errors": {
-			"sendFailed": "Failed to send message. Please try again.",
-			"sendPartial": "Failed to send confirmation. Your message was received.",
-			"serverConfig": "Server configuration error. Please try again later.",
-			"serverError": "Server error. Please try again later.",
-			"turnstileExpired": "Security check expired. Please verify again.",
-			"turnstileFailed": "Security check failed. Please try again.",
-			"turnstileNotVerified": "Please verify you are not a robot",
-			"turnstileRequired": "Complete the security check above to enable the submit button."
+			"invalidInput": "Kontroller venligst dine oplysninger og prøv igen.",
+			"sendFailed": "Beskeden kunne ikke sendes. Prøv igen.",
+			"sendPartial": "Bekræftelsen kunne ikke sendes. Din besked er modtaget.",
+			"serverConfig": "Fejl i serverkonfigurationen. Prøv igen senere.",
+			"serverError": "Serverfejl. Prøv igen senere.",
+			"turnstileExpired": "Sikkerhedstjekket er udløbet. Bekræft igen.",
+			"turnstileFailed": "Sikkerhedstjekket mislykkedes. Prøv igen.",
+			"turnstileNotVerified": "Bekræft, at du ikke er en robot",
+			"turnstileRequired": "Gennemfør sikkerhedstjekket ovenfor for at aktivere send-knappen."
 		},
 		"farewell": {
-			"text": "Jeg sætter pris på din tillid. Du kan forvente et svar inden for de næste hverdage.",
+			"text": "Tak fordi du tog kontakt. Du hører fra mig inden for 2–3 hverdage.",
 			"title": "tak"
 		},
 		"firstName": "fornavn",
-		"formAriaLabel": "Contact form",
+		"formAriaLabel": "Kontaktformular",
 		"label": "Jeg har læst og accepterer ",
 		"lastName": "efternavn",
 		"message": "besked",
@@ -104,106 +46,153 @@
 			"message": "Indtast din besked",
 			"phone": "Indtast dit telefonnummer"
 		},
-		"privacy": "privatlivspolitik",
-		"privacyPolicyCheck": "Jeg bekræfter at jeg har læst og accepterer",
-		"privacyPolicyUrl": "privacy-policy/",
+		"privacy": "privatlivspolitikken",
+		"privacyPolicyCheck": "Jeg bekræfter, at jeg har læst og accepterer",
 		"privacyPolicyUrlAriaDetails": "Privatlivspolitik",
 		"privacyPolicyUrlAriaLabel": "Privatlivspolitik",
 		"privacyPolicyUrlTitle": "Privatlivspolitik",
 		"required": "påkrævet",
-		"requiredIndicator": "required",
+		"requiredIndicator": "påkrævet",
 		"sending": "sender…",
 		"title": "kom i kontakt"
 	},
 	"cookies": {
-		"buttonText": "Acceptér Alle",
-		"declineButtonText": "Acceptér Kun Nødvendige",
+		"buttonText": "Acceptér alle",
+		"declineButtonText": "Acceptér kun nødvendige",
 		"manageAdvertSubtitle": "Tilpas annoncer og mål deres performance",
 		"manageAdvertTitle": "Reklame",
-		"manageAnalyticsSubtitle": "Hjælp os med at forstå hvordan besøgende interagerer med vores hjemmeside",
+		"manageAnalyticsSubtitle": "Viser, hvordan besøgende bruger hjemmesiden",
 		"manageAnalyticsTitle": "Analyser",
-		"manageButtonText": "Administrer Cookies",
+		"manageButtonText": "Administrer cookies",
 		"manageCancelButtonText": "Annuller",
 		"manageCookiesStatus": "Status: {{status}} den {{date}}",
 		"manageCookiesStatusConsented": "Accepteret",
 		"manageCookiesStatusDeclined": "Afvist",
-		"manageEssentialStatus": "Status: Altid aktiveret",
+		"manageEssentialStatus": "Status: altid aktiveret",
 		"manageEssentialStatusButtonText": "Analyser",
-		"manageEssentialSubtitle": "Nødvendig for at hjemmesiden fungerer korrekt",
+		"manageEssentialSubtitle": "Nødvendige for at hjemmesiden fungerer",
 		"manageEssentialTitle": "Essentiel",
-		"manageMessage": "Administrer dine cookie-præferencer nedenfor. Essentielle cookies er altid aktiveret da de er nødvendige for at hjemmesiden skal fungere korrekt.",
-		"manageSaveButtonText": "Gem Præferencer",
+		"manageMessage": "Administrer dine cookiepræferencer nedenfor. Essentielle cookies er altid aktiveret, fordi hjemmesiden har brug for dem for at fungere.",
+		"manageSaveButtonText": "Gem præferencer",
 		"manageSocialSubtitle": "Aktiver sociale medie-funktioner og deling",
 		"manageSocialTitle": "Socialt",
-		"manageTitle": "Cookie Præferencer",
-		"message": "Vi værdsætter dit privatliv. Vælg hvilke cookies du vil tillade. Essentielle cookies er altid aktiveret da de er nødvendige for at hjemmesiden skal fungere korrekt.",
+		"manageTitle": "Cookiepræferencer",
+		"message": "Dit privatliv er vigtigt. Vælg hvilke cookies du vil tillade. Essentielle cookies er altid aktiveret, fordi hjemmesiden har brug for dem for at fungere.",
 		"privacyPolicyText": "Privatlivspolitik",
 		"privacyurl": "/da/privacy-policy",
-		"title": "Kunne Du Tænke Dig En Småkage? 🍪"
+		"title": "Kunne du tænke dig en småkage? 🍪"
 	},
 	"cta": {
 		"blurb": "Har du et projekt i tankerne? Lad os tale sammen.",
 		"button": [
 			"Lad os tale om din virksomhed",
 			"Har du et projekt i tankerne? Lad os snakke.",
-			"Leder du efter en Front-End Udvikler? Du Har Fundet En!",
-			"Sig Hej ,  Jeg Bider Ikke 👋",
-			"Lad Os Gøre Din Hjemmeside Uglemnelig →",
+			"Leder du efter en webudvikler? Du har fundet en!",
+			"Sig hej, jeg bider ikke 👋",
+			"Lad os tale om din hjemmeside →",
 			"Har du brug for en udvikler der leverer? Lad os tale sammen.",
-			"Lad Os Bygge Noget Fantastisk Sammen →"
+			"Har du en idé? Lad os føre den ud i livet →"
 		],
 		"title": "kom i kontakt"
 	},
 	"email": {
 		"email": "hello@daniel-freire.com",
 		"message": "tilfældig besked",
-		"title": "💻🚀 Hej",
+		"title": "Tak for din besked,",
 		"welcome": {
-			"conclusion": "Dette er mere end en hjemmeside, det er dit digitale håndtryk, dit første indtryk, og din mulighed for at skille dig ud i et overfyldt marked. Lad os gøre det uforglemmeligt.",
-			"happensNext0": "Her er hvad der sker nu:",
-			"happensNext1": "Jeg vil personligt gennemgå din henvendelse og svare med en tilpasset plan (eller eventuelle spørgsmål for at præcisere omfanget) inden for 2-3 hverdage.",
-			"happensNext2": "I løbet af de næste hverdage hører du fra mig med klare næste skridt, tidsplaner og hvordan vi vil samarbejde om at få din vision til virkelighed.",
-			"happensNext3": "Hvis du ikke har modtaget min e-mail inden da, er du velkommen til at følge op, jeg er enten dybt forddybet i kode eller kæmper med min indbakke (og jeg vil altid prioritere dit projekt).",
+			"conclusion": "Tak igen fordi du tog kontakt.",
+			"happensNext0": "Det sker der nu:",
+			"happensNext1": "Jeg læser din besked og svarer inden for 2–3 hverdage, enten med et forslag til en plan eller med spørgsmål, der kan præcisere omfanget.",
+			"happensNext2": "Når vi er enige om omfanget, får du en skriftlig plan med leverancer, tidsplan og pris.",
+			"happensNext3": "Hvis du ikke har hørt fra mig inden da, så send en opfølgning. Beskeder bliver af og til begravet, og jeg vil hellere have, at du minder mig om det, end at du venter.",
 			"heading": "Hej",
-			"intro": "Lad os starte med en simpel sandhed: at bygge et online nærvær som virkelig repræsenterer dine services/kompetencer som professionel kræver mod og vision. At du er her, og tager konkrete skridt for at forbedre dit arbejde, vidner meget om din engagement for vækst. Det er værd at fejre.",
-			"introduction": "Jeg er Daniel Freire, og jeg specialiserer mig i at skabe højimpact, kunde-fokuserede hjemmesider der ikke blot viser projekter, men fortæller en overbevisende historie om hvad du bringer til bordet. Uanset om du sigter efter at tiltrække topkvalitets kunder, lande dit drømmejob eller blot vise dine kompetencer med klarhed og stil, er din hjemmeside dit mest kraftfulde værktøj. Og jeg er her for at hjælpe dig med at gøre det skarpere.",
+			"intro": "Din besked er kommet frem, og jeg har modtaget alle de oplysninger, du sendte.",
+			"introduction": "Jeg hedder Daniel Freire. Jeg bygger skræddersyede webapplikationer, AI-funktioner og hurtige hjemmesider, og du arbejder direkte med mig fra det første opkald til lanceringen.",
 			"name": "Daniel Freire",
-			"preview": "Daniel Freires Velkomst-e-mail",
-			"privacyPolicy": "privatlivspolitik",
-			"privacyPolicyUrl": "da/privacy-policy/",
+			"preview": "Det sker der nu med dit projekt",
+			"privacyPolicy": "privatlivspolitikken",
+			"privacyPolicyUrl": "da/privatlivspolitik",
 			"signature": "Ser frem til at arbejde sammen med dig,",
 			"view": "Se",
 			"webLink": "daniel-freire.com",
-			"whileWait0": "Mens du venter, kan du frit:",
-			"whileWait1": "✅ Besvar denne e-mail med yderligere tanker, som specifikke projekter du er stolt af, designpræferencer eller mål for din hjemmeside (f.eks. \"Jeg vil ha at rekruttere skal øjeblikkeligt se min fuldstack ekspertise\"). ",
-			"whileWait2": "✅ Saml aktiver (GitHub-links, casestudier eller endnu grove skitser) for at strømline processen når vi begynder."
+			"whileWait0": "Mens du venter, kan du:",
+			"whileWait1": "✅ Svare på denne e-mail med det, du ikke fik med: sider eller værktøjer, du kan lide, systemer, du allerede bruger, eller en deadline, du arbejder hen imod.",
+			"whileWait2": "✅ Samle det, der kan hjælpe med at forklare projektet (din nuværende hjemmeside, dokumenter, grove skitser), så vi kan komme hurtigere i gang."
 		}
 	},
 	"error": {
 		"404": "404 - siden blev ikke fundet",
 		"back": "Gå tilbage til forsiden",
-		"description": "Det ser ud til at du er faret vild. Bare rolig, det sker for de bedste.",
+		"description": "Det ser ud til, at du er faret vild. Bare rolig, det sker for de bedste.",
 		"errorLoading": {
 			"contact": "<p>Hvis du tror der burde være en side her, kontakt venligst <a>webmaster@daniel-freire.com</a></p>",
-			"description": "<p>Vi har desværre stødt på en fejl.</p><p>Du kan prøve at <retry>genindlæse siden</retry> du besøgte.</p>",
+			"description": "<p>Der opstod en fejl, da siden skulle indlæses.</p><p>Du kan prøve at <retry>genindlæse siden</retry>.</p>",
 			"title": "noget gik galt!"
 		}
 	},
 	"home": {
-		"techstack": "Færdigheder & Værktøjer",
-		"trending": "Portfolio"
+		"marqueePause": "Sæt animationer på pause",
+		"process": {
+			"steps": [
+				{
+					"title": "Afdækning",
+					"text": "Vi kortlægger dine mål, processer og brugere, så vi bygger det rigtige fra starten."
+				},
+				{
+					"title": "MVP",
+					"text": "Du får tidligt en fungerende første version med fokus på de vigtigste funktioner."
+				},
+				{
+					"title": "Feedback-cyklusser",
+					"text": "Vi forbedrer i korte cyklusser baseret på reel brug, ikke antagelser."
+				},
+				{
+					"title": "Lancering & vedligehold",
+					"text": "Jeg deployer, overvåger og holder din software sikker, hurtig og opdateret."
+				}
+			],
+			"title": "Sådan arbejder jeg"
+		},
+		"selectedWork": {
+			"link": "Se alle projekter",
+			"title": "Udvalgte projekter"
+		},
+		"techMarquee": {
+			"title": "Teknologier jeg arbejder med"
+		},
+		"techstack": "Færdigheder & værktøjer",
+		"trending": "Portfolio",
+		"whyMe": {
+			"lead": "Jeg kom til udvikling fra marketing. Før jeg skrev kode, brugte jeg mine dage på at analysere markedsdata, brugeradfærd og hvordan folk finder og bruger et produkt online. Det er stadig sådan, jeg starter hvert projekt.",
+			"link": "Mere om mig",
+			"points": [
+				{
+					"title": "Forretningen først",
+					"text": "Hvert projekt starter med dine processer og mål, ikke med et framework."
+				},
+				{
+					"title": "Bygget til at blive fundet",
+					"text": "Semantisk markup, hastighed og teknisk SEO er en del af udviklingen, ikke noget, der tilføjes til sidst."
+				},
+				{
+					"title": "Data frem for gætværk",
+					"text": "Beslutninger bygger på, hvordan rigtige brugere opfører sig, før og efter lancering."
+				}
+			],
+			"title": "Hvorfor arbejde med mig"
+		}
 	},
 	"icons": {
-		"carouselLabel": "Portfolio carousel",
-		"carouselSlidesLabel": "Carousel slides",
+		"carouselLabel": "Portfolio-karrusel",
+		"carouselSlidesLabel": "Karrusel-slides",
 		"leftarrow": {
 			"alt": "venstre pil",
-			"label": "Previous slide",
+			"label": "Forrige slide",
 			"src": "/images/icons/chevron-left.svg"
 		},
 		"rightarrow": {
 			"alt": "højre pil",
-			"label": "Next slide",
+			"label": "Næste slide",
 			"src": "/images/icons/chevron-right.svg"
 		}
 	},
@@ -213,15 +202,22 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Lær om Daniel Freire ,  en webudvikler med speciale i AI-drevne applikationer, LLM-integration og højtydende web-løsninger.",
-			"contact": "Kontakt Daniel Freire for webudvikling, AI-løsninger og teknisk rådgivning. Hurtig og responsiv kommunikation garanteret.",
-			"home": "Daniel Freire ,  Webudvikler med speciale i AI-drevne applikationer, skræddersyet software og højtydende websites. Baseret i Portugal, betjener kunder globalt.",
+			"about": "Daniel Freire er webudvikler og bygger AI-drevne applikationer, LLM-integrationer og hurtige hjemmesider med en baggrund i marketing og dataanalyse.",
+			"contact": "Kontakt Daniel Freire om webudvikling, AI-løsninger eller teknisk rådgivning. Svar inden for 2–3 hverdage.",
+			"home": "Daniel Freire, webudvikler, der bygger skræddersyet software, AI-drevne applikationer og højtydende websites for kunder over hele verden.",
 			"impressum": "",
-			"portfolio": "Udforsk Daniel Freires portefølje af webudviklingsprojekter, herunder React-apps, AI-drevne værktøjer og skræddersyede forretningssoftwareløsninger.",
-			"privacyPolicy": "Lær hvordan Daniel Freire indsamler, bruger og beskytter dine personlige data. Gennemsigtige privatlivspraksisser i overensstemmelse med GDPR.",
+			"portfolio": "Daniel Freires portfolio: React-apps, AI-drevne værktøjer, kundewebsites og skræddersyet forretningssoftware.",
+			"privacyPolicy": "Hvordan Daniel Freire indsamler, bruger og beskytter de personoplysninger, du deler via denne hjemmeside, i overensstemmelse med GDPR.",
 			"services": "AI-drevne webapps, LLM-integration og webudvikling af Daniel Freire. Skræddersyet software, AI-agenter og teknisk rådgivning med agil levering."
 		},
 		"name": "Daniel Freire",
+		"seoTitle": {
+			"about": "Om mig: webudvikler, der bygger til mennesker",
+			"contact": "Start dit software- eller AI-projekt",
+			"home": "Daniel Freire | Webudvikler af skræddersyet software og AI-apps",
+			"portfolio": "Webapps, AI-værktøjer og kundewebsites",
+			"services": "Skræddersyet software, AI og webudvikling"
+		},
 		"title": {
 			"about": "Om",
 			"contact": "Kontakt",
@@ -236,9 +232,9 @@
 		"all": "Alle",
 		"cta": [
 			"tjek det ud",
-			"se det live projekt →"
+			"se projektet live →"
 		],
-		"opensInNewTab": "opens in new tab",
+		"opensInNewTab": "åbner i en ny fane",
 		"pageTitle": "portfolio",
 		"projects": [
 			{
@@ -246,7 +242,7 @@
 				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
-				"summary": "Trivia game with 4.000+ questions.",
+				"summary": "Quizspil med over 4.000 spørgsmål.",
 				"title": "quizzical"
 			},
 			{
@@ -254,7 +250,7 @@
 				"github": "https://github.com/danielfreire-dev/PollyGlot",
 				"link": "https://pollyglot-bydainelli.netlify.app/",
 				"src": "/images/screenshots/pollyglot.webp",
-				"summary": "Translation app with AI.",
+				"summary": "Oversættelsesapp med AI.",
 				"title": "pollyGlot"
 			},
 			{
@@ -262,7 +258,7 @@
 				"github": "",
 				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
-				"summary": "Fun project to reproduce a Drum Kit in your PC.",
+				"summary": "Et trommesæt, du kan spille på i din browser.",
 				"title": "drum kit app"
 			},
 			{
@@ -270,7 +266,7 @@
 				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
-				"summary": "The world's most popular dice game, now in your browser.",
+				"summary": "Terningspillet Tenzi, klar til at spille i din browser.",
 				"title": "tenzi"
 			},
 			{
@@ -278,18 +274,18 @@
 				"github": "",
 				"link": "https://llm-dodgy-daniel.openai-api-dainelli.workers.dev",
 				"src": "/images/screenshots/dodgy-daniel.webp",
-				"summary": "Ever wondered what would happen if a trading guru with the energy of a caffeinated auctioneer and the accuracy of a Magic 8-Ball gave you stock tips? That's Dodgy Daniel.",
+				"summary": "Har du nogensinde tænkt over, hvad der ville ske, hvis en tradingguru med energien fra en koffeinpåvirket auktionarius og præcisionen fra en Magic 8-Ball gav dig aktietips? Det er Dodgy Daniel.",
 				"title": "dodgy Daniel"
 			}
 		],
-		"projects-title": "Projects",
+		"projects-title": "Projekter",
 		"websites": [
 			{
 				"demo": "Live",
 				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
-				"summary": "MuraRyu is a new Condominium Management company in Portugal.",
+				"summary": "MuraRyu er en ny virksomhed inden for administration af ejerforeninger.",
 				"title": "muraRyu"
 			},
 			{
@@ -297,7 +293,7 @@
 				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Gallery website built to showcase the works of the famous Portuguese artist Victó.",
+				"summary": "Galleriwebsite, der viser værker af kunstneren Victó.",
 				"title": "victó's art gallery"
 			},
 			{
@@ -305,7 +301,7 @@
 				"github": "",
 				"link": "https://insurbia.com",
 				"src": "/images/screenshots/insurbia2.webp",
-				"summary": "Website developed to be be contact point for the arquitecture collective Insurbia.",
+				"summary": "Website, der fungerer som kontaktpunkt for arkitektkollektivet Insurbia.",
 				"title": "insurbia"
 			}
 		],
@@ -314,17 +310,17 @@
 	"privacyPolicy": {
 		"contactEmail": "gdpr@daniel-freire.com",
 		"header1": "1. Introduktion",
-		"header10": "10. Opdateringer Til Denne Privatlivspolitik",
-		"header11": "11. Kontakt Os",
-		"header2": "2. Oplysninger Vi Indsamler",
-		"header3": "3. Formål Med Dataindsamling",
-		"header4": "4. Retsgrundlag For Behandling",
-		"header5": "5. Videregivelse Af Personoplysninger",
-		"header6": "6. Opbevaring Af Data",
-		"header7": "7. Dine Rettigheder",
+		"header10": "10. Opdateringer til denne privatlivspolitik",
+		"header11": "11. Kontakt os",
+		"header2": "2. Oplysninger vi indsamler",
+		"header3": "3. Formål med dataindsamling",
+		"header4": "4. Retsgrundlag for behandling",
+		"header5": "5. Videregivelse af personoplysninger",
+		"header6": "6. Opbevaring af data",
+		"header7": "7. Dine rettigheder",
 		"header8": "8. Datasikkerhed",
 		"header9": "9. Klager",
-		"paragraph1": "Velkommen til Daniel Freires hjemmeside. Vi er forpligtet til at beskytte dine personlige oplysninger og din ret til privatliv. Hvis du har spørgsmål eller bekymringer om denne privatlivspolitik eller vores praksis i forhold til dine personoplysninger, kontakt os venligst på",
+		"paragraph1": "Denne politik forklarer, hvordan personoplysninger indsamles og bruges på Daniel Freires hjemmeside. Hvis du har spørgsmål eller bekymringer, så kontakt os på",
 		"paragraph10": "Vi kan opdatere denne privatlivspolitik fra tid til anden. Vi vil underrette dig om eventuelle ændringer ved at offentliggøre den nye privatlivspolitik på denne side.",
 		"paragraph11": "Hvis du har spørgsmål om denne privatlivspolitik, kontakt os venligst på",
 		"paragraph2": "Vi indsamler personlige oplysninger som du frivilligt giver os når du udfylder en formular på vores hjemmeside. De personlige oplysninger vi indsamler inkluderer:",
@@ -350,7 +346,13 @@
 		],
 		"paragraph8": "Vi implementerer passende tekniske og organisatoriske foranstaltninger for at sikre et niveau af sikkerhed som passer til risikoniveauet ved behandlingen af dine personlige data.",
 		"paragraph9": "Hvis du mener at vi ikke har overholdt databeskyttelseslovene, har du ret til at indgive en klage til den relevante tilsynsmyndighed.",
-		"title": "Privatlivspolitik for Daniel Freires Hjemmeside"
+		"title": "Privatlivspolitik for Daniel Freires hjemmeside"
+	},
+	"serviceDetail": {
+		"ctaLink": "Lad os tale om det",
+		"ctaPrompt": "Har du et lignende projekt i tankerne?",
+		"featuresHeading": "Det får du",
+		"otherServices": "Andre ydelser"
 	},
 	"services": [
 		{
@@ -362,32 +364,32 @@
 				"Integration med eksisterende tredjeparts-API'er og tjenester",
 				"Admin-paneler med detaljeret adgangskontrol",
 				"MVP-udvikling med hurtige feedback-cyklusser",
-				"Cloud-native arkitektur implementeret på AWS"
+				"Hosting og udrulning på AWS"
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Enhver virksomhed har unikke processer, arbejdsgange og udfordringer ,  og den software, du bruger, bør afspejle det. Jeg specialiserer mig i at udvikle skræddersyede webapplikationer, der tilpasser sig, hvordan din virksomhed rent faktisk fungerer, i stedet for at tvinge dit team til at tilpasse sig standardsoftware. Jeg leverer med agile metoder, med fokus på MVP og hurtige feedback-cyklusser, så du ser værdi tidligt og itererer baseret på reel brug.\n\nFra CRM-systemer designet til din specifikke salgscyklus til dashboards, der viser præcis de målinger, du har brug for ,  hvert projekt begynder med en dybdegående analyse af dine forretningsprocesser. Resultatet er et værktøj, dit team faktisk vil bruge ,  fordi det blev bygget til dem.\n\nVed hjælp af teknologier som React, Next.js og PostgreSQL ,  implementeret på AWS med cloud-native arkitektur ,  bygger jeg modulære, genanvendelige komponenter, der gør din løsning robust, skalerbar og nem at vedligeholde, efterhånden som din virksomhed vokser.",
+			"longDescription": "Standardsoftware får dit team til at arbejde, som softwaren vil. Jeg bygger webapplikationer omkring den måde, din virksomhed allerede arbejder på: dine processer og de tal, du tjekker hver morgen. Jeg arbejder i korte iterationer og starter med en MVP, så du ser noget brugbart tidligt, og vi kan justere ud fra, hvordan folk bruger det.\n\nHvert projekt starter med et kig på den proces, softwaren skal understøtte. Et CRM bygges omkring din salgspipeline; et dashboard viser de nøgletal, du følger, ikke et generisk udvalg. Dit team er mere tilbøjeligt til at bruge et værktøj, der er bygget til dem.\n\nJeg bruger React, Next.js og PostgreSQL, deployet på AWS, og bygger med modulære, genbrugelige komponenter, så applikationen forbliver nem at vedligeholde og udvide, efterhånden som din virksomhed ændrer sig.",
 			"slug": "skraeddersyet-forretningssoftware",
-			"text": "Skræddersyede webapplikationer ,  CRM-systemer, dashboards og interne værktøjer bygget med modulære komponenter og agil levering, der passer til din virksomheds måde at arbejde på.",
-			"title": "Skræddersyet Forretningssoftware"
+			"text": "Skræddersyede webapplikationer: CRM-systemer, dashboards og interne værktøjer bygget med modulære komponenter og agil levering, der passer til din virksomheds måde at arbejde på.",
+			"title": "Skræddersyet forretningssoftware"
 		},
 		{
 			"features": [
 				"Udvikling af AI-drevne webapplikationer",
 				"LLM-integration med OpenAI og open-source modeller",
-				"AI-agent-orkestrering til komplekse forretningsworkflows",
-				"Intelligente chatbots til kundesupport og salg",
+				"AI-agenter til forretningsworkflows i flere trin",
+				"Chatbots til kundesupport og salg",
 				"Automatiseret dokumentbehandling og klassifikation",
-				"Semantisk søgning og vidensopdagelsessystemer",
+				"Semantisk søgning i dine dokumenter og data",
 				"Forretningsspecifikke AI-assistenter (RAG)",
 				"Automatisk indholdsgenerering og opsummering",
 				"Prædiktiv analyse og AI-drevne dashboards"
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "Kunstig intelligens er gået fra at være en futuristisk hype til at blive en ægte konkurrencefordel ,  når den anvendes med formål. Jeg bygger AI-drevne webapplikationer, der integrerer Large Language Models (LLM'er) i dine eksisterende arbejdsgange på en praktisk og målbar måde uden unødvendig kompleksitet.\n\nUanset om det er en intelligent chatbot, der reducerer supportticket-volumen med 40%, en anbefalingsmotor, der øger den gennemsnitlige ordreværdi, eller AI-agent-orkestrering, der automatiserer komplekse forretningsprocesser i flere trin ,  fokus er altid på forretningsresultatet, ikke teknologien for dens egen skyld. Hver løsning er designet med en AI-drevet brugeroplevelse, der føles naturlig og intuitiv for dit team og dine kunder.\n\nJeg arbejder med API'er som OpenAI, open-source LLM'er, vektordatabaser til semantisk søgning og RAG-arkitekturer (Retrieval-Augmented Generation) for at skabe AI-løsninger, der forstår din unikke forretningskontekst.",
+			"longDescription": "AI er nyttig, når den løser et konkret problem. Jeg bygger webapplikationer, der forbinder store sprogmodeller (LLM'er) med de arbejdsgange, du allerede har, på måder, du kan måle, og jeg udelader AI, hvor den ikke hjælper.\n\nDet kan være en support-chatbot, der besvarer rutinespørgsmål, så dit team håndterer færre sager, en anbefalingsmotor, der foreslår relaterede produkter ved checkout, eller agenter, der sorterer og opsummerer indgående dokumenter. Hver løsning starter med det resultat, du ønsker, og arbejder sig derfra tilbage til teknologien.\n\nJeg arbejder med OpenAI's API, open source-LLM'er, vektordatabaser til semantisk søgning og RAG (Retrieval-Augmented Generation), så systemet svarer ud fra dine egne dokumenter og data i stedet for generel viden.",
 			"slug": "implementering-af-ai-losninger",
-			"text": "AI-drevne webapplikationer og LLM-integration ,  chatbots, AI-agenter og AI-drevne brugeroplevelser, der transformerer dine arbejdsgange.",
+			"text": "AI-drevne webapplikationer og LLM-integration: chatbots, AI-agenter og assistenter, der tager gentagne opgaver fra dit team.",
 			"title": "Implementering af AI-løsninger"
 		},
 		{
@@ -397,36 +399,62 @@
 				"E-handelsplatforme og produktkataloger",
 				"Migrering og modernisering af ældre websites",
 				"Core Web Vitals og teknisk SEO-optimering",
-				"Responsivt design testet på tværs af alle enheder",
+				"Responsivt design testet på telefon, tablet og computer",
 				"Autentificerings-, betalings- og kundeportalsystemer",
-				"Hurtig MVP-udvikling til markedsvalidering",
-				"Cloud-implementering på AWS med skalerbar arkitektur",
-				"Modulære, genanvendelige komponentbiblioteker til vedligeholdelsesvenlig frontend-logik"
+				"Hurtig MVP-udvikling, så idéer kan testes med rigtige brugere",
+				"Udrulning på AWS, klar til voksende trafik",
+				"Genanvendelige komponentbiblioteker til en frontend, der er nem at vedligeholde"
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "Et website er ikke bare et digitalt visitkort ,  det er dit vigtigste marketingaktiv. Jeg bygger højtydende webapplikationer, der indlæses øjeblikkeligt, fungerer på enhver enhed og naturligt guider dine besøgende mod den handling, du ønsker, de skal tage. Ved hjælp af modulære komponenter og ren frontend-logik er hvert projekt arkitektonisk designet til vedligeholdelse fra dag ét.\n\nHvert projekt er bygget med ydeevne i centrum ,  optimeret til Core Web Vitals fra den første linje kode. Det betyder, at dit site ikke bare ser godt ud ,  det vil blive prioriteret af Google i søgeresultater og give en flydende oplevelse for dine brugere. Jeg følger agile produktleveringsmetoder, starter med en MVP for at få hurtig feedback og itererer baseret på reelle brugerdata.\n\nFra højtkonverterende landingssider til fuldt udstyrede webapplikationer med autentificering, betalinger og dashboards ,  implementeret på AWS med skalerbar cloud-arkitektur ,  jeg går til hvert projekt, som om det var mit eget, med omhyggelig opmærksomhed på detaljer og absolut fokus på ydeevne.",
+			"longDescription": "Din hjemmeside er ofte det første sted, en kunde vurderer din virksomhed. Jeg bygger hjemmesider og webapplikationer, der loader hurtigt, virker på telefon og computer og leder besøgende hen til den handling, du ønsker, hvad enten det er at booke et opkald eller købe et produkt.\n\nPerformance er en del af udviklingen fra starten. Jeg optimerer til Core Web Vitals undervejs, hvilket hjælper placeringen i søgeresultaterne og gør siden hurtigere at bruge. Jeg starter med en MVP, får feedback tidligt og itererer ud fra, hvordan folk bruger den.\n\nProjekterne spænder fra landingssider til fulde webapplikationer med login, betalinger og dashboards, deployet på AWS. Koden er bygget af modulære komponenter, så den forbliver nem at vedligeholde efter lanceringen.",
 			"slug": "webudvikling",
-			"text": "Højtydende webapplikationer ,  hurtige, responsive websites med modulære komponenter, der indlæses øjeblikkeligt, fungerer på alle enheder og konverterer besøgende til kunder.",
+			"text": "Højtydende webapplikationer: hurtige, responsive websites, der fungerer på alle enheder og hjælper med at gøre besøgende til kunder.",
 			"title": "Webudvikling"
 		},
 		{
 			"features": [
 				"Fuld teknisk SEO-audit (crawling, indeksering, arkitektur)",
 				"Core Web Vitals og sidehastighedsoptimering",
-				"Konkurrentanalyse og strategisk søgeordsundersøgelse",
+				"Konkurrentanalyse og søgeordsanalyse",
 				"Indholdsstrategi og on-page optimering",
 				"Migrerings- og redesignrådgivning med SEO-bevarelse",
 				"Analyseopsætning og -revision (GA4, Search Console)"
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "At have et godt website er kun halvdelen af ligningen ,  den anden halvdel er at sikre, at de rette mennesker finder det. Min baggrund inden for digital marketing, kombineret med dyb teknisk viden, giver mig mulighed for at tilbyde et unikt perspektiv, der går ud over konventionelle SEO-audits.\n\nHver audit starter med data: Jeg analyserer dit sites tekniske arkitektur, brugeroplevelsessignaler (Core Web Vitals), indholdsstruktur og konkurrencemæssige positionering. For højtydende webapplikationer sikrer jeg, at hvert millisekund af indlæsningstid er redegjort for, fordi hastighed direkte påvirker både placeringer og konverteringer. Resultatet er en prioriteret handlingsplan, der forbinder hver teknisk anbefaling med en konkret forretningspåvirkning.\n\nJeg sælger ikke magiske SEO-formler. Jeg tilbyder grundig analyse, gennemsigtige anbefalinger og implementeringer, der respekterer søgemaskinernes retningslinjer, mens de maksimerer din organiske synlighed.",
+			"longDescription": "En god hjemmeside skal stadig findes af de rigtige mennesker. Jeg arbejdede med digital marketing, før jeg blev udvikler, så jeg ser SEO fra begge sider: hvad søgemaskiner og brugere reagerer på, og hvad der skal ændres i koden for at nå dertil.\n\nHver audit starter med data. Jeg gennemgår din sides tekniske arkitektur, Core Web Vitals, indholdsstruktur og hvordan du klarer dig mod konkurrenterne i søgeresultaterne. Indlæsningstiden får særlig opmærksomhed, fordi den påvirker både placeringer og konverteringer. Du får en prioriteret handlingsplan, hvor hver anbefaling er knyttet til det forretningsresultat, den skal flytte.\n\nDer er ingen tricks her. Arbejdet følger søgemaskinernes retningslinjer, og jeg siger ligeud, hvad jeg tror, der gør en forskel, og hvad der ikke gør.",
 			"slug": "seo-teknisk-radgivning",
-			"text": "Databaserede audits, højtydende optimering og strategi til at hjælpe din virksomhed med at blive fundet og konvertere.",
-			"title": "SEO & Teknisk Rådgivning"
+			"text": "Tekniske SEO-audits, hastighedsoptimering og søgestrategi, så din virksomhed bliver fundet, og besøg bliver til kunder.",
+			"title": "SEO & teknisk rådgivning"
 		}
 	],
+	"servicesPage": {
+		"intro": [
+			"Jeg arbejder med små og mellemstore virksomheder, startups og selvstændige, der har brug for software, som løser en bestemt opgave godt: et website, der skaffer kunder, et internt værktøj, der fjerner manuelt arbejde, eller en AI-funktion, der sparer dit team for timer.",
+			"Min baggrund inden for marketing og dataanalyse betyder, at hvert projekt starter med forretningsmålet, ikke teknologien. Før jeg skriver kode, spørger jeg, hvordan succes ser ud, hvordan du vil måle den, og hvad dine brugere har brug for.",
+			"Du arbejder direkte med mig fra første samtale til lancering. Ingen kundeansvarlige, ingen overdragelser, men klar kommunikation om omfang, tidsplan og prioriteringer."
+		],
+		"steps": [
+			{
+				"text": "Vi taler om dine mål, dine brugere og det problem, der skal løses. Jeg vender tilbage med spørgsmål og et forslag til omfang.",
+				"title": "Afklaring"
+			},
+			{
+				"text": "Du får en skriftlig plan med leverancer, tidsplan og pris, så der ikke kommer overraskelser.",
+				"title": "Tilbud"
+			},
+			{
+				"text": "Jeg arbejder i korte iterationer og viser løbende fremskridt, så du kan give feedback, mens ændringer stadig er billige.",
+				"title": "Udvikling"
+			},
+			{
+				"text": "Jeg står for udrulningen, tjekker ydeevne og SEO og er fortsat tilgængelig for rettelser og forbedringer efter lanceringen.",
+				"title": "Lancering og support"
+			}
+		],
+		"stepsTitle": "Sådan forløber et projekt"
+	},
 	"sidenav": {
 		"footer": {
 			"blurb": "Lavet med 🐞 af",
@@ -434,18 +462,18 @@
 				"github": {
 					"alt": "GitHub",
 					"ariaDetails": "Daniel Freires GitHub",
-					"ariaLabel": "Daniel Freire's GitHub - opens in new tab",
+					"ariaLabel": "Daniel Freires GitHub - åbner i en ny fane",
 					"link": "https://github.com/danielfreire-dev/",
 					"src": "/images/icons/github-square.svg",
 					"title": "Daniel Freires GitHub"
 				},
 				"linkedin": {
 					"alt": "LinkedIn",
-					"ariaDetails": "Daniel Freires Linkedin",
-					"ariaLabel": "Daniel Freire's LinkedIn - opens in new tab",
+					"ariaDetails": "Daniel Freires LinkedIn",
+					"ariaLabel": "Daniel Freires LinkedIn - åbner i en ny fane",
 					"link": "https://www.linkedin.com/in/danielfreire-swe/",
 					"src": "/images/icons/linkedin.svg",
-					"title": "Daniel Freires Linkedin"
+					"title": "Daniel Freires LinkedIn"
 				}
 			}
 		},
@@ -485,74 +513,74 @@
 			}
 		],
 		"privacy": "privatlivspolitik",
-		"rights": "Daniel Freire ® alle rettigheder forbeholdt",
+		"rights": "© Daniel Freire. Alle rettigheder forbeholdes.",
 		"select": {
-			"languageSelectAriaLabel": "Vælg Sprog Menu",
-			"languageSelectTitle": "Vælg Sprog Menu"
+			"languageSelectAriaLabel": "Vælg sprog",
+			"languageSelectTitle": "Vælg sprog"
 		}
 	},
 	"svgTitles": {
-		"Bash": "Bash shell logo",
-		"CSS3": "CSS Logo",
-		"Cloudflare": "Cloudflare logo",
-		"Cypress": "Cypress testing framework logo",
-		"D3js": "D3.js logo",
-		"Django": "Django logo",
-		"ESLint": "ESLint logo",
-		"Expressjs": "Express.js web framework logo",
-		"ExternalLinkSvg": "External-link SVG Icon",
-		"Figma": "Figma logo",
-		"Git": "Git version control logo",
-		"GitHubIcon": "GitHub profile link icon",
-		"Github": "GitHub logo",
-		"GithubActions": "GitHub Actions logo",
-		"GithubPages": "GitHub Pages logo",
-		"HTML5": "HTML5 logo",
-		"JSON": "JSON logo",
-		"JavaScript": "JavaScript logo",
-		"Jest": "Jest testing framework logo",
-		"LangChain": "LangChain logo",
-		"LaTeX": "LaTeX logo",
-		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animated moon to sun loop transition icon",
-		"LinkedInIcon": "LinkedIn profile link icon",
-		"Linux": "Linux operating system logo",
-		"Markdown": "Markdown logo",
-		"Moon": "Moon icon for dark mode toggle",
-		"MongoDB": "MongoDB logo",
-		"Netlify": "Netlify logo",
-		"Nextjs": "Next.js framework logo",
-		"Nodejs": "Node.js runtime logo",
-		"Playwright": "Playwright logo",
-		"PostgreSQL": "PostgreSQL database logo",
-		"Postman": "Postman logo",
-		"Python": "Python programming language logo",
-		"Reactjs": "React library logo",
-		"Redux": "Redux state management logo",
+		"Bash": "Logo for Bash-shell",
+		"CSS3": "CSS-logo",
+		"Cloudflare": "Cloudflare-logo",
+		"Cypress": "Logo for testframeworket Cypress",
+		"D3js": "D3.js-logo",
+		"Django": "Django-logo",
+		"ESLint": "ESLint-logo",
+		"Expressjs": "Logo for webframeworket Express.js",
+		"ExternalLinkSvg": "SVG-ikon for eksternt link",
+		"Figma": "Figma-logo",
+		"Git": "Logo for versionsstyringssystemet Git",
+		"GitHubIcon": "Ikon med link til GitHub-profil",
+		"Github": "GitHub-logo",
+		"GithubActions": "GitHub Actions-logo",
+		"GithubPages": "GitHub Pages-logo",
+		"HTML5": "HTML5-logo",
+		"JSON": "JSON-logo",
+		"JavaScript": "JavaScript-logo",
+		"Jest": "Logo for testframeworket Jest",
+		"LangChain": "LangChain-logo",
+		"LaTeX": "LaTeX-logo",
+		"LineMdMoonFilledToSunnyFilledLoopTransition": "Animeret ikon med løkkeovergang fra måne til sol",
+		"LinkedInIcon": "Ikon med link til LinkedIn-profil",
+		"Linux": "Logo for styresystemet Linux",
+		"Markdown": "Markdown-logo",
+		"Moon": "Måneikon til mørk tilstand",
+		"MongoDB": "MongoDB-logo",
+		"Netlify": "Netlify-logo",
+		"Nextjs": "Logo for frameworket Next.js",
+		"Nodejs": "Logo for runtime-miljøet Node.js",
+		"Playwright": "Playwright-logo",
+		"PostgreSQL": "Logo for databasen PostgreSQL",
+		"Postman": "Postman-logo",
+		"Python": "Logo for programmeringssproget Python",
+		"Reactjs": "Logo for biblioteket React",
+		"Redux": "Logo for state management-biblioteket Redux",
 		"SELENIUM": "Selenium WebDriver",
 		"Selenium": "Selenium WebDriver",
-		"Sun": "Sun icon for light mode toggle",
-		"Sun1": "Sun icon",
-		"TailwindCSS": "Tailwind CSS logo",
-		"TypeScript": "TypeScript programming language logo",
-		"VSCode": "Visual Studio Code logo",
-		"Vitejs": "Vite build tool logo",
-		"Vitest": "Vitest testing framework logo",
-		"Webpack": "Webpack module bundler logo",
-		"Zsh": "Zsh shell logo",
-		"Zustand": "Zustand logo",
-		"alertAnimation": "Animated alert triangle with exclamation mark",
-		"blocksShuffle": "Animated blocks shuffle loading spinner",
-		"blocksWave": "Animated blocks wave loading spinner",
-		"closeToMenu": "Close to menu transition icon",
-		"compass": "Animated compass with rotating directional needle",
-		"computerAnimation": "Animated computer monitor with keyboard tray",
-		"djangoRocket": "Django rocket illustration",
-		"externalLink": "External link icon",
-		"menuToClose": "Menu to close transition icon",
-		"moonToSun": "Animated moon to sun transition icon",
-		"nextjsTsx": "Next.js framework logotype",
-		"opensInNewTab": "opens in new tab",
-		"sunToMoon": "Animated sun to moon transition icon"
+		"Sun": "Solikon til lys tilstand",
+		"Sun1": "Solikon",
+		"TailwindCSS": "Tailwind CSS-logo",
+		"TypeScript": "Logo for programmeringssproget TypeScript",
+		"VSCode": "Visual Studio Code-logo",
+		"Vitejs": "Logo for build-værktøjet Vite",
+		"Vitest": "Logo for testframeworket Vitest",
+		"Webpack": "Logo for modul-bundleren Webpack",
+		"Zsh": "Logo for Zsh-shell",
+		"Zustand": "Zustand-logo",
+		"alertAnimation": "Animeret advarselstrekant med udråbstegn",
+		"blocksShuffle": "Animeret indlæsningsindikator med blokke, der blandes",
+		"blocksWave": "Animeret indlæsningsindikator med blokke i en bølge",
+		"closeToMenu": "Overgangsikon fra luk til menu",
+		"compass": "Animeret kompas med roterende nål",
+		"computerAnimation": "Animeret computerskærm med tastaturbakke",
+		"djangoRocket": "Illustration af Django-raket",
+		"externalLink": "Ikon for eksternt link",
+		"menuToClose": "Overgangsikon fra menu til luk",
+		"moonToSun": "Animeret overgangsikon fra måne til sol",
+		"nextjsTsx": "Next.js-logotype",
+		"opensInNewTab": "åbner i en ny fane",
+		"sunToMoon": "Animeret overgangsikon fra sol til måne"
 	},
 	"tech": [
 		{
@@ -658,9 +686,9 @@
 		{
 			"id": "zustand",
 			"link": "https://zustand.docs.pmnd.rs/",
-			"logo": "/images/icons/zustand.svg",
+			"logo": "/images/icons/tech/zustand.webp",
 			"name": "zustand",
-			"svgr": "Zustand",
+			"svgr": "",
 			"categories": [
 				"State Management"
 			]
@@ -828,9 +856,9 @@
 		{
 			"id": "linux",
 			"link": "https://www.linux.org/",
-			"logo": "/images/icons/linux-original.svg",
+			"logo": "/images/icons/tech/linux.webp",
 			"name": "linux",
-			"svgr": "Linux",
+			"svgr": "",
 			"categories": [
 				"Tools & DevOps"
 			]
@@ -917,69 +945,46 @@
 		}
 	],
 	"topMainPage": {
-		"blurbsArray": [
-			{
-				"description": "Holder din hjemmeside din virksomhed tilbage? Jeg udfører en grundig gennemgang af din tekniske infrastruktur, brugeroplevelse og konverteringspotentiale, og giver dig en detaljeret rapport med specifikke forbedringer der booster din online performance.",
-				"title": "Transformér din digitale tilstedeværelse nu!"
-			},
-			{
-				"description": "Hjemmesider kræver løbende pleje for at være sikre, funktionelle og konkurrencedygtige. Mine vedligeholdelsespakker inkluderer proaktiv overvågning, hurtig problemløsning og kontinuerlige teknologiopdateringer.",
-				"title": "Frigør din hjemmesides fulde potentiale"
-			},
-			{
-				"description": "Drop de generiske skabeloner. Jeg bygger skræddersyede digitale oplevelser der matcher dit brands identitet og forretningsmål. Dit koncept bliver til en kraftfuld, responsiv, moderne webløsning.",
-				"title": "Byg dit drømmeprojekt i dag"
-			},
-			{
-				"description": "En hurtig hjemmeside er en konkurrencefordel. Jeg optimerer dit site så det loader hurtigt og giver dine besøgende en oplevelse der fastholder dem og konverterer mere effektivt.",
-				"title": "Accelerér din hjemmesides potentiale"
-			},
-			{
-				"description": "Teknologien udvikler sig hurtigt. Jeg hjælper dig med at skifte til moderne, effektive webteknologier uden at forstyrre din eksisterende drift. En glidende opgradering med styret risiko.",
-				"title": "Modernisér din digitale infrastruktur"
-			},
-			{
-				"description": "Hjemmesider kræver løbende pleje for at være sikre, funktionelle og konkurrencedygtige. Mine vedligeholdelsespakker inkluderer proaktiv overvågning, hurtig problemløsning og kontinuerlige teknologiopdateringer.",
-				"title": "Løbende pleje af dine digitale aktiver"
-			}
-		],
-		"p1": "Træt af software der holder din virksomhed tilbage?",
-		"p2": "De fleste forretningsapplikationer er enten for stive eller for komplekse. Jeg specialiserer mig i at udvikle skræddersyede webapplikationer, som CRM-systemer, projektværktøjer og datadashboards, der passer til hvordan din virksomhed faktisk fungerer. Har du brug for et værktøj der løser et specifikt problem uden unødvendige funktioner, så lad os tale om hvad du vil opnå."
+		"description": "Jeg udvikler skræddersyede webapplikationer som CRM-systemer, projektværktøjer og datadashboards, bruger AI, hvor det sparer dit team tid, og bygger hjemmesider, der loader hurtigt og bliver fundet. Ingen unødvendige funktioner, kun værktøjer, der passer til den måde, du arbejder på.",
+		"eyebrow": "Daniel Freire · Webudvikler",
+		"primaryCta": "Lad os tale om dit projekt",
+		"secondaryCta": "Se mit arbejde",
+		"title": "Skræddersyet software, AI-apps og hurtige hjemmesider bygget til din virksomhed"
 	},
 	"techCategories": [
 		{
 			"id": "languages",
-			"label": "Languages",
+			"label": "Sprog",
 			"order": 1
 		},
 		{
 			"id": "front-end",
-			"label": "Front End",
+			"label": "Frontend",
 			"order": 2
 		},
 		{
 			"id": "back-end",
-			"label": "Back End",
+			"label": "Backend",
 			"order": 3
 		},
 		{
 			"id": "state-management",
-			"label": "State Management",
+			"label": "Tilstandsstyring",
 			"order": 4
 		},
 		{
 			"id": "ai-data-viz",
-			"label": "AI, Data and Visualization",
+			"label": "AI, data og visualisering",
 			"order": 5
 		},
 		{
 			"id": "databases",
-			"label": "Databases",
+			"label": "Databaser",
 			"order": 6
 		},
 		{
 			"id": "testing",
-			"label": "Testing",
+			"label": "Test",
 			"order": 7
 		},
 		{
@@ -989,7 +994,7 @@
 		},
 		{
 			"id": "tools-devops",
-			"label": "Tools & DevOps",
+			"label": "Værktøjer og DevOps",
 			"order": 9
 		},
 		{
@@ -999,7 +1004,7 @@
 		},
 		{
 			"id": "data-formats",
-			"label": "Data Formats",
+			"label": "Dataformater",
 			"order": 11
 		}
 	]

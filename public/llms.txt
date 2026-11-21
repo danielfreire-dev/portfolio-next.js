@@ -1,6 +1,6 @@
 # Daniel Freire — Web Developer
 
-> Daniel Freire builds high-performance web applications, AI-powered solutions, and custom business software from Portugal, serving clients globally.
+> Daniel Freire builds custom business software, AI-powered solutions, and high-performance web applications for clients worldwide.
 
 ## Who Daniel Freire Is
 
@@ -26,9 +26,9 @@ Every project is approached as if it were his own. The technology is a means to 
 
 ## Pages
 
-- **Home.** Landing page with carousel, tech stack showcase, services overview, and call-to-action.
-- **About.** Daniel's story — from marketing analyst to full-stack developer.
-- **Services.** Four service lines with detailed feature breakdowns. Each links to an in-depth detail page.
+- **Home.** Landing page with hero, services overview, and call-to-action.
+- **About.** Daniel's story — from marketing analyst to full-stack developer — and his tech stack.
+- **Services.** Who Daniel works with, how a project runs, and four service lines. Each links to an in-depth detail page.
 - **Portfolio.** Projects and client websites with filtering, live demos, and source links.
 - **Contact.** Contact form with Cloudflare Turnstile spam protection. Messages deliver via Resend.
 - **Privacy Policy.** GDPR-compliant privacy practices with granular consent.
@@ -36,7 +36,7 @@ Every project is approached as if it were his own. The technology is a means to 
 
 ## Contact
 
-- **Email:** daniel@daniel-freire.com
+- **Email:** hello@daniel-freire.com
 - **GitHub:** github.com/danielfreire-dev
 - **LinkedIn:** linkedin.com/in/danielfreire-swe
 - **Website:** daniel-freire.com

@@ -47,7 +47,7 @@ describe("MobileSlideBtn", () => {
 			expect(checkbox).toBeChecked();
 		});
 
-		it("should translate the label by translate-x-56 when open", () => {
+		it("should position the label at left-48 when open", () => {
 			renderWithProviders(
 				<MobileSlideBtn
 					isOpen
@@ -56,7 +56,7 @@ describe("MobileSlideBtn", () => {
 			);
 			const labels = screen.getAllByLabelText("Close menu");
 			const label = labels.find((el) => el.tagName === "LABEL");
-			expect(label?.className).toContain("translate-x-56");
+			expect(label?.className).toContain("left-48");
 		});
 	});
 
@@ -95,7 +95,7 @@ describe("MobileSlideBtn", () => {
 			expect(checkbox).not.toBeChecked();
 		});
 
-		it("should translate the label by translate-x-4 when closed", () => {
+		it("should position the label at left-4 when closed", () => {
 			renderWithProviders(
 				<MobileSlideBtn
 					isOpen={false}
@@ -104,7 +104,7 @@ describe("MobileSlideBtn", () => {
 			);
 			const labels = screen.getAllByLabelText("Open menu");
 			const label = labels.find((el) => el.tagName === "LABEL");
-			expect(label?.className).toContain("translate-x-4");
+			expect(label?.className).toContain("left-4");
 		});
 	});
 

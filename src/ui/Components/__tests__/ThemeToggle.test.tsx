@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { renderWithProviders, screen, fireEvent } from "@/test/test-utils";
+import { renderWithProviders, screen, fireEvent, act } from "@/test/test-utils";
 import ThemeToggle from "@/ui/Components/ThemeToggle";
 
 // Mock SVG components
@@ -95,6 +95,39 @@ describe("ThemeToggle", () => {
 
 			// localStorage should be set to "light"
 			expect(localStorage.getItem("theme")).toBe("light");
+		});
+	});
+
+	describe("system theme sync", () => {
+		it("should update the <html> dark class when the OS theme changes and no preference is stored", () => {
+			localStorage.removeItem("theme");
+			let listener: ((e: MediaQueryListEvent) => void) | undefined;
+			const originalMatchMedia = window.matchMedia;
+			window.matchMedia = ((query: string) => ({
+				matches: false,
+				media: query,
+				onchange: null,
+				addListener: () => {},
+				removeListener: () => {},
+				addEventListener: (_: string, cb: (e: MediaQueryListEvent) => void) => {
+					listener = cb;
+				},
+				removeEventListener: () => {},
+				dispatchEvent: () => false,
+			})) as unknown as typeof window.matchMedia;
+
+			try {
+				renderWithProviders(<ThemeToggle />);
+				expect(document.documentElement.classList.contains("dark")).toBe(false);
+
+				act(() => listener!({ matches: true } as MediaQueryListEvent));
+
+				expect(mockSetValue).toHaveBeenLastCalledWith(true);
+				expect(document.documentElement.classList.contains("dark")).toBe(true);
+			} finally {
+				window.matchMedia = originalMatchMedia;
+				document.documentElement.classList.remove("dark");
+			}
 		});
 	});
 

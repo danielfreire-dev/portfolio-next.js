@@ -3,7 +3,10 @@
 import LocaleSwitcher from "./LocaleSwitcher";
 import { useTranslations } from "next-intl";
 import NavigationList from "./NavigationList";
-import { GitHubIcon, LinkedInIcon } from "../svgs";
+// Import the icons directly — importing from the `../svgs` barrel pulls every
+// tech-stack SVG into the layout bundle shipped on every page.
+import GitHubIcon from "../svgs/github-square.svg";
+import LinkedInIcon from "../svgs/linkedin-square.svg";
 import { TransitionLink } from "./TransitionLink";
 import LegalLinks from "./LegalLinks";
 import ThemeToggle from "../ThemeToggle";
@@ -39,11 +42,12 @@ const Sidenav = () => {
 						href="/"
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}>
-						<h1
+						{/* Not a heading: every page, home included (hero), provides its own <h1>. */}
+						<p
 							className="text-5xl capitalize flex justify-center max-w-full truncate text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
 							id="logo">
 							{t("header.title")}
-						</h1>
+						</p>
 					</TransitionLink>
 					<p
 						className="flex justify-center mb-2 capitalize text-lg font-semibold"

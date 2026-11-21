@@ -1,0 +1,107 @@
+/* Infinite horizontal marquee — see `Marquee.tsx`.
+   The track holds two identical lists; it slides by exactly half its width
+   (one list + the trailing gap), so the loop has no visible seam. */
+
+.marquee {
+	--marquee-gap: 1.25rem;
+	--marquee-fade: 3rem;
+}
+
+.marquee-viewport {
+	overflow: hidden;
+	-webkit-mask-image: linear-gradient(
+		to right,
+		transparent,
+		#000 var(--marquee-fade),
+		#000 calc(100% - var(--marquee-fade)),
+		transparent
+	);
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		#000 var(--marquee-fade),
+		#000 calc(100% - var(--marquee-fade)),
+		transparent
+	);
+}
+
+.marquee-track {
+	display: flex;
+	width: max-content;
+	animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee[data-direction="reverse"] .marquee-track {
+	animation-direction: reverse;
+}
+
+.marquee-list {
+	display: flex;
+	align-items: stretch;
+	gap: var(--marquee-gap);
+	margin: 0;
+	/* Vertical room so hover scaling and shadows are not clipped. */
+	padding: 0.75rem var(--marquee-gap) 0.75rem 0;
+	list-style: none;
+}
+
+/* Pause on hover, while a link inside has focus, or — for every marquee at
+   once — when a pause button sets `data-marquee-paused` on <html>. */
+.marquee-viewport:hover .marquee-track,
+.marquee-viewport:focus-within .marquee-track,
+:root[data-marquee-paused] .marquee-track {
+	animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+/* Pause toggle (`MarqueePauseButton`). */
+.marquee-pause {
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	flex-shrink: 0;
+	border: 2px solid var(--text-tertiary);
+	color: var(--text);
+	cursor: pointer;
+	transition:
+		color 0.2s,
+		background-color 0.2s;
+}
+
+.marquee-pause:hover {
+	background-color: var(--surface-hover);
+}
+
+.marquee-pause:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
+}
+
+/* Reduced motion: no animation; the single list becomes a scrollable row. */
+@media (prefers-reduced-motion: reduce) {
+	.marquee-track {
+		animation: none;
+	}
+
+	.marquee-viewport {
+		overflow-x: auto;
+		-webkit-mask-image: none;
+		mask-image: none;
+	}
+
+	.marquee-list[aria-hidden="true"],
+	.marquee-pause {
+		display: none;
+	}
+}

@@ -142,7 +142,6 @@ export const mockMessages: Record<string, unknown> = {
 		privacyPolicyUrl: "privacy-policy",
 		welcome: {} as Record<string, string>,
 	},
-	carousel: [] as unknown[],
 	icons: {
 		leftarrow: { alt: "Previous", src: "/icons/chevron-right.svg" },
 		rightarrow: { alt: "Next", src: "/icons/chevron-right.svg" },

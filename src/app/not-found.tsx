@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./[locale]/globals.css";
+import { themeScript } from "@/lib/themeScript";
 
 export const metadata: Metadata = {
 	title: "Page Not Found",
@@ -16,8 +17,6 @@ export const metadata: Metadata = {
  * the root not-found component must provide its own <html> and <body> tags.
  */
 export default function RootNotFound() {
-	const themeScript = `(function(){try{var d=document.documentElement;var t=localStorage.getItem("theme");var isDark=t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(isDark){d.classList.add("dark")}else{d.classList.remove("dark")}d.classList.add("theme-ready")}catch(e){document.documentElement.classList.add("theme-ready")}})();`;
-
 	return (
 		<html
 			lang="en"

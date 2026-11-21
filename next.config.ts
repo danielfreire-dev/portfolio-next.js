@@ -91,10 +91,9 @@ export const nextConfig: NextConfig = {
 		];
 	}, */
 
-	// Allowed origins for development server access from other devices on the network
+	// Hostnames (not URLs) allowed to access the dev server from other devices on the network
 	allowedDevOrigins: [
-		"http://192.168.1.13:3000/*", // Replace with your actual IP and port
-		"http://localhost:3000/*", // Include localhost for local development
+		"192.168.1.13", // Replace with your machine's LAN IP
 		"local-origin.dev",
 		"*.local-origin.dev",
 	],

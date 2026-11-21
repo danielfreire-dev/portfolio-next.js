@@ -1,10 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
-import { Locale } from "next-intl";
+import { Locale, useTranslations } from "next-intl";
 import Services from "@/ui/Components/Services";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
-import { getAlternates } from "@/i18n/alternates";
+import { getCanonicalUrl } from "@/i18n/alternates";
+import { buildPageMetadata } from "@/i18n/pageMetadata";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -23,8 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		namespace: "metadata",
 	});
 
-	return {
-		title: t("title.services"),
+	return buildPageMetadata({
+		href: "/services",
+		locale,
+		title: t("seoTitle.services"),
 		description: t("description.services"),
 		keywords: [
 			"web development services",
@@ -35,36 +38,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"custom CRM",
 			"AI agents",
 		],
-		robots: { index: true, follow: true },
-		alternates: getAlternates({ href: "/services", locale }),
-		openGraph: {
-			type: "website",
-			title: t("title.services"),
-			description: t("description.services"),
-			url: "https://daniel-freire.com/services",
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
-			locale: locale,
-		},
-		twitter: {
-			card: "summary_large_image",
-			site: "@daniel_freire",
-			creator: "@daniel_freire",
-			title: t("title.services"),
-			description: t("description.services"),
-			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
-		},
-	};
+	});
 }
 
 /**
- * Services listing page — delegates rendering to the shared
- * {@link Services} component.
+ * Services listing page — an introduction (who the services are for and
+ * how projects run) followed by the shared {@link Services} card grid.
  *
  * Route: /[locale]/services
  */
 const ServicesPage = ({ params }: Props) => {
 	const { locale } = use(params);
 	setRequestLocale(locale);
+	const m = useTranslations("metadata.title");
+	const b = useTranslations("breadcrumbs");
+	const p = useTranslations("servicesPage");
+	const intro = p.raw("intro") as string[];
+	const steps = p.raw("steps") as Array<{ title: string; text: string }>;
 
 	return (
 		<>
@@ -73,13 +63,42 @@ const ServicesPage = ({ params }: Props) => {
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(
 						generateBreadcrumbSchema([
-							{ name: "Home", href: `/${locale}` },
-							{ name: "Services", href: `/${locale}/services` },
+							{ name: b("home"), href: getCanonicalUrl("/", locale) },
+							{ name: m("services"), href: getCanonicalUrl("/services", locale) },
 						]),
 					),
 				}}
 			/>
-			<Services />
+			<Services headingLevel="h1">
+				<div className="mx-auto max-w-3xl px-4 sm:px-6 space-y-4">
+					{intro.map((paragraph) => (
+						<p
+							key={paragraph.slice(0, 40)}
+							className="text-base leading-relaxed text-(--text-secondary)">
+							{paragraph}
+						</p>
+					))}
+				</div>
+			</Services>
+
+			<section
+				className="mx-auto max-w-3xl px-4 sm:px-6 mb-6"
+				aria-labelledby="how-i-work">
+				<h2
+					id="how-i-work"
+					className="text-2xl! mb-4">
+					{p("stepsTitle")}
+				</h2>
+				<ol className="space-y-3 list-decimal list-inside">
+					{steps.map((step) => (
+						<li
+							key={step.title}
+							className="text-base text-(--text-secondary)">
+							<strong className="text-(--text-primary)">{step.title}.</strong> {step.text}
+						</li>
+					))}
+				</ol>
+			</section>
 		</>
 	);
 };

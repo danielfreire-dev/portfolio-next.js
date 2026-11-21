@@ -1,6 +1,20 @@
 import { describe, it, expect, vi } from "vitest";
 import { renderWithProviders, screen } from "@/test/test-utils";
 
+/** Mock React.use() — not available in React 18 test environments. Returns the value as-is. */
+vi.mock("react", async () => {
+	const actual = await vi.importActual("react");
+	return {
+		...actual,
+		use: <T,>(value: T): T => value,
+	};
+});
+
+vi.mock("next-intl/server", () => ({
+	getTranslations: vi.fn().mockResolvedValue((key: string) => key),
+	setRequestLocale: vi.fn(),
+}));
+
 // Mock next-intl with t.raw support
 vi.mock("next-intl", () => ({
 	useTranslations: () => {
@@ -41,31 +55,33 @@ vi.mock("next-intl", () => ({
 
 import PrivacyPolicyPage from "@/app/[locale]/(legal)/privacy-policy/page";
 
+const params = { locale: "en" } as unknown as Promise<{ locale: "en" }>;
+
 describe("Privacy Policy page", () => {
 	it("should render the page title", () => {
-		renderWithProviders(<PrivacyPolicyPage />);
+		renderWithProviders(<PrivacyPolicyPage params={params} />);
 		expect(screen.getByText("Privacy Policy")).toBeInTheDocument();
 	});
 
 	it("should render the introduction header", () => {
-		renderWithProviders(<PrivacyPolicyPage />);
+		renderWithProviders(<PrivacyPolicyPage params={params} />);
 		expect(screen.getByText("1. Introduction")).toBeInTheDocument();
 	});
 
 	it("should render the first paragraph", () => {
-		renderWithProviders(<PrivacyPolicyPage />);
+		renderWithProviders(<PrivacyPolicyPage params={params} />);
 		expect(screen.getByText(/Welcome to our privacy policy page/)).toBeInTheDocument();
 	});
 
 	it("should render the contact email link", () => {
-		renderWithProviders(<PrivacyPolicyPage />);
+		renderWithProviders(<PrivacyPolicyPage params={params} />);
 		const links = screen.getAllByRole("link");
 		const mailLinks = links.filter((l) => l.getAttribute("href")?.startsWith("mailto:"));
 		expect(mailLinks.length).toBeGreaterThanOrEqual(1);
 	});
 
 	it("should render multiple section headers", () => {
-		renderWithProviders(<PrivacyPolicyPage />);
+		renderWithProviders(<PrivacyPolicyPage params={params} />);
 		expect(screen.getByText("2. Information We Collect")).toBeInTheDocument();
 		expect(screen.getByText("3. Purpose")).toBeInTheDocument();
 	});

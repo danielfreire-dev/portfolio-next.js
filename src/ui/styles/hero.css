@@ -1,0 +1,44 @@
+/* Hero call-to-action buttons (`TopMainPage`). Both share one look, distinct
+   from the global CTA: a surface → surface-hover gradient and a --primary
+   border; on hover the fill turns solid surface-hover and the button lifts. */
+
+.hero-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	padding: 0.85em 1.6em;
+	border: 2px solid var(--primary);
+	color: var(--text);
+	font: inherit;
+	font-weight: 500;
+	line-height: 1.3;
+	text-align: center;
+	text-wrap: balance;
+	background-color: var(--surface-hover);
+	background-image: linear-gradient(135deg, var(--surface), var(--surface-hover));
+	transition:
+		box-shadow 0.25s ease,
+		transform 0.25s ease;
+}
+
+.hero-button:hover {
+	background-image: none;
+	box-shadow: 0 0.45em 0.9em -0.45em rgb(0 0 0 / 0.3);
+	transform: translateY(-2px);
+}
+
+.hero-button:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-button {
+		transition: none;
+	}
+
+	.hero-button:hover {
+		transform: none;
+	}
+}

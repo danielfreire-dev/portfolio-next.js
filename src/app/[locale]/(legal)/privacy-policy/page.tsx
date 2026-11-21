@@ -5,7 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
-import { getAlternates } from "@/i18n/alternates";
+import { getCanonicalUrl } from "@/i18n/alternates";
+import { buildPageMetadata } from "@/i18n/pageMetadata";
 
 /** Props for the Privacy Policy page, receiving locale from Next.js. */
 interface Props {
@@ -28,28 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		namespace: "metadata",
 	});
 
-	return {
+	return buildPageMetadata({
+		href: "/privacy-policy",
+		locale,
 		title: t("title.privacyPolicy"),
 		description: t("description.privacyPolicy"),
-		robots: { index: false, follow: true },
-		alternates: getAlternates({ href: "/privacy-policy", locale }),
-		openGraph: {
-			type: "website",
-			title: t("title.privacyPolicy"),
-			description: t("description.privacyPolicy"),
-			url: "https://daniel-freire.com/privacy-policy",
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
-			locale: locale,
-		},
-		twitter: {
-			card: "summary_large_image",
-			site: "@daniel_freire",
-			creator: "@daniel_freire",
-			title: t("title.privacyPolicy"),
-			description: t("description.privacyPolicy"),
-			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
-		},
-	};
+		index: false,
+	});
 }
 
 /** Props for the ListParagraph component. */
@@ -83,6 +69,8 @@ const PrivacyPolicy = ({ params }: Props) => {
 	setRequestLocale(locale);
 
 	const t = useTranslations("privacyPolicy");
+	const m = useTranslations("metadata.title");
+	const b = useTranslations("breadcrumbs");
 
 	return (
 		<>
@@ -91,14 +79,14 @@ const PrivacyPolicy = ({ params }: Props) => {
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(
 						generateBreadcrumbSchema([
-							{ name: "Home", href: `/${locale}` },
-							{ name: "Privacy Policy", href: `/${locale}/privacy-policy` },
+							{ name: b("home"), href: getCanonicalUrl("/", locale) },
+							{ name: m("privacyPolicy"), href: getCanonicalUrl("/privacy-policy", locale) },
 						]),
 					),
 				}}
 			/>
 			<section className="m-7">
-				<h2>{t("title")}</h2>
+				<h1>{t("title")}</h1>
 				<h3>{t("header1")}</h3>
 				<p>
 					{t("paragraph1")} <a href={`mailto:${t("contactEmail")}`}>{t("contactEmail")}</a>.

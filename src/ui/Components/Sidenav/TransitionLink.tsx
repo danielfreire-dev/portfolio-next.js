@@ -1,6 +1,7 @@
 "use client";
 
 import React, { ComponentProps, useEffect } from "react";
+import { useParams } from "next/navigation";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
 
@@ -58,6 +59,7 @@ export const TransitionLink = ({
 }: TransitionLinkProps) => {
 	const router = useRouter();
 	const pathname = usePathname();
+	const currentParams = useParams();
 
 	/**
 	 * Closes the mobile sidenav when the URL changes after navigation.
@@ -77,11 +79,19 @@ export const TransitionLink = ({
 		e.preventDefault();
 
 		// Both `usePathname()` from next-intl and `href` from the Link
-		// component use the same unprefixed pathname keys (e.g. "/portfolio"),
-		// so a direct comparison is correct without locale wrangling.
+		// component use the same unprefixed pathname keys (e.g. "/portfolio",
+		// or the template "/services/[service]" for dynamic routes), so a
+		// direct comparison is correct without locale wrangling.  For dynamic
+		// routes the params must match too, otherwise links between two
+		// service pages would be treated as "same page".
 		const hrefPath = typeof href === "string" ? href : href.pathname;
+		const hrefParams =
+			typeof href === "object" && "params" in href ? (href.params as Record<string, string | number>) : undefined;
+		const isSamePage =
+			pathname === hrefPath &&
+			(!hrefParams || Object.entries(hrefParams).every(([key, value]) => currentParams?.[key] === String(value)));
 
-		if (pathname !== hrefPath) {
+		if (!isSamePage) {
 			// 1. Start the curtain sliding in.
 			document.dispatchEvent(new CustomEvent("transition:start"));
 
@@ -95,7 +105,9 @@ export const TransitionLink = ({
 			});
 
 			// 3. Navigate while the page is hidden behind the overlay.
-			router.push(hrefPath as Parameters<typeof router.push>[0]);
+			// Push the full href (including params) so dynamic routes resolve
+			// to their localized URL.
+			router.push(href as Parameters<typeof router.push>[0]);
 		}
 		setIsOpen && isOpen && setIsOpen((prev) => !prev);
 	};

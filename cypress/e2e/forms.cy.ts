@@ -15,7 +15,7 @@ describe("Contact form page", () => {
 	});
 
 	it("should load the contact page successfully", () => {
-		cy.get("h2").should("contain.text", "Contact");
+		cy.get("h1").should("contain.text", "Contact");
 	});
 
 	it("should render the contact form with all fields", () => {

@@ -11,7 +11,9 @@ type ConsentPrefs = {
 	marketing: boolean;
 };
 
-const STORAGE_KEY = "cookie-consent";
+/** localStorage key holding the consent choice (also read by GoogleAnalytics). */
+export const CONSENT_STORAGE_KEY = "cookie-consent";
+const STORAGE_KEY = CONSENT_STORAGE_KEY;
 
 /**
  * Reads previously-saved cookie consent preferences from localStorage.
@@ -54,15 +56,18 @@ function saveConsent(prefs: ConsentPrefs) {
 }
 
 /**
- * Grants analytics consent by updating the Google Analytics gtag defaults.
+ * Pushes the user's analytics choice to Google Analytics consent mode.
  *
- * Called whenever the user accepts analytics cookies (via Accept All or
- * the granular Manage modal). Updates the consent state from `denied` to
- * `granted` so GA4 can begin tracking page views and events.
+ * Called whenever the user makes or changes a choice (Accept All, Decline
+ * All, or the granular Manage modal), so revoking consent after granting it
+ * takes effect immediately. Stored consent on later visits is applied by the
+ * GoogleAnalytics init script itself, before any hit is sent.
+ *
+ * @param granted - Whether analytics storage is allowed.
  */
-function grantAnalytics() {
+function updateAnalyticsConsent(granted: boolean) {
 	if (typeof window !== "undefined" && window.gtag) {
-		window.gtag("consent", "update", { analytics_storage: "granted" });
+		window.gtag("consent", "update", { analytics_storage: granted ? "granted" : "denied" });
 	}
 }
 
@@ -94,7 +99,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		const stored = loadConsent();
 		if (stored) {
 			setConsent(stored.prefs);
-			if (stored.prefs.analytics) grantAnalytics();
 		} else {
 			setShowBanner(true);
 		}
@@ -106,7 +110,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		setConsent(prefs);
 		saveConsent(prefs);
 		setShowBanner(false);
-		grantAnalytics();
+		updateAnalyticsConsent(true);
 	}, []);
 
 	const declineAll = useCallback(() => {
@@ -114,13 +118,14 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		setConsent(prefs);
 		saveConsent(prefs);
 		setShowBanner(false);
+		updateAnalyticsConsent(false);
 	}, []);
 
 	const handleManageSave = useCallback(() => {
 		saveConsent(consent);
 		setShowBanner(false);
 		setShowManage(false);
-		if (consent.analytics) grantAnalytics();
+		updateAnalyticsConsent(consent.analytics);
 	}, [consent]);
 
 	if (!hydrated) {

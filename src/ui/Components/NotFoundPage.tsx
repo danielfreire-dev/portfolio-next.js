@@ -12,7 +12,7 @@ const NotFoundPage = () => {
     <div
       className="not-found-page flex flex-col items-center text-center px-4"
       data-testid="not-found-page">
-      <h2 className="capitalize">{t("404")}</h2>
+      <h1 className="capitalize">{t("404")}</h1>
       <h3 className="capitalize mt-3">{t("errorLoading.title")}</h3>
       <p className="mt-2">{t("description")}</p>
       {t.rich("errorLoading.contact", {

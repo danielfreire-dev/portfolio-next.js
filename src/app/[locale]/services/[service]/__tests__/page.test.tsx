@@ -53,6 +53,14 @@ vi.mock("next-intl", async () => {
 					longDescription: "We build modern websites.\n\nThey load fast and work everywhere.",
 					features: ["Responsive design", "Core Web Vitals", "PWA support"],
 				},
+				{
+					slug: "ai-solution-implementation",
+					icon: "/images/icons/ai-recommend.svg",
+					title: "AI Solution Implementation",
+					text: "Integrating AI into workflows.",
+					longDescription: "AI with purpose.",
+					features: [],
+				},
 			];
 			return t;
 		}),
@@ -60,8 +68,15 @@ vi.mock("next-intl", async () => {
 	};
 });
 
-/** Mock Link from i18n/navigation. */
+/** Mock Link and getPathname from i18n/navigation. */
 vi.mock("@/i18n/navigation", () => ({
+	getPathname: ({ locale, href }: { locale: string; href: string | { pathname: string; params?: Record<string, string> } }) => {
+		const path =
+			typeof href === "string" ? href : (
+				Object.entries(href.params ?? {}).reduce((acc, [key, value]) => acc.replace(`[${key}]`, value), href.pathname)
+			);
+		return `/${locale}${path === "/" ? "" : path}`;
+	},
 	Link: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => (
 		<a
 			href={href}
@@ -73,18 +88,25 @@ vi.mock("@/i18n/navigation", () => ({
 
 /** Mock TransitionLink to render a plain link in tests. */
 vi.mock("@/ui/Components/Sidenav/TransitionLink", () => ({
-	TransitionLink: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => (
+	TransitionLink: ({
+		children,
+		href,
+		className,
+	}: {
+		children: React.ReactNode;
+		href: string | { pathname: string; params?: Record<string, string> };
+		className?: string;
+	}) => (
 		<a
-			href={href}
+			href={
+				typeof href === "string" ? href : (
+					Object.entries(href.params ?? {}).reduce((path, [key, value]) => path.replace(`[${key}]`, value), href.pathname)
+				)
+			}
 			className={className}>
 			{children}
 		</a>
 	),
-}));
-
-/** Mock Cta component. */
-vi.mock("@/ui/Components/CtA/Cta", () => ({
-	default: () => <div data-testid="cta">CTA</div>,
 }));
 
 /** Mock next/image. */
@@ -128,16 +150,51 @@ describe("ServiceDetailPage", () => {
 		expect(await screen.findByText("PWA support")).toBeInTheDocument();
 	});
 
+	it("renders the service title as the page's only h1", async () => {
+		renderWithProviders(<ServiceDetailPage params={defaultParams} />);
+
+		const headings = await screen.findAllByRole("heading", { level: 1 });
+		expect(headings).toHaveLength(1);
+		expect(headings[0]).toHaveTextContent("Web Development");
+	});
+
+	it("links to the other services but not to itself", async () => {
+		renderWithProviders(<ServiceDetailPage params={defaultParams} />);
+
+		const nav = await screen.findByRole("navigation", { name: "serviceDetail.otherServices" });
+		const links = nav.querySelectorAll("a");
+		expect(links).toHaveLength(1);
+		expect(links[0]).toHaveAttribute("href", "/services/ai-solution-implementation");
+	});
+
+	it("renders a contextual contact link", async () => {
+		renderWithProviders(<ServiceDetailPage params={defaultParams} />);
+
+		const link = await screen.findByText("serviceDetail.ctaLink");
+		expect(link.closest("a")).toHaveAttribute("href", "/contact");
+	});
+
+	it("emits breadcrumb and service structured data with localized absolute URLs", async () => {
+		const { container } = renderWithProviders(<ServiceDetailPage params={defaultParams} />);
+
+		const scripts = [...container.querySelectorAll('script[type="application/ld+json"]')].map((s) =>
+			JSON.parse(s.textContent ?? "null"),
+		);
+		const breadcrumb = scripts.find((s) => s?.["@type"] === "BreadcrumbList");
+		const service = scripts.find((s) => s?.["@type"] === "Service");
+		expect(breadcrumb.itemListElement.map((i: { item: string }) => i.item)).toEqual([
+			"https://daniel-freire.com/en",
+			"https://daniel-freire.com/en/services",
+			"https://daniel-freire.com/en/services/web-development",
+		]);
+		expect(service.url).toBe("https://daniel-freire.com/en/services/web-development");
+		expect(service.provider["@id"]).toBe("https://daniel-freire.com/#person");
+	});
+
 	it("renders the back link to services", async () => {
 		renderWithProviders(<ServiceDetailPage params={defaultParams} />);
 
 		const backLink = await screen.findByText("metadata.title.services");
 		expect(backLink.closest("a")).toHaveAttribute("href", "/services");
-	});
-
-	it("renders the CTA section", async () => {
-		renderWithProviders(<ServiceDetailPage params={defaultParams} />);
-
-		expect(await screen.findByTestId("cta")).toBeInTheDocument();
 	});
 });

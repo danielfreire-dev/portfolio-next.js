@@ -22,7 +22,6 @@ vi.mock("next-intl", () => ({
 				btn: "Send",
 				required: "Required",
 				privacyPolicyCheck: "I agree to the",
-				privacyPolicyUrl: "/privacy-policy",
 				privacy: "Privacy Policy",
 				pageTitle: "Contact Page",
 				"farewell.title": "Thank You!",
@@ -78,9 +77,16 @@ vi.mock("@/stores/theme-store", () => ({
 	}),
 }));
 
-// Mock TransitionLink
-vi.mock("@/ui/Components/Sidenav/TransitionLink", () => ({
-	TransitionLink: ({ children, href }: { children: React.ReactNode; href: string }) => <a href={href}>{children}</a>,
+// Mock the locale-aware Link (renders a plain anchor with the internal route key)
+vi.mock("@/i18n/navigation", () => ({
+	Link: ({ children, href, target, rel }: { children: React.ReactNode; href: string; target?: string; rel?: string }) => (
+		<a
+			href={href}
+			target={target}
+			rel={rel}>
+			{children}
+		</a>
+	),
 }));
 
 // Mock ContactFarewell
@@ -183,6 +189,13 @@ describe("ContactForm", () => {
 			expect(screen.getByLabelText(/I agree to the/)).toBeInTheDocument();
 		});
 
+		it("should open the privacy policy in a new tab via the localized route", () => {
+			renderWithProviders(<ContactForm />);
+			const link = screen.getByText("Privacy Policy").closest("a");
+			expect(link).toHaveAttribute("href", "/privacy-policy");
+			expect(link).toHaveAttribute("target", "_blank");
+		});
+
 		it("should have the submit button disabled initially", async () => {
 			renderWithProviders(<ContactForm />);
 			// After onLoad fires, the submit button appears (disabled until Turnstile verified)
@@ -211,8 +224,7 @@ describe("ContactForm", () => {
 			const verifyBtn = screen.getByTestId("turnstile-verify-btn");
 			fireEvent.click(verifyBtn);
 
-			// onVerify is async (calls /api/turnstile) — wait for the
-			// state update to flush before asserting.
+			// Wait for the onVerify state update to flush before asserting.
 			await waitFor(() => {
 				const submitBtn = screen.getByRole("button", { name: "Send" });
 				expect(submitBtn).not.toBeDisabled();

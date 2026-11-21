@@ -1,31 +1,50 @@
+import "@/ui/styles/hero.css";
 import { useTranslations } from "next-intl";
 import { DjangoRocket } from "./svgs/django-rocket";
-
-/** Props for the top/main hero section (unused — translations drive content). */
-interface topMainPage {
-	title: string;
-	description: string;
-}
+import { TransitionLink } from "./Sidenav/TransitionLink";
 
 /**
  * Hero section for the home page.
  *
- * Displays a two-column layout with translated heading/subtitle text and a
- * Django Rocket SVG illustration.
+ * Holds the page's only `<h1>`, written to match the home page's SEO title
+ * (custom software, AI apps, fast websites), plus an identity line
+ * (name and role), a short value statement and two calls to action
+ * (contact, portfolio) that share the `.hero-button` look from `hero.css`.
+ *
+ * The rocket illustration is decorative and hidden below `md` by `.figure`.
  */
 const TopMainPage = () => {
 	const t = useTranslations("topMainPage");
-	const s = useTranslations("svgTitles");
 
 	return (
-		<div className="grid md:grid-cols-2 justify-items-center-safe content-evenly gap-3 xl:gap-7 l">
-			<div className="grid place-items-start h-full items-start-safe px-10 text-center lg:px-0 mb-30">
-				<h2 className="">{t("p1")}</h2>
-				<div className="text mt-2">{t("p2")}</div>
+		<section
+			aria-labelledby="hero-title"
+			className="grid md:grid-cols-[3fr_2fr] items-center gap-6 xl:gap-10 px-6 sm:px-10 lg:px-4">
+			<div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left">
+				<p className="text-sm font-semibold uppercase tracking-wide ">{t("eyebrow")}</p>
+				<h1
+					id="hero-title"
+					className="text-3xl! sm:text-4xl! xl:text-5xl! font-bold leading-tight text-balance">
+					{t("title")}
+				</h1>
+				<p className="text max-w-prose text-(--text-hover)">{t("description")}</p>
+				<div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-2">
+					<TransitionLink
+						href="/contact"
+						inputdata="CtA"
+						className="hero-button">
+						{t("primaryCta")}
+					</TransitionLink>
+					<TransitionLink
+						href="/portfolio"
+						className="hero-button">
+						{t("secondaryCta")}
+					</TransitionLink>
+				</div>
 			</div>
 
-			<DjangoRocket title={s("djangoRocket")} />
-		</div>
+			<DjangoRocket aria-hidden="true" />
+		</section>
 	);
 };
 export default TopMainPage;

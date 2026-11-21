@@ -4,7 +4,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { use } from "react";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
-import { getAlternates } from "@/i18n/alternates";
+import { getCanonicalUrl } from "@/i18n/alternates";
+import { buildPageMetadata } from "@/i18n/pageMetadata";
 
 interface Props {
 	params: Promise<{ locale: Locale }>;
@@ -23,8 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		namespace: "metadata",
 	});
 
-	return {
-		title: t("title.portfolio"),
+	return buildPageMetadata({
+		href: "/portfolio",
+		locale,
+		title: t("seoTitle.portfolio"),
 		description: t("description.portfolio"),
 		keywords: [
 			"web development portfolio",
@@ -34,25 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			"Next.js projects",
 			"full-stack portfolio",
 		],
-		robots: { index: true, follow: true },
-		alternates: getAlternates({ href: "/portfolio", locale }),
-		openGraph: {
-			type: "website",
-			title: t("title.portfolio"),
-			description: t("description.portfolio"),
-			url: "https://daniel-freire.com/portfolio",
-			images: [{ url: "https://daniel-freire.com/metadata/open-graph-initials5.png", width: 1200, height: 630 }],
-			locale: locale,
-		},
-		twitter: {
-			card: "summary_large_image",
-			site: "@daniel_freire",
-			creator: "@daniel_freire",
-			title: t("title.portfolio"),
-			description: t("description.portfolio"),
-			images: ["https://daniel-freire.com/metadata/open-graph-initials5.png"],
-		},
-	};
+	});
 }
 
 /**
@@ -65,6 +50,8 @@ const Portfolio = ({ params }: Props) => {
 	setRequestLocale(locale);
 
 	const t = useTranslations("portfolio");
+	const m = useTranslations("metadata.title");
+	const b = useTranslations("breadcrumbs");
 
 	return (
 		<>
@@ -73,13 +60,13 @@ const Portfolio = ({ params }: Props) => {
 				dangerouslySetInnerHTML={{
 					__html: JSON.stringify(
 						generateBreadcrumbSchema([
-							{ name: "Home", href: `/${locale}` },
-							{ name: "Portfolio", href: `/${locale}/portfolio` },
+							{ name: b("home"), href: getCanonicalUrl("/", locale) },
+							{ name: m("portfolio"), href: getCanonicalUrl("/portfolio", locale) },
 						]),
 					),
 				}}
 			/>
-			<h2 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}!</h2>
+			<h1 className="text-2xl font-bold mx-auto text-center capitalize mb-4">{t("pageTitle")}!</h1>
 
 			<WebsiteCards />
 		</>
