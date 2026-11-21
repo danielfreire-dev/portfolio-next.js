@@ -245,7 +245,7 @@ const ContactForm = () => {
 				</div>
 
 				<section className="flex flex-col justify-center items-center mx-auto mt-2.5">
-					<div className={`${turnstileLoaded ? "" : "hidden"} lg:max-w-[300px]`}>
+					<div className={`${turnstileLoaded ? "" : "hidden"} max-w-[300px]`}>
 						<Turnstile
 							key={`turnstile-${isDarkStore ? "dark" : "light"}-${turnstileKeyCounter}`}
 							siteKey={siteKey!}
