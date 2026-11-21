@@ -29,25 +29,33 @@ const getRandomItem = (array: string[]) => {
  * Call-to-action button component.
  *
  * Renders a randomised CTA button from a list of translated phrases, linking
- * to the contact page. The button label is randomly selected from the
- * translation file's `cta.button` array on every render, so returning users
- * see fresh messaging. Wrapped in Suspense to avoid blocking above-the-fold
+ * to the contact page. The server (and the first client render) uses the
+ * first `cta.button` label so hydration matches; after mount, and on every
+ * route change, a random label is picked so returning users see fresh
+ * messaging. Wrapped in Suspense to avoid blocking above-the-fold
  * content while the CTA label resolves.
  *
  * The component hides itself on the contact page (and any child routes) and
  * on 404/not-found pages, preventing redundant CTAs.
  *
- * @todo Fix button layout on smaller screens (text overflow / wrapping).
+ * The link itself is styled as the button (no nested `<button>` inside `<a>`)
+ * and its label wraps instead of truncating on narrow screens — see
+ * `.cta-button` in `border.css`.
  */
 const Cta = () => {
 	const t = useTranslations("cta");
 	const isActive = useIsActivePath();
 	const pathname = usePathname();
+	const labels: string[] = t.raw("button");
 	const [isNotFound, setIsNotFound] = useState(false);
+	// Server render and first client render must match, so start from a
+	// deterministic label and only randomise after hydration.
+	const [label, setLabel] = useState<string | null>(labels[0] ?? null);
 
 	useEffect(() => {
 		setIsNotFound(Boolean(document.querySelector(".not-found-page, [data-testid='not-found-page']")));
-	}, [pathname]);
+		setLabel(getRandomItem(t.raw("button")));
+	}, [pathname, t]);
 
 	// Hide on the contact page and its children, or on 404 / not-found pages.
 	if (isActive("/contact") || isActive("/404") || isNotFound) {
@@ -59,10 +67,9 @@ const Cta = () => {
 			<Suspense>
 				<TransitionLink
 					href="/contact"
-					inputdata="CtA">
-					<button className="button-class offset overflow-hidden text-ellipsis whitespace-nowrap hover:cursor-pointer">
-						{getRandomItem(t.raw("button"))}
-					</button>
+					inputdata="CtA"
+					className="button-class offset cta-button self-start">
+					{label}
 				</TransitionLink>
 			</Suspense>
 		</>

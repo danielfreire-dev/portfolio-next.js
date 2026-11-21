@@ -4,6 +4,10 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import TopMainPage from "@/ui/Components/TopMainPage";
 import Services from "@/ui/Components/Services";
+import SelectedWork from "@/ui/Components/Home/SelectedWork";
+import TechMarquee from "@/ui/Components/Home/TechMarquee";
+import WhyMe from "@/ui/Components/Home/WhyMe";
+import Process from "@/ui/Components/Home/Process";
 import { generateBreadcrumbSchema } from "@/ui/Components/StructuredData";
 import { getCanonicalUrl } from "@/i18n/alternates";
 import { buildPageMetadata } from "@/i18n/pageMetadata";
@@ -45,8 +49,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /**
  * Home page — the main landing route for the application.
  *
- * Renders the hero section (`TopMainPage`) and the services overview. The
- * tech stack lives on the About page to keep this page's HTML light.
+ * Sections, in order: hero (`TopMainPage`, the page's `<h1>`), selected work
+ * marquee, tech logo marquee (scrolling the opposite way), services,
+ * "why work with me", "how I work". The global CTA follows from the layout.
+ * The full tech stack lives on the About page; the marquee here uses image
+ * files for logos to keep this page's HTML light.
  * Uses `setRequestLocale` to enable static rendering per locale.
  *
  * @param params - Route params containing the resolved locale.
@@ -66,9 +73,13 @@ export default function HomePage({ params }: Props) {
 				}}
 			/>
 			<TopMainPage />
+			<SelectedWork />
+			<TechMarquee />
 			<Suspense>
 				<Services />
 			</Suspense>
+			<WhyMe />
+			<Process />
 		</>
 	);
 }

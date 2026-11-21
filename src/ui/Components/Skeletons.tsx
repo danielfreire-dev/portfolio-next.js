@@ -123,11 +123,13 @@ export function LatestInvoicesSkeleton() {
  * Renders a shimmer-animated rectangle mimicking the Turnstile checkbox
  * (checkbox square + label bar + attribution text) so the contact form
  * doesn't collapse while the Turnstile script loads asynchronously.
+ * Fills its container (min 300px), matching the widget's "flexible" size,
+ * so swapping skeleton → widget causes no width jump.
  */
 export function TurnstileSkeleton() {
 	return (
 		<div
-			className={`${shimmer} relative overflow-hidden rounded border border-(--surface-hover) bg-(--surface) p-3 mx-auto w-[300px]`}
+			className={`${shimmer} relative overflow-hidden rounded border border-(--surface-hover) bg-(--surface) p-3 w-full min-w-75`}
 			data-testid="turnstile-skeleton">
 			<div className="flex items-center gap-3">
 				<div className="h-6 w-6 rounded-sm bg-(--surface-hover) flex-shrink-0" />

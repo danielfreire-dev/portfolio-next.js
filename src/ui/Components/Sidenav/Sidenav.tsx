@@ -7,7 +7,6 @@ import NavigationList from "./NavigationList";
 // tech-stack SVG into the layout bundle shipped on every page.
 import GitHubIcon from "../svgs/github-square.svg";
 import LinkedInIcon from "../svgs/linkedin-square.svg";
-import { usePathname } from "@/i18n/navigation";
 import { TransitionLink } from "./TransitionLink";
 import LegalLinks from "./LegalLinks";
 import ThemeToggle from "../ThemeToggle";
@@ -29,9 +28,6 @@ import MobileSlideBtn from "./MobileSlideBtn";
 const Sidenav = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const t = useTranslations("sidenav");
-	// The name is the page's main heading only on the home page; every other
-	// page provides its own <h1>, so the logo must not compete with it.
-	const LogoTag = usePathname() === "/" ? "h1" : "p";
 
 	return (
 		<>
@@ -46,11 +42,12 @@ const Sidenav = () => {
 						href="/"
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}>
-						<LogoTag
+						{/* Not a heading: every page, home included (hero), provides its own <h1>. */}
+						<p
 							className="text-5xl capitalize flex justify-center max-w-full truncate text-(--primary) mt-5 transition delay-150 duration-900 ease-in-out hover:text-(--accent1)"
 							id="logo">
 							{t("header.title")}
-						</LogoTag>
+						</p>
 					</TransitionLink>
 					<p
 						className="flex justify-center mb-2 capitalize text-lg font-semibold"

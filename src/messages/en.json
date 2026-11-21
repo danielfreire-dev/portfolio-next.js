@@ -193,8 +193,56 @@
 		}
 	},
 	"home": {
+		"marqueePause": "Pause animations",
+		"process": {
+			"steps": [
+				{
+					"title": "Discovery",
+					"text": "We map your goals, processes and users so we build the right thing from the start."
+				},
+				{
+					"title": "MVP",
+					"text": "You get a working first version early, focused on the features that matter most."
+				},
+				{
+					"title": "Feedback cycles",
+					"text": "We improve it in short cycles based on real usage, not assumptions."
+				},
+				{
+					"title": "Launch & care",
+					"text": "I deploy, monitor and keep your software secure, fast and up to date."
+				}
+			],
+			"title": "How I work"
+		},
+		"selectedWork": {
+			"link": "See all projects",
+			"title": "Selected work"
+		},
+		"techMarquee": {
+			"title": "Technologies I work with"
+		},
 		"techstack": "Skills & Tools",
-		"trending": "Portfolio"
+		"trending": "Portfolio",
+		"whyMe": {
+			"lead": "I came to development from marketing. Before writing code, I spent my days analysing market data, user behaviour and how people find and use a product online. That's still how I start every project.",
+			"link": "More about me",
+			"points": [
+				{
+					"title": "Business first",
+					"text": "Every project starts with your processes and goals, not with a framework."
+				},
+				{
+					"title": "Built to be found",
+					"text": "Semantic markup, speed and technical SEO are part of the build, not an afterthought."
+				},
+				{
+					"title": "Data over guesswork",
+					"text": "Decisions are based on how real users behave, before and after launch."
+				}
+			],
+			"title": "Why work with me"
+		}
 	},
 	"icons": {
 		"carouselLabel": "Portfolio carousel",
@@ -918,7 +966,10 @@
 				"title": "Ongoing Care for Your Digital Assets"
 			}
 		],
-		"p1": "Tired of software that holds your business back?",
-		"p2": "Most business software is either too rigid or too complex. I specialize in developing custom web applications like CRM systems, project trackers, and data dashboards that fit how your business actually works. If you need a tool that solves a specific problem without unnecessary features, let's discuss what you're trying to achieve."
+		"description": "Tired of software that holds your business back? I build custom web applications like CRMs, project trackers and data dashboards, add AI where it saves real work, and ship websites that load fast and get found. No unnecessary features, just tools that fit how you actually work.",
+		"eyebrow": "Daniel Freire · Web developer",
+		"primaryCta": "Let's talk about your project",
+		"secondaryCta": "See my work",
+		"title": "Custom software, AI apps and fast websites built around your business"
 	}
 }

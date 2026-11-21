@@ -193,8 +193,56 @@
 		}
 	},
 	"home": {
+		"marqueePause": "Pausar animações",
+		"process": {
+			"steps": [
+				{
+					"title": "Descoberta",
+					"text": "Mapeamos os seus objetivos, processos e utilizadores para construir a coisa certa desde o início."
+				},
+				{
+					"title": "MVP",
+					"text": "Recebe cedo uma primeira versão funcional, focada nas funcionalidades mais importantes."
+				},
+				{
+					"title": "Ciclos de feedback",
+					"text": "Melhoramos em ciclos curtos com base na utilização real, não em suposições."
+				},
+				{
+					"title": "Lançamento e manutenção",
+					"text": "Faço o deploy, monitorizo e mantenho o seu software seguro, rápido e atualizado."
+				}
+			],
+			"title": "Como trabalho"
+		},
+		"selectedWork": {
+			"link": "Ver todos os projetos",
+			"title": "Trabalho selecionado"
+		},
+		"techMarquee": {
+			"title": "Tecnologias com que trabalho"
+		},
 		"techstack": "Competências e Ferramentas",
-		"trending": "Portfólio"
+		"trending": "Portfólio",
+		"whyMe": {
+			"lead": "Cheguei ao desenvolvimento vindo do marketing. Antes de escrever código, passava os dias a analisar dados de mercado, o comportamento dos utilizadores e a forma como as pessoas encontram e usam um produto online. Ainda é assim que começo cada projeto.",
+			"link": "Mais sobre mim",
+			"points": [
+				{
+					"title": "O negócio primeiro",
+					"text": "Cada projeto começa pelos seus processos e objetivos, não por uma framework."
+				},
+				{
+					"title": "Feito para ser encontrado",
+					"text": "Markup semântico, velocidade e SEO técnico fazem parte do desenvolvimento, não são um extra."
+				},
+				{
+					"title": "Dados em vez de palpites",
+					"text": "As decisões baseiam-se no comportamento de utilizadores reais, antes e depois do lançamento."
+				}
+			],
+			"title": "Porquê trabalhar comigo"
+		}
 	},
 	"icons": {
 		"carouselLabel": "Carrossel do portfólio",
@@ -985,8 +1033,11 @@
 				"title": "Cuidados contínuos para os seus ativos digitais"
 			}
 		],
-		"p1": "Cansado de software que atrasa o seu negócio?",
-		"p2": "A maioria do software empresarial é demasiado rígido ou demasiado complexo. Especializo-me no desenvolvimento de aplicações web personalizadas – como sistemas CRM, rastreadores de projetos e painéis de dados – que se adequam à forma como o seu negócio realmente funciona. Se precisa de uma ferramenta que resolva um problema específico sem funcionalidades desnecessárias, vamos discutir o que pretende alcançar."
+		"description": "Cansado de software que atrasa o seu negócio? Desenvolvo aplicações web à medida, como CRMs, gestores de projetos e dashboards de dados, integro IA onde poupa trabalho real e crio websites que carregam depressa e são encontrados. Sem funcionalidades desnecessárias, apenas ferramentas que se adaptam à forma como realmente trabalha.",
+		"eyebrow": "Daniel Freire · Programador web",
+		"primaryCta": "Vamos falar sobre o seu projeto",
+		"secondaryCta": "Ver o meu trabalho",
+		"title": "Software à medida, aplicações com IA e websites rápidos, pensados para o seu negócio"
 	},
 	"techCategories": [
 		{

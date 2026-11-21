@@ -42,7 +42,7 @@ export function TechGroups({ tech, category, label }: { tech: Tech[]; category: 
 	}
 
 	return (
-		<div className="group bg-(--surface-hover) w-full alternating-row items-center justify-between gap-4 lg:gap-0">
+		<div className="group bg-(--surface-hover) max-w-99/100 alternating-row items-center justify-between gap-4 lg:gap-0">
 			<h3 className="px-max py-1.5 text-2xl font-semibold mx-3 text-center lg:group-even:text-right lg:group-odd:text-left lg:whitespace-nowrap">
 				{label ?? category}
 			</h3>

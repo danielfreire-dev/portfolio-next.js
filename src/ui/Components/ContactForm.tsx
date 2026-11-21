@@ -111,105 +111,111 @@ const ContactForm = () => {
 				onSubmit={sendContactForm}
 				aria-label={t("formAriaLabel")}
 				className={`mx-5 flex flex-col flex-nowrap items-center ${loading === "submitted" && "hidden"}`}>
-				<div className="name-div flex flex-col lg:flex-row">
-					<section className="flex flex-col">
-						<label
-							htmlFor="firstName"
-							className="capitalize">
-							{t("firstName")}
-							<span
-								className="text-(--error) required"
-								aria-hidden="true"
+				{/* w-fit: the input rows set this wrapper's width; the textarea
+				    below then stretches to match them (first input's left edge to
+				    the last input's right edge) on every breakpoint. */}
+				<div className="flex flex-col w-fit">
+					<div className="name-div flex flex-col lg:flex-row">
+						<section className="flex flex-col">
+							<label
+								htmlFor="firstName"
+								className="capitalize">
+								{t("firstName")}
+								<span
+									className="text-(--error) required"
+									aria-hidden="true"
+								/>
+								<span className="sr-only">({t("requiredIndicator")})</span>
+							</label>
+							<input
+								type="text"
+								name="firstName"
+								id="firstName"
+								required
+								aria-required="true"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+          peer invalid:border-(--error) valid:border-(--success)"
 							/>
-							<span className="sr-only">({t("requiredIndicator")})</span>
-						</label>
-						<input
-							type="text"
-							name="firstName"
-							id="firstName"
-							required
-							aria-required="true"
-							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+						</section>
+						<section className="flex flex-col">
+							<label
+								htmlFor="lastName"
+								className="capitalize">
+								{t("lastName")}
+							</label>
+							<input
+								type="text"
+								name="lastName"
+								id="lastName"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
           peer invalid:border-(--error) valid:border-(--success)"
-						/>
-					</section>
-					<section className="flex flex-col">
-						<label
-							htmlFor="lastName"
-							className="capitalize">
-							{t("lastName")}
-						</label>
-						<input
-							type="text"
-							name="lastName"
-							id="lastName"
-							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
-							aria-required="false"
-						/>
-					</section>
-				</div>
-				<div className="contacts-div flex flex-col lg:flex-row">
-					<section className="flex flex-col">
-						<label
-							htmlFor="email"
-							className="capitalize">
-							{t("email")}
-							<span
-								className="text-(--error) required"
-								aria-hidden="true"
+								aria-required="false"
 							/>
-							<span className="sr-only">({t("requiredIndicator")})</span>
-						</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							required
-							aria-required="true"
-							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+						</section>
+					</div>
+					<div className="contacts-div flex flex-col lg:flex-row">
+						<section className="flex flex-col">
+							<label
+								htmlFor="email"
+								className="capitalize">
+								{t("email")}
+								<span
+									className="text-(--error) required"
+									aria-hidden="true"
+								/>
+								<span className="sr-only">({t("requiredIndicator")})</span>
+							</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								required
+								aria-required="true"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
           peer invalid:border-(--error) valid:border-(--success)"
-						/>
-					</section>
-					<section className="flex flex-col">
-						<label
-							htmlFor="telephone"
-							className="capitalize">
-							{t("phone")}
-						</label>
-						<input
-							type="tel"
-							name="telephone"
-							id="telephone"
-							className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
+							/>
+						</section>
+						<section className="flex flex-col">
+							<label
+								htmlFor="telephone"
+								className="capitalize">
+								{t("phone")}
+							</label>
+							<input
+								type="tel"
+								name="telephone"
+								id="telephone"
+								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
 						    peer invalid:border-(--error) valid:border-(--success)"
-							aria-required="false"
+								aria-required="false"
+							/>
+						</section>
+					</div>
+					<section className="message-div flex flex-col">
+						<label
+							htmlFor="message"
+							className="capitalize">
+							{t("message")}
+							<span
+								className="text-(--error) required"
+								aria-hidden="true"
+							/>
+							<span className="sr-only">({t("requiredIndicator")})</span>
+						</label>
+						<textarea
+							name="message"
+							id="message"
+							rows={4}
+							required
+							aria-autocomplete="none"
+							aria-required="true"
+							// w-0 + min-w: contributes no intrinsic width to the w-fit wrapper,
+							// then fills it (minus the ml-2 offset shared with the inputs).
+							className="w-0 min-w-[calc(100%-0.5rem)] bg-(--surface) ml-2 my-1 field-sizing-content min-h-[4lh] valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
+							spellCheck
 						/>
 					</section>
 				</div>
-				<section className="message-div flex flex-col">
-					<label
-						htmlFor="message"
-						className="capitalize">
-						{t("message")}
-						<span
-							className="text-(--error) required"
-							aria-hidden="true"
-						/>
-						<span className="sr-only">({t("requiredIndicator")})</span>
-					</label>
-					<textarea
-						name="message"
-						id="message"
-						rows={4}
-						cols={45}
-						required
-						aria-autocomplete="none"
-						aria-required="true"
-						className="w-36 lg:w-75 bg-(--surface) justify-center ml-2 my-1 field-sizing-content valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
-						spellCheck
-					/>
-				</section>
 				<div className="privacy-policy-req mt-1.5">
 					<p className="align-start">
 						<span className="text-(--error)">* </span>
@@ -238,8 +244,8 @@ const ContactForm = () => {
 					</label>
 				</div>
 
-				<section className="flex flex-col justify-center mx-auto mt-2.5">
-					<div className={turnstileLoaded ? "" : "hidden"}>
+				<section className="flex flex-col justify-center items-center mx-auto mt-2.5">
+					<div className={`${turnstileLoaded ? "" : "hidden"} lg:max-w-[300px]`}>
 						<Turnstile
 							key={`turnstile-${isDarkStore ? "dark" : "light"}-${turnstileKeyCounter}`}
 							siteKey={siteKey!}

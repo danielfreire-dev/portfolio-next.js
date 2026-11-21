@@ -193,8 +193,56 @@
 		}
 	},
 	"home": {
+		"marqueePause": "Pozastavit animace",
+		"process": {
+			"steps": [
+				{
+					"title": "Analýza",
+					"text": "Zmapujeme vaše cíle, procesy a uživatele, abychom od začátku stavěli správnou věc."
+				},
+				{
+					"title": "MVP",
+					"text": "Brzy dostanete funkční první verzi zaměřenou na nejdůležitější funkce."
+				},
+				{
+					"title": "Cykly zpětné vazby",
+					"text": "Vylepšujeme v krátkých cyklech podle skutečného používání, ne podle domněnek."
+				},
+				{
+					"title": "Spuštění a péče",
+					"text": "Nasazuji, monitoruji a udržuji váš software bezpečný, rychlý a aktuální."
+				}
+			],
+			"title": "Jak pracuji"
+		},
+		"selectedWork": {
+			"link": "Zobrazit všechny projekty",
+			"title": "Vybrané projekty"
+		},
+		"techMarquee": {
+			"title": "Technologie, se kterými pracuji"
+		},
 		"techstack": "Dovednosti a nástroje",
-		"trending": "Portfolio"
+		"trending": "Portfolio",
+		"whyMe": {
+			"lead": "K vývoji jsem se dostal z marketingu. Než jsem začal psát kód, analyzoval jsem tržní data, chování uživatelů a to, jak lidé online hledají a používají produkty. Stále tak začínám každý projekt.",
+			"link": "Více o mně",
+			"points": [
+				{
+					"title": "Nejdřív byznys",
+					"text": "Každý projekt začíná vašimi procesy a cíli, ne frameworkem."
+				},
+				{
+					"title": "Postaveno, aby bylo nalezeno",
+					"text": "Sémantický kód, rychlost a technické SEO jsou součástí vývoje, ne dodatečný nápad."
+				},
+				{
+					"title": "Data místo odhadů",
+					"text": "Rozhodnutí vycházejí z chování skutečných uživatelů, před spuštěním i po něm."
+				}
+			],
+			"title": "Proč spolupracovat se mnou"
+		}
 	},
 	"icons": {
 		"carouselLabel": "Karusel portfolia",
@@ -985,8 +1033,11 @@
 				"title": "Průběžná péče o vaše digitální aktiva"
 			}
 		],
-		"p1": "Už vás nebaví software, který vás ve vašem podnikání brzdí?",
-		"p2": "Většina podnikového softwaru je buď příliš rigidní, nebo příliš složitá. Specializuji se na vývoj vlastních webových aplikací – jako jsou CRM systémy, sledování projektů a datové přehledy – které přesně odpovídají tomu, jak vaše firma skutečně funguje. Pokud potřebujete nástroj, který řeší konkrétní problém bez zbytečných funkcí, pojďme probrat, čeho chcete dosáhnout."
+		"description": "Už vás nebaví software, který vás ve vašem podnikání brzdí? Vyvíjím webové aplikace na míru, jako jsou CRM systémy, nástroje pro správu projektů a datové dashboardy, nasazuji AI tam, kde šetří skutečnou práci, a tvořím weby, které se rychle načítají a snadno se dají najít. Žádné zbytečné funkce, jen nástroje, které odpovídají tomu, jak skutečně pracujete.",
+		"eyebrow": "Daniel Freire · Webový vývojář",
+		"primaryCta": "Promluvme si o vašem projektu",
+		"secondaryCta": "Prohlédnout moji práci",
+		"title": "Software na míru, AI aplikace a rychlé weby vytvořené pro vaše podnikání"
 	},
 	"techCategories": [
 		{

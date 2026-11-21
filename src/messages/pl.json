@@ -193,8 +193,56 @@
 		}
 	},
 	"home": {
+		"marqueePause": "Wstrzymaj animacje",
+		"process": {
+			"steps": [
+				{
+					"title": "Analiza",
+					"text": "Poznajemy Twoje cele, procesy i użytkowników, aby od początku budować właściwą rzecz."
+				},
+				{
+					"title": "MVP",
+					"text": "Wcześnie otrzymujesz działającą pierwszą wersję skupioną na najważniejszych funkcjach."
+				},
+				{
+					"title": "Cykle feedbacku",
+					"text": "Ulepszamy produkt w krótkich cyklach na podstawie rzeczywistego użycia, a nie założeń."
+				},
+				{
+					"title": "Wdrożenie i opieka",
+					"text": "Wdrażam, monitoruję i dbam o to, by Twoje oprogramowanie było bezpieczne, szybkie i aktualne."
+				}
+			],
+			"title": "Jak pracuję"
+		},
+		"selectedWork": {
+			"link": "Zobacz wszystkie projekty",
+			"title": "Wybrane realizacje"
+		},
+		"techMarquee": {
+			"title": "Technologie, z którymi pracuję"
+		},
 		"techstack": "Umiejętności & Narzędzia",
-		"trending": "Portfolio"
+		"trending": "Portfolio",
+		"whyMe": {
+			"lead": "Do programowania przyszedłem z marketingu. Zanim zacząłem pisać kod, analizowałem dane rynkowe, zachowania użytkowników i to, jak ludzie znajdują i używają produktów w sieci. Wciąż tak zaczynam każdy projekt.",
+			"link": "Więcej o mnie",
+			"points": [
+				{
+					"title": "Najpierw biznes",
+					"text": "Każdy projekt zaczyna się od Twoich procesów i celów, a nie od frameworka."
+				},
+				{
+					"title": "Stworzone, by je znaleźć",
+					"text": "Semantyczny kod, szybkość i techniczne SEO są częścią budowy, a nie dodatkiem na koniec."
+				},
+				{
+					"title": "Dane zamiast zgadywania",
+					"text": "Decyzje opierają się na zachowaniu prawdziwych użytkowników, przed i po starcie."
+				}
+			],
+			"title": "Dlaczego warto ze mną pracować"
+		}
 	},
 	"icons": {
 		"carouselLabel": "Karuzela portfolio",
@@ -985,8 +1033,11 @@
 				"title": "Ciągła opieka nad Twoimi aktywami cyfrowymi"
 			}
 		],
-		"p1": "Masz dość oprogramowania, które hamuje rozwój Twojej firmy?",
-		"p2": "Większość oprogramowania biznesowego jest albo zbyt sztywna, albo zbyt złożona. Specjalizuję się w tworzeniu niestandardowych aplikacji internetowych – takich jak systemy CRM, trackery projektów i pulpity danych – które pasują do tego, jak Twoja firma faktycznie działa. Jeśli potrzebujesz narzędzia, które rozwiązuje konkretny problem bez zbędnych funkcji, porozmawiajmy o tym, co chcesz osiągnąć."
+		"description": "Masz dość oprogramowania, które hamuje rozwój Twojej firmy? Tworzę aplikacje webowe na zamówienie, takie jak systemy CRM, narzędzia do zarządzania projektami i dashboardy danych, wdrażam AI tam, gdzie oszczędza realną pracę, i buduję strony, które szybko się ładują i łatwo je znaleźć. Bez zbędnych funkcji, tylko narzędzia dopasowane do tego, jak naprawdę pracujesz.",
+		"eyebrow": "Daniel Freire · Programista webowy",
+		"primaryCta": "Porozmawiajmy o Twoim projekcie",
+		"secondaryCta": "Zobacz moje realizacje",
+		"title": "Oprogramowanie na zamówienie, aplikacje AI i szybkie strony internetowe dopasowane do Twojej firmy"
 	},
 	"techCategories": [
 		{

@@ -171,8 +171,26 @@ export interface Dictionary {
 		title: string;
 	};
 	home: {
+		marqueePause: string;
+		process: {
+			steps: { title: string; text: string }[];
+			title: string;
+		};
+		selectedWork: {
+			link: string;
+			title: string;
+		};
+		techMarquee: {
+			title: string;
+		};
 		techstack: string;
 		trending: string;
+		whyMe: {
+			lead: string;
+			link: string;
+			points: { title: string; text: string }[];
+			title: string;
+		};
 	};
 	icons: {
 		leftarrow: {

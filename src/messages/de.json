@@ -193,8 +193,56 @@
 		}
 	},
 	"home": {
+		"marqueePause": "Animationen pausieren",
+		"process": {
+			"steps": [
+				{
+					"title": "Analyse",
+					"text": "Wir erfassen Ihre Ziele, Prozesse und Nutzer, damit von Anfang an das Richtige entsteht."
+				},
+				{
+					"title": "MVP",
+					"text": "Sie erhalten früh eine funktionierende erste Version mit den wichtigsten Funktionen."
+				},
+				{
+					"title": "Feedback-Zyklen",
+					"text": "Wir verbessern in kurzen Zyklen auf Basis echter Nutzung statt Annahmen."
+				},
+				{
+					"title": "Launch & Betreuung",
+					"text": "Ich übernehme Deployment und Monitoring und halte Ihre Software sicher, schnell und aktuell."
+				}
+			],
+			"title": "So arbeite ich"
+		},
+		"selectedWork": {
+			"link": "Alle Projekte ansehen",
+			"title": "Ausgewählte Arbeiten"
+		},
+		"techMarquee": {
+			"title": "Technologien, mit denen ich arbeite"
+		},
 		"techstack": "Fähigkeiten & Werkzeuge",
-		"trending": "Portfolio"
+		"trending": "Portfolio",
+		"whyMe": {
+			"lead": "Ich bin über das Marketing zur Entwicklung gekommen. Bevor ich Code schrieb, habe ich Marktdaten und Nutzerverhalten analysiert und untersucht, wie Menschen ein Produkt online finden und nutzen. So beginne ich bis heute jedes Projekt.",
+			"link": "Mehr über mich",
+			"points": [
+				{
+					"title": "Das Geschäft zuerst",
+					"text": "Jedes Projekt beginnt mit Ihren Prozessen und Zielen, nicht mit einem Framework."
+				},
+				{
+					"title": "Gebaut, um gefunden zu werden",
+					"text": "Semantisches Markup, Geschwindigkeit und technisches SEO sind Teil der Entwicklung, kein nachträglicher Gedanke."
+				},
+				{
+					"title": "Daten statt Bauchgefühl",
+					"text": "Entscheidungen basieren auf dem Verhalten echter Nutzer, vor und nach dem Launch."
+				}
+			],
+			"title": "Warum mit mir arbeiten"
+		}
 	},
 	"icons": {
 		"carouselLabel": "Portfolio-Karussell",
@@ -985,8 +1033,11 @@
 				"title": "Laufende Betreuung Ihrer digitalen Assets"
 			}
 		],
-		"p1": "Haben Sie es satt, dass Software Ihr Geschäft ausbremst?",
-		"p2": "Die meisten Geschäftsanwendungen sind entweder zu starr oder zu komplex. Ich spezialisiere mich auf die Entwicklung maßgeschneiderter Webanwendungen – wie CRM-Systeme, Projekt-Tracker und Daten-Dashboards – die genau zu Ihrer tatsächlichen Arbeitsweise passen. Wenn Sie ein Werkzeug benötigen, das ein bestimmtes Problem ohne überflüssige Funktionen löst, sprechen wir darüber, was Sie erreichen möchten."
+		"description": "Haben Sie es satt, dass Software Ihr Geschäft ausbremst? Ich entwickle individuelle Webanwendungen wie CRM-Systeme, Projekt-Tracker und Daten-Dashboards, setze KI dort ein, wo sie echte Arbeit spart, und baue Websites, die schnell laden und gefunden werden. Keine unnötigen Funktionen, sondern Werkzeuge, die zu Ihrer Arbeitsweise passen.",
+		"eyebrow": "Daniel Freire · Webentwickler",
+		"primaryCta": "Sprechen wir über Ihr Projekt",
+		"secondaryCta": "Meine Arbeiten ansehen",
+		"title": "Individuelle Software, KI-Anwendungen und schnelle Websites, zugeschnitten auf Ihr Unternehmen"
 	},
 	"techCategories": [
 		{

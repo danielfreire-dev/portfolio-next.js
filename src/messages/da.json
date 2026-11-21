@@ -193,8 +193,56 @@
 		}
 	},
 	"home": {
+		"marqueePause": "Sæt animationer på pause",
+		"process": {
+			"steps": [
+				{
+					"title": "Afdækning",
+					"text": "Vi kortlægger dine mål, processer og brugere, så vi bygger det rigtige fra starten."
+				},
+				{
+					"title": "MVP",
+					"text": "Du får tidligt en fungerende første version med fokus på de vigtigste funktioner."
+				},
+				{
+					"title": "Feedback-cyklusser",
+					"text": "Vi forbedrer i korte cyklusser baseret på reel brug, ikke antagelser."
+				},
+				{
+					"title": "Lancering & vedligehold",
+					"text": "Jeg deployer, overvåger og holder din software sikker, hurtig og opdateret."
+				}
+			],
+			"title": "Sådan arbejder jeg"
+		},
+		"selectedWork": {
+			"link": "Se alle projekter",
+			"title": "Udvalgte projekter"
+		},
+		"techMarquee": {
+			"title": "Teknologier jeg arbejder med"
+		},
 		"techstack": "Færdigheder & Værktøjer",
-		"trending": "Portfolio"
+		"trending": "Portfolio",
+		"whyMe": {
+			"lead": "Jeg kom til udvikling fra marketing. Før jeg skrev kode, brugte jeg mine dage på at analysere markedsdata, brugeradfærd og hvordan folk finder og bruger et produkt online. Det er stadig sådan, jeg starter hvert projekt.",
+			"link": "Mere om mig",
+			"points": [
+				{
+					"title": "Forretningen først",
+					"text": "Hvert projekt starter med dine processer og mål, ikke med et framework."
+				},
+				{
+					"title": "Bygget til at blive fundet",
+					"text": "Semantisk markup, hastighed og teknisk SEO er en del af udviklingen, ikke en eftertanke."
+				},
+				{
+					"title": "Data frem for gætværk",
+					"text": "Beslutninger bygger på, hvordan rigtige brugere opfører sig, før og efter lancering."
+				}
+			],
+			"title": "Hvorfor arbejde med mig"
+		}
 	},
 	"icons": {
 		"carouselLabel": "Portfolio-karrusel",
@@ -985,8 +1033,11 @@
 				"title": "Løbende pleje af dine digitale aktiver"
 			}
 		],
-		"p1": "Træt af software der holder din virksomhed tilbage?",
-		"p2": "De fleste forretningsapplikationer er enten for stive eller for komplekse. Jeg specialiserer mig i at udvikle skræddersyede webapplikationer, som CRM-systemer, projektværktøjer og datadashboards, der passer til hvordan din virksomhed faktisk fungerer. Har du brug for et værktøj der løser et specifikt problem uden unødvendige funktioner, så lad os tale om hvad du vil opnå."
+		"description": "Træt af software der holder din virksomhed tilbage? Jeg udvikler skræddersyede webapplikationer som CRM-systemer, projektværktøjer og datadashboards, bruger AI hvor det sparer reelt arbejde, og bygger hjemmesider der loader hurtigt og bliver fundet. Ingen unødvendige funktioner, kun værktøjer der passer til den måde, du faktisk arbejder på.",
+		"eyebrow": "Daniel Freire · Webudvikler",
+		"primaryCta": "Lad os tale om dit projekt",
+		"secondaryCta": "Se mit arbejde",
+		"title": "Skræddersyet software, AI-apps og hurtige hjemmesider bygget til din virksomhed"
 	},
 	"techCategories": [
 		{
