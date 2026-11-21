@@ -2,80 +2,18 @@
 	"about": {
 		"image": "/images/Lensa/Lensa2.webp",
 		"imageAlt": "pintura a óleo do Daniel",
-		"paragraph1": "Nos últimos dois anos, tenho construído coisas para a web. Mas a minha perspetiva sobre o que construir, e porquê, foi moldada muito antes de escrever a minha primeira linha de código.",
-		"paragraph2": "Entrei neste campo vindo do marketing, embora não da vertente que possas imaginar. O meu mundo era menos sobre campanhas e mais sobre padrões: analisar dados de mercado, decifrar o comportamento dos utilizadores e compreender os mecanismos precisos de como as pessoas encontram e usam um produto online. SEO e SEM, no seu cerne, são apenas psicologia aplicada e resolução de problemas. Aprende-se a ouvir o que os dados gritam, e, mais importante, o que sussurram.",
-		"paragraph3": "É esse o background que trago para cada projeto de desenvolvimento. A maioria dos desenvolvedores consegue escrever código elegante; o meu foco está em construir soluções elegantes. Há uma diferença crucial.",
-		"paragraph4": "Quando arquiteto uma aplicação com React ou Next.js, não estou apenas a pensar em gestão de estado ou estrutura de componentes. Estou a pensar na jornada do utilizador que o trouxe até ali. Estou a considerar a marcação semântica que dá significado ao nosso conteúdo para além do ecrã. Construo aplicações web de alto desempenho com uma compreensão inata do desempenho, porque sei, em primeira mão, que um atraso de apenas meio segundo é uma decisão que o utilizador toma para sair.",
-		"paragraph5": "Aqui está onde muitos programadors com talento erram: constroem para o dispositivo. Constroem para a especificação. Mas esquecem-se de construir para o humano do outro lado e para o objetivo de negócio que torna o projeto valioso. A minha experiência permite-me estar nessa interseção. Consigo traduzir uma necessidade de negócio num requisito técnico não como um conceito abstrato, mas como uma experiência vivida. Já fui a pessoa a pedir os dados, e agora sou a pessoa a construir os sistemas que os fornecem.",
-		"paragraph6": "Seja uma aplicação web com IA, um front-end elegante, um admin em Django, ou uma aplicação full-stack em Node.js, a pergunta com que sempre começo é: \"O que estamos realmente a resolver?\" A tecnologia é um meio para um fim. A verdadeira arte está em escolher a ferramenta certa para o trabalho e usá-la com a sabedoria de saber qual é o verdadeiro objetivo.",
+		"paragraph1": "Construo para a web há três anos, mas a minha noção do que construir, e porquê, vem do trabalho que fiz antes de escrever qualquer código.",
+		"paragraph2": "Antes do desenvolvimento, trabalhei em marketing, sobretudo do lado analítico. Passava menos tempo em campanhas e mais com dados: números de mercado, comportamento dos utilizadores e a forma como as pessoas encontram e usam um produto online. SEO e SEM são psicologia aplicada. Aprende-se a ouvir o que os dados gritam e a reparar no que apenas sugerem.",
+		"paragraph3": "Trago esse background para cada projeto. Código limpo importa, mas avalio o meu trabalho por resolver ou não o problema para o qual foi criado.",
+		"paragraph4": "Quando desenvolvo com React ou Next.js, a gestão de estado e a estrutura de componentes são apenas parte do trabalho. Penso também em como o utilizador chegou à página e no markup semântico que dá significado ao conteúdo para motores de busca e leitores de ecrã. Trato a velocidade como um requisito, porque vi nos dados que meio segundo de atraso basta para as pessoas saírem.",
+		"paragraph5": "Muitos bons programadores constroem segundo a especificação e ficam por aí. Perdem de vista a pessoa que usa o produto e o objetivo de negócio que justifica construí-lo. Já estive dos dois lados. Antes era eu quem pedia dados aos programadores; agora construo os sistemas que os fornecem.",
+		"paragraph6": "Seja uma aplicação web com IA, um front-end, um admin em Django ou uma aplicação full-stack em Node.js, começo sempre com a mesma pergunta: que problema estamos a resolver? A tecnologia decorre da resposta.",
 		"paragraph7": "Não construo apenas coisas bem feitas. Construo as coisas certas.",
-		"title1": "Construir para o Humano por Trás do Ecrã"
+		"title1": "Construir para a pessoa por trás do ecrã"
 	},
 	"breadcrumbs": {
 		"home": "Início"
 	},
-	"carousel": [
-		{
-			"alt": "Paisagem urbana futurista abstrata",
-			"cta": "Revolucione a Sua Presença Digital!",
-			"description": "O seu website está a travar o crescimento do seu negócio? A nossa auditoria abrangente de desempenho analisa profundamente a infraestrutura técnica, a experiência do utilizador e o potencial de conversão do seu site. Forneceremos um relatório detalhado destacando melhorias críticas que podem aumentar dramaticamente o desempenho online.",
-			"id": 1,
-			"imageUrl": "/images/Carousel/white.webp",
-			"loading": "lazy",
-			"title": "revolucione a sua presença digital agora!",
-			"url": "/contact"
-		},
-		{
-			"alt": "Paisagem montanhosa com nevoeiro",
-			"cta": "Desbloqueie o Pleno Potencial do Seu Website",
-			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-			"id": 2,
-			"imageUrl": "/images/Carousel/umbrellas.webp",
-			"loading": "eager",
-			"title": "desbloqueie o pleno potencial do seu website",
-			"url": "/contact"
-		},
-		{
-			"alt": "Interior de laboratório industrial",
-			"cta": "Construa o Projeto dos Seus Sonhos Hoje",
-			"description": "Pare de se contentar com modelos genéricos. Os nossos serviços personalizados de desenvolvimento web criam experiências digitais totalmente adaptadas que se alinham perfeitamente com a identidade única da sua marca e os objetivos do seu negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
-			"id": 3,
-			"imageUrl": "/images/Carousel/estatuas.webp",
-			"loading": "eager",
-			"title": "construa o projeto dos seus sonhos hoje",
-			"url": "/contact"
-		},
-		{
-			"alt": "edifício laranja",
-			"cta": "Dê o Primeiro Passo",
-			"description": "A velocidade não é apenas uma funcionalidade, é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carregue extremamente rápido, proporcionando uma experiência de utilizador excecional que mantém os visitantes envolvidos e converte mais eficazmente.",
-			"id": 4,
-			"imageUrl": "/images/Carousel/building-orange.webp",
-			"loading": "eager",
-			"title": "acelere o potencial do seu website",
-			"url": "/contact"
-		},
-		{
-			"alt": "edifício amarelo",
-			"cta": "Modernize a Sua Infraestrutura Digital",
-			"description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a transitar perfeitamente para tecnologias web modernas e eficientes sem interromper as suas operações existentes. Garantimos um caminho de atualização suave e com risco gerido.",
-			"id": 5,
-			"imageUrl": "/images/Carousel/building-yellow.webp",
-			"loading": "eager",
-			"title": "modernize a sua infraestrutura digital",
-			"url": "/contact"
-		},
-		{
-			"alt": "Lápis coloridos representando cuidado e manutenção contínua para ativos digitais",
-			"cta": "cuide dos seus ativos digitais",
-			"description": "Os websites requerem cuidados constantes para permanecerem seguros, funcionais e competitivos. Os nossos pacotes abrangentes de manutenção oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-			"id": 6,
-			"imageUrl": "/images/Carousel/pencils.webp",
-			"loading": "lazy",
-			"title": "cuidado contínuo para os seus ativos digitais",
-			"url": "/contact"
-		}
-	],
 	"contact": {
 		"btn": "enviar mensagem",
 		"email": "email",
@@ -91,20 +29,20 @@
 			"turnstileRequired": "Conclua a verificação de segurança acima para ativar o botão de envio."
 		},
 		"farewell": {
-			"text": "Agradeço o voto de confiança. Deve esperar uma resposta durante os próximos dias úteis.",
+			"text": "Obrigado pelo contacto. Vai receber uma resposta minha no prazo de 2–3 dias úteis.",
 			"title": "Obrigado"
 		},
-		"firstName": "primeiro nome",
+		"firstName": "nome",
 		"formAriaLabel": "Formulário de contacto",
 		"label": "Li e concordo com a",
-		"lastName": "último nome",
+		"lastName": "apelido",
 		"message": "mensagem",
 		"pageTitle": "Contactos",
 		"phone": "número de telefone",
 		"placeholder": {
 			"email": "Insira o seu email",
-			"firstName": "Insira o seu primeiro nome",
-			"lastName": "Insira o seu último nome",
+			"firstName": "Insira o seu nome",
+			"lastName": "Insira o seu apelido",
 			"message": "Insira a sua mensagem",
 			"phone": "Insira o seu número de telefone"
 		},
@@ -119,67 +57,67 @@
 		"title": "entre em contacto"
 	},
 	"cookies": {
-		"buttonText": "Aceitar Tudo",
-		"declineButtonText": "Aceitar Apenas o Necessário",
+		"buttonText": "Aceitar tudo",
+		"declineButtonText": "Aceitar apenas o necessário",
 		"manageAdvertSubtitle": "Personalizar publicidade e medir o seu desempenho",
 		"manageAdvertTitle": "Publicidade",
-		"manageAnalyticsSubtitle": "Ajude-nos a compreender como os visitantes interagem com o nosso website",
+		"manageAnalyticsSubtitle": "Mostram como os visitantes usam o website",
 		"manageAnalyticsTitle": "Análise",
-		"manageButtonText": "Gerir Cookies",
+		"manageButtonText": "Gerir cookies",
 		"manageCancelButtonText": "Cancelar",
-		"manageCookiesStatus": "Estado: {{status}} em {{data}}",
+		"manageCookiesStatus": "Estado: {{status}} em {{date}}",
 		"manageCookiesStatusConsented": "Consentido",
 		"manageCookiesStatusDeclined": "Recusado",
-		"manageEssentialStatus": "Estado: Sempre Ativo",
+		"manageEssentialStatus": "Estado: sempre ativo",
 		"manageEssentialStatusButtonText": "Análise",
-		"manageEssentialSubtitle": "Requeridas para o funcionamento adequado do website",
+		"manageEssentialSubtitle": "Necessários para o website funcionar",
 		"manageEssentialTitle": "Essenciais",
-		"manageMessage": "Gerencie as suas preferências de cookies abaixo. Os cookies essenciais são essenciais, pois são necessários para o funcionamento do website.",
-		"manageSaveButtonText": "Guardar Preferências",
+		"manageMessage": "Gira abaixo as suas preferências de cookies. Os cookies essenciais estão sempre ativos porque o website precisa deles para funcionar.",
+		"manageSaveButtonText": "Guardar preferências",
 		"manageSocialSubtitle": "Ativar funcionalidades e partilha de redes sociais",
 		"manageSocialTitle": "Redes Sociais",
-		"manageTitle": "Preferências de Cookies",
-		"message": "Valorizamos a sua privacidade. Escolha quais os cookies que pretende permitir. Os cookies essenciais estão sempre ativos, pois são necessários para o funcionamento do website.",
+		"manageTitle": "Preferências de cookies",
+		"message": "A sua privacidade é valorizada. Escolha os cookies que pretende permitir. Os cookies essenciais estão sempre ativos porque o website precisa deles para funcionar.",
 		"privacyPolicyText": "Política de Privacidade",
 		"privacyurl": "/pt/politica-privacidade",
-		"title": "Quer Aceitar um Cookie? 🍪"
+		"title": "Quer um cookie? 🍪"
 	},
 	"cta": {
-		"blurb": "Tem um Projeto em Mente? Vamos Conversar.",
+		"blurb": "Tem um projeto em mente? Vamos conversar.",
 		"button": [
 			"Vamos falar sobre o seu negócio",
-			"Tem um Projeto em Mente? Vamos Conversar.",
-			"Procura um Programador Front-End? Encontrou Um!",
-			"Vamos Tornar o Seu Website Inesquecível →",
-			"Precisa de um Programador Que Cumpre? Vamos Conversar.",
-			"Vamos Construir Algo Grande Juntos →",
-			"Saiba mais"
+			"Tem um projeto em mente? Vamos conversar.",
+			"Procura um programador web? Encontrou um!",
+			"Vamos falar sobre o seu website →",
+			"Precisa de um programador que cumpre? Vamos conversar.",
+			"Tem uma ideia? Vamos pô-la em prática →",
+			"Diga olá (eu não mordo) 👋"
 		],
 		"title": "entre em contacto"
 	},
 	"email": {
 		"email": "ola@daniel-freire.com",
 		"message": "Mensagem aleatória",
-		"title": "💻🚀 Olá",
+		"title": "Obrigado pela sua mensagem,",
 		"welcome": {
-			"conclusion": "Estamos a falar de mais do que um website, é o seu aperto de mão digital, a sua primeira impressão e a oportunidade de se destacar num mercado cada vez mais competitivo. Vamos torná-lo inesquecível.",
-			"happensNext0": "Eis o que acontece a seguir:",
-			"happensNext1": "Analisarei pessoalmente a sua submissão e responderei com um plano personalizado (ou eventuais perguntas para refinar o projecto) em 2–3 dias úteis.",
-			"happensNext2": "Nos próximos dias úteis, receberá de mim os próximos passos claros, cronogramas e como colaboraremos para dar vida à sua visão.",
-			"happensNext3": "Se não receber o meu e-mail até lá, não hesite em contactar-me novamente, estarei ou mergulhado em código ou a combater a caixa de entrada (e darei sempre prioridade ao seu projeto).",
+			"conclusion": "Obrigado mais uma vez pelo contacto.",
+			"happensNext0": "O que acontece a seguir:",
+			"happensNext1": "Vou ler a sua mensagem e responder no prazo de 2–3 dias úteis, com uma proposta de plano ou com perguntas para definir o âmbito.",
+			"happensNext2": "Depois de acordarmos o âmbito, recebe um plano escrito com entregáveis, prazos e custos.",
+			"happensNext3": "Se até lá não tiver notícias minhas, envie-me uma mensagem de seguimento. Às vezes as mensagens perdem-se, e prefiro que me lembre a ficar à espera.",
 			"heading": "Olá",
-			"intro": "Comecemos com uma verdade simples: construir uma presença online que represente verdadeiramente os seus serviços/competências enquanto profissional exige coragem e visão. O facto de estar aqui, a dar passos concretos para valorizar o seu trabalho, diz muito sobre o seu compromisso com o crescimento. Isso merece ser celebrado.",
-			"introduction": "Sou o Daniel Freire e a minha especialidade é a criação de websites de alto impacto, focados no cliente, que não se limitam a exibir projetos, mas contam uma história convincente sobre o valor que traz para a mesa. Quer pretenda atrair clientes de topo, conquistar o emprego dos seus sonhos ou simplesmente exibir a sua experiência com clareza e estilo, o seu website é a sua ferramenta mais poderosa. E estou aqui para o ajudar a aperfeiçoá-la.",
+			"intro": "A sua mensagem chegou e recebi todos os detalhes que enviou.",
+			"introduction": "Sou o Daniel Freire. Desenvolvo aplicações web à medida, funcionalidades de IA e websites rápidos, e vai trabalhar diretamente comigo desde a primeira conversa até ao lançamento.",
 			"name": "Daniel Freire",
-			"preview": "Email de Boas-Vindas de Daniel Freire",
+			"preview": "O que acontece a seguir com o seu projeto",
 			"privacyPolicy": "política de privacidade",
 			"privacyPolicyUrl": "pt/politica-privacidade",
-			"signature": "Aguardando o nosso trabalho em conjunto com entusiasmo,",
+			"signature": "Fico a aguardar a oportunidade de trabalharmos juntos,",
 			"view": "Veja a",
 			"webLink": "daniel-freire.com",
-			"whileWait0": "Enquanto aguarda, sinta-se à vontade para:",
-			"whileWait1": "✅ Responder a este e-mail com quaisquer ideias adicionais: como projetos específicos de que se orgulhe, preferências de design ou objetivos para o seu website.",
-			"whileWait2": "✅ Reunir materiais (links, estudos de caso ou até rascunhos) para agilizar o processo quando começarmos."
+			"whileWait0": "Enquanto aguarda, pode:",
+			"whileWait1": "✅ Responder a este email com o que não incluiu: sites ou ferramentas de que gosta, sistemas que já utiliza ou um prazo que tenha em mente.",
+			"whileWait2": "✅ Reunir o que ajude a explicar o projeto (o seu site atual, documentos, esboços) para podermos começar mais depressa."
 		}
 	},
 	"error": {
@@ -188,7 +126,7 @@
 		"description": "Parece que se perdeu. Não se preocupe, acontece aos melhores.",
 		"errorLoading": {
 			"contact": "<p>Se acredita que deveria haver uma página aqui, por favor contacte <a>webmaster@daniel-freire.com</a></p>",
-			"description": "<p>Infelizmente, encontrámos um erro.</p><p>Pode tentar <retry>recarregar a página</retry> que estava a visitar.</p>",
+			"description": "<p>Ocorreu um erro ao carregar esta página.</p><p>Pode tentar <retry>recarregar a página</retry>.</p>",
 			"title": "algo correu mal!"
 		}
 	},
@@ -222,7 +160,7 @@
 		"techMarquee": {
 			"title": "Tecnologias com que trabalho"
 		},
-		"techstack": "Competências e Ferramentas",
+		"techstack": "Competências e ferramentas",
 		"trending": "Portfólio",
 		"whyMe": {
 			"lead": "Cheguei ao desenvolvimento vindo do marketing. Antes de escrever código, passava os dias a analisar dados de mercado, o comportamento dos utilizadores e a forma como as pessoas encontram e usam um produto online. Ainda é assim que começo cada projeto.",
@@ -264,21 +202,21 @@
 	},
 	"metadata": {
 		"description": {
-			"about": "Conhece o Daniel Freire, um programador web especializado em aplicações com IA, integração de LLMs e soluções web de alto desempenho.",
-			"contact": "Entra em contacto com o Daniel Freire para desenvolvimento web, soluções de IA e consultoria técnica. Resposta rápida garantida.",
+			"about": "Daniel Freire é programador web e cria aplicações com IA, integrações de LLMs e websites rápidos, com experiência em marketing e análise de dados.",
+			"contact": "Contacte o Daniel Freire para desenvolvimento web, soluções de IA ou consultoria técnica. Resposta em 2–3 dias úteis.",
 			"home": "Daniel Freire, programador web: software à medida, aplicações com IA e websites de alto desempenho para clientes em todo o mundo.",
 			"impressum": "",
-			"portfolio": "Explora o portfólio de projetos web do Daniel Freire: apps React, ferramentas com IA e soluções de software empresarial personalizadas.",
-			"privacyPolicy": "Fica a saber como o Daniel Freire recolhe, utiliza e protege os teus dados pessoais. Práticas de privacidade transparentes em conformidade com o RGPD.",
+			"portfolio": "Portfólio do Daniel Freire: apps React, ferramentas com IA, websites de clientes e software empresarial à medida.",
+			"privacyPolicy": "Como o Daniel Freire recolhe, utiliza e protege os dados pessoais que partilha através deste website, em conformidade com o RGPD.",
 			"services": "Apps web com IA, integração de LLMs e desenvolvimento de alto desempenho por Daniel Freire. Software personalizado, agentes de IA e consultoria técnica."
 		},
 		"name": "Daniel Freire",
 		"seoTitle": {
-			"about": "Sobre Mim: Programador Web que Cria para Pessoas",
-			"contact": "Comece o Seu Projeto de Software ou IA",
-			"home": "Daniel Freire | Programador Web: Software à Medida e Apps com IA",
-			"portfolio": "Aplicações Web, Ferramentas de IA e Websites",
-			"services": "Software à Medida, IA e Desenvolvimento Web"
+			"about": "Sobre mim: programador web que cria para pessoas",
+			"contact": "Comece o seu projeto de software ou IA",
+			"home": "Daniel Freire | Programador web: software à medida e apps com IA",
+			"portfolio": "Aplicações web, ferramentas de IA e websites",
+			"services": "Software à medida, IA e desenvolvimento web"
 		},
 		"title": {
 			"about": "Sobre",
@@ -293,7 +231,7 @@
 	"portfolio": {
 		"all": "Todos",
 		"cta": [
-			"confira",
+			"veja",
 			"veja o projeto ao vivo →"
 		],
 		"opensInNewTab": "abre num novo separador",
@@ -304,7 +242,7 @@
 				"github": "https://github.com/danielfreire-dev/Quizzical",
 				"link": "https://quizzicall-bydainelli.netlify.app/",
 				"src": "/images/screenshots/quizzical.webp",
-				"summary": "Jogo de perguntas com mais de 4000 perguntas.",
+				"summary": "Quiz com mais de 4000 perguntas.",
 				"title": "quizzical"
 			},
 			{
@@ -320,7 +258,7 @@
 				"github": "",
 				"link": "https://drum-kit.openai-api-dainelli.workers.dev/",
 				"src": "/images/screenshots/drumsVeryBig1920.webp",
-				"summary": "Projeto divertido que reproduz uma bateria no seu computador.",
+				"summary": "Uma bateria que pode tocar no seu navegador.",
 				"title": "drum kit app"
 			},
 			{
@@ -328,7 +266,7 @@
 				"github": "",
 				"link": "https://tenzi-bydaniel.netlify.app/",
 				"src": "/images/screenshots/Tenzi.webp",
-				"summary": "O jogo de dados mais popular do mundo, agora no seu navegador.",
+				"summary": "O jogo de dados Tenzi, para jogar no navegador.",
 				"title": "tenzi"
 			},
 			{
@@ -347,7 +285,7 @@
 				"github": "",
 				"link": "https://muraryu.com",
 				"src": "/images/screenshots/muraryu.webp",
-				"summary": "A MuraRyu é uma nova empresa de gestão de condomínios em Portugal.",
+				"summary": "A MuraRyu é uma nova empresa de gestão de condomínios.",
 				"title": "muraRyu"
 			},
 			{
@@ -355,7 +293,7 @@
 				"github": "",
 				"link": "https://victo.pages.dev",
 				"src": "/images/screenshots/victo.webp",
-				"summary": "Galeria online criada para mostrar as obras do famoso artista português Victó.",
+				"summary": "Galeria online criada para mostrar as obras do artista Victó.",
 				"title": "victó's art gallery"
 			},
 			{
@@ -372,17 +310,17 @@
 	"privacyPolicy": {
 		"contactEmail": "rgpd@daniel-freire.com",
 		"header1": "1. Introdução",
-		"header10": "10. Atualizações a Esta Política de Privacidade",
+		"header10": "10. Atualizações a esta política de privacidade",
 		"header11": "11. Contacte-nos",
-		"header2": "2. Informações que Recolhemos",
-		"header3": "3. Finalidade da Recolha de Dados",
-		"header4": "4. Base Legal para o Tratamento",
-		"header5": "5. Partilha de Dados Pessoais",
-		"header6": "6. Conservação de Dados",
-		"header7": "7. Os Seus Direitos",
-		"header8": "8. Segurança de Dados",
+		"header2": "2. Informações que recolhemos",
+		"header3": "3. Finalidade da recolha de dados",
+		"header4": "4. Base legal para o tratamento",
+		"header5": "5. Partilha de dados pessoais",
+		"header6": "6. Conservação de dados",
+		"header7": "7. Os seus direitos",
+		"header8": "8. Segurança de dados",
 		"header9": "9. Reclamações",
-		"paragraph1": "Bem-vindo ao website de Daniel Freire. Estamos empenhados em proteger a sua informação pessoal e o seu direito à privacidade. Se tiver alguma questão ou preocupação sobre este aviso de privacidade ou sobre as nossas práticas relativamente à sua informação pessoal, por favor contacte-nos através de",
+		"paragraph1": "Esta política explica como são recolhidos e utilizados os dados pessoais no website de Daniel Freire. Se tiver alguma questão ou preocupação, contacte-nos através de",
 		"paragraph10": "Podemos atualizar esta política de privacidade periodicamente. Notificá-lo-emos de quaisquer alterações através da publicação da nova política de privacidade nesta página.",
 		"paragraph11": "Se tiver alguma questão sobre esta política de privacidade, por favor contacte-nos através de",
 		"paragraph2": "Recolhemos informações pessoais que nos fornece voluntariamente quando preenche um formulário no nosso website. As informações pessoais que recolhemos incluem:",
@@ -413,7 +351,7 @@
 	"serviceDetail": {
 		"ctaLink": "Vamos conversar",
 		"ctaPrompt": "Tem um projeto assim em mente?",
-		"featuresHeading": "O Que Está Incluído",
+		"featuresHeading": "O que está incluído",
 		"otherServices": "Outros serviços"
 	},
 	"services": [
@@ -426,33 +364,33 @@
 				"Integração com APIs e serviços externos existentes",
 				"Painéis de administração com controlo de acesso granular",
 				"Desenvolvimento de MVP com ciclos de feedback rápido",
-				"Arquitetura cloud-native implementada na AWS"
+				"Alojamento e deploy na AWS"
 			],
 			"icon": "/images/icons/business-processes.svg",
 			"iconLarge": "/images/icons/business-processes.svg",
-			"longDescription": "Cada negócio tem processos, fluxos de trabalho e desafios únicos, e o software que utiliza deve refletir isso. Especializo-me no desenvolvimento de aplicações web personalizadas que se adaptam à forma como a sua empresa realmente opera, em vez de forçar a sua equipa a adaptar-se a um software genérico. Entrego com métodos ágeis, focando-me em MVP e ciclos de feedback rápido para que veja valor desde cedo e itere com base na utilização real.\n\nDesde sistemas CRM pensados para o seu ciclo de vendas até dashboards que agregam exatamente as métricas que precisa, cada projeto começa com uma análise profunda dos seus processos de negócio. O resultado é uma ferramenta que a sua equipa vai realmente querer usar, porque foi construída para eles.\n\nUtilizando tecnologias como React, Next.js e PostgreSQL, implementadas na AWS com arquitetura cloud-native, construo componentes modulares e reutilizáveis que tornam a sua solução robusta, escalável e fácil de manter à medida que o seu negócio cresce.",
+			"longDescription": "O software genérico obriga a sua equipa a trabalhar da forma que o software quer. Desenvolvo aplicações web à volta da forma como a sua empresa já funciona: os seus processos e os números que consulta todas as manhãs. Trabalho em iterações curtas, a começar por um MVP, para que veja algo utilizável cedo e possamos ajustá-lo com base na forma como as pessoas o usam.\n\nCada projeto começa por olhar para o processo que o software vai apoiar. Um CRM é construído à volta do seu pipeline de vendas; um dashboard mostra as métricas que acompanha, não um conjunto genérico. A sua equipa tem mais probabilidade de usar uma ferramenta que foi construída para ela.\n\nUso React, Next.js e PostgreSQL, com deploy na AWS, e construo com componentes modulares e reutilizáveis para que a aplicação continue fácil de manter e de expandir à medida que o seu negócio muda.",
 			"slug": "software-personalizado-empresarial",
-			"text": "Aplicações web à medida: CRMs, dashboards e ferramentas internas construídas com componentes modulares e entrega ágil, adaptando-se à forma como o seu negócio realmente funciona.",
-			"title": "Software Personalizado Empresarial"
+			"text": "Aplicações web à medida: CRMs, dashboards e ferramentas internas construídas com componentes modulares e entrega ágil, adaptando-se à forma como o seu negócio funciona.",
+			"title": "Software empresarial à medida"
 		},
 		{
 			"features": [
 				"Desenvolvimento de aplicações web com IA",
 				"Integração de LLMs com OpenAI e modelos open-source",
-				"Orquestração de agentes de IA para fluxos de trabalho complexos",
-				"Chatbots inteligentes para apoio ao cliente e vendas",
+				"Agentes de IA para fluxos de trabalho com várias etapas",
+				"Chatbots para apoio ao cliente e vendas",
 				"Automatização de processamento e classificação de documentos",
-				"Sistemas de pesquisa semântica e descoberta de conhecimento",
+				"Pesquisa semântica nos seus documentos e dados",
 				"Assistentes de IA com conhecimento específico do seu negócio (RAG)",
 				"Geração e sumarização automática de conteúdos",
 				"Análise preditiva e dashboards de indicadores com IA"
 			],
 			"icon": "/images/icons/ai-recommend.svg",
 			"iconLarge": "/images/icons/ai-recommend.svg",
-			"longDescription": "A Inteligência Artificial deixou de ser uma promessa futurista para se tornar uma vantagem competitiva real, quando aplicada com propósito. Construo aplicações web com IA que integram Modelos de Linguagem de Grande Escala (LLMs) nos seus fluxos de trabalho existentes de forma prática e mensurável, sem hype nem complexidade desnecessária.\n\nSeja um chatbot inteligente que reduz o volume de tickets de suporte em 40%, um sistema de recomendação que aumenta o valor médio de encomenda, ou a orquestração de agentes de IA que automatiza processos de negócio complexos com vários passos, o foco está sempre no resultado de negócio, não na tecnologia pela tecnologia. Cada solução é projetada com uma experiência de utilizador orientada por IA, que parece natural e intuitiva para a sua equipa e clientes.\n\nTrabalho com APIs como as da OpenAI, LLMs open-source, bases de dados vetoriais para pesquisa semântica e arquiteturas RAG (Retrieval-Augmented Generation) para criar soluções de IA que compreendem o contexto único do seu negócio.",
+			"longDescription": "A IA é útil quando resolve um problema concreto. Desenvolvo aplicações web que ligam Large Language Models (LLMs) aos fluxos de trabalho que já tem, de forma mensurável, e deixo a IA de fora quando não ajuda.\n\nPode ser um chatbot de suporte que responde a perguntas de rotina para que a sua equipa trate menos tickets, um motor de recomendações que sugere produtos relacionados no checkout, ou agentes que organizam e resumem documentos recebidos. Cada solução começa pelo resultado que pretende e só depois chega à tecnologia.\n\nTrabalho com a API da OpenAI, LLMs open-source, bases de dados vetoriais para pesquisa semântica e RAG (Retrieval-Augmented Generation), para que o sistema responda a partir dos seus próprios documentos e dados em vez de conhecimento genérico.",
 			"slug": "implementacao-solucoes-ia",
-			"text": "Aplicações web com IA e integração de LLMs: chatbots, agentes de IA e experiências de utilizador orientadas por IA que transformam os seus fluxos de trabalho.",
-			"title": "Implementação de Soluções de IA"
+			"text": "Aplicações web com IA e integração de LLMs: chatbots, agentes de IA e assistentes que tiram trabalho repetitivo à sua equipa.",
+			"title": "Implementação de soluções de IA"
 		},
 		{
 			"features": [
@@ -461,40 +399,40 @@
 				"Plataformas de e-commerce e catálogos de produtos",
 				"Migração e modernização de websites legados",
 				"Otimização para Core Web Vitals e SEO técnico",
-				"Design responsivo testado em todos os dispositivos",
+				"Design responsivo testado em telemóvel, tablet e computador",
 				"Sistemas de autenticação, pagamentos e áreas de cliente",
-				"Desenvolvimento rápido de MVP para validação de mercado",
-				"Implementação na cloud AWS com arquitetura escalável",
-				"Bibliotecas de componentes modulares e reutilizáveis para lógica de frontend"
+				"Desenvolvimento rápido de MVP para testar ideias com utilizadores reais",
+				"Deploy na AWS, preparado para tráfego crescente",
+				"Bibliotecas de componentes reutilizáveis para um frontend fácil de manter"
 			],
 			"icon": "/images/icons/dns-services.svg",
 			"iconLarge": "/images/icons/dns-services.svg",
-			"longDescription": "Um website não é apenas um cartão de visita digital, é o seu ativo de marketing mais importante. Construo aplicações web de alto desempenho que carregam instantaneamente, funcionam em qualquer dispositivo e guiam os seus visitantes de forma natural em direção à ação que pretende que tomem. Utilizando componentes modulares e lógica de frontend limpa, cada projeto é arquitetado para manutenibilidade desde o primeiro dia.\n\nCada projeto é construído com o desempenho no centro, otimizado para os Core Web Vitals desde a primeira linha de código. Isto significa que o seu site não só terá um aspeto excelente, como também será favorecido pelo Google nos resultados de pesquisa e proporcionará uma experiência fluida aos seus utilizadores. Sigo práticas de entrega ágil de produto, começando com um MVP para obter feedback rápido e iterando com base em dados reais de utilização.\n\nDesde landing pages de alta conversão até aplicações web completas com autenticação, pagamentos e dashboards, implementadas na AWS com arquitetura de cloud escalável, abordo cada projeto como se fosse o meu próprio, com atenção meticulosa ao detalhe e foco absoluto no desempenho.",
+			"longDescription": "O seu website é muitas vezes o primeiro sítio onde um cliente avalia o seu negócio. Construo sites e aplicações web que carregam depressa, funcionam no telemóvel e no computador e levam os visitantes à ação que pretende, seja marcar uma chamada ou comprar um produto.\n\nA performance faz parte do desenvolvimento desde o início. Otimizo para as Core Web Vitals ao longo do projeto, o que ajuda no posicionamento nas pesquisas e torna o site mais rápido de usar. Começo com um MVP, recolho feedback cedo e itero com base na forma como as pessoas o usam.\n\nOs projetos vão de landing pages a aplicações web completas com autenticação, pagamentos e dashboards, com deploy na AWS. O código é construído com componentes modulares, para continuar fácil de manter depois do lançamento.",
 			"slug": "desenvolvimento-web",
-			"text": "Aplicações web de alto desempenho: websites rápidos e responsivos com componentes modulares que carregam instantaneamente, funcionam em qualquer dispositivo e transformam visitantes em clientes.",
-			"title": "Desenvolvimento Web"
+			"text": "Aplicações web de alto desempenho: websites rápidos e responsivos que funcionam em qualquer dispositivo e ajudam a transformar visitantes em clientes.",
+			"title": "Desenvolvimento web"
 		},
 		{
 			"features": [
 				"Auditoria técnica de SEO completa (rastreabilidade, indexação, arquitetura)",
 				"Otimização de Core Web Vitals e velocidade de carregamento",
-				"Análise de concorrência e pesquisa estratégica de palavras-chave",
+				"Análise de concorrência e pesquisa de palavras-chave",
 				"Estratégia de conteúdo e otimização on-page",
 				"Consultoria de migração e redesenho com preservação de SEO",
 				"Configuração e auditoria de analytics (GA4, Search Console)"
 			],
 			"icon": "/images/icons/ibm-watson--machine-learning.svg",
 			"iconLarge": "/images/icons/ibm-watson--machine-learning.svg",
-			"longDescription": "Ter um website excelente é apenas metade da equação; a outra metade é garantir que as pessoas certas o encontram. A minha experiência em marketing digital, combinada com conhecimento técnico profundo, permite-me oferecer uma perspetiva única que vai além das auditorias de SEO convencionais.\n\nCada auditoria começa com dados: analiso a arquitetura técnica do seu site, os sinais de experiência de utilizador (Core Web Vitals), a estrutura de conteúdo e o posicionamento competitivo. Para aplicações web de alto desempenho, garanto que cada milissegundo de tempo de carregamento é contabilizado, porque a velocidade impacta diretamente tanto os rankings como as conversões. O resultado é um plano de ação priorizado que liga cada recomendação técnica a um impacto de negócio concreto.\n\nNão vendo fórmulas mágicas de SEO. Ofereço análises rigorosas, recomendações transparentes e implementações que respeitam as diretrizes dos motores de busca enquanto maximizam a sua visibilidade orgânica.",
+			"longDescription": "Um bom website continua a precisar que as pessoas certas o encontrem. Trabalhei em marketing digital antes de me tornar programador, por isso olho para o SEO dos dois lados: aquilo a que os motores de busca e os utilizadores respondem, e o que tem de mudar no código para lá chegar.\n\nCada auditoria começa com dados. Analiso a arquitetura técnica do seu site, as Core Web Vitals, a estrutura de conteúdos e a sua posição face aos concorrentes nas pesquisas. O tempo de carregamento recebe atenção especial, porque afeta tanto o posicionamento como as conversões. Recebe um plano de ação priorizado em que cada recomendação está ligada ao resultado de negócio que deve melhorar.\n\nAqui não há truques. O trabalho segue as diretrizes dos motores de busca, e digo-lhe com franqueza o que acho que vai fazer diferença e o que não vai.",
 			"slug": "seo-consultoria-tecnica",
-			"text": "Auditorias baseadas em dados, otimização de alto desempenho e estratégia para ajudar o seu negócio a ser encontrado e a converter.",
-			"title": "SEO e Consultoria Técnica"
+			"text": "Auditorias técnicas de SEO, otimização de velocidade e estratégia de pesquisa para ajudar o seu negócio a ser encontrado e a transformar visitas em clientes.",
+			"title": "SEO e consultoria técnica"
 		}
 	],
 	"servicesPage": {
 		"intro": [
-			"Trabalho com pequenas e médias empresas, startups e profissionais independentes que precisam de software que cumpra bem uma função específica: um website que traga clientes, uma ferramenta interna que elimine trabalho manual ou uma funcionalidade de IA que poupe horas reais.",
-			"A minha experiência em marketing e análise de dados faz com que cada projeto comece pelo objetivo de negócio e não pela tecnologia. Antes de escrever qualquer código, pergunto como é o sucesso, como o vai medir e do que os seus utilizadores realmente precisam.",
+			"Trabalho com pequenas e médias empresas, startups e profissionais independentes que precisam de software que cumpra bem uma função específica: um website que traga clientes, uma ferramenta interna que elimine trabalho manual ou uma funcionalidade de IA que poupe horas à sua equipa.",
+			"A minha experiência em marketing e análise de dados faz com que cada projeto comece pelo objetivo de negócio e não pela tecnologia. Antes de escrever qualquer código, pergunto como é o sucesso, como o vai medir e do que os seus utilizadores precisam.",
 			"Trabalha diretamente comigo, desde a primeira chamada até ao lançamento. Sem gestores de conta, sem intermediários e com comunicação clara sobre âmbito, prazos e compromissos."
 		],
 		"steps": [
@@ -540,7 +478,7 @@
 			}
 		},
 		"header": {
-			"role": "desenvolvedor web",
+			"role": "programador web",
 			"title": "daniel freire"
 		},
 		"legal": {
@@ -575,10 +513,10 @@
 			}
 		],
 		"privacy": "política de privacidade",
-		"rights": "Daniel Freire ® todos os direitos reservados",
+		"rights": "© Daniel Freire. Todos os direitos reservados.",
 		"select": {
-			"languageSelectAriaLabel": "Menú para selecionar língua",
-			"languageSelectTitle": "Menú para selecionar língua"
+			"languageSelectAriaLabel": "Selecionar idioma",
+			"languageSelectTitle": "Selecionar idioma"
 		}
 	},
 	"svgTitles": {
@@ -1007,33 +945,7 @@
 		}
 	],
 	"topMainPage": {
-		"blurbsArray": [
-			{
-				"description": "O seu website está a limitar o crescimento do seu negócio? A nossa auditoria de desempenho abrangente analisa profundamente a sua infraestrutura técnica, a experiência do utilizador e o potencial de conversão. Forneceremos um relatório detalhado com as melhorias críticas que podem aumentar drasticamente o seu desempenho online.",
-				"title": "Revolucione já a sua presença digital!"
-			},
-			{
-				"description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-				"title": "Desbloqueie todo o potencial do seu website"
-			},
-			{
-				"description": "Pare de se contentar com modelos genéricos. Os nossos serviços de desenvolvimento web personalizado criam experiências digitais totalmente adaptadas à identidade única da sua marca e aos seus objetivos de negócio. Transformamos o seu conceito numa solução web poderosa, responsiva e de vanguarda.",
-				"title": "Construa hoje o seu projeto de sonho"
-			},
-			{
-				"description": "A velocidade não é apenas uma funcionalidade – é uma vantagem competitiva. O nosso serviço de otimização de desempenho garante que o seu website carrega extremamente rápido, proporcionando uma experiência excecional ao utilizador que mantém os visitantes envolvidos e converte de forma mais eficaz.",
-				"title": "Acelere o potencial do seu website"
-			},
-			{
-				"description": "A tecnologia evolui rapidamente. Os nossos serviços especializados de migração ajudam-no a fazer a transição para tecnologias web modernas e eficientes, sem interromper as suas operações existentes. Garantimos um percurso de atualização suave e com gestão de riscos.",
-				"title": "Modernize a sua infraestrutura digital"
-			},
-			{
-				"description": "Os websites exigem cuidados constantes para se manterem seguros, funcionais e competitivos. Os nossos pacotes de manutenção abrangentes oferecem monitorização proativa, resolução imediata de problemas e atualizações tecnológicas contínuas.",
-				"title": "Cuidados contínuos para os seus ativos digitais"
-			}
-		],
-		"description": "Cansado de software que atrasa o seu negócio? Desenvolvo aplicações web à medida, como CRMs, gestores de projetos e dashboards de dados, integro IA onde poupa trabalho real e crio websites que carregam depressa e são encontrados. Sem funcionalidades desnecessárias, apenas ferramentas que se adaptam à forma como realmente trabalha.",
+		"description": "Desenvolvo aplicações web à medida, como CRMs, gestores de projetos e dashboards de dados, integro IA onde poupa tempo à sua equipa e crio websites que carregam depressa e são encontrados. Sem funcionalidades desnecessárias, apenas ferramentas que se adaptam à forma como trabalha.",
 		"eyebrow": "Daniel Freire · Programador web",
 		"primaryCta": "Vamos falar sobre o seu projeto",
 		"secondaryCta": "Ver o meu trabalho",

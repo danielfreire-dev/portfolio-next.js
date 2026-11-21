@@ -139,14 +139,6 @@ export interface Dictionary {
 		title4: string;
 		title5: string;
 	};
-	carousel: {
-		alt: string;
-		description: string;
-		id: number;
-		imageUrl: string;
-		title: string;
-		cta: string;
-	}[];
 	contact: {
 		btn: string;
 		email: string;
