@@ -10,7 +10,7 @@ import LinkedInIcon from "../svgs/linkedin-square.svg";
 import { TransitionLink } from "./TransitionLink";
 import LegalLinks from "./LegalLinks";
 import ThemeToggle from "../ThemeToggle";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MobileSlideBtn from "./MobileSlideBtn";
 
 /**
@@ -28,6 +28,20 @@ import MobileSlideBtn from "./MobileSlideBtn";
 const Sidenav = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const t = useTranslations("sidenav");
+	const toggleRef = useRef<HTMLButtonElement>(null);
+
+	// Escape closes the mobile menu and returns focus to its toggle button.
+	useEffect(() => {
+		if (!isOpen) return;
+		const onKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "Escape") {
+				setIsOpen(false);
+				toggleRef.current?.focus();
+			}
+		};
+		document.addEventListener("keydown", onKeyDown);
+		return () => document.removeEventListener("keydown", onKeyDown);
+	}, [isOpen]);
 
 	return (
 		<>
@@ -35,8 +49,8 @@ const Sidenav = () => {
 				id="sidenav"
 				className={`fixed lg:sticky top-0 left-0 h-screen w-64 max-w-[100dvw] z-50 shrink-0 grow-0 p-4 flex flex-col justify-between items-center
 				bg-background lg:bg-transparent overflow-y-auto overflow-x-hidden
-				transform transition-transform duration-500 ease-in-out
-				${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}>
+				transform transition-[translate,visibility] duration-500 ease-in-out
+				${isOpen ? "translate-x-0" : "-translate-x-full max-lg:invisible"} lg:translate-x-0`}>
 				<div>
 					<TransitionLink
 						href="/"
@@ -86,10 +100,7 @@ const Sidenav = () => {
 						<ThemeToggle />
 					</div>
 
-					<footer
-						className="flex justify-center mt-2 whitespace-pre-wrap"
-						aria-label="footer"
-						role="contentinfo">
+					<footer className="flex justify-center mt-2 whitespace-pre-wrap">
 						{t("footer.blurb")}{" "}
 						<a
 							href="https://github.com/danielfreire-dev/"
@@ -105,6 +116,7 @@ const Sidenav = () => {
 				</section>
 			</nav>
 			<MobileSlideBtn
+				ref={toggleRef}
 				isOpen={isOpen}
 				setIsOpen={setIsOpen}
 			/>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import styles from "@/ui/styles/CookieBanner.module.css";
 
 /** Granular consent categories the user can toggle. */
@@ -94,6 +94,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		marketing: false,
 	});
 	const [hydrated, setHydrated] = useState(false);
+	const bannerRef = useRef<HTMLDivElement>(null);
+	const dialogRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const stored = loadConsent();
@@ -128,6 +130,52 @@ export function Providers({ children }: { children: React.ReactNode }) {
 		updateAnalyticsConsent(consent.analytics);
 	}, [consent]);
 
+	// WCAG 2.4.11: the fixed banner must not hide the element that has focus.
+	// Scroll padding makes focus-driven scrolling stop above the banner.
+	useEffect(() => {
+		if (!showBanner || !bannerRef.current) return;
+		const root = document.documentElement;
+		root.style.scrollPaddingBottom = `${bannerRef.current.offsetHeight + 24}px`;
+		return () => {
+			root.style.scrollPaddingBottom = "";
+		};
+	}, [showBanner, hydrated]);
+
+	// Modal focus management: move focus into the dialog, keep Tab inside it,
+	// close on Escape, and hand focus back to the opener when it closes.
+	useEffect(() => {
+		if (!showManage || !dialogRef.current) return;
+		const dialog = dialogRef.current;
+		const opener = document.activeElement as HTMLElement | null;
+		const focusables = () =>
+			Array.from(dialog.querySelectorAll<HTMLElement>("button, a[href], input:not([disabled])"));
+		focusables()[0]?.focus();
+
+		const onKeyDown = (e: KeyboardEvent) => {
+			if (e.key === "Escape") {
+				e.preventDefault();
+				setShowManage(false);
+				return;
+			}
+			if (e.key !== "Tab") return;
+			const items = focusables();
+			const first = items[0];
+			const last = items[items.length - 1];
+			if (e.shiftKey && document.activeElement === first) {
+				e.preventDefault();
+				last?.focus();
+			} else if (!e.shiftKey && document.activeElement === last) {
+				e.preventDefault();
+				first?.focus();
+			}
+		};
+		document.addEventListener("keydown", onKeyDown);
+		return () => {
+			document.removeEventListener("keydown", onKeyDown);
+			if (opener?.isConnected) opener.focus();
+		};
+	}, [showManage]);
+
 	if (!hydrated) {
 		return <>{children}</>;
 	}
@@ -139,6 +187,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			{/* ---- Cookie Consent Banner ---- */}
 			{showBanner  && (
 					<div
+						ref={bannerRef}
 						className={`fixed bottom-4 left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 z-99999 w-auto sm:w-full sm:max-w-5xl rounded-xl sm:rounded-none ${styles?.banner ?? ""}`}
 						style={{
 							borderTop: "3px solid var(--primary)",
@@ -171,7 +220,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 									className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
 									style={{
 										backgroundColor: "var(--primary)",
-										color: "#fff",
+										color: "var(--on-primary)",
 									}}>
 									{t("buttonText")}
 								</button>
@@ -198,7 +247,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 								<a
 									href={t("privacyurl")}
 									className="px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-colors hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary) underline underline-offset-2"
-									style={{ color: "var(--primary)" }}>
+									style={{ color: "var(--text)" }}>
 									{t("privacyPolicyText")}
 								</a>
 							</div>
@@ -210,10 +259,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
 			{/* ---- Manage Preferences Modal ---- */}
 			{showManage && (
 				<div
+					ref={dialogRef}
 					className="fixed inset-0 z-99999 flex items-center justify-center p-4"
 					role="dialog"
 					aria-modal="true"
-					aria-label={t("manageTitle")}>
+					aria-labelledby="cookie-manage-title">
 					{/* Backdrop */}
 					<div
 						className={`absolute inset-0 ${styles?.backdrop ?? ""}`}
@@ -229,6 +279,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 							color: "var(--text)",
 						}}>
 						<h3
+							id="cookie-manage-title"
 							className="text-lg font-semibold"
 							style={{ color: "var(--text)" }}>
 							{t("manageTitle")}
@@ -366,7 +417,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 								className="px-4 py-2 text-sm font-semibold rounded-lg transition-all hover:brightness-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--primary)"
 								style={{
 									backgroundColor: "var(--primary)",
-									color: "#fff",
+									color: "var(--on-primary)",
 								}}>
 								{t("manageSaveButtonText")}
 							</button>

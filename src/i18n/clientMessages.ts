@@ -18,10 +18,6 @@ export const GLOBAL_CLIENT_MESSAGES = [
 	"cta",
 	"error",
 	"sidenav",
-	"svgTitles.closeToMenu",
-	"svgTitles.menuToClose",
-	"svgTitles.moonToSun",
-	"svgTitles.sunToMoon",
 ] as const;
 
 /** Messages for the contact form (ContactForm + ContactFarewell). */

@@ -18,6 +18,13 @@
 		"btn": "odeslat zprávu",
 		"email": "email",
 		"errors": {
+			"fields": {
+				"firstName": "Zadejte prosím své jméno.",
+				"email": "Zadejte prosím svou e-mailovou adresu.",
+				"emailInvalid": "Zadejte prosím platnou e-mailovou adresu, např. jmeno@priklad.cz.",
+				"message": "Napište prosím zprávu.",
+				"privacy": "Pro pokračování prosím přijměte zásady ochrany osobních údajů."
+			},
 			"invalidInput": "Zkontrolujte prosím své údaje a zkuste to znovu.",
 			"sendFailed": "Zprávu se nepodařilo odeslat. Zkuste to prosím znovu.",
 			"sendPartial": "Potvrzení se nepodařilo odeslat. Vaše zpráva však byla přijata.",
@@ -456,6 +463,11 @@
 		"stepsTitle": "Jak probíhá projekt"
 	},
 	"sidenav": {
+		"a11y": {
+			"darkMode": "Tmavý režim",
+			"menu": "Nabídka",
+			"skipToContent": "Přejít na hlavní obsah"
+		},
 		"footer": {
 			"blurb": "Vytvořil s 🐞",
 			"icons": {

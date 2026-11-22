@@ -46,14 +46,14 @@ describe("ThemeToggle", () => {
 		it("should have checkbox unchecked when in light mode", () => {
 			mockIsDarkStore = false;
 			renderWithProviders(<ThemeToggle />);
-			const checkbox = screen.getByRole("checkbox");
+			const checkbox = screen.getByRole("switch");
 			expect(checkbox).not.toBeChecked();
 		});
 
 		it("should have checkbox checked when in dark mode", () => {
 			mockIsDarkStore = true;
 			renderWithProviders(<ThemeToggle />);
-			const checkbox = screen.getByRole("checkbox");
+			const checkbox = screen.getByRole("switch");
 			expect(checkbox).toBeChecked();
 		});
 	});
@@ -62,7 +62,7 @@ describe("ThemeToggle", () => {
 		it("should call setValue with true when checkbox is checked", () => {
 			mockIsDarkStore = false;
 			renderWithProviders(<ThemeToggle />);
-			const checkbox = screen.getByRole("checkbox");
+			const checkbox = screen.getByRole("switch");
 			fireEvent.click(checkbox);
 			expect(mockSetValue).toHaveBeenCalledWith(true);
 		});
@@ -70,7 +70,7 @@ describe("ThemeToggle", () => {
 		it("should call setValue with false when checkbox is unchecked", () => {
 			mockIsDarkStore = true;
 			renderWithProviders(<ThemeToggle />);
-			const checkbox = screen.getByRole("checkbox");
+			const checkbox = screen.getByRole("switch");
 			fireEvent.click(checkbox);
 			expect(mockSetValue).toHaveBeenCalledWith(false);
 		});
@@ -80,7 +80,7 @@ describe("ThemeToggle", () => {
 		it("should set 'theme' in localStorage when toggling to dark mode", () => {
 			mockIsDarkStore = false;
 			renderWithProviders(<ThemeToggle />);
-			const checkbox = screen.getByRole("checkbox");
+			const checkbox = screen.getByRole("switch");
 			fireEvent.click(checkbox);
 
 			// localStorage should be set to "dark"
@@ -90,7 +90,7 @@ describe("ThemeToggle", () => {
 		it("should set 'theme' in localStorage when toggling to light mode", () => {
 			mockIsDarkStore = true;
 			renderWithProviders(<ThemeToggle />);
-			const checkbox = screen.getByRole("checkbox");
+			const checkbox = screen.getByRole("switch");
 			fireEvent.click(checkbox);
 
 			// localStorage should be set to "light"
@@ -132,9 +132,16 @@ describe("ThemeToggle", () => {
 	});
 
 	describe("label accessibility", () => {
+		it("should expose a focusable switch named 'Dark mode'", () => {
+			renderWithProviders(<ThemeToggle />);
+			const toggle = screen.getByRole("switch", { name: "Dark mode" });
+			expect(toggle).not.toHaveClass("hidden");
+			expect(toggle).toHaveClass("sr-only");
+		});
+
 		it("should have a label linked to the checkbox via htmlFor", () => {
 			renderWithProviders(<ThemeToggle />);
-			const checkbox = screen.getByRole("checkbox");
+			const checkbox = screen.getByRole("switch");
 			expect(checkbox.id).toBe("theme-toggle");
 
 			// The label should exist and point to the checkbox

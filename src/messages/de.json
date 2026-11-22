@@ -18,6 +18,13 @@
 		"btn": "Nachricht senden",
 		"email": "E-Mail",
 		"errors": {
+			"fields": {
+				"firstName": "Bitte geben Sie Ihren Vornamen ein.",
+				"email": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+				"emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein, z. B. name@beispiel.de.",
+				"message": "Bitte schreiben Sie eine Nachricht.",
+				"privacy": "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren."
+			},
 			"invalidInput": "Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.",
 			"sendFailed": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
 			"sendPartial": "Die Bestätigung konnte nicht gesendet werden. Ihre Nachricht ist aber angekommen.",
@@ -456,6 +463,11 @@
 		"stepsTitle": "So läuft ein Projekt ab"
 	},
 	"sidenav": {
+		"a11y": {
+			"darkMode": "Dunkelmodus",
+			"menu": "Menü",
+			"skipToContent": "Zum Hauptinhalt springen"
+		},
 		"footer": {
 			"blurb": "Gemacht mit 🐞 von",
 			"icons": {

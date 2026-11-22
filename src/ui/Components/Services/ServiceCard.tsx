@@ -23,9 +23,10 @@ const ServiceCard = ({ title, text, icon }: ServiceCardProps) => {
 		<div className="flex flex-row items-start gap-4 w-full max-w-lg p-4 surface-cards h-full">
 			<Suspense fallback="Loading...">
 				<div className="shrink-0  rounded-md">
+					{/* Decorative: the title right next to it already names the service. */}
 					<Image
 						src={icon}
-						alt={title}
+						alt=""
 						width={64}
 						height={64}
 						className="service-card-icon"

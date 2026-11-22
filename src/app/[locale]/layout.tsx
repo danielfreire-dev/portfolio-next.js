@@ -7,7 +7,7 @@ import { TransitionOverlay } from "@/ui/Components/TransitionOverlay";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "@/providers/CookieBanner";
 import GoogleAnalytics from "@/providers/GoogleAnalytics";
@@ -174,6 +174,7 @@ export default async function RootLayout({
 	// Only the messages that global Client Components need are serialised
 	// into the page; Server Components read the full set on the server.
 	const messages = pickMessages(await getMessages(), GLOBAL_CLIENT_MESSAGES);
+	const a11y = await getTranslations("sidenav.a11y");
 
 	return (
 		<html
@@ -194,6 +195,12 @@ export default async function RootLayout({
 			</head>
 			<body
 				className={`${Logo.variable} ${Heading.variable} ${Text.variable} ${Small.variable} ${SmallItalic.variable} antialiased flex min-h-screen selection:bg-(--primary) selection:text-(--selector-txt) `}>
+				{/* WCAG 2.4.1: first focusable element, lets keyboard users jump past the sidenav. */}
+				<a
+					href="#main"
+					className="skip-link">
+					{a11y("skipToContent")}
+				</a>
 				<SpeedInsights />
 				{googleAnalytics && (
 					<Suspense fallback={null}>

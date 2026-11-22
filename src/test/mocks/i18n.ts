@@ -71,6 +71,7 @@ export const mockMessages: Record<string, unknown> = {
 		websites: [] as unknown[],
 	},
 	sidenav: {
+		a11y: { darkMode: "Dark mode", menu: "Menu", skipToContent: "Skip to main content" },
 		header: { title: "DF", role: "Developer" },
 		footer: {
 			blurb: "Made by",

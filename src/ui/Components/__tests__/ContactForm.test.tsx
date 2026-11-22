@@ -302,6 +302,58 @@ describe("ContactForm", () => {
 		});
 	});
 
+	describe("field errors", () => {
+		const getForm = () => screen.getByLabelText(/First Name/).closest("form")!;
+
+		it("shows a message for each empty required field on submit and focuses the first", async () => {
+			renderWithProviders(<ContactForm />);
+			fireEvent.submit(getForm());
+
+			const firstName = screen.getByLabelText(/First Name/);
+			await waitFor(() => expect(firstName).toHaveFocus());
+
+			for (const [label, key] of [
+				[/First Name/, "firstName"],
+				[/E-mail/, "email"],
+				[/Message/, "message"],
+				[/I agree to the/, "privacy"],
+			] as const) {
+				const field = screen.getByLabelText(label);
+				expect(field).toHaveAttribute("aria-invalid", "true");
+				expect(field).toHaveAccessibleDescription(`errors.fields.${key}`);
+			}
+			expect(submitContact).not.toHaveBeenCalled();
+		});
+
+		it("distinguishes an invalid email from a missing one", async () => {
+			renderWithProviders(<ContactForm />);
+			const email = screen.getByLabelText(/E-mail/);
+			fireEvent.change(email, { target: { value: "not-an-email" } });
+			fireEvent.blur(email);
+
+			await waitFor(() => expect(email).toHaveAccessibleDescription("errors.fields.emailInvalid"));
+		});
+
+		it("does not flag an untouched field on blur", () => {
+			renderWithProviders(<ContactForm />);
+			const firstName = screen.getByLabelText(/First Name/);
+			fireEvent.blur(firstName);
+			expect(firstName).not.toHaveAttribute("aria-invalid");
+		});
+
+		it("clears the message once the field is corrected", async () => {
+			renderWithProviders(<ContactForm />);
+			fireEvent.submit(getForm());
+			const firstName = screen.getByLabelText(/First Name/);
+			await waitFor(() => expect(firstName).toHaveAttribute("aria-invalid", "true"));
+
+			fireEvent.change(firstName, { target: { value: "John" } });
+
+			await waitFor(() => expect(firstName).not.toHaveAttribute("aria-invalid"));
+			expect(screen.queryByText("errors.fields.firstName")).not.toBeInTheDocument();
+		});
+	});
+
 	describe("form hidden state", () => {
 		it("should hide the form when submission is completed", async () => {
 			renderWithProviders(<ContactForm />);

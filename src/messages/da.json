@@ -18,6 +18,13 @@
 		"btn": "send besked",
 		"email": "e-mail",
 		"errors": {
+			"fields": {
+				"firstName": "Indtast venligst dit fornavn.",
+				"email": "Indtast venligst din e-mailadresse.",
+				"emailInvalid": "Indtast venligst en gyldig e-mailadresse, f.eks. navn@eksempel.dk.",
+				"message": "Skriv venligst en besked.",
+				"privacy": "Accepter venligst privatlivspolitikken for at fortsætte."
+			},
 			"invalidInput": "Kontroller venligst dine oplysninger og prøv igen.",
 			"sendFailed": "Beskeden kunne ikke sendes. Prøv igen.",
 			"sendPartial": "Bekræftelsen kunne ikke sendes. Din besked er modtaget.",
@@ -456,6 +463,11 @@
 		"stepsTitle": "Sådan forløber et projekt"
 	},
 	"sidenav": {
+		"a11y": {
+			"darkMode": "Mørk tilstand",
+			"menu": "Menu",
+			"skipToContent": "Spring til hovedindhold"
+		},
 		"footer": {
 			"blurb": "Lavet med 🐞 af",
 			"icons": {

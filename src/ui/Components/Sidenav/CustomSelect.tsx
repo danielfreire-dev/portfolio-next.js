@@ -14,9 +14,13 @@ interface CustomLocaleSelectProps {
 /**
  * CustomSelect - A styled dropdown for selecting a locale/language.
  *
- * Features click-outside-to-close behavior (via a `mousedown` listener on
- * `document`), keyboard navigation (Enter/Space to toggle, Escape to close),
- * and a loading indicator that replaces the chevron during locale transitions.
+ * Built as a disclosure (WAI-ARIA APG): a toggle `<button aria-expanded>` that
+ * reveals a list of native buttons, so Tab / Enter / Space work without custom
+ * key handling. Escape closes the list and returns focus to the toggle; the
+ * list also closes on outside click or when focus leaves the widget. Each
+ * language name carries its own `lang` (WCAG 3.1.2) and the flag emoji is
+ * hidden from screen readers. A loading indicator replaces the chevron during
+ * locale transitions.
  * Navigation uses `router.replace` inside `startTransition` so the UI stays
  * responsive while the new locale's messages are loaded.
  *
@@ -28,6 +32,7 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedLocale, setSelectedLocale] = useState(defaultValue);
 	const dropdownRef = useRef<HTMLDivElement>(null);
+	const toggleRef = useRef<HTMLButtonElement>(null);
 	const t = useTranslations("sidenav");
 	const pathname = usePathname();
 	const router = useRouter();
@@ -70,6 +75,25 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 
 	const selectedOption = locales.find((locale) => locale.value === selectedLocale);
 
+	/** Escape closes the list and returns focus to the toggle (without also closing the mobile sidenav). */
+	const closeOnEscape = (e: React.KeyboardEvent) => {
+		if (e.key === "Escape" && isOpen) {
+			e.stopPropagation();
+			setIsOpen(false);
+			toggleRef.current?.focus();
+		}
+	};
+
+	/** Splits "🇬🇧 English" into a decorative flag and the language name. */
+	const renderLabel = (label: string, lang: string) => {
+		const [flag, ...rest] = label.split(" ");
+		return (
+			<>
+				<span aria-hidden="true">{flag}</span> <span lang={lang}>{rest.join(" ")}</span>
+			</>
+		);
+	};
+
 	const chevron = (
 		<svg
 			className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
@@ -110,52 +134,51 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 	return (
 		<div
 			className="relative text-center flex items-center"
-			ref={dropdownRef}>
+			ref={dropdownRef}
+			onBlur={(e) => {
+				if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setIsOpen(false);
+			}}>
 			<button
+				ref={toggleRef}
 				type="button"
 				className="inline-flex justify-center w-full px-3 py-2 text-sm font-medium text-(--text) border-none hover:bg-(--surface) focus:outline-none focus:bg-(--surface) focus:ring-2 focus:ring-(--primary) focus:border-(--primary) hover:text-(--text) transition-colors duration-200"
 				onClick={() => setIsOpen(!isOpen)}
+				onKeyDown={closeOnEscape}
 				disabled={isPending}
-				aria-haspopup="listbox"
 				aria-expanded={isOpen}
+				aria-controls="locale-options"
 				aria-label={t("select.languageSelectAriaLabel")}
 				title={t("select.languageSelectTitle")}>
 				<span className="flex items-center">
-					<span className="mr-2">{selectedOption?.label}</span>
+					<span className="mr-2">{selectedOption && renderLabel(selectedOption.label, selectedOption.value)}</span>
 					{isPending ? loadingIndicator : chevron}
 				</span>
 			</button>
 
-			{isOpen && (
-				<div className="absolute right-0 z-50 w-full mb-1 origin-bottom-right bg-(--surface) border border-(--border) shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bottom-full">
-					<ul
-						className=""
-						role="listbox"
-						aria-label={t("select.languageSelectAriaLabel")}>
-						{locales.map((locale) => (
-							<li
-								key={locale.value}
-								role="option"
-								aria-selected={locale.value === selectedLocale}
-								className={`locale-option block w-full px-4 text-center transition-colors duration-150 cursor-pointer ${
-									locale.value === selectedLocale ?
-										"bg-(--primary) text-(--primary-text)"
-									:	"text-(--text) hover:bg-(--surface-hover)"
-								}`}
-								onClick={() => handleLocaleChange(locale.value)}
-								onKeyDown={(e) => {
-									if (e.key === "Enter" || e.key === " ") {
-										e.preventDefault();
-										handleLocaleChange(locale.value);
-									}
-								}}
-								tabIndex={0}>
-								{locale.label}
+			<div
+				id="locale-options"
+				hidden={!isOpen}
+				className="absolute right-0 z-50 w-full mb-1 origin-bottom-right bg-(--surface) border border-(--text-tertiary) shadow-lg bottom-full">
+				<ul>
+					{locales.map((locale) => {
+						const isCurrent = locale.value === selectedLocale;
+						return (
+							<li key={locale.value}>
+								<button
+									type="button"
+									aria-current={isCurrent ? "true" : undefined}
+									onClick={() => handleLocaleChange(locale.value)}
+									onKeyDown={closeOnEscape}
+									className={`locale-option block w-full px-4 text-center transition-colors duration-150 cursor-pointer focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-(--text) ${
+										isCurrent ? "bg-(--primary) text-(--on-primary)" : "text-(--text) hover:bg-(--surface-hover)"
+									}`}>
+									{renderLabel(locale.label, locale.value)}
+								</button>
 							</li>
-						))}
-					</ul>
-				</div>
-			)}
+						);
+					})}
+				</ul>
+			</div>
 		</div>
 	);
 };

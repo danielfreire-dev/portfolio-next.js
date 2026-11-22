@@ -18,6 +18,13 @@
 		"btn": "enviar mensagem",
 		"email": "email",
 		"errors": {
+			"fields": {
+				"firstName": "Por favor, insira o seu nome.",
+				"email": "Por favor, insira o seu endereço de email.",
+				"emailInvalid": "Por favor, insira um endereço de email válido, por exemplo nome@exemplo.com.",
+				"message": "Por favor, escreva uma mensagem.",
+				"privacy": "Por favor, aceite a política de privacidade para continuar."
+			},
 			"invalidInput": "Por favor, verifique os seus dados e tente novamente.",
 			"sendFailed": "Não foi possível enviar a mensagem. Tente novamente.",
 			"sendPartial": "Não foi possível enviar a confirmação. A sua mensagem foi recebida.",
@@ -456,6 +463,11 @@
 		"stepsTitle": "Como funciona um projeto"
 	},
 	"sidenav": {
+		"a11y": {
+			"darkMode": "Modo escuro",
+			"menu": "Menu",
+			"skipToContent": "Saltar para o conteúdo principal"
+		},
 		"footer": {
 			"blurb": "Feito com 🐞 por",
 			"icons": {

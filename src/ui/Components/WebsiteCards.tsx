@@ -8,7 +8,8 @@ import { WebsiteCardSkeleton } from "./Skeletons";
  * Portfolio cards section.
  *
  * Renders two collections ("websites" and "projects") from translation data.
- * Each item displays a screenshot, title, demo/github links, and a summary.
+ * Each item displays a title and screenshot (one shared link), demo/github
+ * links, and a summary.
  * The internal `collectionMap` helper transforms a named translation key into
  * a list of card elements, keeping the JSX for both collections DRY.
  */
@@ -34,31 +35,24 @@ const WebsiteCards = () => {
 				fallback={<WebsiteCardSkeleton />}
 				key={item.title}>
 				<div className=" max-w-lg last:mr-0 mb-6 p-3 surface-cards">
-					<div className="overflow-hidden shadow-md">
-						<a
-							href={item.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="inline-block"
-							aria-label={`${item.title} - ${t("opensInNewTab")}`}>
-							<h3 className="capitalize text-xl mb-1 hover:underline font-semibold size-fit">{item.title}</h3>
-						</a>
-
-						<a
-							href={item.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label={`${item.title} - ${t("opensInNewTab")}`}>
-							<Image
-								src={item.src}
-								alt={item.title}
-								width={1600}
-								height={900}
-								className="hover:cursor-pointer transition-transform delay-150 duration-500 hover:scale-110 website-card-image"
-								loading={`${index === 0 ? "eager" : "lazy"}`}
-							/>
-						</a>
-					</div>
+					{/* One link for title + screenshot, so keyboard and screen-reader
+					    users meet each project once instead of twice. */}
+					<a
+						href={item.link}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="group block overflow-hidden shadow-md"
+						aria-label={`${item.title} - ${t("opensInNewTab")}`}>
+						<h3 className="capitalize text-xl mb-1 group-hover:underline font-semibold">{item.title}</h3>
+						<Image
+							src={item.src}
+							alt=""
+							width={1600}
+							height={900}
+							className="transition-transform delay-150 duration-500 group-hover:scale-110 website-card-image"
+							loading={`${index === 0 ? "eager" : "lazy"}`}
+						/>
+					</a>
 
 					<div className="mt-4 box-border">
 						<div className="flex justify-center gap-1 mb-1">

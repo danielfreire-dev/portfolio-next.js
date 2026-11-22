@@ -42,10 +42,11 @@ describe("LocaleSwitcher", () => {
 			expect(button).toHaveTextContent("🇬🇧 English");
 		});
 
-		it("should have aria-haspopup listbox", () => {
+		it("should be a collapsed disclosure button", () => {
 			renderWithProviders(<LocaleSwitcher />);
 			const button = screen.getByRole("button");
-			expect(button).toHaveAttribute("aria-haspopup", "listbox");
+			expect(button).toHaveAttribute("aria-expanded", "false");
+			expect(button).toHaveAttribute("aria-controls", "locale-options");
 		});
 	});
 });
