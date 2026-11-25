@@ -63,13 +63,11 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 		setIsOpen(false);
 
 		startTransition(() => {
-			router.replace(
-				// @ts-expect-error -- TypeScript will validate that only known `params`
-				// are used in combination with a given `pathname`. Since the two will
-				// always match for the current route, we can skip runtime checks.
-				{ pathname, params },
-				{ locale: nextLocale },
-			);
+			// Use pathname string directly - next-intl's router will match the
+			// resolved pathname against the routing config to find the template
+			// and generate the correct localized URL. TypeScript types don't include
+			// dynamic route templates in the string literal union, so we assert.
+			router.replace(pathname as Parameters<typeof router.replace>[0], { locale: nextLocale });
 		});
 	};
 
