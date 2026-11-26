@@ -3,9 +3,7 @@ allowBuilds:
   "@parcel/watcher": false
   "@swc/core": false
   core-js: false
-  cypress: false
+  cypress: true
   cypress-accessibility-checker: false
   esbuild: false
   sharp: false
-onlyBuiltDependencies:
-  - cypress
