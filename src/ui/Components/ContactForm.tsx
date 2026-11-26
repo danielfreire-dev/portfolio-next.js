@@ -3,12 +3,40 @@
 import { submitContact } from "@/lib/submitContact";
 import "@/ui/styles/border.css";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ContactFarewell from "./ContactFarewell";
 import { Link } from "@/i18n/navigation";
 import { Turnstile } from "next-turnstile";
 import { useThemeStore } from "@/stores/theme-store";
 import { TurnstileSkeleton } from "./Skeletons";
+
+/** Required fields validated before submit, in DOM order (the first error gets focus). */
+const VALIDATED_FIELDS = ["firstName", "email", "message", "privacy-policy-check"] as const;
+type ValidatedField = (typeof VALIDATED_FIELDS)[number];
+type FieldErrorKey = "firstName" | "email" | "emailInvalid" | "message" | "privacy";
+
+/** Type guard: is this form control one of {@link VALIDATED_FIELDS}? */
+function isValidatedControl(el: unknown): el is HTMLInputElement | HTMLTextAreaElement {
+	return (
+		(el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) &&
+		(VALIDATED_FIELDS as readonly string[]).includes(el.name)
+	);
+}
+
+/** Maps a control's constraint-validation state to a `contact.errors.fields.*` key (null when valid). */
+function fieldErrorKey(el: HTMLInputElement | HTMLTextAreaElement): FieldErrorKey | null {
+	if (el.validity.valid) return null;
+	switch (el.name as ValidatedField) {
+		case "firstName":
+			return "firstName";
+		case "email":
+			return el.validity.valueMissing ? "email" : "emailInvalid";
+		case "message":
+			return "message";
+		case "privacy-policy-check":
+			return "privacy";
+	}
+}
 
 /**
  * Contact form component.
@@ -17,6 +45,12 @@ import { TurnstileSkeleton } from "./Skeletons";
  * On successful submission the form sends a notification email via Resend
  * and swaps to a farewell message. Submission state is tracked through an
  * explicit state machine (idle → loading → submitted/error).
+ *
+ * Field errors (WCAG 3.3.1 / 3.3.3): the form uses `noValidate` and shows its
+ * own translated message under each invalid field, tied to it with
+ * `aria-describedby` + `aria-invalid`. A field is checked when it loses focus
+ * after being edited, re-checked as the user types once it shows an error, and
+ * all fields are checked on submit, which moves focus to the first invalid one.
  *
  * Turnstile widget loading is handled with a progressive retry strategy:
  * if the Turnstile script hasn't fired onLoad within 3 seconds the widget
@@ -34,6 +68,9 @@ const ContactForm = () => {
 	const [error, setError] = useState<string | null>(null);
 	const [turnstileLoaded, setTurnstileLoaded] = useState(false);
 	const [turnstileKeyCounter, setTurnstileKeyCounter] = useState(0);
+	const [fieldErrors, setFieldErrors] = useState<Partial<Record<ValidatedField, string>>>({});
+	/** Fields the user has edited; untouched fields aren't flagged on blur. */
+	const editedFields = useRef(new Set<string>());
 
 	const t = useTranslations("contact");
 	const { isDarkStore } = useThemeStore();
@@ -74,8 +111,41 @@ const ContactForm = () => {
 	 * failure the error is surfaced via the `error` state and the widget
 	 * is reset so the user can retry with a fresh token.
 	 */
+	/** Validates one control, updates its message, and returns whether it is valid. */
+	function validateField(el: HTMLInputElement | HTMLTextAreaElement): boolean {
+		const key = fieldErrorKey(el);
+		setFieldErrors((prev) => ({ ...prev, [el.name]: key ? t(`errors.fields.${key}`) : undefined }));
+		return key === null;
+	}
+
+	/** `aria-invalid` / `aria-describedby` for a validated control. */
+	const errorProps = (field: ValidatedField) =>
+		fieldErrors[field] ? { "aria-invalid": true, "aria-describedby": `${field}-error` } : {};
+
+	/** The message element referenced by {@link errorProps}. */
+	const renderFieldError = (field: ValidatedField) =>
+		fieldErrors[field] ?
+			<p
+				id={`${field}-error`}
+				// Text fields: w-0 + min-w so a long message wraps to the field's width
+				// instead of widening the w-fit wrapper (same trick as the textarea).
+				className={`text-sm text-(--error) ${
+					field === "privacy-policy-check" ? "mt-1" : "w-0 min-w-[calc(100%-0.5rem)] ml-2 mb-1"
+				}`}>
+				{fieldErrors[field]}
+			</p>
+		:	null;
+
 	async function sendContactForm(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault();
+
+		const invalid = VALIDATED_FIELDS.map((name) => e.currentTarget.elements.namedItem(name))
+			.filter(isValidatedControl)
+			.filter((el) => !validateField(el));
+		if (invalid.length > 0) {
+			invalid[0].focus();
+			return;
+		}
 
 		setLoading("loading");
 		setError(null);
@@ -109,6 +179,18 @@ const ContactForm = () => {
 		<>
 			<form
 				onSubmit={sendContactForm}
+				noValidate
+				onChange={(e) => {
+					if (!isValidatedControl(e.target)) return;
+					editedFields.current.add(e.target.name);
+					// Checkboxes have no "while typing" phase; others re-check once flagged.
+					if (e.target.type === "checkbox" || fieldErrors[e.target.name as ValidatedField]) validateField(e.target);
+				}}
+				onBlur={(e) => {
+					if (isValidatedControl(e.target) && e.target.type !== "checkbox" && editedFields.current.has(e.target.name)) {
+						validateField(e.target);
+					}
+				}}
 				aria-label={t("formAriaLabel")}
 				className={`mx-5 flex flex-col flex-nowrap items-center ${loading === "submitted" && "hidden"}`}>
 				{/* w-fit: the input rows set this wrapper's width; the textarea
@@ -131,11 +213,14 @@ const ContactForm = () => {
 								type="text"
 								name="firstName"
 								id="firstName"
+								autoComplete="given-name"
 								required
 								aria-required="true"
+								{...errorProps("firstName")}
 								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
+          peer user-invalid:border-(--error) user-valid:border-(--success) aria-invalid:border-(--error)"
 							/>
+							{renderFieldError("firstName")}
 						</section>
 						<section className="flex flex-col">
 							<label
@@ -147,8 +232,9 @@ const ContactForm = () => {
 								type="text"
 								name="lastName"
 								id="lastName"
+								autoComplete="family-name"
 								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
+          peer user-invalid:border-(--error) user-valid:border-(--success)"
 								aria-required="false"
 							/>
 						</section>
@@ -169,11 +255,14 @@ const ContactForm = () => {
 								type="email"
 								name="email"
 								id="email"
+								autoComplete="email"
 								required
 								aria-required="true"
+								{...errorProps("email")}
 								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-          peer invalid:border-(--error) valid:border-(--success)"
+          peer user-invalid:border-(--error) user-valid:border-(--success) aria-invalid:border-(--error)"
 							/>
+							{renderFieldError("email")}
 						</section>
 						<section className="flex flex-col">
 							<label
@@ -185,8 +274,9 @@ const ContactForm = () => {
 								type="tel"
 								name="telephone"
 								id="telephone"
+								autoComplete="tel"
 								className="bg-(--surface) ml-2 my-1 autofill:bg-(--secondary)
-						    peer invalid:border-(--error) valid:border-(--success)"
+						    peer user-invalid:border-(--error) user-valid:border-(--success)"
 								aria-required="false"
 							/>
 						</section>
@@ -207,13 +297,14 @@ const ContactForm = () => {
 							id="message"
 							rows={4}
 							required
-							aria-autocomplete="none"
 							aria-required="true"
+							{...errorProps("message")}
 							// w-0 + min-w: contributes no intrinsic width to the w-fit wrapper,
 							// then fills it (minus the ml-2 offset shared with the inputs).
-							className="w-0 min-w-[calc(100%-0.5rem)] bg-(--surface) ml-2 my-1 field-sizing-content min-h-[4lh] valid:border-(--success) autofill:bg-(--secondary) invalid:border-(--error)"
+							className="w-0 min-w-[calc(100%-0.5rem)] bg-(--surface) ml-2 my-1 field-sizing-content min-h-[4lh] user-valid:border-(--success) autofill:bg-(--secondary) user-invalid:border-(--error) aria-invalid:border-(--error)"
 							spellCheck
 						/>
+						{renderFieldError("message")}
 					</section>
 				</div>
 				<div className="privacy-policy-req mt-1.5">
@@ -228,6 +319,8 @@ const ContactForm = () => {
 							id="privacy-policy-check"
 							className=" accent-(--primary) focus:shadow-(--primary)"
 							required
+							aria-required="true"
+							{...errorProps("privacy-policy-check")}
 						/>{" "}
 						{t("privacyPolicyCheck")}{" "}
 						{/* Plain Link (not TransitionLink): it must open in a new tab so the
@@ -242,10 +335,11 @@ const ContactForm = () => {
 						</Link>
 						.
 					</label>
+					{renderFieldError("privacy-policy-check")}
 				</div>
 
 				<section className="flex flex-col justify-center items-center mx-auto mt-2.5">
-					<div className={`${turnstileLoaded ? "" : "hidden"} lg:max-w-[300px]`}>
+					<div className={`${turnstileLoaded ? "" : "hidden"} max-w-[300px]`}>
 						<Turnstile
 							key={`turnstile-${isDarkStore ? "dark" : "light"}-${turnstileKeyCounter}`}
 							siteKey={siteKey!}

@@ -24,21 +24,26 @@
 		0 0 0 0 var(--hover),
 		inset 6em 3.5em 0 0 var(--hover);
 }
+/* Text uses --primary-text (4.5:1); --color (plain --primary) stays on the
+   border and shadows, where 3:1 is enough. */
 .button-class {
-	color: var(--color);
+	color: var(--primary-text);
+	border-color: var(--color);
 	transition: 0.25s;
 }
 
 .button-class:hover,
 .button-class:focus {
 	border-color: var(--hover);
-	color: var(--background);
+	/* Text sits on the --accent1 fill on hover/focus. */
+	color: var(--on-accent1);
 	cursor: pointer;
 	background-color: var(--surface);
 }
 .button-class {
 	background: none;
-	border: 2px solid;
+	border-width: 2px;
+	border-style: solid;
 	font: inherit;
 	line-height: 1;
 	margin: 0.5em;
@@ -62,5 +67,14 @@
 .raise:focus {
 	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
 	transform: translateY(-0.25em);
-	color: var(--hover);
+	/* Was var(--hover) (yellow on cream, 1.5:1); the lift + glow mark hover. */
+	color: var(--primary-text);
+}
+
+/* Fill the rest when a wrapped label makes the button taller than the inset
+   shadow, so the hover text always sits on --accent1. After .button-class:hover
+   so it wins the cascade. */
+.button-class.offset:hover,
+.button-class.offset:focus {
+	background-color: var(--hover);
 }

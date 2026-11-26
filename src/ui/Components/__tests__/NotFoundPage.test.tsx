@@ -66,11 +66,14 @@ describe("NotFoundPage", () => {
 
 		it("should have capitalized headings", () => {
 			renderWithProviders(<NotFoundPage />);
-			const h2 = screen.getByText("Page Not Found");
-			expect(h2).toHaveClass("capitalize");
+			const h1 = screen.getByText("Page Not Found");
+			expect(h1.tagName).toBe("H1");
+			expect(h1).toHaveClass("capitalize");
 
-			const h3 = screen.getByText("Oops!");
-			expect(h3).toHaveClass("capitalize");
+			// No skipped level: the subtitle is an h2, not an h3.
+			const h2 = screen.getByText("Oops!");
+			expect(h2.tagName).toBe("H2");
+			expect(h2).toHaveClass("capitalize");
 		});
 	});
 });

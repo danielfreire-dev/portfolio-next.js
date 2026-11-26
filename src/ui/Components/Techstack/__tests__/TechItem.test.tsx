@@ -46,8 +46,9 @@ describe("TechItem", () => {
 
 	it("should render the SVGR component when matching svgr key exists", () => {
 		render(<TechItem tech={mockTech} />);
-		const svg = screen.getByRole("img", { name: "typeScript logo" });
-		expect(svg).toBeInTheDocument();
+		// Decorative: the visible name is the link's accessible name.
+		const svg = screen.getByTestId("svgr-icon");
+		expect(svg).toHaveAttribute("aria-hidden", "true");
 		expect(svg).toHaveClass("w-full");
 		expect(svg).toHaveClass("h-full");
 	});
@@ -61,7 +62,7 @@ describe("TechItem", () => {
 		const img = screen.getByTestId("tech-image");
 		expect(img).toBeInTheDocument();
 		expect(img).toHaveAttribute("src", "/images/icons/Typescript.svg");
-		expect(img).toHaveAttribute("alt", "typeScript logo");
+		expect(img).toHaveAttribute("alt", "");
 		expect(img).toHaveClass("object-contain");
 	});
 

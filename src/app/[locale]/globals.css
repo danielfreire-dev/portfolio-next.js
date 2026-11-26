@@ -23,7 +23,10 @@
 
 :root {
 	/*LightTheme*/
-	--primary: #d96b00; /* 5.1:1  */
+	--primary: #d96b00; /* 3.4:1 on --background: large text / borders only */
+	--primary-text: #ad5300; /* 5.1:1 on --background, 4.9:1 on --surface: orange body-size text */
+	--on-primary: #0f1624; /* 5.2:1 on --primary: text on orange fills */
+	--on-accent1: #2a2a36; /* 8.9:1 on --accent1: text on yellow fills */
 	--secondary: #0066cc; /* 5.7:1 */
 	--secondary-hover: #005bb5;
 	--background: #fcfcfc;
@@ -63,7 +66,10 @@
 /* Dark Mode */
 html.dark,
 :root:has(#theme-toggle:checked) {
-	--primary: #f27a3d; /* 6.9:1 */
+	--primary: #f27a3d; /* 6.6:1 */
+	--primary-text: #f27a3d;
+	--on-primary: #0f1624; /* 6.6:1 */
+	--on-accent1: #0f1624; /* 14.9:1 */
 	--secondary: #00a8e0; /* 6.61:1 */
 	--secondary-hover: #00a0d6;
 	--background: #0f1624;
@@ -119,6 +125,38 @@ html:not(.theme-ready) *::after {
 #main:has(.not-found-page) a[inputdata="CtA"],
 #main:has([data-testid="not-found-page"]) a[inputdata="CtA"] {
 	display: none;
+}
+
+/* Skip link (WCAG 2.4.1): off-screen until it receives keyboard focus. */
+.skip-link {
+	position: absolute;
+	top: 0.75rem;
+	left: 0.75rem;
+	z-index: 100000;
+	padding: 0.75rem 1rem;
+	background: var(--background);
+	color: var(--text);
+	border: 2px solid var(--primary);
+	font-weight: 600;
+	transform: translateY(-200%);
+}
+.skip-link:focus {
+	transform: none;
+	outline: 2px solid var(--text);
+	outline-offset: 2px;
+}
+
+/* Reduced motion (WCAG 2.3.3): near-zero durations rather than `animation: none`,
+   so `animationend` still fires and the page-transition curtain keeps working. */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 html {
@@ -497,6 +535,13 @@ footer a {
 	height: 2em;
 }
 
+/* The generic input:focus rule swaps the outline for a box-shadow, which
+   native checkboxes don't reliably paint, so give them a real outline. */
+input[type="checkbox"]:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
+}
+
 #privacy-policy-check:focus,
 #message:hover,
 #telephone:hover,
@@ -594,11 +639,6 @@ footer a {
 	50% {
 		opacity: 1;
 	}
-}
-
-form:has(:invalid) [type="submit"] {
-	opacity: 0.4;
-	pointer-events: none;
 }
 
 @media screen and (max-width: 768px) {

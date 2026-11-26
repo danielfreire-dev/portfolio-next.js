@@ -213,7 +213,7 @@ const ServiceDetailPage = ({ params }: Props) => {
 					{t("serviceDetail.ctaPrompt")}{" "}
 					<TransitionLink
 						href="/contact"
-						className="underline font-semibold text-(--text-primary) hover:text-(--primary)">
+						className="underline font-semibold text-(--text) hover:text-(--primary-text)">
 						{t("serviceDetail.ctaLink")}
 					</TransitionLink>
 				</p>

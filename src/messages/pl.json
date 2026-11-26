@@ -18,6 +18,13 @@
 		"btn": "wyślij wiadomość",
 		"email": "e-mail",
 		"errors": {
+			"fields": {
+				"firstName": "Wprowadź swoje imię.",
+				"email": "Wprowadź swój adres e-mail.",
+				"emailInvalid": "Wprowadź prawidłowy adres e-mail, np. imie@przyklad.pl.",
+				"message": "Napisz wiadomość.",
+				"privacy": "Zaakceptuj politykę prywatności, aby kontynuować."
+			},
 			"invalidInput": "Sprawdź swoje dane i spróbuj ponownie.",
 			"sendFailed": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
 			"sendPartial": "Nie udało się wysłać potwierdzenia. Twoja wiadomość została odebrana.",
@@ -456,6 +463,11 @@
 		"stepsTitle": "Jak przebiega projekt"
 	},
 	"sidenav": {
+		"a11y": {
+			"darkMode": "Tryb ciemny",
+			"menu": "Menu",
+			"skipToContent": "Przejdź do treści głównej"
+		},
 		"footer": {
 			"blurb": "Stworzone z 🐞 przez",
 			"icons": {

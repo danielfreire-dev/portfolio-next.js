@@ -2,8 +2,9 @@
 
 import React, { ComponentProps, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useRouter, usePathname, getPathname } from "@/i18n/navigation";
 import { Link } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 
 /** Identifies the origin of the click for analytics / transition handling. */
 type onClickCmdProps = "CtA" | "NavLink" | "MobileNavLink" | "Logo";
@@ -60,6 +61,7 @@ export const TransitionLink = ({
 	const router = useRouter();
 	const pathname = usePathname();
 	const currentParams = useParams();
+	const locale = useLocale();
 
 	/**
 	 * Closes the mobile sidenav when the URL changes after navigation.
@@ -78,18 +80,22 @@ export const TransitionLink = ({
 	const HandleTransition = async (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
 
-		// Both `usePathname()` from next-intl and `href` from the Link
-		// component use the same unprefixed pathname keys (e.g. "/portfolio",
-		// or the template "/services/[service]" for dynamic routes), so a
-		// direct comparison is correct without locale wrangling.  For dynamic
-		// routes the params must match too, otherwise links between two
-		// service pages would be treated as "same page".
-		const hrefPath = typeof href === "string" ? href : href.pathname;
+		// Resolve the href to a localized pathname for comparison.
+		// For dynamic routes, we need to use getPathname with params.
+		const hrefPathname = typeof href === "string" ? href : href.pathname;
 		const hrefParams =
 			typeof href === "object" && "params" in href ? (href.params as Record<string, string | number>) : undefined;
-		const isSamePage =
-			pathname === hrefPath &&
-			(!hrefParams || Object.entries(hrefParams).every(([key, value]) => currentParams?.[key] === String(value)));
+
+		// Get the localized pathname for the target route using the same API as alternates.ts
+		const resolvedHrefPath =
+			hrefParams ?
+				getPathname({ locale, href: { pathname: hrefPathname, params: hrefParams } } as Parameters<
+					typeof getPathname
+				>[0])
+			:	hrefPathname;
+
+		// Compare resolved pathnames to determine if it's the same page
+		const isSamePage = pathname === resolvedHrefPath;
 
 		if (!isSamePage) {
 			// 1. Start the curtain sliding in.
@@ -105,8 +111,8 @@ export const TransitionLink = ({
 			});
 
 			// 3. Navigate while the page is hidden behind the overlay.
-			// Push the full href (including params) so dynamic routes resolve
-			// to their localized URL.
+			// Pass the href object (with params for dynamic routes) so next-intl
+			// generates the correct localized URL.
 			router.push(href as Parameters<typeof router.push>[0]);
 		}
 		setIsOpen && isOpen && setIsOpen((prev) => !prev);

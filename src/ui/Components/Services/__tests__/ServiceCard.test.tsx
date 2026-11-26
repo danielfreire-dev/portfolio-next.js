@@ -38,7 +38,8 @@ describe("ServiceCard", () => {
 			const img = screen.getByTestId("next-image");
 			expect(img).toBeInTheDocument();
 			expect(img).toHaveAttribute("src", "/icons/web-dev.svg");
-			expect(img).toHaveAttribute("alt", "Web Development");
+			// Decorative: the adjacent heading already names the service.
+			expect(img).toHaveAttribute("alt", "");
 		});
 	});
 
@@ -55,7 +56,7 @@ describe("ServiceCard", () => {
 			expect(screen.getByText("UI/UX Design")).toBeInTheDocument();
 			expect(screen.getByText("Beautiful interfaces")).toBeInTheDocument();
 			const img = screen.getByTestId("next-image");
-			expect(img).toHaveAttribute("alt", "UI/UX Design");
+			expect(img).toHaveAttribute("alt", "");
 		});
 	});
 

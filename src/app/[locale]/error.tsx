@@ -36,7 +36,7 @@ export default function ErrorBoundary({ error, reset }: Props) {
           p: (chunks) => <p className="mt-4">{chunks}</p>,
           retry: (chunks) => (
             <button
-              className="text-(--primary) underline underline-offset-2 hover:opacity-80 cursor-pointer font-medium"
+              className="text-(--primary-text) underline underline-offset-2 hover:opacity-80 cursor-pointer font-medium"
               onClick={reset}
               type="button"
             >

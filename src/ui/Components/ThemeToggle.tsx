@@ -45,7 +45,8 @@ function applyTheme(isDark: boolean, setValue: (value: boolean) => void): void {
 /**
  * Dark/light theme toggle component.
  *
- * Renders a hidden checkbox that controls the theme state via Zustand.
+ * Renders a visually hidden (but focusable) switch that controls the theme
+ * state via Zustand; the visible sun/moon icon is its label.
  * On mount, reads the persisted preference from localStorage; if none
  * exists, falls back to the system `prefers-color-scheme` media query
  * and listens for OS-level changes so the theme stays in sync.
@@ -60,9 +61,16 @@ function applyTheme(isDark: boolean, setValue: (value: boolean) => void): void {
  */
 const ThemeToggle = () => {
 	const { isDarkStore, setValue } = useThemeStore();
-	const t = useTranslations("svgTitles");
+	const t = useTranslations("sidenav");
 
 	useEffect(() => {
+		// Locale switches remount the root <html> element and drop the
+		// `theme-ready` class set by the blocking script. Without it the
+		// `html:not(.theme-ready) *` rule in globals.css disables every
+		// animation, including the page-transition curtain, so navigation
+		// never starts. Re-adding it here restores animations after a switch.
+		document.documentElement.classList.add("theme-ready");
+
 		const savedTheme = getStoredTheme();
 		if (savedTheme) {
 			applyTheme(savedTheme === "dark", setValue);
@@ -105,20 +113,24 @@ const ThemeToggle = () => {
 
 	return (
 		<>
+			{/* Visually hidden but focusable (WCAG 2.1.1): `hidden` would take it out of
+			    the tab order. role="switch" announces "Dark mode, switch, on/off". */}
 			<input
 				type="checkbox"
-				className="hidden appearance-none"
+				role="switch"
+				className="peer sr-only"
 				id="theme-toggle"
+				aria-label={t("a11y.darkMode")}
 				checked={isDarkStore}
 				onChange={handleChange}
 			/>
 			<label
-				className="toggle hover:cursor-pointer py-3 px-2"
+				className="toggle hover:cursor-pointer py-3 px-2 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-(--primary)"
 				htmlFor="theme-toggle">
-				<div>
+				<div aria-hidden="true">
 					{isDarkStore ?
-						<LineMdSunnyFilledLoopToMoonFilledLoopTransition title={t("sunToMoon")} />
-					:	<LineMdMoonFilledToSunnyFilledLoopTransition title={t("moonToSun")} />}
+						<LineMdSunnyFilledLoopToMoonFilledLoopTransition />
+					:	<LineMdMoonFilledToSunnyFilledLoopTransition />}
 				</div>
 			</label>
 		</>
