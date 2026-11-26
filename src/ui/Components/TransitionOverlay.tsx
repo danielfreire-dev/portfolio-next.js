@@ -37,17 +37,20 @@ export function TransitionOverlay() {
 	 * layout and detects the pathname change directly.
 	 */
 	useEffect(() => {
+		console.log("[TransitionOverlay] Pathname effect:", { pathname, phase, isInitialMount: isInitialMount.current });
 		if (isInitialMount.current) {
 			isInitialMount.current = false;
 			return;
 		}
 		if (phase === "covering") {
+			console.log("[TransitionOverlay] Switching to uncovering");
 			setPhase("uncovering");
 		}
 	}, [pathname]);
 
 	/** Fires when the slide-in or slide-out CSS animation completes. */
 	const onAnimationEnd = useCallback(() => {
+		console.log("[TransitionOverlay] Animation end:", phase);
 		if (phase === "covering") {
 			document.dispatchEvent(new CustomEvent("transition:covered"));
 		} else if (phase === "uncovering") {
@@ -56,7 +59,10 @@ export function TransitionOverlay() {
 	}, [phase]);
 
 	useEffect(() => {
-		const onStart = () => setPhase("covering");
+		const onStart = () => {
+			console.log("[TransitionOverlay] transition:start received");
+			setPhase("covering");
+		};
 
 		document.addEventListener("transition:start", onStart);
 
@@ -67,6 +73,8 @@ export function TransitionOverlay() {
 
 	/* Nothing to render while idle — avoids an empty DOM node. */
 	if (phase === "idle") return null;
+
+	console.log("[TransitionOverlay] Rendering overlay with phase:", phase);
 
 	return (
 		<div
