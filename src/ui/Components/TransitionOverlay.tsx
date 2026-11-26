@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useState, useCallback, useRef } from "react";
-import { usePathname } from "@/i18n/navigation";
+// Use Next's raw pathname, not next-intl's: next-intl maps dynamic URLs back to
+// their route template (e.g. "/services/[service]"), so navigating between two
+// service pages would never change the value and the curtain would stay down.
+import { usePathname } from "next/navigation";
 
 type Phase = "idle" | "covering" | "uncovering";
 
