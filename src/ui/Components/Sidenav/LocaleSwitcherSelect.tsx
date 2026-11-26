@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { Locale } from "next-intl";
 import { ChangeEvent, ReactNode, useTransition } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { switchLocaleHref } from "@/i18n/switchLocaleHref";
 
 /** Props for the desktop locale switcher select component. */
 interface Props {
@@ -47,7 +48,10 @@ export default function LocaleSwitcherSelect({ children, defaultValue }: Props) 
 			// Use pathname string directly - next-intl's router will match the
 			// resolved pathname against the routing config to find the template
 			// and generate the correct localized URL.
-			router.replace(pathname as Parameters<typeof router.replace>[0], { locale: nextLocale });
+			router.replace(
+				switchLocaleHref(pathname, params as Record<string, string>, nextLocale) as Parameters<typeof router.replace>[0],
+				{ locale: nextLocale },
+			);
 		});
 
 		/* mainElement?.classList.remove("page-transition");

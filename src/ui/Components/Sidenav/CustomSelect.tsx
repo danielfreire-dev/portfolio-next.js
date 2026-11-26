@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { useTransition } from "react";
 import { useTranslations } from "next-intl"; // Make sure useRouter is imported
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { switchLocaleHref } from "@/i18n/switchLocaleHref";
 import { useParams } from "next/navigation";
 
 interface CustomLocaleSelectProps {
@@ -67,7 +68,10 @@ const CustomSelect = ({ defaultValue, locales }: CustomLocaleSelectProps) => {
 			// resolved pathname against the routing config to find the template
 			// and generate the correct localized URL. TypeScript types don't include
 			// dynamic route templates in the string literal union, so we assert.
-			router.replace(pathname as Parameters<typeof router.replace>[0], { locale: nextLocale });
+			router.replace(
+				switchLocaleHref(pathname, params as Record<string, string>, nextLocale) as Parameters<typeof router.replace>[0],
+				{ locale: nextLocale },
+			);
 		});
 	};
 

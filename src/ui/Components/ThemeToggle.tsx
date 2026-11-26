@@ -64,6 +64,13 @@ const ThemeToggle = () => {
 	const t = useTranslations("sidenav");
 
 	useEffect(() => {
+		// Locale switches remount the root <html> element and drop the
+		// `theme-ready` class set by the blocking script. Without it the
+		// `html:not(.theme-ready) *` rule in globals.css disables every
+		// animation, including the page-transition curtain, so navigation
+		// never starts. Re-adding it here restores animations after a switch.
+		document.documentElement.classList.add("theme-ready");
+
 		const savedTheme = getStoredTheme();
 		if (savedTheme) {
 			applyTheme(savedTheme === "dark", setValue);

@@ -2,7 +2,7 @@
 
 import { usePathname } from "@/i18n/navigation";
 import { TransitionOverlay } from "./TransitionOverlay";
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 
 /**
  * TransitionProvider — Client component wrapper that ensures TransitionOverlay
@@ -19,14 +19,7 @@ interface TransitionProviderProps {
 
 export function TransitionProvider({ children }: TransitionProviderProps) {
 	// This hook forces the component to re-render when pathname changes
-	const pathname = usePathname();
-
-	// Debug logging
-	useEffect(() => {
-		console.log("[TransitionProvider] Pathname changed:", pathname);
-	}, [pathname]);
-
-	console.log("[TransitionProvider] Render:", pathname);
+	usePathname();
 
 	return (
 		<>
