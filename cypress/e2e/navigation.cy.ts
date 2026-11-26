@@ -10,7 +10,7 @@
 describe("Navigation", () => {
 	describe("Sidenav links", () => {
 		beforeEach(() => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 		});
 
 		it("should navigate to About page via sidenav link", () => {
@@ -41,7 +41,7 @@ describe("Navigation", () => {
 
 	describe("Locale switching", () => {
 		it("should switch to Portuguese locale", () => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 
 			// Find the language selector and change to Portuguese
 			cy.get("#language-sidenav").select("pt");
@@ -51,12 +51,12 @@ describe("Navigation", () => {
 
 	describe("Social links", () => {
 		it("should have GitHub link in the sidenav", () => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 			cy.get('a[href*="github.com"]').should("exist");
 		});
 
 		it("should have LinkedIn link in the sidenav", () => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 			cy.get('a[href*="linkedin.com"]').should("exist");
 		});
 	});

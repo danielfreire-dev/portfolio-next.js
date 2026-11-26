@@ -25,7 +25,7 @@ describe("Accessibility audits", () => {
 
 	describe("Home page", () => {
 		it("should pass basic accessibility checks", () => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 			scanPage();
 
 			// Basic semantic structure checks
@@ -35,14 +35,14 @@ describe("Accessibility audits", () => {
 		});
 
 		it("should have lang attribute on html element", () => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 			cy.get("html").should("have.attr", "lang", "en");
 		});
 	});
 
 	describe("Contact page", () => {
 		it("should have labels associated with form inputs", () => {
-			cy.visit("https://daniel-freire.com/en/contact");
+			cy.visit("/en/contact");
 			scanPage();
 
 			// Form fields should have associated labels

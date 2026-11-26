@@ -19,7 +19,7 @@ describe("Metadata across locales", () => {
 	describe("Home page", () => {
 		locales.forEach(({ code, label }) => {
 			it(`should have correct metadata for ${label} (${code})`, () => {
-				cy.visit(`https://daniel-freire.com/${code}`);
+				cy.visit(`/${code}`);
 
 				// Title should include the site name
 				cy.title().should("include", "Daniel Freire");
@@ -30,7 +30,7 @@ describe("Metadata across locales", () => {
 		});
 
 		it("should have Open Graph meta tags", () => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 
 			cy.get('meta[property="og:title"]').should("exist");
 			cy.get('meta[property="og:description"]').should("exist");
@@ -39,7 +39,7 @@ describe("Metadata across locales", () => {
 		});
 
 		it("should have author and creator meta tags", () => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 
 			cy.get('meta[name="author"]').should("have.attr", "content", "Daniel Freire");
 			cy.get('meta[name="creator"]').should("have.attr", "content", "Daniel Freire");

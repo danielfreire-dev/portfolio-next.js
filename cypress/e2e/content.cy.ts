@@ -13,7 +13,7 @@
 describe("Content verification", () => {
 	describe("Home page (English)", () => {
 		beforeEach(() => {
-			cy.visit("https://daniel-freire.com/en");
+			cy.visit("/en");
 		});
 
 		it("should display the site title", () => {
@@ -36,7 +36,7 @@ describe("Content verification", () => {
 
 	describe("About page", () => {
 		beforeEach(() => {
-			cy.visit("https://daniel-freire.com/en/about");
+			cy.visit("/en/about");
 		});
 
 		it("should load the about page successfully", () => {
@@ -50,7 +50,7 @@ describe("Content verification", () => {
 
 	describe("Portfolio page", () => {
 		beforeEach(() => {
-			cy.visit("https://daniel-freire.com/en/portfolio");
+			cy.visit("/en/portfolio");
 		});
 
 		it("should load the portfolio page successfully", () => {
@@ -65,7 +65,7 @@ describe("Content verification", () => {
 
 	describe("404 page", () => {
 		it("should display a custom 404 page for unknown routes", () => {
-			cy.visit("https://daniel-freire.com/en/this-page-does-not-exist", {
+			cy.visit("/en/this-page-does-not-exist", {
 				failOnStatusCode: false,
 			});
 			cy.contains("404").should("exist");

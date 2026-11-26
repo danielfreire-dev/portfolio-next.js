@@ -9,6 +9,9 @@ import { defineConfig } from "cypress";
  */
 export default defineConfig({
   e2e: {
+    // Specs visit relative paths so they test the locally served build, not production.
+    // Override with CYPRESS_BASE_URL when needed.
+    baseUrl: "http://localhost:3000",
     /**
      * Registers Node event listeners for Cypress plugins.
      * @param on - Cypress event registration function

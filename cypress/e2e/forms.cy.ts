@@ -11,7 +11,7 @@
 
 describe("Contact form page", () => {
 	beforeEach(() => {
-		cy.visit("https://daniel-freire.com/en/contact");
+		cy.visit("/en/contact");
 	});
 
 	it("should load the contact page successfully", () => {
