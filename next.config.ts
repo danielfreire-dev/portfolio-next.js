@@ -57,9 +57,21 @@ export const nextConfig: NextConfig = {
 			{
 				source: "/((?!api|_next).*)",
 				headers: [
+					// Browsers must revalidate pages on every visit. Pages and their
+					// RSC payloads (`?_rsc=`) reference build-specific chunk hashes, so
+					// a browser holding them for an hour after a deploy can mix an old
+					// build's payload with new code and crash client navigation (e.g.
+					// switching language). Revalidation against the CDN is cheap.
 					{
 						key: "Cache-Control",
-						value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
+						value: "public, max-age=0, must-revalidate",
+					},
+					// Vercel's CDN keeps caching for a day. Its cache is scoped to the
+					// deployment, so a new deploy never serves the previous build's
+					// pages. Vercel strips this header before it reaches the browser.
+					{
+						key: "Vercel-CDN-Cache-Control",
+						value: "max-age=86400, stale-while-revalidate=604800",
 					},
 				],
 			},
